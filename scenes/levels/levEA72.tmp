@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn3uxd1asbmtn"]
+
+[ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="1_3kxp0"]
+[ext_resource type="Texture2D" uid="uid://dyokahcqm3kvw" path="res://graphics/level1/background/Asset 2@4x.png" id="1_v3gib"]
+[ext_resource type="Script" path="res://scenes/levels/Tolda.gd" id="2_0wo48"]
+[ext_resource type="Texture2D" uid="uid://bpxm8u5xtmm46" path="res://graphics/level1/4x/tolda@4x.png" id="2_lukpq"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_3kxp0")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(682.5, 324)
+scale = Vector2(0.357442, 0.45)
+texture = ExtResource("1_v3gib")
+metadata/_edit_lock_ = true
+
+[node name="Objects" type="Node2D" parent="Background"]
+position = Vector2(-1313.5, -720)
+scale = Vector2(2.79766, 2.22222)
+
+[node name="Tolda" type="Area2D" parent="Background/Objects"]
+position = Vector2(442, 522)
+scale = Vector2(0.358793, 0.436353)
+script = ExtResource("2_0wo48")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/Objects/Tolda"]
+build_mode = 1
+polygon = PackedVector2Array(-359.539, -323.133, -373.474, -316.258, -365.113, -281.882, -390.197, -199.38, -420.855, -128.336, -448.727, -77.9186, -465.449, -48.1262, -532.34, 32.0841, -585.296, 73.3351, -621.528, 87.0853, -657.761, 64.1682, -693.993, 66.4598, -702.355, 71.0433, -705.142, 96.2522, -696.781, 96.2522, -688.419, 128.336, -682.845, 130.628, -677.271, 126.045, -674.484, 98.5439, -643.825, 96.2522, -652.187, 121.461, -654.974, 132.92, -529.553, 137.503, -284.286, 146.67, -122.633, 160.42, -50.1682, 148.962, -47.3811, 171.879, -22.297, 174.171, -11.1484, 144.378, 8.36133, 153.545, 25.0841, 162.712, 41.8069, 144.378, 326.093, 103.127, 284.286, 48.1261, 362.326, 52.7096, 367.9, 89.3771, 373.474, 110.003, 390.197, 98.5439, 420.856, 41.251, 401.346, 22.9172, 381.836, 2.29175, 348.39, 18.3337, 351.177, 34.3757, 242.48, 20.6255, 200.673, 6.87512, 25.0841, -258.964, 22.297, -323.133, 2.78711, -320.841, 0, -304.799, -16.7228, -302.507, -8.36133, -281.882, -13.9355, -272.715, -80.8265, -261.256, -189.524, -258.964, -331.667, -277.298, -334.455, -316.258)
+
+[node name="Tolda_4x" type="Sprite2D" parent="Background/Objects/Tolda"]
+texture = ExtResource("2_lukpq")
+metadata/_edit_lock_ = true
+
+[connection signal="input_event" from="Background/Objects/Tolda" to="Background/Objects/Tolda" method="_on_input_event"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn3uxd1asbmtn"]
+
+[ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="1_3kxp0"]
+[ext_resource type="Texture2D" uid="uid://bxia8voolaxin" path="res://graphics/level1/background/images.jpg" id="2_4pufl"]
+[ext_resource type="PackedScene" uid="uid://ca6qtai8yh8wy" path="res://scenes/levels/game_scene.tscn" id="3_aq4u2"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_3kxp0")
+
+[node name="MenuHUD" type="Node2D" parent="."]
+
+[node name="ObjectsHUD" type="Node2D" parent="."]
+position = Vector2(0, 615)
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjectsHUD"]
+scale = Vector2(5.11822, 0.555556)
+texture = ExtResource("2_4pufl")
+centered = false
+
+[node name="GameScene" parent="." instance=ExtResource("3_aq4u2")]
+scale = Vector2(1, 0.854)

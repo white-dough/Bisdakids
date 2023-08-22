@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://bn3uxd1asbmtn"]
+
+[ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="1_3kxp0"]
+[ext_resource type="Texture2D" uid="uid://dyokahcqm3kvw" path="res://graphics/level1/background/asset2@4x.png" id="2_xy6v3"]
+[ext_resource type="Script" path="res://scenes/levels/objects.gd" id="3_6imvq"]
+[ext_resource type="PackedScene" uid="uid://dp1ldut5aplof" path="res://scenes/levels/level1_objects/tolda.tscn" id="3_rk1wu"]
+[ext_resource type="PackedScene" uid="uid://dnefj5t4gdpms" path="res://scenes/levels/level1_objects/atsa.tscn" id="5_a67ef"]
+[ext_resource type="PackedScene" uid="uid://bf6cns2lio6eg" path="res://scenes/levels/level1_objects/troso.tscn" id="6_0vbuj"]
+[ext_resource type="PackedScene" uid="uid://caqjeeq3jom2t" path="res://scenes/levels/level1_objects/kumpas.tscn" id="7_uyw32"]
+[ext_resource type="PackedScene" uid="uid://d2ormd4uk2c2c" path="res://scenes/levels/level1_objects/base_object.tscn" id="8_prgvj"]
+
+[sub_resource type="Animation" id="Animation_errhu"]
+resource_name = "object_found_animation"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ObjectAnimation/BaseObject:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.36, 0.44), Vector2(0.368, 0.45), Vector2(0.376, 0.46), Vector2(0.384, 0.47), Vector2(0.392, 0.48), Vector2(0.4, 0.49)]
+}
+
+[sub_resource type="Animation" id="Animation_grwjg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ObjectAnimation/BaseObject:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.368, 0.45)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7563d"]
+_data = {
+"RESET": SubResource("Animation_grwjg"),
+"object_found_animation": SubResource("Animation_errhu")
+}
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_3kxp0")
+
+[node name="HUD" type="Node2D" parent="."]
+
+[node name="Gameplay" type="Node2D" parent="."]
+position = Vector2(215, 0)
+
+[node name="Background" type="Node2D" parent="Gameplay"]
+
+[node name="BackgroundScene" type="Sprite2D" parent="Gameplay/Background"]
+scale = Vector2(0.357, 0.45)
+texture = ExtResource("2_xy6v3")
+centered = false
+
+[node name="Objects" type="Node2D" parent="Gameplay"]
+scale = Vector2(0.997871, 0.996913)
+script = ExtResource("3_6imvq")
+
+[node name="Tolda" parent="Gameplay/Objects" instance=ExtResource("3_rk1wu")]
+position = Vector2(442, 522)
+scale = Vector2(0.36, 0.44)
+collision_priority = 1.0
+
+[node name="Kumpas" parent="Gameplay/Objects" instance=ExtResource("7_uyw32")]
+position = Vector2(377.804, 583.802)
+scale = Vector2(0.359, 0.436)
+skew = -0.020944
+
+[node name="Troso" parent="Gameplay/Objects" instance=ExtResource("6_0vbuj")]
+position = Vector2(194.414, 544.681)
+scale = Vector2(0.5, 0.609)
+collision_layer = 4
+collision_mask = 4
+
+[node name="Atsa" parent="Gameplay/Objects" instance=ExtResource("5_a67ef")]
+position = Vector2(175.374, 514.589)
+rotation = 0.0174533
+scale = Vector2(0.5, 0.607)
+collision_layer = 8
+collision_mask = 8
+
+[node name="ObjectAnimation" type="Node2D" parent="Gameplay"]
+scale = Vector2(0.997871, 0.996913)
+
+[node name="BaseObject" parent="Gameplay/ObjectAnimation" instance=ExtResource("8_prgvj")]
+position = Vector2(215, 0)
+scale = Vector2(0.359234, 0.438642)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gameplay/ObjectAnimation"]
+root_node = NodePath("../../Objects")
+libraries = {
+"": SubResource("AnimationLibrary_7563d")
+}
+
+[connection signal="object_found" from="Gameplay/Objects" to="." method="_on_objects_object_found"]

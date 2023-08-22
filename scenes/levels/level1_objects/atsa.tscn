@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnefj5t4gdpms"]
+
+[ext_resource type="Texture2D" uid="uid://bb6ebldv5kqdq" path="res://graphics/level1/2x/atsa@2x.png" id="2_kxppd"]
+
+[node name="Atsa" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-0.528399, -0.133037)
+scale = Vector2(0.6972, 0.75658)
+polygon = PackedVector2Array(-69.6781, -18.3338, -44.594, -18.3338, -5.57424, -20.6255, 19.5099, -22.9172, 19.5099, -29.7924, 50.1682, -36.6676, 64.1038, -29.7924, 66.8909, -20.6255, 66.8909, -9.16689, 66.8909, 2.29172, 75.2523, 11.4586, 75.2523, 22.9172, 72.4652, 29.7924, 69.6781, 34.3758, 61.3167, 29.7924, 50.1682, 27.5007, 33.4455, 25.2089, 22.297, 27.5007, 19.5099, 18.3338, 22.297, -4.58345, 0, -2.29172, -22.297, 2.29172, -55.7425, 6.87517, -72.4652, 6.87517, -78.0394, -6.87517, -78.0394, -16.0421)
+
+[node name="Atsa_2x" type="Sprite2D" parent="."]
+texture = ExtResource("2_kxppd")
