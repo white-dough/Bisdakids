@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ca6qtai8yh8wy"]
+[gd_scene load_steps=8 format=3 uid="uid://ca6qtai8yh8wy"]
 
 [ext_resource type="Texture2D" uid="uid://bj081fbqa1oww" path="res://graphics/level1/background/level1_background@2x.png" id="1_2c3p0"]
 [ext_resource type="Script" path="res://scenes/levels/objects.gd" id="2_dqy12"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bf6cns2lio6eg" path="res://scenes/levels/level1_objects/troso.tscn" id="5_wvrld"]
 [ext_resource type="PackedScene" uid="uid://dnefj5t4gdpms" path="res://scenes/levels/level1_objects/atsa.tscn" id="6_tm4p4"]
 [ext_resource type="Script" path="res://scenes/levels/ObjectAnimation.gd" id="7_bxou4"]
-[ext_resource type="PackedScene" uid="uid://d2ormd4uk2c2c" path="res://scenes/levels/level1_objects/base_object.tscn" id="8_c8gcs"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -40,7 +39,5 @@ collision_mask = 8
 
 [node name="ObjectAnimation" type="Node2D" parent="."]
 script = ExtResource("7_bxou4")
-
-[node name="BaseObject" parent="ObjectAnimation" instance=ExtResource("8_c8gcs")]
 
 [connection signal="object_found" from="Objects" to="ObjectAnimation" method="_on_objects_object_found"]
