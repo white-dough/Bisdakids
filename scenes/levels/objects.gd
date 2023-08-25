@@ -19,7 +19,7 @@ func _unhandled_input(event) -> void:
 		var parameters: PhysicsPointQueryParameters2D = PhysicsPointQueryParameters2D.new()
 		parameters.set_position(get_global_mouse_position())
 		parameters.set_collide_with_areas(true)
-		parameters.set_collide_with_bodies(true)		
+		parameters.set_collide_with_bodies(true)
 		var space: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
 		var result: Array = space.intersect_point(parameters, 10)
 		var object_selected: Dictionary = compare_layer(result)
