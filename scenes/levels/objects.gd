@@ -2,7 +2,7 @@ extends Node2D
 
 signal object_found(object_name)
 
-func compare_layer(result: Array) -> Dictionary:
+func compare_layer(result: Array) -> Dictionary: # returns a dictionary
 	var top_most: Dictionary = {}
 	if result.size() > 0:
 		top_most = result[0] 
@@ -20,8 +20,8 @@ func _unhandled_input(event) -> void:
 		parameters.set_position(get_global_mouse_position())
 		parameters.set_collide_with_areas(true)
 		parameters.set_collide_with_bodies(true)
-		var space: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
-		var result: Array = space.intersect_point(parameters, 10)
+		var space: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state # idk what this does
+		var result: Array = space.intersect_point(parameters, 10) # array
 		var object_selected: Dictionary = compare_layer(result)
 		var selected_objects: Array = get_tree().get_root().get_child(0).selected_objects
 		if !object_selected.is_empty() && object_selected["collider"] in selected_objects:
