@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://qm0lihg0tnnv"]
+
+[ext_resource type="Texture2D" uid="uid://y6jy24dvoys4" path="res://graphics/level1/2x/largabista_2@2x.png" id="1_wtsg4"]
+
+[node name="largabista" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="largabista" type="Sprite2D" parent="."]
+texture = ExtResource("1_wtsg4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 43, 13, 35, 13, 21, 0, 9, 7, 4, 10, -7, 21, -2, 34, -5, 40, -16, 39, -26, 35, -31, 0, -43, -10, -40, -13, -38, -21, -36, -22, -29, -22, -24, -29, -20, -31, -11, -39, -6, -40, 5, -37, 19)

@@ -1,12 +1,40 @@
-[gd_scene load_steps=8 format=3 uid="uid://ca6qtai8yh8wy"]
+[gd_scene load_steps=36 format=3 uid="uid://ca6qtai8yh8wy"]
 
 [ext_resource type="Texture2D" uid="uid://bj081fbqa1oww" path="res://graphics/level1/background/level1_background@2x.png" id="1_2c3p0"]
 [ext_resource type="Script" path="res://scenes/levels/objects.gd" id="2_dqy12"]
+[ext_resource type="PackedScene" uid="uid://b587raktahnko" path="res://scenes/levels/level1_objects/bisikleta.tscn" id="3_2mvlv"]
+[ext_resource type="PackedScene" uid="uid://dm2ng73o1wv62" path="res://scenes/levels/level1_objects/lampara.tscn" id="3_e0xmx"]
 [ext_resource type="PackedScene" uid="uid://dp1ldut5aplof" path="res://scenes/levels/level1_objects/tolda.tscn" id="3_ka3vg"]
 [ext_resource type="PackedScene" uid="uid://caqjeeq3jom2t" path="res://scenes/levels/level1_objects/kumpas.tscn" id="4_8ma03"]
+[ext_resource type="PackedScene" uid="uid://dx2ekmhyxxlu2" path="res://scenes/levels/level1_objects/lutuanan.tscn" id="4_mqidk"]
+[ext_resource type="PackedScene" uid="uid://gbc2jdpxto7w" path="res://scenes/levels/level1_objects/timaan.tscn" id="4_vq8le"]
+[ext_resource type="PackedScene" uid="uid://j6maapufsper" path="res://scenes/levels/level1_objects/maleta.tscn" id="5_4b1cx"]
+[ext_resource type="PackedScene" uid="uid://t8pxpk0khwia" path="res://scenes/levels/level1_objects/bola.tscn" id="5_hys38"]
 [ext_resource type="PackedScene" uid="uid://bf6cns2lio6eg" path="res://scenes/levels/level1_objects/troso.tscn" id="5_wvrld"]
+[ext_resource type="PackedScene" uid="uid://7r2yynu1lep4" path="res://scenes/levels/level1_objects/mapa.tscn" id="6_8c4dh"]
 [ext_resource type="PackedScene" uid="uid://dnefj5t4gdpms" path="res://scenes/levels/level1_objects/atsa.tscn" id="6_tm4p4"]
 [ext_resource type="Script" path="res://scenes/levels/ObjectAnimation.gd" id="7_bxou4"]
+[ext_resource type="PackedScene" uid="uid://dvenju3x3g5an" path="res://scenes/levels/level1_objects/banig.tscn" id="8_3k27t"]
+[ext_resource type="PackedScene" uid="uid://ld2cp71x0q8e" path="res://scenes/levels/level1_objects/sista.tscn" id="8_650yd"]
+[ext_resource type="PackedScene" uid="uid://dqea2jt5qbwcf" path="res://scenes/levels/level1_objects/botas.tscn" id="9_5i461"]
+[ext_resource type="PackedScene" uid="uid://c3q7yg6m5hedc" path="res://scenes/levels/level1_objects/campingbanig.tscn" id="10_vf6h0"]
+[ext_resource type="PackedScene" uid="uid://ch7vh5u1w6efo" path="res://scenes/levels/level1_objects/silhig.tscn" id="11_ato6s"]
+[ext_resource type="PackedScene" uid="uid://saovsohqfdob" path="res://scenes/levels/level1_objects/bag.tscn" id="11_tdd1l"]
+[ext_resource type="PackedScene" uid="uid://ds7ud5hotios6" path="res://scenes/levels/level1_objects/bukag.tscn" id="12_lomo3"]
+[ext_resource type="PackedScene" uid="uid://bto23qbcvrfks" path="res://scenes/levels/level1_objects/bahande.tscn" id="14_o5g1g"]
+[ext_resource type="PackedScene" uid="uid://bskwk0utqk164" path="res://scenes/levels/level1_objects/antepara.tscn" id="15_wvs3r"]
+[ext_resource type="PackedScene" uid="uid://cs6xp8xwhoxhh" path="res://scenes/levels/level1_objects/bituon.tscn" id="16_kv456"]
+[ext_resource type="PackedScene" uid="uid://cpsjyklfhuqnx" path="res://scenes/levels/level1_objects/kalis.tscn" id="17_8e8a5"]
+[ext_resource type="PackedScene" uid="uid://bc5oit5wab15l" path="res://scenes/levels/level1_objects/tibod.tscn" id="17_cvrds"]
+[ext_resource type="PackedScene" uid="uid://dy832c37wo1q6" path="res://scenes/levels/level1_objects/bungo.tscn" id="19_8eeo3"]
+[ext_resource type="PackedScene" uid="uid://bgwdveenqi0ey" path="res://scenes/levels/level1_objects/kalo.tscn" id="21_3kln1"]
+[ext_resource type="PackedScene" uid="uid://blccfa33xmum1" path="res://scenes/levels/level1_objects/kodak.tscn" id="22_w4313"]
+[ext_resource type="PackedScene" uid="uid://c4urxnbpriuan" path="res://scenes/levels/level1_objects/korona.tscn" id="23_ohlqi"]
+[ext_resource type="PackedScene" uid="uid://dwx0gd3fmp3t8" path="res://scenes/levels/level1_objects/kutsara.tscn" id="24_eedp3"]
+[ext_resource type="PackedScene" uid="uid://bjyr2dejkrcsg" path="res://scenes/levels/level1_objects/kutsilyo.tscn" id="25_ctbtl"]
+[ext_resource type="PackedScene" uid="uid://qm0lihg0tnnv" path="res://scenes/levels/level1_objects/largabista.tscn" id="27_rvq8i"]
+[ext_resource type="PackedScene" uid="uid://c0muuoqs8mtgn" path="res://scenes/levels/level1_objects/lumay.tscn" id="28_5521l"]
+[ext_resource type="PackedScene" uid="uid://y34rcf42vv7w" path="res://scenes/levels/level1_objects/regalo.tscn" id="31_fhxpn"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -20,22 +48,106 @@ metadata/_edit_lock_ = true
 [node name="Objects" type="Node2D" parent="."]
 script = ExtResource("2_dqy12")
 
+[node name="lampara" parent="Objects" instance=ExtResource("3_e0xmx")]
+position = Vector2(530, 382)
+
+[node name="timaan" parent="Objects" instance=ExtResource("4_vq8le")]
+position = Vector2(346, 551)
+
+[node name="bisikleta" parent="Objects" instance=ExtResource("3_2mvlv")]
+position = Vector2(869, 515)
+
+[node name="maleta" parent="Objects" instance=ExtResource("5_4b1cx")]
+position = Vector2(906, 600)
+
+[node name="mapa" parent="Objects" instance=ExtResource("6_8c4dh")]
+position = Vector2(913, 653)
+
+[node name="lutuanan" parent="Objects" instance=ExtResource("4_mqidk")]
+position = Vector2(167, 591)
+
+[node name="sista" parent="Objects" instance=ExtResource("8_650yd")]
+position = Vector2(766, 504)
+
 [node name="Tolda" parent="Objects" instance=ExtResource("3_ka3vg")]
-position = Vector2(618, 578)
+position = Vector2(550, 527)
 collision_priority = 1.0
 
+[node name="bola" parent="Objects" instance=ExtResource("5_hys38")]
+position = Vector2(777, 587)
+
 [node name="Kumpas" parent="Objects" instance=ExtResource("4_8ma03")]
-position = Vector2(522, 652.671)
+position = Vector2(545, 652)
 
 [node name="Troso" parent="Objects" instance=ExtResource("5_wvrld")]
-position = Vector2(263, 607.003)
+position = Vector2(282, 609)
 collision_layer = 4
 collision_mask = 4
 
+[node name="Banig" parent="Objects" instance=ExtResource("8_3k27t")]
+position = Vector2(375, 642)
+
+[node name="campingbanig" parent="Objects" instance=ExtResource("10_vf6h0")]
+position = Vector2(194, 671)
+
+[node name="botas" parent="Objects" instance=ExtResource("9_5i461")]
+position = Vector2(485, 634)
+
+[node name="tibod" parent="Objects" instance=ExtResource("17_cvrds")]
+position = Vector2(347, 658)
+
+[node name="bag" parent="Objects" instance=ExtResource("11_tdd1l")]
+position = Vector2(292, 636)
+
 [node name="Atsa" parent="Objects" instance=ExtResource("6_tm4p4")]
-position = Vector2(228, 559)
+position = Vector2(232, 551)
 collision_layer = 8
 collision_mask = 8
+
+[node name="bituon" parent="Objects" instance=ExtResource("16_kv456")]
+position = Vector2(546, 691)
+
+[node name="bungo" parent="Objects" instance=ExtResource("19_8eeo3")]
+position = Vector2(340, 409)
+
+[node name="kalis" parent="Objects" instance=ExtResource("17_8e8a5")]
+position = Vector2(764, 638)
+
+[node name="bahande" parent="Objects" instance=ExtResource("14_o5g1g")]
+position = Vector2(820, 654)
+
+[node name="antepara" parent="Objects" instance=ExtResource("15_wvs3r")]
+position = Vector2(933, 699)
+
+[node name="bukag" parent="Objects" instance=ExtResource("12_lomo3")]
+position = Vector2(691, 648)
+
+[node name="kalo" parent="Objects" instance=ExtResource("21_3kln1")]
+position = Vector2(896, 448)
+
+[node name="kodak" parent="Objects" instance=ExtResource("22_w4313")]
+position = Vector2(401, 665)
+
+[node name="korona" parent="Objects" instance=ExtResource("23_ohlqi")]
+position = Vector2(707, 691)
+
+[node name="kutsara" parent="Objects" instance=ExtResource("24_eedp3")]
+position = Vector2(241, 695)
+
+[node name="kutsilyo" parent="Objects" instance=ExtResource("25_ctbtl")]
+position = Vector2(315, 697)
+
+[node name="silhig" parent="Objects" instance=ExtResource("11_ato6s")]
+position = Vector2(348, 688)
+
+[node name="largabista" parent="Objects" instance=ExtResource("27_rvq8i")]
+position = Vector2(1034, 679)
+
+[node name="lumay" parent="Objects" instance=ExtResource("28_5521l")]
+position = Vector2(989, 154)
+
+[node name="bituon2" parent="Objects" instance=ExtResource("31_fhxpn")]
+position = Vector2(613, 678)
 
 [node name="ObjectAnimation" type="Node2D" parent="."]
 script = ExtResource("7_bxou4")

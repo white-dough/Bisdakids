@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b587raktahnko"]
+
+[ext_resource type="Texture2D" uid="uid://cqbaa023kktmm" path="res://graphics/level1/2x/bisikleta@2x.png" id="1_kex6s"]
+
+[node name="bisikleta" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-150, 25, -144, -2, -118, -26, -98, -29, -88, -34, -62, -27, -50, -50, -61, -51, -67, -67, -63, -73, -55, -73, -57, -81, -52, -84, -40, -83, -23, -76, -23, -72, -14, -67, -18, -57, -34, -62, -37, -51, -27, -30, -15, -16, 1, -7, 17, -3, 28, -16, 36, -41, 24, -42, 13, -47, 13, -58, 19, -66, 67, -59, 65, -50, 59, -39, 66, -36, 102, -40, 138, -20, 149, 1, 150, 44, 129, 69, 97, 80, 94, 86, 84, 86, 78, 79, 50, 69, 40, 58, 34, 67, 24, 64, 18, 58, 17, 52, 1, 50, -9, 39, -9, 27, -24, 10, -32, 5, -25, 22, -30, 39, -38, 55, -56, 75, -95, 84, -126, 71, -144, 53)
+
+[node name="bisikleta" type="Sprite2D" parent="."]
+texture = ExtResource("1_kex6s")

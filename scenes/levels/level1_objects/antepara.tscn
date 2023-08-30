@@ -1,21 +1,16 @@
 [gd_scene load_steps=2 format=3 uid="uid://bskwk0utqk164"]
 
-[ext_resource type="Texture2D" uid="uid://bfig0bchktpua" path="res://graphics/level1/2x/antepara@2x.png" id="2_d7vxk"]
+[ext_resource type="Texture2D" uid="uid://bfig0bchktpua" path="res://graphics/level1/2x/antepara@2x.png" id="1_81j4j"]
 
-[node name="Antepara" type="Area2D"]
+[node name="antepara" type="Area2D"]
 light_mask = 2
 visibility_layer = 2
-scale = Vector2(0.358793, 0.436353)
-collision_layer = 2
-collision_mask = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="antepara" type="Sprite2D" parent="."]
+texture = ExtResource("1_81j4j")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-light_mask = 2
-visibility_layer = 2
-polygon = PackedVector2Array(-142.143, 27.5007, -161.653, 75.6268, -139.356, 87.0855, -105.911, 57.2931, -50.1682, 48.1262, -25.0841, 25.2089, 27.8712, 29.7924, 52.9553, 52.7096, 105.911, 59.5848, 139.356, 89.3772, 153.292, 77.9186, 144.93, 43.5427, 158.866, -16.0421, 142.143, -57.2931, 105.911, -82.502, 36.2326, -80.2103, 11.1485, -61.8765, -25.0841, -80.2103, -86.4008, -84.7937, -130.995, -71.0434, -153.292, -41.251)
-
-[node name="Antepara_4x" type="Sprite2D" parent="."]
-light_mask = 2
-visibility_layer = 2
-scale = Vector2(4, 4)
-texture = ExtResource("2_d7vxk")
+polygon = PackedVector2Array(-39, 2, -41, -9, -32, -19, -15, -22, -4, -18, 2, -18, 13, -22, 28, -21, 37, -15, 39, -6, 34, 10, 38, 18, 35, 22, 31, 23, 26, 15, 14, 13, 6, 6, -5, 7, -16, 14, -27, 15, -34, 23, -41, 18, -37, 9)

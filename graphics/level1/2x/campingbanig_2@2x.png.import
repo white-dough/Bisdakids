@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v4bj2oqof6t"
-path="res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"
+uid="uid://xoa4xewrpocs"
+path="res://.godot/imported/campingbanig_2@2x.png-fdfaf79cc36d0ab2ca38378a8d4228a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/level1/2x/Tolda@2x.png"
-dest_files=["res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"]
+source_file="res://graphics/level1/2x/campingbanig_2@2x.png"
+dest_files=["res://.godot/imported/campingbanig_2@2x.png-fdfaf79cc36d0ab2ca38378a8d4228a9.ctex"]
 
 [params]
 

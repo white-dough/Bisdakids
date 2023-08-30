@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://t8pxpk0khwia"]
+
+[ext_resource type="Texture2D" uid="uid://f3diaup35gyt" path="res://graphics/level1/2x/bola@2x.png" id="1_tovrq"]
+
+[node name="bola" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, -3, -30, 11, -20, 26, -6, 31, 12, 30, 25, 22, 31, 10, 31, -6, 26, -20, 14, -30, -3, -31, -20, -26, -30, -14)
+
+[node name="bola" type="Sprite2D" parent="."]
+texture = ExtResource("1_tovrq")

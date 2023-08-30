@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2ng73o1wv62"]
+
+[ext_resource type="Texture2D" uid="uid://kkjeqn4a1swl" path="res://graphics/level1/2x/lampara@2x.png" id="1_7eadg"]
+
+[node name="lampara" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="lampara" type="Sprite2D" parent="."]
+texture = ExtResource("1_7eadg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-7, 64, 15, 63, 11, 48, 22, 46, 34, -13, 8, -34, 14, -54, 4, -62, -2, -60, -6, -54, -7, -50, -4, -33, -33, -12, -33, -6, -16, 43, -12, 47, -5, 47)

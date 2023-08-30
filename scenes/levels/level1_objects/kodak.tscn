@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://blccfa33xmum1"]
+
+[ext_resource type="Texture2D" uid="uid://biy7d6enwy285" path="res://graphics/level1/2x/kodak@2x.png" id="1_jgpfu"]
+
+[node name="kodak" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="kodak" type="Sprite2D" parent="."]
+texture = ExtResource("1_jgpfu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-31, 4, -37, 13, -36, 28, 35, 28, 38, 21, 37, 11, 30, 3, 29, -20, 23, -27, -21, -27, -26, -24, -28, -20, -28, 0)

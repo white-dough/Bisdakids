@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds7ud5hotios6"]
+
+[ext_resource type="Texture2D" uid="uid://b7ef5qc4jxjgb" path="res://graphics/level1/2x/bukag@2x.png" id="1_2s33i"]
+
+[node name="bukag" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="bukag" type="Sprite2D" parent="."]
+texture = ExtResource("1_2s33i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-49, 2, -43, 39, -34, 47, -7, 55, 29, 51, 47, 38, 50, -8, 60, -15, 52, -28, 53, -43, 28, -53, -14, -56, -40, -51, -55, -42, -54, -28, -57, -16)

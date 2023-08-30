@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bto23qbcvrfks"]
+
+[ext_resource type="Texture2D" uid="uid://cci6k0q4aome8" path="res://graphics/level1/2x/bahandi@2x.png" id="1_iflp3"]
+
+[node name="bahande" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="bahande" type="Sprite2D" parent="."]
+texture = ExtResource("1_iflp3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-83, 25, -92, 37, -78, 45, -71, 58, -60, 57, -45, 62, -38, 59, -24, 63, -19, 59, -3, 62, 3, 71, 19, 74, 38, 70, 52, 71, 57, 62, 69, 62, 76, 55, 87, 51, 85, 40, 90, 27, 83, 14, 67, 3, 67, -2, 78, -9, 81, -26, 78, -41, 55, -52, 54, -64, 39, -69, 30, -64, 6, -75, -13, -37, -53, -17, -53, -2, -57, 5, -73, 12)

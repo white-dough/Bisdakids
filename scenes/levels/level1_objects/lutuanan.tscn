@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx2ekmhyxxlu2"]
+
+[ext_resource type="Texture2D" uid="uid://bhv0gp14jnoep" path="res://graphics/level1/2x/lutuanan_1@2x.png" id="1_tkqch"]
+
+[node name="lutuanan" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="Lutuanan1_2x" type="Sprite2D" parent="."]
+position = Vector2(12, -4)
+texture = ExtResource("1_tkqch")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-25, 3, -29, 18, -41, 25, -47, 34, -47, 43, -31, 46, 3, 50, 33, 50, 55, 44, 72, 37, 68, 23, 46, 10, 33, -31, 39, -45, 34, -60, 9, -61, -9, -59, -14, -54, -16, -43)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwx0gd3fmp3t8"]
+
+[ext_resource type="Texture2D" uid="uid://krlqeyhb1ht" path="res://graphics/level1/2x/kutsara@2x.png" id="1_jg3nb"]
+
+[node name="kutsara" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="kutsara" type="Sprite2D" parent="."]
+texture = ExtResource("1_jg3nb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-37, 5, -29, 14, -18, 17, -6, 16, 7, 11, 14, 12, 24, 16, 32, 16, 37, 10, 36, 4, 32, -2, 23, -7, 12, -8, 6, -8, -11, -15, -22, -17, -30, -14, -36, -6)

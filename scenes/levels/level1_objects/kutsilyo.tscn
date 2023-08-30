@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjyr2dejkrcsg"]
+
+[ext_resource type="Texture2D" uid="uid://cku0vnff8xkqo" path="res://graphics/level1/2x/kutsilyo@2x.png" id="1_f2i3l"]
+
+[node name="kutsilyo" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="kutsilyo" type="Sprite2D" parent="."]
+texture = ExtResource("1_f2i3l")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-43, 1, 42, 16, 45, -3, 40, -6, 28, -5, -3, -15, -28, -16, -41, -11, -44, -3)

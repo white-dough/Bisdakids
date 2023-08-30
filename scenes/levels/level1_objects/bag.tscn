@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://saovsohqfdob"]
+
+[ext_resource type="Texture2D" uid="uid://c4wkkuiui18es" path="res://graphics/level1/2x/bag@2x.png" id="1_bqu7e"]
+
+[node name="bag" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="bag" type="Sprite2D" parent="."]
+texture = ExtResource("1_bqu7e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-29, 45, -6, 51, 1, 51, 29, 52, 50, 45, 52, 38, 45, 11, 40, 3, 35, -1, 31, -12, 34, -16, 27, -29, 19, -44, 11, -49, 6, -50, -8, -53, -21, -50, -24, -45, -35, -46, -45, -42, -49, -34, -51, -22, -48, -12, -44, 9, -43, 28, -40, 40)

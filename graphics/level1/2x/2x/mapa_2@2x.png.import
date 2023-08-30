@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3n7isl763owr"
-path="res://.godot/imported/largabista@2x.png-c7262312d7c1df290947cc7960aac3db.ctex"
+uid="uid://b1qdbwp53va0h"
+path="res://.godot/imported/mapa_2@2x.png-79f6703a925749898eff6e9d46b482c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/level1/2x/largabista@2x.png"
-dest_files=["res://.godot/imported/largabista@2x.png-c7262312d7c1df290947cc7960aac3db.ctex"]
+source_file="res://graphics/level1/2x/2x/mapa_2@2x.png"
+dest_files=["res://.godot/imported/mapa_2@2x.png-79f6703a925749898eff6e9d46b482c2.ctex"]
 
 [params]
 

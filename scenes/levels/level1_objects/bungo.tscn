@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy832c37wo1q6"]
+
+[ext_resource type="Texture2D" uid="uid://frn6d3bg1mxt" path="res://graphics/level1/2x/bungo2@2x.png" id="1_26b2f"]
+
+[node name="bungo" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(241, 554)
+collision_layer = 8
+collision_mask = 8
+
+[node name="bungo" type="Sprite2D" parent="."]
+texture = ExtResource("1_26b2f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-28, 1, -24, 7, -25, 15, -36, 27, -43, 33, -43, 39, -34, 50, -25, 51, -16, 44, -20, 38, -16, 34, -9, 37, 11, 39, 21, 34, 26, 38, 26, 43, 32, 49, 36, 50, 49, 42, 47, 32, 40, 30, 28, 16, 30, 10, 28, 2, 33, -9, 33, -16, 44, -26, 52, -29, 55, -35, 51, -44, 39, -51, 33, -48, 31, -43, 30, -39, 24, -32, 10, -37, -2, -37, -13, -35, -22, -32, -33, -41, -33, -48, -40, -51, -46, -48, -54, -37, -52, -30, -48, -26, -43, -28, -33, -19, -31, -8)

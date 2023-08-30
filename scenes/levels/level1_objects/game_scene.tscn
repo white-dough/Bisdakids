@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt3dpt0utoylx"]
+
+[ext_resource type="Texture2D" uid="uid://rpnvv8kdjfcv" path="res://graphics/level1/2x/banig@2x.png" id="1_7pdtt"]
+
+[node name="Banig" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(228, 559)
+collision_layer = 8
+collision_mask = 8
+
+[node name="banig" type="Sprite2D" parent="."]
+texture = ExtResource("1_7pdtt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-111, -9, -103, -27, -95, -32, -58, -28, -43, -29, 14, -38, 25, -33, 32, -20, 32, -13, 53, -11, 80, -7, 107, -3, 115, 3, 106, 14, 92, 21, 78, 28, 68, 38, 55, 36, -13, 27, -108, 30, -115, 6)
