@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dorayn2s4edj7"]
+
+[ext_resource type="Texture2D" uid="uid://c1ngbinm0rg6m" path="res://graphics/level1/2x/2x/firefly1@2x.png" id="1_tqk3m"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2bpmk"]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+material = SubResource("CanvasItemMaterial_2bpmk")
+amount = 30
+speed_scale = 0.1
+explosiveness = 0.07
+randomness = 1.0
+texture = ExtResource("1_tqk3m")
+emission_shape = 3
+emission_rect_extents = Vector2(700, 700)
+spread = 172.77
+gravity = Vector2(500, 10)
+initial_velocity_min = 91.21
+initial_velocity_max = 121.51
+color = Color(1, 0.964706, 0, 0.141176)
+hue_variation_min = 0.08
+hue_variation_max = 0.08

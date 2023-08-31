@@ -9,8 +9,8 @@ position = Vector2(241, 554)
 collision_layer = 8
 collision_mask = 8
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, -1, -22, -7, -25, -17, -20, -28, -9, -31, 7, -32, 18, -26, 21, -19, 16, -2, 24, 10, 18, 26, 8, 30, -3, 28, -11, 20, -12, 13)
+
 [node name="tibod" type="Sprite2D" parent="."]
 texture = ExtResource("1_ieigs")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-9, 1, -14, 14, -9, 23, -5, 29, 10, 31, 19, 26, 23, 21, 24, 13, 23, 5, 15, -5, 22, -16, 18, -29, 6, -31, -11, -30, -19, -27, -23, -21, -23, -13, -20, -7, -11, 0)
