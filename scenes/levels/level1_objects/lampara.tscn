@@ -14,7 +14,6 @@ fill_from = Vector2(0.5, 0.5)
 [node name="lampara" type="Area2D"]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(241, 554)
 collision_layer = 8
 collision_mask = 8
 

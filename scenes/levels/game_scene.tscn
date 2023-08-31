@@ -163,4 +163,4 @@ position = Vector2(338, 317)
 position = Vector2(590, 345)
 script = ExtResource("7_bxou4")
 
-[connection signal="object_found" from="Objects" to="ObjectAnimation" method="_on_objects_object_found"]
+[connection signal="object_found_signal" from="Objects" to="ObjectAnimation" method="_on_objects_object_found_signal"]
