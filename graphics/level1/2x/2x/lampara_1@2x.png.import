@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clcnkqc7ijvuc"
-path="res://.godot/imported/smoke@2x.png-1a1afb444eafdb2ea13cc07233c7a7dd.ctex"
+uid="uid://bjo1d8f0ydwh"
+path="res://.godot/imported/lampara_1@2x.png-421c224b483c973c5c20689ddd38ff19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/level1/2x/2x/smoke@2x.png"
-dest_files=["res://.godot/imported/smoke@2x.png-1a1afb444eafdb2ea13cc07233c7a7dd.ctex"]
+source_file="res://graphics/level1/2x/2x/lampara_1@2x.png"
+dest_files=["res://.godot/imported/lampara_1@2x.png-421c224b483c973c5c20689ddd38ff19.ctex"]
 
 [params]
 

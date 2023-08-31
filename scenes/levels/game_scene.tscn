@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dorayn2s4edj7" path="res://graphics/ui/background/firefly.tscn" id="2_1unbx"]
 [ext_resource type="Script" path="res://scenes/levels/objects.gd" id="2_dqy12"]
 [ext_resource type="PackedScene" uid="uid://b587raktahnko" path="res://scenes/levels/level1_objects/bisikleta.tscn" id="3_2mvlv"]
-[ext_resource type="PackedScene" uid="uid://dm2ng73o1wv62" path="res://scenes/levels/level1_objects/lampara.tscn" id="3_e0xmx"]
 [ext_resource type="PackedScene" uid="uid://dp1ldut5aplof" path="res://scenes/levels/level1_objects/tolda.tscn" id="3_ka3vg"]
 [ext_resource type="PackedScene" uid="uid://caqjeeq3jom2t" path="res://scenes/levels/level1_objects/kumpas.tscn" id="4_8ma03"]
 [ext_resource type="PackedScene" uid="uid://dx2ekmhyxxlu2" path="res://scenes/levels/level1_objects/lutuanan.tscn" id="4_mqidk"]
@@ -36,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://qm0lihg0tnnv" path="res://scenes/levels/level1_objects/largabista.tscn" id="27_rvq8i"]
 [ext_resource type="PackedScene" uid="uid://c0muuoqs8mtgn" path="res://scenes/levels/level1_objects/lumay.tscn" id="28_5521l"]
 [ext_resource type="PackedScene" uid="uid://y34rcf42vv7w" path="res://scenes/levels/level1_objects/regalo.tscn" id="31_fhxpn"]
+[ext_resource type="PackedScene" uid="uid://dmgiycnodn3rj" path="res://lampara.tscn" id="35_ps4na"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -53,11 +53,11 @@ lifetime_randomness = 0.09
 spread = 180.0
 gravity = Vector2(2, 500)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="Background"]
+color = Color(0.854902, 0.854902, 0.854902, 1)
+
 [node name="Objects" type="Node2D" parent="."]
 script = ExtResource("2_dqy12")
-
-[node name="lampara" parent="Objects" instance=ExtResource("3_e0xmx")]
-position = Vector2(530, 382)
 
 [node name="timaan" parent="Objects" instance=ExtResource("4_vq8le")]
 position = Vector2(346, 551)
@@ -156,6 +156,9 @@ position = Vector2(989, 154)
 
 [node name="bituon2" parent="Objects" instance=ExtResource("31_fhxpn")]
 position = Vector2(613, 678)
+
+[node name="lampara" parent="Objects" instance=ExtResource("35_ps4na")]
+position = Vector2(338, 317)
 
 [node name="ObjectAnimation" type="Node2D" parent="."]
 position = Vector2(590, 345)
