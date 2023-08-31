@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhv0gp14jnoep"
-path="res://.godot/imported/lutuanan_1@2x.png-7c18e4cfbcfe9871864001970f34b4bb.ctex"
+uid="uid://clcnkqc7ijvuc"
+path="res://.godot/imported/smoke@2x.png-1a1afb444eafdb2ea13cc07233c7a7dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/level1/2x/lutuanan_1@2x.png"
-dest_files=["res://.godot/imported/lutuanan_1@2x.png-7c18e4cfbcfe9871864001970f34b4bb.ctex"]
+source_file="res://graphics/level1/2x/2x/smoke@2x.png"
+dest_files=["res://.godot/imported/smoke@2x.png-1a1afb444eafdb2ea13cc07233c7a7dd.ctex"]
 
 [params]
 

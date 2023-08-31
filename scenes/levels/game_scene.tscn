@@ -1,6 +1,7 @@
-[gd_scene load_steps=36 format=3 uid="uid://ca6qtai8yh8wy"]
+[gd_scene load_steps=37 format=3 uid="uid://ca6qtai8yh8wy"]
 
 [ext_resource type="Texture2D" uid="uid://bj081fbqa1oww" path="res://graphics/level1/background/level1_background@2x.png" id="1_2c3p0"]
+[ext_resource type="PackedScene" uid="uid://dorayn2s4edj7" path="res://graphics/ui/background/firefly.tscn" id="2_1unbx"]
 [ext_resource type="Script" path="res://scenes/levels/objects.gd" id="2_dqy12"]
 [ext_resource type="PackedScene" uid="uid://b587raktahnko" path="res://scenes/levels/level1_objects/bisikleta.tscn" id="3_2mvlv"]
 [ext_resource type="PackedScene" uid="uid://dm2ng73o1wv62" path="res://scenes/levels/level1_objects/lampara.tscn" id="3_e0xmx"]
@@ -43,7 +44,13 @@
 [node name="BackgroundScene" type="Sprite2D" parent="Background"]
 texture = ExtResource("1_2c3p0")
 centered = false
-metadata/_edit_lock_ = true
+
+[node name="CPUParticles2D" parent="Background" instance=ExtResource("2_1unbx")]
+position = Vector2(607, 311)
+preprocess = 0.5
+lifetime_randomness = 0.09
+spread = 180.0
+gravity = Vector2(2, 500)
 
 [node name="Objects" type="Node2D" parent="."]
 script = ExtResource("2_dqy12")
@@ -64,7 +71,7 @@ position = Vector2(906, 600)
 position = Vector2(913, 653)
 
 [node name="lutuanan" parent="Objects" instance=ExtResource("4_mqidk")]
-position = Vector2(167, 591)
+position = Vector2(170, 596)
 
 [node name="sista" parent="Objects" instance=ExtResource("8_650yd")]
 position = Vector2(766, 504)
@@ -150,6 +157,7 @@ position = Vector2(989, 154)
 position = Vector2(613, 678)
 
 [node name="ObjectAnimation" type="Node2D" parent="."]
+position = Vector2(590, 345)
 script = ExtResource("7_bxou4")
 
 [connection signal="object_found_signal" from="Objects" to="ObjectAnimation" method="_on_objects_object_found_signal"]
