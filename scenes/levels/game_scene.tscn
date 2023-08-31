@@ -157,10 +157,10 @@ position = Vector2(989, 154)
 position = Vector2(613, 678)
 
 [node name="lampara" parent="Objects" instance=ExtResource("35_ps4na")]
-position = Vector2(338, 317)
+position = Vector2(339, 317)
 
 [node name="ObjectAnimation" type="Node2D" parent="."]
 position = Vector2(590, 345)
 script = ExtResource("7_bxou4")
 
-[connection signal="object_found_signal" from="Objects" to="ObjectAnimation" method="_on_objects_object_found_signal"]
+[connection signal="object_found" from="Objects" to="ObjectAnimation" method="_on_objects_object_found"]
