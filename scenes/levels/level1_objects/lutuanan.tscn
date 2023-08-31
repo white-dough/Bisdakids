@@ -30,11 +30,8 @@ position = Vector2(241, 554)
 collision_layer = 8
 collision_mask = 8
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-25, 3, -29, 18, -41, 25, -47, 34, -47, 43, -31, 46, 3, 50, 33, 50, 55, 44, 72, 37, 68, 23, 46, 10, 33, -31, 39, -45, 34, -60, 9, -61, -9, -59, -14, -54, -16, -43)
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(10, -64)
+[node name="SmokeParticles" type="CPUParticles2D" parent="."]
+position = Vector2(-3, -48)
 rotation = -1.90415
 skew = 0.253073
 amount = 13
@@ -56,12 +53,11 @@ scale_amount_min = 0.0
 color = Color(1, 1, 1, 0.172549)
 
 [node name="Lutuanan1_2x" type="Sprite2D" parent="."]
-position = Vector2(12, -4)
 texture = ExtResource("2_o040w")
 
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+[node name="FireParticles" type="CPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_knbhu")
-position = Vector2(13, 14)
+position = Vector2(1, 20)
 amount = 650
 emission_shape = 1
 emission_sphere_radius = 17.2
