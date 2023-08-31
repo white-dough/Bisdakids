@@ -152,4 +152,4 @@ position = Vector2(613, 678)
 [node name="ObjectAnimation" type="Node2D" parent="."]
 script = ExtResource("7_bxou4")
 
-[connection signal="object_found" from="Objects" to="ObjectAnimation" method="_on_objects_object_found"]
+[connection signal="object_found_signal" from="Objects" to="ObjectAnimation" method="_on_objects_object_found_signal"]

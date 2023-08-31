@@ -17,14 +17,9 @@ func animate_object():
 	object_found_tween.tween_property(self.get_child(0), "position", Vector2(500, 1000), 1) # this line moves the clicked object down
 	object_found_tween.finished.connect(self.get_child(0).queue_free) # this line of code removes the object 
 
-func _on_objects_object_found(object_name: Area2D):
+func _on_objects_object_found_signal(object_name):
 	print(object_name) # prints the object being clicked
 	var object_animation = object_name.duplicate()
 	self.add_child(object_animation)
 	object_name.queue_free() # remove 
-	for i in range(3):
-		animate_object() # calls the function above
-
-
-
-
+	animate_object() # calls the function above
