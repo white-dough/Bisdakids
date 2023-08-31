@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dx2ekmhyxxlu2"]
+[gd_scene load_steps=8 format=3 uid="uid://dx2ekmhyxxlu2"]
 
 [ext_resource type="Texture2D" uid="uid://cq6vxvi1gw60x" path="res://graphics/level1/2x/2x/smoke2@2x.png" id="2_6bcfm"]
 [ext_resource type="Texture2D" uid="uid://xsovgrldcrwj" path="res://graphics/level1/2x/lutuanan@2x.png" id="2_o040w"]
@@ -13,6 +13,15 @@ point_count = 4
 [sub_resource type="Gradient" id="Gradient_nldbw"]
 offsets = PackedFloat32Array(0, 0.371134, 0.762887, 1)
 colors = PackedColorArray(0.898039, 0.827451, 0.0431373, 1, 0.976471, 0.454902, 0.211765, 1, 0.772549, 0.231373, 0.0470588, 1, 1, 1, 1, 0.45098)
+
+[sub_resource type="Gradient" id="Gradient_y76ut"]
+offsets = PackedFloat32Array(0.104938, 0.62037, 0.783951)
+colors = PackedColorArray(1, 1, 1, 1, 0.0363636, 0.0363636, 0.0363636, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_btnx3"]
+gradient = SubResource("Gradient_y76ut")
+fill = 1
+fill_from = Vector2(0.482906, 0.457265)
 
 [node name="lutuanan" type="Area2D"]
 light_mask = 2
@@ -63,3 +72,9 @@ scale_amount_curve = SubResource("Curve_66pi6")
 color_ramp = SubResource("Gradient_nldbw")
 anim_speed_min = 0.1
 anim_speed_max = 0.1
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(13, 13.5)
+scale = Vector2(1.73438, 1.70313)
+color = Color(0.996078, 0.996078, 0.454902, 1)
+texture = SubResource("GradientTexture2D_btnx3")
