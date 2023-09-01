@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://qm0lihg0tnnv" path="res://scenes/levels/level1_objects/largabista.tscn" id="27_rvq8i"]
 [ext_resource type="PackedScene" uid="uid://c0muuoqs8mtgn" path="res://scenes/levels/level1_objects/lumay.tscn" id="28_5521l"]
 [ext_resource type="PackedScene" uid="uid://y34rcf42vv7w" path="res://scenes/levels/level1_objects/regalo.tscn" id="31_fhxpn"]
-[ext_resource type="PackedScene" uid="uid://dmgiycnodn3rj" path="res://lampara.tscn" id="35_ps4na"]
+[ext_resource type="PackedScene" uid="uid://dmgiycnodn3rj" path="res://scenes/levels/level1_objects/lampara.tscn" id="35_ps4na"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -161,5 +161,6 @@ position = Vector2(613, 678)
 position = Vector2(339, 317)
 
 [node name="ObjectAnimation" type="Node2D" parent="."]
-position = Vector2(590, 345)
 script = ExtResource("7_bxou4")
+
+[connection signal="object_found_signal" from="Objects" to="ObjectAnimation" method="_on_objects_object_found_signal"]
