@@ -73,3 +73,6 @@ position = Vector2(13, 13.5)
 scale = Vector2(1.73438, 1.70313)
 color = Color(0.996078, 0.996078, 0.454902, 1)
 texture = SubResource("GradientTexture2D_btnx3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-31, -55, -31, -37, -45, 21, -55, 25, -60, 34, -63, 44, -58, 50, -48, 54, -26, 58, 23, 59, 41, 56, 56, 50, 63, 45, 65, 38, 59, 25, 50, 19, 40, 16, 24, -26, 31, -38, 28, -56, 22, -61, -24, -61)
