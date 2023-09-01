@@ -12,7 +12,3 @@ position = Vector2(222, 0)
 scale = Vector2(0.831049, 1.02778)
 
 [node name="HUD" parent="." instance=ExtResource("3_07e03")]
-offset_left = 86.0
-offset_top = 4.0
-offset_right = 86.0
-offset_bottom = 4.0

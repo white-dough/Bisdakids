@@ -1,3 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dgyuxdv7ywu2a"]
 
 [resource]
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = null
