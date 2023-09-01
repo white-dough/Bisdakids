@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cao0sf441tf3u"]
+[gd_scene load_steps=15 format=3 uid="uid://cao0sf441tf3u"]
 
 [ext_resource type="Texture2D" uid="uid://bje0ttmigqmic" path="res://graphics/level1/2x/2x/MainMenu_bg@2x.png" id="1_yiw32"]
 [ext_resource type="Texture2D" uid="uid://dkycev3ibu1ht" path="res://graphics/ui/icons/leaderboard_icon@2x.png" id="2_eluom"]
+[ext_resource type="Texture2D" uid="uid://c3xlmbqq57lxv" path="res://graphics/ui/icons/Map@2x.png" id="3_bgd4p"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="3_cnwvt"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
@@ -38,10 +39,13 @@ offset_right = 111.0
 offset_bottom = 359.0
 texture_normal = ExtResource("2_eluom")
 
-[node name="Achievements" type="TextureButton" parent="Control"]
+[node name="Map" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 944.0
+offset_top = 45.0
+offset_right = 1031.0
+offset_bottom = 132.0
+texture_normal = ExtResource("3_bgd4p")
 
 [node name="DailyTask" type="TextureButton" parent="Control"]
 layout_mode = 0
@@ -65,7 +69,7 @@ offset_right = 1159.0
 offset_bottom = 132.0
 texture_normal = ExtResource("5_nlw81")
 
-[node name="Map" type="TextureButton" parent="Control"]
+[node name="Achievements" type="TextureButton" parent="Control"]
 offset_left = 24.0
 offset_top = 160.0
 offset_right = 111.0
