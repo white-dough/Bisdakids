@@ -1,6 +1,13 @@
 extends Node2D
 
 signal object_found_signal(object_name)
+@onready var current_objects: Array = []
+@onready var selected_objects: Array = get_tree().get_root().get_child(0).selected_objects
+
+func _process(delta):
+	if current_objects.size() > 4 and !selected_objects.is_empty():
+		current_objects.append(selected_objects[0])
+
 
 func _unhandled_input(event):
 	if event.is_action_released("click_primary"):		
@@ -11,7 +18,7 @@ func _unhandled_input(event):
 		var space: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
 		var shapes: Array = space.intersect_point(parameters, 10)#array of dictionaries
 		var results:Array = []#array of Area2D Nodes
-		var selected_objects: Array = get_tree().get_root().get_child(0).selected_objects
+		
 		for shape in shapes:
 			results.append(shape['collider'])#populate array
 		var object_found: Area2D = Area2D.new()
