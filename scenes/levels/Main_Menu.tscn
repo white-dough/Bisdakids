@@ -1,0 +1,120 @@
+[gd_scene load_steps=14 format=3 uid="uid://cao0sf441tf3u"]
+
+[ext_resource type="Texture2D" uid="uid://bje0ttmigqmic" path="res://graphics/level1/2x/2x/MainMenu_bg@2x.png" id="1_yiw32"]
+[ext_resource type="Texture2D" uid="uid://dkycev3ibu1ht" path="res://graphics/ui/icons/leaderboard_icon@2x.png" id="2_eluom"]
+[ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="3_cnwvt"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
+[ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
+[ext_resource type="Texture2D" uid="uid://bgibah6x7kydx" path="res://graphics/ui/icons/achievement_icon@2x.png" id="6_osgco"]
+[ext_resource type="Texture2D" uid="uid://vcpacfl6he7i" path="res://graphics/ui/icons/Energy@2x.png" id="7_av5m7"]
+[ext_resource type="Texture2D" uid="uid://cq15w5rffhpwf" path="res://graphics/ui/icons/Coins@2x.png" id="8_rcbj2"]
+[ext_resource type="Texture2D" uid="uid://wrciya28yahf" path="res://graphics/ui/icons/diksyunaryo_icon@2x.png" id="9_m7ptq"]
+[ext_resource type="Texture2D" uid="uid://ddfpevth0suxk" path="res://graphics/ui/icons/naghimo_icon@2x.png" id="10_ubus3"]
+[ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="11_veawo"]
+[ext_resource type="Texture2D" uid="uid://iksmgo1nrnw2" path="res://graphics/ui/icons/undang_icon@2x.png" id="12_tfvlm"]
+[ext_resource type="Texture2D" uid="uid://gkrq2kpwaxy8" path="res://graphics/ui/icons/bisdakids_game_title@2x.png" id="13_6r1g0"]
+
+[node name="MainMenu" type="Node"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_left = -57.0
+offset_top = -98.0
+offset_right = 1350.0
+offset_bottom = 743.0
+texture = ExtResource("1_yiw32")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Leaderboard" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 272.0
+offset_right = 111.0
+offset_bottom = 359.0
+texture_normal = ExtResource("2_eluom")
+
+[node name="Achievements" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DailyTask" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 384.0
+offset_right = 111.0
+offset_bottom = 471.0
+texture_normal = ExtResource("3_cnwvt")
+
+[node name="Settings" type="TextureButton" parent="Control"]
+offset_left = 1200.0
+offset_top = 45.0
+offset_right = 1287.0
+offset_bottom = 132.0
+texture_normal = ExtResource("4_qj5eq")
+
+[node name="Shop" type="TextureButton" parent="Control"]
+offset_left = 1072.0
+offset_top = 45.0
+offset_right = 1159.0
+offset_bottom = 132.0
+texture_normal = ExtResource("5_nlw81")
+
+[node name="Map" type="TextureButton" parent="Control"]
+offset_left = 24.0
+offset_top = 160.0
+offset_right = 111.0
+offset_bottom = 247.0
+texture_normal = ExtResource("6_osgco")
+
+[node name="Energy" type="TextureButton" parent="Control"]
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 244.0
+offset_bottom = 135.0
+texture_normal = ExtResource("7_av5m7")
+
+[node name="Coins" type="TextureButton" parent="Control"]
+offset_left = 264.0
+offset_top = 47.0
+offset_right = 484.0
+offset_bottom = 134.0
+texture_normal = ExtResource("8_rcbj2")
+
+[node name="Dictionary" type="TextureButton" parent="Control"]
+offset_left = 24.0
+offset_top = 512.0
+offset_right = 228.0
+offset_bottom = 599.0
+texture_normal = ExtResource("9_m7ptq")
+
+[node name="Credits" type="TextureButton" parent="Control"]
+offset_left = 24.0
+offset_top = 608.0
+offset_right = 224.0
+offset_bottom = 695.0
+texture_normal = ExtResource("10_ubus3")
+
+[node name="Play" type="TextureButton" parent="Control"]
+offset_left = 512.0
+offset_top = 472.0
+offset_right = 848.0
+offset_bottom = 601.0
+texture_normal = ExtResource("11_veawo")
+
+[node name="Quit" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 1072.0
+offset_top = 599.0
+offset_right = 1284.0
+offset_bottom = 686.0
+texture_normal = ExtResource("12_tfvlm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(704, 376)
+texture = ExtResource("13_6r1g0")

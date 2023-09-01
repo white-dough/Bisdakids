@@ -46,7 +46,6 @@ texture = ExtResource("1_2c3p0")
 centered = false
 
 [node name="CPUParticles2D" parent="Background" instance=ExtResource("2_1unbx")]
-visible = false
 position = Vector2(607, 311)
 preprocess = 0.5
 lifetime_randomness = 0.09
