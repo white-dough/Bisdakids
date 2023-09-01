@@ -14,12 +14,13 @@ func animate_object():
 	object_found_tween.tween_property(self.get_child(0), "scale", Vector2(1.3,1.3), 0.2)
 	object_found_tween.tween_property(self.get_child(0), "scale", Vector2(0.6,0.6), 0.2) # shrinks the clicked object
 	object_found_tween.tween_property(self.get_child(0), "scale", Vector2(0.5,0.5), 0.2) # also shrinks the object
-	object_found_tween.tween_property(self.get_child(0), "position", Vector2(500, 1000), 1) # this line moves the clicked object down
+	object_found_tween.tween_property(self.get_child(0), "position", Vector2(500, 500), 1) # this line moves the clicked object down
 	object_found_tween.finished.connect(self.get_child(0).queue_free) # this line of code removes the object 
+
 
 func _on_objects_object_found_signal(object_name):
 	print(object_name) # prints the object being clicked
 	var object_animation = object_name.duplicate()
-	self.add_child(object_animation)
+	add_child(object_animation)
 	object_name.queue_free() # remove 
 	animate_object() # calls the function above
