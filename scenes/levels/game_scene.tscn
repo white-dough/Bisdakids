@@ -163,5 +163,3 @@ position = Vector2(339, 317)
 [node name="ObjectAnimation" type="Node2D" parent="."]
 position = Vector2(590, 345)
 script = ExtResource("7_bxou4")
-
-[connection signal="object_found" from="Objects" to="ObjectAnimation" method="_on_objects_object_found"]

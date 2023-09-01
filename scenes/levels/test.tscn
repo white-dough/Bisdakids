@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg7v6lp6xlwu8"]
+
+[ext_resource type="Theme" uid="uid://cb3lxahkav5oi" path="res://themes/object_list.tres" id="1_4g7is"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 79.0
+offset_right = 213.0
+offset_bottom = 150.0
+theme = ExtResource("1_4g7is")
+text = "[dynamic]"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
