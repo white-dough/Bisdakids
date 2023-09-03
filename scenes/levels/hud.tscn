@@ -72,17 +72,21 @@ grow_vertical = 2
 [node name="Objectlist" type="VBoxContainer" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
 
-[node name="Label" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+[node name="Label1" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 layout_mode = 2
+text = ""
 
 [node name="Label2" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 layout_mode = 2
+text = ""
 
 [node name="Label3" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 layout_mode = 2
+text = ""
 
 [node name="Label4" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 layout_mode = 2
+text = ""
 
 [node name="Clue" type="TextureButton" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
