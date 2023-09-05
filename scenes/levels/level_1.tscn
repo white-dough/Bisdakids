@@ -1,18 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bn3uxd1asbmtn"]
+[gd_scene load_steps=5 format=3 uid="uid://bn3uxd1asbmtn"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="1_3kxp0"]
 [ext_resource type="PackedScene" uid="uid://didf42v3ba5yc" path="res://scenes/levels/hud.tscn" id="3_07e03"]
 [ext_resource type="PackedScene" uid="uid://ca6qtai8yh8wy" path="res://scenes/levels/game_scene.tscn" id="3_aq4u2"]
+[ext_resource type="Script" path="res://scenes/levels/ObjectAnimation.gd" id="4_cdwck"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_3kxp0")
 
+[node name="HUD" parent="." instance=ExtResource("3_07e03")]
+
 [node name="GameScene" parent="." instance=ExtResource("3_aq4u2")]
+show_behind_parent = true
 position = Vector2(222, 0)
 scale = Vector2(0.831049, 1.02778)
 
-[node name="HUD" parent="." instance=ExtResource("3_07e03")]
-offset_left = 86.0
-offset_top = 4.0
-offset_right = 86.0
-offset_bottom = 4.0
+[node name="ObjectAnimation" type="Node2D" parent="."]
+show_behind_parent = true
+position = Vector2(222, 0)
+scale = Vector2(0.831049, 1.02778)
+script = ExtResource("4_cdwck")
+
+[connection signal="clue_pressed" from="HUD" to="ObjectAnimation" method="_on_hud_clue_pressed"]
+[connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

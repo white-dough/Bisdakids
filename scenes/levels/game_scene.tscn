@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ca6qtai8yh8wy"]
+[gd_scene load_steps=36 format=3 uid="uid://ca6qtai8yh8wy"]
 
 [ext_resource type="Texture2D" uid="uid://bj081fbqa1oww" path="res://graphics/level1/background/level1_background@2x.png" id="1_2c3p0"]
 [ext_resource type="PackedScene" uid="uid://dorayn2s4edj7" path="res://graphics/ui/background/firefly.tscn" id="2_1unbx"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://bf6cns2lio6eg" path="res://scenes/levels/level1_objects/troso.tscn" id="5_wvrld"]
 [ext_resource type="PackedScene" uid="uid://7r2yynu1lep4" path="res://scenes/levels/level1_objects/mapa.tscn" id="6_8c4dh"]
 [ext_resource type="PackedScene" uid="uid://dnefj5t4gdpms" path="res://scenes/levels/level1_objects/atsa.tscn" id="6_tm4p4"]
-[ext_resource type="Script" path="res://scenes/levels/ObjectAnimation.gd" id="7_bxou4"]
 [ext_resource type="PackedScene" uid="uid://dvenju3x3g5an" path="res://scenes/levels/level1_objects/banig.tscn" id="8_3k27t"]
 [ext_resource type="PackedScene" uid="uid://ld2cp71x0q8e" path="res://scenes/levels/level1_objects/sista.tscn" id="8_650yd"]
 [ext_resource type="PackedScene" uid="uid://dqea2jt5qbwcf" path="res://scenes/levels/level1_objects/botas.tscn" id="9_5i461"]
@@ -38,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://dmgiycnodn3rj" path="res://scenes/levels/level1_objects/lampara.tscn" id="35_ps4na"]
 
 [node name="GameScene" type="Node2D"]
+script = ExtResource("2_dqy12")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -56,7 +56,6 @@ gravity = Vector2(2, 500)
 color = Color(0.854902, 0.854902, 0.854902, 1)
 
 [node name="Objects" type="Node2D" parent="."]
-script = ExtResource("2_dqy12")
 
 [node name="Timaan" parent="Objects" instance=ExtResource("4_vq8le")]
 position = Vector2(346, 551)
@@ -158,8 +157,3 @@ position = Vector2(613, 678)
 
 [node name="Lampara" parent="Objects" instance=ExtResource("35_ps4na")]
 position = Vector2(339, 317)
-
-[node name="ObjectAnimation" type="Node2D" parent="."]
-script = ExtResource("7_bxou4")
-
-[connection signal="object_found_signal" from="Objects" to="ObjectAnimation" method="_on_objects_object_found_signal"]
