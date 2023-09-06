@@ -56,6 +56,7 @@ offset_bottom = 471.0
 texture_normal = ExtResource("3_cnwvt")
 
 [node name="Settings" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 1200.0
 offset_top = 45.0
 offset_right = 1287.0
@@ -63,6 +64,7 @@ offset_bottom = 132.0
 texture_normal = ExtResource("4_qj5eq")
 
 [node name="Shop" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 1072.0
 offset_top = 45.0
 offset_right = 1159.0
@@ -70,6 +72,7 @@ offset_bottom = 132.0
 texture_normal = ExtResource("5_nlw81")
 
 [node name="Achievements" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 160.0
 offset_right = 111.0
@@ -77,6 +80,7 @@ offset_bottom = 247.0
 texture_normal = ExtResource("6_osgco")
 
 [node name="Energy" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 48.0
 offset_right = 244.0
@@ -84,6 +88,7 @@ offset_bottom = 135.0
 texture_normal = ExtResource("7_av5m7")
 
 [node name="Coins" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 264.0
 offset_top = 47.0
 offset_right = 484.0
@@ -91,6 +96,7 @@ offset_bottom = 134.0
 texture_normal = ExtResource("8_rcbj2")
 
 [node name="Dictionary" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 512.0
 offset_right = 228.0
@@ -98,6 +104,7 @@ offset_bottom = 599.0
 texture_normal = ExtResource("9_m7ptq")
 
 [node name="Credits" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 608.0
 offset_right = 224.0
@@ -105,6 +112,7 @@ offset_bottom = 695.0
 texture_normal = ExtResource("10_ubus3")
 
 [node name="Play" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 472.0
 offset_right = 848.0
