@@ -52,9 +52,6 @@ lifetime_randomness = 0.09
 spread = 180.0
 gravity = Vector2(2, 500)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="Background"]
-color = Color(0.854902, 0.854902, 0.854902, 1)
-
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Timaan" parent="Objects" instance=ExtResource("4_vq8le")]

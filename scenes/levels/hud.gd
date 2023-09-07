@@ -1,5 +1,7 @@
 extends Control
+
 signal clue_pressed(object_clue)
+
 @onready var object_list_container: VBoxContainer = $ColorRect/Panel/ContainerHUD/Objectlist
 @onready var history_current_objects: Array = []
 

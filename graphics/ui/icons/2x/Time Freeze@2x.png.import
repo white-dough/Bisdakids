@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v4bj2oqof6t"
-path="res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"
+uid="uid://c8cwly6aqesfx"
+path="res://.godot/imported/Time Freeze@2x.png-2e9311832d1e98477884102c0733de4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/level1/2x/Tolda@2x.png"
-dest_files=["res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"]
+source_file="res://graphics/ui/icons/2x/Time Freeze@2x.png"
+dest_files=["res://.godot/imported/Time Freeze@2x.png-2e9311832d1e98477884102c0733de4f.ctex"]
 
 [params]
 

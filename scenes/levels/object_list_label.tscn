@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://lqw0whg8s6c1"]
+[gd_scene load_steps=2 format=3 uid="uid://cruci17d5xstk"]
 
 [ext_resource type="Theme" uid="uid://cb3lxahkav5oi" path="res://themes/object_list.tres" id="1_1gece"]
 
 [node name="Label" type="Label"]
+custom_minimum_size = Vector2(100, 0)
 offset_right = 185.0
 offset_bottom = 71.0
 scale = Vector2(1.01136, 1)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v4bj2oqof6t"
-path="res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"
+uid="uid://8amaqlg6ek8k"
+path="res://.godot/imported/over@2x.png-1fbe59df37067e2e187227b99526ab8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/level1/2x/Tolda@2x.png"
-dest_files=["res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"]
+source_file="res://graphics/ui/icons/over@2x.png"
+dest_files=["res://.godot/imported/over@2x.png-1fbe59df37067e2e187227b99526ab8c.ctex"]
 
 [params]
 

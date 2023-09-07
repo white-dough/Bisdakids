@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://didf42v3ba5yc"]
+[gd_scene load_steps=7 format=3 uid="uid://didf42v3ba5yc"]
 
 [ext_resource type="Script" path="res://scenes/levels/hud.gd" id="1_5f8iu"]
 [ext_resource type="Texture2D" uid="uid://hrbygmt4ik8m" path="res://scenes/Level 1.png" id="1_6kof0"]
@@ -6,11 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cs0sq6ptwg34a" path="res://graphics/ui/icons/Time2x.png" id="2_owtvw"]
 [ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/levels/object_list_label.tscn" id="3_0u3yu"]
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
-[ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
-[ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
 
 [node name="HUD" type="Control"]
-texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,45 +45,35 @@ offset_left = -92.0
 offset_right = 92.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 34
 
 [node name="progressbar" type="Control" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="ColorRect/Panel/ContainerHUD/progressbar"]
-texture_filter = 2
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = 14.0
-offset_right = 96.0
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 2
-value = 100.0
-texture_under = ExtResource("3_n5iuw")
-texture_progress = ExtResource("4_bc25u")
-texture_progress_offset = Vector2(8, 8)
-
 [node name="TextureRect" type="TextureRect" parent="ColorRect/Panel/ContainerHUD/progressbar"]
-texture_filter = 3
 layout_mode = 1
-offset_left = -25.0
-offset_top = -50.0
-offset_right = 31.0
-offset_bottom = 7.0
+offset_left = -91.0
+offset_top = 27.0
+offset_right = -35.0
+offset_bottom = 84.0
 texture = ExtResource("2_owtvw")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="ColorRect/Panel/ContainerHUD/progressbar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -55.0
+offset_right = -49.0
+offset_bottom = -15.0
+grow_vertical = 2
 
 [node name="Objectlist" type="VBoxContainer" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
-size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 22
+theme_override_constants/separation = 20
 
 [node name="Label1" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 layout_mode = 2
@@ -110,10 +97,8 @@ size_flags_vertical = 8
 text = ""
 
 [node name="Clue" type="TextureButton" parent="ColorRect/Panel/ContainerHUD"]
-texture_filter = 4
 layout_mode = 2
 size_flags_vertical = 6
-size_flags_stretch_ratio = 1.5
 texture_normal = ExtResource("3_3obj1")
 stretch_mode = 3
 
