@@ -55,7 +55,7 @@ gravity = Vector2(2, 500)
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Timaan" parent="Objects" instance=ExtResource("4_vq8le")]
-position = Vector2(346, 551)
+position = Vector2(347, 569)
 
 [node name="Bisikleta" parent="Objects" instance=ExtResource("3_2mvlv")]
 position = Vector2(869, 515)

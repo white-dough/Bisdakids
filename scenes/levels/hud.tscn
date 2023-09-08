@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://didf42v3ba5yc"]
+[gd_scene load_steps=10 format=3 uid="uid://didf42v3ba5yc"]
 
 [ext_resource type="Script" path="res://scenes/levels/hud.gd" id="1_5f8iu"]
 [ext_resource type="Texture2D" uid="uid://hrbygmt4ik8m" path="res://scenes/Level 1.png" id="1_6kof0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
+[ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 
 [node name="HUD" type="Control"]
 texture_filter = 1
@@ -17,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_stretch_ratio = 0.0
 script = ExtResource("1_5f8iu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -48,7 +50,7 @@ offset_left = -92.0
 offset_right = 92.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 34
+theme_override_constants/separation = 38
 
 [node name="progressbar" type="Control" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
@@ -62,10 +64,10 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = 14.0
-offset_right = 96.0
-offset_bottom = 56.0
+offset_left = -93.9999
+offset_top = -4.00002
+offset_right = 96.0001
+offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
 value = 100.0
@@ -76,35 +78,40 @@ texture_progress_offset = Vector2(8, 8)
 [node name="TextureRect" type="TextureRect" parent="ColorRect/Panel/ContainerHUD/progressbar"]
 texture_filter = 3
 layout_mode = 1
-offset_left = -25.0
-offset_top = -50.0
-offset_right = 31.0
-offset_bottom = 7.0
+offset_left = -93.9999
+offset_top = -12.0
+offset_right = -37.9999
+offset_bottom = 45.0
 texture = ExtResource("2_owtvw")
 
 [node name="Objectlist" type="VBoxContainer" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
-size_flags_vertical = 8
+size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 theme_override_constants/separation = 22
 
 [node name="Label1" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
 text = ""
 
 [node name="Label2" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
 text = ""
 
 [node name="Label3" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
 text = ""
 
 [node name="Label4" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
 text = ""
 
 [node name="Label5" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
 size_flags_vertical = 8
 text = ""
@@ -113,9 +120,21 @@ text = ""
 texture_filter = 4
 layout_mode = 2
 size_flags_vertical = 6
-size_flags_stretch_ratio = 1.5
+size_flags_stretch_ratio = 0.0
 texture_normal = ExtResource("3_3obj1")
 stretch_mode = 3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="ColorRect/Panel/ContainerHUD/Clue"]
+texture_filter = 1
+position = Vector2(94.0001, 133)
+texture = ExtResource("8_iicg0")
+emission_shape = 1
+emission_sphere_radius = 18.0
+spread = 33.75
+gravity = Vector2(0, 0)
+angular_velocity_min = -9.15
+angular_velocity_max = 24.6
+color = Color(0.956863, 0.921569, 0.835294, 1)
 
 [node name="Level1" type="Sprite2D" parent="."]
 visible = false
