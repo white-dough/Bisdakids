@@ -2,7 +2,7 @@ extends Node2D
 
 signal object_found_signal(object_name)
 @onready var current_objects: Array = []
-@onready var count_of_objects_to_find: int = 8
+@onready var count_of_objects_to_find: int = 10
 @onready var selected_objects: Array = select_random_elements(count_of_objects_to_find)
 @onready var history_current_objects: Array = []#history, how old that object is in the array
 
@@ -22,7 +22,7 @@ func populate_current_objects(object_found_remove):
 	var remove_index: int = current_objects.find(object_found_remove)
 	history_current_objects.erase(object_found_remove)
 	current_objects.remove_at(remove_index) if remove_index > -1 else null
-	while(current_objects.size() < 4):
+	while(current_objects.size() < 5):
 		var object_found = selected_objects.pop_front()
 		if object_found:
 			history_current_objects.append(object_found)#no need to maintain order so no ifelse needed

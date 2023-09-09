@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v4bj2oqof6t"
-path="res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"
+uid="uid://crnklxyur3f7u"
+path="res://.godot/imported/starprogress@2x.png-ed3fe1297593ca420f6065f4c11770f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/level1/2x/Tolda@2x.png"
-dest_files=["res://.godot/imported/Tolda@2x.png-37488b567dab7e673559fb26ebb609eb.ctex"]
+source_file="res://graphics/ui/icons/2x/starprogress@2x.png"
+dest_files=["res://.godot/imported/starprogress@2x.png-ed3fe1297593ca420f6065f4c11770f8.ctex"]
 
 [params]
 
