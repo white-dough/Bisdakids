@@ -4,7 +4,7 @@ extends Node2D
 var count_of_objects_to_find: int = 30
 
 func _ready():
-	select_random_elements(count_of_objects_to_find)
+	pass
 
 func select_random_elements(count:int) -> Array:
 	var selected_objects: Array = []

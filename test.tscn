@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvn6skab8jtuu"]
+
+[ext_resource type="Script" path="res://Test.gd" id="1_8dw6v"]
+
+[node name="Test" type="Node"]
+script = ExtResource("1_8dw6v")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 165.0
+offset_bottom = 73.0
+text = "connect db"
+
+[node name="Connect" type="HTTPRequest" parent="."]
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="request_completed" from="Connect" to="." method="_on_connect_request_completed"]
