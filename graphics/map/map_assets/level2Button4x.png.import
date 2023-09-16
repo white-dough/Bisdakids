@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blrffn467u41n"
-path="res://.godot/imported/emptyStar.png-9a5dc28afdb1941ad49824902870f939.ctex"
+uid="uid://cargchp8jmmvc"
+path="res://.godot/imported/level2Button4x.png-e435f4e632dca0a508fd499619abadd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/map/map_assets/emptyStar.png"
-dest_files=["res://.godot/imported/emptyStar.png-9a5dc28afdb1941ad49824902870f939.ctex"]
+source_file="res://graphics/map/map_assets/level2Button4x.png"
+dest_files=["res://.godot/imported/level2Button4x.png-e435f4e632dca0a508fd499619abadd8.ctex"]
 
 [params]
 
