@@ -1,14 +1,14 @@
 extends Node2D
 
 signal object_found_signal(object_name)
-@onready var current_objects: Array = []
-@onready var count_of_objects_to_find: int = 10
-@onready var selected_objects: Array = select_random_elements(count_of_objects_to_find)
-@onready var history_current_objects: Array = []#history, how old that object is in the array
 
-func _ready():
+@onready var current_objects: Array = []; var count_of_objects_to_find: int; var selected_objects: Array; var history_current_objects: Array = []
+
+func _on_level_1_ready():
+	count_of_objects_to_find = $"..".count_of_objects_to_find
+	selected_objects = select_random_elements(count_of_objects_to_find)
 	populate_current_objects(null)
-	
+
 #Function to randomly select the objects to be found in the level
 func select_random_elements(count: int) -> Array:
 	var objects: Array = $Objects.get_children() # gets the 4 objects (tolda, kumpas, troso, atsa)
@@ -41,7 +41,9 @@ func populate_current_objects(object_found_remove):
 			current_objects_strings.append(substring[0])
 		else:
 			current_objects_strings.append("")
-	$"../HUD".object_list_label(current_objects_strings, history_current_objects)
+	$"../HUD".object_list_label(current_objects_strings)
+	$"../HUD".current_objects = current_objects
+	$"../HUD".history_current_objects = history_current_objects
 
 
 #Function to handle the click of the user within the gamescene
@@ -69,3 +71,6 @@ func _unhandled_input(event):
 			#animate, remove from current objects, remove label, replace label
 			object_found_signal.emit(object_found)
 			populate_current_objects(object_found)
+
+
+

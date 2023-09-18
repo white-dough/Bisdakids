@@ -1,0 +1,111 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.godot.game-mergeDebugResources-17:/values-nl/values-nl.xml",
+            "map": [
+                {
+                    "source": "D:\\Coding\\GodotGameDev\\Bisdakids\\android\\build\\res\\values-nl\\godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "60",
+                        "endOffsets": "171"
+                    },
+                    "to": {
+                        "startLines": "24",
+                        "startColumns": "4",
+                        "startOffsets": "2771",
+                        "endColumns": "63",
+                        "endOffsets": "2830"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dwight\\.gradle\\caches\\transforms-3\\164e1ff50f0a8aa760aa5dde073f2f68\\transformed\\browser-1.4.0\\res\\values-nl\\values-nl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,158,259,370",
+                        "endColumns": "102,100,110,98",
+                        "endOffsets": "153,254,365,464"
+                    },
+                    "to": {
+                        "startLines": "20,21,22,23",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "2357,2460,2561,2672",
+                        "endColumns": "102,100,110,98",
+                        "endOffsets": "2455,2556,2667,2766"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dwight\\.gradle\\caches\\transforms-3\\130f811dcb6c4c628d8d471e056ead88\\transformed\\jetified-play-services-ads-22.2.0\\res\\values-nl\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "199,249,293,348,414,485,580,659,777,827,937,997,1116,1204,1250,1340,1378,1414,1463,1544,1587",
+                        "endColumns": "49,43,54,65,70,94,78,117,49,109,59,118,87,45,89,37,35,48,80,42,55",
+                        "endOffsets": "248,292,347,413,484,579,658,776,826,936,996,1115,1203,1249,1339,1377,1413,1462,1543,1586,1642"
+                    },
+                    "to": {
+                        "startLines": "25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2835,2889,2937,2996,3066,3141,3240,3323,3445,3499,3613,3677,3800,3892,3942,4036,4078,4118,4171,4256,4404",
+                        "endColumns": "53,47,58,69,74,98,82,121,53,113,63,122,91,49,93,41,39,52,84,46,59",
+                        "endOffsets": "2884,2932,2991,3061,3136,3235,3318,3440,3494,3608,3672,3795,3887,3937,4031,4073,4113,4166,4251,4298,4459"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dwight\\.gradle\\caches\\transforms-3\\4b1271ea82deb3a856a6d71030563e6d\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-nl\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "138",
+                        "endOffsets": "333"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1080",
+                        "endColumns": "142",
+                        "endOffsets": "1218"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dwight\\.gradle\\caches\\transforms-3\\0e628cf47af6527003ab8a0aef8cdcd5\\transformed\\jetified-play-services-base-18.0.0\\res\\values-nl\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,297,448,572,679,842,965,1084,1186,1360,1462,1627,1749,1908,2086,2150,2209",
+                        "endColumns": "103,150,123,106,162,122,118,101,173,101,164,121,158,177,63,58,74",
+                        "endOffsets": "296,447,571,678,841,964,1083,1185,1359,1461,1626,1748,1907,2085,2149,2208,2283"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,163,318,446,557,724,851,974,1223,1401,1507,1676,1802,1965,2147,2215,2278",
+                        "endColumns": "107,154,127,110,166,126,122,105,177,105,168,125,162,181,67,62,78",
+                        "endOffsets": "158,313,441,552,719,846,969,1075,1396,1502,1671,1797,1960,2142,2210,2273,2352"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dwight\\.gradle\\caches\\transforms-3\\3bce1657da59fb5b3cf43800f84c8bdd\\transformed\\core-1.6.0\\res\\values-nl\\values-nl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "4303",
+                        "endColumns": "100",
+                        "endOffsets": "4399"
+                    }
+                }
+            ]
+        }
+    ]
+}
