@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddb0f2xcyujkc"]
+
+[ext_resource type="Script" path="res://billings_test.gd" id="1_h1fbu"]
+
+[node name="BillingsTest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_h1fbu")
+
+[node name="Buy" type="Button" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 43.0
+text = "BUY"
+
+[node name="Use" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 75.0
+offset_right = 153.0
+offset_bottom = 117.0
+text = "USE"
+
+[connection signal="button_down" from="Buy" to="." method="_on_buy_button_down"]
+[connection signal="button_down" from="Use" to="." method="_on_use_button_down"]
