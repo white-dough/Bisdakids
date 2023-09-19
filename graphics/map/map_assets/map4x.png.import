@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b204oxl62c3hp"
-path="res://.godot/imported/fullStar.png-1dd3744350193bec27c1e0579bae9cfc.ctex"
+uid="uid://b4x17ogh4k7jc"
+path="res://.godot/imported/map4x.png-9bff76f92b3d6165801d66f333df2934.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/map/map_assets/fullStar.png"
-dest_files=["res://.godot/imported/fullStar.png-1dd3744350193bec27c1e0579bae9cfc.ctex"]
+source_file="res://graphics/map/map_assets/map4x.png"
+dest_files=["res://.godot/imported/map4x.png-9bff76f92b3d6165801d66f333df2934.ctex"]
 
 [params]
 
