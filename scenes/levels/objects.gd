@@ -44,8 +44,7 @@ func populate_current_objects(object_found_remove):
 	$"../HUD".object_list_label(current_objects_strings)
 	$"../HUD".current_objects = current_objects
 	$"../HUD".history_current_objects = history_current_objects
-
-
+	
 #Function to handle the click of the user within the gamescene
 func _unhandled_input(event):
 	if event.is_action_released("click_primary"):

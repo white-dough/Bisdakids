@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://didf42v3ba5yc"]
+[gd_scene load_steps=11 format=3 uid="uid://didf42v3ba5yc"]
 
 [ext_resource type="Script" path="res://scenes/levels/hud.gd" id="1_5f8iu"]
-[ext_resource type="Texture2D" uid="uid://hrbygmt4ik8m" path="res://scenes/Level 1.png" id="1_6kof0"]
 [ext_resource type="Theme" uid="uid://dxsnirm66onp2" path="res://themes/hud_vbox.tres" id="2_krwd4"]
 [ext_resource type="Texture2D" uid="uid://cs0sq6ptwg34a" path="res://graphics/ui/icons/Time2x.png" id="2_owtvw"]
 [ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/levels/object_list_label.tscn" id="3_0u3yu"]
@@ -9,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
+[ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
 
 [node name="HUD" type="Control"]
 texture_filter = 1
@@ -138,17 +139,27 @@ angular_velocity_min = -9.15
 angular_velocity_max = 24.6
 color = Color(0.956863, 0.921569, 0.835294, 1)
 
-[node name="Level1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(601, 370.212)
-scale = Vector2(0.359898, 0.493929)
-texture = ExtResource("1_6kof0")
+[node name="Settings" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 1213.0
+offset_top = 14.0
+offset_right = 1300.0
+offset_bottom = 101.0
+texture_normal = ExtResource("9_0hgwc")
 
-[node name="VSeparator" type="VSeparator" parent="."]
-layout_mode = 2
-offset_right = 192.0
-offset_bottom = 3.0
-size_flags_vertical = 6
+[node name="TimeFreeze" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 240.0
+offset_top = 14.0
+offset_right = 329.0
+offset_bottom = 104.0
+texture_normal = ExtResource("10_62ljq")
+
+[node name="PauseTimer" type="Timer" parent="TimeFreeze"]
+wait_time = 5.0
+one_shot = true
 
 [connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ColorRect/Panel/ContainerHUD/Clue" to="." method="_on_clue_pressed"]
+[connection signal="pressed" from="TimeFreeze" to="." method="_on_time_freeze_pressed"]
