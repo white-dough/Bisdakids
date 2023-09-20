@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://didf42v3ba5yc"]
+[gd_scene load_steps=16 format=3 uid="uid://didf42v3ba5yc"]
 
 [ext_resource type="Script" path="res://scenes/levels/hud.gd" id="1_5f8iu"]
 [ext_resource type="Theme" uid="uid://dxsnirm66onp2" path="res://themes/hud_vbox.tres" id="2_krwd4"]
@@ -10,6 +10,41 @@
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njvih"]
+bg_color = Color(0.854902, 0.588235, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv00v"]
+bg_color = Color(0.854902, 0.588235, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jswo5"]
+bg_color = Color(0.854902, 0.588235, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kn7xl"]
+bg_color = Color(0.854902, 0.588235, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mj6h4"]
+bg_color = Color(0.854902, 0.588235, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="HUD" type="Control"]
 texture_filter = 1
@@ -96,27 +131,32 @@ theme_override_constants/separation = 22
 [node name="Label1" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
+mouse_filter = 0
 text = ""
 
 [node name="Label2" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
+mouse_filter = 0
 text = ""
 
 [node name="Label3" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
+mouse_filter = 0
 text = ""
 
 [node name="Label4" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
+mouse_filter = 0
 text = ""
 
 [node name="Label5" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
 custom_minimum_size = Vector2(100, 55)
 layout_mode = 2
 size_flags_vertical = 8
+mouse_filter = 0
 text = ""
 
 [node name="Clue" type="TextureButton" parent="ColorRect/Panel/ContainerHUD"]
@@ -138,6 +178,59 @@ gravity = Vector2(0, 0)
 angular_velocity_min = -9.15
 angular_velocity_max = 24.6
 color = Color(0.956863, 0.921569, 0.835294, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/Panel"]
+
+[node name="DescContainer" type="VBoxContainer" parent="ColorRect/Panel/CanvasLayer"]
+offset_left = 222.0
+offset_top = 276.0
+offset_right = 406.0
+offset_bottom = 350.0
+
+[node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_njvih")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_xv00v")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_jswo5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kn7xl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_mj6h4")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Settings" type="TextureButton" parent="."]
 layout_mode = 1
@@ -161,5 +254,10 @@ wait_time = 5.0
 one_shot = true
 
 [connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]
+[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label1" to="." method="_on_label_1_gui_input"]
+[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label2" to="." method="_on_label_2_gui_input"]
+[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label3" to="." method="_on_label_3_gui_input"]
+[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label4" to="." method="_on_label_4_gui_input"]
+[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label5" to="." method="_on_label_5_gui_input"]
 [connection signal="pressed" from="ColorRect/Panel/ContainerHUD/Clue" to="." method="_on_clue_pressed"]
 [connection signal="pressed" from="TimeFreeze" to="." method="_on_time_freeze_pressed"]
