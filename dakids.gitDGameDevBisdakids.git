@@ -1,0 +1,35 @@
+[33m264b7aa[m[33m ([m[1;36mHEAD -> [m[1;32mmosesBranch[m[33m, [m[1;31morigin/mosesBranch[m[33m)[m HEAD@{0}: checkout: moving from main to mosesBranch
+[33m0ad5a4c[m[33m ([m[1;32mmain[m[33m)[m HEAD@{1}: checkout: moving from main to main
+[33m0ad5a4c[m[33m ([m[1;32mmain[m[33m)[m HEAD@{2}: checkout: moving from mosesBranch to main
+[33m7a4c56f[m HEAD@{3}: checkout: moving from main to mosesBranch
+[33m0ad5a4c[m[33m ([m[1;32mmain[m[33m)[m HEAD@{4}: commit: onlongpress word defintion feature
+[33m586dbae[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{5}: pull: Fast-forward
+[33m66e1cdd[m HEAD@{6}: checkout: moving from mosesBranch to main
+[33m7a4c56f[m HEAD@{7}: reset: moving to HEAD
+[33m7a4c56f[m HEAD@{8}: reset: moving to HEAD
+[33m7a4c56f[m HEAD@{9}: reset: moving to 7a4c56f
+[33m264b7aa[m[33m ([m[1;36mHEAD -> [m[1;32mmosesBranch[m[33m, [m[1;31morigin/mosesBranch[m[33m)[m HEAD@{10}: reset: moving to 264b7aa
+[33m7c0aee7[m HEAD@{11}: reset: moving to HEAD
+[33m7c0aee7[m HEAD@{12}: commit: longPress wordDefinition
+[33m264b7aa[m[33m ([m[1;36mHEAD -> [m[1;32mmosesBranch[m[33m, [m[1;31morigin/mosesBranch[m[33m)[m HEAD@{13}: pull: Fast-forward
+[33m7a4c56f[m HEAD@{14}: reset: moving to HEAD
+[33m7a4c56f[m HEAD@{15}: commit: 4x map assets and word-beta.json
+[33mbc2b3ec[m[33m ([m[1;32mdwightbranch[m[33m)[m HEAD@{16}: checkout: moving from mosesBranch to mosesBranch
+[33mbc2b3ec[m[33m ([m[1;32mdwightbranch[m[33m)[m HEAD@{17}: checkout: moving from mosesBranch to mosesBranch
+[33mbc2b3ec[m[33m ([m[1;32mdwightbranch[m[33m)[m HEAD@{18}: checkout: moving from main to mosesBranch
+[33m66e1cdd[m HEAD@{19}: pull: Fast-forward
+[33mf3d34c6[m[33m ([m[1;32mMonicBranchj[m[33m, [m[1;32mMonicBranch[m[33m)[m HEAD@{20}: checkout: moving from mosesBranch to main
+[33mbc2b3ec[m[33m ([m[1;32mdwightbranch[m[33m)[m HEAD@{21}: reset: moving to bc2b3ec
+[33m3c07309[m HEAD@{22}: reset: moving to HEAD~1
+[33mdf4b2df[m HEAD@{23}: checkout: moving from mosesBranch to mosesBranch
+[33mdf4b2df[m HEAD@{24}: checkout: moving from mosesBranch to mosesBranch
+[33mdf4b2df[m HEAD@{25}: checkout: moving from dwightbranch to mosesBranch
+[33mbc2b3ec[m[33m ([m[1;32mdwightbranch[m[33m)[m HEAD@{26}: commit: map feature
+[33mdf4b2df[m HEAD@{27}: pull origin dwightbranch: Fast-forward
+[33mf3d34c6[m[33m ([m[1;32mMonicBranchj[m[33m, [m[1;32mMonicBranch[m[33m)[m HEAD@{28}: checkout: moving from MonicBranch to dwightbranch
+[33mf3d34c6[m[33m ([m[1;32mMonicBranchj[m[33m, [m[1;32mMonicBranch[m[33m)[m HEAD@{29}: checkout: moving from MonicBranchj to MonicBranch
+[33mf3d34c6[m[33m ([m[1;32mMonicBranchj[m[33m, [m[1;32mMonicBranch[m[33m)[m HEAD@{30}: checkout: moving from main to MonicBranchj
+[33mf3d34c6[m[33m ([m[1;32mMonicBranchj[m[33m, [m[1;32mMonicBranch[m[33m)[m HEAD@{31}: pull: Fast-forward
+[33mf4e81e3[m HEAD@{32}: commit: created shop ui
+[33m582ec74[m HEAD@{33}: pull: Fast-forward
+[33m77502e0[m HEAD@{34}: clone: from https://github.com/white-dough/Bisdakids.git
