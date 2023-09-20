@@ -17,6 +17,7 @@ func animate_object_clue(object_clue):
 	object_clue_tween.tween_property(object_clue, "scale", Vector2(0.6,0.6), 0.5)
 	object_clue_tween.tween_property(object_clue, "scale", Vector2(1.25, 1.25), 0.5)
 	
+	
 func _on_game_scene_object_found_signal(object_name):
 	var object_to_animate = object_name.duplicate()
 	for node in object_to_animate.get_children():

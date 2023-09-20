@@ -79,11 +79,19 @@ func _on_time_freeze_pressed():
 		time_freeze()
 
 func time_freeze():
+	var time_froze_sprite = $ColorRect/Panel/ContainerHUD/TimerBar/TimeFroze
 	if timer.is_paused():
 		timer.set_paused(false)
-		print("timer is paused, unpaused")
+#		time_froze_sprite.visible = time_froze_sprite.visible 
 	else:
 		timer.set_paused(true)
+
+		time_froze_sprite.visible = not time_froze_sprite.visible 
+	print(pause_timer.is_stopped())
+	if pause_timer.is_stopped():
+		time_froze_sprite.visible = not time_froze_sprite.visible 
+	
+
 		print("timer is not paused, pausing")
 
 # on longpress description feature
@@ -166,3 +174,4 @@ func _on_label_5_gui_input(event):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
+

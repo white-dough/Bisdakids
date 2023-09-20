@@ -1,5 +1,3 @@
-[gd_scene load_steps=16 format=3 uid="uid://didf42v3ba5yc"]
-
 [ext_resource type="Script" path="res://scenes/levels/hud.gd" id="1_5f8iu"]
 [ext_resource type="Theme" uid="uid://dxsnirm66onp2" path="res://themes/hud_vbox.tres" id="2_krwd4"]
 [ext_resource type="Texture2D" uid="uid://cs0sq6ptwg34a" path="res://graphics/ui/icons/Time2x.png" id="2_owtvw"]
@@ -7,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
+[ext_resource type="Texture2D" uid="uid://bn14tf1fralh7" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
@@ -119,6 +118,12 @@ offset_top = -12.0
 offset_right = -37.9999
 offset_bottom = 45.0
 texture = ExtResource("2_owtvw")
+
+[node name="TimeFroze" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+visible = false
+position = Vector2(3.50005, 28.5)
+scale = Vector2(0.857778, 0.964286)
+texture = ExtResource("6_oxqsx")
 
 [node name="Timer" type="Timer" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
 
@@ -250,7 +255,7 @@ offset_bottom = 104.0
 texture_normal = ExtResource("10_62ljq")
 
 [node name="PauseTimer" type="Timer" parent="TimeFreeze"]
-wait_time = 5.0
+wait_time = 10.0
 one_shot = true
 
 [connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]
