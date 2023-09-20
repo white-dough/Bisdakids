@@ -1,24 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://bn3uxd1asbmtn"]
+[gd_scene load_steps=5 format=3 uid="uid://bn3uxd1asbmtn"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="1_3kxp0"]
 [ext_resource type="PackedScene" uid="uid://didf42v3ba5yc" path="res://scenes/levels/hud.tscn" id="3_07e03"]
 [ext_resource type="PackedScene" uid="uid://ca6qtai8yh8wy" path="res://scenes/levels/game_scene.tscn" id="3_aq4u2"]
 [ext_resource type="Script" path="res://scenes/levels/ObjectAnimation.gd" id="4_cdwck"]
-[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="5_hemut"]
-[ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="6_61h1g"]
-[ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="7_r1o4u"]
-[ext_resource type="Texture2D" uid="uid://jutg4s4du6lb" path="res://graphics/ui/icons/2x/Silhouette@2x.png" id="8_su08g"]
-[ext_resource type="Texture2D" uid="uid://crnklxyur3f7u" path="res://graphics/ui/icons/2x/starprogress@2x.png" id="9_4mt5r"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_3kxp0")
-
-[node name="HUD" parent="." instance=ExtResource("3_07e03")]
 
 [node name="GameScene" parent="." instance=ExtResource("3_aq4u2")]
 show_behind_parent = true
 position = Vector2(222, 0)
 scale = Vector2(0.831049, 1.02778)
+
+[node name="HUD" parent="." instance=ExtResource("3_07e03")]
 
 [node name="ObjectAnimation" type="Node2D" parent="."]
 show_behind_parent = true
@@ -26,54 +21,6 @@ position = Vector2(222, 0)
 scale = Vector2(0.831049, 1.02778)
 script = ExtResource("4_cdwck")
 
-[node name="Buttons" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Settings" type="TextureButton" parent="Buttons"]
-layout_mode = 0
-offset_left = 1200.0
-offset_top = 24.0
-offset_right = 1287.0
-offset_bottom = 111.0
-texture_normal = ExtResource("5_hemut")
-
-[node name="Shop" type="TextureButton" parent="Buttons"]
-layout_mode = 0
-offset_left = 1072.0
-offset_top = 24.0
-offset_right = 1159.0
-offset_bottom = 111.0
-texture_normal = ExtResource("6_61h1g")
-
-[node name="Powerups" type="Control" parent="Buttons"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Time Freeze" type="TextureButton" parent="Buttons/Powerups"]
-layout_mode = 0
-offset_left = 248.0
-offset_top = 25.0
-offset_right = 337.0
-offset_bottom = 115.0
-texture_normal = ExtResource("7_r1o4u")
-
-[node name="Silhouette" type="TextureButton" parent="Buttons/Powerups"]
-layout_mode = 0
-offset_left = 248.0
-offset_top = 137.0
-offset_right = 344.0
-offset_bottom = 225.0
-texture_normal = ExtResource("8_su08g")
-
-[node name="Starprogress_2x" type="Sprite2D" parent="."]
-position = Vector2(706, 64)
-texture = ExtResource("9_4mt5r")
-
 [connection signal="ready" from="." to="HUD" method="_on_level_1_ready"]
 [connection signal="ready" from="." to="GameScene" method="_on_level_1_ready"]
-[connection signal="clue_pressed" from="HUD" to="ObjectAnimation" method="_on_hud_clue_pressed"]
 [connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

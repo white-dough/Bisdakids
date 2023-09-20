@@ -1,10 +1,36 @@
 extends Node
 
+var oldTimestamp = {
+"year": 2023,
+"month": 9,
+"day": 21
+}
 
+var newTimestamp = {
+"year": 2023,
+"month": 9,
+"day": 21
+}
 
-func _on_button_button_down():
-#	$Connect.request("https://nsnoztviefjxvptztmnj.supabase.cohttps://nsnoztviefjxvptztmnj.supabase.co?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zbm96dHZpZWZqeHZwdHp0bW5qIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQyNDI5MzEsImV4cCI6MjAwOTgxODkzMX0.BrKqhb0uKWY_bKqulXEmNT7O_jsSWu72ghayRI-A-7U")
-	$Connect.request("https://official-joke-api.appspot.com/random_joke")
+func isDayAheadOrMore(oldTimestamp, newTimestamp):
+	var oldUnixTimestamp = dateToUnixTimestamp(oldTimestamp)
+	var newUnixTimestamp = dateToUnixTimestamp(newTimestamp)
+	var timeDifference = newUnixTimestamp - oldUnixTimestamp
+	return timeDifference >= 86400  # 86400 seconds = 1 day
 
-func _on_connect_request_completed(result, response_code, headers, body):
-	print(body.get_string_from_utf8())
+func dateToUnixTimestamp(timestamp):
+	var dateTime : Dictionary = {}
+	dateTime.year = timestamp["year"]
+	dateTime.month = timestamp["month"]
+	dateTime.day = timestamp["day"]
+	dateTime.hour = 0
+	dateTime.minute = 0
+	dateTime.second = 0
+	return Time.get_unix_time_from_datetime_dict(dateTime)
+	
+func _ready():
+	var result = isDayAheadOrMore(oldTimestamp, newTimestamp)
+	if result:
+		print("The new timestamp is a day ahead or more.")
+	else:
+		print("The new timestamp is less than a day ahead.")
