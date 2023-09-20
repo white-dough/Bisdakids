@@ -85,7 +85,6 @@ func time_freeze():
 #		time_froze_sprite.visible = time_froze_sprite.visible 
 	else:
 		timer.set_paused(true)
-
 		time_froze_sprite.visible = not time_froze_sprite.visible 
 	print(pause_timer.is_stopped())
 	if pause_timer.is_stopped():
