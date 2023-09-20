@@ -1,0 +1,61 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dmrrlilds2s0i"]
+
+[ext_resource type="Texture2D" uid="uid://c7r47ur5e4yrc" path="res://graphics/navigation/settings/tingog_grabber@2x.png" id="1_hclvv"]
+[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="2_pudto"]
+
+[sub_resource type="Image" id="Image_qas2u"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_grcru"]
+image = SubResource("Image_qas2u")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srpg8"]
+bg_color = Color(0.960784, 0.305882, 0.286275, 1)
+border_width_bottom = 6
+border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubwq4"]
+bg_color = Color(0.960784, 0.305882, 0.286275, 1)
+border_width_bottom = 6
+border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vtlr5"]
+texture = ExtResource("2_pudto")
+texture_margin_left = 11.0
+texture_margin_top = 11.0
+texture_margin_right = 16.0
+texture_margin_bottom = 14.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 14.0
+modulate_color = Color(0.957945, 0.820391, 0.744984, 0.756863)
+
+[resource]
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/icons/grabber = ExtResource("1_hclvv")
+HSlider/icons/grabber_disabled = ExtResource("1_hclvv")
+HSlider/icons/grabber_highlight = ExtResource("1_hclvv")
+HSlider/icons/tick = SubResource("ImageTexture_grcru")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_srpg8")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_ubwq4")
+HSlider/styles/slider = SubResource("StyleBoxTexture_vtlr5")

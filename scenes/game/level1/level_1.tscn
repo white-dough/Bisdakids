@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game/level1/level_1.gd" id="1_3kxp0"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="3_07e03"]
-[ext_resource type="PackedScene" uid="uid://ca6qtai8yh8wy" path="res://scenes/game/game_scene.tscn" id="3_aq4u2"]
+[ext_resource type="PackedScene" uid="uid://ca6qtai8yh8wy" path="res://scenes/game/level1/game_scene.tscn" id="3_aq4u2"]
 [ext_resource type="Script" path="res://scenes/game/ObjectAnimation.gd" id="4_cdwck"]
 
 [node name="Level1" type="Node2D"]

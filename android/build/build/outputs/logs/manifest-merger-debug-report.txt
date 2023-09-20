@@ -296,16 +296,10 @@ INJECTED from D:\Coding\GodotGameDev\Bisdakids\android\build\src\debug\AndroidMa
 	android:minSdkVersion
 		INJECTED from D:\Coding\GodotGameDev\Bisdakids\android\build\AndroidManifest.xml
 		INJECTED from D:\Coding\GodotGameDev\Bisdakids\android\build\src\debug\AndroidManifest.xml
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\Coding\GodotGameDev\Bisdakids\android\build\src\debug\AndroidManifest.xml:11:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\Dwight\.gradle\caches\transforms-3\51821c8f0367571e25498d105c19d1f4\transformed\jetified-play-services-ads-lite-22.2.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\Dwight\.gradle\caches\transforms-3\51821c8f0367571e25498d105c19d1f4\transformed\jetified-play-services-ads-lite-22.2.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] C:\Users\Dwight\.gradle\caches\transforms-3\d1f39487b729f43a8fda6c534358ac1a\transformed\jetified-play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] C:\Users\Dwight\.gradle\caches\transforms-3\d1f39487b729f43a8fda6c534358ac1a\transformed\jetified-play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:24:5-79
-MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\Dwight\.gradle\caches\transforms-3\9d61bbcf0d0d6a6d30d2f81da24cf2d3\transformed\work-runtime-2.7.0\AndroidManifest.xml:26:5-79
-MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\Dwight\.gradle\caches\transforms-3\9d61bbcf0d0d6a6d30d2f81da24cf2d3\transformed\work-runtime-2.7.0\AndroidManifest.xml:26:5-79
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\Coding\GodotGameDev\Bisdakids\android\build\src\debug\AndroidManifest.xml:11:5-76
 	android:name
-		ADDED from D:\Coding\GodotGameDev\Bisdakids\android\build\src\debug\AndroidManifest.xml:11:22-76
+		ADDED from D:\Coding\GodotGameDev\Bisdakids\android\build\src\debug\AndroidManifest.xml:11:22-73
 uses-permission#android.permission.INTERNET
 ADDED from D:\Coding\GodotGameDev\Bisdakids\android\build\src\debug\AndroidManifest.xml:12:5-67
 MERGED from [poing-godot-admob-ads-v1.0.0-release.aar] C:\Users\Dwight\.gradle\caches\transforms-3\74047fd89696f24d141e0fbebdb20ca0\transformed\jetified-poing-godot-admob-ads-v1.0.0-release\AndroidManifest.xml:9:5-67
@@ -420,6 +414,14 @@ ADDED from [poing-godot-admob-ads-v1.0.0-release.aar] C:\Users\Dwight\.gradle\ca
 		ADDED from [poing-godot-admob-ads-v1.0.0-release.aar] C:\Users\Dwight\.gradle\caches\transforms-3\74047fd89696f24d141e0fbebdb20ca0\transformed\jetified-poing-godot-admob-ads-v1.0.0-release\AndroidManifest.xml:35:13-98
 	android:name
 		ADDED from [poing-godot-admob-ads-v1.0.0-release.aar] C:\Users\Dwight\.gradle\caches\transforms-3\74047fd89696f24d141e0fbebdb20ca0\transformed\jetified-poing-godot-admob-ads-v1.0.0-release\AndroidManifest.xml:34:13-90
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\Dwight\.gradle\caches\transforms-3\51821c8f0367571e25498d105c19d1f4\transformed\jetified-play-services-ads-lite-22.2.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] C:\Users\Dwight\.gradle\caches\transforms-3\d1f39487b729f43a8fda6c534358ac1a\transformed\jetified-play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] C:\Users\Dwight\.gradle\caches\transforms-3\d1f39487b729f43a8fda6c534358ac1a\transformed\jetified-play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\Dwight\.gradle\caches\transforms-3\9d61bbcf0d0d6a6d30d2f81da24cf2d3\transformed\work-runtime-2.7.0\AndroidManifest.xml:26:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\Dwight\.gradle\caches\transforms-3\9d61bbcf0d0d6a6d30d2f81da24cf2d3\transformed\work-runtime-2.7.0\AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\Dwight\.gradle\caches\transforms-3\51821c8f0367571e25498d105c19d1f4\transformed\jetified-play-services-ads-lite-22.2.0\AndroidManifest.xml:25:22-76
 uses-permission#com.google.android.gms.permission.AD_ID
 ADDED from [com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\Dwight\.gradle\caches\transforms-3\51821c8f0367571e25498d105c19d1f4\transformed\jetified-play-services-ads-lite-22.2.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\Dwight\.gradle\caches\transforms-3\941280a90283eefa119f48441ad03a74\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79

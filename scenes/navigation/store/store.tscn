@@ -1,0 +1,275 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyxkj8srkhcln"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7u3wc"]
+[ext_resource type="Texture2D" uid="uid://c62wl1wnecp8h" path="res://graphics/ui/store/emptyStore.png" id="2_e3mv2"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_y10gg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jj0mt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Store" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1313.0
+offset_bottom = 736.0
+texture = ExtResource("1_7u3wc")
+expand_mode = 1
+
+[node name="Store" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 44.0
+offset_right = 1085.0
+offset_bottom = 679.0
+texture = ExtResource("2_e3mv2")
+
+[node name="Item1" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 196.0
+offset_right = 195.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price1" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 276.0
+offset_right = 178.0
+offset_bottom = 299.0
+
+[node name="Item2" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 195.0
+offset_right = 332.0
+offset_bottom = 283.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price2" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 276.0
+offset_right = 314.0
+offset_bottom = 299.0
+
+[node name="Item3" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 196.0
+offset_right = 467.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price3" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 275.0
+offset_right = 450.0
+offset_bottom = 298.0
+
+[node name="Item4" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 195.0
+offset_right = 602.0
+offset_bottom = 283.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price4" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 275.0
+offset_right = 586.0
+offset_bottom = 298.0
+
+[node name="Item5" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 649.0
+offset_top = 196.0
+offset_right = 739.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price5" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 276.0
+offset_right = 722.0
+offset_bottom = 299.0
+
+[node name="Item6" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 340.0
+offset_right = 195.0
+offset_bottom = 428.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price6" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 420.0
+offset_right = 178.0
+offset_bottom = 443.0
+
+[node name="Item7" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 340.0
+offset_right = 331.0
+offset_bottom = 428.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price7" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 421.0
+offset_right = 314.0
+offset_bottom = 444.0
+
+[node name="Item8" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 340.0
+offset_right = 467.0
+offset_bottom = 428.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price8" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 421.0
+offset_right = 450.0
+offset_bottom = 444.0
+
+[node name="Item9" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 340.0
+offset_right = 603.0
+offset_bottom = 428.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price9" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 420.0
+offset_right = 586.0
+offset_bottom = 443.0
+
+[node name="Item10" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 649.0
+offset_top = 340.0
+offset_right = 739.0
+offset_bottom = 428.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price10" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 420.0
+offset_right = 722.0
+offset_bottom = 443.0
+
+[node name="Item11" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 485.0
+offset_right = 195.0
+offset_bottom = 573.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price11" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 565.0
+offset_right = 178.0
+offset_bottom = 588.0
+
+[node name="Item12" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 485.0
+offset_right = 332.0
+offset_bottom = 573.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price12" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 565.0
+offset_right = 314.0
+offset_bottom = 588.0
+
+[node name="Item13" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 485.0
+offset_right = 467.0
+offset_bottom = 573.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price13" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 565.0
+offset_right = 449.0
+offset_bottom = 588.0
+
+[node name="Item14" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 485.0
+offset_right = 603.0
+offset_bottom = 573.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price14" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 565.0
+offset_right = 585.0
+offset_bottom = 588.0
+
+[node name="Item15" type="PanelContainer" parent="Store"]
+layout_mode = 0
+offset_left = 649.0
+offset_top = 486.0
+offset_right = 739.0
+offset_bottom = 574.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj0mt")
+
+[node name="Price15" type="Label" parent="Store"]
+layout_mode = 0
+offset_left = 666.0
+offset_top = 565.0
+offset_right = 721.0
+offset_bottom = 588.0
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 617.0
+offset_top = 146.0
+offset_right = 753.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1030.0
+offset_top = 48.0
+offset_right = 1125.0
+offset_bottom = 146.0
+texture_normal = ExtResource("3_y10gg")
+stretch_mode = 0

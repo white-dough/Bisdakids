@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://5fm6trp7abm0"]
 
 [ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_5f8iu"]
-[ext_resource type="Theme" uid="uid://dxsnirm66onp2" path="res://themes/hud_vbox.tres" id="2_krwd4"]
+[ext_resource type="Theme" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
 [ext_resource type="Texture2D" uid="uid://cs0sq6ptwg34a" path="res://graphics/ui/icons/Time2x.png" id="2_owtvw"]
 [ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/game/object_list_label.tscn" id="3_0u3yu"]
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
@@ -74,7 +74,7 @@ anchor_right = 0.959459
 anchor_bottom = 0.983784
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_krwd4")
+theme = ExtResource("2_b3gvf")
 metadata/_edit_use_anchors_ = true
 
 [node name="ContainerHUD" type="VBoxContainer" parent="ColorRect/Panel"]
