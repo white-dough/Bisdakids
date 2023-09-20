@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://5fm6trp7abm0"]
 
-[ext_resource type="Script" path="res://scenes/levels/hud.gd" id="1_5f8iu"]
+[ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_5f8iu"]
 [ext_resource type="Theme" uid="uid://dxsnirm66onp2" path="res://themes/hud_vbox.tres" id="2_krwd4"]
 [ext_resource type="Texture2D" uid="uid://cs0sq6ptwg34a" path="res://graphics/ui/icons/Time2x.png" id="2_owtvw"]
-[ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/levels/object_list_label.tscn" id="3_0u3yu"]
+[ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/game/object_list_label.tscn" id="3_0u3yu"]
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
@@ -257,7 +257,7 @@ offset_bottom = 104.0
 texture_normal = ExtResource("10_62ljq")
 
 [node name="PauseTimer" type="Timer" parent="TimeFreeze"]
-wait_time = 5.0
+wait_time = 20.0
 one_shot = true
 
 [connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]

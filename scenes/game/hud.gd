@@ -53,13 +53,13 @@ func object_list_label(current_objects_strings: Array):
 
 # this function gets the data from words-beta.json (defintion of the words)
 func get_definition() -> Dictionary:
-	var jsonFile = FileAccess.open("res://words-beta.json", FileAccess.READ)
+	var jsonFile = FileAccess.open("res://data/words-beta.json", FileAccess.READ)
 	var contentOfFile = jsonFile.get_as_text()
 	jsonFile.close()
 	
 	var content_as_dictionary = JSON.parse_string(contentOfFile)
 	#var level1 = content_as_dictionary.level1[0].Troso
-	return content_as_dictionary.level1[0]
+	return content_as_dictionary.level1
 	#var level2 = content_as_dictionary.level2[0]
 	#var level3 = content_as_dictionary.level3[0]
 	# etc until level5...

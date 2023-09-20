@@ -1,5 +1,5 @@
 {
-	"level1": [
+	"level1":
 		{
 			"Antepara":"proteksyon sa mata gikan sa kahayag o glare sa adlaw",
 			"Atsa":"usa ka himan nga gigamit sa pagputol sa kahoy",
@@ -33,9 +33,8 @@
 			"Timaan":"poste nga naghatag og direksyon",
 			"Tolda":"kubol nga himoon sa tela o materyales nga ginagamit aron pagproteksyon batok sa ulan o adlaw",
 			"Troso":"usa ka parte sa kahoy punoan"
-		}
-	],
-	"level2": [
+		},
+	"level2":
 		{
 			"Balde":"",
 			"Barko":"",
@@ -49,9 +48,8 @@
 			"Payong":"",
 			"Salbabida":"",
 			"Tsinelas":""
-		}
-	],
-	"level3": [
+		},
+	"level3":
 		{
 			"Bomba":"",
 			"Kariton":"",
@@ -64,11 +62,9 @@
 			"Tawo-tawo":"",
 			"Timbangan":"",
 			"Yawi":""
-		}
-	],
-	"level4": [
+		},
+	"level4":
 		{
 			"":""
 		}
-	]
 }
