@@ -1,6 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://df6737sinoafr"]
+[gd_scene load_steps=17 format=3 uid="uid://df6737sinoafr"]
 
+[ext_resource type="Script" path="res://scenes/navigation/main_menu/main_menu.gd" id="1_7bfsv"]
 [ext_resource type="Texture2D" uid="uid://bje0ttmigqmic" path="res://graphics/level1/2x/2x/MainMenu_bg@2x.png" id="1_yiw32"]
+[ext_resource type="Script" path="res://scenes/navigation/main_menu/Modal.gd" id="2_2fmup"]
 [ext_resource type="Texture2D" uid="uid://dkycev3ibu1ht" path="res://graphics/ui/icons/leaderboard_icon@2x.png" id="2_eluom"]
 [ext_resource type="Texture2D" uid="uid://c3xlmbqq57lxv" path="res://graphics/ui/icons/Map@2x.png" id="3_bgd4p"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="3_cnwvt"]
@@ -16,12 +18,23 @@
 [ext_resource type="Texture2D" uid="uid://gkrq2kpwaxy8" path="res://graphics/ui/icons/bisdakids_game_title@2x.png" id="13_6r1g0"]
 
 [node name="MainMenu" type="Node"]
+script = ExtResource("1_7bfsv")
+
+[node name="Modal" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_2fmup")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -57.0
 offset_top = -98.0
 offset_right = 1350.0
 offset_bottom = 743.0
+mouse_filter = 0
 texture = ExtResource("1_yiw32")
 expand_mode = 1
 
@@ -57,7 +70,7 @@ offset_right = 111.0
 offset_bottom = 471.0
 texture_normal = ExtResource("3_cnwvt")
 
-[node name="Settings" type="TextureButton" parent="Control"]
+[node name="SettingsBtn" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 1200.0
 offset_top = 45.0

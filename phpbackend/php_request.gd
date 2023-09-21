@@ -9,8 +9,8 @@ var is_requesting : bool = false
 func _ready():
 	add_child(http_request)
 	http_request.connect("request_completed", _http_request_completed)
-	add_user_inventory()
-	
+#	add_user_inventory()
+
 func _process(_delta):
 	# Check if we are good to send a request:
 	if is_requesting:
@@ -20,7 +20,6 @@ func _process(_delta):
 	is_requesting = true
 	_send_request(request_queue.pop_front())
 
-	
 func _send_request(request : Dictionary):
 	var client = HTTPClient.new()
 	var data = client.query_string_from_dict({"data" : JSON.stringify(request['data'])})
@@ -46,6 +45,16 @@ func add_user_inventory():#item_id: int, quantity: int
 	var data = {"user_name" : 'dwight', "item_id": 2, "quantity": 29}
 	request_queue.push_back({"command" : command, "data" : data});
 	
+func login(user_name : String, password : String):#item_id: int, quantity: int
+	var command = "login"
+	var data = {"user_name" : user_name, "password": password}
+	request_queue.push_back({"command" : command, "data" : data});
+
+func register(user_name : String, password : String):#item_id: int, quantity: int
+	var command = "register"
+	var data = {"user_name" : user_name, "password": password}
+	request_queue.push_back({"command" : command, "data" : data});
+
 func _http_request_completed(result, _response_code, _headers, body):
 	is_requesting = false
 	if result != HTTPRequest.RESULT_SUCCESS:
