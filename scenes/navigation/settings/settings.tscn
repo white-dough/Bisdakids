@@ -1,15 +1,16 @@
-[gd_scene load_steps=20 format=3 uid="uid://cnk6o3iq6l2pg"]
+[gd_scene load_steps=21 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
-[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
+[ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
-[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
+[ext_resource type="Texture2D" uid="uid://8w1nwlsxjtlb" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
 [ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
-[ext_resource type="Texture2D" uid="uid://cjgqogu13gpl1" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
+[ext_resource type="Texture2D" uid="uid://bw7x1h6fevdhk" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/accountManagement.gd" id="9_hjx7e"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r71xv"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
@@ -17,9 +18,9 @@ content_margin_bottom = 13.0
 texture = ExtResource("2_hnjgi")
 
 [sub_resource type="Theme" id="Theme_gkpco"]
-Panel/styles/panel = SubResource("StyleBoxTexture_r71xv")
+Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riqw7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5q4a"]
 bg_color = Color(0.745098, 0.203922, 0.192157, 1)
 border_width_bottom = 15
 border_color = Color(0.466667, 0.196078, 0.0470588, 1)
@@ -31,13 +32,13 @@ corner_radius_bottom_left = 50
 [sub_resource type="Theme" id="Theme_vqsem"]
 default_font_size = 35
 Label/fonts/font = ExtResource("4_n0wcy")
-Label/styles/normal = SubResource("StyleBoxFlat_riqw7")
+Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
 
 [sub_resource type="Theme" id="Theme_y5hgh"]
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
-[sub_resource type="Image" id="Image_qas2u"]
+[sub_resource type="Image" id="Image_tdmgk"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -46,10 +47,10 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_grcru"]
-image = SubResource("Image_qas2u")
+[sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
+image = SubResource("Image_tdmgk")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmgil"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
 border_width_bottom = 6
 border_color = Color(0.117647, 0.2, 0.584314, 1)
@@ -60,7 +61,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 12
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_io4r7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_if8f7"]
 bg_color = Color(0.333333, 0.341176, 1, 1)
 border_width_bottom = 6
 border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
@@ -71,7 +72,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 12
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vtlr5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0ts0"]
 texture = ExtResource("5_u25ld")
 texture_margin_left = 11.0
 texture_margin_top = 11.0
@@ -89,10 +90,10 @@ HSlider/constants/grabber_offset = 0
 HSlider/icons/grabber = ExtResource("7_ebad3")
 HSlider/icons/grabber_disabled = ExtResource("7_ebad3")
 HSlider/icons/grabber_highlight = ExtResource("7_ebad3")
-HSlider/icons/tick = SubResource("ImageTexture_grcru")
-HSlider/styles/grabber_area = SubResource("StyleBoxFlat_xmgil")
-HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_io4r7")
-HSlider/styles/slider = SubResource("StyleBoxTexture_vtlr5")
+HSlider/icons/tick = SubResource("ImageTexture_gv04k")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_ulj8g")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_if8f7")
+HSlider/styles/slider = SubResource("StyleBoxTexture_h0ts0")
 
 [node name="Settings" type="CanvasLayer"]
 
@@ -107,7 +108,7 @@ expand_mode = 1
 
 [node name="SettingsPnl" type="Panel" parent="."]
 custom_minimum_size = Vector2(710, 380)
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -202,8 +203,11 @@ min_value = -30.0
 max_value = 0.0
 value = -15.0
 
-[node name="Button" type="Button" parent="SettingsPnl/SettingsVbox"]
+[node name="AccountBtn" type="Button" parent="SettingsPnl/SettingsVbox"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "AKAWNT"
+script = ExtResource("9_hjx7e")
+
+[connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="SettingsPnl/SettingsVbox/AccountBtn" method="_on_pressed"]

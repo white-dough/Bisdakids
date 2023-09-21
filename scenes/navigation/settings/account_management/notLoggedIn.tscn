@@ -1,0 +1,133 @@
+[gd_scene load_steps=11 format=3 uid="uid://br6q4gga0uh0a"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_oey0p"]
+[ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_ocblh"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_ixqkc"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_kth67"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/account_management/login.gd" id="5_obrv4"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signup.gd" id="6_esw0e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4t0lc"]
+content_margin_left = 7.0
+content_margin_top = 5.0
+content_margin_right = 7.0
+content_margin_bottom = 13.0
+texture = ExtResource("2_ocblh")
+
+[sub_resource type="Theme" id="Theme_yfnx3"]
+Panel/styles/panel = SubResource("StyleBoxTexture_4t0lc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_waqab"]
+bg_color = Color(0.745098, 0.203922, 0.192157, 1)
+border_width_bottom = 15
+border_color = Color(0.466667, 0.196078, 0.0470588, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_i0oul"]
+default_font_size = 35
+Label/fonts/font = ExtResource("3_ixqkc")
+Label/styles/normal = SubResource("StyleBoxFlat_waqab")
+
+[node name="notLoggedIn" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1321.0
+offset_bottom = 739.0
+texture = ExtResource("1_oey0p")
+expand_mode = 1
+
+[node name="NotLoggedInPnl" type="Panel" parent="."]
+custom_minimum_size = Vector2(710, 380)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.0
+offset_top = -239.0
+offset_right = 325.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_yfnx3")
+
+[node name="AccountLbl" type="Label" parent="NotLoggedInPnl"]
+custom_minimum_size = Vector2(358, 111)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.0
+offset_top = -50.5
+offset_right = 179.0
+offset_bottom = 60.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i0oul")
+text = "AKAWNT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackBtn" type="TextureButton" parent="NotLoggedInPnl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -815.0
+offset_top = -35.0
+offset_right = -715.0
+offset_bottom = 65.0
+grow_vertical = 2
+texture_normal = ExtResource("4_kth67")
+stretch_mode = 0
+
+[node name="ContentVBox" type="VBoxContainer" parent="NotLoggedInPnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -60.0
+offset_right = 282.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="NotLoggedInPnl/ContentVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Kailangan nimo og akawnt para magamit og ma-karga nimo ang kauswagan sa imong duwa padung sa ubang kahimanan bro"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonsHBox" type="HBoxContainer" parent="NotLoggedInPnl/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="LoginBtn" type="Button" parent="NotLoggedInPnl/ContentVBox/ButtonsHBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 25
+text = "Sulod"
+script = ExtResource("5_obrv4")
+
+[node name="SignupBtn" type="Button" parent="NotLoggedInPnl/ContentVBox/ButtonsHBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pagbuhat"
+script = ExtResource("6_esw0e")
+
+[connection signal="pressed" from="NotLoggedInPnl/ContentVBox/ButtonsHBox/LoginBtn" to="NotLoggedInPnl/ContentVBox/ButtonsHBox/LoginBtn" method="_on_pressed"]
+[connection signal="pressed" from="NotLoggedInPnl/ContentVBox/ButtonsHBox/SignupBtn" to="NotLoggedInPnl/ContentVBox/ButtonsHBox/SignupBtn" method="_on_pressed"]

@@ -1,0 +1,198 @@
+[gd_scene load_steps=13 format=3 uid="uid://ncard8c6t8hm"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7noa5"]
+[ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_r6gqj"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_whhwp"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_rlqgb"]
+[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_m676w"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signupProcess.gd" id="6_kw4dq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r71xv"]
+content_margin_left = 7.0
+content_margin_top = 5.0
+content_margin_right = 7.0
+content_margin_bottom = 13.0
+texture = ExtResource("2_r6gqj")
+
+[sub_resource type="Theme" id="Theme_cy153"]
+Panel/styles/panel = SubResource("StyleBoxTexture_r71xv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riqw7"]
+bg_color = Color(0.745098, 0.203922, 0.192157, 1)
+border_width_bottom = 15
+border_color = Color(0.466667, 0.196078, 0.0470588, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_fvm0b"]
+default_font_size = 35
+Label/fonts/font = ExtResource("3_whhwp")
+Label/styles/normal = SubResource("StyleBoxFlat_riqw7")
+
+[sub_resource type="Theme" id="Theme_472f3"]
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("5_m676w")
+
+[sub_resource type="Theme" id="Theme_kux5i"]
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("5_m676w")
+
+[node name="Signup" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1329.0
+offset_bottom = 748.0
+texture = ExtResource("1_7noa5")
+expand_mode = 1
+
+[node name="SignupPnl" type="Panel" parent="."]
+custom_minimum_size = Vector2(710, 380)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -363.0
+offset_top = -301.0
+offset_right = 347.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_cy153")
+
+[node name="AccountLbl" type="Label" parent="SignupPnl"]
+custom_minimum_size = Vector2(358, 111)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.0
+offset_top = -50.5
+offset_right = 179.0
+offset_bottom = 60.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fvm0b")
+text = "AKAWNT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackBtn" type="TextureButton" parent="SignupPnl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -815.0
+offset_top = -35.0
+offset_right = -715.0
+offset_bottom = 65.0
+grow_vertical = 2
+texture_normal = ExtResource("4_rlqgb")
+stretch_mode = 0
+
+[node name="ContentVBox" type="VBoxContainer" parent="SignupPnl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507042
+anchor_top = 0.182779
+anchor_right = 0.507042
+anchor_bottom = 0.779456
+offset_left = -282.0
+offset_top = -60.0
+offset_right = 282.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SignupLbl" type="Label" parent="SignupPnl/ContentVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_472f3")
+theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
+theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_font_sizes/font_size = 30
+text = "Pagbuhat og Akawnt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FirstInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="UsernameLbl" type="Label" parent="SignupPnl/ContentVBox/FirstInputVBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_kux5i")
+theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
+theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_font_sizes/font_size = 25
+text = "Ngalan sa tiggamit:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UsernameInput" type="LineEdit" parent="SignupPnl/ContentVBox/FirstInputVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+alignment = 1
+text_direction = 1
+
+[node name="SecondInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="PasswordLbl" type="Label" parent="SignupPnl/ContentVBox/SecondInputVBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_kux5i")
+theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
+theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_font_sizes/font_size = 25
+text = "Susi sa Akawnt:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PasswordInput" type="LineEdit" parent="SignupPnl/ContentVBox/SecondInputVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+alignment = 1
+text_direction = 1
+
+[node name="ThirdInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="ConfirmPasswordLbl" type="Label" parent="SignupPnl/ContentVBox/ThirdInputVBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_kux5i")
+theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
+theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_font_sizes/font_size = 25
+text = "Susi sa Akawnt- Pagpamatood"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmPasswordInput" type="LineEdit" parent="SignupPnl/ContentVBox/ThirdInputVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+alignment = 1
+text_direction = 1
+
+[node name="SignupBtn" type="Button" parent="SignupPnl/ContentVBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "Buhata"
+script = ExtResource("6_kw4dq")
+
+[connection signal="pressed" from="SignupPnl/ContentVBox/SignupBtn" to="SignupPnl/ContentVBox/SignupBtn" method="_on_pressed"]
