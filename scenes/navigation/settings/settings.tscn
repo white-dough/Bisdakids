@@ -8,13 +8,8 @@
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
 [ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
 [ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cjgqogu13gpl1" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
-=======
-[ext_resource type="Texture2D" uid="uid://bw7x1h6fevdhk" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
-[ext_resource type="Script" path="res://scenes/navigation/settings/accountManagement.gd" id="9_hjx7e"]
-[ext_resource type="Texture2D" uid="uid://dt35upla14r67" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
->>>>>>> c75a897176c87bbf76608c06631c03bdb4478991
+[ext_resource type="Texture2D" uid="uid://ca7x23g7lo4xl" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -44,11 +39,7 @@ Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
-<<<<<<< HEAD
-[sub_resource type="Image" id="Image_c27w2"]
-=======
-[sub_resource type="Image" id="Image_fhg3k"]
->>>>>>> c75a897176c87bbf76608c06631c03bdb4478991
+[sub_resource type="Image" id="Image_ovovn"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -58,11 +49,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
-<<<<<<< HEAD
-image = SubResource("Image_c27w2")
-=======
-image = SubResource("Image_fhg3k")
->>>>>>> c75a897176c87bbf76608c06631c03bdb4478991
+image = SubResource("Image_ovovn")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
@@ -222,12 +209,7 @@ value = -15.0
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 size_flags_horizontal = 8
-<<<<<<< HEAD
-text = "AKAWNT"
-=======
 texture_normal = ExtResource("9_wt604")
-script = ExtResource("9_hjx7e")
->>>>>>> c75a897176c87bbf76608c06631c03bdb4478991
 
 [connection signal="pressed" from="SettingsPnl/CloseBtn" to="." method="_on_close_btn_pressed"]
 [connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="." method="_on_account_btn_pressed"]

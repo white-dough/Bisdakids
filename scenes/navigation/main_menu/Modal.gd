@@ -2,7 +2,7 @@ extends Control
 
 #@onready var mainmenu_modal_node : Control = self
 @onready var settings_scene : PackedScene = load("res://scenes/navigation/settings/settings.tscn")
-@onready var settings_btn = $"../Control/SettingsBtn"
+@onready var settings_btn = $"../Control/HBoxContainer2/Settings"
 #@onready var settings_scene_path = load("res://scenes/navigation/settings/settings.tscn")
 #@onready var settings_btn = $"../Control/SettingsBtn"
 

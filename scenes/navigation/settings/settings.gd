@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var mainmenu_modal_node : Control = $"../"
 @onready var not_logged_in_scene : CanvasLayer = load("res://scenes/navigation/settings/account_management/notLoggedIn.tscn").instantiate()
 @onready var logged_in_scene : CanvasLayer  = load("res://scenes/navigation/settings/account_management/loggedIn.tscn").instantiate()
-@onready var account_button : Button = $SettingsPnl/SettingsVbox/AccountBtn
+@onready var account_button : TextureButton = $SettingsPnl/SettingsVbox/AccountBtn
 @onready var is_connected_internet : bool
 
 func _process(_delta):

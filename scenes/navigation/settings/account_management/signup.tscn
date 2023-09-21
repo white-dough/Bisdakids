@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signup.gd" id="1_q2xjc"]
 [ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_r6gqj"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_whhwp"]
-[ext_resource type="Texture2D" uid="uid://guv2x32sebqn" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_m676w"]
-[ext_resource type="Texture2D" uid="uid://dqxhvt1xv445w" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
+[ext_resource type="Texture2D" uid="uid://d288gsaukl6re" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r71xv"]
 content_margin_left = 7.0
@@ -195,4 +195,5 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("6_qb4vn")
 
+[connection signal="pressed" from="SignupPnl/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="SignupPnl/ContentVBox/SignupBtn" to="." method="_on_signup_btn_pressed"]
