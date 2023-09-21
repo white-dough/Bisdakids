@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cnk6o3iq6l2pg"]
+[gd_scene load_steps=22 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
 [ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
 [ext_resource type="Texture2D" uid="uid://bw7x1h6fevdhk" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/accountManagement.gd" id="9_hjx7e"]
+[ext_resource type="Texture2D" uid="uid://dt35upla14r67" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -38,7 +39,7 @@ Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
-[sub_resource type="Image" id="Image_tdmgk"]
+[sub_resource type="Image" id="Image_fhg3k"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -48,7 +49,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
-image = SubResource("Image_tdmgk")
+image = SubResource("Image_fhg3k")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
@@ -203,11 +204,11 @@ min_value = -30.0
 max_value = 0.0
 value = -15.0
 
-[node name="AccountBtn" type="Button" parent="SettingsPnl/SettingsVbox"]
+[node name="AccountBtn" type="TextureButton" parent="SettingsPnl/SettingsVbox"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 size_flags_horizontal = 8
-text = "AKAWNT"
+texture_normal = ExtResource("9_wt604")
 script = ExtResource("9_hjx7e")
 
 [connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="SettingsPnl/SettingsVbox/AccountBtn" method="_on_pressed"]

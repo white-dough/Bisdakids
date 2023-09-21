@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://br6q4gga0uh0a"]
+[gd_scene load_steps=13 format=3 uid="uid://br6q4gga0uh0a"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_oey0p"]
 [ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_ocblh"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_ixqkc"]
-[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_kth67"]
+[ext_resource type="Texture2D" uid="uid://guv2x32sebqn" path="res://graphics/ui/icons/back button@2x.png" id="4_j8lpk"]
+[ext_resource type="Texture2D" uid="uid://bhno3t2sit0e1" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="5_bvpkt"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/login.gd" id="5_obrv4"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signup.gd" id="6_esw0e"]
+[ext_resource type="Texture2D" uid="uid://dqxhvt1xv445w" path="res://graphics/ui/icons/Sign up btn@2x.png" id="7_wx7tt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4t0lc"]
 content_margin_left = 7.0
@@ -84,7 +86,7 @@ offset_top = -35.0
 offset_right = -715.0
 offset_bottom = 65.0
 grow_vertical = 2
-texture_normal = ExtResource("4_kth67")
+texture_normal = ExtResource("4_j8lpk")
 stretch_mode = 0
 
 [node name="ContentVBox" type="VBoxContainer" parent="NotLoggedInPnl"]
@@ -116,17 +118,15 @@ autowrap_mode = 3
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="LoginBtn" type="Button" parent="NotLoggedInPnl/ContentVBox/ButtonsHBox"]
+[node name="LoginBtn" type="TextureButton" parent="NotLoggedInPnl/ContentVBox/ButtonsHBox"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 25
-text = "Sulod"
+texture_normal = ExtResource("5_bvpkt")
 script = ExtResource("5_obrv4")
 
-[node name="SignupBtn" type="Button" parent="NotLoggedInPnl/ContentVBox/ButtonsHBox"]
+[node name="SignupBtn" type="TextureButton" parent="NotLoggedInPnl/ContentVBox/ButtonsHBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Pagbuhat"
+texture_normal = ExtResource("7_wx7tt")
 script = ExtResource("6_esw0e")
 
 [connection signal="pressed" from="NotLoggedInPnl/ContentVBox/ButtonsHBox/LoginBtn" to="NotLoggedInPnl/ContentVBox/ButtonsHBox/LoginBtn" method="_on_pressed"]

@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 var isUserLoggedIn = false # change boolean if userIsLoggedIn
 # (sa karon manual lng sa for testing)
