@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://5fm6trp7abm0"]
 
 [ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_5f8iu"]
-[ext_resource type="Theme" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
+[ext_resource type="Theme" uid="uid://s6fhai8xfiw" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
 [ext_resource type="Texture2D" uid="uid://cs0sq6ptwg34a" path="res://graphics/ui/icons/Time2x.png" id="2_owtvw"]
 [ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/game/object_list_label.tscn" id="3_0u3yu"]
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
-[ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
+[ext_resource type="Texture2D" uid="uid://y0sl2bnkfxct" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
@@ -84,10 +84,12 @@ anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -92.0
+offset_top = 10.0
 offset_right = 92.0
+offset_bottom = -17.0002
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 38
+theme_override_constants/separation = 34
 
 [node name="TimerBar" type="Control" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
@@ -242,18 +244,18 @@ autowrap_mode = 3
 [node name="Settings" type="TextureButton" parent="."]
 layout_mode = 1
 offset_left = 1213.0
-offset_top = 14.0
+offset_top = 31.0
 offset_right = 1300.0
-offset_bottom = 101.0
+offset_bottom = 118.0
 texture_normal = ExtResource("9_0hgwc")
 
 [node name="TimeFreeze" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 240.0
-offset_top = 14.0
+offset_top = 31.0
 offset_right = 329.0
-offset_bottom = 104.0
+offset_bottom = 121.0
 texture_normal = ExtResource("10_62ljq")
 
 [node name="PauseTimer" type="Timer" parent="TimeFreeze"]

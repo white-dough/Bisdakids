@@ -1,15 +1,15 @@
 [gd_scene load_steps=22 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
-[ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
+[ext_resource type="Texture2D" uid="uid://dp64yynpbxfiw" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
-[ext_resource type="Texture2D" uid="uid://8w1nwlsxjtlb" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
+[ext_resource type="Texture2D" uid="uid://diqadqfxpeipc" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
 [ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
-[ext_resource type="Texture2D" uid="uid://bw7x1h6fevdhk" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
+[ext_resource type="Texture2D" uid="uid://dg15k8nhqmdtd" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/accountManagement.gd" id="9_hjx7e"]
-[ext_resource type="Texture2D" uid="uid://dt35upla14r67" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
+[ext_resource type="Texture2D" uid="uid://b4lggupb6j2qn" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -39,7 +39,7 @@ Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
-[sub_resource type="Image" id="Image_fhg3k"]
+[sub_resource type="Image" id="Image_jbruc"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -49,7 +49,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
-image = SubResource("Image_fhg3k")
+image = SubResource("Image_jbruc")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
@@ -114,7 +114,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_bottom = 54.0
+offset_left = -355.0
+offset_top = -198.0
+offset_right = 355.0
+offset_bottom = 227.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -128,9 +131,9 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -179.0
-offset_top = -50.5
+offset_top = -58.5
 offset_right = 179.0
-offset_bottom = 60.5
+offset_bottom = 52.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_vqsem")
@@ -154,9 +157,9 @@ stretch_mode = 0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.112676
-anchor_top = 0.231579
+anchor_top = 0.141176
 anchor_right = 0.897183
-anchor_bottom = 0.792105
+anchor_bottom = 0.828235
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -165,7 +168,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TingogVbox" type="VBoxContainer" parent="SettingsPnl/SettingsVbox"]
 layout_mode = 2
-theme_override_constants/separation = -7
+theme_override_constants/separation = -3
 
 [node name="TingogLbl" type="Label" parent="SettingsPnl/SettingsVbox/TingogVbox"]
 layout_mode = 2
@@ -187,7 +190,7 @@ value = -10.0
 
 [node name="MusikaVbox" type="VBoxContainer" parent="SettingsPnl/SettingsVbox"]
 layout_mode = 2
-theme_override_constants/separation = -7
+theme_override_constants/separation = -3
 
 [node name="MusikaLbl" type="Label" parent="SettingsPnl/SettingsVbox/MusikaVbox"]
 layout_mode = 2
