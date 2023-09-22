@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://ncard8c6t8hm"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7noa5"]
-[ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_r6gqj"]
+[ext_resource type="Texture2D" uid="uid://dp64yynpbxfiw" path="res://graphics/navigation/store/store_panel@2x.png" id="2_r6gqj"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_whhwp"]
-[ext_resource type="Texture2D" uid="uid://guv2x32sebqn" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
+[ext_resource type="Texture2D" uid="uid://qk82akteb035" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_m676w"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signupProcess.gd" id="6_kw4dq"]
-[ext_resource type="Texture2D" uid="uid://dqxhvt1xv445w" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
+[ext_resource type="Texture2D" uid="uid://b44p6jfopn1hp" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r71xv"]
 content_margin_left = 7.0
@@ -191,7 +191,8 @@ text_direction = 1
 
 [node name="SignupBtn" type="TextureButton" parent="SignupPnl/ContentVBox"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource("6_qb4vn")
 script = ExtResource("6_kw4dq")
 
