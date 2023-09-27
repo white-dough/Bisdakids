@@ -1,51 +1,67 @@
-[gd_scene load_steps=17 format=3 uid="uid://5fm6trp7abm0"]
+[gd_scene load_steps=23 format=3 uid="uid://5fm6trp7abm0"]
 
 [ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_5f8iu"]
-[ext_resource type="Theme" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
+[ext_resource type="Theme" uid="uid://s6fhai8xfiw" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
 [ext_resource type="Texture2D" uid="uid://cs0sq6ptwg34a" path="res://graphics/ui/icons/Time2x.png" id="2_owtvw"]
 [ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/game/object_list_label.tscn" id="3_0u3yu"]
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
-[ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
+[ext_resource type="Texture2D" uid="uid://dec687v215ekg" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
+[ext_resource type="Texture2D" uid="uid://dtam1grqm5uxb" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njvih"]
-bg_color = Color(0.854902, 0.588235, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gud4"]
+content_margin_left = 100.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("10_5i8yf")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv00v"]
-bg_color = Color(0.854902, 0.588235, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="Theme" id="Theme_icvfl"]
+Label/styles/normal = SubResource("StyleBoxTexture_4gud4")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jswo5"]
-bg_color = Color(0.854902, 0.588235, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vamyr"]
+content_margin_left = 100.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("10_5i8yf")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kn7xl"]
-bg_color = Color(0.854902, 0.588235, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="Theme" id="Theme_q3k73"]
+Label/styles/normal = SubResource("StyleBoxTexture_vamyr")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mj6h4"]
-bg_color = Color(0.854902, 0.588235, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqbf7"]
+content_margin_left = 100.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_w28uy"]
+Label/styles/normal = SubResource("StyleBoxTexture_lqbf7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf1k4"]
+content_margin_left = 100.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_qtnv1"]
+Label/styles/normal = SubResource("StyleBoxTexture_qf1k4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrsa4"]
+content_margin_left = 100.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_t1n1c"]
+Label/styles/normal = SubResource("StyleBoxTexture_rrsa4")
 
 [node name="HUD" type="Control"]
 texture_filter = 1
@@ -189,16 +205,19 @@ color = Color(0.956863, 0.921569, 0.835294, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/Panel"]
 
 [node name="DescContainer" type="VBoxContainer" parent="ColorRect/Panel/CanvasLayer"]
-offset_left = 222.0
-offset_top = 276.0
-offset_right = 406.0
-offset_bottom = 350.0
+anchors_preset = -1
+anchor_left = 0.16895
+anchor_top = 0.333784
+anchor_right = 0.442922
+anchor_bottom = 0.52027
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+theme = SubResource("Theme_icvfl")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_njvih")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -206,8 +225,8 @@ autowrap_mode = 3
 [node name="Label2" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+theme = SubResource("Theme_q3k73")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_xv00v")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -215,8 +234,8 @@ autowrap_mode = 3
 [node name="Label3" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+theme = SubResource("Theme_w28uy")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_jswo5")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -224,8 +243,8 @@ autowrap_mode = 3
 [node name="Label4" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+theme = SubResource("Theme_qtnv1")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_kn7xl")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -233,8 +252,8 @@ autowrap_mode = 3
 [node name="Label5" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+theme = SubResource("Theme_t1n1c")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_mj6h4")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
