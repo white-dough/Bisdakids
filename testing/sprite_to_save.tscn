@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfwdr77qs6y2g"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hb4jj"]
+load_path = "res://.godot/imported/account_btn@2x.png-6ce5490291006b4164d50fcbda2fd59f.ctex"
+
+[node name="AccountBtn_2x" type="Sprite2D"]
+modulate = Color(0.313726, 0.313726, 0.313726, 1)
+position = Vector2(103, 40)
+texture = SubResource("CompressedTexture2D_hb4jj")

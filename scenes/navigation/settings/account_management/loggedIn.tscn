@@ -1,12 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://0eydf88xrmc"]
+[gd_scene load_steps=16 format=3 uid="uid://0eydf88xrmc"]
 
+[ext_resource type="Script" path="res://scenes/navigation/settings/account_management/loggedIn.gd" id="1_g8pob"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_r784m"]
-[ext_resource type="Texture2D" uid="uid://xld1dxs62uj7" path="res://graphics/navigation/store/store_panel@2x.png" id="2_dtkw6"]
+[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_dtkw6"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_kscbx"]
-[ext_resource type="Texture2D" uid="uid://guv2x32sebqn" path="res://graphics/ui/icons/back button@2x.png" id="4_d8tr4"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="4_d8tr4"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_r5q4x"]
-[ext_resource type="Texture2D" uid="uid://dlk15pf4sqkff" path="res://graphics/ui/icons/logout_btn@2x.png" id="6_1osoj"]
-[ext_resource type="Script" path="res://scenes/navigation/settings/account_management/logout.gd" id="6_h57bo"]
+[ext_resource type="Texture2D" uid="uid://bnsq0yd6y5ya5" path="res://graphics/ui/icons/logout_btn@2x.png" id="6_1osoj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkuea"]
 content_margin_left = 7.0
@@ -36,11 +36,26 @@ Label/styles/normal = SubResource("StyleBoxFlat_uc10w")
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_r5q4x")
 
-[node name="IfLoggedIn" type="CanvasLayer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_teb8c"]
+bg_color = Color(0.270588, 0.101961, 0.0666667, 1)
+draw_center = false
+border_width_bottom = 5
+border_color = Color(0.501961, 0.215686, 0.156863, 1)
+
+[sub_resource type="Theme" id="Theme_pxnee"]
+Label/fonts/font = null
+Label/styles/normal = SubResource("StyleBoxFlat_teb8c")
+
+[sub_resource type="FontVariation" id="FontVariation_l43s0"]
+variation_embolden = 0.98
+
+[node name="LoggedIn" type="CanvasLayer"]
+script = ExtResource("1_g8pob")
+metadata/_edit_horizontal_guides_ = []
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 1322.0
-offset_bottom = 742.0
+offset_right = 1314.0
+offset_bottom = 740.0
 texture = ExtResource("1_r784m")
 expand_mode = 1
 
@@ -51,10 +66,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -385.0
-offset_top = -239.0
-offset_right = 325.0
-offset_bottom = 141.0
+offset_left = -355.0
+offset_top = -163.0
+offset_right = 355.0
+offset_bottom = 217.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -110,10 +125,12 @@ alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="LabelsVBox" type="HBoxContainer" parent="LoggedInPnl/ContentVBox"]
+custom_minimum_size = Vector2(550, 0)
 layout_mode = 2
-theme_override_constants/separation = 30
+size_flags_horizontal = 0
+theme_override_constants/separation = 14
 
-[node name="Label" type="Label" parent="LoggedInPnl/ContentVBox/LabelsVBox"]
+[node name="UsernameLbl" type="Label" parent="LoggedInPnl/ContentVBox/LabelsVBox"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme = SubResource("Theme_5cw5t")
@@ -124,15 +141,20 @@ text = "Ngalan sa tiggamit:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UsernameLbl" type="Label" parent="LoggedInPnl/ContentVBox/LabelsVBox"]
+[node name="LoggedLbl" type="Label" parent="LoggedInPnl/ContentVBox/LabelsVBox"]
 layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_pxnee")
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = SubResource("FontVariation_l43s0")
 theme_override_font_sizes/font_size = 30
-text = "[ex: user001]"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="LogoutBtn" type="TextureButton" parent="LoggedInPnl/ContentVBox"]
 layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("6_1osoj")
-script = ExtResource("6_h57bo")
 
-[connection signal="pressed" from="LoggedInPnl/ContentVBox/LogoutBtn" to="LoggedInPnl/ContentVBox/LogoutBtn" method="_on_pressed"]
+[connection signal="pressed" from="LoggedInPnl/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="LoggedInPnl/ContentVBox/LogoutBtn" to="." method="_on_logout_btn_pressed"]

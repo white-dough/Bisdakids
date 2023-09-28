@@ -7,6 +7,12 @@
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_m676w"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signupProcess.gd" id="6_kw4dq"]
 [ext_resource type="Texture2D" uid="uid://b44p6jfopn1hp" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signup.gd" id="1_q2xjc"]
+[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_r6gqj"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_whhwp"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
+[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_m676w"]
+[ext_resource type="Texture2D" uid="uid://d288gsaukl6re" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r71xv"]
 content_margin_left = 7.0
@@ -41,6 +47,7 @@ Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_m676w")
 
 [node name="Signup" type="CanvasLayer"]
+script = ExtResource("1_q2xjc")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1329.0
@@ -55,9 +62,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -363.0
+offset_left = -355.0
 offset_top = -301.0
-offset_right = 347.0
+offset_right = 355.0
 offset_bottom = 361.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -165,6 +172,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
 alignment = 1
+secret = true
 text_direction = 1
 
 [node name="ThirdInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
@@ -178,7 +186,7 @@ theme = SubResource("Theme_kux5i")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
 theme_override_font_sizes/font_size = 25
-text = "Susi sa Akawnt- Pagpamatood"
+text = "Susi sa Akawnt: (pagpamatood)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -187,6 +195,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
 alignment = 1
+secret = true
 text_direction = 1
 
 [node name="SignupBtn" type="TextureButton" parent="SignupPnl/ContentVBox"]
@@ -194,6 +203,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("6_qb4vn")
-script = ExtResource("6_kw4dq")
 
-[connection signal="pressed" from="SignupPnl/ContentVBox/SignupBtn" to="SignupPnl/ContentVBox/SignupBtn" method="_on_pressed"]
+[connection signal="pressed" from="SignupPnl/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="SignupPnl/ContentVBox/SignupBtn" to="." method="_on_signup_btn_pressed"]

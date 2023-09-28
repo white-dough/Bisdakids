@@ -9,7 +9,7 @@ var is_requesting : bool = false
 func _ready():
 	add_child(http_request)
 	http_request.connect("request_completed", _http_request_completed)
-	get_user_inventory()
+	add_user_inventory()
 	
 func _process(_delta):
 	# Check if we are good to send a request:
@@ -38,12 +38,12 @@ func _send_request(request : Dictionary):
 	
 func get_user_inventory():
 	var command = "get_user_inventory"
-	var data = {"user_id" : 824655}
+	var data = {"user_name" : 'dwight'}
 	request_queue.push_back({"command" : command, "data" : data});
 
 func add_user_inventory():#item_id: int, quantity: int
 	var command = "add_user_inventory"
-	var data = {"user_id" : 789512314, "item_id": 2, "quantity": 29}
+	var data = {"user_name" : 'dwight', "item_id": 2, "quantity": 29}
 	request_queue.push_back({"command" : command, "data" : data});
 	
 func _http_request_completed(result, _response_code, _headers, body):
@@ -59,4 +59,3 @@ func _http_request_completed(result, _response_code, _headers, body):
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
 	print("Response Body:\n" + str(response))
-	

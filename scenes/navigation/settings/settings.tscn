@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnk6o3iq6l2pg"]
+[gd_scene load_steps=23 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
 [ext_resource type="Texture2D" uid="uid://dp64yynpbxfiw" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
@@ -10,6 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://dg15k8nhqmdtd" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/accountManagement.gd" id="9_hjx7e"]
 [ext_resource type="Texture2D" uid="uid://b4lggupb6j2qn" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_wt7e2"]
+[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
+[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
+[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
+[ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
+[ext_resource type="Texture2D" uid="uid://cjgqogu13gpl1" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
+[ext_resource type="Texture2D" uid="uid://ca7x23g7lo4xl" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
+[ext_resource type="Texture2D" uid="uid://uc3nn0sb7l5c" path="res://graphics/ui/icons/akawnt_btn_disabled.png" id="11_4evfi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kerme"]
 content_margin_left = 7.0
@@ -40,6 +50,7 @@ Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
 [sub_resource type="Image" id="Image_o25vv"]
+[sub_resource type="Image" id="Image_32key"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -50,6 +61,10 @@ data = {
 
 [sub_resource type="ImageTexture" id="ImageTexture_o1ajc"]
 image = SubResource("Image_o25vv")
+
+[sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
+image = SubResource("Image_32key")
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs07j"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
@@ -97,6 +112,7 @@ HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_m3bms")
 HSlider/styles/slider = SubResource("StyleBoxTexture_lsnm8")
 
 [node name="Settings" type="CanvasLayer"]
+script = ExtResource("1_wt7e2")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -212,6 +228,7 @@ custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 size_flags_horizontal = 8
 texture_normal = ExtResource("9_wt604")
-script = ExtResource("9_hjx7e")
+texture_disabled = ExtResource("11_4evfi")
 
-[connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="SettingsPnl/SettingsVbox/AccountBtn" method="_on_pressed"]
+[connection signal="pressed" from="SettingsPnl/CloseBtn" to="." method="_on_close_btn_pressed"]
+[connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="." method="_on_account_btn_pressed"]
