@@ -65,10 +65,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+<<<<<<< HEAD
 offset_left = -355.0
 offset_top = -163.0
 offset_right = 355.0
 offset_bottom = 217.0
+=======
+offset_left = -343.0
+offset_top = -188.0
+offset_right = 367.0
+offset_bottom = 192.0
+>>>>>>> 6e8e15fe5a903eb28159544c79c28c583dbac80a
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
