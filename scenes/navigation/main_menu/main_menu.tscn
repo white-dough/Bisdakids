@@ -135,5 +135,4 @@ texture_normal = ExtResource("12_tfvlm")
 position = Vector2(672, 388)
 texture = ExtResource("13_6r1g0")
 
-[connection signal="pressed" from="Control/HBoxContainer2/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]

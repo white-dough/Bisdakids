@@ -51,10 +51,11 @@ variation_embolden = 0.98
 
 [node name="LoggedIn" type="CanvasLayer"]
 script = ExtResource("1_g8pob")
+metadata/_edit_horizontal_guides_ = []
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 1322.0
-offset_bottom = 742.0
+offset_right = 1314.0
+offset_bottom = 740.0
 texture = ExtResource("1_r784m")
 expand_mode = 1
 

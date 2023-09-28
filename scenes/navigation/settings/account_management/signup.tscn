@@ -166,6 +166,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
 alignment = 1
+secret = true
 text_direction = 1
 
 [node name="ThirdInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
@@ -188,11 +189,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
 alignment = 1
+secret = true
 text_direction = 1
 
 [node name="SignupBtn" type="TextureButton" parent="SignupPnl/ContentVBox"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 texture_normal = ExtResource("6_qb4vn")
 
 [connection signal="pressed" from="SignupPnl/BackBtn" to="." method="_on_back_btn_pressed"]

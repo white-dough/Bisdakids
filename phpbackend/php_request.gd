@@ -5,6 +5,7 @@ const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
 const SERVER_HEADERS = ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"]
 var request_queue : Array = []
 var is_requesting : bool = false
+var clean_response
 
 func _ready():
 	add_child(http_request)
@@ -67,4 +68,20 @@ func _http_request_completed(result, _response_code, _headers, body):
 	if response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
-	print("Response Body:\n" + str(response))
+#	request_saving(response)
+	print("Request Submitted")
+	print(response)
+	
+func request_saving(response):
+	match response['command']:
+		"login":
+			if response['response']['query'] == "success":
+				clean_response = response['response']['0']['user_name']
+			else:
+				clean_response = "failed"
+		"register":
+			if response['response']['query'] == "success":
+				clean_response = "success"
+			else:
+				clean_response = "failed"
+		

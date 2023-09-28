@@ -7,15 +7,14 @@ extends Node
 @onready var daily_task: Dictionary = {}
 @onready var current_date : Dictionary = {}
 @onready var loaded_player_data : Dictionary = {}
-#@onready var is_connected_internet : bool
 
 func check_is_connected_internet() -> bool:
-	var http = HTTPClient.new() # Create the Client.
-	http.connect_to_host("www.pornhub.com", 443)
-	while http.get_status() == HTTPClient.STATUS_CONNECTING or http.get_status() == HTTPClient.STATUS_RESOLVING:
+	var http = HTTPClient.new()
+	http.connect_to_host("www.example.com", 443)
+	for i in 5:
 		http.poll()
 		if not OS.has_feature("web"):
-			OS.delay_msec(500)
+			OS.delay_msec(100)
 	return true if http.get_status() == 5 else false
 	
 ##########
@@ -75,7 +74,6 @@ func daily_task_logic():#returns true if a day ahead
 
 func _ready():
 	load_data()
-	print(loaded_player_data)
 #	check_is_connected_internet()
 	
 #	var test = {"progress" : progress}
