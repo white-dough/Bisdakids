@@ -1,4 +1,3 @@
-[gd_scene load_steps=16 format=3 uid="uid://df6737sinoafr"]
 [gd_scene load_steps=17 format=3 uid="uid://df6737sinoafr"]
 
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/main_menu.gd" id="1_jtkxk"]
@@ -7,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dwpuyl43hd5nu" path="res://graphics/ui/icons/energly_lbl@2x.png" id="2_rdlts"]
 [ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="3_br7nd"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="3_cnwvt"]
-[ext_resource type="Texture2D" uid="uid://bdeccy0jmxm48" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
+[ext_resource type="Texture2D" uid="uid://crs6qkp4igooo" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
-[ext_resource type="Texture2D" uid="uid://ba6tfad40isxc" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="7_gxxu0"]
+[ext_resource type="Texture2D" uid="uid://c8osw3r3v61at" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="7_gxxu0"]
 [ext_resource type="Texture2D" uid="uid://ddfpevth0suxk" path="res://graphics/ui/icons/naghimo_icon@2x.png" id="10_ubus3"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="11_veawo"]
 [ext_resource type="Texture2D" uid="uid://iksmgo1nrnw2" path="res://graphics/ui/icons/undang_icon@2x.png" id="12_tfvlm"]
@@ -23,7 +22,7 @@ texture = ExtResource("2_rdlts")
 texture = ExtResource("4_oygv8")
 
 [node name="MainMenu" type="Node"]
-script = ExtResource("1_7bfsv")
+script = ExtResource("1_jtkxk")
 
 [node name="Modal" type="Control" parent="."]
 layout_mode = 3
