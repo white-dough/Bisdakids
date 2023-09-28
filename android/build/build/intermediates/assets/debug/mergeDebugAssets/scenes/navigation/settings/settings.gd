@@ -7,10 +7,9 @@ extends CanvasLayer
 @onready var is_connected_internet : bool
 
 func _process(_delta):
-	if Engine.get_process_frames () % 360 == 0:
+	if Engine.get_process_frames () % 720 == 0:
 		is_connected_internet = Game.check_is_connected_internet()
 		account_button.disabled = true if !is_connected_internet else false
-			
 
 func _ready():
 	is_connected_internet = Game.check_is_connected_internet()

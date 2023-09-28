@@ -46,10 +46,11 @@ func object_list_label(current_objects_strings: Array):
 		var desc_label = description_container.get_child(i)
 		current_label.set_text(current_objects_strings[i])
 		if data.has(current_objects_strings[i]):
-			print('1')
+			#print('1')
 			desc_label.set_text(data[current_objects_strings[i]])
 		else:
-			print("0")
+			#print("0")
+			pass
 
 # this function gets the data from words-beta.json (defintion of the words)
 func get_definition() -> Dictionary:
