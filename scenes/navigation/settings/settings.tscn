@@ -1,15 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
-[ext_resource type="Texture2D" uid="uid://dp64yynpbxfiw" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
-[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
-[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
-[ext_resource type="Texture2D" uid="uid://diqadqfxpeipc" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
-[ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
-[ext_resource type="Texture2D" uid="uid://dg15k8nhqmdtd" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
-[ext_resource type="Script" path="res://scenes/navigation/settings/accountManagement.gd" id="9_hjx7e"]
-[ext_resource type="Texture2D" uid="uid://b4lggupb6j2qn" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_wt7e2"]
 [ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
@@ -21,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ca7x23g7lo4xl" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
 [ext_resource type="Texture2D" uid="uid://uc3nn0sb7l5c" path="res://graphics/ui/icons/akawnt_btn_disabled.png" id="11_4evfi"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kerme"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
@@ -29,9 +20,9 @@ content_margin_bottom = 13.0
 texture = ExtResource("2_hnjgi")
 
 [sub_resource type="Theme" id="Theme_gkpco"]
-Panel/styles/panel = SubResource("StyleBoxTexture_kerme")
+Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2qs6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5q4a"]
 bg_color = Color(0.745098, 0.203922, 0.192157, 1)
 border_width_bottom = 15
 border_color = Color(0.466667, 0.196078, 0.0470588, 1)
@@ -43,14 +34,13 @@ corner_radius_bottom_left = 50
 [sub_resource type="Theme" id="Theme_vqsem"]
 default_font_size = 35
 Label/fonts/font = ExtResource("4_n0wcy")
-Label/styles/normal = SubResource("StyleBoxFlat_m2qs6")
+Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
 
 [sub_resource type="Theme" id="Theme_y5hgh"]
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
-[sub_resource type="Image" id="Image_o25vv"]
-[sub_resource type="Image" id="Image_32key"]
+[sub_resource type="Image" id="Image_g2ooi"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -59,14 +49,10 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_o1ajc"]
-image = SubResource("Image_o25vv")
-
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
-image = SubResource("Image_32key")
+image = SubResource("Image_g2ooi")
 
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs07j"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
 border_width_bottom = 6
 border_color = Color(0.117647, 0.2, 0.584314, 1)
@@ -77,7 +63,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 12
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3bms"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_if8f7"]
 bg_color = Color(0.333333, 0.341176, 1, 1)
 border_width_bottom = 6
 border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
@@ -88,7 +74,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 12
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lsnm8"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0ts0"]
 texture = ExtResource("5_u25ld")
 texture_margin_left = 11.0
 texture_margin_top = 11.0
@@ -106,10 +92,10 @@ HSlider/constants/grabber_offset = 0
 HSlider/icons/grabber = ExtResource("7_ebad3")
 HSlider/icons/grabber_disabled = ExtResource("7_ebad3")
 HSlider/icons/grabber_highlight = ExtResource("7_ebad3")
-HSlider/icons/tick = SubResource("ImageTexture_o1ajc")
-HSlider/styles/grabber_area = SubResource("StyleBoxFlat_xs07j")
-HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_m3bms")
-HSlider/styles/slider = SubResource("StyleBoxTexture_lsnm8")
+HSlider/icons/tick = SubResource("ImageTexture_gv04k")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_ulj8g")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_if8f7")
+HSlider/styles/slider = SubResource("StyleBoxTexture_h0ts0")
 
 [node name="Settings" type="CanvasLayer"]
 script = ExtResource("1_wt7e2")
@@ -130,10 +116,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -355.0
-offset_top = -198.0
-offset_right = 355.0
-offset_bottom = 227.0
+offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -147,9 +130,9 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -179.0
-offset_top = -58.5
+offset_top = -50.5
 offset_right = 179.0
-offset_bottom = 52.5
+offset_bottom = 60.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_vqsem")
@@ -173,9 +156,9 @@ stretch_mode = 0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.112676
-anchor_top = 0.141176
+anchor_top = 0.231579
 anchor_right = 0.897183
-anchor_bottom = 0.828235
+anchor_bottom = 0.792105
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -184,7 +167,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TingogVbox" type="VBoxContainer" parent="SettingsPnl/SettingsVbox"]
 layout_mode = 2
-theme_override_constants/separation = -3
+theme_override_constants/separation = -7
 
 [node name="TingogLbl" type="Label" parent="SettingsPnl/SettingsVbox/TingogVbox"]
 layout_mode = 2
@@ -206,7 +189,7 @@ value = -10.0
 
 [node name="MusikaVbox" type="VBoxContainer" parent="SettingsPnl/SettingsVbox"]
 layout_mode = 2
-theme_override_constants/separation = -3
+theme_override_constants/separation = -7
 
 [node name="MusikaLbl" type="Label" parent="SettingsPnl/SettingsVbox/MusikaVbox"]
 layout_mode = 2
