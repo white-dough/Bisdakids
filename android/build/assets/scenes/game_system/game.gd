@@ -1,18 +1,19 @@
 extends Node
 
 @onready var player_data_path: String = "user://player_save.dat"
-@onready var user_id = null #should be either null or int
+@onready var user_name
 @onready var progress: Dictionary = {}
 @onready var user_inventory: Dictionary = {}
-@onready var daily_task: Dictionary = {"Detective": "Find 15 hidden objects.", "Energy Spend": "Use 50 energy points.", "Level Finish": "Finish a level.", "unix_datestamp": 1694970530.192}
-@onready var current_date : Dictionary
+@onready var daily_task: Dictionary = {}
+@onready var current_date : Dictionary = {}
+@onready var loaded_player_data : Dictionary = {}
+#@onready var is_connected_internet : bool
 
-func is_connected_internet() -> bool:
+func check_is_connected_internet() -> bool:
 	var http = HTTPClient.new() # Create the Client.
 	http.connect_to_host("www.pornhub.com", 443)
 	while http.get_status() == HTTPClient.STATUS_CONNECTING or http.get_status() == HTTPClient.STATUS_RESOLVING:
 		http.poll()
-		print("Connecting...")
 		if not OS.has_feature("web"):
 			OS.delay_msec(500)
 	return true if http.get_status() == 5 else false
@@ -25,11 +26,11 @@ func save_data():
 
 func create_data() -> Dictionary:
 	var player_data: Dictionary = {
-		"user_id" : user_id,
+		"user_name" : user_name,
 
 		"progress" : progress,
 
-		"inventory" : user_inventory,
+		"user_inventory" : user_inventory,
 
 		"daily_task" : daily_task
 	}
@@ -38,11 +39,14 @@ func create_data() -> Dictionary:
 func load_data():
 	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.READ)
 	var file_exists: bool = FileAccess.file_exists(player_data_path)
-	if file_exists:
-		var loaded_player_data = file.get_var()
-		print(loaded_player_data)
-	else:
+	if not file_exists:
 		save_data()
+	loaded_player_data = file.get_var()
+	user_name = loaded_player_data['user_name']
+	progress = loaded_player_data['progress']
+	user_inventory = loaded_player_data['user_inventory']
+	daily_task = loaded_player_data['daily_task']
+		
 #########
 
 func daily_task_reset():
@@ -70,14 +74,13 @@ func daily_task_logic():#returns true if a day ahead
 ###
 
 func _ready():
-	pass
-#	load_data()
-#	print(is_connected_internet())
-#	save_data()
+	load_data()
+	print(loaded_player_data)
+#	check_is_connected_internet()
+	
 #	var test = {"progress" : progress}
 #	print(create_data())
 
-func _process(delta):
+func _process(_delta):
 	if Engine.get_process_frames () % 3600 == 0:
 		daily_task_logic()
-		print(daily_task)

@@ -89,8 +89,6 @@ func time_freeze():
 	print(pause_timer.is_stopped())
 	if pause_timer.is_stopped():
 		time_froze_sprite.visible = not time_froze_sprite.visible 
-	
-
 		print("timer is not paused, pausing")
 
 # on longpress description feature
