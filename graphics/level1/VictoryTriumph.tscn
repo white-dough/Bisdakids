@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://by4h363cgrfj2"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_2w5wv"]
+[ext_resource type="Texture2D" uid="uid://dihuoql0ar4i5" path="res://graphics/ui/icons/2x/victoryTriumph_1@2x.png" id="2_tuqum"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2w5wv")
+expand_mode = 1
+
+[node name="VictoryTriumph1_2x" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_tuqum")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ca6qtai8yh8wy"]
+[gd_scene load_steps=37 format=3 uid="uid://ca6qtai8yh8wy"]
 
 [ext_resource type="Texture2D" uid="uid://bj081fbqa1oww" path="res://graphics/level1/background/level1_background@2x.png" id="1_2c3p0"]
 [ext_resource type="PackedScene" uid="uid://dorayn2s4edj7" path="res://graphics/ui/background/firefly.tscn" id="2_1unbx"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b587raktahnko" path="res://scenes/game/level1/level1_objects/bisikleta.tscn" id="3_2mvlv"]
 [ext_resource type="PackedScene" uid="uid://dp1ldut5aplof" path="res://scenes/game/level1/level1_objects/tolda.tscn" id="3_ka3vg"]
 [ext_resource type="PackedScene" uid="uid://caqjeeq3jom2t" path="res://scenes/game/level1/level1_objects/kumpas.tscn" id="4_8ma03"]
+[ext_resource type="Texture2D" uid="uid://dkgtn0junlsxa" path="res://graphics/ui/particles/0001.png" id="4_e6o5x"]
 [ext_resource type="PackedScene" uid="uid://dx2ekmhyxxlu2" path="res://scenes/game/level1/level1_objects/lutuanan.tscn" id="4_mqidk"]
 [ext_resource type="PackedScene" uid="uid://gbc2jdpxto7w" path="res://scenes/game/level1/level1_objects/timaan.tscn" id="4_vq8le"]
 [ext_resource type="PackedScene" uid="uid://j6maapufsper" path="res://scenes/game/level1/level1_objects/maleta.tscn" id="5_4b1cx"]
@@ -49,8 +50,10 @@ centered = false
 position = Vector2(607, 311)
 preprocess = 0.5
 lifetime_randomness = 0.09
+texture = ExtResource("4_e6o5x")
 spread = 180.0
 gravity = Vector2(2, 500)
+color = Color(1, 0.964706, 0, 0.309804)
 
 [node name="Objects" type="Node2D" parent="."]
 
