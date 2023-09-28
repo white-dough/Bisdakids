@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1ngbinm0rg6m" path="res://graphics/level1/2x/2x/firefly1@2x.png" id="1_tqk3m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2bpmk"]
+blend_mode = 1
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
 material = SubResource("CanvasItemMaterial_2bpmk")

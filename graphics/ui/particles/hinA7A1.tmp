@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b640kevcwa0ct"]
+
+[ext_resource type="Texture2D" uid="uid://d1yogk2sxcjss" path="res://graphics/ui/particles/spotlight_1.png" id="1_tmut7"]
+[ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="2_1asmc"]
+[ext_resource type="Texture2D" uid="uid://f41ee3cfyljc" path="res://graphics/ui/particles/spotlight_7.png" id="2_obsep"]
+[ext_resource type="Texture2D" uid="uid://d4nm3wyegk871" path="res://graphics/ui/particles/spotlight_8.png" id="3_3m8gx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v41fp"]
+blend_mode = 1
+
+[node name="Hint Effects" type="Node"]
+
+[node name="Spotlight1" type="Sprite2D" parent="."]
+modulate = Color(0.596078, 0.964706, 0.329412, 0.717647)
+material = SubResource("CanvasItemMaterial_v41fp")
+position = Vector2(656, 392)
+scale = Vector2(0.415793, 0.415793)
+texture = ExtResource("1_tmut7")
+script = ExtResource("2_1asmc")
+
+[node name="Spotlight7" type="Sprite2D" parent="."]
+modulate = Color(0.384314, 1, 0.235294, 0.619608)
+position = Vector2(656, 392)
+scale = Vector2(0.250488, 0.250488)
+texture = ExtResource("2_obsep")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(656, 392)
+texture = ExtResource("3_3m8gx")
+emission_shape = 3
+emission_rect_extents = Vector2(50, 50)
+spread = 74.09
+gravity = Vector2(0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.3
+color = Color(0.913725, 0.94902, 0.4, 0.835294)
