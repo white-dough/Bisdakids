@@ -1,25 +1,19 @@
-extends Node
+extends Node2D
 
 var ad_view : AdView
-var ad_listener := AdListener.new()
-var adPosition := AdPosition.Values.TOP
+var adPosition := AdPosition.Values.BOTTOM
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	if ad_view:
-		ad_view.destroy() #always try to destroy the ad_view if won't use anymore to clear memory
-	ad_view.ad_listener = ad_listener
-	var ad_request := AdRequest.new()
-	var ad_colony_mediation_extras := AdColonyMediationExtras.new()
-	ad_colony_mediation_extras.show_post_popup = false
-	ad_colony_mediation_extras.show_pre_popup = true
-	ad_request.mediation_extras.append(ad_colony_mediation_extras)
-	ad_request.keywords.append("21313")
-	ad_request.extras["ID"] = "value"
-	ad_view.load_ad(ad_request)
+	#The initializate needs to be done only once, ideally at app launch.
+	MobileAds.initialize()
+	load_banner()
 	ad_view.show()
 
+func load_banner():
+	if ad_view:
+		ad_view.destroy() #always try to destroy the ad_view if won't use anymore to clear memory
+	var ad_size := AdSize.new(480, 40)
+	ad_view = AdView.new("ca-app-pub-3940256099942544/2934735716", ad_size, adPosition)
+	var ad_request := AdRequest.new()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	ad_view.load_ad(ad_request)
