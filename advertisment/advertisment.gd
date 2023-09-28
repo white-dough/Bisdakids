@@ -12,7 +12,7 @@ func _ready():
 func load_banner():
 	if ad_view:
 		ad_view.destroy() #always try to destroy the ad_view if won't use anymore to clear memory
-	var ad_size := AdSize.new(480, 40)
+	var ad_size := AdSize.new(480, 32)
 	ad_view = AdView.new("ca-app-pub-3940256099942544/2934735716", ad_size, adPosition)
 	var ad_request := AdRequest.new()
 
