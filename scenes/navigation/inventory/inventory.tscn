@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxdonp7d1oqc6"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_cj777"]
+[ext_resource type="Texture2D" uid="uid://4jrahk2de2qa" path="res://graphics/ui/inventory/2x/inventory_panel@2x.png" id="2_tvef5"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_e86lj"]
+
+[node name="inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1313.0
+offset_bottom = 736.0
+texture = ExtResource("1_cj777")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 122.0
+offset_right = 1041.0
+offset_bottom = 578.0
+texture = ExtResource("2_tvef5")
+expand_mode = 1
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 992.0
+offset_top = 120.0
+offset_right = 1070.0
+offset_bottom = 199.0
+texture_normal = ExtResource("3_e86lj")
