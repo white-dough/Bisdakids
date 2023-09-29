@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://b640kevcwa0ct"]
 
-[ext_resource type="Texture2D" uid="uid://d1yogk2sxcjss" path="res://graphics/ui/particles/spotlight_1.png" id="1_tmut7"]
+[ext_resource type="Texture2D" uid="uid://b2q4731o85nnq" path="res://graphics/ui/particles/spotlight_1.png" id="1_tmut7"]
 [ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="2_1asmc"]
-[ext_resource type="Texture2D" uid="uid://f41ee3cfyljc" path="res://graphics/ui/particles/spotlight_7.png" id="2_obsep"]
-[ext_resource type="Texture2D" uid="uid://d4nm3wyegk871" path="res://graphics/ui/particles/spotlight_8.png" id="3_3m8gx"]
+[ext_resource type="Texture2D" uid="uid://cfkkfmqomtcdd" path="res://graphics/ui/particles/spotlight_7.png" id="2_obsep"]
+[ext_resource type="Texture2D" uid="uid://br8i7xrb8tg8a" path="res://graphics/ui/particles/spotlight_8.png" id="3_3m8gx"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v41fp"]
 blend_mode = 1

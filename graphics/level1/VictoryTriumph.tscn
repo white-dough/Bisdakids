@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://by4h363cgrfj2"]
+[gd_scene load_steps=10 format=3 uid="uid://by4h363cgrfj2"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_2w5wv"]
-[ext_resource type="Texture2D" uid="uid://dihuoql0ar4i5" path="res://graphics/ui/icons/2x/victoryTriumph_1@2x.png" id="2_tuqum"]
+[ext_resource type="Texture2D" uid="uid://cc2g2np3uyjgi" path="res://graphics/ui/icons/2x/victoryTriumph_1@2x.png" id="2_tuqum"]
+[ext_resource type="Texture2D" uid="uid://uf5cpudvsp07" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_u5knf"]
+[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="3_d1jm5"]
+[ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="3_skock"]
+[ext_resource type="Texture2D" uid="uid://br8i7xrb8tg8a" path="res://graphics/ui/particles/spotlight_8.png" id="6_wu0qg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a0vuy"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_ggkil"]
+_data = [Vector2(0.00549451, 1), 0.0, 0.0, 0, 0, Vector2(0.489011, 0.505263), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_qbpxj"]
+offsets = PackedFloat32Array(0, 0.516556, 1)
+colors = PackedColorArray(0.898275, 2.59906e-06, 1.2514e-06, 1, 0.689033, 0.167281, 0.168074, 1, 0.560784, 0.0352941, 0.0666667, 0.286275)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -14,6 +29,159 @@ grow_vertical = 2
 texture = ExtResource("1_2w5wv")
 expand_mode = 1
 
-[node name="VictoryTriumph1_2x" type="Sprite2D" parent="."]
-position = Vector2(640, 360)
+[node name="Spotlight1" type="Sprite2D" parent="."]
+modulate = Color(0.752941, 0.901961, 0.811765, 0.717647)
+material = SubResource("CanvasItemMaterial_a0vuy")
+position = Vector2(661.5, 344.5)
+scale = Vector2(1.27011, 0.878604)
+texture = ExtResource("2_u5knf")
+script = ExtResource("3_skock")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="CPUParticles2DYellow" type="CPUParticles2D" parent="Node"]
+position = Vector2(672, 385)
+amount = 20
+explosiveness = 0.6
+randomness = 0.27
+emission_shape = 1
+emission_sphere_radius = 30.0
+direction = Vector2(0, -1)
+spread = 40.0
+gravity = Vector2(0, 500)
+initial_velocity_min = 460.1
+initial_velocity_max = 500.51
+angular_velocity_min = 100.0
+angular_velocity_max = 100.0
+angle_min = 30.0
+angle_max = 50.0
+scale_amount_min = 8.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_ggkil")
+color = Color(1, 1, 0.313726, 1)
+hue_variation_min = 1.0
+hue_variation_max = 1.0
+
+[node name="CPUParticles2DRed" type="CPUParticles2D" parent="Node"]
+position = Vector2(653, 384)
+amount = 20
+explosiveness = 0.6
+randomness = 0.27
+emission_shape = 1
+emission_sphere_radius = 30.0
+direction = Vector2(0, -1)
+gravity = Vector2(0, 500)
+initial_velocity_min = 460.1
+initial_velocity_max = 500.51
+angular_velocity_min = 100.0
+angular_velocity_max = 100.0
+angle_min = 30.0
+angle_max = 50.0
+scale_amount_min = 8.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_ggkil")
+color = Color(1, 0.396078, 0.313726, 1)
+color_ramp = SubResource("Gradient_qbpxj")
+hue_variation_min = 1.0
+hue_variation_max = 1.0
+
+[node name="CPUParticles2D3Purple" type="CPUParticles2D" parent="Node"]
+position = Vector2(663, 349)
+amount = 20
+explosiveness = 0.6
+randomness = 0.27
+emission_shape = 1
+emission_sphere_radius = 30.0
+direction = Vector2(0, -1)
+spread = 35.0
+gravity = Vector2(0, 500)
+initial_velocity_min = 460.1
+initial_velocity_max = 500.51
+angular_velocity_min = 100.0
+angular_velocity_max = 100.0
+angle_min = 30.0
+angle_max = 50.0
+scale_amount_min = 8.3
+scale_amount_max = 8.3
+scale_amount_curve = SubResource("Curve_ggkil")
+color = Color(0.819608, 0.360784, 0.886275, 1)
+hue_variation_min = 1.0
+hue_variation_max = 1.0
+
+[node name="CPUParticles2D4Green" type="CPUParticles2D" parent="Node"]
+position = Vector2(663, 365)
+amount = 20
+explosiveness = 0.6
+randomness = 0.27
+emission_shape = 1
+emission_sphere_radius = 30.0
+direction = Vector2(0, -1)
+spread = 60.0
+gravity = Vector2(0, 300)
+initial_velocity_min = 350.0
+initial_velocity_max = 350.0
+angular_velocity_min = 100.0
+angular_velocity_max = 100.0
+angle_min = 30.0
+angle_max = 50.0
+scale_amount_min = 8.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_ggkil")
+color = Color(0.184314, 0.686275, 0.47451, 1)
+hue_variation_min = 1.0
+hue_variation_max = 1.0
+
+[node name="VictoryTriumph1_2x" type="Sprite2D" parent="Node"]
+position = Vector2(660, 381)
+scale = Vector2(0.857143, 0.857143)
 texture = ExtResource("2_tuqum")
+
+[node name="Level_label" type="Label" parent="Node/VictoryTriumph1_2x"]
+anchors_preset = -1
+anchor_left = 0.480392
+anchor_top = 0.10119
+anchor_right = 0.519608
+anchor_bottom = 0.261905
+offset_left = -354.667
+offset_top = -196.0
+offset_right = -354.667
+offset_bottom = -196.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.992157, 0.913725, 0.870588, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.835294, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_d1jm5")
+theme_override_font_sizes/font_size = 41
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node/VictoryTriumph1_2x"]
+position = Vector2(124.833, -98)
+scale = Vector2(1.16667, 1.16667)
+amount = 3
+explosiveness = 0.1
+randomness = 0.1
+texture = ExtResource("6_wu0qg")
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 172.27
+gravity = Vector2(0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(0.870588, 0.886275, 0.933333, 0.803922)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Node/VictoryTriumph1_2x"]
+position = Vector2(-122.5, -98)
+scale = Vector2(1.16667, 1.16667)
+amount = 3
+explosiveness = 0.1
+randomness = 0.1
+texture = ExtResource("6_wu0qg")
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 172.27
+gravity = Vector2(0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(0.870588, 0.886275, 0.933333, 0.803922)
