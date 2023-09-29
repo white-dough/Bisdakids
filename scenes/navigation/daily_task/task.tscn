@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://caaxj7bw5ogqe"]
+[gd_scene load_steps=12 format=3 uid="uid://caaxj7bw5ogqe"]
 
 [ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_ipw5n"]
 [ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="2_rtu32"]
-[ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="3_gtedf"]
 [ext_resource type="Texture2D" uid="uid://bjudiluuuoxb2" path="res://graphics/ui/icons/task_reward@2x.png" id="4_qaiag"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="5_qxpo2"]
 
@@ -81,19 +80,24 @@ text = "Placeholder Title!"
 layout_mode = 2
 text = "Placeholder description, unsay spelling sa lorem ipsum?"
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="TaskPanel/TaskDetailVbox"]
-layout_mode = 2
-size_flags_horizontal = 0
-value = 100.0
-texture_under = ExtResource("2_rtu32")
-texture_progress = ExtResource("3_gtedf")
-texture_progress_offset = Vector2(10, 10)
-
 [node name="ProgressBar" type="ProgressBar" parent="TaskPanel/TaskDetailVbox"]
 custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 theme = SubResource("Theme_nvuhy")
 value = 100.0
+
+[node name="Label" type="Label" parent="TaskPanel/TaskDetailVbox/ProgressBar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="TaskPanel"]
 custom_minimum_size = Vector2(80, 80)

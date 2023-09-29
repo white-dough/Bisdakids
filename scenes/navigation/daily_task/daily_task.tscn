@@ -43,7 +43,7 @@ texture = ExtResource("8_mrldk")
 expand_margin_left = 30.0
 
 [sub_resource type="Theme" id="Theme_xstvh"]
-Label/font_sizes/font_size = 21
+Label/font_sizes/font_size = 29
 Label/fonts/font = ExtResource("7_crn3c")
 Label/styles/normal = SubResource("StyleBoxTexture_om568")
 
@@ -51,7 +51,7 @@ Label/styles/normal = SubResource("StyleBoxTexture_om568")
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("7_crn3c")
 
-[sub_resource type="Image" id="Image_fwli7"]
+[sub_resource type="Image" id="Image_od247"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -61,7 +61,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
-image = SubResource("Image_fwli7")
+image = SubResource("Image_od247")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
