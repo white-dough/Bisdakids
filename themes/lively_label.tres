@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://tia3tc8f5833"]
+
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="1_1lhnf"]
+[ext_resource type="Texture2D" uid="uid://cpanbubfli884" path="res://graphics/ui/icons/lively_label@2x.png" id="2_nh5qd"]
+
+[sub_resource type="FontVariation" id="FontVariation_3djbd"]
+base_font = ExtResource("1_1lhnf")
+variation_embolden = 0.61
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r2ibh"]
+texture = ExtResource("2_nh5qd")
+texture_margin_left = 94.0
+texture_margin_top = 24.0
+texture_margin_right = 94.0
+texture_margin_bottom = 32.0
+
+[resource]
+default_font_size = 35
+Label/font_sizes/font_size = 33
+Label/fonts/font = SubResource("FontVariation_3djbd")
+Label/styles/normal = SubResource("StyleBoxTexture_r2ibh")

@@ -1,9 +1,10 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://dmrrlilds2s0i"]
 
 [ext_resource type="Texture2D" uid="uid://c7r47ur5e4yrc" path="res://graphics/navigation/settings/tingog_grabber@2x.png" id="1_hclvv"]
+[ext_resource type="StyleBox" uid="uid://cpqykpv3a4cyq" path="res://themes/redbar_stylebox.tres" id="2_o1txi"]
 [ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="2_pudto"]
 
-[sub_resource type="Image" id="Image_2j8j7"]
+[sub_resource type="Image" id="Image_o7biu"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -13,20 +14,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_grcru"]
-image = SubResource("Image_2j8j7")
+image = SubResource("Image_o7biu")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srpg8"]
-bg_color = Color(0.960784, 0.305882, 0.286275, 1)
-border_width_bottom = 6
-border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubwq4"]
 bg_color = Color(0.960784, 0.305882, 0.286275, 1)
 border_width_bottom = 6
 border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
@@ -57,5 +47,5 @@ HSlider/icons/grabber_disabled = ExtResource("1_hclvv")
 HSlider/icons/grabber_highlight = ExtResource("1_hclvv")
 HSlider/icons/tick = SubResource("ImageTexture_grcru")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_srpg8")
-HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_ubwq4")
+HSlider/styles/grabber_area_highlight = ExtResource("2_o1txi")
 HSlider/styles/slider = SubResource("StyleBoxTexture_vtlr5")

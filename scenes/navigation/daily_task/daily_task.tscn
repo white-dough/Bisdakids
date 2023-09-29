@@ -1,23 +1,24 @@
-[gd_scene load_steps=23 format=3 uid="uid://cnk6o3iq6l2pg"]
+[gd_scene load_steps=26 format=3 uid="uid://b7supgtno53q7"]
 
-[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
-[ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_wt7e2"]
-[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
-[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
-[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
-[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
-[ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
-[ext_resource type="Texture2D" uid="uid://cjgqogu13gpl1" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
-[ext_resource type="Texture2D" uid="uid://ca7x23g7lo4xl" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
-[ext_resource type="Texture2D" uid="uid://uc3nn0sb7l5c" path="res://graphics/ui/icons/akawnt_btn_disabled.png" id="11_4evfi"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_8kxkt"]
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="2_l0sn5"]
+[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="3_nm210"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_vkgox"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="5_cam1x"]
+[ext_resource type="Texture2D" uid="uid://didx2xnrwfk8n" path="res://graphics/ui/icons/time_icon@2x.png" id="6_1nwim"]
+[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="7_crn3c"]
+[ext_resource type="Texture2D" uid="uid://b7kf46vxofnn8" path="res://graphics/ui/icons/time_label@2x.png" id="8_mrldk"]
+[ext_resource type="Texture2D" uid="uid://cjgqogu13gpl1" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="9_8robx"]
+[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="10_lq6yn"]
+[ext_resource type="Texture2D" uid="uid://ca7x23g7lo4xl" path="res://graphics/ui/icons/account_btn@2x.png" id="11_8wrtc"]
+[ext_resource type="Texture2D" uid="uid://uc3nn0sb7l5c" path="res://graphics/ui/icons/akawnt_btn_disabled.png" id="12_cpepb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
 content_margin_bottom = 13.0
-texture = ExtResource("2_hnjgi")
+texture = ExtResource("3_nm210")
 
 [sub_resource type="Theme" id="Theme_gkpco"]
 Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
@@ -33,14 +34,24 @@ corner_radius_bottom_left = 50
 
 [sub_resource type="Theme" id="Theme_vqsem"]
 default_font_size = 35
-Label/fonts/font = ExtResource("4_n0wcy")
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("4_vkgox")
 Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_om568"]
+texture = ExtResource("8_mrldk")
+expand_margin_left = 30.0
+
+[sub_resource type="Theme" id="Theme_xstvh"]
+Label/font_sizes/font_size = 21
+Label/fonts/font = ExtResource("7_crn3c")
+Label/styles/normal = SubResource("StyleBoxTexture_om568")
 
 [sub_resource type="Theme" id="Theme_y5hgh"]
 Label/font_sizes/font_size = 25
-Label/fonts/font = ExtResource("5_5u8ul")
+Label/fonts/font = ExtResource("7_crn3c")
 
-[sub_resource type="Image" id="Image_hmcf2"]
+[sub_resource type="Image" id="Image_fwli7"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -50,7 +61,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
-image = SubResource("Image_hmcf2")
+image = SubResource("Image_fwli7")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
@@ -75,7 +86,7 @@ corner_radius_bottom_left = 50
 corner_detail = 12
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0ts0"]
-texture = ExtResource("5_u25ld")
+texture = ExtResource("10_lq6yn")
 texture_margin_left = 11.0
 texture_margin_top = 11.0
 texture_margin_right = 16.0
@@ -89,16 +100,16 @@ modulate_color = Color(0.957945, 0.820391, 0.744984, 0.756863)
 [sub_resource type="Theme" id="Theme_g4owx"]
 HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
-HSlider/icons/grabber = ExtResource("7_ebad3")
-HSlider/icons/grabber_disabled = ExtResource("7_ebad3")
-HSlider/icons/grabber_highlight = ExtResource("7_ebad3")
+HSlider/icons/grabber = ExtResource("9_8robx")
+HSlider/icons/grabber_disabled = ExtResource("9_8robx")
+HSlider/icons/grabber_highlight = ExtResource("9_8robx")
 HSlider/icons/tick = SubResource("ImageTexture_gv04k")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_ulj8g")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_if8f7")
 HSlider/styles/slider = SubResource("StyleBoxTexture_h0ts0")
 
-[node name="Settings" type="CanvasLayer"]
-script = ExtResource("1_wt7e2")
+[node name="DailyTask" type="CanvasLayer"]
+script = ExtResource("1_8kxkt")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -106,10 +117,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_63iy8")
+texture = ExtResource("2_l0sn5")
 expand_mode = 1
 
-[node name="SettingsPnl" type="Panel" parent="."]
+[node name="DailyTaskPnl" type="Panel" parent="."]
 custom_minimum_size = Vector2(710, 380)
 anchors_preset = 8
 anchor_left = 0.5
@@ -123,24 +134,25 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_gkpco")
 
-[node name="SettingsLbl" type="Label" parent="SettingsPnl"]
+[node name="DailyTaskLbl" type="Label" parent="DailyTaskPnl"]
 custom_minimum_size = Vector2(358, 111)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -179.0
-offset_top = -50.5
+offset_top = -57.0
 offset_right = 179.0
-offset_bottom = 60.5
+offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_vqsem")
-text = "USBANANAN"
+text = "INADLAW 
+NA BUHATUNON"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloseBtn" type="TextureButton" parent="SettingsPnl"]
+[node name="CloseBtn" type="TextureButton" parent="DailyTaskPnl"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
@@ -149,10 +161,10 @@ anchor_right = 1.0
 offset_left = 20.0
 offset_top = 40.0
 grow_vertical = 2
-texture_normal = ExtResource("3_uhgdr")
+texture_normal = ExtResource("5_cam1x")
 stretch_mode = 0
 
-[node name="SettingsVbox" type="VBoxContainer" parent="SettingsPnl"]
+[node name="DailyTaskVbox" type="VBoxContainer" parent="DailyTaskPnl"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.112676
@@ -165,33 +177,35 @@ theme_override_constants/separation = 20
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="TingogVbox" type="VBoxContainer" parent="SettingsPnl/SettingsVbox"]
+[node name="TimeResetHbox" type="HBoxContainer" parent="DailyTaskPnl/DailyTaskVbox"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="TimeResetImg" type="TextureRect" parent="DailyTaskPnl/DailyTaskVbox/TimeResetHbox"]
+layout_mode = 2
+texture = ExtResource("6_1nwim")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TimeResetLbl" type="Label" parent="DailyTaskPnl/DailyTaskVbox/TimeResetHbox"]
+show_behind_parent = true
+custom_minimum_size = Vector2(130, 45)
+layout_mode = 2
+theme = SubResource("Theme_xstvh")
+text = "15:24:07"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TaskListVbox" type="VBoxContainer" parent="DailyTaskPnl/DailyTaskVbox"]
+layout_mode = 2
+
+[node name="MusikaVbox" type="VBoxContainer" parent="DailyTaskPnl/DailyTaskVbox"]
 layout_mode = 2
 theme_override_constants/separation = -7
 
-[node name="TingogLbl" type="Label" parent="SettingsPnl/SettingsVbox/TingogVbox"]
-layout_mode = 2
-size_flags_horizontal = 8
-theme = SubResource("Theme_y5hgh")
-theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
-theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-text = "Tingog"
-
-[node name="TingogHsldr" type="HSlider" parent="SettingsPnl/SettingsVbox/TingogVbox"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-size_flags_vertical = 1
-size_flags_stretch_ratio = 0.0
-theme = ExtResource("6_flv43")
-min_value = -30.0
-max_value = 0.0
-value = -10.0
-
-[node name="MusikaVbox" type="VBoxContainer" parent="SettingsPnl/SettingsVbox"]
-layout_mode = 2
-theme_override_constants/separation = -7
-
-[node name="MusikaLbl" type="Label" parent="SettingsPnl/SettingsVbox/MusikaVbox"]
+[node name="MusikaLbl" type="Label" parent="DailyTaskPnl/DailyTaskVbox/MusikaVbox"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme = SubResource("Theme_y5hgh")
@@ -199,19 +213,19 @@ theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
 text = "Musika"
 
-[node name="MusikaHsldr" type="HSlider" parent="SettingsPnl/SettingsVbox/MusikaVbox"]
+[node name="MusikaHsldr" type="HSlider" parent="DailyTaskPnl/DailyTaskVbox/MusikaVbox"]
 layout_mode = 2
 theme = SubResource("Theme_g4owx")
 min_value = -30.0
 max_value = 0.0
 value = -15.0
 
-[node name="AccountBtn" type="TextureButton" parent="SettingsPnl/SettingsVbox"]
+[node name="AccountBtn" type="TextureButton" parent="DailyTaskPnl/DailyTaskVbox"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 size_flags_horizontal = 8
-texture_normal = ExtResource("9_wt604")
-texture_disabled = ExtResource("11_4evfi")
+texture_normal = ExtResource("11_8wrtc")
+texture_disabled = ExtResource("12_cpepb")
 
-[connection signal="pressed" from="SettingsPnl/CloseBtn" to="." method="_on_close_btn_pressed"]
-[connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="." method="_on_account_btn_pressed"]
+[connection signal="pressed" from="DailyTaskPnl/CloseBtn" to="." method="_on_close_btn_pressed" flags=18]
+[connection signal="pressed" from="DailyTaskPnl/DailyTaskVbox/AccountBtn" to="." method="_on_account_btn_pressed" flags=18]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=17 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://b4x17ogh4k7jc" path="res://graphics/map/map_assets/map4x.png" id="1_k6g6w"]
+[ext_resource type="Script" path="res://graphics/map/map.gd" id="1_usg82"]
 [ext_resource type="Texture2D" uid="uid://dkycev3ibu1ht" path="res://graphics/ui/icons/leaderboard_icon@2x.png" id="2_7loqp"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="2_qqocq"]
 [ext_resource type="Texture2D" uid="uid://4epiug3uug77" path="res://graphics/map/map_assets/homeButton.png" id="3_7qe15"]
@@ -16,7 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://graphics/map/map_assets/level5Button4x.png" id="7_t4ch8"]
 [ext_resource type="Script" path="res://graphics/map/camerascript.gd" id="15_cww27"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_usg82")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(663.06, 438.812)
@@ -176,3 +180,5 @@ texture_normal = ExtResource("2_qqocq")
 [node name="HomeButton" type="TextureButton" parent="CanvasLayer/Control/HorizontalContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("3_7qe15")
+
+[connection signal="pressed" from="Level1Button" to="." method="_on_level_1_button_pressed"]

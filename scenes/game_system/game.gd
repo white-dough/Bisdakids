@@ -74,6 +74,7 @@ func daily_task_logic():#returns true if a day ahead
 
 func _ready():
 	load_data()
+	daily_task_logic()
 #	check_is_connected_internet()
 	
 #	var test = {"progress" : progress}

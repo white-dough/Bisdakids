@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhrm2vrkulxyp"]
+
+[ext_resource type="Texture2D" uid="uid://bnir703lyq6mf" path="res://graphics/ui/icons/lively_store_3@2x.png" id="1_1mnt8"]
+[ext_resource type="Texture2D" uid="uid://j0p520iqbx5w" path="res://graphics/ui/icons/lively_roof@2x.png" id="2_xagy0"]
+[ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="3_xskrm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10gmb"]
+texture = ExtResource("1_1mnt8")
+texture_margin_left = 76.0
+texture_margin_top = 30.0
+texture_margin_right = 76.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="Theme" id="Theme_a58be"]
+Panel/styles/panel = SubResource("StyleBoxTexture_10gmb")
+
+[node name="ItemList" type="Control"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.052
+anchor_right = 0.5
+anchor_bottom = 0.061
+grow_horizontal = 2
+
+[node name="ItemPnl" type="Panel" parent="."]
+custom_minimum_size = Vector2(891, 510)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.045
+anchor_right = 0.5
+offset_left = -445.0
+offset_top = 143.3
+offset_right = 446.0
+offset_bottom = 653.0
+grow_horizontal = 2
+theme = SubResource("Theme_a58be")
+
+[node name="ItemGrid" type="GridContainer" parent="ItemPnl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104377
+anchor_top = 0.0761719
+anchor_right = 0.902047
+anchor_bottom = 0.906019
+offset_left = 9.15527e-05
+offset_top = 0.152332
+offset_right = 69.2761
+offset_bottom = 50.9303
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.89965, 0.892609)
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 86
+columns = 3
+
+[node name="RoofImg" type="TextureRect" parent="."]
+modulate = Color(0.843137, 0.843137, 0.843137, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -495.5
+offset_top = 86.0
+offset_right = 495.5
+offset_bottom = 131.0
+grow_horizontal = 2
+texture = ExtResource("2_xagy0")
+
+[node name="StoreLbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -204.5
+offset_right = 204.5
+offset_bottom = 129.0
+grow_horizontal = 2
+theme = ExtResource("3_xskrm")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1

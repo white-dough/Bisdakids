@@ -1,0 +1,117 @@
+[gd_scene load_steps=13 format=3 uid="uid://caaxj7bw5ogqe"]
+
+[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_ipw5n"]
+[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="2_rtu32"]
+[ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="3_gtedf"]
+[ext_resource type="Texture2D" uid="uid://bjudiluuuoxb2" path="res://graphics/ui/icons/task_reward@2x.png" id="4_qaiag"]
+[ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="5_qxpo2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xg5ss"]
+texture = ExtResource("1_ipw5n")
+texture_margin_left = 8.0
+texture_margin_top = 12.0
+texture_margin_right = 8.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="Theme" id="Theme_5okh7"]
+Panel/styles/panel = SubResource("StyleBoxTexture_xg5ss")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xo4f"]
+texture = ExtResource("2_rtu32")
+expand_margin_left = 7.0
+expand_margin_top = 7.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcqws"]
+bg_color = Color(0.231373, 0.364706, 0.866667, 1)
+border_width_bottom = 6
+border_color = Color(0.117647, 0.2, 0.584314, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 12
+
+[sub_resource type="Theme" id="Theme_nvuhy"]
+ProgressBar/styles/background = SubResource("StyleBoxTexture_6xo4f")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_tcqws")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vosn0"]
+texture = ExtResource("4_qaiag")
+texture_margin_left = 15.0
+texture_margin_top = 12.0
+texture_margin_right = 19.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="Theme" id="Theme_mm2b0"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_vosn0")
+
+[node name="Task" type="Control"]
+custom_minimum_size = Vector2(557, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TaskPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5okh7")
+
+[node name="TaskDetailVbox" type="VBoxContainer" parent="TaskPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TaskTitleLbl" type="Label" parent="TaskPanel/TaskDetailVbox"]
+layout_mode = 2
+text = "Placeholder Title!"
+
+[node name="TaskDescLbl" type="Label" parent="TaskPanel/TaskDetailVbox"]
+layout_mode = 2
+text = "Placeholder description, unsay spelling sa lorem ipsum?"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TaskPanel/TaskDetailVbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+value = 100.0
+texture_under = ExtResource("2_rtu32")
+texture_progress = ExtResource("3_gtedf")
+texture_progress_offset = Vector2(10, 10)
+
+[node name="ProgressBar" type="ProgressBar" parent="TaskPanel/TaskDetailVbox"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme = SubResource("Theme_nvuhy")
+value = 100.0
+
+[node name="PanelContainer" type="PanelContainer" parent="TaskPanel"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_mm2b0")
+
+[node name="RewardImg" type="TextureRect" parent="TaskPanel/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("5_qxpo2")
+expand_mode = 1
+stretch_mode = 5
