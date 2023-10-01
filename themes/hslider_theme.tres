@@ -13,6 +13,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_grcru"]
+
 image = SubResource("Image_hcxom")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srpg8"]

@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d1tl2h7aktbj3" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
 [ext_resource type="Texture2D" uid="uid://c36oeu535bv0n" path="res://graphics/ui/icons/akawnt_btn_disabled.png" id="11_4evfi"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dtmtj"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
@@ -20,9 +20,9 @@ content_margin_bottom = 13.0
 texture = ExtResource("2_hnjgi")
 
 [sub_resource type="Theme" id="Theme_gkpco"]
-Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
+Panel/styles/panel = SubResource("StyleBoxTexture_dtmtj")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5q4a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21nf0"]
 bg_color = Color(0.745098, 0.203922, 0.192157, 1)
 border_width_bottom = 15
 border_color = Color(0.466667, 0.196078, 0.0470588, 1)
@@ -34,11 +34,12 @@ corner_radius_bottom_left = 50
 [sub_resource type="Theme" id="Theme_vqsem"]
 default_font_size = 35
 Label/fonts/font = ExtResource("4_n0wcy")
-Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
+Label/styles/normal = SubResource("StyleBoxFlat_21nf0")
 
 [sub_resource type="Theme" id="Theme_y5hgh"]
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
+
 
 [sub_resource type="Image" id="Image_ln311"]
 data = {
@@ -52,7 +53,7 @@ data = {
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
 image = SubResource("Image_ln311")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1gtv"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
 border_width_bottom = 6
 border_color = Color(0.117647, 0.2, 0.584314, 1)
@@ -63,7 +64,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 12
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_if8f7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640r5"]
 bg_color = Color(0.333333, 0.341176, 1, 1)
 border_width_bottom = 6
 border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
@@ -74,7 +75,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 12
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0ts0"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_numel"]
 texture = ExtResource("5_u25ld")
 texture_margin_left = 11.0
 texture_margin_top = 11.0
@@ -92,10 +93,10 @@ HSlider/constants/grabber_offset = 0
 HSlider/icons/grabber = ExtResource("7_ebad3")
 HSlider/icons/grabber_disabled = ExtResource("7_ebad3")
 HSlider/icons/grabber_highlight = ExtResource("7_ebad3")
-HSlider/icons/tick = SubResource("ImageTexture_gv04k")
-HSlider/styles/grabber_area = SubResource("StyleBoxFlat_ulj8g")
-HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_if8f7")
-HSlider/styles/slider = SubResource("StyleBoxTexture_h0ts0")
+HSlider/icons/tick = SubResource("ImageTexture_ph8mj")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_q1gtv")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_640r5")
+HSlider/styles/slider = SubResource("StyleBoxTexture_numel")
 
 [node name="Settings" type="CanvasLayer"]
 script = ExtResource("1_wt7e2")

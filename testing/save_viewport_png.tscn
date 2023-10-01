@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0xkt2xt33twt"]
 
 [ext_resource type="Script" path="res://testing/save_viewport_png.gd" id="1_bjh51"]
-[ext_resource type="PackedScene" path="res://testing/sprite_to_save.tscn" id="2_dxgsq"]
+[ext_resource type="PackedScene" uid="uid://dfwdr77qs6y2g" path="res://testing/sprite_to_save.tscn" id="2_dxgsq"]
 
 [node name="Window" type="Window"]
 transparent_bg = true
