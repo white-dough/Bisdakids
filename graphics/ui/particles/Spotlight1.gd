@@ -1,10 +1,18 @@
 extends Sprite2D
 
 var time := 0.0
-var scale_factor := 1.0  # adjust the scaling intensity
-var scale_speed := 0.5   # adjust the scaling speed
+var scale_factor := 1.5  
+var hasPoppedUp := false  
+
+func _ready():
+	time = 0.0
 
 func _process(delta):
-	time += delta * scale_speed
-	var scale_value = sin(time) * scale_factor
-	scale = Vector2(scale_value, scale_value)
+	if !hasPoppedUp: 
+		time += delta  
+		var scale_value = sin(time) * scale_factor
+		scale = Vector2(scale_value, scale_value)
+
+		if scale_value >= 1.0:
+			hasPoppedUp = true
+			scale = Vector2(1.0, 1.0) 

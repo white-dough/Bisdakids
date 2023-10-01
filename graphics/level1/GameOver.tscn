@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6bskr75yfiom"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v3cmb"]
+[ext_resource type="Texture2D" uid="uid://cfbmbspw412u7" path="res://graphics/ui/icons/2x/Gameover@2x.png" id="2_55pdw"]
+[ext_resource type="Texture2D" uid="uid://uf5cpudvsp07" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_et3xq"]
+[ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="3_qc4hn"]
+[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_x0026"]
+[ext_resource type="Texture2D" uid="uid://dcnrsmpi71muk" path="res://graphics/ui/particles/2x/whiteCircle_2@2x.png" id="6_kyw5k"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_82awe"]
+blend_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v3cmb")
+expand_mode = 1
+
+[node name="Spotlight1" type="Sprite2D" parent="."]
+modulate = Color(0.752941, 0.901961, 0.811765, 0.717647)
+material = SubResource("CanvasItemMaterial_82awe")
+position = Vector2(661.5, 344.5)
+scale = Vector2(1.27011, 0.878604)
+texture = ExtResource("2_et3xq")
+script = ExtResource("3_qc4hn")
+
+[node name="Gameover_2x" type="Sprite2D" parent="."]
+position = Vector2(665, 372)
+scale = Vector2(0.89863, 0.878707)
+texture = ExtResource("2_55pdw")
+
+[node name="Level_label" type="Label" parent="Gameover_2x"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.838
+offset_top = -154.979
+offset_right = -181.838
+offset_bottom = -91.9786
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.992157, 0.913725, 0.870588, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.835294, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_x0026")
+theme_override_font_sizes/font_size = 41
+text = "1"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(550, 239)
+scale = Vector2(1.16667, 1.16667)
+explosiveness = 0.1
+randomness = 0.1
+texture = ExtResource("6_kyw5k")
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 172.27
+gravity = Vector2(20, 150)
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(0.870588, 0.886275, 0.933333, 0.52549)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(774, 242)
+scale = Vector2(1.16667, 1.16667)
+explosiveness = 0.1
+randomness = 0.1
+texture = ExtResource("6_kyw5k")
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 172.27
+gravity = Vector2(10, 100)
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(0.870588, 0.886275, 0.933333, 0.584314)
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+position = Vector2(662, 409)
+scale = Vector2(1.36111, 1.36111)
+explosiveness = 0.1
+randomness = 0.1
+texture = ExtResource("6_kyw5k")
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 172.27
+gravity = Vector2(10, 100)
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(0.870588, 0.886275, 0.933333, 0.584314)
