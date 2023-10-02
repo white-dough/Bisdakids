@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cnk6o3iq6l2pg"]
+[gd_scene load_steps=21 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_wt7e2"]
@@ -9,8 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cuxlfe1bpp6yb" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
 [ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
 [ext_resource type="Texture2D" uid="uid://cash4qgaw2k5f" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="7_ebad3"]
-[ext_resource type="Texture2D" uid="uid://d1tl2h7aktbj3" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
-[ext_resource type="Texture2D" uid="uid://c36oeu535bv0n" path="res://graphics/ui/icons/akawnt_btn_disabled.png" id="11_4evfi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dtmtj"]
 content_margin_left = 7.0
@@ -40,7 +38,7 @@ Label/styles/normal = SubResource("StyleBoxFlat_21nf0")
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
-[sub_resource type="Image" id="Image_oewsj"]
+[sub_resource type="Image" id="Image_oyqh7"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -50,7 +48,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_ph8mj"]
-image = SubResource("Image_oewsj")
+image = SubResource("Image_oyqh7")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1gtv"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
@@ -210,8 +208,6 @@ value = -15.0
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 size_flags_horizontal = 8
-texture_normal = ExtResource("9_wt604")
-texture_disabled = ExtResource("11_4evfi")
 
 [connection signal="pressed" from="SettingsPnl/CloseBtn" to="." method="_on_close_btn_pressed"]
 [connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="." method="_on_account_btn_pressed"]
