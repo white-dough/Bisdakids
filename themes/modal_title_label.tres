@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvohq554kdv3p"]
+
+[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="1_dq7kp"]
+
+[resource]
+Label/colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
+Label/colors/font_shadow_color = Color(0.0941176, 0.0196078, 0.00392157, 1)
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("1_dq7kp")

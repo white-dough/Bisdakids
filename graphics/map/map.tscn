@@ -42,6 +42,7 @@ editor_draw_limits = true
 script = ExtResource("15_cww27")
 
 [node name="Level1Button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 510.0
 offset_top = 486.0
 offset_right = 626.0
@@ -50,6 +51,7 @@ scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("3_sa3gm")
 
 [node name="Level2Button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 557.0
 offset_top = 410.0
 offset_right = 667.0
@@ -58,6 +60,7 @@ scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("4_j0g53")
 
 [node name="Level3Button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 630.0
 offset_top = 351.0
 offset_right = 736.0
@@ -66,6 +69,7 @@ scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("5_rtcwf")
 
 [node name="Level4Button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 721.0
 offset_top = 286.0
 offset_right = 825.0
@@ -74,6 +78,7 @@ scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("6_rfqlc")
 
 [node name="Level5Button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 744.0
 offset_top = 189.0
 offset_right = 847.0

@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0prpdk8wyrbs"]
+[gd_scene load_steps=7 format=3 uid="uid://d0prpdk8wyrbs"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_nnxlp"]
-[ext_resource type="Texture2D" uid="uid://bt5ane1iuubyx" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_ged7c"]
-[ext_resource type="Texture2D" uid="uid://1tv6uv62tsj2" path="res://graphics/ui/icons/2x/error_okay_1@2x.png" id="3_ubrqc"]
-[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_fy2bw"]
+[ext_resource type="Script" path="res://scenes/navigation/settings/error_modal.gd" id="1_pu4a7"]
+[ext_resource type="Texture2D" uid="uid://c7ftsmjs8ltl6" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_ged7c"]
+[ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_52g2f"]
+[ext_resource type="Texture2D" uid="uid://wev3qk5kuk8i" path="res://graphics/ui/icons/2x/error_okay_1@2x.png" id="3_ubrqc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_contn"]
 texture = ExtResource("2_ged7c")
 
 [node name="ErrorModal" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_pu4a7")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -19,7 +22,8 @@ grow_vertical = 2
 texture = ExtResource("1_nnxlp")
 expand_mode = 1
 
-[node name="ErrorModal" type="Panel" parent="."]
+[node name="ErrorModalPnl" type="Panel" parent="."]
+texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -33,54 +37,38 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_contn")
 
-[node name="ErrorTitle" type="Label" parent="ErrorModal"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Description" type="Label" parent="ErrorModal"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureButton" type="TextureButton" parent="ErrorModal"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -96.5
-offset_top = -112.0
-offset_right = 96.5005
-offset_bottom = -38.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("3_ubrqc")
-
-[node name="CloseButton" type="TextureButton" parent="ErrorModal"]
+[node name="ErrorContentVbox" type="VBoxContainer" parent="ErrorModalPnl"]
 layout_mode = 0
-offset_left = 568.0
-offset_top = -73.0
-offset_right = 663.0
-offset_bottom = 25.0
-texture_normal = ExtResource("4_fy2bw")
-stretch_mode = 0
+anchor_left = 0.0940767
+anchor_top = 0.121795
+anchor_right = 0.91115
+anchor_bottom = 0.875
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorLbl" type="Label" parent="ErrorModalPnl/ErrorContentVbox"]
+layout_mode = 2
+theme = ExtResource("3_52g2f")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.831373, 0.0392157, 0.0235294, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ErrorDescLbl" type="Label" parent="ErrorModalPnl/ErrorContentVbox"]
+layout_mode = 2
+theme = ExtResource("3_52g2f")
+theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="OkBtn" type="TextureButton" parent="ErrorModalPnl/ErrorContentVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture_normal = ExtResource("3_ubrqc")
+stretch_mode = 5
+
+[connection signal="pressed" from="ErrorModalPnl/ErrorContentVbox/OkBtn" to="." method="_on_ok_btn_pressed"]

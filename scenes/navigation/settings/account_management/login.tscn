@@ -1,12 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://byf47fnn2v6w4"]
+[gd_scene load_steps=12 format=3 uid="uid://byf47fnn2v6w4"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_34rfk"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/login.gd" id="1_derfu"]
 [ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_mkmfo"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_1xypj"]
 [ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="4_k3e5g"]
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_0qswm"]
 [ext_resource type="Texture2D" uid="uid://bq6mj67xqc371" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="6_lma8w"]
+[ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="7_03x1f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71lv0"]
 content_margin_left = 7.0
@@ -32,20 +32,15 @@ default_font_size = 35
 Label/fonts/font = ExtResource("3_1xypj")
 Label/styles/normal = SubResource("StyleBoxFlat_ava4q")
 
-[sub_resource type="Theme" id="Theme_mbefx"]
-Label/font_sizes/font_size = 25
-Label/fonts/font = ExtResource("5_0qswm")
-
-[sub_resource type="Theme" id="Theme_yigg3"]
-Label/font_sizes/font_size = 25
-Label/fonts/font = ExtResource("5_0qswm")
-
 [node name="Login" type="CanvasLayer"]
 script = ExtResource("1_derfu")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 1316.0
-offset_bottom = 743.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_34rfk")
 expand_mode = 1
 
@@ -117,10 +112,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="LoginPnl/ContentVBox"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme = SubResource("Theme_mbefx")
-theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
-theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_font_sizes/font_size = 30
+theme = ExtResource("7_03x1f")
 text = "Pagsulod sa Akawnt"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -132,8 +124,7 @@ theme_override_constants/separation = 25
 [node name="Label" type="Label" parent="LoginPnl/ContentVBox/FirstInputHBox"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme = SubResource("Theme_yigg3")
-theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
+theme = ExtResource("7_03x1f")
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
 theme_override_font_sizes/font_size = 25
 text = "Ngalan sa tiggamit:"
@@ -154,8 +145,7 @@ theme_override_constants/separation = 77
 [node name="Label" type="Label" parent="LoginPnl/ContentVBox/SecondInputHBox"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme = SubResource("Theme_yigg3")
-theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
+theme = ExtResource("7_03x1f")
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
 theme_override_font_sizes/font_size = 25
 text = "Susi sa Akawnt:"

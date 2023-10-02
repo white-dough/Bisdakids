@@ -1,0 +1,74 @@
+extends CanvasLayer
+@onready var error_modal = $"../ErrorModal"
+
+func _ready():
+	Game.check_is_connected_internet()
+	await Game.http_request.request_completed
+	var internet = true if Game.is_connected_to_internet else false
+	if !internet:
+		queue_free()
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("NO INTERNET CONNECTION")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Please fix your internet connection and try again")
+		error_modal.visible = true
+	###
+	var child_item_array : Array = []
+	PhpRequest.store_query()
+	await PhpRequest.http_request.request_completed
+	for i in PhpRequest.clean_response.size():
+		var item_scene : Control  = load("res://scenes/navigation/store_inventory/store/store_item_pnl.tscn").instantiate()
+		child_item_array.append(item_scene)
+		$Store/ItemList/ItemPnl/ItemGrid.add_child(child_item_array[i])
+		var price : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/PriceLbl')
+		var image : TextureRect  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/ItemImg')
+		var quantity : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/ItemImg/QuantityLbl')
+		var item_name : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/ItemNameLbl')
+		var bundle_id : Label  = child_item_array[i].get_node('BundleId')
+		bundle_id.set_text(str(PhpRequest.clean_response[i]['bundle_id']))
+		price.set_text(str(PhpRequest.clean_response[i]['price_coin']) + " coins")
+		quantity.set_text("x" + str(PhpRequest.clean_response[i]['bundle_quantity']))
+		item_name.set_text(name_logic(PhpRequest.clean_response[i]['item_name']))
+		image.set_texture(texture_logic((PhpRequest.clean_response[i]['item_name'])))
+	for item in child_item_array:
+		item.get_node("StoreItem").connect("pressed", purchase_item.bind(int(item.get_node('BundleId').get_text())))
+#	store_btn.pressed.connect(modal_btn_pressed.bind(store_scene))
+
+func purchase_item(item : int):
+#	var item_to_purchase = reverse_name_logic(item)
+	print(item)
+	
+	
+func texture_logic(item_name:String)->Texture2D:
+	match(item_name):
+		"time_freeze":
+			return load("res://graphics/store_items/TimeFreeze_3.png")
+		"hint":
+			return load("res://graphics/store_items/hint@2x.png")
+		"energy":
+			return load("res://graphics/store_items/Energy_3.png")
+		_:
+			return load("res://graphics/store_items/mystery@2x.png")
+			
+func name_logic(item_name:String)->String:
+	match(item_name):
+		"time_freeze":
+			return "Time Freeze"
+		"hint":
+			return "Hint"
+		"energy":
+			return "Energy"
+		_:
+			return "Mystery Bundle"
+
+#func reverse_name_logic(item_name:String)->String:
+#	match(item_name):
+#		"Time Freeze":
+#			return "time_freeze"
+#		"Hint":
+#			return "hint"
+#		"Energy":
+#			return "energy"
+#		_:
+#			return "Mystery Bundle"
+
+func _on_close_btn_pressed():
+	queue_free()

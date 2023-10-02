@@ -1,6 +1,6 @@
 {
-	"Energy Spend" : "Use 50 energy points.",
-	"Detective" : "Find 15 hidden objects.",
-	"Score" : "Collect 8000 score points.",
-	"Level Finish" : "Finish a level."
+	"Energy Spend" : ["Use 50 energy points.", 0, 50],
+	"Detective" : ["Find 15 hidden objects.", 0, 15],
+	"Score" : ["Collect 5000 score points.", 0, 5000],
+	"Level Finish" : ["Finish a level.", 0, 1]
 }

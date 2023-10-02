@@ -1,15 +1,18 @@
 extends Node
 
 var http_request: HTTPRequest = HTTPRequest.new()
-const SERVER_URL = "http://192.168.1.105:8080/godot-php-postgresql/api-request.php"
+#const SERVER_URL = "http://192.168.1.105:8080/godot-php-postgresql/api-request.php"
+const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
 const SERVER_HEADERS = ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"]
 var request_queue : Array = []
 var is_requesting : bool = false
 var clean_response
 
 func _ready():
+	http_request.set_timeout(3.0) 
 	add_child(http_request)
 	http_request.connect("request_completed", _http_request_completed)
+#	store_query()
 #	add_user_inventory()
 
 func _process(_delta):
@@ -56,10 +59,16 @@ func register(user_name : String, password : String):#item_id: int, quantity: in
 	var data = {"user_name" : user_name, "password": password}
 	request_queue.push_back({"command" : command, "data" : data});
 
+func store_query():
+	var command = "store_query"
+	var data = {}
+	request_queue.push_back({"command" : command, "data" : data});
+
 func _http_request_completed(result, _response_code, _headers, body):
 	is_requesting = false
 	if result != HTTPRequest.RESULT_SUCCESS:
-		printerr("Error w/ connection: " + String(result))
+		printerr("Connection Error: BisdakidsPOSTGRESQL PHP API")
+		clean_response = "ErrPHP"
 		return
 	var response_body = body.get_string_from_utf8()
 	# Grab our JSON and handle any errors reported by our PHP code:
@@ -68,9 +77,7 @@ func _http_request_completed(result, _response_code, _headers, body):
 	if response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
-#	request_saving(response)
-	print("Request Submitted")
-	print(response)
+	request_saving(response)
 	
 func request_saving(response):
 	match response['command']:
@@ -84,4 +91,11 @@ func request_saving(response):
 				clean_response = "success"
 			else:
 				clean_response = "failed"
+		"store_query":
+			if typeof(response['response']) == TYPE_STRING:
+				clean_response = [response['response']]
+			else:
+				clean_response = response['response']
+				
+				
 		

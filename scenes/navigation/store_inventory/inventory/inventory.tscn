@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxdonp7d1oqc6"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_cj777"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_e86lj"]
+[ext_resource type="Texture2D" uid="uid://bnir703lyq6mf" path="res://graphics/ui/icons/lively_store_3@2x.png" id="3_qk5id"]
+[ext_resource type="Texture2D" uid="uid://j0p520iqbx5w" path="res://graphics/ui/icons/lively_roof@2x.png" id="4_x7qfl"]
+[ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="5_4aijb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10gmb"]
+texture = ExtResource("3_qk5id")
+texture_margin_left = 76.0
+texture_margin_top = 30.0
+texture_margin_right = 76.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="Theme" id="Theme_a58be"]
+Panel/styles/panel = SubResource("StyleBoxTexture_10gmb")
+
+[node name="inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1313.0
+offset_bottom = 736.0
+texture = ExtResource("1_cj777")
+expand_mode = 1
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.364536
+anchor_top = 0.556338
+anchor_right = 0.864536
+anchor_bottom = 0.556338
+offset_left = 618.0
+offset_top = -367.69
+offset_right = 39.0
+offset_bottom = -288.69
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_e86lj")
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemList" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.052
+anchor_right = 0.5
+anchor_bottom = 0.061
+grow_horizontal = 2
+
+[node name="ItemPnl" type="Panel" parent="ItemList"]
+custom_minimum_size = Vector2(891, 510)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.045
+anchor_right = 0.5
+offset_left = -445.0
+offset_top = 143.3
+offset_right = 446.0
+offset_bottom = 653.0
+grow_horizontal = 2
+theme = SubResource("Theme_a58be")
+
+[node name="ItemGrid" type="GridContainer" parent="ItemList/ItemPnl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104377
+anchor_top = 0.0764706
+anchor_right = 0.891949
+anchor_bottom = 0.603285
+offset_right = 78.273
+offset_bottom = 32.3247
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.89965, 0.892609)
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 86
+columns = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="RoofImg" type="TextureRect" parent="ItemList"]
+modulate = Color(0.843137, 0.843137, 0.843137, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -495.5
+offset_top = 86.0
+offset_right = 495.5
+offset_bottom = 131.0
+grow_horizontal = 2
+texture = ExtResource("4_x7qfl")
+
+[node name="StoreLbl" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -204.5
+offset_right = 204.5
+offset_bottom = 129.0
+grow_horizontal = 2
+theme = ExtResource("5_4aijb")
+text = "Imbentaryo"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
