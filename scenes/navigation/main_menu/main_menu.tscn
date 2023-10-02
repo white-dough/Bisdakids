@@ -3,17 +3,17 @@
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/main_menu.gd" id="1_jtkxk"]
 [ext_resource type="Texture2D" uid="uid://bje0ttmigqmic" path="res://graphics/level1/2x/2x/MainMenu_bg@2x.png" id="1_yiw32"]
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/Modal.gd" id="2_2fmup"]
-[ext_resource type="Texture2D" uid="uid://cwxob1ud21r7c" path="res://graphics/ui/icons/energly_lbl@2x.png" id="2_rdlts"]
+[ext_resource type="Texture2D" uid="uid://bi3eoniumji8k" path="res://graphics/ui/icons/energly_lbl@2x.png" id="2_rdlts"]
 [ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="3_br7nd"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="3_cnwvt"]
-[ext_resource type="Texture2D" uid="uid://bdeccy0jmxm48" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
+[ext_resource type="Texture2D" uid="uid://b538wxkan7bym" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
-[ext_resource type="Texture2D" uid="uid://ba6tfad40isxc" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="7_gxxu0"]
-[ext_resource type="Texture2D" uid="uid://ddfpevth0suxk" path="res://graphics/ui/icons/naghimo_icon@2x.png" id="10_ubus3"]
-[ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="11_veawo"]
-[ext_resource type="Texture2D" uid="uid://iksmgo1nrnw2" path="res://graphics/ui/icons/undang_icon@2x.png" id="12_tfvlm"]
+[ext_resource type="Texture2D" uid="uid://oap7nhnux4fg" path="res://graphics/ui/buttons/2x/Inventory_btn@2x.png" id="9_8b8sj"]
+[ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="10_l8wx2"]
+[ext_resource type="Texture2D" uid="uid://ddfpevth0suxk" path="res://graphics/ui/icons/naghimo_icon@2x.png" id="11_mrcqq"]
 [ext_resource type="Texture2D" uid="uid://gkrq2kpwaxy8" path="res://graphics/ui/icons/bisdakids_game_title@2x.png" id="13_6r1g0"]
+[ext_resource type="Texture2D" uid="uid://iksmgo1nrnw2" path="res://graphics/ui/icons/undang_icon@2x.png" id="13_t0ps6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_owj6l"]
 texture = ExtResource("2_rdlts")
@@ -101,7 +101,7 @@ texture_normal = ExtResource("5_nlw81")
 
 [node name="Inventory" type="TextureButton" parent="Control/HBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("7_gxxu0")
+texture_normal = ExtResource("9_8b8sj")
 
 [node name="Settings" type="TextureButton" parent="Control/HBoxContainer2"]
 layout_mode = 2
@@ -113,7 +113,7 @@ offset_left = 478.0
 offset_top = 488.0
 offset_right = 814.0
 offset_bottom = 617.0
-texture_normal = ExtResource("11_veawo")
+texture_normal = ExtResource("10_l8wx2")
 
 [node name="VBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 0
@@ -126,12 +126,12 @@ theme_override_constants/separation = 835
 [node name="Credits" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-texture_normal = ExtResource("10_ubus3")
+texture_normal = ExtResource("11_mrcqq")
 
 [node name="Quit" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-texture_normal = ExtResource("12_tfvlm")
+texture_normal = ExtResource("13_t0ps6")
 
 [node name="BisdakidsLogo" type="Sprite2D" parent="."]
 position = Vector2(672, 388)
