@@ -9,10 +9,9 @@
 [ext_resource type="Theme" uid="uid://bukmbrgwy0i5j" path="res://themes/lbl.tres" id="8_6y1ao"]
 [ext_resource type="Texture2D" uid="uid://5dn1va2ot3" path="res://graphics/ui/icons/2x/energy_reward@2x.png" id="8_jpgvi"]
 [ext_resource type="Texture2D" uid="uid://defr3hn640q6d" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="8_k12ec"]
-[ext_resource type="Texture2D" uid="uid://w40hen41in64" path="res://graphics/ui/buttons/2x/Next_btn@2x.png" id="9_iqj23"]
 [ext_resource type="Texture2D" uid="uid://cnlijhsywiefa" path="res://graphics/ui/icons/2x/coin_reward@2x.png" id="9_p0qhq"]
 [ext_resource type="Texture2D" uid="uid://ci5eicjrmipff" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="10_rwp65"]
-[ext_resource type="Texture2D" uid="uid://myhrf2788g0j" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
+[ext_resource type="Texture2D" uid="uid://bwgmsbd7nc48g" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -232,7 +231,7 @@ texture_normal = ExtResource("8_k12ec")
 
 [node name="TextureButton2" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
-texture_normal = ExtResource("9_iqj23")
+texture_normal = ExtResource("11_k2exo")
 
 [node name="TextureButton3" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
