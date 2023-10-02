@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://cnlijhsywiefa" path="res://graphics/ui/icons/2x/coin_reward@2x.png" id="9_p0qhq"]
 [ext_resource type="Texture2D" uid="uid://ci5eicjrmipff" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="10_rwp65"]
 [ext_resource type="Texture2D" uid="uid://bwgmsbd7nc48g" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
-[ext_resource type="Texture2D" uid="uid://myhrf2788g0j" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
