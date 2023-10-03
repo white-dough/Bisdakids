@@ -29,7 +29,7 @@ grow_vertical = 2
 texture = ExtResource("1_2w5wv")
 expand_mode = 1
 
-[node name="Spotlight1" type="Sprite2D" parent="."]
+[node name="VictoryLight" type="Sprite2D" parent="."]
 modulate = Color(0.752941, 0.901961, 0.811765, 0.717647)
 material = SubResource("CanvasItemMaterial_a0vuy")
 position = Vector2(661.5, 344.5)

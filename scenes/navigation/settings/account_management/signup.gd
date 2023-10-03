@@ -28,6 +28,10 @@ func _on_signup_btn_pressed():
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("SIGNUP UNSUCCESSFUL")
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Username already taken.")
 			error_modal.visible = true
+	elif !password.is_empty():
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("SIGNUP UNSUCCESSFUL")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Password cannot be blank. Please try again.")
+		error_modal.visible = true
 	else:
 		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("SIGNUP UNSUCCESSFUL")
 		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Passwords do not match. Please try again.")

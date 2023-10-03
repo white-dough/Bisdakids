@@ -1,31 +1,30 @@
 [gd_scene load_steps=17 format=3 uid="uid://dptp3em1qnmlm"]
 
-[ext_resource type="Texture2D" uid="uid://b4x17ogh4k7jc" path="res://graphics/map/map_assets/map4x.png" id="1_k6g6w"]
-[ext_resource type="Script" path="res://graphics/map/map.gd" id="1_usg82"]
-[ext_resource type="Texture2D" uid="uid://dkycev3ibu1ht" path="res://graphics/ui/icons/leaderboard_icon@2x.png" id="2_7loqp"]
-[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="2_qqocq"]
-[ext_resource type="Texture2D" uid="uid://4epiug3uug77" path="res://graphics/map/map_assets/homeButton.png" id="3_7qe15"]
-[ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://graphics/map/map_assets/level1Button4x.png" id="3_sa3gm"]
-[ext_resource type="Texture2D" uid="uid://bgibah6x7kydx" path="res://graphics/ui/icons/achievement_icon@2x.png" id="3_yikp7"]
-[ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="4_ej1bn"]
-[ext_resource type="Texture2D" uid="uid://cargchp8jmmvc" path="res://graphics/map/map_assets/level2Button4x.png" id="4_j0g53"]
-[ext_resource type="Texture2D" uid="uid://cu5l238615pgc" path="res://graphics/map/map_assets/energyLabel.png" id="5_8kclp"]
-[ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://graphics/map/map_assets/level3Button4x.png" id="5_rtcwf"]
-[ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="6_qojd2"]
-[ext_resource type="Texture2D" uid="uid://k6enst1t6p0e" path="res://graphics/map/map_assets/level4Button4x.png" id="6_rfqlc"]
-[ext_resource type="Texture2D" uid="uid://dbut1imhh8b1h" path="res://graphics/map/map_assets/coinLabel.png" id="7_a7me0"]
-[ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://graphics/map/map_assets/level5Button4x.png" id="7_t4ch8"]
+[ext_resource type="Texture2D" uid="uid://b4x17ogh4k7jc" path="res://graphics/map/map_assets/map4x.png" id="1_3i7j3"]
+[ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://graphics/map/map_assets/level1Button4x.png" id="4_jl88o"]
+[ext_resource type="Texture2D" uid="uid://cargchp8jmmvc" path="res://graphics/map/map_assets/level2Button4x.png" id="5_qn5c7"]
+[ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://graphics/map/map_assets/level3Button4x.png" id="6_vy4ta"]
+[ext_resource type="Texture2D" uid="uid://k6enst1t6p0e" path="res://graphics/map/map_assets/level4Button4x.png" id="7_5gvpk"]
+[ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://graphics/map/map_assets/level5Button4x.png" id="8_tf5dj"]
+[ext_resource type="Texture2D" uid="uid://dkycev3ibu1ht" path="res://graphics/ui/icons/leaderboard_icon@2x.png" id="9_spmyx"]
+[ext_resource type="Texture2D" uid="uid://bgibah6x7kydx" path="res://graphics/ui/icons/achievement_icon@2x.png" id="10_cv3qt"]
+[ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="11_72p7r"]
+[ext_resource type="Script" path="res://graphics/map/levelButtons.gd" id="11_uvn8q"]
+[ext_resource type="Texture2D" uid="uid://cu5l238615pgc" path="res://graphics/map/map_assets/energyLabel.png" id="12_sok8m"]
+[ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="13_7paix"]
+[ext_resource type="Texture2D" uid="uid://dbut1imhh8b1h" path="res://graphics/map/map_assets/coinLabel.png" id="14_4bl3s"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="15_5navp"]
 [ext_resource type="Script" path="res://graphics/map/camerascript.gd" id="15_cww27"]
+[ext_resource type="Texture2D" uid="uid://4epiug3uug77" path="res://graphics/map/map_assets/homeButton.png" id="16_vvs6a"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_usg82")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(663.06, 438.812)
 scale = Vector2(0.499784, 0.539249)
-texture = ExtResource("1_k6g6w")
+texture = ExtResource("1_3i7j3")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Sprite2D"]
 position = Vector2(-28, -58.0556)
@@ -41,149 +40,151 @@ limit_bottom = 740
 editor_draw_limits = true
 script = ExtResource("15_cww27")
 
-[node name="Level1Button" type="TextureButton" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_uvn8q")
+
+[node name="Level1Button" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 510.0
 offset_top = 486.0
 offset_right = 626.0
 offset_bottom = 586.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("3_sa3gm")
+texture_normal = ExtResource("4_jl88o")
 
-[node name="Level2Button" type="TextureButton" parent="."]
+[node name="Level2Button" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 557.0
 offset_top = 410.0
 offset_right = 667.0
 offset_bottom = 501.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("4_j0g53")
+texture_normal = ExtResource("5_qn5c7")
 
-[node name="Level3Button" type="TextureButton" parent="."]
+[node name="Level3Button" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 630.0
 offset_top = 351.0
 offset_right = 736.0
 offset_bottom = 437.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("5_rtcwf")
+texture_normal = ExtResource("6_vy4ta")
 
-[node name="Level4Button" type="TextureButton" parent="."]
+[node name="Level4Button" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 721.0
 offset_top = 286.0
 offset_right = 825.0
 offset_bottom = 374.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("6_rfqlc")
+texture_normal = ExtResource("7_5gvpk")
 
-[node name="Level5Button" type="TextureButton" parent="."]
+[node name="Level5Button" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 744.0
 offset_top = 189.0
 offset_right = 847.0
 offset_bottom = 284.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("7_t4ch8")
+texture_normal = ExtResource("8_tf5dj")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+layer = 0
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1.0
-offset_top = -2.0
-offset_right = 1315.0
-offset_bottom = 735.0
-
-[node name="VerticalContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
-layout_mode = 1
+[node name="VerticalContainer" type="VBoxContainer" parent="Control/CanvasLayer"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 25.0
-offset_top = -134.5
-offset_right = 112.0
-offset_bottom = 134.5
+offset_left = 26.0
+offset_top = -138.0
+offset_right = 113.0
+offset_bottom = 131.0
 grow_vertical = 2
 
-[node name="LeaderboardButton" type="TextureButton" parent="CanvasLayer/Control/VerticalContainer"]
+[node name="LeaderboardButton" type="TextureButton" parent="Control/CanvasLayer/VerticalContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_7loqp")
+texture_normal = ExtResource("9_spmyx")
 
-[node name="AchievementButton" type="TextureButton" parent="CanvasLayer/Control/VerticalContainer"]
+[node name="AchievementButton" type="TextureButton" parent="Control/CanvasLayer/VerticalContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_yikp7")
+texture_normal = ExtResource("10_cv3qt")
 
-[node name="DailyTaskButton" type="TextureButton" parent="CanvasLayer/Control/VerticalContainer"]
+[node name="DailyTaskButton" type="TextureButton" parent="Control/CanvasLayer/VerticalContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_ej1bn")
+texture_normal = ExtResource("11_72p7r")
 
-[node name="HorizontalContainer1" type="HBoxContainer" parent="CanvasLayer/Control"]
-layout_mode = 1
-offset_left = 22.0
-offset_top = 12.0
-offset_right = 466.0
-offset_bottom = 89.0
+[node name="HorizontalContainer1" type="HBoxContainer" parent="Control/CanvasLayer"]
+offset_left = 23.0
+offset_top = 10.0
+offset_right = 467.0
+offset_bottom = 87.0
 theme_override_constants/separation = 75
 
-[node name="EnergyTexture" type="TextureRect" parent="CanvasLayer/Control/HorizontalContainer1"]
+[node name="EnergyTexture" type="TextureRect" parent="Control/CanvasLayer/HorizontalContainer1"]
 layout_mode = 2
-texture = ExtResource("5_8kclp")
+texture = ExtResource("12_sok8m")
 
-[node name="EnergyLabel" type="Label" parent="CanvasLayer/Control/HorizontalContainer1/EnergyTexture"]
+[node name="EnergyLabel" type="Label" parent="Control/CanvasLayer/HorizontalContainer1/EnergyTexture"]
 layout_mode = 0
 offset_left = 68.0
 offset_top = 25.0
 offset_right = 162.0
 offset_bottom = 57.0
 
-[node name="EnergyButton" type="TextureButton" parent="CanvasLayer/Control/HorizontalContainer1/EnergyTexture"]
+[node name="EnergyButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer1/EnergyTexture"]
 layout_mode = 2
 offset_left = 179.0
 offset_top = 21.0
 offset_right = 220.0
 offset_bottom = 98.0
-texture_normal = ExtResource("6_qojd2")
+texture_normal = ExtResource("13_7paix")
 
-[node name="CoinTexture" type="TextureRect" parent="CanvasLayer/Control/HorizontalContainer1"]
+[node name="CoinTexture" type="TextureRect" parent="Control/CanvasLayer/HorizontalContainer1"]
 layout_mode = 2
-texture = ExtResource("7_a7me0")
+texture = ExtResource("14_4bl3s")
 
-[node name="CoinLabel" type="Label" parent="CanvasLayer/Control/HorizontalContainer1/CoinTexture"]
+[node name="CoinLabel" type="Label" parent="Control/CanvasLayer/HorizontalContainer1/CoinTexture"]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 25.0
 offset_right = 161.0
 offset_bottom = 57.0
 
-[node name="CoinButton" type="TextureButton" parent="CanvasLayer/Control/HorizontalContainer1/CoinTexture"]
+[node name="CoinButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer1/CoinTexture"]
 layout_mode = 2
 offset_left = 179.0
 offset_top = 22.0
 offset_right = 220.0
 offset_bottom = 99.0
-texture_normal = ExtResource("6_qojd2")
+texture_normal = ExtResource("13_7paix")
 
-[node name="HorizontalContainer2" type="HBoxContainer" parent="CanvasLayer/Control"]
-layout_mode = 1
+[node name="HorizontalContainer2" type="HBoxContainer" parent="Control/CanvasLayer"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -201.0
-offset_top = 16.0
-offset_right = -1.99988
-offset_bottom = 104.0
+offset_left = -200.0
+offset_top = 14.0
+offset_right = -0.999878
+offset_bottom = 102.0
 grow_horizontal = 0
 scale = Vector2(0.841, 0.808)
 theme_override_constants/separation = 25
 
-[node name="SettingsButton" type="TextureButton" parent="CanvasLayer/Control/HorizontalContainer2"]
+[node name="SettingsButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("2_qqocq")
+texture_normal = ExtResource("15_5navp")
 
-[node name="HomeButton" type="TextureButton" parent="CanvasLayer/Control/HorizontalContainer2"]
+[node name="HomeButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("3_7qe15")
+texture_normal = ExtResource("16_vvs6a")
 
-[connection signal="pressed" from="Level1Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Control/Level1Button" to="Control" method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Control/Level2Button" to="Control" method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="Control/Level3Button" to="Control" method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="Control/Level4Button" to="Control" method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="Control/Level5Button" to="Control" method="_on_level_5_button_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/HorizontalContainer2/SettingsButton" to="Control" method="_on_settings_button_pressed"]

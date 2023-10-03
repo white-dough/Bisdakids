@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_oey0p"]
 [ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_ocblh"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_ixqkc"]
-[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="4_j8lpk"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="5_1fbb2"]
 [ext_resource type="Texture2D" uid="uid://bq6mj67xqc371" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="5_bvpkt"]
 [ext_resource type="Texture2D" uid="uid://d288gsaukl6re" path="res://graphics/ui/icons/Sign up btn@2x.png" id="7_wx7tt"]
 
@@ -89,7 +89,7 @@ offset_top = -35.0
 offset_right = -715.0
 offset_bottom = 65.0
 grow_vertical = 2
-texture_normal = ExtResource("4_j8lpk")
+texture_normal = ExtResource("5_1fbb2")
 stretch_mode = 0
 
 [node name="ContentVBox" type="VBoxContainer" parent="NotLoggedInPnl"]
