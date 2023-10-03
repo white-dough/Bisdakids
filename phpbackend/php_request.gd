@@ -9,7 +9,7 @@ var is_requesting : bool = false
 var clean_response
 
 func _ready():
-	http_request.set_timeout(3.0) 
+	http_request.set_timeout(5.0) 
 	add_child(http_request)
 	http_request.connect("request_completed", _http_request_completed)
 #	store_query()

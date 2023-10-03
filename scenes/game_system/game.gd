@@ -13,7 +13,7 @@ extends Node
 func check_is_connected_internet():
 	http_request.cancel_request()
 	is_connected_to_internet = false
-	http_request.request("http://pornhub.com/")
+	http_request.request("http://example.com/")
 
 func _on_request_completed(_result, response_code, _headers, _body):
 	if (response_code == 200):
