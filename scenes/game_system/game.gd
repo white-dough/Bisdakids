@@ -96,6 +96,12 @@ func _ready():
 #	save_data()
 	load_data()
 	check_is_connected_internet()
+	await http_request
+	if is_connected_to_internet and user_name != null:
+		#query inventory
+		PhpRequest.query_inventory(user_name)
+		await PhpRequest.http_request
+		user_inventory = PhpRequest.clean_response
 #	check_is_connected_internet()
 #	var test = {"progress" : progress}
 #	print(create_data())

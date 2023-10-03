@@ -16,7 +16,7 @@ texture_margin_bottom = 30.0
 [sub_resource type="Theme" id="Theme_a58be"]
 Panel/styles/panel = SubResource("StyleBoxTexture_10gmb")
 
-[node name="inventory" type="Control"]
+[node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

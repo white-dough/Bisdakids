@@ -17,9 +17,7 @@
 [ext_resource type="Script" path="res://graphics/map/camerascript.gd" id="15_cww27"]
 [ext_resource type="Texture2D" uid="uid://4epiug3uug77" path="res://graphics/map/map_assets/homeButton.png" id="16_vvs6a"]
 
-[node name="Node2D" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(663.06, 438.812)
