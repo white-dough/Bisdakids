@@ -1,9 +1,9 @@
 extends Node
 
 @onready var player_data_path: String = "user://player_save.dat"
-@onready var user_name
+@onready var user_name = "dwight19"
 @onready var progress: Dictionary = {}
-@onready var user_inventory: Dictionary = {}
+@onready var user_inventory: Dictionary = {"coin" : 1, "energy" : 2, "premium" : 0, "hint" : 3, "time_freeze" : 4, "timestamp" : 1696484341}
 @onready var daily_task: Dictionary = {}
 @onready var current_date : Dictionary = {}
 @onready var loaded_player_data : Dictionary = {}
@@ -26,6 +26,7 @@ func save_data():
 	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.WRITE)
 	var player_data: Dictionary = create_data()
 	file.store_var(player_data)
+#	print("save: " + str(player_data))
 
 func create_data() -> Dictionary:
 	var player_data: Dictionary = {
@@ -33,7 +34,7 @@ func create_data() -> Dictionary:
 
 		"progress" : progress,
 
-		"user_inventory" : read_user_inventory(),
+		"user_inventory" : user_inventory,
 
 		"daily_task" : daily_task
 	}
@@ -45,11 +46,12 @@ func load_data():
 		save_data()
 	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.READ)
 	loaded_player_data = file.get_var()
+#	print(loaded_player_data)
 	user_name = loaded_player_data['user_name']
 	progress = loaded_player_data['progress']
 	user_inventory = loaded_player_data['user_inventory']
 	daily_task = loaded_player_data['daily_task']
-	print(loaded_player_data)
+	
 		
 #########
 
@@ -82,30 +84,53 @@ func daily_task_logic():#returns true if a day ahead
 	daily_task_reset()
 ###
 
-func read_user_inventory():
-	var jsonFile : FileAccess = FileAccess.open("res://data/user_inventory.json", FileAccess.READ)
-	var contentOfFile : String = jsonFile.get_as_text()	
-	var content_as_dictionary : Dictionary = JSON.parse_string(contentOfFile)
-	jsonFile.close()
-	return content_as_dictionary
-###
+
+
+func query_general():
+	#
+	if user_name:#add verification timestamp later
+		PhpRequest.get_user_inventory(user_name)
+		await PhpRequest.http_request.request_completed
+		for item in PhpRequest.clean_response:
+			if float(item['timestamp']) > float(user_inventory['timestamp']):
+				user_inventory[item['item_name']] = item['quantity']
+				user_inventory['timestamp'] = item['timestamp']
+			else:
+				PhpRequest.update_user_inventory(user_name, user_inventory)
+#		user_inventory['timestamp'] = Time.get_unix_time_from_system()
+		save_data()
+		
 func _ready():
 	http_request.timeout = 3
 	add_child(http_request)
 	http_request.connect("request_completed", _on_request_completed)
-#	save_data()
+	save_data()
 	load_data()
-	check_is_connected_internet()
-	await http_request
-	if is_connected_to_internet and user_name != null:
-		#query inventory
-		PhpRequest.query_inventory(user_name)
-		await PhpRequest.http_request
-		user_inventory = PhpRequest.clean_response
+	query_general()
+	daily_task_logic()
+	PhpRequest.update_user_inventory(user_name, user_inventory)
+#	print(user_inventory)
+	
+#		user_inventory = PhpRequest.clean_response
+#		var file2: FileAccess = FileAccess.open('res://data/user_inventory.json', FileAccess.WRITE)
+#		print(file2.get_var())
+#		file.store_var(PhpRequest.clean_response)
+#	save_data()
+#	print(user_inventory)
+#	print(user_inventory)
+#	check_is_connected_internet()
+#	await http_request
+#	if is_connected_to_internet and user_name != null:
+#		#query inventory
+#		PhpRequest.query_inventory(user_name)
+#		await PhpRequest.http_request
+#		user_inventory = PhpRequest.clean_response
 #	check_is_connected_internet()
 #	var test = {"progress" : progress}
 #	print(create_data())
 
 func _process(_delta):#change to timerrrrr
-	if Engine.get_process_frames () % 3600 == 0:
-		daily_task_logic()
+#	load_data()
+	pass
+#	if Engine.get_process_frames () % 3600 == 0:
+#		daily_task_logic()

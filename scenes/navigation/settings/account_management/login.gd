@@ -12,7 +12,7 @@ func _on_login_btn_pressed():
 	var password: String = password_input.get_text()
 	PhpRequest.login(user_name, password)
 	await PhpRequest.http_request.request_completed
-	if PhpRequest.clean_response == "success":
+	if PhpRequest.clean_response != "failed":
 		Game.user_name = PhpRequest.clean_response
 		Game.save_data()
 		queue_free()

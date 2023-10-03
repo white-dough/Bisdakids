@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Game="*res://scenes/game_system/game.gd"
 PhpRequest="*res://phpbackend/php_request.gd"
+Game="*res://scenes/game_system/game.gd"
 Advertisment="res://advertisment/advertisment.gd"
 
 [display]

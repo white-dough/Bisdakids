@@ -39,14 +39,16 @@ func _send_request(request : Dictionary):
 	# Print out request for debugging:
 	print("Requesting...\n\tCommand: " + request['command'] + "\n\tBody: " + body)
 	
-func get_user_inventory():
+func get_user_inventory(user_name : String):
 	var command = "get_user_inventory"
-	var data = {"user_name" : 'dwight'}
+	var data = {"user_name" : user_name}
 	request_queue.push_back({"command" : command, "data" : data});
 
-func add_user_inventory():#item_id: int, quantity: int
-	var command = "add_user_inventory"
-	var data = {"user_name" : 'dwight', "item_id": 2, "quantity": 29}
+func update_user_inventory(user_name : String, user_inventory : Dictionary):#item_id: int, quantity: int
+	var command = "update_user_inventory"
+	var data = {"user_name" : user_name}
+	for item in user_inventory:
+		data[item] = user_inventory[item]
 	request_queue.push_back({"command" : command, "data" : data});
 	
 func login(user_name : String, password : String):#item_id: int, quantity: int
@@ -77,6 +79,7 @@ func _http_request_completed(result, _response_code, _headers, body):
 	if response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
+#	print(response)
 	request_saving(response)
 	
 func request_saving(response):
@@ -96,6 +99,16 @@ func request_saving(response):
 				clean_response = [response['response']]
 			else:
 				clean_response = response['response']
-				
+		"get_user_inventory":
+			if response['response'].size() > 0:
+				clean_response = response['response']
+			else:
+				clean_response = "nodata"
+		"update_user_inventory":
+			if response['response']['query'] == "success":
+				clean_response = "success"
+			else:
+				clean_response = "failed"
+#	print(clean_response)
 				
 		
