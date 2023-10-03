@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://b6bskr75yfiom"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v3cmb"]
-[ext_resource type="Texture2D" uid="uid://cfbmbspw412u7" path="res://graphics/ui/icons/2x/Gameover@2x.png" id="2_55pdw"]
-[ext_resource type="Texture2D" uid="uid://uf5cpudvsp07" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_et3xq"]
+[ext_resource type="Texture2D" uid="uid://cswkyaikebpll" path="res://graphics/ui/icons/2x/Gameover@2x.png" id="2_55pdw"]
+[ext_resource type="Texture2D" uid="uid://xryj622xsdf5" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_et3xq"]
 [ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="3_qc4hn"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_x0026"]
-[ext_resource type="Texture2D" uid="uid://dcnrsmpi71muk" path="res://graphics/ui/particles/2x/whiteCircle_2@2x.png" id="6_kyw5k"]
+[ext_resource type="Texture2D" uid="uid://bmlcgpvvca1ys" path="res://graphics/ui/particles/2x/whiteCircle_2@2x.png" id="6_kyw5k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_82awe"]
 blend_mode = 1
