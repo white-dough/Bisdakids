@@ -2,8 +2,21 @@ extends Node
 
 @onready var player_data_path: String = "user://player_save.dat"
 @onready var user_name = "dwight19"
-@onready var progress: Dictionary = {}
-@onready var user_inventory: Dictionary = {"coin" : 1, "energy" : 2, "premium" : 0, "hint" : 3, "time_freeze" : 4, "timestamp" : 1696484341}
+@onready var progress: Dictionary = {"level1": 0,
+									"level2": 0,
+									"level3": 0,
+									"level4": 0,
+									"level5": 0}
+@onready var user_inventory: Dictionary = {"coin" : 0, 
+										"coin_timestamp": 0,
+										"energy": 0,
+										"energy_timestamp": 0,
+										"premium": 0,
+										"premium_timestamp": 0,
+										"hint": 0,
+										"hint_timestamp": 0,
+										"time_freeze": 0,
+										"time_freeze_timestamp": 0}
 @onready var daily_task: Dictionary = {}
 @onready var current_date : Dictionary = {}
 @onready var loaded_player_data : Dictionary = {}
@@ -25,6 +38,7 @@ func _on_request_completed(_result, response_code, _headers, _body):
 func save_data():
 	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.WRITE)
 	var player_data: Dictionary = create_data()
+#	print(player_data)
 	file.store_var(player_data)
 #	print("save: " + str(player_data))
 
@@ -72,7 +86,7 @@ func daily_task_reset():
 	datetime['minute'] = 0
 	datetime['second'] = 0
 	daily_task["unix_datestamp"] = Time.get_unix_time_from_datetime_dict(datetime)
-	save_data()
+	update_local_save()
 
 func daily_task_logic():#returns true if a day ahead
 	if !daily_task.is_empty():
@@ -84,31 +98,50 @@ func daily_task_logic():#returns true if a day ahead
 	daily_task_reset()
 ###
 
-
-
-func query_general():
-	#
-	if user_name:#add verification timestamp later
+func record_purchase(bundle_id: int):
+	PhpRequest.record_purchase(user_name, bundle_id)
+#	#invget, progressget, dtget
+#	if user_name:#add verification timestamp later
+#		PhpRequest.get_user_inventory(user_name)
+#		await PhpRequest.http_request.request_completed
+#		for item in PhpRequest.clean_response:
+#			user_inventory[item] = PhpRequest.clean_response[item]
+#		save_data()
+		
+func query_update():
+	if user_name:
 		PhpRequest.get_user_inventory(user_name)
 		await PhpRequest.http_request.request_completed
 		for item in PhpRequest.clean_response:
-			if float(item['timestamp']) > float(user_inventory['timestamp']):
+#			print(item)
+			if float(user_inventory[item['item_name'] + '_timestamp']) <= float(item['timestamp']):
 				user_inventory[item['item_name']] = item['quantity']
-				user_inventory['timestamp'] = item['timestamp']
+				user_inventory[item['item_name'] + '_timestamp'] = item['timestamp']
+				user_inventory.erase('timestamp')
+				update_local_save()
 			else:
 				PhpRequest.update_user_inventory(user_name, user_inventory)
-#		user_inventory['timestamp'] = Time.get_unix_time_from_system()
-		save_data()
-		
+				await PhpRequest.http_request.request_completed
+
+func progress_update(level : String, score : int):
+	if progress[level] > score:
+		return
+	progress[level] = score
+	PhpRequest.update_account_progress(user_name, int(level), score)
+	await PhpRequest.http_request.request_completed
+
+func update_local_save():
+	save_data()
+	load_data()
+
 func _ready():
 	http_request.timeout = 3
 	add_child(http_request)
 	http_request.connect("request_completed", _on_request_completed)
-	save_data()
 	load_data()
-	query_general()
-	daily_task_logic()
-	PhpRequest.update_user_inventory(user_name, user_inventory)
+	print(loaded_player_data)
+	await query_update()
+	daily_task_logic()#timer
 #	print(user_inventory)
 	
 #		user_inventory = PhpRequest.clean_response
@@ -131,6 +164,8 @@ func _ready():
 
 func _process(_delta):#change to timerrrrr
 #	load_data()
+#	daily_task_logic()
+#	print(loaded_player_data)
 	pass
 #	if Engine.get_process_frames () % 3600 == 0:
 #		daily_task_logic()

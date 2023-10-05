@@ -20,6 +20,7 @@ var pressed = false # para long press feature
 var press_time = 0 # para long press feature
 
 func _on_level_1_ready():
+	set_labels()
 	level_time = $"..".level_time
 	progress_bar.max_value = level_time
 	progress_bar.set_use_rounded_values(true)
@@ -66,18 +67,39 @@ func get_definition() -> Dictionary:
 	# etc until level5...
 
 func _on_clue_pressed():
+	if int(Game.user_inventory['hint']) > 0:
+		use_hint()
+		Game.user_inventory['hint'] = int(Game.user_inventory['hint']) - 1
+		Game.user_inventory['hint_timestamp'] = Time.get_unix_time_from_system()
+		Game.update_local_save()
+		set_labels()
+
+func use_hint():
 	if not history_current_objects.is_empty():
-		clue_pressed.emit(history_current_objects.pop_front())		
+		clue_pressed.emit(history_current_objects.pop_front())
 	else:
 		clue_pressed.emit(current_objects.pick_random())
+
+func set_labels():
+	var hint_lbl: Label = $ColorRect/Panel/ContainerHUD/Clue/HintLbl
+	var time_freeze_lbl: Label = $TimeFreeze/TimeFreezeLbl
+	hint_lbl.set_text(str(Game.user_inventory['hint']))
+	time_freeze_lbl.set_text(str(Game.user_inventory['time_freeze']))
+	
 
 func _on_timer_timeout():
 	pass
 	
 func _on_time_freeze_pressed():
-	if pause_timer.is_stopped():
-		pause_timer.start()
-		time_freeze()
+	if int(Game.user_inventory['time_freeze']) > 0:
+		if pause_timer.is_stopped():
+			pause_timer.start()
+			time_freeze()
+			Game.user_inventory['time_freeze'] = int(Game.user_inventory['time_freeze']) - 1
+			Game.user_inventory['time_freeze_timestamp'] = Time.get_unix_time_from_system()
+			Game.update_local_save()
+			set_labels()
+	
 
 func time_freeze():
 	var time_froze_sprite = $ColorRect/Panel/ContainerHUD/TimerBar/TimeFroze
@@ -87,7 +109,6 @@ func time_freeze():
 	else:
 		timer.set_paused(true)
 		time_froze_sprite.visible = not time_froze_sprite.visible 
-	print(pause_timer.is_stopped())
 	if pause_timer.is_stopped():
 		time_froze_sprite.visible = not time_froze_sprite.visible 
 		print("timer is not paused, pausing")
@@ -108,7 +129,6 @@ func _on_label_1_gui_input(event):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
-
 func _on_label_2_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed:
@@ -124,7 +144,6 @@ func _on_label_2_gui_input(event):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
-
 func _on_label_3_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed:
@@ -140,7 +159,6 @@ func _on_label_3_gui_input(event):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
-
 func _on_label_4_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed:
@@ -156,7 +174,6 @@ func _on_label_4_gui_input(event):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
-
 func _on_label_5_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed:
@@ -172,4 +189,3 @@ func _on_label_5_gui_input(event):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
-

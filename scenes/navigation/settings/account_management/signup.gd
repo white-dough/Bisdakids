@@ -17,7 +17,7 @@ func _on_signup_btn_pressed():
 		await PhpRequest.http_request.request_completed
 		if PhpRequest.clean_response == "success":
 			Game.user_name = user_name
-			Game.save_data()
+			Game.update_local_save()
 			mainmenu_modal_node.get_child(0).queue_free()
 			mainmenu_modal_node.add_child(logged_in_scene)
 		elif PhpRequest.clean_response == "ErrPHP":
