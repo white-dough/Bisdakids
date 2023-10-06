@@ -281,19 +281,19 @@ autowrap_mode = 3
 
 [node name="Settings" type="TextureButton" parent="."]
 layout_mode = 1
-offset_left = 1213.0
-offset_top = 31.0
-offset_right = 1300.0
-offset_bottom = 118.0
+offset_left = 1192.0
+offset_top = 33.0
+offset_right = 1279.0
+offset_bottom = 120.0
 texture_normal = ExtResource("9_0hgwc")
 
 [node name="TimeFreeze" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 240.0
-offset_top = 31.0
-offset_right = 329.0
-offset_bottom = 121.0
+offset_left = 253.0
+offset_top = 32.0
+offset_right = 342.0
+offset_bottom = 122.0
 texture_normal = ExtResource("10_62ljq")
 
 [node name="PauseTimer" type="Timer" parent="TimeFreeze"]
