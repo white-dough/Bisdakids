@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
-[ext_resource type="Texture2D" uid="uid://dec687v215ekg" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
+[ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
-[ext_resource type="Texture2D" uid="uid://dtam1grqm5uxb" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
+[ext_resource type="Texture2D" uid="uid://c6aqydfidujo0" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gud4"]
@@ -204,20 +204,35 @@ angular_velocity_min = -9.15
 angular_velocity_max = 24.6
 color = Color(0.956863, 0.921569, 0.835294, 1)
 
+[node name="HintLbl" type="Label" parent="ColorRect/Panel/ContainerHUD/Clue"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/Panel"]
 
 [node name="DescContainer" type="VBoxContainer" parent="ColorRect/Panel/CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.16895
-anchor_top = 0.333784
-anchor_right = 0.442922
-anchor_bottom = 0.52027
+anchor_left = 0.155251
+anchor_top = 0.175676
+anchor_right = 0.429224
+anchor_bottom = 0.660811
+offset_left = -3.0
+offset_right = -3.0
 size_flags_horizontal = 3
+alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 0
 theme = SubResource("Theme_icvfl")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
@@ -227,6 +242,7 @@ autowrap_mode = 3
 [node name="Label2" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 0
 theme = SubResource("Theme_q3k73")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
@@ -236,6 +252,7 @@ autowrap_mode = 3
 [node name="Label3" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 0
 theme = SubResource("Theme_w28uy")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
@@ -245,6 +262,7 @@ autowrap_mode = 3
 [node name="Label4" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 0
 theme = SubResource("Theme_qtnv1")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
@@ -254,6 +272,7 @@ autowrap_mode = 3
 [node name="Label5" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 0
 theme = SubResource("Theme_t1n1c")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
@@ -278,8 +297,22 @@ offset_bottom = 121.0
 texture_normal = ExtResource("10_62ljq")
 
 [node name="PauseTimer" type="Timer" parent="TimeFreeze"]
-wait_time = 20.0
+wait_time = 2.0
 one_shot = true
+
+[node name="TimeFreezeLbl" type="Label" parent="TimeFreeze"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(196, 154)
 
 [connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]
 [connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label1" to="." method="_on_label_1_gui_input"]

@@ -12,9 +12,9 @@ func _on_login_btn_pressed():
 	var password: String = password_input.get_text()
 	PhpRequest.login(user_name, password)
 	await PhpRequest.http_request.request_completed
-	if PhpRequest.clean_response == "success":
+	if PhpRequest.clean_response != "failed":
 		Game.user_name = PhpRequest.clean_response
-		Game.save_data()
+		Game.update_local_save()
 		queue_free()
 		mainmenu_modal_node.add_child(logged_in_scene)
 	elif PhpRequest.clean_response == "ErrPHP":

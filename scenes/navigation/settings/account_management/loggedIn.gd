@@ -13,7 +13,7 @@ func _on_back_btn_pressed():
 
 func _on_logout_btn_pressed():
 	Game.user_name = null
-	Game.save_data()
+	Game.update_local_save()
 	for child in mainmenu_modal_node.get_children():
 		if child != error_modal:
 			child.queue_free()

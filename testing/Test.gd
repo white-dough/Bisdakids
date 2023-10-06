@@ -29,22 +29,27 @@ func dateToUnixTimestamp(timestamp):
 	return Time.get_unix_time_from_datetime_dict(dateTime)
 	
 func _ready():
+	pass
 #	var result = isDayAheadOrMore(oldTimestamp, newTimestamp)
 #	if result:
 #		print("The new timestamp is a day ahead or more.")
 #	else:
 #		print("The new timestamp is less than a day ahead.")
-	var curr = Time.get_datetime_dict_from_system()
-	curr['hour'] = 0
-	curr['minute'] = 0
-	curr['second'] = 0
-	var car = Time.get_datetime_dict_from_system()
-	car['day'] = 2
-	car['hour'] = 0
-	car['minute'] = 0
-	car['second'] = 0
-	print(Time.get_unix_time_from_datetime_dict(car) - Time.get_unix_time_from_datetime_dict(curr))
-	print(car)
-	print(curr)
+#	var curr = Time.get_datetime_dict_from_system()
+#	curr['hour'] = 0
+#	curr['minute'] = 0
+#	curr['second'] = 0
+#	var car = Time.get_datetime_dict_from_system()
+#	car['day'] = 2
+#	car['hour'] = 0
+#	car['minute'] = 0
+#	car['second'] = 0
+#	print(Time.get_unix_time_from_datetime_dict(car) - Time.get_unix_time_from_datetime_dict(curr))
+#	print(car)
+#	print(curr)
 #	print(Time.get_unix_time_from_datetime_dict(curr) - Time.get_unix_time_from_datetime_dict(car))
-#	print(dateToUnixTimestamp(oldTimestamp))
+##	print(dateToUnixTimestamp(oldTimestamp))
+
+#	var input_string = "level24"
+#	print("hey")
+#	print(int(input_string))

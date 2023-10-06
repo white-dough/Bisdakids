@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhrm2vrkulxyp"]
 
-[ext_resource type="Texture2D" uid="uid://c12secd50gxjn" path="res://graphics/ui/icons/lively_store_3@2x.png" id="1_1mnt8"]
-[ext_resource type="Texture2D" uid="uid://xheifgna20r1" path="res://graphics/ui/icons/lively_roof@2x.png" id="2_xagy0"]
+[ext_resource type="Texture2D" uid="uid://bnir703lyq6mf" path="res://graphics/ui/icons/lively_store_3@2x.png" id="1_1mnt8"]
+[ext_resource type="Texture2D" uid="uid://j0p520iqbx5w" path="res://graphics/ui/icons/lively_roof@2x.png" id="2_xagy0"]
 [ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="3_xskrm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10gmb"]

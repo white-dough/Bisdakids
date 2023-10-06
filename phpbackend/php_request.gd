@@ -39,21 +39,21 @@ func _send_request(request : Dictionary):
 	# Print out request for debugging:
 	print("Requesting...\n\tCommand: " + request['command'] + "\n\tBody: " + body)
 	
-func get_user_inventory():
+func get_user_inventory(user_name : String):
 	var command = "get_user_inventory"
-	var data = {"user_name" : 'dwight'}
+	var data = {"user_name" : user_name}
 	request_queue.push_back({"command" : command, "data" : data});
-
-func add_user_inventory():#item_id: int, quantity: int
-	var command = "add_user_inventory"
-	var data = {"user_name" : 'dwight', "item_id": 2, "quantity": 29}
+func update_user_inventory(user_name : String, user_inventory : Dictionary):#item_id: int, quantity: int
+	var command = "update_user_inventory"
+	var data = {"user_name" : user_name}
+	for item in user_inventory:
+		data[item] = user_inventory[item]
 	request_queue.push_back({"command" : command, "data" : data});
 	
 func login(user_name : String, password : String):#item_id: int, quantity: int
 	var command = "login"
 	var data = {"user_name" : user_name, "password": password}
 	request_queue.push_back({"command" : command, "data" : data});
-
 func register(user_name : String, password : String):#item_id: int, quantity: int
 	var command = "register"
 	var data = {"user_name" : user_name, "password": password}
@@ -63,7 +63,27 @@ func store_query():
 	var command = "store_query"
 	var data = {}
 	request_queue.push_back({"command" : command, "data" : data});
+func record_purchase(user_name : String, bundle_id : int):
+	var command = "record_purchase"
+	var data = {"user_name" : user_name, "bundle_id": bundle_id}
+	request_queue.push_back({"command" : command, "data" : data});
 
+func get_user_progress(user_name : String):
+	var command = "get_user_progress"
+	var data = {"user_name" : user_name}
+	request_queue.push_back({"command" : command, "data" : data});
+func update_user_progress(user_name : String, user_progress : Dictionary):#item_id: int, quantity: int
+	var command = "update_user_inventory"
+	var data = {"user_name" : user_name}
+	for progress in user_progress:
+		data[progress] = user_progress[progress]
+	request_queue.push_back({"command" : command, "data" : data});
+
+func update_account_progress(user_name : String, level : int, highscore: int):
+	var command = "update_account_progress"
+	var data = {"user_name": user_name,"level_id": level, "highscore": highscore}
+	request_queue.push_back({"command" : command, "data" : data});
+	
 func _http_request_completed(result, _response_code, _headers, body):
 	is_requesting = false
 	if result != HTTPRequest.RESULT_SUCCESS:
@@ -77,6 +97,7 @@ func _http_request_completed(result, _response_code, _headers, body):
 	if response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
+#	print(response)
 	request_saving(response)
 	
 func request_saving(response):
@@ -96,6 +117,31 @@ func request_saving(response):
 				clean_response = [response['response']]
 			else:
 				clean_response = response['response']
-				
+		"get_user_inventory":
+			if response['response'].size() > 0:
+				clean_response = response['response']
+			else:
+				clean_response = "nodata"
+		"update_user_inventory":
+			if response['response']['query'] == "success":
+				clean_response = "success"
+			else:
+				clean_response = "failed"
+		"get_user_progress":
+			if response['response'].size() > 0:
+				clean_response = response['response']
+			else:
+				clean_response = "nodata"
+		"update_user_progress":
+			if response['response']['query'] == "success":
+				clean_response = "success"
+			else:
+				clean_response = "failed"
+		"record_purchase":
+			if response['response']['query'] == "success":
+				clean_response = "success"
+			else:
+				clean_response = "failed"
+#	print(clean_response)
 				
 		
