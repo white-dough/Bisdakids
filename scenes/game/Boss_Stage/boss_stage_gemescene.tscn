@@ -1,8 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://53k1jkllajyp"]
+[gd_scene load_steps=12 format=3 uid="uid://53k1jkllajyp"]
 
 [ext_resource type="Texture2D" uid="uid://dtv2l6hbvswog" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_hpvgl"]
 [ext_resource type="Texture2D" uid="uid://btv5wjn76jy3b" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="2_e6n33"]
+[ext_resource type="Texture2D" uid="uid://benn2cl732vbb" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="2_hrxdc"]
 [ext_resource type="Script" path="res://scenes/game/Boss_Stage/ghost.gd" id="3_lxbi0"]
+[ext_resource type="PackedScene" uid="uid://1fi74vbvuegc" path="res://scenes/game/Boss_Stage/Objects/lingkuranan.tscn" id="4_46y0p"]
+[ext_resource type="PackedScene" uid="uid://cus1l43frefad" path="res://scenes/game/Boss_Stage/Objects/kadena.tscn" id="5_2316o"]
+[ext_resource type="PackedScene" uid="uid://cwmt1oiv2vxe5" path="res://scenes/game/Boss_Stage/Objects/picture_frame.tscn" id="7_wkcgd"]
+[ext_resource type="Texture2D" uid="uid://caujf6tr5f6rw" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="8_4gwsf"]
+[ext_resource type="PackedScene" uid="uid://cm11i436x5dbs" path="res://scenes/game/Boss_Stage/Objects/ulo_na_statwa.tscn" id="9_kedtp"]
+[ext_resource type="PackedScene" uid="uid://vj63fwjxyi1" path="res://scenes/game/Boss_Stage/Objects/espada.tscn" id="10_wsi6l"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qdkhj"]
 blend_mode = 1
@@ -16,9 +23,36 @@ position = Vector2(708, 367.5)
 scale = Vector2(0.562663, 0.673617)
 texture = ExtResource("1_hpvgl")
 
+[node name="SkeleNiDinu_2x" type="Sprite2D" parent="background"]
+position = Vector2(449, 229)
+texture = ExtResource("2_hrxdc")
+
+[node name="SkeleNiDinu2_2x" type="Sprite2D" parent="background"]
+position = Vector2(1133, 582)
+scale = Vector2(1, 0.988449)
+texture = ExtResource("8_4gwsf")
+
 [node name="ghost" type="Sprite2D" parent="background"]
+top_level = true
 material = SubResource("CanvasItemMaterial_qdkhj")
 position = Vector2(716, 311)
 scale = Vector2(0.422652, 0.422652)
 texture = ExtResource("2_e6n33")
 script = ExtResource("3_lxbi0")
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="lingkuranan" parent="Objects" instance=ExtResource("4_46y0p")]
+position = Vector2(720, 372)
+
+[node name="kadena" parent="Objects" instance=ExtResource("5_2316o")]
+position = Vector2(364, 37)
+
+[node name="picture frame" parent="Objects" instance=ExtResource("7_wkcgd")]
+position = Vector2(332, 345)
+
+[node name="ulo na statwa" parent="Objects" instance=ExtResource("9_kedtp")]
+position = Vector2(613, 389)
+
+[node name="espada" parent="Objects" instance=ExtResource("10_wsi6l")]
+position = Vector2(311, 255)
