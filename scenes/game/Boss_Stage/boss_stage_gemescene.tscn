@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://53k1jkllajyp"]
+
+[ext_resource type="Texture2D" uid="uid://dtv2l6hbvswog" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_hpvgl"]
+[ext_resource type="Texture2D" uid="uid://btv5wjn76jy3b" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="2_e6n33"]
+[ext_resource type="Script" path="res://scenes/game/Boss_Stage/ghost.gd" id="3_lxbi0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qdkhj"]
+blend_mode = 1
+
+[node name="boss_stage_gemescene" type="Node2D"]
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="background"]
+position = Vector2(708, 367.5)
+scale = Vector2(0.562663, 0.673617)
+texture = ExtResource("1_hpvgl")
+
+[node name="ghost" type="Sprite2D" parent="background"]
+material = SubResource("CanvasItemMaterial_qdkhj")
+position = Vector2(716, 311)
+scale = Vector2(0.422652, 0.422652)
+texture = ExtResource("2_e6n33")
+script = ExtResource("3_lxbi0")
