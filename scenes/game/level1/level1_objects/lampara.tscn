@@ -17,9 +17,6 @@ visibility_layer = 2
 collision_layer = 8
 collision_mask = 8
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-3, 62, 11, 62, 8, 45, 20, 44, 31, -11, 5, -32, 12, -53, 3, -62, -4, -54, -1, -33, -32, -9, -16, 43, -2, 45)
-
 [node name="lampara" type="Sprite2D" parent="."]
 texture = ExtResource("1_bkh6q")
 
@@ -29,3 +26,6 @@ scale = Vector2(5.33203, 5.33203)
 color = Color(0.996094, 0.996094, 0.5625, 1)
 energy = 1.5
 texture = SubResource("GradientTexture2D_ygx60")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-3, 62, 11, 62, 8, 45, 20, 44, 31, -11, 5, -32, 12, -53, 3, -62, -4, -54, -1, -33, -32, -9, -16, 43, -2, 45)

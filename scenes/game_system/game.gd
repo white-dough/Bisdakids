@@ -140,7 +140,7 @@ func _ready():
 	http_request.connect("request_completed", _on_request_completed)
 	load_data()
 	print(loaded_player_data)
-	await query_update()
+#	await query_update()
 	daily_task_logic()#timer
 #	print(user_inventory)
 	

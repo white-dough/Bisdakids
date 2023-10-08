@@ -1,6 +1,7 @@
 extends Control
 
 signal clue_pressed(object_clue)
+signal level_finished(time_finished:float)
 
 @onready var object_list_container: VBoxContainer = $ColorRect/Panel/ContainerHUD/Objectlist
 @onready var history_current_objects: Array = []
@@ -12,6 +13,8 @@ signal clue_pressed(object_clue)
 
 # word description on longpress
 @onready var description_container: VBoxContainer = $ColorRect/Panel/CanvasLayer/DescContainer
+
+@onready var finish_level_mark: int
 
 # para long press feature
 const LONG_PRESS_DURATION = 1.5 # in seconds
@@ -50,8 +53,10 @@ func object_list_label(current_objects_strings: Array):
 			#print('1')
 			desc_label.set_text(data[current_objects_strings[i]])
 		else:
-			#print("0")
-			pass
+			finish_level_mark += 1
+			if finish_level_mark >= 15:
+				var time_finished: float = timer.time_left
+				level_finished.emit(time_finished)
 
 # this function gets the data from words-beta.json (defintion of the words)
 func get_definition() -> Dictionary:
