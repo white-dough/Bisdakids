@@ -7,57 +7,57 @@
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
-[ext_resource type="Texture2D" uid="uid://037sbvsxlpgl" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
+[ext_resource type="Texture2D" uid="uid://dec687v215ekg" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
-[ext_resource type="Texture2D" uid="uid://cgvek4prlknmq" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
+[ext_resource type="Texture2D" uid="uid://dtam1grqm5uxb" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gud4"]
-content_margin_left = 100.0
-content_margin_top = 5.0
+content_margin_left = 75.0
+content_margin_top = 20.0
 content_margin_right = 5.0
-content_margin_bottom = 5.0
+content_margin_bottom = 20.0
 texture = ExtResource("10_5i8yf")
 
 [sub_resource type="Theme" id="Theme_icvfl"]
 Label/styles/normal = SubResource("StyleBoxTexture_4gud4")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vamyr"]
-content_margin_left = 100.0
-content_margin_top = 5.0
+content_margin_left = 75.0
+content_margin_top = 20.0
 content_margin_right = 5.0
-content_margin_bottom = 5.0
+content_margin_bottom = 20.0
 texture = ExtResource("10_5i8yf")
 
 [sub_resource type="Theme" id="Theme_q3k73"]
 Label/styles/normal = SubResource("StyleBoxTexture_vamyr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqbf7"]
-content_margin_left = 100.0
-content_margin_top = 5.0
+content_margin_left = 75.0
+content_margin_top = 20.0
 content_margin_right = 5.0
-content_margin_bottom = 5.0
+content_margin_bottom = 20.0
 texture = ExtResource("10_5i8yf")
 
 [sub_resource type="Theme" id="Theme_w28uy"]
 Label/styles/normal = SubResource("StyleBoxTexture_lqbf7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf1k4"]
-content_margin_left = 100.0
-content_margin_top = 5.0
+content_margin_left = 75.0
+content_margin_top = 20.0
 content_margin_right = 5.0
-content_margin_bottom = 5.0
+content_margin_bottom = 20.0
 texture = ExtResource("10_5i8yf")
 
 [sub_resource type="Theme" id="Theme_qtnv1"]
 Label/styles/normal = SubResource("StyleBoxTexture_qf1k4")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrsa4"]
-content_margin_left = 100.0
-content_margin_top = 5.0
+content_margin_left = 75.0
+content_margin_top = 20.0
 content_margin_right = 5.0
-content_margin_bottom = 5.0
+content_margin_bottom = 20.0
 texture = ExtResource("10_5i8yf")
 
 [sub_resource type="Theme" id="Theme_t1n1c"]
@@ -217,67 +217,104 @@ vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/Panel"]
 
-[node name="DescContainer" type="VBoxContainer" parent="ColorRect/Panel/CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.155251
-anchor_top = 0.175676
-anchor_right = 0.429224
-anchor_bottom = 0.660811
-offset_left = -3.0
-offset_right = -3.0
-size_flags_horizontal = 3
-alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+[node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer"]
 visible = false
-layout_mode = 2
-size_flags_vertical = 0
+offset_left = 221.0
+offset_top = 114.0
+offset_right = 521.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = SubResource("Theme_icvfl")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label2" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+[node name="Label2" type="Label" parent="ColorRect/Panel/CanvasLayer"]
 visible = false
-layout_mode = 2
-size_flags_vertical = 0
+offset_left = 221.0
+offset_top = 199.0
+offset_right = 521.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = SubResource("Theme_q3k73")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label3" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+[node name="Label3" type="Label" parent="ColorRect/Panel/CanvasLayer"]
 visible = false
-layout_mode = 2
-size_flags_vertical = 0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1094.0
+offset_top = -465.0
+offset_right = -794.0
+offset_bottom = -397.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = SubResource("Theme_w28uy")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label4" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+[node name="Label4" type="Label" parent="ColorRect/Panel/CanvasLayer"]
 visible = false
-layout_mode = 2
-size_flags_vertical = 0
+offset_left = 221.0
+offset_top = 353.0
+offset_right = 521.0
+offset_bottom = 421.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = SubResource("Theme_qtnv1")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label5" type="Label" parent="ColorRect/Panel/CanvasLayer/DescContainer"]
+[node name="Label5" type="Label" parent="ColorRect/Panel/CanvasLayer"]
 visible = false
-layout_mode = 2
-size_flags_vertical = 0
+offset_left = 221.0
+offset_top = 428.0
+offset_right = 521.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = SubResource("Theme_t1n1c")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="DescContainer" type="VBoxContainer" parent="ColorRect/Panel/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.168189
+anchor_top = 0.154054
+anchor_right = 0.396499
+anchor_bottom = 0.689189
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Settings" type="TextureButton" parent="."]
 layout_mode = 1
@@ -315,10 +352,5 @@ vertical_alignment = 1
 position = Vector2(196, 154)
 
 [connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]
-[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label1" to="." method="_on_label_1_gui_input"]
-[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label2" to="." method="_on_label_2_gui_input"]
-[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label3" to="." method="_on_label_3_gui_input"]
-[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label4" to="." method="_on_label_4_gui_input"]
-[connection signal="gui_input" from="ColorRect/Panel/ContainerHUD/Objectlist/Label5" to="." method="_on_label_5_gui_input"]
 [connection signal="pressed" from="ColorRect/Panel/ContainerHUD/Clue" to="." method="_on_clue_pressed"]
 [connection signal="pressed" from="TimeFreeze" to="." method="_on_time_freeze_pressed"]
