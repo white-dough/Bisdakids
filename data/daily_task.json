@@ -1,6 +1,30 @@
 {
-	"Energy Spend" : {"task_desc": "Use 50 energy points.",},
-	"Detective" : ["Find 15 hidden objects.", 0, 15],
-	"Score" : ["Collect 5000 score points.", 0, 5000],
-	"Level Finish" : ["Finish a level.", 0, 1]
+	"0": {
+		"task_title": "Energy Spend",
+		"task_desc": "Use 50 energy points.",
+		"reward": 10,
+		"goal": 0,
+		"reward_quantity": 0
+	},
+	"1": {
+		"task_title": "Detective",
+		"task_desc": "Find 15 hidden objects.",
+		"reward": 0,
+		"goal": 0,
+		"reward_quantity": 0 
+	},
+	"2": {
+		"task_title": "Score",
+		"task_desc": "Collect 5000 score points.",
+		"reward": 0,
+		"goal": 0,
+		"reward_quantity": 0
+	},
+	"3": {
+		"task_title": "Level Finish",
+		"task_desc": "Finish a level.",
+		"reward": 0,
+		"goal": 0,
+		"reward_quantity": 0
+	}
 }
