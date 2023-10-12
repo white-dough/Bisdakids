@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://isaei0k0sfmp"]
+[gd_scene load_steps=22 format=3 uid="uid://isaei0k0sfmp"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v7crd"]
-[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
+[ext_resource type="Texture2D" uid="uid://73g6vpc563kp" path="res://graphics/ui/icons/2x/emptyStar_sample@2x.png" id="3_ersfb"]
+[ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_dahf4"]
 [ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="5_1qr8m"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="6_cor30"]
@@ -57,16 +58,12 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 8.0
 
-[node name="Level Completed" type="CanvasLayer"]
+[node name="LevelCompleted" type="CanvasLayer"]
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 2.0
-offset_right = -1.0
-offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_v7crd")
@@ -80,14 +77,27 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -300.0
-offset_top = -200.0
+offset_top = -158.0
 offset_right = 300.0
-offset_bottom = 200.0
+offset_bottom = 242.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_ltiph")
+
+[node name="StarBar" type="TextureProgressBar" parent="ModalPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = -138.0
+offset_right = -65.0
+grow_horizontal = 2
+scale = Vector2(1.2, 1.2)
+max_value = 5000.0
+texture_under = ExtResource("3_ersfb")
+texture_progress = ExtResource("10_rwp65")
 
 [node name="CloseBtn" type="TextureButton" parent="ModalPanel"]
 custom_minimum_size = Vector2(100, 100)
@@ -147,7 +157,7 @@ theme_override_constants/separation = 14
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="Total_score" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
+[node name="HighscoreTxtLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -155,7 +165,7 @@ theme_override_fonts/font = ExtResource("7_wwfku")
 theme_override_font_sizes/font_size = 24
 text = "Kinatibuk-ang Iskor"
 
-[node name="Label" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
+[node name="HighscoreLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 theme = ExtResource("8_6y1ao")
@@ -168,7 +178,7 @@ text = "2345678"
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="score" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
+[node name="ScoreTxtLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -176,7 +186,7 @@ theme_override_fonts/font = ExtResource("7_wwfku")
 theme_override_font_sizes/font_size = 24
 text = "Imong Puntos"
 
-[node name="Label" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
+[node name="ScoreLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 theme = ExtResource("8_6y1ao")
@@ -238,8 +248,3 @@ texture_normal = ExtResource("11_k2exo")
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 texture_normal = ExtResource("12_ptc0x")
-
-[node name="StarSample_2x" type="Sprite2D" parent="ModalPanel"]
-position = Vector2(310, -48)
-scale = Vector2(1.21127, 1.21127)
-texture = ExtResource("10_rwp65")

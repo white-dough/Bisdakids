@@ -140,7 +140,7 @@ func _ready():
 	http_request.connect("request_completed", _on_request_completed)
 	load_data()
 	print(loaded_player_data)
-	await query_update()
+#	await query_update()
 	daily_task_logic()#timer
 #	print(user_inventory)
 	
@@ -161,6 +161,43 @@ func _ready():
 #	check_is_connected_internet()
 #	var test = {"progress" : progress}
 #	print(create_data())
+
+
+func texture_logic(item_name:String)->Texture2D:
+	match(item_name):
+		"time_freeze":
+			return load("res://graphics/store_items/TimeFreeze_3.png")
+		"hint":
+			return load("res://graphics/store_items/hint@2x.png")
+		"energy":
+			return load("res://graphics/store_items/Energy_3.png")
+		"coin":
+			return load("res://graphics/ui/icons/coins_icon@2x.png")
+		_:
+			return load("res://graphics/store_items/mystery@2x.png")
+
+func name_logic(item_name:String)->String:
+	match(item_name):
+		"time_freeze":
+			return "Time Freeze"
+		"hint":
+			return "Hint"
+		"energy":
+			return "Energy"
+		_:
+			return "Mystery Bundle"
+
+func reverse_name_logic(item_name:String)->String:
+	match(item_name):
+		"Time Freeze":
+			return "time_freeze"
+		"Hint":
+			return "hint"
+		"Energy":
+			return "energy"
+		_:
+			return "Mystery Bundle"
+
 
 func _process(_delta):#change to timerrrrr
 #	load_data()

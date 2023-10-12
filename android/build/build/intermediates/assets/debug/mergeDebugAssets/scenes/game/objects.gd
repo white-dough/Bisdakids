@@ -2,6 +2,7 @@ extends Node2D
 
 signal object_found_signal(object_name)
 
+
 @onready var current_objects: Array = []; var count_of_objects_to_find: int; var selected_objects: Array; var history_current_objects: Array = []
 
 func _on_level_1_ready():
@@ -11,7 +12,7 @@ func _on_level_1_ready():
 
 #Function to randomly select the objects to be found in the level
 func select_random_elements(count: int) -> Array:
-	var objects: Array = $Objects.get_children() # gets the 4 objects (tolda, kumpas, troso, atsa)
+	var objects: Array = $Objects.get_children()
 	while selected_objects.size() < count: # loops over the objects
 		var random_element = objects[randi() % objects.size()]
 		if !selected_objects.has(random_element):
@@ -70,6 +71,9 @@ func _unhandled_input(event):
 			#animate, remove from current objects, remove label, replace label
 			object_found_signal.emit(object_found)
 			populate_current_objects(object_found)
+			
+#func _process(delta):
+#	print(selected_objects)
 
 
 

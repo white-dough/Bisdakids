@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://by4h363cgrfj2"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_2w5wv"]
-[ext_resource type="Texture2D" uid="uid://bady3u537p7kr" path="res://graphics/ui/icons/2x/victoryTriumph_1@2x.png" id="2_tuqum"]
-[ext_resource type="Texture2D" uid="uid://xryj622xsdf5" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_u5knf"]
+[ext_resource type="Texture2D" uid="uid://br4tbowp0ydua" path="res://graphics/ui/icons/2x/victoryTriumph_1@2x.png" id="2_tuqum"]
+[ext_resource type="Texture2D" uid="uid://bucjj81d4pacf" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_u5knf"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="3_d1jm5"]
 [ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="3_skock"]
-[ext_resource type="Texture2D" uid="uid://d3c3fja8jey18" path="res://graphics/ui/particles/spotlight_8.png" id="6_wu0qg"]
+[ext_resource type="Texture2D" uid="uid://cs511ktp6585x" path="res://graphics/ui/particles/spotlight_8.png" id="6_wu0qg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a0vuy"]
 blend_mode = 1
@@ -18,7 +18,7 @@ point_count = 3
 offsets = PackedFloat32Array(0, 0.516556, 1)
 colors = PackedColorArray(0.898275, 2.59906e-06, 1.2514e-06, 1, 0.689033, 0.167281, 0.168074, 1, 0.560784, 0.0352941, 0.0666667, 0.286275)
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="VictoryTriumph" type="CanvasLayer"]
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -37,7 +37,9 @@ scale = Vector2(1.27011, 0.878604)
 texture = ExtResource("2_u5knf")
 script = ExtResource("3_skock")
 
-[node name="Node" type="Node" parent="."]
+[node name="Node" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="CPUParticles2DYellow" type="CPUParticles2D" parent="Node"]
 position = Vector2(672, 385)
