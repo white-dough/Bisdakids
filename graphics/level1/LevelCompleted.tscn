@@ -95,7 +95,7 @@ offset_top = -138.0
 offset_right = -65.0
 grow_horizontal = 2
 scale = Vector2(1.2, 1.2)
-max_value = 0.0
+max_value = 5000.0
 texture_under = ExtResource("3_ersfb")
 texture_progress = ExtResource("10_rwp65")
 

@@ -10,7 +10,7 @@ signal level_finished(time_finished:float)
 @onready var timer: Timer = $ColorRect/Panel/ContainerHUD/TimerBar/Timer
 @onready var pause_timer: Timer = $"TimeFreeze/PauseTimer"
 @onready var progress_bar: TextureProgressBar = $ColorRect/Panel/ContainerHUD/TimerBar/ProgressBar
-
+@onready var level_success
 # word description on longpress
 @onready var description_container: VBoxContainer = $ColorRect/Panel/CanvasLayer/DescContainer
 
@@ -31,6 +31,7 @@ func _on_level_1_ready():
 	timer.set_wait_time(level_time)
 	timer.start()
 	pause_timer.timeout.connect(time_freeze)
+	level_success = $"../LevelCompleted"
 	#lasdas.onclick.connect(time_freeze(label))
 
 func _process(_delta):
@@ -93,7 +94,9 @@ func set_labels():
 	
 
 func _on_timer_timeout():
-	pass
+	if level_success.visible:
+		return
+	level_finished.emit(0)
 	
 func _on_time_freeze_pressed():
 	if int(Game.user_inventory['time_freeze']) > 0:

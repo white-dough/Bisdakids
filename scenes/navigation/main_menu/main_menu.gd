@@ -9,7 +9,8 @@ func _on_play_pressed():
 func _ready():
 	energylbl.set_text(str(Game.user_inventory['energy']))
 	coinlbl.set_text(str(Game.user_inventory['coin']))
+	BannerAds.ad_view.show()
 	
-func _on_modal_child_exiting_tree(node):
+func _on_modal_child_exiting_tree(_node):
 	energylbl.set_text(str(Game.user_inventory['energy']))
 	coinlbl.set_text(str(Game.user_inventory['coin']))

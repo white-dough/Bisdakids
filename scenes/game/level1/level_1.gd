@@ -10,8 +10,8 @@ extends Node2D
 @onready var star3 : float = level_time * 0.85
 
 @onready var success_prompt : CanvasLayer = $VictoryTriumph
-
 @onready var failed_prompt : CanvasLayer = $GameOver
+
 @onready var level_failed : CanvasLayer = $LevelFailed
 
 @onready var level_success : CanvasLayer = $LevelCompleted
@@ -22,8 +22,13 @@ extends Node2D
 
 func _ready():
 	$HUD.connect("level_finished", level_completed)
+	success_prompt.visibility_changed.connect(load_interstitial_ad)
+	failed_prompt.visibility_changed.connect(load_interstitial_ad)
 	
-func _process(delta):
+func load_interstitial_ad():
+	InterstitialAds.load_show_interstitial()
+	
+func _process(_delta):
 	pass
 #	if isArrayEmpty(current_objects):
 #		print("The array is empty")
@@ -41,17 +46,21 @@ func level_completed(time_left):
 		success_prompt.visible = true
 		prompt_timer.start()
 		await prompt_timer.timeout
-		if Game.progress[level_name] < time_left:
-			highscore_label.set_text(str(int(time_left)))#new highscore
-			Game.progress[level_name] = int(time_left)
+		var score: int = 5000 * (time_left / level_time)
+		if Game.progress[level_name] < score:
+			highscore_label.set_text(str(int(score)))#new highscore
+			Game.progress[level_name] = int(score)
+			Game.update_local_save()
 		else:
 			highscore_label.set_text(str(Game.progress[level_name]))
-		score_label.set_text(str(int(time_left)))
-		star_bar.set_max(level_time)
-		star_bar.set_value(time_left)
+		score_label.set_text(str(int(score)))
+		star_bar.set_value(score)
 		level_success.visible = true
-		Game.update_local_save()
-		
-	
-	
-
+	else:
+		var prompt_timer : Timer = Timer.new()
+		prompt_timer.wait_time = 3
+		add_child(prompt_timer)
+		failed_prompt.visible = true
+		prompt_timer.start()
+		await prompt_timer.timeout
+		level_failed.visible = true

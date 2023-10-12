@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dy04hbfc738bq"]
+[gd_scene load_steps=15 format=3 uid="uid://dy04hbfc738bq"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_3gj16"]
 [ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_8m2xa"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://drtnqfwiqa8be" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="4_b8u7a"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_73xay"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_50xbx"]
-[ext_resource type="Theme" uid="uid://bukmbrgwy0i5j" path="res://themes/lbl.tres" id="7_y4pwl"]
 [ext_resource type="Texture2D" uid="uid://cq7d5vs1fv2k0" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="8_ryp60"]
 [ext_resource type="Texture2D" uid="uid://bj2tujhcnsjo5" path="res://graphics/ui/buttons/2x/retry_btn@2x.png" id="9_jotxe"]
 [ext_resource type="Texture2D" uid="uid://b5fb2oofadf27" path="res://graphics/ui/buttons/2x/next_btn@2x.png" id="10_gp4ya"]
@@ -119,42 +118,20 @@ layout_mode = 2
 theme_override_constants/separation = 40
 
 [node name="Total_score" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_50xbx")
 theme_override_font_sizes/font_size = 24
-text = "Kinatibuk-ang Iskor"
-
-[node name="Label" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
-custom_minimum_size = Vector2(100, 30)
-layout_mode = 2
-theme = ExtResource("7_y4pwl")
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_50xbx")
-theme_override_font_sizes/font_size = 18
-text = "2345678"
+text = "Ayaw ka wad-i og hope, try again until you succeed!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ModalPanel/Content_Container"]
 layout_mode = 2
 theme_override_constants/separation = 40
-
-[node name="score" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_50xbx")
-theme_override_font_sizes/font_size = 24
-text = "Imong Puntos"
-
-[node name="Label" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
-custom_minimum_size = Vector2(100, 30)
-layout_mode = 2
-theme = ExtResource("7_y4pwl")
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_50xbx")
-theme_override_font_sizes/font_size = 18
-text = "2345678"
 
 [node name="Btn_Container" type="HBoxContainer" parent="ModalPanel"]
 layout_mode = 1
