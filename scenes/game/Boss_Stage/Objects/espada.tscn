@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://vj63fwjxyi1"]
+
+[ext_resource type="Texture2D" uid="uid://dpwn4relgbn7n" path="res://graphics/boss_stage/Objects/2x/espada@2x.png" id="1_sx3ii"]
+
+[node name="espada" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, 16, -13, 30, -11, 27, -4, 22, 1, 12, 7, -1, 14, 3, 15, 1, 15, -2, 10, -7, 20, -23, 14, -30, 10, -30, 10, -28, 4, -15, -3, -18, -5, -17, -5, -14, 0, -7, -17, 15, -19, 14)
+
+[node name="espada" type="Sprite2D" parent="."]
+texture = ExtResource("1_sx3ii")

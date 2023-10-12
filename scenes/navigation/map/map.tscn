@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=15 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://b4x17ogh4k7jc" path="res://graphics/map/map_assets/map4x.png" id="1_3i7j3"]
 [ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://graphics/map/map_assets/level1Button4x.png" id="4_jl88o"]
@@ -6,15 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://graphics/map/map_assets/level3Button4x.png" id="6_vy4ta"]
 [ext_resource type="Texture2D" uid="uid://k6enst1t6p0e" path="res://graphics/map/map_assets/level4Button4x.png" id="7_5gvpk"]
 [ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://graphics/map/map_assets/level5Button4x.png" id="8_tf5dj"]
-[ext_resource type="Texture2D" uid="uid://dkycev3ibu1ht" path="res://graphics/ui/icons/leaderboard_icon@2x.png" id="9_spmyx"]
-[ext_resource type="Texture2D" uid="uid://bgibah6x7kydx" path="res://graphics/ui/icons/achievement_icon@2x.png" id="10_cv3qt"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="11_72p7r"]
-[ext_resource type="Script" path="res://graphics/map/levelButtons.gd" id="11_uvn8q"]
+[ext_resource type="Script" path="res://scenes/navigation/map/levelButtons.gd" id="11_uvn8q"]
 [ext_resource type="Texture2D" uid="uid://cu5l238615pgc" path="res://graphics/map/map_assets/energyLabel.png" id="12_sok8m"]
 [ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="13_7paix"]
 [ext_resource type="Texture2D" uid="uid://dbut1imhh8b1h" path="res://graphics/map/map_assets/coinLabel.png" id="14_4bl3s"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="15_5navp"]
-[ext_resource type="Script" path="res://graphics/map/camerascript.gd" id="15_cww27"]
+[ext_resource type="Script" path="res://scenes/navigation/map/camerascript.gd" id="15_cww27"]
 [ext_resource type="Texture2D" uid="uid://4epiug3uug77" path="res://graphics/map/map_assets/homeButton.png" id="16_vvs6a"]
 
 [node name="Node2D" type="Node2D"]
@@ -93,28 +91,6 @@ texture_normal = ExtResource("8_tf5dj")
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 layer = 0
 
-[node name="VerticalContainer" type="VBoxContainer" parent="Control/CanvasLayer"]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 26.0
-offset_top = -138.0
-offset_right = 113.0
-offset_bottom = 131.0
-grow_vertical = 2
-
-[node name="LeaderboardButton" type="TextureButton" parent="Control/CanvasLayer/VerticalContainer"]
-layout_mode = 2
-texture_normal = ExtResource("9_spmyx")
-
-[node name="AchievementButton" type="TextureButton" parent="Control/CanvasLayer/VerticalContainer"]
-layout_mode = 2
-texture_normal = ExtResource("10_cv3qt")
-
-[node name="DailyTaskButton" type="TextureButton" parent="Control/CanvasLayer/VerticalContainer"]
-layout_mode = 2
-texture_normal = ExtResource("11_72p7r")
-
 [node name="HorizontalContainer1" type="HBoxContainer" parent="Control/CanvasLayer"]
 offset_left = 23.0
 offset_top = 10.0
@@ -172,13 +148,17 @@ grow_horizontal = 0
 scale = Vector2(0.841, 0.808)
 theme_override_constants/separation = 25
 
-[node name="SettingsButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
+[node name="DailyTaskButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("15_5navp")
+texture_normal = ExtResource("11_72p7r")
 
 [node name="HomeButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("16_vvs6a")
+
+[node name="SettingsButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("15_5navp")
 
 [connection signal="pressed" from="Control/Level1Button" to="Control" method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="Control/Level2Button" to="Control" method="_on_level_2_button_pressed"]

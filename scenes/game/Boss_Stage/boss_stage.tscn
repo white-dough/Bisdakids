@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://qh36n3tqty5r"]
+
+[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/Boss_Stage/boss_stage_gemescene.tscn" id="1_shust"]
+[ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="2_juxjp"]
+
+[node name="Boss_Stage" type="Node2D"]
+
+[node name="bs_gamescene" parent="." instance=ExtResource("1_shust")]
+
+[node name="HUD" parent="." instance=ExtResource("2_juxjp")]
