@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/main_menu.gd" id="1_jtkxk"]
 [ext_resource type="Texture2D" uid="uid://bje0ttmigqmic" path="res://graphics/level1/2x/2x/MainMenu_bg@2x.png" id="1_yiw32"]
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/Modal.gd" id="2_2fmup"]
-[ext_resource type="Texture2D" uid="uid://l4be8fvkah3e" path="res://graphics/ui/icons/energly_lbl@2x.png" id="2_rdlts"]
+[ext_resource type="Texture2D" uid="uid://cwxob1ud21r7c" path="res://graphics/ui/icons/energly_lbl@2x.png" id="2_rdlts"]
 [ext_resource type="PackedScene" uid="uid://d0prpdk8wyrbs" path="res://scenes/navigation/settings/error_modal.tscn" id="3_atvqk"]
 [ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="3_br7nd"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="3_cnwvt"]
-[ext_resource type="Texture2D" uid="uid://debuyksegq2td" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
+[ext_resource type="Texture2D" uid="uid://bdeccy0jmxm48" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
 [ext_resource type="Texture2D" uid="uid://dcr3wafmwe7ej" path="res://graphics/ui/buttons/2x/dailytaskPressed_btn@2x.png" id="9_rloq8"]
@@ -59,6 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 0
@@ -137,6 +138,7 @@ offset_left = -3.05176e-05
 texture_normal = ExtResource("10_l8wx2")
 texture_pressed = ExtResource("13_17ihm")
 stretch_mode = 3
+
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="HBoxContainer" parent="Control"]
@@ -165,4 +167,5 @@ stretch_mode = 3
 position = Vector2(672, 388)
 texture = ExtResource("13_6r1g0")
 
+[connection signal="child_exiting_tree" from="Modal" to="." method="_on_modal_child_exiting_tree"]
 [connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]

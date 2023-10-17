@@ -121,6 +121,7 @@ offset_bottom = 13.5
 grow_horizontal = 0
 grow_vertical = 2
 theme = SubResource("Theme_7mwvo")
+text = "0 out of 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -138,10 +139,24 @@ offset_right = -12.0
 offset_bottom = 20.0
 grow_horizontal = 0
 grow_vertical = 2
+mouse_filter = 2
 theme = SubResource("Theme_1fpef")
 
 [node name="RewardImg" type="TextureRect" parent="RewardPnlcont"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("5_qxpo2")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="RewardQuantityLbl" type="Label" parent="RewardPnlcont"]
+layout_mode = 2
+
+[node name="RewardLbl" type="Label" parent="RewardPnlcont"]
+visible = false
+layout_mode = 2
+
+[node name="FailClaimAnimation" type="AnimationPlayer" parent="RewardPnlcont"]
+
+[node name="RewardBtn" type="TextureButton" parent="RewardPnlcont"]
+layout_mode = 2

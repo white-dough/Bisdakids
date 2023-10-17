@@ -143,5 +143,3 @@ func request_saving(response):
 			else:
 				clean_response = "failed"
 #	print(clean_response)
-				
-		
