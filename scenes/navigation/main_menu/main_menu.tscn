@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://df6737sinoafr"]
+[gd_scene load_steps=25 format=3 uid="uid://df6737sinoafr"]
 
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/main_menu.gd" id="1_jtkxk"]
 [ext_resource type="Texture2D" uid="uid://bje0ttmigqmic" path="res://graphics/level1/2x/2x/MainMenu_bg@2x.png" id="1_yiw32"]
@@ -10,11 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://bdeccy0jmxm48" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
-[ext_resource type="Texture2D" uid="uid://ba6tfad40isxc" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="10_42o32"]
+[ext_resource type="Texture2D" uid="uid://dcr3wafmwe7ej" path="res://graphics/ui/buttons/2x/dailytaskPressed_btn@2x.png" id="9_rloq8"]
+[ext_resource type="Texture2D" uid="uid://bubnyojlbrn6i" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="10_42o32"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="10_l8wx2"]
-[ext_resource type="Texture2D" uid="uid://ddfpevth0suxk" path="res://graphics/ui/icons/naghimo_icon@2x.png" id="11_mrcqq"]
+[ext_resource type="Texture2D" uid="uid://boqjwp8unve87" path="res://graphics/ui/buttons/2x/shopPressed_btn_1@2x.png" id="10_pps7j"]
+[ext_resource type="Texture2D" uid="uid://0nbah27jhrrg" path="res://graphics/ui/buttons/2x/InventoryPressed_btn@2x.png" id="13_0ke5v"]
+[ext_resource type="Texture2D" uid="uid://bvdytd0mbaq62" path="res://graphics/ui/buttons/2x/settingsPressed_btn@2x.png" id="13_6hqce"]
 [ext_resource type="Texture2D" uid="uid://gkrq2kpwaxy8" path="res://graphics/ui/icons/bisdakids_game_title@2x.png" id="13_6r1g0"]
+[ext_resource type="Texture2D" uid="uid://7f0l04hapnd0" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="13_17ihm"]
 [ext_resource type="Texture2D" uid="uid://iksmgo1nrnw2" path="res://graphics/ui/icons/undang_icon@2x.png" id="13_t0ps6"]
+[ext_resource type="Texture2D" uid="uid://s374vg6c40w1" path="res://graphics/ui/buttons/2x/credits_btn@2x.png" id="14_232pt"]
+[ext_resource type="Texture2D" uid="uid://bk56otx7qy055" path="res://graphics/ui/buttons/2x/CreditsPressed_btn@2x.png" id="15_7nw5j"]
+[ext_resource type="Texture2D" uid="uid://p2cbfj4lgtho" path="res://graphics/ui/buttons/2x/QuitPressed_btn@2x.png" id="16_vrwmt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_owj6l"]
 texture = ExtResource("2_rdlts")
@@ -99,28 +106,39 @@ theme_override_constants/separation = 35
 [node name="DailyTask" type="TextureButton" parent="Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("3_cnwvt")
+texture_pressed = ExtResource("9_rloq8")
+stretch_mode = 3
 
 [node name="Shop" type="TextureButton" parent="Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("5_nlw81")
+texture_pressed = ExtResource("10_pps7j")
+stretch_mode = 3
 
 [node name="Inventory" type="TextureButton" parent="Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("10_42o32")
+texture_pressed = ExtResource("13_0ke5v")
+stretch_mode = 3
 
 [node name="Settings" type="TextureButton" parent="Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("4_qj5eq")
+texture_pressed = ExtResource("13_6hqce")
+stretch_mode = 3
 
 [node name="Play" type="TextureButton" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.363775
 anchor_top = 0.659459
 anchor_right = 0.619483
 anchor_bottom = 0.833784
 offset_left = -3.05176e-05
 texture_normal = ExtResource("10_l8wx2")
-stretch_mode = 5
+texture_pressed = ExtResource("13_17ihm")
+stretch_mode = 3
+
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="HBoxContainer" parent="Control"]
@@ -134,12 +152,16 @@ theme_override_constants/separation = 835
 [node name="Credits" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-texture_normal = ExtResource("11_mrcqq")
+texture_normal = ExtResource("14_232pt")
+texture_pressed = ExtResource("15_7nw5j")
+stretch_mode = 3
 
 [node name="Quit" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 texture_normal = ExtResource("13_t0ps6")
+texture_pressed = ExtResource("16_vrwmt")
+stretch_mode = 3
 
 [node name="BisdakidsLogo" type="Sprite2D" parent="."]
 position = Vector2(672, 388)
