@@ -116,6 +116,7 @@ offset_right = 204.5
 offset_bottom = 129.0
 grow_horizontal = 2
 theme = ExtResource("6_1587j")
+theme_override_font_sizes/font_size = 41
 text = "Tindahan"
 horizontal_alignment = 1
 vertical_alignment = 1
