@@ -4,21 +4,28 @@ extends CanvasLayer
 @onready var not_logged_in_scene : CanvasLayer = load("res://scenes/navigation/settings/account_management/notLoggedIn.tscn").instantiate()
 @onready var logged_in_scene : CanvasLayer  = load("res://scenes/navigation/settings/account_management/loggedIn.tscn").instantiate()
 @onready var account_button : TextureButton = $SettingsPnl/SettingsVbox/AccountBtn
-@onready var is_connected_internet : bool
-
-func _process(_delta):
-	if Engine.get_process_frames () % 720 == 0:
-		is_connected_internet = Game.check_is_connected_internet()
-		account_button.disabled = true if !is_connected_internet else false
+@onready var is_connected_internet : bool = false
+@onready var check_internet_timer : Timer = Timer.new()
 
 func _ready():
-	is_connected_internet = Game.check_is_connected_internet()
+	account_button.disabled = true
+	check_internet_timer.connect("timeout", check_internet)
+	check_internet_timer.wait_time = 1
+	add_child(check_internet_timer)
+	check_internet_timer.start()
+
+func check_internet():
+	Game.check_is_connected_internet()
+	await Game.http_request.request_completed
+	is_connected_internet = Game.is_connected_to_internet
 	account_button.disabled = true if !is_connected_internet else false
+	check_internet_timer.start()
 
 func _on_close_btn_pressed():
 	queue_free()
 
 func _on_account_btn_pressed():
 	var scene_to_render = not_logged_in_scene if Game.user_name == null else logged_in_scene
-	mainmenu_modal_node.get_child(0).queue_free()
+#	mainmenu_modal_node.get_child(0).queue_free()
+	queue_free()
 	mainmenu_modal_node.add_child(scene_to_render)

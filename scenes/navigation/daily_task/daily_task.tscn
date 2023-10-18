@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b7supgtno53q7"]
+[gd_scene load_steps=12 format=3 uid="uid://b7supgtno53q7"]
 
 [ext_resource type="Script" path="res://scenes/navigation/daily_task/daily_task.gd" id="1_cvlrt"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="2_l0sn5"]
@@ -6,11 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_vkgox"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="5_cam1x"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="7_da8aq"]
-[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="9_0jdcj"]
 [ext_resource type="PackedScene" uid="uid://caaxj7bw5ogqe" path="res://scenes/navigation/daily_task/task.tscn" id="9_t4wce"]
-[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="10_lq6yn"]
-[ext_resource type="Texture2D" uid="uid://bjudiluuuoxb2" path="res://graphics/ui/icons/task_reward@2x.png" id="11_f2l7q"]
-[ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="12_gteau"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -36,68 +32,6 @@ default_font_size = 35
 Label/font_sizes/font_size = 30
 Label/fonts/font = ExtResource("4_vkgox")
 Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xg5ss"]
-texture = ExtResource("9_0jdcj")
-texture_margin_left = 8.0
-texture_margin_top = 12.0
-texture_margin_right = 8.0
-texture_margin_bottom = 12.0
-
-[sub_resource type="Theme" id="Theme_jruug"]
-Panel/styles/panel = SubResource("StyleBoxTexture_xg5ss")
-
-[sub_resource type="FontVariation" id="FontVariation_ibqm2"]
-base_font = ExtResource("4_vkgox")
-variation_embolden = 0.57
-
-[sub_resource type="Theme" id="Theme_ussc6"]
-Label/colors/font_color = Color(0.258824, 0.129412, 0.0431373, 1)
-Label/constants/line_spacing = -12
-Label/font_sizes/font_size = 17
-Label/fonts/font = SubResource("FontVariation_ibqm2")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xo4f"]
-texture = ExtResource("10_lq6yn")
-expand_margin_left = 7.0
-expand_margin_top = 7.0
-expand_margin_right = 7.0
-expand_margin_bottom = 7.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcqws"]
-bg_color = Color(0.231373, 0.364706, 0.866667, 1)
-border_width_bottom = 6
-border_color = Color(0.117647, 0.2, 0.584314, 1)
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-corner_detail = 12
-
-[sub_resource type="Theme" id="Theme_0j67p"]
-ProgressBar/styles/background = SubResource("StyleBoxTexture_6xo4f")
-ProgressBar/styles/fill = SubResource("StyleBoxFlat_tcqws")
-
-[sub_resource type="FontVariation" id="FontVariation_vk3lc"]
-base_font = ExtResource("4_vkgox")
-variation_embolden = 0.49
-
-[sub_resource type="Theme" id="Theme_7mwvo"]
-Label/colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
-Label/colors/font_shadow_color = Color(0, 0, 0, 0.721569)
-Label/font_sizes/font_size = 14
-Label/fonts/font = SubResource("FontVariation_vk3lc")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vosn0"]
-texture = ExtResource("11_f2l7q")
-texture_margin_left = 15.0
-texture_margin_top = 12.0
-texture_margin_right = 19.0
-texture_margin_bottom = 15.0
-
-[sub_resource type="Theme" id="Theme_1fpef"]
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_vosn0")
 
 [node name="DailyTask" type="CanvasLayer"]
 script = ExtResource("1_cvlrt")
@@ -175,83 +109,8 @@ alignment = 1
 layout_mode = 2
 theme_override_constants/separation = 9
 
-[node name="TaskPanel" type="Panel" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox"]
-custom_minimum_size = Vector2(515, 100)
+[node name="TaskPanel" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox" instance=ExtResource("9_t4wce")]
 layout_mode = 2
-theme = SubResource("Theme_jruug")
-
-[node name="TaskDetailVbox" type="VBoxContainer" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox/TaskPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 24.0
-offset_top = -5.0
-offset_right = 409.0
-grow_vertical = 2
-theme_override_constants/separation = 6
-
-[node name="TaskTitleLbl" type="Label" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox/TaskPanel/TaskDetailVbox"]
-custom_minimum_size = Vector2(0, 28)
-layout_mode = 2
-theme = SubResource("Theme_ussc6")
-text = "Loading your tasks..."
-vertical_alignment = 2
-autowrap_mode = 3
-
-[node name="TaskDescLbl" type="Label" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox/TaskPanel/TaskDetailVbox"]
-custom_minimum_size = Vector2(385, 22)
-layout_mode = 2
-size_flags_horizontal = 0
-theme = ExtResource("7_da8aq")
-text = "Task Loading. Please wait."
-clip_text = true
-
-[node name="ProgressBar" type="ProgressBar" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox/TaskPanel/TaskDetailVbox"]
-custom_minimum_size = Vector2(300, 15)
-layout_mode = 2
-size_flags_horizontal = 0
-theme = SubResource("Theme_0j67p")
-value = 100.0
-show_percentage = false
-
-[node name="ProgressLbl" type="Label" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox/TaskPanel/TaskDetailVbox/ProgressBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -13.5
-offset_right = -1.0
-offset_bottom = 13.5
-grow_horizontal = 0
-grow_vertical = 2
-theme = SubResource("Theme_7mwvo")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="RewardPnlcont" type="PanelContainer" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox/TaskPanel"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = -17.0
-offset_right = -12.0
-offset_bottom = 20.0
-grow_horizontal = 0
-grow_vertical = 2
-theme = SubResource("Theme_1fpef")
-
-[node name="RewardImg" type="TextureRect" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox/TaskPanel/RewardPnlcont"]
-layout_mode = 2
-texture = ExtResource("12_gteau")
-expand_mode = 1
-stretch_mode = 5
 
 [node name="TaskPanel2" parent="DailyTaskPnl/DailyTaskVbox/TaskListVbox" instance=ExtResource("9_t4wce")]
 layout_mode = 2

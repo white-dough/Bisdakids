@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Bisdakids"
 config/tags=PackedStringArray("capstone")
-run/main_scene="res://scenes/navigation/main_menu/main_menu.tscn"
+run/main_scene="res://scenes/game/level1/level_1.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
@@ -20,7 +20,8 @@ config/icon="res://icon.svg"
 
 PhpRequest="*res://phpbackend/php_request.gd"
 Game="*res://scenes/game_system/game.gd"
-Advertisment="res://advertisment/advertisment.gd"
+BannerAds="*res://advertisment/BannerAds.gd"
+InterstitialAds="*res://advertisment/InterstitialAds.gd"
 
 [display]
 
