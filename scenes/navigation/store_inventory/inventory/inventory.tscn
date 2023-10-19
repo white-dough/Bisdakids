@@ -117,7 +117,3 @@ horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
-
-[node name="ExitPressedBtn_2x" type="Sprite2D" parent="."]
-position = Vector2(-334, 528)
-texture = ExtResource("3_7vur1")

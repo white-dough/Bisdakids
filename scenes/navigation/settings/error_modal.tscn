@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0prpdk8wyrbs"]
+[gd_scene load_steps=9 format=3 uid="uid://d0prpdk8wyrbs"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_nnxlp"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/error_modal.gd" id="1_pu4a7"]
 [ext_resource type="Texture2D" uid="uid://d3va3ytqba30n" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_ged7c"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_52g2f"]
 [ext_resource type="Texture2D" uid="uid://bw2uqdibo5nvb" path="res://graphics/ui/icons/2x/error_okay_1@2x.png" id="3_ubrqc"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_ye38p"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_sdbt4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_contn"]
 texture = ExtResource("2_ged7c")
@@ -38,9 +40,10 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_contn")
 
 [node name="ErrorContentVbox" type="VBoxContainer" parent="ErrorModalPnl"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.0940767
-anchor_top = 0.121795
+anchor_top = 0.182692
 anchor_right = 0.91115
 anchor_bottom = 0.875
 alignment = 1
@@ -50,7 +53,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 theme = ExtResource("3_52g2f")
 theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0.831373, 0.0392157, 0.0235294, 1)
+theme_override_colors/font_color = Color(0.921569, 0.196078, 0.0235294, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.0705882, 0, 1)
+theme_override_fonts/font = ExtResource("5_ye38p")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -59,6 +64,7 @@ autowrap_mode = 2
 layout_mode = 2
 theme = ExtResource("3_52g2f")
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("6_sdbt4")
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
