@@ -21,20 +21,19 @@ func _on_signup_btn_pressed():
 			mainmenu_modal_node.get_child(0).queue_free()
 			mainmenu_modal_node.add_child(logged_in_scene)
 		elif PhpRequest.clean_response == "ErrPHP":
-			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("DATABASE CONNECTION UNSUCCESSFUL")
-			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Cannot establish a connection to the account processing server. Check your internet and try again.")
-			error_modal.visible = true
-		else:
-			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("SIGNUP UNSUCCESSFUL")
-			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Username already taken.")
+			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NATARUNG ANG KONEKSIYON SA DATABASE! ")
+			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Dili mahimo ang koneksiyon sa server sa pagproseso sa kani na akawnt. Susi-a sa ang imong internet ug suwayi usab.")
+			error_modal.visible = true                  
+			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
+			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Naa nay naggamit ani na username.")
 			error_modal.visible = true
 	elif !password.is_empty():
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("SIGNUP UNSUCCESSFUL")
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Password cannot be blank. Please try again.")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Ang password dili pwede na blangkohan. Palihug suwayi pag-usab.")
 		error_modal.visible = true
 	else:
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("SIGNUP UNSUCCESSFUL")
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Passwords do not match. Please try again.")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Ang mga password sa akawnt dili magkapareho. Palihug suwayi pag-usab.")
 		error_modal.visible = true
 
 
