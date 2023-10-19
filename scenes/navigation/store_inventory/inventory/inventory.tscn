@@ -115,6 +115,7 @@ vertical_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
 
+
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
 [node name="ExitPressedBtn_2x" type="Sprite2D" parent="."]
 position = Vector2(-334, 528)

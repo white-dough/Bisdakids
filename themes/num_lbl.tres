@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bot802emh10k0"]
+
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="1_pdu1u"]
+
+[resource]
+Label/colors/font_color = Color(1, 1, 0.839216, 1)
+Label/colors/font_shadow_color = Color(0.941406, 0.605469, 0.0742188, 1)
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("1_pdu1u")
