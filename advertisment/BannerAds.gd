@@ -7,6 +7,7 @@ var ad_listener := AdListener.new()
 func _ready() -> void:
 	ad_listener.on_ad_failed_to_load = _on_ad_failed_to_load
 	ad_listener.on_ad_loaded = _on_ad_loaded
+	load_banner()
 
 func load_banner() -> void:
 	if ad_view:
@@ -17,7 +18,7 @@ func load_banner() -> void:
 	var ad_request := AdRequest.new()
 	ad_view.load_ad(ad_request)
 
-func _on_destroy_banner_pressed() -> void:
+func destroy_banner() -> void:
 	if ad_view:
 		ad_view.destroy()
 		ad_view = null

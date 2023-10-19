@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var level_name : String = "level1"
 @onready var count_of_objects_to_find: int = 10
-@onready var level_time: float =  5#600 #15 minutes
+@onready var level_time: float =  600 #15 minutes
 @onready var current_objects: Array = $GameScene.current_objects
 
 @onready var star1 : float = level_time / 3
@@ -24,11 +24,10 @@ func _ready():
 	$HUD.connect("level_finished", level_completed)
 	success_prompt.visibility_changed.connect(load_interstitial_ad)
 	failed_prompt.visibility_changed.connect(load_interstitial_ad)
-	level_failed.visibility_changed.connect(level_completed)
-	level_success.visibility_changed.connect(level_completed)
+	BannerAds.destroy_banner()
 	
 func load_interstitial_ad():
-	InterstitialAds.load_interstitial()
+	InterstitialAds.load_show_interstitial()
 	
 func _process(_delta):
 	pass
@@ -48,15 +47,16 @@ func level_completed(time_left):
 		success_prompt.visible = true
 		prompt_timer.start()
 		await prompt_timer.timeout
-		if Game.progress[level_name] < time_left:
-			highscore_label.set_text(str(int(time_left)))#new highscore
-			Game.progress[level_name] = int(time_left)
+		var score: int = 5000 * (time_left / level_time)
+		if Game.progress[level_name] < score:
+			highscore_label.set_text(str(int(score)))#new highscore
+			Game.progress[level_name] = int(score)
+			Game.progress["timestamp"] = Time.get_unix_time_from_system()
 			Game.update_local_save()
 		else:
 			highscore_label.set_text(str(Game.progress[level_name]))
-		score_label.set_text(str(int(time_left)))
-		star_bar.set_max(level_time)
-		star_bar.set_value(time_left)
+		score_label.set_text(str(int(score)))
+		star_bar.set_value(score)
 		level_success.visible = true
 	else:
 		var prompt_timer : Timer = Timer.new()
@@ -66,7 +66,3 @@ func level_completed(time_left):
 		prompt_timer.start()
 		await prompt_timer.timeout
 		level_failed.visible = true
-		
-	
-	
-

@@ -12,9 +12,17 @@ func _on_back_btn_pressed():
 	mainmenu_modal_node.modal_btn_pressed(mainmenu_modal_node.settings_scene)
 
 func _on_logout_btn_pressed():
-	Game.user_name = null
-	Game.update_local_save()
+	#confirm
+	Game.reset_data()
 	for child in mainmenu_modal_node.get_children():
 		if child != error_modal:
 			child.queue_free()
 	mainmenu_modal_node.add_child(not_logged_in_scene)
+
+func _on_sync_btn_pressed():#change timestamps to now in order to be in sync with db
+	await Game.sync_data()
+	
+	
+	
+	
+	

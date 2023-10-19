@@ -13,8 +13,9 @@ func _on_login_btn_pressed():
 	PhpRequest.login(user_name, password)
 	await PhpRequest.http_request.request_completed
 	if PhpRequest.clean_response != "failed":
+		Game.reset_data()
 		Game.user_name = PhpRequest.clean_response
-		Game.update_local_save()
+		Game.sync_data()#calls the update_local_save for us
 		queue_free()
 		mainmenu_modal_node.add_child(logged_in_scene)
 	elif PhpRequest.clean_response == "ErrPHP":

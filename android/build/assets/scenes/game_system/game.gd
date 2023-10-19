@@ -1,13 +1,14 @@
 extends Node
 
 @onready var player_data_path: String = "user://player_save.dat"
-@onready var user_name = "dwight19"
-@onready var progress: Dictionary = {"level1": 0,
+@onready var user_name = null
+@onready var progress_base: Dictionary = {"level1": 0,
 									"level2": 0,
 									"level3": 0,
 									"level4": 0,
-									"level5": 0}
-@onready var user_inventory: Dictionary = {"coin" : 0, 
+									"level5": 0,
+									"timestamp":0}
+@onready var user_inventory_base: Dictionary = {"coin" : 0, 
 										"coin_timestamp": 0,
 										"energy": 0,
 										"energy_timestamp": 0,
@@ -17,7 +18,10 @@ extends Node
 										"hint_timestamp": 0,
 										"time_freeze": 0,
 										"time_freeze_timestamp": 0}
-@onready var daily_task: Dictionary = {}
+@onready var daily_task_base: Dictionary = {}
+@onready var progress: Dictionary = progress_base
+@onready var user_inventory: Dictionary = user_inventory_base
+@onready var daily_task: Dictionary = daily_task_base
 @onready var current_date : Dictionary = {}
 @onready var loaded_player_data : Dictionary = {}
 @onready var http_request : HTTPRequest = HTTPRequest.new()
@@ -123,6 +127,29 @@ func query_update():
 				PhpRequest.update_user_inventory(user_name, user_inventory)
 				await PhpRequest.http_request.request_completed
 
+func sync_data():
+	var inventory_timestamps: Array = []
+	var inventory_timestamp_max: float
+	var progress_timestamp: float = float(Game.progress["timestamp"])
+	var inventory_items: Dictionary = {}
+	var progress_scores: Dictionary = Game.progress.duplicate()
+	progress_scores.erase("timestamp")
+	for key in Game.user_inventory:
+		if key.contains("_timestamp"):
+			inventory_timestamps.append(float(Game.user_inventory[key]))
+		else:
+			inventory_items[key] = Game.user_inventory[key]
+	inventory_timestamp_max = inventory_timestamps.max()
+	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
+	PhpRequest.sync_data(Game.user_name, timestamp, inventory_items, progress_scores)
+	await PhpRequest.http_request.request_completed
+	if PhpRequest.clean_response != "db_updated":
+		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
+		Game.user_inventory =  result["user_inventory"]
+		Game.progress = result["account_progress"]
+		Game.daily_task_reset()
+		Game.update_local_save()
+
 func progress_update(level : String, score : int):
 	if progress[level] > score:
 		return
@@ -130,9 +157,32 @@ func progress_update(level : String, score : int):
 	PhpRequest.update_account_progress(user_name, int(level), score)
 	await PhpRequest.http_request.request_completed
 
+func reset_data():
+	Game.user_name = null
+	Game.user_inventory = user_inventory_base 
+	Game.progress = progress_base
+	Game.daily_task = daily_task_base
+	update_local_save()
+
 func update_local_save():
+	daily_task_logic()
 	save_data()
 	load_data()
+
+func daily_task_from_db():
+	PhpRequest.get_dailyTasks()
+	await PhpRequest.http_request.request_completed
+	if PhpRequest.clean_response != "BISDAKIDS_API_DOWN":
+		var file = FileAccess.open("res://data/daily_task.json", FileAccess.WRITE)
+		var formattedData = {}
+		for data in PhpRequest.clean_response:
+			var title = data["task_title"]
+			formattedData[title] = {}
+			for key in data:
+				if key != "task_title":
+					formattedData[title][key] = data[key]
+		file.store_line(JSON.stringify(formattedData, "\t"))
+		file.close()
 
 func _ready():
 	http_request.timeout = 3
@@ -140,7 +190,7 @@ func _ready():
 	http_request.connect("request_completed", _on_request_completed)
 	load_data()
 	print(loaded_player_data)
-#	await query_update()
+	await daily_task_from_db()
 	daily_task_logic()#timer
 #	print(user_inventory)
 	
@@ -161,6 +211,43 @@ func _ready():
 #	check_is_connected_internet()
 #	var test = {"progress" : progress}
 #	print(create_data())
+
+
+func texture_logic(item_name:String)->Texture2D:
+	match(item_name):
+		"time_freeze":
+			return load("res://graphics/store_items/TimeFreeze_3.png")
+		"hint":
+			return load("res://graphics/store_items/hint@2x.png")
+		"energy":
+			return load("res://graphics/store_items/Energy_3.png")
+		"coin":
+			return load("res://graphics/ui/icons/coins_icon@2x.png")
+		_:
+			return load("res://graphics/store_items/mystery@2x.png")
+
+func name_logic(item_name:String)->String:
+	match(item_name):
+		"time_freeze":
+			return "Time Freeze"
+		"hint":
+			return "Hint"
+		"energy":
+			return "Energy"
+		_:
+			return "Mystery Bundle"
+
+func reverse_name_logic(item_name:String)->String:
+	match(item_name):
+		"Time Freeze":
+			return "time_freeze"
+		"Hint":
+			return "hint"
+		"Energy":
+			return "energy"
+		_:
+			return "Mystery Bundle"
+
 
 func _process(_delta):#change to timerrrrr
 #	load_data()
