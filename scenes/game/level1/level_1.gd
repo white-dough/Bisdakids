@@ -24,6 +24,7 @@ func _ready():
 	$HUD.connect("level_finished", level_completed)
 	success_prompt.visibility_changed.connect(load_interstitial_ad)
 	failed_prompt.visibility_changed.connect(load_interstitial_ad)
+	BannerAds.destroy_banner()
 	
 func load_interstitial_ad():
 	InterstitialAds.load_show_interstitial()
@@ -50,6 +51,7 @@ func level_completed(time_left):
 		if Game.progress[level_name] < score:
 			highscore_label.set_text(str(int(score)))#new highscore
 			Game.progress[level_name] = int(score)
+			Game.progress["timestamp"] = Time.get_unix_time_from_system()
 			Game.update_local_save()
 		else:
 			highscore_label.set_text(str(Game.progress[level_name]))

@@ -1,11 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://0eydf88xrmc"]
+[gd_scene load_steps=17 format=3 uid="uid://0eydf88xrmc"]
 
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/loggedIn.gd" id="1_g8pob"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_r784m"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_dtkw6"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_kscbx"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_r5q4x"]
-[ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="5_wgt6t"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="5_wgt6t"]
+[ext_resource type="Texture2D" uid="uid://qf38k4sw4dqa" path="res://graphics/ui/buttons/2x/sych_btn@2x.png" id="7_i3x7v"]
+[ext_resource type="Texture2D" uid="uid://bnsq0yd6y5ya5" path="res://graphics/ui/icons/logout_btn@2x.png" id="8_lg31x"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkuea"]
 content_margin_left = 7.0
@@ -150,9 +152,20 @@ theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="LogoutBtn" type="TextureButton" parent="LoggedInPnl/ContentVBox"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LoggedInPnl/ContentVBox"]
 layout_mode = 2
-size_flags_horizontal = 0
+
+[node name="SyncBtn" type="TextureButton" parent="LoggedInPnl/ContentVBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+texture_normal = ExtResource("7_i3x7v")
+
+[node name="LogoutBtn" type="TextureButton" parent="LoggedInPnl/ContentVBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture_normal = ExtResource("8_lg31x")
 
 [connection signal="pressed" from="LoggedInPnl/BackBtn" to="." method="_on_back_btn_pressed"]
-[connection signal="pressed" from="LoggedInPnl/ContentVBox/LogoutBtn" to="." method="_on_logout_btn_pressed"]
+[connection signal="pressed" from="LoggedInPnl/ContentVBox/HBoxContainer/SyncBtn" to="." method="_on_sync_btn_pressed"]
+[connection signal="pressed" from="LoggedInPnl/ContentVBox/HBoxContainer/LogoutBtn" to="." method="_on_logout_btn_pressed"]

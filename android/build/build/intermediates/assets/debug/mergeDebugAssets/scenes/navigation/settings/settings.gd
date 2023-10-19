@@ -26,6 +26,8 @@ func _on_close_btn_pressed():
 
 func _on_account_btn_pressed():
 	var scene_to_render = not_logged_in_scene if Game.user_name == null else logged_in_scene
-#	mainmenu_modal_node.get_child(0).queue_free()
 	queue_free()
 	mainmenu_modal_node.add_child(scene_to_render)
+
+func _on_sync_btn_pressed():
+	pass # Replace with function body.

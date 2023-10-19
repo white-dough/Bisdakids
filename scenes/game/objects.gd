@@ -4,11 +4,17 @@ signal object_found_signal(object_name)
 
 
 @onready var current_objects: Array = []; var count_of_objects_to_find: int; var selected_objects: Array; var history_current_objects: Array = []
+var click_abuse_counter: int
+var click_abuse_max: int = 5
 
 func _on_level_1_ready():
 	count_of_objects_to_find = $"..".count_of_objects_to_find
 	selected_objects = select_random_elements(count_of_objects_to_find)
 	populate_current_objects(null)
+	var click_abuse_reset_timer: Timer = Timer.new(); click_abuse_reset_timer.wait_time = 3;
+	add_child(click_abuse_reset_timer)
+	click_abuse_reset_timer.start()
+	click_abuse_reset_timer.timeout.connect(reset_click_abuse_counter)
 
 #Function to randomly select the objects to be found in the level
 func select_random_elements(count: int) -> Array:
@@ -67,10 +73,18 @@ func _unhandled_input(event):
 			for result in results:
 				if result.is_greater_than(object_found):
 					object_found = result
+		#if the objectclicked is what we are looking for, vs if the object is not included
 		if object_found.is_visible_in_tree() && object_found in current_objects:
 			#animate, remove from current objects, remove label, replace label
 			object_found_signal.emit(object_found)
 			populate_current_objects(object_found)
+		else:
+			click_abuse_counter += 1
+			if click_abuse_counter > click_abuse_max:
+				print("stop!")
+
+func reset_click_abuse_counter():
+	click_abuse_counter = 0
 			
 #func _process(delta):
 #	print(selected_objects)
