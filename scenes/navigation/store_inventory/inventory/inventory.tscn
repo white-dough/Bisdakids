@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://scenes/navigation/store_inventory/inventory/inventory.gd" id="1_43hdf"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_cj777"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="3_7vur1"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_e86lj"]
-[ext_resource type="Texture2D" uid="uid://bnir703lyq6mf" path="res://graphics/ui/icons/lively_store_3@2x.png" id="3_qk5id"]
-[ext_resource type="Texture2D" uid="uid://j0p520iqbx5w" path="res://graphics/ui/icons/lively_roof@2x.png" id="4_x7qfl"]
+[ext_resource type="Texture2D" uid="uid://c12secd50gxjn" path="res://graphics/ui/icons/lively_store_3@2x.png" id="3_qk5id"]
+[ext_resource type="Texture2D" uid="uid://xheifgna20r1" path="res://graphics/ui/icons/lively_roof@2x.png" id="4_x7qfl"]
 [ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="5_4aijb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10gmb"]
@@ -42,6 +43,8 @@ offset_bottom = -288.69
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_e86lj")
+texture_pressed = ExtResource("3_7vur1")
+stretch_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="ItemList" type="Control" parent="."]
@@ -113,3 +116,6 @@ clip_text = true
 text_overrun_behavior = 1
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[node name="ExitPressedBtn_2x" type="Sprite2D" parent="."]
+position = Vector2(-334, 528)
+texture = ExtResource("3_7vur1")

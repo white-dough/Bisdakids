@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_34rfk"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/login.gd" id="1_derfu"]
-[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_mkmfo"]
+[ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_mkmfo"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_1xypj"]
-[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="4_k3e5g"]
-[ext_resource type="Texture2D" uid="uid://bq6mj67xqc371" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="6_lma8w"]
+[ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="4_k3e5g"]
+[ext_resource type="Texture2D" uid="uid://b17c7uvlkdtd5" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="6_lma8w"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="7_03x1f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71lv0"]

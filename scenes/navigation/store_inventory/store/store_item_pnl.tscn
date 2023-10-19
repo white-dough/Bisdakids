@@ -1,65 +1,35 @@
-[gd_scene load_steps=15 format=3 uid="uid://bn86tmqf6yuwi"]
+[gd_scene load_steps=17 format=3 uid="uid://bn86tmqf6yuwi"]
 
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="1_11kqy"]
+[ext_resource type="Texture2D" uid="uid://dxrt7yejdoy2x" path="res://graphics/ui/store/2x/test@2x.png" id="1_htapu"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="2_7gpmh"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="2_w0vnu"]
+[ext_resource type="Texture2D" uid="uid://xr7l0lq4wu2s" path="res://graphics/ui/store/2x/amount_lbl_1@2x.png" id="3_q772l"]
+[ext_resource type="Texture2D" uid="uid://cei1fd8w524b6" path="res://graphics/ui/store/2x/name_lbl@2x.png" id="5_m37yx"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44ww8"]
-content_margin_bottom = 8.0
-bg_color = Color(0.992157, 0.921569, 0.678431, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-expand_margin_left = 8.0
-expand_margin_top = 8.0
-expand_margin_right = 8.0
-expand_margin_bottom = 8.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4s03"]
+texture = ExtResource("1_htapu")
 
 [sub_resource type="Theme" id="Theme_athn7"]
-Panel/styles/panel = SubResource("StyleBoxFlat_44ww8")
+Panel/styles/panel = SubResource("StyleBoxTexture_p4s03")
 
-[sub_resource type="FontVariation" id="FontVariation_hmw7t"]
-base_font = ExtResource("1_11kqy")
-variation_embolden = 0.55
-spacing_glyph = -1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0h81"]
-bg_color = Color(0.603922, 0.552941, 0.835294, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_su21f"]
+texture = ExtResource("3_q772l")
 
 [sub_resource type="Theme" id="Theme_ohlfc"]
-Label/colors/font_color = Color(0.980392, 0.85098, 0.396078, 1)
+Label/colors/font_color = Color(0.976471, 0.984314, 0.988235, 1)
 Label/colors/font_shadow_color = Color(0.0745098, 0.0745098, 0.0745098, 0.482353)
-Label/font_sizes/font_size = 12
-Label/fonts/font = SubResource("FontVariation_hmw7t")
-Label/styles/normal = SubResource("StyleBoxFlat_d0h81")
+Label/font_sizes/font_size = 13
+Label/fonts/font = ExtResource("1_11kqy")
+Label/styles/normal = SubResource("StyleBoxTexture_su21f")
 
-[sub_resource type="FontVariation" id="FontVariation_0cnlk"]
-base_font = ExtResource("1_11kqy")
-variation_embolden = 0.01
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqxbk"]
-bg_color = Color(0.882353, 0.556863, 0.145098, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.0196078, 0.0196078, 0.0196078, 0.137255)
-border_blend = true
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c37a8"]
+texture = ExtResource("5_m37yx")
 
 [sub_resource type="Theme" id="Theme_epqlw"]
 Label/colors/font_shadow_color = Color(0, 0, 0, 0.329412)
-Label/font_sizes/font_size = 9
-Label/fonts/font = SubResource("FontVariation_0cnlk")
-Label/styles/normal = SubResource("StyleBoxFlat_xqxbk")
+Label/fonts/font = ExtResource("2_7gpmh")
+Label/styles/normal = SubResource("StyleBoxTexture_c37a8")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxta4"]
 
@@ -73,6 +43,8 @@ Label/styles/normal = SubResource("StyleBoxFlat_xqxbk")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 129.0
+offset_bottom = 122.0
 size_flags_horizontal = 6
 size_flags_vertical = 0
 
@@ -82,6 +54,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 46.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -94,15 +68,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 5
 
 [node name="PriceLbl" type="Label" parent="MarginContainer/StoreItemPnl/DetailVbox"]
 custom_minimum_size = Vector2(0, 22.5)
 layout_mode = 2
-size_flags_vertical = 1
+size_flags_vertical = 8
 theme = SubResource("Theme_ohlfc")
+theme_override_fonts/font = ExtResource("2_7gpmh")
 text = "10,000 coins"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -122,29 +101,41 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -40.0
-offset_bottom = 23.0
+offset_right = -1.0
+offset_bottom = 29.0
 grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0.560784, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("2_7gpmh")
+theme_override_font_sizes/font_size = 24
+text = "12"
 horizontal_alignment = 2
 
 [node name="ItemNameLbl" type="Label" parent="MarginContainer/StoreItemPnl"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -2.5
-offset_right = 2.5
-offset_bottom = 17.0
+anchor_left = 0.527
+anchor_top = 1.03
+anchor_right = 0.527
+anchor_bottom = 1.03
+offset_left = -66.225
+offset_top = -19.29
+offset_right = 54.775
+offset_bottom = 17.71
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 1
 theme = SubResource("Theme_epqlw")
+theme_override_font_sizes/font_size = 16
 text = "Mystery Bundle"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+metadata/_edit_group_ = true
 
 [node name="StoreItem" type="Button" parent="."]
 custom_minimum_size = Vector2(100, 100)
