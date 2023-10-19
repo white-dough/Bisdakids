@@ -19,12 +19,12 @@ func _on_login_btn_pressed():
 		queue_free()
 		mainmenu_modal_node.add_child(logged_in_scene)
 	elif PhpRequest.clean_response == "ErrPHP":
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("DATABASE CONNECTION UNSUCCESSFUL")
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Cannot establish a connection to the account processing server. Check your internet and try again.")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NATARUNG ANG KONEKSIYON SA DATABASE!")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Dili mahimo ang koneksiyon sa server sa pagproseso sa kani na akawnt. Susi-a sa ang imong internet ug balik usab.")
 		error_modal.visible = true
 	else:
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("LOGIN UNSUCCESSFUL")
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Account credentials do not match. Please try again.")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("DILI MAKASULOD SA AKAWNT")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Ang mga kredensiyal sa akawnt dili magkapareho. Palihug suwayi pag-usab.")
 		error_modal.visible = true
 #	print("hello")
 

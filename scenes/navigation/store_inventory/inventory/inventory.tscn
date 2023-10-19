@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxdonp7d1oqc6"]
+[gd_scene load_steps=10 format=3 uid="uid://cxdonp7d1oqc6"]
 
 [ext_resource type="Script" path="res://scenes/navigation/store_inventory/inventory/inventory.gd" id="1_43hdf"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_cj777"]
@@ -115,8 +115,8 @@ vertical_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
 
-
-[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
 [node name="ExitPressedBtn_2x" type="Sprite2D" parent="."]
 position = Vector2(-334, 528)
 texture = ExtResource("3_7vur1")
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

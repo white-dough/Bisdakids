@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0prpdk8wyrbs"]
+[gd_scene load_steps=12 format=3 uid="uid://d0prpdk8wyrbs"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_nnxlp"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/error_modal.gd" id="1_pu4a7"]
@@ -6,10 +6,19 @@
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_52g2f"]
 [ext_resource type="Texture2D" uid="uid://bw2uqdibo5nvb" path="res://graphics/ui/icons/2x/error_okay_1@2x.png" id="3_ubrqc"]
 [ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_ye38p"]
-[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_sdbt4"]
+[ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="6_gu18a"]
+[ext_resource type="Texture2D" uid="uid://dxcrf0vq4xcby" path="res://graphics/ui/buttons/2x/okayPressed_btn@2x.png" id="9_so43t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_contn"]
 texture = ExtResource("2_ged7c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcow4"]
+texture = ExtResource("6_gu18a")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rb6le"]
+content_margin_top = 10.0
 
 [node name="ErrorModal" type="CanvasLayer"]
 layer = 3
@@ -43,9 +52,9 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_contn")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0940767
-anchor_top = 0.182692
+anchor_top = 0.153846
 anchor_right = 0.91115
-anchor_bottom = 0.875
+anchor_bottom = 0.900641
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -53,9 +62,12 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 theme = ExtResource("3_52g2f")
 theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0.921569, 0.196078, 0.0235294, 1)
+theme_override_colors/font_color = Color(0.843137, 0.207843, 0.152941, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.0705882, 0, 1)
 theme_override_fonts/font = ExtResource("5_ye38p")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_wcow4")
+text = "WALA NATARUNG ANG KONEKSIYON SA DATABASE"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -64,8 +76,10 @@ autowrap_mode = 2
 layout_mode = 2
 theme = ExtResource("3_52g2f")
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_fonts/font = ExtResource("6_sdbt4")
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("5_ye38p")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rb6le")
+text = "Dili mahimo ang koneksiyon sa server sa pagproseso sa kani na akawnt. Susi-a sa ang imong internet ug suwayi usab."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -75,6 +89,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
 texture_normal = ExtResource("3_ubrqc")
-stretch_mode = 5
+texture_pressed = ExtResource("9_so43t")
+stretch_mode = 3
 
 [connection signal="pressed" from="ErrorModalPnl/ErrorContentVbox/OkBtn" to="." method="_on_ok_btn_pressed"]
