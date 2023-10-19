@@ -72,18 +72,21 @@ func get_user_progress(user_name : String):
 	var command = "get_user_progress"
 	var data = {"user_name" : user_name}
 	request_queue.push_back({"command" : command, "data" : data});
-func update_user_progress(user_name : String, user_progress : Dictionary):#item_id: int, quantity: int
-	var command = "update_user_inventory"
-	var data = {"user_name" : user_name}
-	for progress in user_progress:
-		data[progress] = user_progress[progress]
-	request_queue.push_back({"command" : command, "data" : data});
-
 func update_account_progress(user_name : String, level : int, highscore: int):
 	var command = "update_account_progress"
 	var data = {"user_name": user_name,"level_id": level, "highscore": highscore}
 	request_queue.push_back({"command" : command, "data" : data});
-	
+
+func get_dailyTasks():
+	var command = "get_dailyTasks"
+	var data = {}
+	request_queue.push_back({"command" : command, "data" : data});
+
+func sync_data(user_name : String, timestamp : float, user_inventory: Dictionary, account_progress: Dictionary):
+	var command = "sync_data"
+	var data = {"user_name": user_name,"timestamp": timestamp, "user_inventory": user_inventory, "account_progress": account_progress}
+	request_queue.push_back({"command" : command, "data" : data});
+
 func _http_request_completed(result, _response_code, _headers, body):
 	is_requesting = false
 	if result != HTTPRequest.RESULT_SUCCESS:
@@ -91,9 +94,15 @@ func _http_request_completed(result, _response_code, _headers, body):
 		clean_response = "ErrPHP"
 		return
 	var response_body = body.get_string_from_utf8()
+	var response
+	if not response:
+		printerr("BISDAKIDS API IS DOWN: ")
+		clean_response = "BISDAKIDS_API_DOWN"
+		return
 	# Grab our JSON and handle any errors reported by our PHP code:
-	var response = JSON.parse_string(response_body)
+	response = JSON.parse_string(response_body)
 #	print(response['error'])
+	
 	if response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
@@ -104,7 +113,7 @@ func request_saving(response):
 	match response['command']:
 		"login":
 			if response['response']['query'] == "success":
-				clean_response = response['response']['0']['user_name']
+				clean_response = response['response']['user_name']
 			else:
 				clean_response = "failed"
 		"register":
@@ -142,4 +151,14 @@ func request_saving(response):
 				clean_response = "success"
 			else:
 				clean_response = "failed"
+		"sync_data":
+			if response['response'].has("progress_update") or response['response'].has("inventory_update"):
+				clean_response = "db_updated"
+			else:
+				clean_response = str(response['response'])
+		"get_dailyTasks":
+			if typeof(response['response']) == TYPE_STRING:
+				clean_response = [response['response']]
+			else:
+				clean_response = response['response']
 #	print(clean_response)

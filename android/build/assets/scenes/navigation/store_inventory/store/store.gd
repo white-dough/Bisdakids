@@ -26,8 +26,8 @@ func _ready():
 		bundle_id.set_text(str(PhpRequest.clean_response[i]['bundle_id']))
 		price.set_text(str(PhpRequest.clean_response[i]['price_coin']) + " coins")
 		quantity.set_text("x" + str(PhpRequest.clean_response[i]['bundle_quantity']))
-		item_name.set_text(name_logic(PhpRequest.clean_response[i]['item_name']))
-		image.set_texture(texture_logic((PhpRequest.clean_response[i]['item_name'])))
+		item_name.set_text(Game.name_logic(PhpRequest.clean_response[i]['item_name']))
+		image.set_texture(Game.texture_logic((PhpRequest.clean_response[i]['item_name'])))
 	for item in child_item_array:
 		var purchase_details: Dictionary = {"bundle_id" = int(item.get_node('BundleId').get_text()),
 											"item_name" = item.get_node("MarginContainer/StoreItemPnl/ItemNameLbl").get_text(),
@@ -44,7 +44,7 @@ func purchase_item(purchase_details: Dictionary):
 		return
 	Game.user_inventory['coin'] = int(Game.user_inventory['coin']) - purchase_details['price']
 	Game.user_inventory['coin_timestamp'] = Time.get_unix_time_from_system()
-	var item_name : String = reverse_name_logic(purchase_details['item_name'])
+	var item_name : String = Game.reverse_name_logic(purchase_details['item_name'])
 	Game.user_inventory[item_name] = int(Game.user_inventory[item_name]) + purchase_details['quantity']
 	Game.user_inventory[item_name + '_timestamp'] = Time.get_unix_time_from_system()
 	Game.update_local_save()
@@ -52,38 +52,7 @@ func purchase_item(purchase_details: Dictionary):
 	Game.record_purchase(purchase_details['bundle_id'])
 	print(Game.user_inventory)
 
-func texture_logic(item_name:String)->Texture2D:
-	match(item_name):
-		"time_freeze":
-			return load("res://graphics/store_items/TimeFreeze_3.png")
-		"hint":
-			return load("res://graphics/store_items/hint@2x.png")
-		"energy":
-			return load("res://graphics/store_items/Energy_3.png")
-		_:
-			return load("res://graphics/store_items/mystery@2x.png")
 
-func name_logic(item_name:String)->String:
-	match(item_name):
-		"time_freeze":
-			return "Time Freeze"
-		"hint":
-			return "Hint"
-		"energy":
-			return "Energy"
-		_:
-			return "Mystery Bundle"
-
-func reverse_name_logic(item_name:String)->String:
-	match(item_name):
-		"Time Freeze":
-			return "time_freeze"
-		"Hint":
-			return "hint"
-		"Energy":
-			return "energy"
-		_:
-			return "Mystery Bundle"
 
 func _on_close_btn_pressed():
 	queue_free()

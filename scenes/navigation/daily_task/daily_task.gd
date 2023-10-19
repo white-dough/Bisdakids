@@ -44,9 +44,12 @@ extends CanvasLayer
 @onready var RewardBtn3: TextureButton = task_node3.get_node("../RewardPnlcont/RewardBtn")
 @onready var reward_buttons: Array = [RewardBtn1, RewardBtn2, RewardBtn3]
 
+@onready var ClaimFlag1: CheckButton = task_node1.get_node("ClaimFlag")
+@onready var ClaimFlag2: CheckButton = task_node2.get_node("ClaimFlag")
+@onready var ClaimFlag3: CheckButton = task_node3.get_node("ClaimFlag")
+@onready var claim_flags: Array = [ClaimFlag1, ClaimFlag2, ClaimFlag3]
+
 @onready var test = load("res://graphics/ui/icons/2x/victoryTriumph_1@2x.png")
-
-
 
 var task_title : Array = []
 var taskdescs : Array = []
@@ -58,36 +61,35 @@ func _ready():
 	Game.daily_task_logic()
 	#first loop deals with the task titles (including unix timestamp). 
 #	the second deals with the TAsk title labels
-	for bar in task_bars:
-		bar.connect("value_changed", set_labels.bind(bar))
 	for x in Game.daily_task:
 		if x == "unix_datestamp":
 			break
 		task_title.append(x)
-	set_labels(null, null)
+	set_labels()
 	for button in reward_buttons:
 #		print(button.get_name())
 		button.connect("pressed", claim_attempt.bind(int(str(button.name))))
+		
+	
 
 	
-func set_labels(value, task_bar):
-	if value == null:
-		for i in task_title.size():
-			var task_iterate = Game.daily_task[task_title[i]]
-			title_labels[i].set_text(str(task_title[i]))
-			desc_labels[i].set_text(str(task_iterate["task_desc"]))
-			reward_quantity_labels[i].set_text(str("x" ,task_iterate["reward_quantity"]))
-			reward_labels[i].set_text(str(task_iterate["reward"]))
-			task_imgs[i].set_texture(Game.texture_logic(task_iterate["reward"]))
-			task_bars[i].set_max(task_iterate["goal"])
-			task_bars[i].set_value(task_iterate["progress"])
-			reward_buttons[i].set_name(str(i))
+func set_labels():
+	for i in task_title.size():
+		var task_iterate = Game.daily_task[task_title[i]]
+		title_labels[i].set_text(str(task_title[i]))
+		desc_labels[i].set_text(str(task_iterate["task_desc"]))
+		reward_quantity_labels[i].set_text(str("x" ,task_iterate["reward_quantity"]))
+		reward_labels[i].set_text(str(task_iterate["reward"]))
+		task_imgs[i].set_texture(Game.texture_logic(task_iterate["reward"]))
+		task_bars[i].set_max(float(task_iterate["goal"]))
+		print(task_iterate)
+		task_bars[i].set_value(task_iterate["progress"])
+		reward_buttons[i].set_name(str(i))
 #			print(reward_buttons[i].get_name())
-			task_bar_labels[i].set_text(str(task_iterate["progress"] , " out of " , task_iterate["goal"]))
-	else:
-		var task_bar_label = task_bar.get_node("ProgressLbl").get_text()
-		var split_str = task_bar_label.split(" ", true, 1)
-		task_bar.get_node("ProgressLbl").set_text(str(value ," ", split_str[1]))
+		task_bar_labels[i].set_text(str(task_iterate["progress"] , " out of " , task_iterate["goal"]))
+#	var task_bar_label = task_bar.get_node("ProgressLbl").get_text()
+#	var split_str = task_bar_label.split(" ", true, 1)
+#	task_bar.get_node("ProgressLbl").set_text(str(value ," ", split_str[1]))
 
 #		task_desc = task["task_desc"]
 #		reward = task_name["reward"]
@@ -104,12 +106,18 @@ func set_labels(value, task_bar):
 #		})
 func claim_attempt(task_clicked_index: int):
 #	print(task_clicked_index)
-	if task_bars[task_clicked_index].get_value() < task_bars[task_clicked_index].get_max():
-		print("not finished")
+	if task_bars[task_clicked_index].get_value() < task_bars[task_clicked_index].get_max() or claim_flags[task_clicked_index].button_pressed:
+		print("not finished or already claimed")
 		return#shakevibrate bar
+	reward_buttons[task_clicked_index].disabled = true
 	Game.user_inventory[reward_labels[task_clicked_index].get_text()] += int(reward_quantity_labels[task_clicked_index].get_text())
 	Game.update_local_save()
 	#verification if task is done
 	#reward
 	#change bar to buttond disabled = empty
 	#img changechange in dt json
+
+
+
+func _on_close_btn_pressed():
+	queue_free()

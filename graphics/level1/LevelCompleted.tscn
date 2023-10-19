@@ -1,19 +1,19 @@
-[gd_scene load_steps=22 format=3 uid="uid://isaei0k0sfmp"]
+[gd_scene load_steps=21 format=3 uid="uid://isaei0k0sfmp"]
 
+
+[ext_resource type="Script" path="res://graphics/level1/LevelCompleted.gd" id="1_141ol"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v7crd"]
-[ext_resource type="Texture2D" uid="uid://73g6vpc563kp" path="res://graphics/ui/icons/2x/emptyStar_sample@2x.png" id="3_ersfb"]
-[ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
+[ext_resource type="Texture2D" uid="uid://byxlsctg5cfnf" path="res://graphics/ui/icons/2x/emptyStar_sample@2x.png" id="3_ersfb"]
+[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_dahf4"]
 [ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="5_1qr8m"]
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="6_cor30"]
+
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_wwfku"]
 [ext_resource type="Theme" uid="uid://bukmbrgwy0i5j" path="res://themes/lbl.tres" id="8_6y1ao"]
-[ext_resource type="Texture2D" uid="uid://x7ih84wg0jtf" path="res://graphics/ui/icons/2x/energy_reward@2x.png" id="8_jpgvi"]
-[ext_resource type="Texture2D" uid="uid://kj64paekvu60" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="8_k12ec"]
-[ext_resource type="Texture2D" uid="uid://b5xmy5ajwtrtl" path="res://graphics/ui/icons/2x/coin_reward@2x.png" id="9_p0qhq"]
-[ext_resource type="Texture2D" uid="uid://bwhkeunurmh4k" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="10_rwp65"]
-[ext_resource type="Texture2D" uid="uid://dci2npfupxpfg" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
-[ext_resource type="Texture2D" uid="uid://wg68xbqo5g0w" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
+[ext_resource type="Texture2D" uid="uid://cq7d5vs1fv2k0" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="8_k12ec"]
+[ext_resource type="Texture2D" uid="uid://uljp8be4ph1o" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="10_rwp65"]
+[ext_resource type="Texture2D" uid="uid://dcrt2hwtjktgj" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
+[ext_resource type="Texture2D" uid="uid://pydd4sr6mtno" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -35,30 +35,8 @@ expand_margin_bottom = 5.0
 [sub_resource type="Theme" id="Theme_eqeqb"]
 Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r1gq2"]
-texture = ExtResource("8_jpgvi")
-texture_margin_left = 2.0
-expand_margin_left = 23.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 8.0
-
-[sub_resource type="Theme" id="Theme_yapjl"]
-default_font = ExtResource("7_wwfku")
-Label/colors/font_color = Color(1, 0.976471, 0.709804, 1)
-Label/colors/font_outline_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
-Label/constants/outline_size = 1
-Label/styles/normal = SubResource("StyleBoxTexture_r1gq2")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fe3wx"]
-texture = ExtResource("9_p0qhq")
-texture_margin_left = 2.0
-expand_margin_left = 23.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 8.0
-
 [node name="LevelCompleted" type="CanvasLayer"]
+script = ExtResource("1_141ol")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -134,7 +112,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/shadow_outline_size = 2
 theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("6_cor30")
+theme_override_fonts/font = ExtResource("7_wwfku")
 theme_override_font_sizes/font_size = 35
 text = "Nahuman ang Lebel"
 
@@ -155,19 +133,22 @@ theme_override_constants/separation = 14
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ModalPanel/Content_Container"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/separation = 40
 
 [node name="HighscoreTxtLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_wwfku")
 theme_override_font_sizes/font_size = 24
-text = "Kinatibuk-ang Iskor"
+text = "Kinadak-ang Puntos :"
 
 [node name="HighscoreLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
+size_flags_horizontal = 8
 theme = ExtResource("8_6y1ao")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_wwfku")
@@ -180,15 +161,18 @@ theme_override_constants/separation = 40
 
 [node name="ScoreTxtLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
 layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_wwfku")
 theme_override_font_sizes/font_size = 24
-text = "Imong Puntos"
+text = "Imong Puntos :"
 
 [node name="ScoreLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
+size_flags_horizontal = 10
 theme = ExtResource("8_6y1ao")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_wwfku")
@@ -198,29 +182,6 @@ text = "2345678"
 [node name="HBoxContainer3" type="HBoxContainer" parent="ModalPanel/Content_Container"]
 layout_mode = 2
 theme_override_constants/separation = 60
-
-[node name="Reward" type="Label" parent="ModalPanel/Content_Container/HBoxContainer3"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_wwfku")
-theme_override_font_sizes/font_size = 24
-text = "Premyo"
-
-[node name="energy_lbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer3"]
-custom_minimum_size = Vector2(60, 30)
-layout_mode = 2
-theme = SubResource("Theme_yapjl")
-text = "10"
-vertical_alignment = 1
-
-[node name="coin_lbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer3"]
-custom_minimum_size = Vector2(60, 30)
-layout_mode = 2
-theme = SubResource("Theme_yapjl")
-theme_override_styles/normal = SubResource("StyleBoxTexture_fe3wx")
-text = "12"
-vertical_alignment = 1
 
 [node name="Btn_Container" type="HBoxContainer" parent="ModalPanel"]
 layout_mode = 1
@@ -236,15 +197,18 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 45
 
-[node name="Home_btn" type="TextureButton" parent="ModalPanel/Btn_Container"]
+[node name="MapBtn" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
 texture_normal = ExtResource("8_k12ec")
 
-[node name="TextureButton2" type="TextureButton" parent="ModalPanel/Btn_Container"]
+[node name="NextBtn" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
 texture_normal = ExtResource("11_k2exo")
 
-[node name="TextureButton3" type="TextureButton" parent="ModalPanel/Btn_Container"]
+[node name="PlayagainBtn" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 texture_normal = ExtResource("12_ptc0x")
+
+[connection signal="pressed" from="ModalPanel/Btn_Container/MapBtn" to="." method="_on_map_btn_pressed"]
+[connection signal="pressed" from="ModalPanel/Btn_Container/PlayagainBtn" to="." method="_on_playagain_btn_pressed"]
