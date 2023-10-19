@@ -1,22 +1,30 @@
 {
-	"Energy Spend" : {"task_desc": "Use 50 energy points.",
-					"reward": "coin",
-					"reward_quantity": 5,
-					"progress": 0,
-					"goal": 50},
-	"Detective" : {"task_desc": "Find 15 hidden objects.",
-					"reward": "coin",
-					"reward_quantity": 8,
-					"progress": 0,
-					"goal": 15},
-	"Score" : {"task_desc": "Collect 5000 score points.",
-					"reward": "coin",
-					"reward_quantity": 15,
-					"progress": 0,
-					"goal": 5000},
-	"Level Finish" : {"task_desc": "Finish a level.",
-					"reward": "coin",
-					"reward_quantity": 10,
-					"progress": 0,
-					"goal": 1}
+	"Detective": {
+		"goal": "15",
+		"reward": "coin",
+		"reward_quantity": "8",
+		"task_desc": "Find 15 hidden objects.",
+		"task_id": "30"
+	},
+	"Energy Spend": {
+		"goal": "50",
+		"reward": "coin",
+		"reward_quantity": "5",
+		"task_desc": "Use 50 energy points.",
+		"task_id": "29"
+	},
+	"Level Finish": {
+		"goal": "1",
+		"reward": "coin",
+		"reward_quantity": "10",
+		"task_desc": "Finish a level.",
+		"task_id": "32"
+	},
+	"Score": {
+		"goal": "5000",
+		"reward": "coin",
+		"reward_quantity": "15",
+		"task_desc": "Collect 5000 score points.",
+		"task_id": "31"
+	}
 }

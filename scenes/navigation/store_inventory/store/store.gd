@@ -14,26 +14,27 @@ func _ready():
 	var child_item_array : Array = []
 	PhpRequest.store_query()
 	await PhpRequest.http_request.request_completed
-	for i in PhpRequest.clean_response.size():
-		var item_scene : Control  = load("res://scenes/navigation/store_inventory/store/store_item_pnl.tscn").instantiate()
-		child_item_array.append(item_scene)
-		$Store/ItemList/ItemPnl/ItemGrid.add_child(child_item_array[i])
-		var price : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/PriceLbl')
-		var image : TextureRect  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/ItemImg')
-		var quantity : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/ItemImg/QuantityLbl')
-		var item_name : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/ItemNameLbl')
-		var bundle_id : Label  = child_item_array[i].get_node('BundleId')
-		bundle_id.set_text(str(PhpRequest.clean_response[i]['bundle_id']))
-		price.set_text(str(PhpRequest.clean_response[i]['price_coin']) + " coins")
-		quantity.set_text("x" + str(PhpRequest.clean_response[i]['bundle_quantity']))
-		item_name.set_text(Game.name_logic(PhpRequest.clean_response[i]['item_name']))
-		image.set_texture(Game.texture_logic((PhpRequest.clean_response[i]['item_name'])))
-	for item in child_item_array:
-		var purchase_details: Dictionary = {"bundle_id" = int(item.get_node('BundleId').get_text()),
-											"item_name" = item.get_node("MarginContainer/StoreItemPnl/ItemNameLbl").get_text(),
-											"quantity" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/ItemImg/QuantityLbl").get_text()),
-											"price" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/PriceLbl").get_text())}
-		item.get_node("StoreItem").connect("pressed", purchase_item.bind(purchase_details))
+	if PhpRequest.api_no_error:
+		for i in PhpRequest.clean_response.size():
+			var item_scene : Control  = load("res://scenes/navigation/store_inventory/store/store_item_pnl.tscn").instantiate()
+			child_item_array.append(item_scene)
+			$Store/ItemList/ItemPnl/ItemGrid.add_child(child_item_array[i])
+			var price : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/PriceLbl')
+			var image : TextureRect  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/ItemImg')
+			var quantity : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/DetailVbox/ItemImg/QuantityLbl')
+			var item_name : Label  = child_item_array[i].get_node('MarginContainer/StoreItemPnl/ItemNameLbl')
+			var bundle_id : Label  = child_item_array[i].get_node('BundleId')
+			bundle_id.set_text(str(PhpRequest.clean_response[i]['bundle_id']))
+			price.set_text(str(PhpRequest.clean_response[i]['price_coin']) + " coins")
+			quantity.set_text("x" + str(PhpRequest.clean_response[i]['bundle_quantity']))
+			item_name.set_text(Game.name_logic(PhpRequest.clean_response[i]['item_name']))
+			image.set_texture(Game.texture_logic((PhpRequest.clean_response[i]['item_name'])))
+		for item in child_item_array:
+			var purchase_details: Dictionary = {"bundle_id" = int(item.get_node('BundleId').get_text()),
+												"item_name" = item.get_node("MarginContainer/StoreItemPnl/ItemNameLbl").get_text(),
+												"quantity" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/ItemImg/QuantityLbl").get_text()),
+												"price" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/PriceLbl").get_text())}
+			item.get_node("StoreItem").connect("pressed", purchase_item.bind(purchase_details))
 #		item.get_node("StoreItem").connect("pressed", purchase_item.bind(item))
 #	store_btn.pressed.connect(modal_btn_pressed.bind(store_scene))
 

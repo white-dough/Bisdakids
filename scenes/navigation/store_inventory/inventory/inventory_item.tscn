@@ -46,7 +46,7 @@ Label/font_sizes/font_size = 9
 Label/fonts/font = SubResource("FontVariation_0cnlk")
 Label/styles/normal = SubResource("StyleBoxFlat_xqxbk")
 
-[node name="StoreItem" type="Control"]
+[node name="InventoryItem" type="Control"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchor_right = 0.0152207
@@ -66,11 +66,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemPnl" type="Panel" parent="MarginContainer"]
+[node name="ItemPnl" type="Panel" parent="MarginContainer"]
 layout_mode = 2
 theme = SubResource("Theme_athn7")
 
-[node name="DetailVbox" type="VBoxContainer" parent="MarginContainer/StoreItemPnl"]
+[node name="DetailVbox" type="VBoxContainer" parent="MarginContainer/ItemPnl"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,7 +79,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="ItemImg" type="TextureRect" parent="MarginContainer/StoreItemPnl/DetailVbox"]
+[node name="ItemImg" type="TextureRect" parent="MarginContainer/ItemPnl/DetailVbox"]
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -87,7 +87,7 @@ texture = ExtResource("1_rupft")
 expand_mode = 1
 stretch_mode = 3
 
-[node name="QuantityLbl" type="Label" parent="MarginContainer/StoreItemPnl/DetailVbox/ItemImg"]
+[node name="QuantityLbl" type="Label" parent="MarginContainer/ItemPnl/DetailVbox/ItemImg"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -97,7 +97,7 @@ offset_bottom = 23.0
 grow_horizontal = 0
 horizontal_alignment = 2
 
-[node name="ItemNameLbl" type="Label" parent="MarginContainer/StoreItemPnl"]
+[node name="ItemNameLbl" type="Label" parent="MarginContainer/ItemPnl"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = -1
