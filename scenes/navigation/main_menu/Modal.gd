@@ -18,6 +18,7 @@ extends Control
 @onready var daily_task_scene : PackedScene = load("res://scenes/navigation/daily_task/daily_task.tscn")
 
 
+
 #@onready var settings_scene_path = load("res://scenes/navigation/settings/settings.tscn")
 #@onready var settings_btn = $"../Control/SettingsBtn"
 func _ready():
@@ -25,6 +26,7 @@ func _ready():
 	store_btn.pressed.connect(modal_btn_pressed.bind(store_scene))
 	inventory_btn.pressed.connect(modal_btn_pressed.bind(inventory_scene))
 	daily_task_btn.pressed.connect(modal_btn_pressed.bind(daily_task_scene))
+	
 	
 #	settings_btn.pressed.connect(modal_btn_pressed.bind(settings_btn))
 # Called every frame. 'delta' is the elapsed time since the previous frame.

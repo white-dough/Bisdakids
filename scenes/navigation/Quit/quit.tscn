@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=3 uid="uid://4ulk7moaux8v"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_bhyuy"]
+[ext_resource type="Texture2D" uid="uid://ccplp81hcnmh7" path="res://graphics/Quit/2x/quitpanel@2x.png" id="2_mffbf"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="3_vlg3x"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="4_4evvw"]
+[ext_resource type="Texture2D" uid="uid://b7yfcsu6vnwbf" path="res://graphics/ui/buttons/2x/yes_btn@2x.png" id="5_41ia2"]
+[ext_resource type="Texture2D" uid="uid://bfpnupemtqcr" path="res://graphics/ui/buttons/2x/no_btn@2x.png" id="5_eg66v"]
+[ext_resource type="Texture2D" uid="uid://cpu3difm46s2g" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="6_hhn8i"]
+[ext_resource type="Texture2D" uid="uid://c4unbj7gph23e" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="8_uq8h1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahaxd"]
+texture = ExtResource("2_mffbf")
+
+[node name="Quit" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bhyuy")
+expand_mode = 1
+
+[node name="ModalPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -159.0
+offset_right = 290.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_ahaxd")
+
+[node name="CloseBtn" type="TextureButton" parent="ModalPanel"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.005
+anchor_top = -0.14
+anchor_right = 1.185
+anchor_bottom = 0.1375
+grow_vertical = 2
+texture_normal = ExtResource("3_vlg3x")
+texture_pressed = ExtResource("4_4evvw")
+stretch_mode = 3
+
+[node name="Content_Container" type="HBoxContainer" parent="ModalPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -17.0
+offset_right = 263.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 84
+
+[node name="no_btn" type="TextureButton" parent="ModalPanel/Content_Container"]
+layout_mode = 2
+texture_normal = ExtResource("5_eg66v")
+texture_pressed = ExtResource("6_hhn8i")
+stretch_mode = 3
+
+[node name="yes_btn" type="TextureButton" parent="ModalPanel/Content_Container"]
+layout_mode = 2
+texture_normal = ExtResource("5_41ia2")
+texture_pressed = ExtResource("8_uq8h1")
+stretch_mode = 3
