@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3 uid="uid://caaxj7bw5ogqe"]
 
-[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_ipw5n"]
+[ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_ipw5n"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="2_7vrei"]
-[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="2_rtu32"]
+[ext_resource type="Texture2D" uid="uid://qsoomwci6h4c" path="res://graphics/navigation/settings/slider@2x.png" id="2_rtu32"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="3_ninol"]
-[ext_resource type="Texture2D" uid="uid://bjudiluuuoxb2" path="res://graphics/ui/icons/task_reward@2x.png" id="4_qaiag"]
+[ext_resource type="Texture2D" uid="uid://bffaypftfhux6" path="res://graphics/ui/icons/task_reward@2x.png" id="4_qaiag"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="5_qxpo2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xg5ss"]

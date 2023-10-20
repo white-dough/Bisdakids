@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ch6ohtm5ja6ug"]
 
-[ext_resource type="Texture2D" uid="uid://didx2xnrwfk8n" path="res://graphics/ui/icons/time_icon@2x.png" id="1_dqj45"]
+[ext_resource type="Texture2D" uid="uid://bb2qtyvjq45cm" path="res://graphics/ui/icons/time_icon@2x.png" id="1_dqj45"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="2_j6rmp"]
-[ext_resource type="Texture2D" uid="uid://b7kf46vxofnn8" path="res://graphics/ui/icons/time_label@2x.png" id="3_u6o82"]
+[ext_resource type="Texture2D" uid="uid://deulxp3pwloah" path="res://graphics/ui/icons/time_label@2x.png" id="3_u6o82"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_om568"]
 texture = ExtResource("3_u6o82")

@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://octg1hab4n3l" path="res://graphics/ui/buttons/2x/pressedmap_btn@2x.png" id="11_nihrg"]
 [ext_resource type="Texture2D" uid="uid://dkr8kyfcnk42m" path="res://graphics/ui/buttons/2x/retryPressed_btn_1@2x.png" id="12_kln2f"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfmmg"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
@@ -23,9 +23,9 @@ content_margin_bottom = 13.0
 texture = ExtResource("2_8m2xa")
 
 [sub_resource type="Theme" id="Theme_ltiph"]
-Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
+Panel/styles/panel = SubResource("StyleBoxTexture_bfmmg")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktw75"]
 texture = ExtResource("4_b8u7a")
 expand_margin_left = 10.0
 expand_margin_top = 5.0
@@ -33,7 +33,7 @@ expand_margin_right = 12.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="Theme" id="Theme_eqeqb"]
-Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
+Label/styles/normal = SubResource("StyleBoxTexture_ktw75")
 
 [node name="LevelFailed" type="CanvasLayer"]
 script = ExtResource("1_1lsox")
@@ -76,7 +76,6 @@ grow_vertical = 2
 texture_normal = ExtResource("4_4oe8y")
 texture_pressed = ExtResource("5_hktx6")
 stretch_mode = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Title_Container" type="VBoxContainer" parent="ModalPanel"]
 custom_minimum_size = Vector2(0, 100)
