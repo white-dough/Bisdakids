@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://boxpcelxhyga8"]
+[gd_scene load_steps=4 format=3 uid="uid://boxpcelxhyga8"]
 
+[ext_resource type="Script" path="res://scenes/navigation/credits/credits.gd" id="1_yywy8"]
+[ext_resource type="Texture2D" uid="uid://kj64paekvu60" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="2_ehmwn"]
 [ext_resource type="Texture2D" uid="uid://bmwv0clad2y86" path="res://graphics/credits/2x/credits_bg@2x.png" id="2_ni1pp"]
 
 [node name="credits" type="Node"]
+script = ExtResource("1_yywy8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1320.0
 offset_bottom = 744.0
 texture = ExtResource("2_ni1pp")
 expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_ehmwn")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
