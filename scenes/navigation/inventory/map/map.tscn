@@ -1,0 +1,562 @@
+[gd_scene load_steps=62 format=3 uid="uid://dptp3em1qnmlm"]
+
+[ext_resource type="Texture2D" uid="uid://b3xks325aqaf" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
+[ext_resource type="Texture2D" uid="uid://bms5mnivpmtlk" path="res://scenes/navigation/inventory/map/map_assets/emptyMap.png" id="1_t4g7b"]
+[ext_resource type="Texture2D" uid="uid://ekiopwxxkj25" path="res://graphics/map/map_assets/Map@2x.png" id="2_btxib"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/camerascript.gd" id="2_k4dw0"]
+[ext_resource type="Texture2D" uid="uid://dij1ped0tiv75" path="res://graphics/map/map_assets/shadows@2x.png" id="3_bw2f8"]
+[ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://scenes/navigation/inventory/map/map_assets/level1Button4x.png" id="3_fqkr2"]
+[ext_resource type="Texture2D" uid="uid://dgigimju80qwb" path="res://graphics/map/map_assets/agila@2x.png" id="4_c1xrv"]
+[ext_resource type="Texture2D" uid="uid://cargchp8jmmvc" path="res://scenes/navigation/inventory/map/map_assets/level2Button4x.png" id="4_kyovf"]
+[ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://scenes/navigation/inventory/map/map_assets/level3Button4x.png" id="5_4ev76"]
+[ext_resource type="Texture2D" uid="uid://c8qosqq0qekgx" path="res://graphics/map/map_assets/CloudH2@2x.png" id="5_133f8"]
+[ext_resource type="Texture2D" uid="uid://0w4bca7c4i8v" path="res://graphics/map/map_assets/hot balloon@2x.png" id="5_fbdl5"]
+[ext_resource type="Texture2D" uid="uid://d1xb3avl8n2tp" path="res://graphics/map/map_assets/whale@2x.png" id="6_7cyux"]
+[ext_resource type="Texture2D" uid="uid://lp8bo255comf" path="res://graphics/map/map_assets/Cloud TL@2x.png" id="6_b1c6w"]
+[ext_resource type="Texture2D" uid="uid://bbfaiv5df41f6" path="res://graphics/map/map_assets/CloudH1@2x.png" id="6_mj8tq"]
+[ext_resource type="Texture2D" uid="uid://k6enst1t6p0e" path="res://scenes/navigation/inventory/map/map_assets/level4Button4x.png" id="6_mu3he"]
+[ext_resource type="Texture2D" uid="uid://w7j5s2ci64n8" path="res://graphics/map/map_assets/dolphin@2x.png" id="7_1j4wd"]
+[ext_resource type="Texture2D" uid="uid://cm4gslh0gh3si" path="res://graphics/map/map_assets/Cloud TR@2x.png" id="7_1w2yw"]
+[ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://scenes/navigation/inventory/map/map_assets/level5Button4x.png" id="7_lvttb"]
+[ext_resource type="Texture2D" uid="uid://b2lnq63dvwuro" path="res://graphics/map/map_assets/bato@2x.png" id="8_otpsd"]
+[ext_resource type="Texture2D" uid="uid://drxqwou5vspf8" path="res://graphics/map/map_assets/ship@2x.png" id="9_2lscx"]
+[ext_resource type="Texture2D" uid="uid://c458ihvuihrxp" path="res://graphics/ui/icons/energly_lbl@2x.png" id="9_5qvwd"]
+[ext_resource type="Texture2D" uid="uid://bauouhgsf3e7s" path="res://graphics/map/map_assets/Cloud 1@2x.png" id="9_b3fea"]
+[ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="10_xl8yn"]
+[ext_resource type="Texture2D" uid="uid://cfhoj2uvgvymg" path="res://graphics/map/map_assets/Cloud 3@2x.png" id="10_xrkcv"]
+[ext_resource type="Texture2D" uid="uid://cpd62elmelmsk" path="res://graphics/map/map_assets/Cloud 2@2x.png" id="11_1t3uu"]
+[ext_resource type="Texture2D" uid="uid://her5hr0vrvd6" path="res://graphics/ui/icons/coins_lbl@2x.png" id="11_cprym"]
+[ext_resource type="Texture2D" uid="uid://bqblujdud7y5g" path="res://graphics/map/map_assets/Cloud 4@2x.png" id="12_aw4km"]
+[ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="12_wlh2q"]
+[ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="13_ayf4u"]
+[ext_resource type="Texture2D" uid="uid://cwlhdkn1213e7" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="14_8kcks"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="14_b1qn5"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud1.gd" id="17_15k7x"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_CloudTL.gd" id="19_4qjtg"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud3.gd" id="19_60vq1"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_hotairballoon.gd" id="19_dojgs"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_CloudTR.gd" id="21_ysipn"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud2.gd" id="22_leso4"]
+[ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud4.gd" id="25_e41x6"]
+
+[sub_resource type="Animation" id="Animation_ng5rb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(519, 135)]
+}
+
+[sub_resource type="Animation" id="Animation_ui0v6"]
+resource_name = "cloudTL"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30, 60),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(519, 135), Vector2(225, 135), Vector2(519, 135)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gycxq"]
+_data = {
+"RESET": SubResource("Animation_ng5rb"),
+"cloudTL": SubResource("Animation_ui0v6")
+}
+
+[sub_resource type="Animation" id="Animation_gj8uh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1125, 333)]
+}
+
+[sub_resource type="Animation" id="Animation_x6yur"]
+resource_name = "cloudTR"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15, 30),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1125, 333), Vector2(992, 333), Vector2(1125, 333)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1eeob"]
+_data = {
+"RESET": SubResource("Animation_gj8uh"),
+"cloudTR": SubResource("Animation_x6yur")
+}
+
+[sub_resource type="Animation" id="Animation_574pt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(137, 678)]
+}
+
+[sub_resource type="Animation" id="Animation_87r5i"]
+resource_name = "cloud1"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 47.4, 47.401, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(137, 678), Vector2(1612, 678), Vector2(-289, 678), Vector2(137, 678)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4in21"]
+_data = {
+"RESET": SubResource("Animation_574pt"),
+"cloud1": SubResource("Animation_87r5i")
+}
+
+[sub_resource type="Animation" id="Animation_cft11"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(789, 692)]
+}
+
+[sub_resource type="Animation" id="Animation_hqx0m"]
+resource_name = "cloud3"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 24, 24.005, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(789, 692), Vector2(1530, 692), Vector2(-216, 692), Vector2(789, 692)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lswr7"]
+_data = {
+"RESET": SubResource("Animation_cft11"),
+"cloud3": SubResource("Animation_hqx0m")
+}
+
+[sub_resource type="Animation" id="Animation_8t8ll"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../HotAir Balloon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-103, 615)]
+}
+
+[sub_resource type="Animation" id="Animation_vs4yj"]
+resource_name = "hotair_balloon"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../HotAir Balloon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-103, 615), Vector2(1403, 615)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ufpmk"]
+_data = {
+"RESET": SubResource("Animation_8t8ll"),
+"hotair_balloon": SubResource("Animation_vs4yj")
+}
+
+[sub_resource type="Animation" id="Animation_64l5j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(503, 742)]
+}
+
+[sub_resource type="Animation" id="Animation_r3eai"]
+resource_name = "cloud2"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 17.8, 17.805, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(503, 742), Vector2(1528, 742), Vector2(-215, 742), Vector2(503, 742)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xwpuq"]
+_data = {
+"RESET": SubResource("Animation_64l5j"),
+"cloud2": SubResource("Animation_r3eai")
+}
+
+[sub_resource type="Animation" id="Animation_61st1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1214, 697)]
+}
+
+[sub_resource type="Animation" id="Animation_hw3su"]
+resource_name = "cloud4"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.7, 5.705, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1214, 697), Vector2(1620, 697), Vector2(-306, 697), Vector2(1214, 697)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qngpc"]
+_data = {
+"RESET": SubResource("Animation_61st1"),
+"cloud4": SubResource("Animation_hw3su")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5u4fq"]
+texture = ExtResource("9_5qvwd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0ms0"]
+texture = ExtResource("11_cprym")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(682.5, 429)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("1_t4g7b")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(656.5, 368)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("1_c6so8")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Background"]
+position = Vector2(-28, -58.0556)
+remote_path = NodePath("../../Camera2D")
+
+[node name="Shadows" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(-1.2002, 0.952423)
+texture = ExtResource("3_bw2f8")
+
+[node name="Agila" type="Sprite2D" parent="Background"]
+position = Vector2(435.109, -199.048)
+scale = Vector2(0.99985, 1)
+texture = ExtResource("4_c1xrv")
+
+[node name="Map" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_btxib")
+
+[node name="Whale" type="Sprite2D" parent="Background"]
+position = Vector2(-154.239, 20)
+texture = ExtResource("6_7cyux")
+
+[node name="Dolphin" type="Sprite2D" parent="Background"]
+position = Vector2(271.868, -104.762)
+texture = ExtResource("7_1j4wd")
+
+[node name="bato" type="Sprite2D" parent="Background"]
+position = Vector2(87.0218, 120)
+texture = ExtResource("8_otpsd")
+
+[node name="Ship" type="Sprite2D" parent="Background"]
+position = Vector2(28.207, 53.3334)
+texture = ExtResource("9_2lscx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(633.172, 307.042)
+scale = Vector2(0.833125, 1.05)
+limit_left = 0
+limit_top = -5
+limit_right = 1313
+limit_bottom = 740
+editor_draw_limits = true
+script = ExtResource("2_k4dw0")
+
+[node name="Level1Button" type="TextureButton" parent="."]
+offset_left = 510.0
+offset_top = 486.0
+offset_right = 626.0
+offset_bottom = 586.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("3_fqkr2")
+
+[node name="Level2Button" type="TextureButton" parent="."]
+offset_left = 557.0
+offset_top = 410.0
+offset_right = 667.0
+offset_bottom = 501.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("4_kyovf")
+
+[node name="Level3Button" type="TextureButton" parent="."]
+offset_left = 630.0
+offset_top = 351.0
+offset_right = 736.0
+offset_bottom = 437.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("5_4ev76")
+
+[node name="Level4Button" type="TextureButton" parent="."]
+offset_left = 721.0
+offset_top = 286.0
+offset_right = 825.0
+offset_bottom = 374.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("6_mu3he")
+
+[node name="Level5Button" type="TextureButton" parent="."]
+offset_left = 744.0
+offset_top = 189.0
+offset_right = 847.0
+offset_bottom = 284.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("7_lvttb")
+
+[node name="CloudH2" type="Sprite2D" parent="."]
+position = Vector2(362, 401)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("5_133f8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CloudH2"]
+
+[node name="CloudH1" type="Sprite2D" parent="."]
+position = Vector2(242, 394)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("6_mj8tq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CloudH1"]
+
+[node name="CloudTL" type="Sprite2D" parent="."]
+position = Vector2(519, 135)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("6_b1c6w")
+script = ExtResource("19_4qjtg")
+
+[node name="anim_cloudTL" type="AnimationPlayer" parent="CloudTL"]
+libraries = {
+"": SubResource("AnimationLibrary_gycxq")
+}
+
+[node name="CloudTR" type="Sprite2D" parent="."]
+position = Vector2(1125, 333)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("7_1w2yw")
+script = ExtResource("21_ysipn")
+
+[node name="anim_cloudTR" type="AnimationPlayer" parent="CloudTR"]
+libraries = {
+"": SubResource("AnimationLibrary_1eeob")
+}
+
+[node name="Cloud1" type="Sprite2D" parent="."]
+position = Vector2(137, 678)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("9_b3fea")
+script = ExtResource("17_15k7x")
+
+[node name="anim_cloud1" type="AnimationPlayer" parent="Cloud1"]
+libraries = {
+"": SubResource("AnimationLibrary_4in21")
+}
+
+[node name="Cloud3" type="Sprite2D" parent="."]
+position = Vector2(789, 692)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("10_xrkcv")
+script = ExtResource("19_60vq1")
+
+[node name="anim_cloud3" type="AnimationPlayer" parent="Cloud3"]
+libraries = {
+"": SubResource("AnimationLibrary_lswr7")
+}
+
+[node name="HotAir Balloon" type="Sprite2D" parent="."]
+position = Vector2(-103, 615)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("5_fbdl5")
+script = ExtResource("19_dojgs")
+
+[node name="anim_hotairballoon" type="AnimationPlayer" parent="HotAir Balloon"]
+root_node = NodePath("../../Background")
+libraries = {
+"": SubResource("AnimationLibrary_ufpmk")
+}
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+position = Vector2(503, 742)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("11_1t3uu")
+script = ExtResource("22_leso4")
+
+[node name="anim_cloud2" type="AnimationPlayer" parent="Cloud2"]
+libraries = {
+"": SubResource("AnimationLibrary_xwpuq")
+}
+
+[node name="Cloud4" type="Sprite2D" parent="."]
+position = Vector2(1214, 697)
+scale = Vector2(0.833125, 1.05)
+texture = ExtResource("12_aw4km")
+script = ExtResource("25_e41x6")
+
+[node name="anim_cloud4" type="AnimationPlayer" parent="Cloud4"]
+libraries = {
+"": SubResource("AnimationLibrary_qngpc")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 31.0
+offset_right = 537.0
+offset_bottom = 111.0
+theme_override_constants/separation = 70
+
+[node name="energy_lbl" type="Label" parent="CanvasLayer/Control/HBoxContainer"]
+custom_minimum_size = Vector2(178, 78)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_5u4fq")
+
+[node name="energyAdd_btn" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer/energy_lbl"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 23.0
+offset_right = 224.0
+offset_bottom = 64.0
+texture_normal = ExtResource("12_wlh2q")
+
+[node name="Coin_lbl" type="Label" parent="CanvasLayer/Control/HBoxContainer"]
+custom_minimum_size = Vector2(178, 78)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_c0ms0")
+
+[node name="coinAdd_btn" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer/Coin_lbl"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 23.0
+offset_right = 224.0
+offset_bottom = 64.0
+texture_normal = ExtResource("12_wlh2q")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 827.0
+offset_top = 32.0
+offset_right = 1280.0
+offset_bottom = 120.0
+theme_override_constants/separation = 35
+
+[node name="DailyTask" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("10_xl8yn")
+
+[node name="Shop" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("13_ayf4u")
+
+[node name="Inventory" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("14_8kcks")
+
+[node name="Settings" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("14_b1qn5")
