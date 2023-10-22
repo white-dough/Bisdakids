@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dci2npfupxpfg" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
 [ext_resource type="Texture2D" uid="uid://wg68xbqo5g0w" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
 [ext_resource type="Texture2D" uid="uid://dnn6t6bivey2c" path="res://graphics/ui/buttons/2x/pressedhome_btn@2x.png" id="13_vowgy"]
-[ext_resource type="Texture2D" path="res://graphics/ui/buttons/2x/retryPressed_btn_2@2x.png" id="14_wf3qv"]
+[ext_resource type="Texture2D" uid="uid://c6nb3jpb4y70g" path="res://graphics/ui/buttons/2x/retryPressed_btn_2@2x.png" id="14_wf3qv"]
 [ext_resource type="Texture2D" uid="uid://cvxkcunin210y" path="res://graphics/ui/buttons/2x/nextPressed_btn@2x.png" id="15_1xy1q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
