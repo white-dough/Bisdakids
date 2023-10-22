@@ -1,6 +1,7 @@
 extends Control
 
 signal clue_pressed(object_clue)
+signal level_finished(time_finished:float)
 
 @onready var object_list_container: VBoxContainer = $ColorRect/Panel/ContainerHUD/Objectlist
 @onready var history_current_objects: Array = []
@@ -9,9 +10,11 @@ signal clue_pressed(object_clue)
 @onready var timer: Timer = $ColorRect/Panel/ContainerHUD/TimerBar/Timer
 @onready var pause_timer: Timer = $"TimeFreeze/PauseTimer"
 @onready var progress_bar: TextureProgressBar = $ColorRect/Panel/ContainerHUD/TimerBar/ProgressBar
-
+@onready var level_success
 # word description on longpress
-@onready var description_container: VBoxContainer = $ColorRect/Panel/CanvasLayer/DescContainer
+@onready var description_container: CanvasLayer = $ColorRect/Panel/CanvasLayer
+
+@onready var finish_level_mark: int
 
 # para long press feature
 const LONG_PRESS_DURATION = 1.5 # in seconds
@@ -20,6 +23,8 @@ var pressed = false # para long press feature
 var press_time = 0 # para long press feature
 
 func _on_level_1_ready():
+	set_labels()
+	label_definitions() # function para sa word defintion (long press)
 	level_time = $"..".level_time
 	progress_bar.max_value = level_time
 	progress_bar.set_use_rounded_values(true)
@@ -27,6 +32,7 @@ func _on_level_1_ready():
 	timer.set_wait_time(level_time)
 	timer.start()
 	pause_timer.timeout.connect(time_freeze)
+	level_success = $"../LevelCompleted"
 	#lasdas.onclick.connect(time_freeze(label))
 
 func _process(_delta):
@@ -49,8 +55,10 @@ func object_list_label(current_objects_strings: Array):
 			#print('1')
 			desc_label.set_text(data[current_objects_strings[i]])
 		else:
-			#print("0")
-			pass
+			finish_level_mark += 1
+			if finish_level_mark >= 15:
+				var time_finished: float = timer.time_left
+				level_finished.emit(time_finished)
 
 # this function gets the data from words-beta.json (defintion of the words)
 func get_definition() -> Dictionary:
@@ -66,18 +74,41 @@ func get_definition() -> Dictionary:
 	# etc until level5...
 
 func _on_clue_pressed():
+	if int(Game.user_inventory['hint']) > 0:
+		use_hint()
+		Game.user_inventory['hint'] = int(Game.user_inventory['hint']) - 1
+		Game.user_inventory['hint_timestamp'] = Time.get_unix_time_from_system()
+		Game.update_local_save()
+		set_labels()
+
+func use_hint():
 	if not history_current_objects.is_empty():
-		clue_pressed.emit(history_current_objects.pop_front())		
+		clue_pressed.emit(history_current_objects.pop_front())
 	else:
 		clue_pressed.emit(current_objects.pick_random())
 
+func set_labels():
+	var hint_lbl: Label = $ColorRect/Panel/ContainerHUD/Clue/HintLbl
+	var time_freeze_lbl: Label = $TimeFreeze/TimeFreezeLbl
+	hint_lbl.set_text(str(Game.user_inventory['hint']))
+	time_freeze_lbl.set_text(str(Game.user_inventory['time_freeze']))
+	
+
 func _on_timer_timeout():
-	pass
+	if level_success.visible:
+		return
+	level_finished.emit(0)
 	
 func _on_time_freeze_pressed():
-	if pause_timer.is_stopped():
-		pause_timer.start()
-		time_freeze()
+	if int(Game.user_inventory['time_freeze']) > 0:
+		if pause_timer.is_stopped():
+			pause_timer.start()
+			time_freeze()
+			Game.user_inventory['time_freeze'] = int(Game.user_inventory['time_freeze']) - 1
+			Game.user_inventory['time_freeze_timestamp'] = Time.get_unix_time_from_system()
+			Game.update_local_save()
+			set_labels()
+	
 
 func time_freeze():
 	var time_froze_sprite = $ColorRect/Panel/ContainerHUD/TimerBar/TimeFroze
@@ -87,89 +118,33 @@ func time_freeze():
 	else:
 		timer.set_paused(true)
 		time_froze_sprite.visible = not time_froze_sprite.visible 
-	print(pause_timer.is_stopped())
 	if pause_timer.is_stopped():
 		time_froze_sprite.visible = not time_froze_sprite.visible 
 		print("timer is not paused, pausing")
 
-# on longpress description feature
-func _on_label_1_gui_input(event):
+func label_definitions():
+	#var positionY = [90, 190, 255, 320, 400]
+	var parentContainer: VBoxContainer = $ColorRect/Panel/ContainerHUD/Objectlist
+	for i in range(parentContainer.get_child_count()):
+		var label = parentContainer.get_child(i)
+		#print(positionY[i])
+		var labelName = "Label" + str(i+1)
+		#print(labelName)
+		label.gui_input.connect(word_def_display.bind(labelName)) # labelName, position y
+
+func word_def_display(event, labelName):
 	if event is InputEventMouseButton:
 		if event.pressed:
 			pressed = true
 			press_time = 0
-			var label_name = "Label1"
+			var label_name = labelName
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = true
+				#desc_label.position.y = pos
 		elif event.button_index == MOUSE_BUTTON_LEFT:
 			pressed = false
-			var label_name = "Label1"
+			var label_name = labelName
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
-
-func _on_label_2_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.pressed:
-			pressed = true
-			press_time = 0
-			var label_name = "Label2"
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = true
-		elif event.button_index == MOUSE_BUTTON_LEFT:
-			pressed = false
-			var label_name = "Label2"
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = false
-
-func _on_label_3_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.pressed:
-			pressed = true
-			press_time = 0
-			var label_name = "Label3" 
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = true
-		elif event.button_index == MOUSE_BUTTON_LEFT:
-			pressed = false
-			var label_name = "Label3" 
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = false
-
-func _on_label_4_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.pressed:
-			pressed = true
-			press_time = 0
-			var label_name = "Label4" 
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = true
-		elif event.button_index == MOUSE_BUTTON_LEFT:
-			pressed = false
-			var label_name = "Label4"
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = false
-
-func _on_label_5_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.pressed:
-			pressed = true
-			press_time = 0
-			var label_name = "Label5"
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = true
-		elif event.button_index == MOUSE_BUTTON_LEFT:
-			pressed = false
-			var label_name = "Label5" 
-			var desc_label = description_container.get_node(label_name)
-			if desc_label:
-				desc_label.visible = false
-

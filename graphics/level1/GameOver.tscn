@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cswkyaikebpll" path="res://graphics/ui/icons/2x/Gameover@2x.png" id="2_55pdw"]
 [ext_resource type="Texture2D" uid="uid://xryj622xsdf5" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_et3xq"]
 [ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="3_qc4hn"]
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_x0026"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_mwqam"]
 [ext_resource type="Texture2D" uid="uid://bmlcgpvvca1ys" path="res://graphics/ui/particles/2x/whiteCircle_2@2x.png" id="6_kyw5k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_82awe"]
 blend_mode = 1
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="GameOver" type="CanvasLayer"]
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -35,22 +35,24 @@ scale = Vector2(0.89863, 0.878707)
 texture = ExtResource("2_55pdw")
 
 [node name="Level_label" type="Label" parent="Gameover_2x"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -209.838
-offset_top = -154.979
-offset_right = -181.838
-offset_bottom = -91.9786
+anchors_preset = -1
+anchor_left = 0.471096
+anchor_top = 0.119709
+anchor_right = 0.543823
+anchor_bottom = 0.276817
+offset_left = -192.5
+offset_top = -201.638
+offset_right = -192.5
+offset_bottom = -199.638
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.992157, 0.913725, 0.870588, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.835294, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_x0026")
-theme_override_font_sizes/font_size = 41
+theme_override_colors/font_shadow_color = Color(0, 0.262745, 0, 1)
+theme_override_fonts/font = ExtResource("5_mwqam")
+theme_override_font_sizes/font_size = 54
 text = "1"
+metadata/_edit_use_anchors_ = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(550, 239)

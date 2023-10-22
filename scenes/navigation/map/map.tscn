@@ -1,0 +1,179 @@
+[gd_scene load_steps=16 format=3 uid="uid://dptp3em1qnmlm"]
+
+[ext_resource type="Texture2D" uid="uid://b4x17ogh4k7jc" path="res://graphics/map/map_assets/map4x.png" id="1_3i7j3"]
+[ext_resource type="Script" path="res://addons/ppc/ppcamera.gd" id="3_vrgr6"]
+[ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://graphics/map/map_assets/level1Button4x.png" id="4_jl88o"]
+[ext_resource type="Texture2D" uid="uid://cargchp8jmmvc" path="res://graphics/map/map_assets/level2Button4x.png" id="5_qn5c7"]
+[ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://graphics/map/map_assets/level3Button4x.png" id="6_vy4ta"]
+[ext_resource type="Texture2D" uid="uid://k6enst1t6p0e" path="res://graphics/map/map_assets/level4Button4x.png" id="7_5gvpk"]
+[ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://graphics/map/map_assets/level5Button4x.png" id="8_tf5dj"]
+[ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="11_72p7r"]
+[ext_resource type="Script" path="res://scenes/navigation/map/levelButtons.gd" id="11_uvn8q"]
+[ext_resource type="Texture2D" uid="uid://cu5l238615pgc" path="res://graphics/map/map_assets/energyLabel.png" id="12_sok8m"]
+[ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="13_7paix"]
+[ext_resource type="Texture2D" uid="uid://dbut1imhh8b1h" path="res://graphics/map/map_assets/coinLabel.png" id="14_4bl3s"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="15_5navp"]
+[ext_resource type="Script" path="res://scenes/navigation/map/camerascript.gd" id="15_cww27"]
+[ext_resource type="Texture2D" uid="uid://4epiug3uug77" path="res://graphics/map/map_assets/homeButton.png" id="16_vvs6a"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(663.06, 438.812)
+scale = Vector2(0.499784, 0.539249)
+texture = ExtResource("1_3i7j3")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Sprite2D"]
+position = Vector2(-28.0001, -58.0556)
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(649.066, 407.506)
+scale = Vector2(0.499784, 0.539249)
+limit_left = 0
+limit_top = -5
+limit_right = 1313
+limit_bottom = 740
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_limits = true
+script = ExtResource("15_cww27")
+
+[node name="PinchPanCamera" type="Marker2D" parent="Camera2D"]
+position = Vector2(15.8749, -71.4059)
+scale = Vector2(2.00086, 1.85443)
+script = ExtResource("3_vrgr6")
+position_smoothing_speed = 15
+min_zoom_factor = 1.0
+show_debug_icon = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_uvn8q")
+
+[node name="Level1Button" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 486.0
+offset_right = 626.0
+offset_bottom = 586.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("4_jl88o")
+
+[node name="Level2Button" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 410.0
+offset_right = 667.0
+offset_bottom = 501.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("5_qn5c7")
+
+[node name="Level3Button" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 351.0
+offset_right = 736.0
+offset_bottom = 437.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("6_vy4ta")
+
+[node name="Level4Button" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 286.0
+offset_right = 825.0
+offset_bottom = 374.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("7_5gvpk")
+
+[node name="Level5Button" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 189.0
+offset_right = 847.0
+offset_bottom = 284.0
+scale = Vector2(0.455, 0.455)
+texture_normal = ExtResource("8_tf5dj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+layer = 0
+
+[node name="HorizontalContainer1" type="HBoxContainer" parent="Control/CanvasLayer"]
+offset_left = 23.0
+offset_top = 10.0
+offset_right = 467.0
+offset_bottom = 87.0
+theme_override_constants/separation = 75
+
+[node name="EnergyTexture" type="TextureRect" parent="Control/CanvasLayer/HorizontalContainer1"]
+layout_mode = 2
+texture = ExtResource("12_sok8m")
+
+[node name="EnergyLabel" type="Label" parent="Control/CanvasLayer/HorizontalContainer1/EnergyTexture"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 25.0
+offset_right = 162.0
+offset_bottom = 57.0
+
+[node name="EnergyButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer1/EnergyTexture"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 21.0
+offset_right = 220.0
+offset_bottom = 98.0
+texture_normal = ExtResource("13_7paix")
+
+[node name="CoinTexture" type="TextureRect" parent="Control/CanvasLayer/HorizontalContainer1"]
+layout_mode = 2
+texture = ExtResource("14_4bl3s")
+
+[node name="CoinLabel" type="Label" parent="Control/CanvasLayer/HorizontalContainer1/CoinTexture"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 25.0
+offset_right = 161.0
+offset_bottom = 57.0
+
+[node name="CoinButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer1/CoinTexture"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 22.0
+offset_right = 220.0
+offset_bottom = 99.0
+texture_normal = ExtResource("13_7paix")
+
+[node name="HorizontalContainer2" type="HBoxContainer" parent="Control/CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 14.0
+offset_right = -0.999878
+offset_bottom = 102.0
+grow_horizontal = 0
+scale = Vector2(0.841, 0.808)
+theme_override_constants/separation = 25
+
+[node name="DailyTaskButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("11_72p7r")
+
+[node name="HomeButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("16_vvs6a")
+
+[node name="SettingsButton" type="TextureButton" parent="Control/CanvasLayer/HorizontalContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("15_5navp")
+
+[connection signal="pressed" from="Control/Level1Button" to="Control" method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Control/Level2Button" to="Control" method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="Control/Level3Button" to="Control" method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="Control/Level4Button" to="Control" method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="Control/Level5Button" to="Control" method="_on_level_5_button_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/HorizontalContainer2/SettingsButton" to="Control" method="_on_settings_button_pressed"]

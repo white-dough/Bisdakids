@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0xkt2xt33twt"]
+[gd_scene load_steps=4 format=3 uid="uid://b0xkt2xt33twt"]
 
 [ext_resource type="Script" path="res://testing/save_viewport_png.gd" id="1_bjh51"]
 [ext_resource type="PackedScene" uid="uid://dfwdr77qs6y2g" path="res://testing/sprite_to_save.tscn" id="2_dxgsq"]
+[ext_resource type="Texture2D" uid="uid://qf38k4sw4dqa" path="res://graphics/ui/buttons/2x/sych_btn@2x.png" id="3_j5phd"]
 
 [node name="Window" type="Window"]
 transparent_bg = true
@@ -9,3 +10,4 @@ size = Vector2i(200, 75)
 script = ExtResource("1_bjh51")
 
 [node name="AccountBtn_2x" parent="." instance=ExtResource("2_dxgsq")]
+texture = ExtResource("3_j5phd")
