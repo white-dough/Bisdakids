@@ -27,6 +27,8 @@ Panel/styles/panel = SubResource("StyleBoxTexture_bfmmg")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktw75"]
 texture = ExtResource("4_b8u7a")
+texture_margin_left = 10.0
+texture_margin_right = 10.0
 expand_margin_left = 10.0
 expand_margin_top = 5.0
 expand_margin_right = 12.0
@@ -55,9 +57,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -300.0
-offset_top = -135.0
+offset_top = -168.0
 offset_right = 300.0
-offset_bottom = 265.0
+offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -86,6 +88,7 @@ anchor_top = 0.1625
 anchor_right = 0.861667
 anchor_bottom = 0.4125
 grow_horizontal = 2
+alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="ModalPanel/Title_Container"]
@@ -94,7 +97,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_eqeqb")
-theme_override_colors/font_color = Color(0.976471, 0.305882, 0.223529, 1)
+theme_override_colors/font_color = Color(0.976471, 0.278431, 0.223529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/shadow_outline_size = 2
@@ -117,6 +120,7 @@ offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 34
+alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ModalPanel/Content_Container"]
 layout_mode = 2
@@ -131,12 +135,7 @@ theme_override_fonts/font = ExtResource("6_50xbx")
 theme_override_font_sizes/font_size = 24
 text = "Ayaw kawala og paglaum, balika hangtud makadaug!"
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 2
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="ModalPanel/Content_Container"]
-layout_mode = 2
-theme_override_constants/separation = 40
 
 [node name="Btn_Container" type="HBoxContainer" parent="ModalPanel"]
 layout_mode = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0prpdk8wyrbs"]
+[gd_scene load_steps=13 format=3 uid="uid://d0prpdk8wyrbs"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_nnxlp"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/error_modal.gd" id="1_pu4a7"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bw2uqdibo5nvb" path="res://graphics/ui/icons/2x/error_okay_1@2x.png" id="3_ubrqc"]
 [ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_ye38p"]
 [ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="6_gu18a"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_yfuqm"]
 [ext_resource type="Texture2D" uid="uid://dxcrf0vq4xcby" path="res://graphics/ui/buttons/2x/okayPressed_btn@2x.png" id="9_so43t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_contn"]
@@ -62,8 +63,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 theme = ExtResource("3_52g2f")
 theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0.843137, 0.207843, 0.152941, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.0705882, 0, 1)
+theme_override_colors/font_color = Color(0.976471, 0.278431, 0.223529, 1)
 theme_override_fonts/font = ExtResource("5_ye38p")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_wcow4")
@@ -76,12 +76,11 @@ autowrap_mode = 2
 layout_mode = 2
 theme = ExtResource("3_52g2f")
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_fonts/font = ExtResource("5_ye38p")
-theme_override_font_sizes/font_size = 22
+theme_override_fonts/font = ExtResource("7_yfuqm")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxEmpty_rb6le")
 text = "Dili mahimo ang koneksiyon sa server sa pagproseso sa kani na akawnt. Susi-a sa ang imong internet ug suwayi usab."
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="OkBtn" type="TextureButton" parent="ErrorModalPnl/ErrorContentVbox"]
