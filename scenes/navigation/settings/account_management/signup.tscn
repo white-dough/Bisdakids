@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_r6gqj"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_whhwp"]
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_m676w"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_gbvs7"]
 [ext_resource type="Texture2D" uid="uid://mui5jyjtm4nb" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
+[ext_resource type="Theme" uid="uid://d3074ukht3erv" path="res://themes/for_input.tres" id="7_rr74c"]
+[ext_resource type="Texture2D" uid="uid://bemhe8qqtfd5n" path="res://graphics/ui/buttons/2x/SignupPressed_btn@2x.png" id="9_hwpjh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r71xv"]
 content_margin_left = 7.0
@@ -18,27 +20,13 @@ texture = ExtResource("2_r6gqj")
 [sub_resource type="Theme" id="Theme_cy153"]
 Panel/styles/panel = SubResource("StyleBoxTexture_r71xv")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riqw7"]
-bg_color = Color(0.745098, 0.203922, 0.192157, 1)
-border_width_bottom = 15
-border_color = Color(0.466667, 0.196078, 0.0470588, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="Theme" id="Theme_fvm0b"]
-default_font_size = 35
-Label/fonts/font = ExtResource("3_whhwp")
-Label/styles/normal = SubResource("StyleBoxFlat_riqw7")
-
 [sub_resource type="Theme" id="Theme_472f3"]
 Label/font_sizes/font_size = 25
-Label/fonts/font = ExtResource("5_m676w")
+Label/fonts/font = ExtResource("4_gbvs7")
 
 [sub_resource type="Theme" id="Theme_kux5i"]
-Label/font_sizes/font_size = 25
-Label/fonts/font = ExtResource("5_m676w")
+Label/font_sizes/font_size = 18
+Label/fonts/font = ExtResource("3_whhwp")
 
 [node name="Signup" type="CanvasLayer"]
 script = ExtResource("1_q2xjc")
@@ -57,31 +45,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -355.0
-offset_top = -301.0
+offset_top = -233.0
 offset_right = 355.0
-offset_bottom = 361.0
+offset_bottom = 279.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_cy153")
-
-[node name="AccountLbl" type="Label" parent="SignupPnl"]
-custom_minimum_size = Vector2(358, 111)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -179.0
-offset_top = -50.5
-offset_right = 179.0
-offset_bottom = 60.5
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_fvm0b")
-text = "AKAWNT"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="BackBtn" type="TextureButton" parent="SignupPnl"]
 custom_minimum_size = Vector2(100, 100)
@@ -101,16 +72,16 @@ stretch_mode = 0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.507042
-anchor_top = 0.182779
-anchor_right = 0.507042
-anchor_bottom = 0.779456
+anchor_top = 0.0742188
+anchor_right = 0.487324
+anchor_bottom = 0.685547
 offset_left = -282.0
 offset_top = -60.0
 offset_right = 282.0
 offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 5
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -120,14 +91,15 @@ size_flags_horizontal = 4
 theme = SubResource("Theme_472f3")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("4_gbvs7")
+theme_override_font_sizes/font_size = 48
 text = "Pagbuhat og Akawnt"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FirstInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 5
 
 [node name="UsernameLbl" type="Label" parent="SignupPnl/ContentVBox/FirstInputVBox"]
 layout_mode = 2
@@ -142,13 +114,14 @@ vertical_alignment = 1
 
 [node name="UsernameInput" type="LineEdit" parent="SignupPnl/ContentVBox/FirstInputVBox"]
 layout_mode = 2
+theme = ExtResource("7_rr74c")
 theme_override_font_sizes/font_size = 25
 alignment = 1
 text_direction = 1
 
 [node name="SecondInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 4
 
 [node name="PasswordLbl" type="Label" parent="SignupPnl/ContentVBox/SecondInputVBox"]
 layout_mode = 2
@@ -164,6 +137,7 @@ vertical_alignment = 1
 [node name="PasswordInput" type="LineEdit" parent="SignupPnl/ContentVBox/SecondInputVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("7_rr74c")
 theme_override_font_sizes/font_size = 25
 alignment = 1
 secret = true
@@ -171,7 +145,7 @@ text_direction = 1
 
 [node name="ThirdInputVBox" type="VBoxContainer" parent="SignupPnl/ContentVBox"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 5
 
 [node name="ConfirmPasswordLbl" type="Label" parent="SignupPnl/ContentVBox/ThirdInputVBox"]
 layout_mode = 2
@@ -187,16 +161,21 @@ vertical_alignment = 1
 [node name="ConfirmPasswordInput" type="LineEdit" parent="SignupPnl/ContentVBox/ThirdInputVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("7_rr74c")
 theme_override_font_sizes/font_size = 25
 alignment = 1
 secret = true
 text_direction = 1
 
-[node name="SignupBtn" type="TextureButton" parent="SignupPnl/ContentVBox"]
-layout_mode = 2
+[node name="SignupBtn" type="TextureButton" parent="."]
+offset_left = 556.0
+offset_top = 500.0
+offset_right = 753.0
+offset_bottom = 577.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("6_qb4vn")
+texture_pressed = ExtResource("9_hwpjh")
 
 [connection signal="pressed" from="SignupPnl/BackBtn" to="." method="_on_back_btn_pressed"]
-[connection signal="pressed" from="SignupPnl/ContentVBox/SignupBtn" to="." method="_on_signup_btn_pressed"]
+[connection signal="pressed" from="SignupBtn" to="." method="_on_signup_btn_pressed"]

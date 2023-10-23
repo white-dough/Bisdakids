@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://cnk6o3iq6l2pg"]
+[gd_scene load_steps=23 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_wt7e2"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
+[ext_resource type="Theme" uid="uid://6qck26mka8rj" path="res://themes/for_title_lbl.tres" id="4_padj5"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
 [ext_resource type="Texture2D" uid="uid://qsoomwci6h4c" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
 [ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_8ypn1"]
@@ -23,25 +24,11 @@ texture = ExtResource("2_hnjgi")
 [sub_resource type="Theme" id="Theme_gkpco"]
 Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5q4a"]
-bg_color = Color(0.745098, 0.203922, 0.192157, 1)
-border_width_bottom = 15
-border_color = Color(0.466667, 0.196078, 0.0470588, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="Theme" id="Theme_vqsem"]
-default_font_size = 35
-Label/fonts/font = ExtResource("4_n0wcy")
-Label/styles/normal = SubResource("StyleBoxFlat_w5q4a")
-
 [sub_resource type="Theme" id="Theme_y5hgh"]
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_5u8ul")
 
-[sub_resource type="Image" id="Image_2kx26"]
+[sub_resource type="Image" id="Image_y21e4"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -51,7 +38,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_gv04k"]
-image = SubResource("Image_2kx26")
+image = SubResource("Image_y21e4")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulj8g"]
 bg_color = Color(0.231373, 0.364706, 0.866667, 1)
@@ -131,12 +118,13 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -179.0
-offset_top = -50.5
+offset_top = -50.0
 offset_right = 179.0
-offset_bottom = 60.5
+offset_bottom = 61.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_vqsem")
+theme = ExtResource("4_padj5")
+theme_override_font_sizes/font_size = 50
 text = "USBANANAN"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -158,12 +146,12 @@ stretch_mode = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.112676
-anchor_top = 0.231579
+anchor_top = 0.136842
 anchor_right = 0.897183
-anchor_bottom = 0.792105
+anchor_bottom = 0.884211
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 13
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -177,6 +165,7 @@ size_flags_horizontal = 8
 theme = SubResource("Theme_y5hgh")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("4_n0wcy")
 text = "Tingog"
 
 [node name="TingogHsldr" type="HSlider" parent="SettingsPnl/SettingsVbox/TingogVbox"]
@@ -199,6 +188,7 @@ size_flags_horizontal = 8
 theme = SubResource("Theme_y5hgh")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("4_n0wcy")
 text = "Musika"
 
 [node name="MusikaHsldr" type="HSlider" parent="SettingsPnl/SettingsVbox/MusikaVbox"]
