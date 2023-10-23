@@ -25,7 +25,7 @@ Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("4_gbvs7")
 
 [sub_resource type="Theme" id="Theme_kux5i"]
-Label/font_sizes/font_size = 18
+Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("3_whhwp")
 
 [node name="Signup" type="CanvasLayer"]
@@ -45,7 +45,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -355.0
-offset_top = -233.0
+offset_top = -219.0
 offset_right = 355.0
 offset_bottom = 279.0
 grow_horizontal = 2
@@ -71,10 +71,10 @@ stretch_mode = 0
 [node name="ContentVBox" type="VBoxContainer" parent="SignupPnl"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.507042
-anchor_top = 0.0742188
+anchor_left = 0.487324
+anchor_top = 0.166667
 anchor_right = 0.487324
-anchor_bottom = 0.685547
+anchor_bottom = 0.594378
 offset_left = -282.0
 offset_top = -60.0
 offset_right = 282.0
@@ -92,7 +92,7 @@ theme = SubResource("Theme_472f3")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
 theme_override_fonts/font = ExtResource("4_gbvs7")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 42
 text = "Pagbuhat og Akawnt"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -168,10 +168,10 @@ secret = true
 text_direction = 1
 
 [node name="SignupBtn" type="TextureButton" parent="."]
-offset_left = 556.0
-offset_top = 500.0
-offset_right = 753.0
-offset_bottom = 577.0
+offset_left = 550.0
+offset_top = 504.0
+offset_right = 747.0
+offset_bottom = 581.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("6_qb4vn")
