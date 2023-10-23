@@ -38,6 +38,7 @@ expand_margin_right = 15.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="Theme" id="Theme_eqeqb"]
+Label/colors/font_color = Color(1, 1, 1, 1)
 Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
 
 [node name="LevelCompleted" type="CanvasLayer"]
