@@ -37,9 +37,9 @@ scale = Vector2(0.562289, 0.497132)
 texture = ExtResource("4_v0asa")
 
 [node name="RichTextLabel2" type="Label" parent="."]
-offset_left = 448.0
+offset_left = 464.0
 offset_top = 208.0
-offset_right = 872.0
+offset_right = 840.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
 theme_override_fonts/font = ExtResource("6_fcuah")
@@ -55,18 +55,20 @@ anchor_left = 0.255708
 anchor_top = 0.172973
 anchor_right = 0.803653
 anchor_bottom = 0.940541
-offset_left = 79.9997
+offset_left = 95.9997
 offset_top = 168.0
-offset_right = -160.0
+offset_right = -168.0
 offset_bottom = -144.0
 grow_horizontal = 0
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 follow_focus = true
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-custom_minimum_size = Vector2(500, 1200)
+custom_minimum_size = Vector2(0, 1200)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -83,6 +85,7 @@ horizontal_alignment = 1
 
 [node name="Game Director" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads"]
 layout_mode = 2
+anchor_left = -0.0621469
 anchor_top = 1.22222
 anchor_right = 1.0
 anchor_bottom = 1.68519
@@ -96,9 +99,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads/Game Director"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.75
+anchor_top = 0.83
 anchor_right = 1.0
-anchor_bottom = 1.75
+anchor_bottom = 1.83
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
@@ -112,10 +115,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Creative Director" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.076
-anchor_top = 1.98148
-anchor_right = 0.924
-anchor_bottom = 2.57407
+anchor_left = 0.0338983
+anchor_top = 2.07407
+anchor_right = 0.954802
+anchor_bottom = 2.66667
 theme = ExtResource("8_nhy60")
 text = "Creative Director
 "
@@ -344,10 +347,10 @@ layout_mode = 2
 [node name="Programming Team" type="Label" parent="ScrollContainer/VBoxContainer/Label"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.322
-anchor_top = 2.82609
-anchor_right = 0.676
-anchor_bottom = 4.0
+anchor_left = 0.0508474
+anchor_top = 2.91305
+anchor_right = 1.0226
+anchor_bottom = 4.08696
 theme = ExtResource("7_q26b3")
 text = "Programming Team
 "
@@ -453,9 +456,9 @@ layout_mode = 2
 [node name="thanks" type="Label" parent="ScrollContainer/VBoxContainer/special thanks"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.118
+anchor_left = -0.491525
 anchor_top = 9.04348
-anchor_right = 1.254
+anchor_right = 1.25424
 anchor_bottom = 10.1304
 theme = ExtResource("8_nhy60")
 text = "Special Thanks
@@ -466,10 +469,9 @@ metadata/_edit_use_anchors_ = true
 [node name="text" type="Label" parent="ScrollContainer/VBoxContainer/special thanks/thanks"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05664
-anchor_top = 1.04
-anchor_right = 0.708
-anchor_bottom = 5.04
+anchor_top = 1.2
+anchor_right = 1.42395
+anchor_bottom = 6.24
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
@@ -484,9 +486,9 @@ metadata/_edit_use_anchors_ = true
 [node name="©2023 DeveloBots_ All rights reserved" type="Label" parent="ScrollContainer/VBoxContainer/special thanks"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.188
+anchor_left = -0.310734
 anchor_top = 14.9565
-anchor_right = 0.812
+anchor_right = 1.49718
 anchor_bottom = 16.0435
 theme = ExtResource("8_nhy60")
 text = "©2023 DeveloBots. All rights reserved
@@ -497,10 +499,10 @@ metadata/_edit_use_anchors_ = true
 [node name="text" type="Label" parent="ScrollContainer/VBoxContainer/special thanks/©2023 DeveloBots_ All rights reserved"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.102564
-anchor_top = 1.16
-anchor_right = 1.15385
-anchor_bottom = 4.48
+anchor_left = -0.175
+anchor_top = 1.36
+anchor_right = 1.15313
+anchor_bottom = 4.08
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
