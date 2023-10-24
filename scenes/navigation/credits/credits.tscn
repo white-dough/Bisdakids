@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://boxpcelxhyga8"]
+[gd_scene load_steps=10 format=3 uid="uid://boxpcelxhyga8"]
 
 [ext_resource type="Script" path="res://scenes/navigation/credits/credits.gd" id="1_yywy8"]
 [ext_resource type="Texture2D" uid="uid://bmwv0clad2y86" path="res://graphics/credits/2x/credits_bg@2x.png" id="2_ni1pp"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://b17gxmpvqnqgp" path="res://graphics/credits/2x/credits_panel_bg@2x.png" id="4_v0asa"]
 [ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="4_v3yie"]
 [ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_fcuah"]
-[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_cdwkq"]
+[ext_resource type="Theme" uid="uid://crh7hnovly655" path="res://themes/3text_lbl.tres" id="7_q26b3"]
+[ext_resource type="Theme" uid="uid://cldw5fpjh6usw" path="res://themes/2text_lbl.tres" id="8_nhy60"]
+[ext_resource type="Theme" uid="uid://ds5tgyrf7fdmm" path="res://themes/1text_lbl.tres" id="9_1g2py"]
 
 [node name="credits" type="Node"]
 script = ExtResource("1_yywy8")
@@ -35,14 +37,15 @@ scale = Vector2(0.562289, 0.497132)
 texture = ExtResource("4_v0asa")
 
 [node name="RichTextLabel2" type="Label" parent="."]
-offset_left = 406.0
-offset_top = 200.0
-offset_right = 906.0
-offset_bottom = 236.0
+offset_left = 448.0
+offset_top = 208.0
+offset_right = 872.0
+offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
 theme_override_fonts/font = ExtResource("6_fcuah")
-theme_override_font_sizes/font_size = 29
-text = "Credits"
+theme_override_font_sizes/font_size = 22
+text = "Credits
+BisdaKids: Duwa sa Pagpangita"
 horizontal_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -52,10 +55,10 @@ anchor_left = 0.255708
 anchor_top = 0.172973
 anchor_right = 0.803653
 anchor_bottom = 0.940541
-offset_left = 39.9997
-offset_top = 128.0
-offset_right = -120.0
-offset_bottom = -152.0
+offset_left = 79.9997
+offset_top = 168.0
+offset_right = -160.0
+offset_bottom = -144.0
 grow_horizontal = 0
 grow_vertical = 2
 follow_focus = true
@@ -63,34 +66,452 @@ horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-custom_minimum_size = Vector2(500, 500)
+custom_minimum_size = Vector2(500, 1200)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 18
+theme_override_constants/separation = 110
 
-[node name="RichTextLabel" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="Project Leads" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.589416, 0.222026, 0.0807922, 1)
-theme_override_fonts/font = ExtResource("7_cdwkq")
-text = "lallallalalla
-lallalallalalaallalala
-lalallalallaaal
-lallalalallalalal
-lallalalallallallalalla
-
-lalallalalla
-lalallalallala
-lallalalalallalallal
-lalalallalalla
-lalallalalalllalalalla
-lalallalalallala
-
-lalallalalalllallal
-lalallalalallala
-allalalalala
+theme = ExtResource("7_q26b3")
+text = "Develobots Team
+	Project Leads
 "
 horizontal_alignment = 1
+
+[node name="Game Director" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads"]
+layout_mode = 2
+anchor_top = 1.22222
+anchor_right = 1.0
+anchor_bottom = 1.68519
+theme = ExtResource("8_nhy60")
+text = "Game Director
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads/Game Director"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.75
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Dwight Eyac
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Creative Director" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 1.98148
+anchor_right = 0.924
+anchor_bottom = 2.57407
+theme = ExtResource("8_nhy60")
+text = "Creative Director
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads/Creative Director"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.75
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Gero Monica Alcover
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Development Team" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_q26b3")
+text = "Development Team
+"
+horizontal_alignment = 1
+
+[node name="Team4" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.079096
+anchor_top = 7.51852
+anchor_right = 0.927096
+anchor_bottom = 8.44444
+theme = ExtResource("8_nhy60")
+text = "Sound Designers"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.84
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "John Carl Villanueva"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 1.33333
+anchor_right = 0.924
+anchor_bottom = 1.92593
+theme = ExtResource("8_nhy60")
+text = "Designers/Artists
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.92
+anchor_right = 0.99936
+anchor_bottom = 2.6
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Gero Monica Alcover
+Kimberly Paradero
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team2" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0734463
+anchor_top = 3.92593
+anchor_right = 0.920904
+anchor_bottom = 4.85185
+theme = ExtResource("8_nhy60")
+text = "Programmers
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 3.56
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Dwight Eyac
+		Moses Anthony Fat
+		Kimberly Paradero
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Art Department" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_q26b3")
+text = "
+
+
+
+
+Art Department
+"
+horizontal_alignment = 1
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Art Department"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 1.04321
+anchor_right = 0.924
+anchor_bottom = 1.19753
+theme = ExtResource("8_nhy60")
+text = "Environment Artists
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Art Department/Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.92
+anchor_right = 1.0
+anchor_bottom = 1.72
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Gero Monica Alcover"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Animators" type="Label" parent="ScrollContainer/VBoxContainer/Art Department"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 1.33951
+anchor_right = 0.924
+anchor_bottom = 1.49383
+offset_bottom = -1.52588e-05
+theme = ExtResource("8_nhy60")
+text = "Animators
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Art Department/Animators"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.96
+anchor_right = 1.0
+anchor_bottom = 2.56
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "John Carl Villanueva
+		Moses Anthony Fat"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="UI_UX Designers" type="Label" parent="ScrollContainer/VBoxContainer/Art Department"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 1.77778
+anchor_right = 0.924
+anchor_bottom = 1.9321
+theme = ExtResource("8_nhy60")
+text = "UI/UX Designers
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Art Department/UI_UX Designers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.92
+anchor_right = 1.0
+anchor_bottom = 1.72
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Gero Monica Alcover"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Programming Team" type="Label" parent="ScrollContainer/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.322
+anchor_top = 2.82609
+anchor_right = 0.676
+anchor_bottom = 4.0
+theme = ExtResource("7_q26b3")
+text = "Programming Team
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Lead Programmer" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 1.33333
+anchor_right = 0.924
+anchor_bottom = 1.92593
+offset_left = 2.67029e-05
+offset_right = 3.05176e-05
+offset_bottom = 9.0
+theme = ExtResource("8_nhy60")
+text = "Lead Programmer
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team/Lead Programmer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.92
+anchor_right = 0.99936
+anchor_bottom = 2.6
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Dwight Eyac
+		Moses Anthony Fat"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Gameplay Programmers" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0621469
+anchor_top = 3.92593
+anchor_right = 1.0678
+anchor_bottom = 4.85185
+theme = ExtResource("8_nhy60")
+text = "Gameplay Programmers
+"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team/Gameplay Programmers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 3.56
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Dwight Eyac
+		Moses Anthony Fat
+		Kimberly Paradero
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Consultant_Adviser" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00564972
+anchor_top = 7.51852
+anchor_right = 1.0339
+anchor_bottom = 8.51852
+theme = ExtResource("7_q26b3")
+text = "Consultant/Adviser"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team/Consultant_Adviser"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.84
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "Engr. Kent Ivan Unabia"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="special thanks" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="thanks" type="Label" parent="ScrollContainer/VBoxContainer/special thanks"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.118
+anchor_top = 9.04348
+anchor_right = 1.254
+anchor_bottom = 10.1304
+theme = ExtResource("8_nhy60")
+text = "Special Thanks
+"
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="text" type="Label" parent="ScrollContainer/VBoxContainer/special thanks/thanks"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05664
+anchor_top = 1.04
+anchor_right = 0.708
+anchor_bottom = 5.04
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "University of Cebu Main - College of Computer Studies
+Mr. Neil A. Basabe, MSIT - CCS Dean
+Rosalie Eyac, Ruth Alcover, name - Parent, Supporter, Motivator
+Our friends <3. "
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="©2023 DeveloBots_ All rights reserved" type="Label" parent="ScrollContainer/VBoxContainer/special thanks"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.188
+anchor_top = 14.9565
+anchor_right = 0.812
+anchor_bottom = 16.0435
+theme = ExtResource("8_nhy60")
+text = "©2023 DeveloBots. All rights reserved
+"
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="text" type="Label" parent="ScrollContainer/VBoxContainer/special thanks/©2023 DeveloBots_ All rights reserved"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.102564
+anchor_top = 1.16
+anchor_right = 1.15385
+anchor_bottom = 4.48
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+theme_override_font_sizes/font_size = 9
+text = "This game is licensed under a Proprietary Commercial License. 
+This game is protected by copyright and other intellectual property laws. 
+Any unauthorized reproduction, distribution, 
+or use of this game is strictly prohibited and may result in legal action."
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
