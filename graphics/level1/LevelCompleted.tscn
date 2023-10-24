@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://isaei0k0sfmp"]
+[gd_scene load_steps=22 format=3 uid="uid://isaei0k0sfmp"]
 
 [ext_resource type="Script" path="res://graphics/level1/LevelCompleted.gd" id="1_141ol"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v7crd"]
@@ -6,13 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_dahf4"]
 [ext_resource type="Texture2D" uid="uid://drtnqfwiqa8be" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="5_1qr8m"]
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="6_cor30"]
+[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_2424f"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_wwfku"]
 [ext_resource type="Theme" uid="uid://bukmbrgwy0i5j" path="res://themes/lbl.tres" id="8_6y1ao"]
 [ext_resource type="Texture2D" uid="uid://cq7d5vs1fv2k0" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="8_k12ec"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="8_xulwh"]
 [ext_resource type="Texture2D" uid="uid://uljp8be4ph1o" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="10_rwp65"]
 [ext_resource type="Texture2D" uid="uid://dcrt2hwtjktgj" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
 [ext_resource type="Texture2D" uid="uid://pydd4sr6mtno" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
+[ext_resource type="Texture2D" uid="uid://grtp33445l2m" path="res://graphics/ui/buttons/2x/pressedhome_btn@2x.png" id="13_vowgy"]
+[ext_resource type="Texture2D" uid="uid://clm8diycwbdv6" path="res://graphics/ui/buttons/2x/retryPressed_btn_2@2x.png" id="14_wf3qv"]
+[ext_resource type="Texture2D" uid="uid://cola2mjywap77" path="res://graphics/ui/buttons/2x/nextPressed_btn@2x.png" id="15_1xy1q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -26,9 +30,11 @@ Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
 texture = ExtResource("5_1qr8m")
-expand_margin_left = 10.0
+texture_margin_left = 10.0
+texture_margin_right = 10.0
+expand_margin_left = 15.0
 expand_margin_top = 5.0
-expand_margin_right = 12.0
+expand_margin_right = 15.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="Theme" id="Theme_eqeqb"]
@@ -86,7 +92,8 @@ offset_left = 20.0
 offset_top = 40.0
 grow_vertical = 2
 texture_normal = ExtResource("4_dahf4")
-stretch_mode = 0
+texture_pressed = ExtResource("7_2424f")
+stretch_mode = 5
 
 [node name="Title_Container" type="VBoxContainer" parent="ModalPanel"]
 custom_minimum_size = Vector2(0, 100)
@@ -99,6 +106,7 @@ offset_top = 48.0
 offset_right = 217.0
 offset_bottom = 148.0
 grow_horizontal = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="ModalPanel/Title_Container"]
 layout_mode = 2
@@ -106,14 +114,14 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_eqeqb")
-theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/shadow_outline_size = 2
 theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("6_cor30")
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("8_xulwh")
+theme_override_font_sizes/font_size = 43
 text = "Nahuman ang Lebel"
+vertical_alignment = 1
 
 [node name="Content_Container" type="VBoxContainer" parent="ModalPanel"]
 layout_mode = 1
@@ -129,11 +137,12 @@ offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
+alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ModalPanel/Content_Container"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 40
+size_flags_horizontal = 0
+theme_override_constants/separation = 20
 
 [node name="HighscoreTxtLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer"]
 layout_mode = 2
@@ -150,13 +159,16 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme = ExtResource("8_6y1ao")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_wwfku")
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("8_xulwh")
+theme_override_font_sizes/font_size = 22
 text = "2345678"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ModalPanel/Content_Container"]
 layout_mode = 2
-theme_override_constants/separation = 40
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
 
 [node name="ScoreTxtLbl" type="Label" parent="ModalPanel/Content_Container/HBoxContainer2"]
 layout_mode = 2
@@ -174,8 +186,8 @@ layout_mode = 2
 size_flags_horizontal = 10
 theme = ExtResource("8_6y1ao")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_wwfku")
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("8_xulwh")
+theme_override_font_sizes/font_size = 22
 text = "2345678"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ModalPanel/Content_Container"]
@@ -199,15 +211,21 @@ theme_override_constants/separation = 45
 [node name="MapBtn" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
 texture_normal = ExtResource("8_k12ec")
+texture_pressed = ExtResource("13_vowgy")
+stretch_mode = 3
 
 [node name="NextBtn" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
 texture_normal = ExtResource("11_k2exo")
+texture_pressed = ExtResource("15_1xy1q")
+stretch_mode = 3
 
 [node name="PlayagainBtn" type="TextureButton" parent="ModalPanel/Btn_Container"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 texture_normal = ExtResource("12_ptc0x")
+texture_pressed = ExtResource("14_wf3qv")
+stretch_mode = 3
 
 [connection signal="pressed" from="ModalPanel/Btn_Container/MapBtn" to="." method="_on_map_btn_pressed"]
 [connection signal="pressed" from="ModalPanel/Btn_Container/PlayagainBtn" to="." method="_on_playagain_btn_pressed"]

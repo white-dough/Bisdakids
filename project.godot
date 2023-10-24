@@ -32,7 +32,7 @@ window/stretch/aspect="ignore"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/admob/plugin.cfg")
+enabled=PackedStringArray("res://addons/admob/plugin.cfg", "res://addons/ppc/plugin.cfg")
 
 [input]
 
@@ -45,6 +45,10 @@ click_secondary={
 "deadzone": 0.5,
 "events": []
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 

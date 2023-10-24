@@ -43,7 +43,7 @@
 			"Gitara":"",
 			"Kaban":"",
 			"Kodak":"",
-			"Kumpas":"",
+			"Kumpas":"butang nga gigamit sa pagtino sa direksyon",
 			"Pakwan":"",
 			"Payong":"",
 			"Salbabida":"",
@@ -53,7 +53,7 @@
 		{
 			"Bomba":"",
 			"Kariton":"",
-			"Lampara":"",
+			"Lampara":"pangpahayag",
 			"Lata":"",
 			"Ligid":"",
 			"Salag":"",
@@ -66,5 +66,27 @@
 	"level4":
 		{
 			"":""
+		},
+	"level5":
+		{
+			"Atsa":"usa ka himan nga gigamit sa pagputol sa kahoy",
+			"Barel":"",
+			"Baso":"",
+			"Bungo":"bukog sa ulo",
+			"Espada":"",
+			"Globo":"",
+			"Kadena":"",
+			"Kahon":"",
+			"Kandila":"",
+			"Lamesa":"",
+			"Lampara":"pangpahayag",
+			"Lingkuranan":"",
+			"Orasan":"",
+			"Papel":"",
+			"Pitsel":"",
+			"Pluma":"",
+			"Samin":"",
+			"Teleskopyo":"",
+			"Yawi":""
 		}
 }

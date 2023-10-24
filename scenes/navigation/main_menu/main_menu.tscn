@@ -1,15 +1,16 @@
-[gd_scene load_steps=25 format=3 uid="uid://df6737sinoafr"]
+[gd_scene load_steps=27 format=3 uid="uid://df6737sinoafr"]
 
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/main_menu.gd" id="1_jtkxk"]
 [ext_resource type="Texture2D" uid="uid://bje0ttmigqmic" path="res://graphics/level1/2x/2x/MainMenu_bg@2x.png" id="1_yiw32"]
 [ext_resource type="Script" path="res://scenes/navigation/main_menu/Modal.gd" id="2_2fmup"]
-[ext_resource type="Texture2D" uid="uid://dwpuyl43hd5nu" path="res://graphics/ui/icons/energly_lbl@2x.png" id="2_rdlts"]
 [ext_resource type="PackedScene" uid="uid://d0prpdk8wyrbs" path="res://scenes/navigation/settings/error_modal.tscn" id="3_atvqk"]
-[ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="3_br7nd"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="3_cnwvt"]
-[ext_resource type="Texture2D" uid="uid://crs6qkp4igooo" path="res://graphics/ui/icons/coins_lbl@2x.png" id="4_oygv8"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
+[ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="5_d4jlv"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
+[ext_resource type="Texture2D" uid="uid://bclwgp332wyra" path="res://graphics/ui/icons/2x/boxLbl@2x.png" id="6_dwh3p"]
+[ext_resource type="Texture2D" uid="uid://cgrxrjoupkik8" path="res://graphics/ui/icons/energy_icon@2x.png" id="7_sprhj"]
+[ext_resource type="Texture2D" uid="uid://cwujrikbom8u6" path="res://graphics/ui/icons/coins_icon@2x.png" id="8_11n2i"]
 [ext_resource type="Texture2D" uid="uid://bi723sm2d088v" path="res://graphics/ui/buttons/2x/dailytaskPressed_btn@2x.png" id="9_rloq8"]
 [ext_resource type="Texture2D" uid="uid://c8osw3r3v61at" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="10_42o32"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="10_l8wx2"]
@@ -23,11 +24,14 @@
 [ext_resource type="Texture2D" uid="uid://b0r3t7s1yah85" path="res://graphics/ui/buttons/2x/CreditsPressed_btn@2x.png" id="15_7nw5j"]
 [ext_resource type="Texture2D" uid="uid://duaybullj147c" path="res://graphics/ui/buttons/2x/QuitPressed_btn@2x.png" id="16_vrwmt"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_owj6l"]
-texture = ExtResource("2_rdlts")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebw4q"]
+texture = ExtResource("6_dwh3p")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hi20y"]
-texture = ExtResource("4_oygv8")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_plex3"]
+texture = ExtResource("7_sprhj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7pxcg"]
+texture = ExtResource("8_11n2i")
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_jtkxk")
@@ -63,37 +67,54 @@ mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 31.0
-offset_right = 537.0
-offset_bottom = 111.0
+anchor_left = 0.0547945
+anchor_top = 0.0418919
+anchor_right = 0.35312
+anchor_bottom = 0.15
 theme_override_constants/separation = 70
+metadata/_edit_use_anchors_ = true
 
 [node name="energy_lbl" type="Label" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(178, 78)
+custom_minimum_size = Vector2(160, 60)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_owj6l")
+size_flags_horizontal = 4
+theme = ExtResource("5_d4jlv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebw4q")
+text = "143"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
 
-[node name="energyAdd_btn" type="TextureButton" parent="Control/HBoxContainer/energy_lbl"]
-layout_mode = 0
-offset_left = 183.0
-offset_top = 23.0
-offset_right = 224.0
-offset_bottom = 64.0
-texture_normal = ExtResource("3_br7nd")
+[node name="energyIcon" type="Label" parent="Control/HBoxContainer/energy_lbl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.24375
+anchor_top = -0.15
+anchor_right = 0.2375
+anchor_bottom = 1.13333
+theme_override_styles/normal = SubResource("StyleBoxTexture_plex3")
+metadata/_edit_use_anchors_ = true
 
 [node name="Coin_lbl" type="Label" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(178, 78)
+custom_minimum_size = Vector2(160, 60)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_hi20y")
+size_flags_horizontal = 4
+theme = ExtResource("5_d4jlv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebw4q")
+text = "143"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
 
-[node name="coinAdd_btn" type="TextureButton" parent="Control/HBoxContainer/Coin_lbl"]
-layout_mode = 0
-offset_left = 183.0
-offset_top = 23.0
-offset_right = 224.0
-offset_bottom = 64.0
-texture_normal = ExtResource("3_br7nd")
+[node name="CoinIcon" type="Label" parent="Control/HBoxContainer/Coin_lbl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.24375
+anchor_top = -0.15
+anchor_right = 0.2375
+anchor_bottom = 1.13333
+theme_override_styles/normal = SubResource("StyleBoxTexture_7pxcg")
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
 layout_mode = 0
@@ -144,7 +165,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 0
 offset_left = 32.0
 offset_top = 525.0
-offset_right = 1280.0
+offset_right = 1291.0
 offset_bottom = 645.0
 mouse_filter = 2
 theme_override_constants/separation = 835
@@ -169,3 +190,4 @@ texture = ExtResource("13_6r1g0")
 
 [connection signal="child_exiting_tree" from="Modal" to="." method="_on_modal_child_exiting_tree"]
 [connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]

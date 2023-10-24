@@ -7,8 +7,8 @@ func _ready():
 	var internet = true if Game.is_connected_to_internet else false
 	if !internet:
 		queue_free()
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("NO INTERNET CONNECTION")
-		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Please fix your internet connection and try again")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALAY KONEKSYON SA INTERNET!")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Palihug ayo-a ang imong koneksiyon sa internet ug suwayi pag-usab.")
 		error_modal.visible = true
 	###
 	var child_item_array : Array = []
