@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://br6q4gga0uh0a"]
+[gd_scene load_steps=11 format=3 uid="uid://br6q4gga0uh0a"]
 
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/notLoggedIn.gd" id="1_1yhn0"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_oey0p"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_ocblh"]
-[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_ixqkc"]
+[ext_resource type="Theme" uid="uid://6qck26mka8rj" path="res://themes/for_title_lbl.tres" id="4_307kq"]
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="5_1fbb2"]
 [ext_resource type="Texture2D" uid="uid://b17c7uvlkdtd5" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="5_bvpkt"]
+[ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="6_326id"]
 [ext_resource type="Texture2D" uid="uid://mui5jyjtm4nb" path="res://graphics/ui/icons/Sign up btn@2x.png" id="7_wx7tt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4t0lc"]
@@ -17,20 +18,6 @@ texture = ExtResource("2_ocblh")
 
 [sub_resource type="Theme" id="Theme_yfnx3"]
 Panel/styles/panel = SubResource("StyleBoxTexture_4t0lc")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_waqab"]
-bg_color = Color(0.745098, 0.203922, 0.192157, 1)
-border_width_bottom = 15
-border_color = Color(0.466667, 0.196078, 0.0470588, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="Theme" id="Theme_i0oul"]
-default_font_size = 35
-Label/fonts/font = ExtResource("3_ixqkc")
-Label/styles/normal = SubResource("StyleBoxFlat_waqab")
 
 [node name="notLoggedIn" type="CanvasLayer"]
 script = ExtResource("1_1yhn0")
@@ -73,7 +60,7 @@ offset_right = 179.0
 offset_bottom = 60.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_i0oul")
+theme = ExtResource("4_307kq")
 text = "AKAWNT"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -100,9 +87,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -282.0
-offset_top = -95.0
+offset_top = -108.0
 offset_right = 282.0
-offset_bottom = 95.0
+offset_bottom = 108.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
@@ -110,7 +97,8 @@ alignment = 1
 
 [node name="NoAccountWarningLbl" type="Label" parent="NotLoggedInPnl/ContentVBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme = ExtResource("6_326id")
+theme_override_font_sizes/font_size = 23
 text = "Kailangan nimo og akawnt para magamit og makarga nimo ang kauswagan sa imong duwa padung sa ubang kahimanan bro"
 horizontal_alignment = 1
 vertical_alignment = 1

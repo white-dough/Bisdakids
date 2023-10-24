@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://boxpcelxhyga8"]
+[gd_scene load_steps=8 format=3 uid="uid://boxpcelxhyga8"]
 
 [ext_resource type="Script" path="res://scenes/navigation/credits/credits.gd" id="1_yywy8"]
-[ext_resource type="Texture2D" uid="uid://kj64paekvu60" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="2_ehmwn"]
 [ext_resource type="Texture2D" uid="uid://bmwv0clad2y86" path="res://graphics/credits/2x/credits_bg@2x.png" id="2_ni1pp"]
+[ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="3_xeiti"]
+[ext_resource type="Texture2D" uid="uid://b17gxmpvqnqgp" path="res://graphics/credits/2x/credits_panel_bg@2x.png" id="4_v0asa"]
+[ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="4_v3yie"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_fcuah"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_cdwkq"]
 
 [node name="credits" type="Node"]
 script = ExtResource("1_yywy8")
@@ -14,8 +18,79 @@ texture = ExtResource("2_ni1pp")
 expand_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("2_ehmwn")
+anchors_preset = -1
+anchor_left = 0.158295
+anchor_top = 0.172973
+anchor_right = 0.224505
+anchor_bottom = 0.290541
+offset_left = -1.52588e-05
+texture_normal = ExtResource("3_xeiti")
+texture_pressed = ExtResource("4_v3yie")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TigmuQLbl_2x" type="Sprite2D" parent="."]
+position = Vector2(654, 380)
+scale = Vector2(0.562289, 0.497132)
+texture = ExtResource("4_v0asa")
+
+[node name="RichTextLabel2" type="Label" parent="."]
+offset_left = 406.0
+offset_top = 200.0
+offset_right = 906.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
+theme_override_fonts/font = ExtResource("6_fcuah")
+theme_override_font_sizes/font_size = 29
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+modulate = Color(1, 0.977927, 0.964199, 1)
+anchors_preset = -1
+anchor_left = 0.255708
+anchor_top = 0.172973
+anchor_right = 0.803653
+anchor_bottom = 0.940541
+offset_left = 39.9997
+offset_top = 128.0
+offset_right = -120.0
+offset_bottom = -152.0
+grow_horizontal = 0
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 18
+
+[node name="RichTextLabel" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.589416, 0.222026, 0.0807922, 1)
+theme_override_fonts/font = ExtResource("7_cdwkq")
+text = "lallallalalla
+lallalallalalaallalala
+lalallalallaaal
+lallalalallalalal
+lallalalallallallalalla
+
+lalallalalla
+lalallalallala
+lallalalalallalallal
+lalalallalalla
+lalallalalalllalalalla
+lalallalalallala
+
+lalallalalalllallal
+lalallalalallala
+allalalalala
+"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
