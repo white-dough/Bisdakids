@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://crh7hnovly655"]
+
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="1_x4awo"]
+
+[resource]
+Label/colors/font_color = Color(0.517647, 0.192157, 0.0666667, 1)
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_x4awo")
