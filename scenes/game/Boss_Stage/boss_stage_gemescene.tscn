@@ -1,16 +1,16 @@
 [gd_scene load_steps=34 format=3 uid="uid://53k1jkllajyp"]
 
-[ext_resource type="Texture2D" uid="uid://dtv2l6hbvswog" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_hpvgl"]
-[ext_resource type="Texture2D" uid="uid://btv5wjn76jy3b" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="2_e6n33"]
-[ext_resource type="Texture2D" uid="uid://benn2cl732vbb" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="2_hrxdc"]
-[ext_resource type="Texture2D" uid="uid://u2cratvt6wx1" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_mt7fj"]
+[ext_resource type="Texture2D" uid="uid://be8b8p0u1tofh" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_hpvgl"]
+[ext_resource type="Texture2D" uid="uid://d2cq56jvi3wn0" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="2_e6n33"]
+[ext_resource type="Texture2D" uid="uid://c0mh6um7vb11n" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="2_hrxdc"]
+[ext_resource type="Texture2D" uid="uid://cd5km2va4gxco" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_mt7fj"]
 [ext_resource type="Script" path="res://scenes/game/Boss_Stage/ghost.gd" id="3_lxbi0"]
 [ext_resource type="PackedScene" uid="uid://1fi74vbvuegc" path="res://scenes/game/Boss_Stage/Objects/lingkuranan.tscn" id="4_46y0p"]
 [ext_resource type="PackedScene" uid="uid://cus1l43frefad" path="res://scenes/game/Boss_Stage/Objects/kadena.tscn" id="5_2316o"]
-[ext_resource type="Texture2D" uid="uid://bsctbsxv70g4f" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_eduvj"]
+[ext_resource type="Texture2D" uid="uid://dlyskbkilec8x" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_eduvj"]
 [ext_resource type="PackedScene" uid="uid://cwmt1oiv2vxe5" path="res://scenes/game/Boss_Stage/Objects/picture_frame.tscn" id="7_wkcgd"]
-[ext_resource type="Texture2D" uid="uid://duyynoi4bnp3r" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_4bxnw"]
-[ext_resource type="Texture2D" uid="uid://caujf6tr5f6rw" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="8_4gwsf"]
+[ext_resource type="Texture2D" uid="uid://6x4hbje7omyq" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_4bxnw"]
+[ext_resource type="Texture2D" uid="uid://cyp3k8j7qsmub" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="8_4gwsf"]
 [ext_resource type="PackedScene" uid="uid://cm11i436x5dbs" path="res://scenes/game/Boss_Stage/Objects/ulo_na_statwa.tscn" id="9_kedtp"]
 [ext_resource type="PackedScene" uid="uid://vj63fwjxyi1" path="res://scenes/game/Boss_Stage/Objects/espada.tscn" id="10_wsi6l"]
 [ext_resource type="PackedScene" uid="uid://r7w423de5cyv" path="res://scenes/game/Boss_Stage/Objects/salamin.tscn" id="11_olcbm"]
@@ -150,5 +150,5 @@ position = Vector2(943, 635)
 [node name="Orasan" parent="Objects" instance=ExtResource("28_k4is0")]
 position = Vector2(997, 189)
 
-[node name="Susi" parent="Objects" instance=ExtResource("31_gma3y")]
+[node name="Yawi" parent="Objects" instance=ExtResource("31_gma3y")]
 position = Vector2(743, 722)
