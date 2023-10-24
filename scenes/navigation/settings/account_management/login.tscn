@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://byf47fnn2v6w4"]
+[gd_scene load_steps=11 format=3 uid="uid://byf47fnn2v6w4"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_34rfk"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/login.gd" id="1_derfu"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_mkmfo"]
-[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_1xypj"]
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="4_k3e5g"]
+[ext_resource type="Theme" uid="uid://6qck26mka8rj" path="res://themes/for_title_lbl.tres" id="4_ylsld"]
 [ext_resource type="Texture2D" uid="uid://b17c7uvlkdtd5" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="6_lma8w"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="7_03x1f"]
+[ext_resource type="Theme" uid="uid://d3074ukht3erv" path="res://themes/for_input.tres" id="7_xf33k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71lv0"]
 content_margin_left = 7.0
@@ -17,20 +18,6 @@ texture = ExtResource("2_mkmfo")
 
 [sub_resource type="Theme" id="Theme_2gma0"]
 Panel/styles/panel = SubResource("StyleBoxTexture_71lv0")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ava4q"]
-bg_color = Color(0.745098, 0.203922, 0.192157, 1)
-border_width_bottom = 15
-border_color = Color(0.466667, 0.196078, 0.0470588, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="Theme" id="Theme_4eeuo"]
-default_font_size = 35
-Label/fonts/font = ExtResource("3_1xypj")
-Label/styles/normal = SubResource("StyleBoxFlat_ava4q")
 
 [node name="Login" type="CanvasLayer"]
 script = ExtResource("1_derfu")
@@ -73,7 +60,7 @@ offset_right = 179.0
 offset_bottom = 60.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_4eeuo")
+theme = ExtResource("4_ylsld")
 text = "AKAWNT"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -134,8 +121,11 @@ vertical_alignment = 1
 [node name="UsernameInput" type="LineEdit" parent="LoginPnl/ContentVBox/FirstInputHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 25
+theme = ExtResource("7_xf33k")
+theme_override_colors/font_placeholder_color = Color(0.356863, 0.121569, 0.0313726, 0.639216)
+theme_override_font_sizes/font_size = 18
 placeholder_text = "ngalan sa tiggamit"
+alignment = 1
 text_direction = 1
 
 [node name="SecondInputHBox" type="HBoxContainer" parent="LoginPnl/ContentVBox"]
@@ -155,8 +145,11 @@ vertical_alignment = 1
 [node name="PasswordInput" type="LineEdit" parent="LoginPnl/ContentVBox/SecondInputHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 25
+theme = ExtResource("7_xf33k")
+theme_override_colors/font_placeholder_color = Color(0.356863, 0.121569, 0.0313726, 0.639216)
+theme_override_font_sizes/font_size = 18
 placeholder_text = "susi sa akawnt"
+alignment = 1
 secret = true
 text_direction = 1
 

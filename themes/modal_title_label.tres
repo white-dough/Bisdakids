@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://dvohq554kdv3p"]
 
-[ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="1_dq7kp"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="1_jga38"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gfp4y"]
 
@@ -8,5 +8,5 @@
 Label/colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 Label/colors/font_shadow_color = Color(0.0941176, 0.0196078, 0.00392157, 1)
 Label/font_sizes/font_size = 32
-Label/fonts/font = ExtResource("1_dq7kp")
+Label/fonts/font = ExtResource("1_jga38")
 Label/styles/normal = SubResource("StyleBoxTexture_gfp4y")

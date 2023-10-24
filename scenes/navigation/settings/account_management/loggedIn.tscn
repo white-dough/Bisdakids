@@ -4,10 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_r784m"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_dtkw6"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_kscbx"]
+[ext_resource type="Theme" uid="uid://6qck26mka8rj" path="res://themes/for_title_lbl.tres" id="4_lrq75"]
+[ext_resource type="Texture2D" uid="uid://wdesspbemmmu" path="res://graphics/ui/buttons/2x/itakdoPressed_btn@2x.png" id="5_h174m"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_r5q4x"]
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="5_wgt6t"]
+[ext_resource type="Texture2D" uid="uid://d01q46knsitr5" path="res://graphics/ui/buttons/2x/logout@2x.png" id="6_80mvk"]
 [ext_resource type="Texture2D" uid="uid://cags78puhcqsc" path="res://graphics/ui/buttons/2x/sych_btn@2x.png" id="7_i3x7v"]
-[ext_resource type="Texture2D" uid="uid://ckyf3akniqeg4" path="res://graphics/ui/icons/logout_btn@2x.png" id="8_lg31x"]
+[ext_resource type="Texture2D" uid="uid://8fdx23o5tgq4" path="res://graphics/ui/buttons/2x/logoutPressed_btn@2x.png" id="7_pku56"]
+[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="12_gedmu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkuea"]
 content_margin_left = 7.0
@@ -19,36 +23,12 @@ texture = ExtResource("2_dtkw6")
 [sub_resource type="Theme" id="Theme_iklqr"]
 Panel/styles/panel = SubResource("StyleBoxTexture_rkuea")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uc10w"]
-bg_color = Color(0.745098, 0.203922, 0.192157, 1)
-border_width_bottom = 15
-border_color = Color(0.466667, 0.196078, 0.0470588, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="Theme" id="Theme_8w8bn"]
-default_font_size = 35
-Label/fonts/font = ExtResource("3_kscbx")
-Label/styles/normal = SubResource("StyleBoxFlat_uc10w")
-
 [sub_resource type="Theme" id="Theme_5cw5t"]
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("5_r5q4x")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_teb8c"]
-bg_color = Color(0.270588, 0.101961, 0.0666667, 1)
-draw_center = false
-border_width_bottom = 5
-border_color = Color(0.501961, 0.215686, 0.156863, 1)
-
-[sub_resource type="Theme" id="Theme_pxnee"]
-Label/fonts/font = null
-Label/styles/normal = SubResource("StyleBoxFlat_teb8c")
-
-[sub_resource type="FontVariation" id="FontVariation_l43s0"]
-variation_embolden = 0.98
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dx033"]
+texture = ExtResource("12_gedmu")
 
 [node name="LoggedIn" type="CanvasLayer"]
 script = ExtResource("1_g8pob")
@@ -77,6 +57,26 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_iklqr")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="LoggedInPnl"]
+layout_mode = 2
+offset_left = 118.0
+offset_top = 191.0
+offset_right = 603.0
+offset_bottom = 266.0
+
+[node name="SyncBtn" type="TextureButton" parent="LoggedInPnl/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+texture_normal = ExtResource("7_i3x7v")
+texture_pressed = ExtResource("5_h174m")
+
+[node name="LogoutBtn" type="TextureButton" parent="LoggedInPnl/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture_normal = ExtResource("6_80mvk")
+texture_pressed = ExtResource("7_pku56")
+
 [node name="AccountLbl" type="Label" parent="LoggedInPnl"]
 custom_minimum_size = Vector2(358, 111)
 layout_mode = 1
@@ -89,7 +89,7 @@ offset_right = 179.0
 offset_bottom = 60.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_8w8bn")
+theme = ExtResource("4_lrq75")
 text = "AKAWNT"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -110,15 +110,11 @@ stretch_mode = 0
 
 [node name="ContentVBox" type="VBoxContainer" parent="LoggedInPnl"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -60.0
-offset_right = 282.0
-offset_bottom = 60.0
+anchors_preset = -1
+anchor_left = 0.102817
+anchor_top = 0.286842
+anchor_right = 0.897183
+anchor_bottom = 0.442105
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
@@ -137,6 +133,7 @@ size_flags_horizontal = 8
 theme = SubResource("Theme_5cw5t")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("3_kscbx")
 theme_override_font_sizes/font_size = 30
 text = "Ngalan sa tiggamit:"
 horizontal_alignment = 1
@@ -145,27 +142,14 @@ vertical_alignment = 1
 [node name="LoggedLbl" type="Label" parent="LoggedInPnl/ContentVBox/LabelsVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = SubResource("Theme_pxnee")
 theme_type_variation = &"HeaderLarge"
-theme_override_fonts/font = SubResource("FontVariation_l43s0")
+theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
+theme_override_fonts/font = ExtResource("3_kscbx")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_dx033")
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LoggedInPnl/ContentVBox"]
-layout_mode = 2
-
-[node name="SyncBtn" type="TextureButton" parent="LoggedInPnl/ContentVBox/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 2
-texture_normal = ExtResource("7_i3x7v")
-
-[node name="LogoutBtn" type="TextureButton" parent="LoggedInPnl/ContentVBox/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 10
-size_flags_vertical = 4
-texture_normal = ExtResource("8_lg31x")
-
+[connection signal="pressed" from="LoggedInPnl/HBoxContainer/SyncBtn" to="." method="_on_sync_btn_pressed"]
+[connection signal="pressed" from="LoggedInPnl/HBoxContainer/LogoutBtn" to="." method="_on_logout_btn_pressed"]
 [connection signal="pressed" from="LoggedInPnl/BackBtn" to="." method="_on_back_btn_pressed"]
-[connection signal="pressed" from="LoggedInPnl/ContentVBox/HBoxContainer/SyncBtn" to="." method="_on_sync_btn_pressed"]
-[connection signal="pressed" from="LoggedInPnl/ContentVBox/HBoxContainer/LogoutBtn" to="." method="_on_logout_btn_pressed"]
