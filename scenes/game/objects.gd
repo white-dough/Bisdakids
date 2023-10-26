@@ -2,7 +2,6 @@ extends Node2D
 
 signal object_found_signal(object_name)
 
-
 @onready var current_objects: Array = []; var count_of_objects_to_find: int; var selected_objects: Array; var history_current_objects: Array = []
 var click_abuse_counter: int
 var click_abuse_max: int = 5
@@ -88,6 +87,4 @@ func reset_click_abuse_counter():
 			
 #func _process(delta):
 #	print(selected_objects)
-
-
 

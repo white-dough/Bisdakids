@@ -1,9 +1,7 @@
 [gd_scene load_steps=67 format=3 uid="uid://dptp3em1qnmlm"]
 
-[ext_resource type="Script" path="res://scenes/navigation/inventory/map/map.gd" id="1_ald8r"]
-[ext_resource type="Texture2D" uid="uid://b87ns7pvx17vs" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
+[ext_resource type="Texture2D" uid="uid://dmvxtumirccxp" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Texture2D" uid="uid://bms5mnivpmtlk" path="res://graphics/map/map_assets/emptyMap.png" id="1_t4g7b"]
-[ext_resource type="Texture2D" uid="uid://bog4evacdxa26" path="res://graphics/map/map_assets/Map@2x.png" id="2_btxib"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/camerascript.gd" id="2_k4dw0"]
 [ext_resource type="Texture2D" uid="uid://c52aec3wfyh6v" path="res://graphics/map/map_assets/shadows@2x.png" id="3_bw2f8"]
 [ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://graphics/map/map_assets/level1Button4x.png" id="3_fqkr2"]
@@ -311,8 +309,7 @@ texture = ExtResource("9_5qvwd")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0ms0"]
 texture = ExtResource("11_cprym")
 
-[node name="Map" type="Node2D"]
-script = ExtResource("1_ald8r")
+[node name="Node2D" type="Node2D"]
 
 [node name="Background2" type="Sprite2D" parent="."]
 visible = false
@@ -490,7 +487,6 @@ offset_top = -46.1978
 offset_right = 112.396
 offset_bottom = 14.8022
 scale = Vector2(1.005, 1)
-value = 100.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
 

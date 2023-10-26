@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxr80ob1ruu5t"]
+
+[ext_resource type="Texture2D" uid="uid://10ulhcshvixv" path="res://graphics/level2/2x/Gitara@2x.png" id="1_oknhh"]
+
+[node name="gitara" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oknhh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4, 118, 10, 118, 17, 114, 26, 104, 32, 93, 31, 79, 27, 67, 24, 53, 34, 40, 37, 23, 23, 8, 44, -69, 52, -80, 60, -98, 60, -118, 44, -123, 26, -126, 17, -122, 12, -116, 9, -104, 7, -91, 11, -77, -8, 1, -28, 3, -33, 11, -35, 26, -33, 38, -40, 46, -50, 55, -54, 68, -58, 80, -58, 90, -53, 106, -38, 115, -23, 122)

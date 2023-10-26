@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=18 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://b4x17ogh4k7jc" path="res://graphics/map/map_assets/map4x.png" id="1_3i7j3"]
 [ext_resource type="Script" path="res://addons/ppc/ppcamera.gd" id="3_vrgr6"]
 [ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://graphics/map/map_assets/level1Button4x.png" id="4_jl88o"]
+[ext_resource type="Texture2D" uid="uid://c1gms8lvyx46w" path="res://graphics/map/map_assets/emptyStars@6x.png" id="5_m8gt2"]
 [ext_resource type="Texture2D" uid="uid://cargchp8jmmvc" path="res://graphics/map/map_assets/level2Button4x.png" id="5_qn5c7"]
+[ext_resource type="Texture2D" uid="uid://c1rv82o65ikva" path="res://graphics/map/map_assets/fullStars@6x.png" id="6_rmgec"]
 [ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://graphics/map/map_assets/level3Button4x.png" id="6_vy4ta"]
 [ext_resource type="Texture2D" uid="uid://k6enst1t6p0e" path="res://graphics/map/map_assets/level4Button4x.png" id="7_5gvpk"]
 [ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://graphics/map/map_assets/level5Button4x.png" id="8_tf5dj"]
@@ -45,7 +47,6 @@ scale = Vector2(2.00086, 1.85443)
 script = ExtResource("3_vrgr6")
 position_smoothing_speed = 15
 min_zoom_factor = 1.0
-show_debug_icon = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -53,6 +54,16 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("11_uvn8q")
+
+[node name="Level1Progress" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 464.0
+offset_right = 618.0
+offset_bottom = 525.0
+scale = Vector2(0.5, 0.45)
+texture_under = ExtResource("5_m8gt2")
+texture_progress = ExtResource("6_rmgec")
 
 [node name="Level1Button" type="TextureButton" parent="Control"]
 layout_mode = 0
@@ -63,6 +74,16 @@ offset_bottom = 586.0
 scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("4_jl88o")
 
+[node name="Level2Progress" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 389.0
+offset_right = 664.0
+offset_bottom = 450.0
+scale = Vector2(0.5, 0.45)
+texture_under = ExtResource("5_m8gt2")
+texture_progress = ExtResource("6_rmgec")
+
 [node name="Level2Button" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 557.0
@@ -71,6 +92,16 @@ offset_right = 667.0
 offset_bottom = 501.0
 scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("5_qn5c7")
+
+[node name="Level3Progress" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 329.0
+offset_right = 736.0
+offset_bottom = 390.0
+scale = Vector2(0.5, 0.45)
+texture_under = ExtResource("5_m8gt2")
+texture_progress = ExtResource("6_rmgec")
 
 [node name="Level3Button" type="TextureButton" parent="Control"]
 layout_mode = 0
@@ -81,6 +112,16 @@ offset_bottom = 437.0
 scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("6_vy4ta")
 
+[node name="Level4Progress" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 718.0
+offset_top = 265.0
+offset_right = 826.0
+offset_bottom = 326.0
+scale = Vector2(0.5, 0.45)
+texture_under = ExtResource("5_m8gt2")
+texture_progress = ExtResource("6_rmgec")
+
 [node name="Level4Button" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 721.0
@@ -89,6 +130,16 @@ offset_right = 825.0
 offset_bottom = 374.0
 scale = Vector2(0.455, 0.455)
 texture_normal = ExtResource("7_5gvpk")
+
+[node name="Level5Progress" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 742.0
+offset_top = 168.0
+offset_right = 850.0
+offset_bottom = 229.0
+scale = Vector2(0.5, 0.45)
+texture_under = ExtResource("5_m8gt2")
+texture_progress = ExtResource("6_rmgec")
 
 [node name="Level5Button" type="TextureButton" parent="Control"]
 layout_mode = 0

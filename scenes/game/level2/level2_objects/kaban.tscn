@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1slm3cxb05bk"]
+
+[ext_resource type="Texture2D" uid="uid://b1a0clhxb2xss" path="res://graphics/level2/2x/kaban@2x.png" id="1_vkf5m"]
+
+[node name="kaban" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vkf5m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, 26, -15, 27, -10, 32, -6, 35, 4, 35, 14, 25, 26, 22, 24, 4, 34, 2, 40, -3, 43, -12, 41, -22, 33, -30, 20, -35, 4, -39, -3, -39, -10, -35, -14, -18, -30, -16, -42, -12, -42, -8, -42, 4, -39, 16, -41, 20, -37, 25, -30, 32)
