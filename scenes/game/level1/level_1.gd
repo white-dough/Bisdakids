@@ -21,6 +21,7 @@ extends Node2D
 
 
 func _ready():
+	Audio.play_bgm(Audio.levels_bgm)
 	$HUD.connect("level_finished", level_completed)
 	success_prompt.visibility_changed.connect(load_interstitial_ad)
 	failed_prompt.visibility_changed.connect(load_interstitial_ad)

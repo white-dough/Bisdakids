@@ -26,6 +26,7 @@ extends Node
 @onready var loaded_player_data : Dictionary = {}
 @onready var http_request : HTTPRequest = HTTPRequest.new()
 @onready var is_connected_to_internet : bool = false
+var premium: bool = false
 
 func check_is_connected_internet():
 	http_request.cancel_request()
@@ -199,7 +200,9 @@ func _ready():
 	http_request.connect("request_completed", _on_request_completed)
 	daily_task_logic()
 	load_data()
+	premium = true if user_inventory['premium'] else false
 	print(loaded_player_data)
+	print(premium)
 	await daily_task_from_db()
 	#timer
 #	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.WRITE)

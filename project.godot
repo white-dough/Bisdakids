@@ -23,6 +23,7 @@ Game="*res://scenes/game_system/game.gd"
 BannerAds="*res://advertisment/BannerAds.gd"
 InterstitialAds="*res://advertisment/InterstitialAds.gd"
 DiscordSDKLoader="*res://addons/discord-sdk-gd/nodes/core_updater.gd"
+Audio="*res://audio/nodes/Audio.tscn"
 
 [display]
 

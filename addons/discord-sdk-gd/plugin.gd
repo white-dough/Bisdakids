@@ -10,9 +10,9 @@ var restart_window: Control = preload("res://addons/discord-sdk-gd/restart_windo
 func _enter_tree() -> void:
 	add_custom_type("DiscordSDKDebug","Node",DiscordSDKDebug,DiscordSDKDebug_icon)
 	add_autoload_singleton("DiscordSDKLoader", "res://addons/discord-sdk-gd/nodes/core_updater.gd")
-	ProjectSettings.set_setting("DiscordSDK/EditorPresence/enabled",false)
+	ProjectSettings.set_setting("DiscordSDK/EditorPresence/enabled",true)
 	ProjectSettings.set_as_basic("DiscordSDK/EditorPresence/enabled",true)
-	ProjectSettings.set_initial_value("DiscordSDK/EditorPresence/enabled",false)
+	ProjectSettings.set_initial_value("DiscordSDK/EditorPresence/enabled",true)
 	ProjectSettings.set_restart_if_changed("DiscordSDK/EditorPresence/enabled",true)
 
 func _enable_plugin() -> void:

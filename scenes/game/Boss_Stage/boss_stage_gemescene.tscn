@@ -1,16 +1,16 @@
 [gd_scene load_steps=34 format=3 uid="uid://53k1jkllajyp"]
 
-[ext_resource type="Texture2D" uid="uid://be8b8p0u1tofh" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_hpvgl"]
-[ext_resource type="Texture2D" uid="uid://d2cq56jvi3wn0" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="2_e6n33"]
-[ext_resource type="Texture2D" uid="uid://c0mh6um7vb11n" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="2_hrxdc"]
-[ext_resource type="Texture2D" uid="uid://cd5km2va4gxco" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_mt7fj"]
+[ext_resource type="Texture2D" uid="uid://dybr8of1s7ip0" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_hpvgl"]
+[ext_resource type="Texture2D" uid="uid://b4jgsvgnvp7o6" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="2_e6n33"]
+[ext_resource type="Texture2D" uid="uid://f57dstft7pfa" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="2_hrxdc"]
+[ext_resource type="Texture2D" uid="uid://dfvkp4ucvapsr" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_mt7fj"]
 [ext_resource type="Script" path="res://scenes/game/Boss_Stage/ghost.gd" id="3_lxbi0"]
 [ext_resource type="PackedScene" uid="uid://1fi74vbvuegc" path="res://scenes/game/Boss_Stage/Objects/lingkuranan.tscn" id="4_46y0p"]
 [ext_resource type="PackedScene" uid="uid://cus1l43frefad" path="res://scenes/game/Boss_Stage/Objects/kadena.tscn" id="5_2316o"]
-[ext_resource type="Texture2D" uid="uid://dlyskbkilec8x" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_eduvj"]
+[ext_resource type="Texture2D" uid="uid://b10jotxcy5lw" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_eduvj"]
 [ext_resource type="PackedScene" uid="uid://cwmt1oiv2vxe5" path="res://scenes/game/Boss_Stage/Objects/picture_frame.tscn" id="7_wkcgd"]
-[ext_resource type="Texture2D" uid="uid://6x4hbje7omyq" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_4bxnw"]
-[ext_resource type="Texture2D" uid="uid://cyp3k8j7qsmub" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="8_4gwsf"]
+[ext_resource type="Texture2D" uid="uid://inypcvmgdces" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_4bxnw"]
+[ext_resource type="Texture2D" uid="uid://bun1kpudkhp6e" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="8_4gwsf"]
 [ext_resource type="PackedScene" uid="uid://cm11i436x5dbs" path="res://scenes/game/Boss_Stage/Objects/ulo_na_statwa.tscn" id="9_kedtp"]
 [ext_resource type="PackedScene" uid="uid://vj63fwjxyi1" path="res://scenes/game/Boss_Stage/Objects/espada.tscn" id="10_wsi6l"]
 [ext_resource type="PackedScene" uid="uid://r7w423de5cyv" path="res://scenes/game/Boss_Stage/Objects/salamin.tscn" id="11_olcbm"]
@@ -36,31 +36,31 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qdkhj"]
 blend_mode = 1
 
-[node name="boss_stage_gemescene" type="Node2D"]
+[node name="GameScene" type="Node2D"]
 
-[node name="background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="."]
 scale = Vector2(0.997093, 1.00813)
 
-[node name="bg" type="Sprite2D" parent="background"]
+[node name="BackgroundImg" type="Sprite2D" parent="Background"]
 position = Vector2(708, 367.5)
 scale = Vector2(0.562663, 0.673617)
 texture = ExtResource("1_hpvgl")
 
-[node name="Design2_2x" type="Sprite2D" parent="background"]
+[node name="Design2_2x" type="Sprite2D" parent="Background"]
 position = Vector2(1190.46, 544.573)
 scale = Vector2(1.00292, 0.991936)
 texture = ExtResource("2_mt7fj")
 
-[node name="SkeleNiDinu_2x" type="Sprite2D" parent="background"]
+[node name="SkeleNiDinu_2x" type="Sprite2D" parent="Background"]
 position = Vector2(449, 229)
 texture = ExtResource("2_hrxdc")
 
-[node name="SkeleNiDinu2_2x" type="Sprite2D" parent="background"]
+[node name="SkeleNiDinu2_2x" type="Sprite2D" parent="Background"]
 position = Vector2(1133, 582)
 scale = Vector2(1, 0.988449)
 texture = ExtResource("8_4gwsf")
 
-[node name="ghost" type="Sprite2D" parent="background"]
+[node name="ghost" type="Sprite2D" parent="Background"]
 top_level = true
 material = SubResource("CanvasItemMaterial_qdkhj")
 position = Vector2(716, 311)
@@ -68,12 +68,12 @@ scale = Vector2(0.422652, 0.422652)
 texture = ExtResource("2_e6n33")
 script = ExtResource("3_lxbi0")
 
-[node name="Design3_2x" type="Sprite2D" parent="background"]
+[node name="Design3_2x" type="Sprite2D" parent="Background"]
 position = Vector2(447.3, 655.669)
 scale = Vector2(1.00292, 0.991936)
 texture = ExtResource("7_eduvj")
 
-[node name="Design_2x" type="Sprite2D" parent="background"]
+[node name="Design_2x" type="Sprite2D" parent="Background"]
 top_level = true
 position = Vector2(423, 697)
 scale = Vector2(1.00292, 0.991936)
