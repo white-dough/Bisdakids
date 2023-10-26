@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://vijor7c2hqq7"]
+
+[ext_resource type="Texture2D" uid="uid://2svlum05342t" path="res://graphics/level2/2x/balde@2x.png" id="1_wo0cd"]
+
+[node name="balde" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wo0cd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(3, 46, 19, 44, 34, 39, 39, 32, 35, 25, 45, -34, 42, -40, 31, -45, 12, -48, -2, -48, -16, -48, -28, -45, -44, -37, -44, -31, -42, -23, -43, -13, -43, 4, -41, 11, -35, 19, -35, 25, -37, 31, -37, 38, -34, 39, -25, 44, -20, 44, -10, 46)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhb1jrvfyhlhj"]
+
+[ext_resource type="Script" path="res://scenes/game/level2/level_2.gd" id="1_dytrq"]
+[ext_resource type="PackedScene" uid="uid://c7spg71oruxth" path="res://scenes/game/level1/level1_objects/game_scene2.tscn" id="2_5behc"]
+[ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="3_4rya8"]
+[ext_resource type="Script" path="res://scenes/game/objects.gd" id="3_64o4i"]
+[ext_resource type="Script" path="res://scenes/game/ObjectAnimation.gd" id="4_qa70j"]
+
+[node name="level_2" type="Node2D"]
+script = ExtResource("1_dytrq")
+
+[node name="game_scene2" parent="." instance=ExtResource("2_5behc")]
+show_behind_parent = true
+position = Vector2(222, 0)
+scale = Vector2(0.831, 1.028)
+script = ExtResource("3_64o4i")
+
+[node name="HUD" parent="." instance=ExtResource("3_4rya8")]
+
+[node name="ObjectAnimation" type="Node2D" parent="."]
+script = ExtResource("4_qa70j")
+
+[connection signal="object_found_signal" from="game_scene2" to="." method="_on_game_scene_2_object_found_signal"]

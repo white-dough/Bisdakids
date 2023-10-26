@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c55hj7cv0x1iv"]
+
+[ext_resource type="Texture2D" uid="uid://bq53t0o51s802" path="res://graphics/level2/2x/Duyan@2x.png" id="1_6b0mb"]
+
+[node name="duyan" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6b0mb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(19, 46, 33, 40, 61, 23, 69, 10, 63, -2, 49, -31, 34, -59, 28, -63, 25, -60, 22, -33, 27, -4, 15, 5, -10, 17, -30, 25, -47, 23, -63, 12, -69, 16, -66, 36, -59, 45, -64, 55, -47, 61, -11, 59, 8, 52)

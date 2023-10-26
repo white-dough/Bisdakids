@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://kwsunt8wtjm6"]
+
+[ext_resource type="Texture2D" uid="uid://d3pvqcw16n2ao" path="res://graphics/level2/2x/Pakwan@2x.png" id="1_r85jf"]
+
+[node name="pakwan" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r85jf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-35, 24, -22, 27, 0, 31, 29, 29, 47, 12, 58, -5, 61, -14, 61, -28, 57, -35, 37, -27, 26, -24, -8, -21, -26, -22, -47, -28, -61, -28, -62, -15, -63, -4, -58, 12, -49, 18)
