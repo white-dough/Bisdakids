@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8m6jy8c6uva0"]
+
+[ext_resource type="Texture2D" uid="uid://dgupl2n4xb3rq" path="res://graphics/level3/2x/kariton@2x.png" id="1_5ophm"]
+
+[node name="Kariton" type="Area2D"]
+
+[node name="Kariton" type="Sprite2D" parent="."]
+texture = ExtResource("1_5ophm")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(3, -6, -6, -1, -5, 11, 8, 18, 11, 26, 117, 81, 106, 125, 87, 158, 103, 167, 101, 180, 102, 197, 108, 213, 124, 228, 146, 237, 170, 239, 192, 231, 208, 217, 225, 226, 241, 190, 278, 154, 295, 126, 140, 50, 130, 51, 29, -1, 19, 0)

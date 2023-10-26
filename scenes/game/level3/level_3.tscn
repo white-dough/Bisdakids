@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://chkaucf340e5y"]
+
+[ext_resource type="PackedScene" uid="uid://n6ijakby6vjf" path="res://scenes/game/level3/level3_gamescene.tscn" id="1_c753y"]
+[ext_resource type="Script" path="res://scenes/game/level3/level_3.gd" id="1_j4f05"]
+[ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="2_daeqx"]
+[ext_resource type="Script" path="res://scenes/game/objects.gd" id="2_y1quq"]
+[ext_resource type="Script" path="res://scenes/game/ObjectAnimation.gd" id="3_xslta"]
+[ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="6_l7ryp"]
+[ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="7_pfgqy"]
+[ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="8_vg1ms"]
+[ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="9_mo4h1"]
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_j4f05")
+
+[node name="GameScene" parent="." instance=ExtResource("1_c753y")]
+position = Vector2(222, 0)
+scale = Vector2(0.832, 1)
+script = ExtResource("2_y1quq")
+
+[node name="HUD" parent="." instance=ExtResource("2_daeqx")]
+
+[node name="ObjectAnimation" type="Node2D" parent="."]
+script = ExtResource("3_xslta")
+
+[node name="VictoryTriumph" parent="." instance=ExtResource("6_l7ryp")]
+visible = false
+
+[node name="LevelCompleted" parent="." instance=ExtResource("7_pfgqy")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("8_vg1ms")]
+visible = false
+
+[node name="LevelFailed" parent="." instance=ExtResource("9_mo4h1")]
+visible = false
+
+[connection signal="ready" from="." to="GameScene" method="_on_level_1_ready"]
+[connection signal="ready" from="." to="HUD" method="_on_level_1_ready"]
+[connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]
+[connection signal="clue_pressed" from="HUD" to="ObjectAnimation" method="_on_hud_clue_pressed"]

@@ -22,16 +22,16 @@ position = Vector2(222, 0)
 scale = Vector2(0.835, 1.03)
 script = ExtResource("4_qa70j")
 
-[node name="GameOver" parent="." instance=ExtResource("38_gl45v")]
+[node name="VictoryTriumph" parent="." instance=ExtResource("41_vg6o8")]
 visible = false
 
 [node name="LevelCompleted" parent="." instance=ExtResource("39_0u2bc")]
 visible = false
 
-[node name="LevelFailed" parent="." instance=ExtResource("40_y4oec")]
+[node name="GameOver" parent="." instance=ExtResource("38_gl45v")]
 visible = false
 
-[node name="VictoryTriumph" parent="." instance=ExtResource("41_vg6o8")]
+[node name="LevelFailed" parent="." instance=ExtResource("40_y4oec")]
 visible = false
 
 [connection signal="ready" from="." to="game_scene2" method="_on_level_1_ready"]

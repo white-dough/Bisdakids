@@ -37,7 +37,7 @@
 	"level2":
 		{
 			"Angkla":"gamiton sa paghunong sa barko sa dagat",
-			"Balde":"pagdala og tubig o uban nga materyales",
+			"Balde":"pagsudlan og tubig o uban pa nga materyales",
 			"Barko":"sakyanan sa tubig",
 			"Duyan":"gamit pangpahuway dapat isabit sa kahoy or poste",
 			"Eroplano":"usa ka gipaandar nga naglupad nga awto nga adunay gipunting nga mga pako",
@@ -52,17 +52,28 @@
 		},
 	"level3":
 		{
-			"Bomba":"",
-			"Kariton":"",
+			"Balde":"pagsudlan og tubig o uban pa nga materyales",
+			"Bomba":"x",
+			"Botilya":"usa ka sudlanan ginama sa plastik o bildo ug adunay pig-ot na liog na pangsudlan sa ilimnon",
+			"Bulsita":"bag/sudlanan nga ginama sa materyales na papel",
+			"Hagdanan":"istruktura para sa pagsaka ug panaog",
+			"Kahig":"usa ka himan sa tanaman nga adunay metal nga pinaporma'g ngipon nga gigamit sa pagkolekta sa dahon",
+			"Kalo":"pangtabon sa ulo(not added yet)",
+			"Kariton":"naglangkob sa usa ka poste ug usa ka ligid o duha ka ligid, gigamit sa pagkarga og mga gamit",
+			"Kutsilyo":"butang gigamit sa panghiwa",
 			"Lampara":"pangpahayag",
-			"Lata":"",
-			"Ligid":"",
-			"Salag":"",
-			"Sigarilyo":"",
-			"Silhig":"",
-			"Tawo-tawo":"",
-			"Timbangan":"",
-			"Yawi":""
+			"Lata":"x",
+			"Ligid":"lingin nga butang nga gigamit sa sakyanan",
+			"Mansanas":"x",
+			"Pala":"usa ka himan nga gigamit sa pagkalot",
+			"Sako":"usa ka lig-on nga bag nga gigamit sa pagtipig ug pagdala sa mga butang",
+			"Salag":"x",
+			"Sigarilyo":"x",
+			"Silhig":"gigamit sa pagsilhig sa abog ug sagbot",
+			"Sinsilyo":"x",
+			"Tawo-tawo":"usa ka himan nga gi porma pina tawo nga gigamit sa pagsalikway sa mga insekto",
+			"Timbangan":"usa ka himan nga gigamit sa pagsukod sa gibug-aton",
+			"Yawi":"x"
 		},
 	"level4":
 		{
@@ -88,6 +99,6 @@
 			"Pluma":"",
 			"Samin":"",
 			"Teleskopyo":"",
-			"Yawi":""
+			"Yawi":"usa ka himan sa pagkandado"
 		}
 }
