@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdmr3mykjl10a"]
+
+[ext_resource type="Texture2D" uid="uid://dk0t38a0jbmuu" path="res://graphics/level2/2x/payong@2x.png" id="1_aauko"]
+
+[node name="payong" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aauko")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-28, 179, -17, 179, 10, -54, 102, -56, 163, -68, 165, -112, 18, -175, -1, -186, -15, -174, -168, -129, -165, -105, -158, -85, -95, -65, -25, -59, -46, 178, -39, 183)

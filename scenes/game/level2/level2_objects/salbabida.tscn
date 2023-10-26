@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6i7v7sj7hjeh"]
+
+[ext_resource type="Texture2D" uid="uid://cr3x2k65iclgc" path="res://graphics/level2/2x/salbabida@2x.png" id="1_xgmpe"]
+
+[node name="salbabida" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xgmpe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-41, 3, -32, 18, -17, 29, -1, 32, 25, 32, 41, 22, 41, 8, 39, -9, 21, -24, 6, -29, -15, -33, -29, -31, -41, -16, -45, -6)

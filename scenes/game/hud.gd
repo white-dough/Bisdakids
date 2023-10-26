@@ -68,7 +68,25 @@ func get_definition() -> Dictionary:
 	
 	var content_as_dictionary = JSON.parse_string(contentOfFile)
 	#var level1 = content_as_dictionary.level1[0].Troso
-	return content_as_dictionary.level1
+	#print("parent: " , get_parent())
+	var parentNode = str(get_parent())
+	var colon_index = parentNode.find(":")
+	var level
+	var dataToBePassed
+	if colon_index != -1:
+		level = parentNode.left(colon_index)
+	match(level):
+		"Level1":
+			dataToBePassed = content_as_dictionary.level1
+		"Level2":
+			dataToBePassed = content_as_dictionary.level2
+		"Level3":
+			dataToBePassed = content_as_dictionary.level3
+		"Level4":
+			dataToBePassed = content_as_dictionary.level4
+		"Level5":
+			dataToBePassed = content_as_dictionary.level5
+	return dataToBePassed
 	#var level2 = content_as_dictionary.level2[0]
 	#var level3 = content_as_dictionary.level3[0]
 	# etc until level5...
@@ -148,3 +166,7 @@ func word_def_display(event, labelName):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
+
+
+func _on_level_2_ready():
+	pass # Replace with function body.

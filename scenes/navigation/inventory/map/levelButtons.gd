@@ -25,7 +25,6 @@ func _on_level_1_button_pressed():
 	var progressVal:int = level1Progress.value 
 	#print(progressVal)
 	modalDisplay(progressVal, "Level 1")
-	duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/level1/level_1.tscn"))
 	#visible = true
 
 func _on_level_2_button_pressed():
@@ -67,6 +66,17 @@ func modalDisplay(levelProgress, labelText):
 		descLbl.text = "Wala pakay kaagi, duwa para malampos nimo."
 	else:
 		descLbl.text = "Duwa pa para malampos!"
+	match(labelText):
+		"Level 1":
+			duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/level1/level_1.tscn"))
+		"Level 2":
+			duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/level2/level_2.tscn"))
+		"Level 3":
+			duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/level3/level_3.tscn"))
+		"Level 4":
+			duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/level4/level_4.tscn"))
+		"Level 5":
+			duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/level5/level_5.tscn"))
 
 func _on_close_btn_pressed():
 	modal.hide()

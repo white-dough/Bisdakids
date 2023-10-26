@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://crtjh20cy8nbo"]
+
+[ext_resource type="Texture2D" uid="uid://dcaeheki8o1ur" path="res://graphics/level2/2x/kumpas@2x.png" id="1_2ma0h"]
+
+[node name="kumpas" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2ma0h")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, 13, -3, 14, 4, 14, 14, 12, 21, 5, 23, 0, 24, -8, 14, -15, 5, -18, -16, -18, -22, -13, -26, -9, -25, -2, -25, 5, -21, 9)

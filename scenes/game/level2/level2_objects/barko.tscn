@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkgtkjdo38j7u"]
+
+[ext_resource type="Texture2D" uid="uid://bjlg6fp45cwoy" path="res://graphics/level2/2x/Barko@2x.png" id="1_bxdxw"]
+
+[node name="barko" type="Area2D"]
+scale = Vector2(0.14, 0.14)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bxdxw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(16, 176, 37, 175, 83, 167, 103, 162, 111, 155, 119, 143, 142, 108, 159, 76, 182, 64, 189, 56, 191, 41, 183, 30, 165, 44, 139, 16, 139, 0, 137, -21, 123, -45, 107, -71, 98, -80, 59, -77, 59, -100, 48, -103, 33, -103, 36, -152, 45, -168, 39, -179, 23, -183, 16, -172, 17, -163, 7, -124, 0, -105, -21, -100, -17, -81, -52, -80, -55, -64, -60, -46, -86, -29, -107, -29, -116, -21, -135, -24, -138, -38, -141, -49, -165, -48, -163, -36, -163, -25, -182, -9, -181, -3, -186, 9, -181, 31, -193, 42, -196, 64, -195, 95, -193, 105, -180, 110, -169, 122, -154, 156, -142, 172, -89, 180, -29, 180)
