@@ -2,23 +2,23 @@
 
 [ext_resource type="Script" path="res://graphics/level1/LevelCompleted.gd" id="1_141ol"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v7crd"]
-[ext_resource type="Texture2D" uid="uid://byxlsctg5cfnf" path="res://graphics/ui/icons/2x/emptyStar_sample@2x.png" id="3_ersfb"]
-[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
+[ext_resource type="Texture2D" uid="uid://drdmp086fsdcp" path="res://graphics/ui/icons/2x/emptyStar_sample@2x.png" id="3_ersfb"]
+[ext_resource type="Texture2D" uid="uid://c74jh7g604f8g" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
 [ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_dahf4"]
-[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="5_1qr8m"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_2424f"]
+[ext_resource type="Texture2D" uid="uid://skgti1t4xf7x" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="5_1qr8m"]
+[ext_resource type="Texture2D" uid="uid://b70kchgtfrbrj" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_2424f"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_wwfku"]
 [ext_resource type="Theme" uid="uid://bukmbrgwy0i5j" path="res://themes/lbl.tres" id="8_6y1ao"]
-[ext_resource type="Texture2D" uid="uid://kj64paekvu60" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="8_k12ec"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="8_xulwh"]
-[ext_resource type="Texture2D" uid="uid://bwhkeunurmh4k" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="10_rwp65"]
-[ext_resource type="Texture2D" uid="uid://dci2npfupxpfg" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
-[ext_resource type="Texture2D" uid="uid://wg68xbqo5g0w" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
-[ext_resource type="Texture2D" uid="uid://dnn6t6bivey2c" path="res://graphics/ui/buttons/2x/pressedhome_btn@2x.png" id="13_vowgy"]
-[ext_resource type="Texture2D" uid="uid://c6nb3jpb4y70g" path="res://graphics/ui/buttons/2x/retryPressed_btn_2@2x.png" id="14_wf3qv"]
-[ext_resource type="Texture2D" uid="uid://cvxkcunin210y" path="res://graphics/ui/buttons/2x/nextPressed_btn@2x.png" id="15_1xy1q"]
+[ext_resource type="Texture2D" uid="uid://bn6bc8ycbsuti" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="8_k12ec"]
+[ext_resource type="FontFile" uid="uid://ce7nh2igw7cb8" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="8_xulwh"]
+[ext_resource type="Texture2D" uid="uid://ccxyt7mnssnwu" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="10_rwp65"]
+[ext_resource type="Texture2D" uid="uid://dwpfiye655pv0" path="res://graphics/ui/buttons/2x/Next_btn_1@2x.png" id="11_k2exo"]
+[ext_resource type="Texture2D" uid="uid://cmkepqpf26ujq" path="res://graphics/ui/buttons/2x/retry_btn_1@2x.png" id="12_ptc0x"]
+[ext_resource type="Texture2D" uid="uid://b6xxjcpuen1v7" path="res://graphics/ui/buttons/2x/pressedhome_btn@2x.png" id="13_vowgy"]
+[ext_resource type="Texture2D" uid="uid://161uuctx85ej" path="res://graphics/ui/buttons/2x/retryPressed_btn_2@2x.png" id="14_wf3qv"]
+[ext_resource type="Texture2D" uid="uid://udjdq2xpq6s8" path="res://graphics/ui/buttons/2x/nextPressed_btn@2x.png" id="15_1xy1q"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtok0"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
@@ -26,9 +26,9 @@ content_margin_bottom = 13.0
 texture = ExtResource("3_n4i8w")
 
 [sub_resource type="Theme" id="Theme_ltiph"]
-Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
+Panel/styles/panel = SubResource("StyleBoxTexture_xtok0")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aifds"]
 texture = ExtResource("5_1qr8m")
 texture_margin_left = 10.0
 texture_margin_right = 10.0
@@ -38,7 +38,7 @@ expand_margin_right = 15.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="Theme" id="Theme_eqeqb"]
-Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
+Label/styles/normal = SubResource("StyleBoxTexture_aifds")
 
 [node name="LevelCompleted" type="CanvasLayer"]
 script = ExtResource("1_141ol")

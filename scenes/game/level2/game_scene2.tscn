@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c7spg71oruxth"]
+[gd_scene load_steps=49 format=3 uid="uid://c7spg71oruxth"]
 
 [ext_resource type="Script" path="res://scenes/game/objects.gd" id="1_3dn2d"]
 [ext_resource type="Texture2D" uid="uid://cnor5q28wg4km" path="res://graphics/level2/background/level2_background@2x.png" id="2_o57uu"]
@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://b3ptaxovd08ic" path="res://graphics/level2/2x/shades@2x.png" id="45_k8lum"]
 [ext_resource type="Texture2D" uid="uid://cjf8hlnyukkj6" path="res://graphics/level2/2x/shell@2x.png" id="46_bsmpo"]
 [ext_resource type="Texture2D" uid="uid://b7e7ahugb6d3o" path="res://graphics/level2/2x/kalo@2x.png" id="47_np7a0"]
+[ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="48_prfcl"]
 
 [node name="game_scene2" type="Node2D"]
 position = Vector2(222, 0)
@@ -258,3 +259,6 @@ texture = ExtResource("46_bsmpo")
 position = Vector2(-213.976, 400.612)
 scale = Vector2(1.24286, 1.24286)
 texture = ExtResource("47_np7a0")
+
+[node name="HandleTaps" parent="." instance=ExtResource("48_prfcl")]
+visible = false
