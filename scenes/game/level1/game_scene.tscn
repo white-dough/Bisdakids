@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ca6qtai8yh8wy"]
+[gd_scene load_steps=38 format=3 uid="uid://ca6qtai8yh8wy"]
 
 [ext_resource type="Texture2D" uid="uid://bj081fbqa1oww" path="res://graphics/level1/background/level1_background@2x.png" id="1_2c3p0"]
 [ext_resource type="PackedScene" uid="uid://dorayn2s4edj7" path="res://graphics/ui/background/firefly.tscn" id="2_1unbx"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://c0muuoqs8mtgn" path="res://scenes/game/level1/level1_objects/lumay.tscn" id="28_5521l"]
 [ext_resource type="PackedScene" uid="uid://y34rcf42vv7w" path="res://scenes/game/level1/level1_objects/regalo.tscn" id="31_fhxpn"]
 [ext_resource type="PackedScene" uid="uid://dmgiycnodn3rj" path="res://scenes/game/level1/level1_objects/lampara.tscn" id="35_ps4na"]
+[ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="37_dtg6c"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("2_dqy12")
@@ -157,3 +158,6 @@ position = Vector2(613, 678)
 
 [node name="Lampara" parent="Objects" instance=ExtResource("35_ps4na")]
 position = Vector2(339, 317)
+
+[node name="HandleTaps" parent="." instance=ExtResource("37_dtg6c")]
+visible = false

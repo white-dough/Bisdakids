@@ -50,7 +50,8 @@ func populate_current_objects(object_found_remove):
 	$"../HUD".object_list_label(current_objects_strings)
 	$"../HUD".current_objects = current_objects
 	$"../HUD".history_current_objects = history_current_objects
-	
+
+@onready var timer = $HandleTaps/Timer
 #Function to handle the click of the user within the gamescene
 func _unhandled_input(event):
 	if event.is_action_released("click_primary"):
@@ -81,6 +82,10 @@ func _unhandled_input(event):
 			click_abuse_counter += 1
 			if click_abuse_counter > click_abuse_max:
 				print("stop!")
+				timer.start()
+				#print('start')
+				$HandleTaps.show()
+				_remove_warning_taps()
 
 func reset_click_abuse_counter():
 	click_abuse_counter = 0
@@ -88,3 +93,9 @@ func reset_click_abuse_counter():
 #func _process(delta):
 #	print(selected_objects)
 
+func _remove_warning_taps():
+	timer.timeout.connect(remove_taps)
+
+func remove_taps():
+	print('hidden')
+	$HandleTaps.hide()

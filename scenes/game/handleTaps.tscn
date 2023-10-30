@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3 uid="uid://l7oj03lrua0x"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_3wxje"]
+[ext_resource type="Texture2D" uid="uid://c74jh7g604f8g" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_vkoq3"]
+[ext_resource type="Texture2D" uid="uid://skgti1t4xf7x" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="5_5tyud"]
+[ext_resource type="FontFile" uid="uid://ce7nh2igw7cb8" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_cl6i5"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_knwii"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
+content_margin_left = 7.0
+content_margin_top = 5.0
+content_margin_right = 7.0
+content_margin_bottom = 13.0
+texture = ExtResource("2_vkoq3")
+
+[sub_resource type="Theme" id="Theme_j04ca"]
+Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
+texture = ExtResource("5_5tyud")
+texture_margin_left = 10.0
+texture_margin_right = 10.0
+expand_margin_left = 15.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="Theme" id="Theme_hcy1i"]
+Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
+
+[node name="HandleTaps" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3wxje")
+expand_mode = 1
+
+[node name="ModalPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -212.0
+offset_right = 300.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_j04ca")
+
+[node name="Label" type="Label" parent="ModalPanel"]
+layout_mode = 2
+offset_left = 93.0
+offset_top = 73.0
+offset_right = 506.0
+offset_bottom = 122.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_hcy1i")
+theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("6_cl6i5")
+theme_override_font_sizes/font_size = 43
+text = "Hinay hinay lang!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextWarning" type="Label" parent="ModalPanel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -47.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_knwii")
+theme_override_font_sizes/font_size = 30
+text = "Ayaw sobra og tap sa screen, makitan rana nimo."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
