@@ -1,0 +1,49 @@
+[gd_scene load_steps=12 format=3 uid="uid://qh36n3tqty5r"]
+
+[ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/boss1.gd" id="1_63dy3"]
+[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/boss_stages/boss_stage1/boss1_game_scene.tscn" id="1_shust"]
+[ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.tscn" id="3_77o8w"]
+[ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.tscn" id="3_kb8ix"]
+[ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="5_ejmmk"]
+[ext_resource type="PackedScene" uid="uid://656fyj3871uv" path="res://scenes/game/boss_stages/boss_stage1/hud.tscn" id="5_mt1oa"]
+[ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="6_d5cjs"]
+[ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/hud.gd" id="6_m1odi"]
+[ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="7_fs1yk"]
+[ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="8_lcx81"]
+[ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="9_kwwhj"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_63dy3")
+
+[node name="GameScene" parent="." instance=ExtResource("1_shust")]
+position = Vector2(222, 0)
+scale = Vector2(0.831178, 1)
+
+[node name="BossTigmu12" parent="GameScene" instance=ExtResource("3_kb8ix")]
+layer = 0
+visible = false
+
+[node name="BossIdentification13" parent="GameScene" instance=ExtResource("3_77o8w")]
+visible = false
+
+[node name="HUD" parent="." instance=ExtResource("5_mt1oa")]
+script = ExtResource("6_m1odi")
+
+[node name="ObjectAnimation" parent="." instance=ExtResource("5_ejmmk")]
+position = Vector2(406.522, 0)
+scale = Vector2(0.69075, 1.02778)
+
+[node name="VictoryTriumph" parent="." instance=ExtResource("6_d5cjs")]
+visible = false
+
+[node name="LevelCompleted" parent="." instance=ExtResource("7_fs1yk")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("8_lcx81")]
+visible = false
+
+[node name="LevelFailed" parent="." instance=ExtResource("9_kwwhj")]
+visible = false
+
+[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
+[connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

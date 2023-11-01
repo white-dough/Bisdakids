@@ -7,7 +7,8 @@ func _on_play_pressed():
 	get_tree().change_scene_to_file("res://scenes/navigation/map/map.tscn")
 
 func _ready():
-	Audio.play_bgm(Audio.main_bgm)
+	if Audio.bgm_node.get_stream() != Audio.main_bgm:
+		Audio.play_bgm(Audio.main_bgm)
 	energylbl.set_text(str(Game.user_inventory['energy']))
 	coinlbl.set_text(str(Game.user_inventory['coin']))
 	if not Game.premium:

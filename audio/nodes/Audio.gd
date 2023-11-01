@@ -3,7 +3,7 @@ extends Node
 @onready var bgm_node: AudioStreamPlayer = $MainMenuBGM
 @onready var btn_sfx_node: AudioStreamPlayer = $ButtonClickedSFX
 
-@onready var main_bgm: AudioStream = preload("res://audio/assets/bgm/main_bgm.wav")
+@onready var main_bgm: AudioStream = preload("res://audio/assets/bgm/main_bgm.mp3")
 @onready var levels_bgm: AudioStream = preload("res://audio/assets/bgm/levels_bgm.wav")
 @onready var boss_bgm: AudioStream = preload("res://audio/assets/bgm/boss_battle_bgm.mp3")
 

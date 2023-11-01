@@ -6,7 +6,7 @@ signal object_found_signal(object_name)
 var click_abuse_counter: int
 var click_abuse_max: int = 5
 
-func _on_level_1_ready():
+func _on_level_ready():
 	count_of_objects_to_find = $"..".count_of_objects_to_find
 	selected_objects = select_random_elements(count_of_objects_to_find)
 	populate_current_objects(null)
@@ -87,4 +87,8 @@ func reset_click_abuse_counter():
 			
 #func _process(delta):
 #	print(selected_objects)
+
+
+
+
 

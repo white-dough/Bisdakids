@@ -1,0 +1,260 @@
+[gd_scene load_steps=48 format=3 uid="uid://c7spg71oruxth"]
+
+[ext_resource type="Script" path="res://scenes/game/objects.gd" id="1_3dn2d"]
+[ext_resource type="Texture2D" uid="uid://cnor5q28wg4km" path="res://graphics/level2/background/level2_background@2x.png" id="2_o57uu"]
+[ext_resource type="PackedScene" uid="uid://qmu17aoylwed" path="res://scenes/game/level2/level2_objects/angkla.tscn" id="3_k8bxq"]
+[ext_resource type="PackedScene" uid="uid://vijor7c2hqq7" path="res://scenes/game/level2/level2_objects/balde.tscn" id="4_5hvoc"]
+[ext_resource type="PackedScene" uid="uid://bkgtkjdo38j7u" path="res://scenes/game/level2/level2_objects/barko.tscn" id="5_ioam6"]
+[ext_resource type="PackedScene" uid="uid://c55hj7cv0x1iv" path="res://scenes/game/level2/level2_objects/duyan.tscn" id="6_dqvvt"]
+[ext_resource type="PackedScene" uid="uid://d38hyjqfcs75t" path="res://scenes/game/level2/level2_objects/eroplano.tscn" id="7_1t7ql"]
+[ext_resource type="PackedScene" uid="uid://dxr80ob1ruu5t" path="res://scenes/game/level2/level2_objects/gitara.tscn" id="8_m1iow"]
+[ext_resource type="PackedScene" uid="uid://b1slm3cxb05bk" path="res://scenes/game/level2/level2_objects/kaban.tscn" id="9_yx6nh"]
+[ext_resource type="PackedScene" uid="uid://cpc51xj1qf3ex" path="res://scenes/game/level2/level2_objects/kodak.tscn" id="11_0qrip"]
+[ext_resource type="PackedScene" uid="uid://crtjh20cy8nbo" path="res://scenes/game/level2/level2_objects/kumpas.tscn" id="12_m2r72"]
+[ext_resource type="PackedScene" uid="uid://kwsunt8wtjm6" path="res://scenes/game/level2/level2_objects/pakwan.tscn" id="13_7314v"]
+[ext_resource type="PackedScene" uid="uid://cdmr3mykjl10a" path="res://scenes/game/level2/level2_objects/payong.tscn" id="14_km825"]
+[ext_resource type="PackedScene" uid="uid://clq1ux5jjcwth" path="res://scenes/game/level2/level2_objects/tsinelas.tscn" id="15_5mloi"]
+[ext_resource type="PackedScene" uid="uid://b6i7v7sj7hjeh" path="res://scenes/game/level2/level2_objects/salbabida.tscn" id="15_tjsyl"]
+[ext_resource type="Texture2D" uid="uid://di8hxjl8fp76k" path="res://graphics/level2/2x/bra@2x.png" id="16_8md31"]
+[ext_resource type="Texture2D" uid="uid://nfg5kqs05xae" path="res://graphics/level2/2x/Asset 10@2x.png" id="17_qygb8"]
+[ext_resource type="Texture2D" uid="uid://on24xd22l1uc" path="res://graphics/level2/2x/Asset 11@2x.png" id="18_p4x8m"]
+[ext_resource type="Texture2D" uid="uid://b7h7hnf2eg8hw" path="res://graphics/level2/2x/Asset 15@2x.png" id="19_p0fjf"]
+[ext_resource type="Texture2D" uid="uid://dmlg3wj1qf73t" path="res://graphics/level2/2x/Asset 9@2x.png" id="20_nib8q"]
+[ext_resource type="Texture2D" uid="uid://bqostost52mch" path="res://graphics/level2/2x/Asset 17@2x.png" id="21_5knch"]
+[ext_resource type="Texture2D" uid="uid://cam6gjela6u8f" path="res://graphics/level2/2x/Asset 23@2x.png" id="22_n101o"]
+[ext_resource type="Texture2D" uid="uid://m4brp2175rbi" path="res://graphics/level2/2x/Asset 49@2x.png" id="23_bbbch"]
+[ext_resource type="Texture2D" uid="uid://c6hsm4naaebd7" path="res://graphics/level2/2x/Asset 50@2x.png" id="24_4p1h8"]
+[ext_resource type="Texture2D" uid="uid://cl55bd00i0fju" path="res://graphics/level2/2x/pirate flag@2x.png" id="25_8wfpw"]
+[ext_resource type="Texture2D" uid="uid://b4ijpju3e2kxa" path="res://graphics/level2/2x/Asset 52@2x.png" id="26_0kbmi"]
+[ext_resource type="Texture2D" uid="uid://cbyd8mtjronec" path="res://graphics/level2/2x/Asset 54@2x.png" id="27_i2hnn"]
+[ext_resource type="Texture2D" uid="uid://x15gtmuxjdsr" path="res://graphics/level2/2x/Asset 61@2x.png" id="28_bfd1j"]
+[ext_resource type="Texture2D" uid="uid://bgggx2kf8a83c" path="res://graphics/level2/2x/beach ball large@2x.png" id="29_11fmr"]
+[ext_resource type="Texture2D" uid="uid://bowfdo3wpxkx5" path="res://graphics/level2/2x/beach ball small@2x.png" id="30_68oi4"]
+[ext_resource type="Texture2D" uid="uid://b6dh5kuwr00mo" path="res://graphics/level2/2x/bench@2x.png" id="31_2n2d0"]
+[ext_resource type="Texture2D" uid="uid://cj70m5xtab0s5" path="res://graphics/level2/2x/cup@2x.png" id="32_yc25v"]
+[ext_resource type="Texture2D" uid="uid://bp7l0d43fhvg3" path="res://graphics/level2/2x/goggles@2x.png" id="33_046iq"]
+[ext_resource type="Texture2D" uid="uid://dedhbtq2jve00" path="res://graphics/level2/2x/hat@2x.png" id="34_d127j"]
+[ext_resource type="Texture2D" uid="uid://druiu2x6rw3g4" path="res://graphics/level2/2x/ice cream@2x.png" id="35_2aua4"]
+[ext_resource type="Texture2D" uid="uid://ks73ubuudubc" path="res://graphics/level2/2x/kamot sa pirate@2x.png" id="36_ig024"]
+[ext_resource type="Texture2D" uid="uid://c1sihsthd2cio" path="res://graphics/level2/2x/lubi with straw@2x.png" id="37_iurtd"]
+[ext_resource type="Texture2D" uid="uid://cs7l8g824nutt" path="res://graphics/level2/2x/luggagebag@2x.png" id="38_v5rbw"]
+[ext_resource type="Texture2D" uid="uid://dm36p0cc0tspl" path="res://graphics/level2/2x/map@2x.png" id="39_00o8r"]
+[ext_resource type="Texture2D" uid="uid://7mi1kej0jic8" path="res://graphics/level2/2x/pang ginhawa@2x.png" id="40_kk736"]
+[ext_resource type="Texture2D" uid="uid://dnxc62wg7pr17" path="res://graphics/level2/2x/pang pa kusog sa tingog@2x.png" id="41_f2n7b"]
+[ext_resource type="Texture2D" uid="uid://cunid4mwb6rpn" path="res://graphics/level2/2x/pang sandok sa sand@2x.png" id="42_4uka6"]
+[ext_resource type="Texture2D" uid="uid://ccjq3jted1hiu" path="res://graphics/level2/2x/parakita layo@2x.png" id="43_e36cy"]
+[ext_resource type="Texture2D" uid="uid://b8wws32xroggd" path="res://graphics/level2/2x/sand castle@2x.png" id="44_4wdor"]
+[ext_resource type="Texture2D" uid="uid://b3ptaxovd08ic" path="res://graphics/level2/2x/shades@2x.png" id="45_k8lum"]
+[ext_resource type="Texture2D" uid="uid://cjf8hlnyukkj6" path="res://graphics/level2/2x/shell@2x.png" id="46_bsmpo"]
+[ext_resource type="Texture2D" uid="uid://b7e7ahugb6d3o" path="res://graphics/level2/2x/kalo@2x.png" id="47_np7a0"]
+
+[node name="GameScene" type="Node2D"]
+position = Vector2(222, 0)
+scale = Vector2(0.835, 1.03)
+script = ExtResource("1_3dn2d")
+
+[node name="BackgroundLevel2" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundLevel2"]
+texture = ExtResource("2_o57uu")
+centered = false
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Angkla" parent="Objects" instance=ExtResource("3_k8bxq")]
+position = Vector2(112.575, 497.087)
+
+[node name="Balde" parent="Objects" instance=ExtResource("4_5hvoc")]
+position = Vector2(926.946, 527.184)
+
+[node name="Barko" parent="Objects" instance=ExtResource("5_ioam6")]
+position = Vector2(287.425, 385.437)
+
+[node name="Duyan" parent="Objects" instance=ExtResource("6_dqvvt")]
+position = Vector2(1144.91, 559.223)
+
+[node name="Eroplano" parent="Objects" instance=ExtResource("7_1t7ql")]
+position = Vector2(862.275, 37.8641)
+
+[node name="Gitara" parent="Objects" instance=ExtResource("8_m1iow")]
+position = Vector2(829.445, 603.365)
+rotation = 1.53589
+
+[node name="Kaban" parent="Objects" instance=ExtResource("9_yx6nh")]
+position = Vector2(391.617, 671.845)
+
+[node name="Kodak" parent="Objects" instance=ExtResource("11_0qrip")]
+position = Vector2(532.934, 525.243)
+
+[node name="Kumpas" parent="Objects" instance=ExtResource("12_m2r72")]
+position = Vector2(1255.09, 567.961)
+
+[node name="Pakwan" parent="Objects" instance=ExtResource("13_7314v")]
+position = Vector2(371.257, 584.466)
+
+[node name="Payong" parent="Objects" instance=ExtResource("14_km825")]
+position = Vector2(1087.43, 455.34)
+
+[node name="Salbabida" parent="Objects" instance=ExtResource("15_tjsyl")]
+position = Vector2(37.1258, 550.485)
+
+[node name="Tsinelas" parent="Objects" instance=ExtResource("15_5mloi")]
+position = Vector2(554.491, 647.573)
+
+[node name="ExtraObjects" type="Node2D" parent="."]
+position = Vector2(802, 279)
+
+[node name="Bra" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(180, 266)
+rotation = -1.53589
+scale = Vector2(0.82, 0.82)
+texture = ExtResource("16_8md31")
+
+[node name="Flippers" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(16.1807, 350.307)
+rotation = 2.23402
+texture = ExtResource("17_qygb8")
+
+[node name="Sunscreen" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(369.382, 334.435)
+rotation = 0.298451
+scale = Vector2(1.09, 1.09)
+texture = ExtResource("18_p4x8m")
+
+[node name="Bucket" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-500.204, 287.99)
+texture = ExtResource("19_p0fjf")
+
+[node name="BeachTowels" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-292.984, 331.047)
+rotation = 0.298451
+texture = ExtResource("20_nib8q")
+
+[node name="LetterInABottle" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-170.239, 329.723)
+rotation = 1.81514
+texture = ExtResource("21_5knch")
+
+[node name="BoatSteeringWheel" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-209.186, 144.301)
+texture = ExtResource("22_n101o")
+
+[node name="ClawToy" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-599.605, 324.883)
+texture = ExtResource("23_bbbch")
+
+[node name="Starfish" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(168.06, 339.447)
+texture = ExtResource("24_4p1h8")
+
+[node name="PirateFlag" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(333.329, 162.748)
+scale = Vector2(1.66372, 1.63271)
+texture = ExtResource("25_8wfpw")
+
+[node name="Signboard" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(280, 350)
+scale = Vector2(1.48795, 1.37288)
+texture = ExtResource("26_0kbmi")
+
+[node name="Bomb" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-605.593, 272.456)
+texture = ExtResource("27_i2hnn")
+
+[node name="ToyCamera" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-210.383, 237.505)
+texture = ExtResource("28_bfd1j")
+
+[node name="BeachBallBig" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-510.982, 185.078)
+scale = Vector2(1.14833, 1)
+texture = ExtResource("29_11fmr")
+
+[node name="BeachBallSmall" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-734.934, 274.398)
+texture = ExtResource("30_68oi4")
+
+[node name="Bench" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-635.533, 377.311)
+scale = Vector2(0.682879, 0.690522)
+texture = ExtResource("31_2n2d0")
+
+[node name="PlasticCup" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-638.728, 215.702)
+rotation = -0.837758
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("32_yc25v")
+
+[node name="Goggles" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-115.132, 306.936)
+rotation = 0.39968
+scale = Vector2(1.32857, 1.13636)
+texture = ExtResource("33_046iq")
+
+[node name="Hat" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-368.467, 262.748)
+texture = ExtResource("34_d127j")
+
+[node name="IceCream" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-336.662, 395.715)
+rotation = -0.698132
+texture = ExtResource("35_2aua4")
+
+[node name="PirateHook" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-683.437, 248.185)
+texture = ExtResource("36_ig024")
+
+[node name="CoconutDrink" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(455.485, 324.883)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("37_iurtd")
+
+[node name="LuggageBag" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(59.3918, 246.243)
+scale = Vector2(0.508591, 0.47)
+texture = ExtResource("38_v5rbw")
+
+[node name="Map" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-373.257, 148.185)
+scale = Vector2(1.40909, 1.85714)
+texture = ExtResource("39_00o8r")
+
+[node name="Snorkel" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-306.192, 241.388)
+scale = Vector2(1.485, 1.485)
+texture = ExtResource("40_kk736")
+
+[node name="Megaphone" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-489.349, 404.589)
+rotation = -0.499164
+texture = ExtResource("41_f2n7b")
+
+[node name="ToyShovel" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-435.533, 336.534)
+texture = ExtResource("42_4uka6")
+
+[node name="Telescope" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-112.533, 409.103)
+rotation = -0.357792
+scale = Vector2(1.31, 1.31)
+texture = ExtResource("43_e36cy")
+
+[node name="SandCastle" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-127.613, 252.068)
+scale = Vector2(1.28556, 1.15385)
+texture = ExtResource("44_4wdor")
+
+[node name="Shades" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(74.5748, 398.263)
+rotation = 0.235619
+texture = ExtResource("45_k8lum")
+
+[node name="Shell" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-527.748, 356.922)
+scale = Vector2(1.2561, 1.31818)
+texture = ExtResource("46_bsmpo")
+
+[node name="PirateHat" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(-213.976, 400.612)
+scale = Vector2(1.24286, 1.24286)
+texture = ExtResource("47_np7a0")
