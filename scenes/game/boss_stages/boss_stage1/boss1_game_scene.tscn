@@ -1,0 +1,166 @@
+[gd_scene load_steps=35 format=3 uid="uid://53k1jkllajyp"]
+
+[ext_resource type="Texture2D" uid="uid://dybr8of1s7ip0" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_5b20p"]
+[ext_resource type="Script" path="res://scenes/game/objects.gd" id="1_ai58q"]
+[ext_resource type="Texture2D" uid="uid://dfvkp4ucvapsr" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_l7sqt"]
+[ext_resource type="Texture2D" uid="uid://f57dstft7pfa" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="3_vb2c2"]
+[ext_resource type="Texture2D" uid="uid://bun1kpudkhp6e" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="4_ql26j"]
+[ext_resource type="Texture2D" uid="uid://b4jgsvgnvp7o6" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="5_jujqu"]
+[ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/ghost.gd" id="6_f61ve"]
+[ext_resource type="Texture2D" uid="uid://b10jotxcy5lw" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_wt4jo"]
+[ext_resource type="Texture2D" uid="uid://inypcvmgdces" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_42as0"]
+[ext_resource type="PackedScene" uid="uid://1fi74vbvuegc" path="res://scenes/game/boss_stages/boss_stage1/Objects/lingkuranan.tscn" id="9_jtjk0"]
+[ext_resource type="PackedScene" uid="uid://cus1l43frefad" path="res://scenes/game/boss_stages/boss_stage1/Objects/kadena.tscn" id="10_gtu0w"]
+[ext_resource type="PackedScene" uid="uid://cwmt1oiv2vxe5" path="res://scenes/game/boss_stages/boss_stage1/Objects/picture_frame.tscn" id="11_ciovy"]
+[ext_resource type="PackedScene" uid="uid://cm11i436x5dbs" path="res://scenes/game/boss_stages/boss_stage1/Objects/ulo_na_statwa.tscn" id="12_ve7fn"]
+[ext_resource type="PackedScene" uid="uid://vj63fwjxyi1" path="res://scenes/game/boss_stages/boss_stage1/Objects/espada.tscn" id="13_idpnx"]
+[ext_resource type="PackedScene" uid="uid://r7w423de5cyv" path="res://scenes/game/boss_stages/boss_stage1/Objects/salamin.tscn" id="14_s5tai"]
+[ext_resource type="PackedScene" uid="uid://d17c2teeyiavm" path="res://scenes/game/boss_stages/boss_stage1/Objects/atsa.tscn" id="15_7pfd7"]
+[ext_resource type="PackedScene" uid="uid://bl1uin38n0j3q" path="res://scenes/game/boss_stages/boss_stage1/Objects/clip.tscn" id="16_iyfkw"]
+[ext_resource type="PackedScene" uid="uid://c81211140mp5p" path="res://scenes/game/boss_stages/boss_stage1/Objects/kahon.tscn" id="17_6lvwm"]
+[ext_resource type="PackedScene" uid="uid://dogjgwle141bq" path="res://scenes/game/boss_stages/boss_stage1/Objects/bungaanan.tscn" id="18_bvuo5"]
+[ext_resource type="PackedScene" uid="uid://cvo3kduqah0tv" path="res://scenes/game/boss_stages/boss_stage1/Objects/barel.tscn" id="19_g0qjp"]
+[ext_resource type="PackedScene" uid="uid://bfkxq6hiw7lwa" path="res://scenes/game/boss_stages/boss_stage1/Objects/Lampara.tscn" id="20_vo2ug"]
+[ext_resource type="PackedScene" uid="uid://dswn8cjw4ijph" path="res://scenes/game/boss_stages/boss_stage1/Objects/Bungo.tscn" id="21_esfnb"]
+[ext_resource type="PackedScene" uid="uid://iie55pspq5bd" path="res://scenes/game/boss_stages/boss_stage1/Objects/sapatos.tscn" id="22_6rtbo"]
+[ext_resource type="PackedScene" uid="uid://d3kwp8mxwtr38" path="res://scenes/game/boss_stages/boss_stage1/Objects/Kandila.tscn" id="23_uap8q"]
+[ext_resource type="PackedScene" uid="uid://dyhwthinyktym" path="res://scenes/game/boss_stages/boss_stage1/Objects/papel.tscn" id="24_36tmw"]
+[ext_resource type="PackedScene" uid="uid://d21ht0ig4wneh" path="res://scenes/game/boss_stages/boss_stage1/Objects/globo.tscn" id="25_m0csg"]
+[ext_resource type="PackedScene" uid="uid://dqq738hppc23t" path="res://scenes/game/boss_stages/boss_stage1/Objects/lamesa.tscn" id="26_pa17w"]
+[ext_resource type="PackedScene" uid="uid://dbhi5gs0cwakn" path="res://scenes/game/boss_stages/boss_stage1/Objects/teleskopyo.tscn" id="27_mdysj"]
+[ext_resource type="PackedScene" uid="uid://dggi067x44ojc" path="res://scenes/game/boss_stages/boss_stage1/Objects/pitsel.tscn" id="28_5rpwn"]
+[ext_resource type="PackedScene" uid="uid://d2f7kk87gbj2i" path="res://scenes/game/boss_stages/boss_stage1/Objects/baso.tscn" id="29_8j2d2"]
+[ext_resource type="PackedScene" uid="uid://gjxboei064jn" path="res://scenes/game/boss_stages/boss_stage1/Objects/pluma.tscn" id="30_40c0j"]
+[ext_resource type="PackedScene" uid="uid://c444u1ayis4bh" path="res://scenes/game/boss_stages/boss_stage1/Objects/orasan.tscn" id="31_aicti"]
+[ext_resource type="PackedScene" uid="uid://cygrpb6sfffit" path="res://scenes/game/boss_stages/boss_stage1/Objects/susi.tscn" id="32_wexot"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qdkhj"]
+blend_mode = 1
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_ai58q")
+
+[node name="Background" type="Node2D" parent="."]
+scale = Vector2(0.997093, 1.00813)
+
+[node name="BackgroundImg" type="TextureRect" parent="Background"]
+custom_minimum_size = Vector2(0, 1100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2630.0
+offset_bottom = 1223.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.501, 0.6)
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("1_5b20p")
+
+[node name="Design2_2x" type="Sprite2D" parent="Background"]
+position = Vector2(1190.46, 544.573)
+scale = Vector2(1.00292, 0.991936)
+texture = ExtResource("2_l7sqt")
+
+[node name="SkeleNiDinu_2x" type="Sprite2D" parent="Background"]
+position = Vector2(449, 229)
+texture = ExtResource("3_vb2c2")
+
+[node name="SkeleNiDinu2_2x" type="Sprite2D" parent="Background"]
+position = Vector2(1133, 582)
+scale = Vector2(1, 0.988449)
+texture = ExtResource("4_ql26j")
+
+[node name="ghost" type="Sprite2D" parent="Background"]
+top_level = true
+material = SubResource("CanvasItemMaterial_qdkhj")
+position = Vector2(716, 311)
+scale = Vector2(0.422652, 0.422652)
+texture = ExtResource("5_jujqu")
+script = ExtResource("6_f61ve")
+
+[node name="Design3_2x" type="Sprite2D" parent="Background"]
+position = Vector2(447.3, 655.669)
+scale = Vector2(1.00292, 0.991936)
+texture = ExtResource("7_wt4jo")
+
+[node name="Design_2x" type="Sprite2D" parent="Background"]
+top_level = true
+position = Vector2(423, 697)
+scale = Vector2(1.00292, 0.991936)
+texture = ExtResource("8_42as0")
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="lingkuranan" parent="Objects" instance=ExtResource("9_jtjk0")]
+position = Vector2(720, 375)
+
+[node name="kadena" parent="Objects" instance=ExtResource("10_gtu0w")]
+position = Vector2(364, 37)
+
+[node name="picture frame" parent="Objects" instance=ExtResource("11_ciovy")]
+position = Vector2(332, 345)
+
+[node name="ulo na statwa" parent="Objects" instance=ExtResource("12_ve7fn")]
+position = Vector2(613, 389)
+
+[node name="espada" parent="Objects" instance=ExtResource("13_idpnx")]
+position = Vector2(311, 255)
+
+[node name="salamin" parent="Objects" instance=ExtResource("14_s5tai")]
+position = Vector2(329, 555)
+
+[node name="atsa" parent="Objects" instance=ExtResource("15_7pfd7")]
+position = Vector2(311, 651)
+
+[node name="clip" parent="Objects" instance=ExtResource("16_iyfkw")]
+position = Vector2(356, 644)
+
+[node name="kahon" parent="Objects" instance=ExtResource("17_6lvwm")]
+position = Vector2(903, 589)
+
+[node name="bungaanan" parent="Objects" instance=ExtResource("18_bvuo5")]
+position = Vector2(529, 652)
+
+[node name="Barel" parent="Objects" instance=ExtResource("19_g0qjp")]
+position = Vector2(596, 644)
+
+[node name="Lampara" parent="Objects" instance=ExtResource("20_vo2ug")]
+position = Vector2(717, 667)
+
+[node name="Bungo" parent="Objects" instance=ExtResource("21_esfnb")]
+position = Vector2(668, 713)
+
+[node name="picture frame2" parent="Objects" instance=ExtResource("22_6rtbo")]
+position = Vector2(753, 683)
+
+[node name="Kandila" parent="Objects" instance=ExtResource("23_uap8q")]
+position = Vector2(808, 665)
+
+[node name="Papel" parent="Objects" instance=ExtResource("24_36tmw")]
+position = Vector2(809, 722)
+
+[node name="Globo" parent="Objects" instance=ExtResource("25_m0csg")]
+position = Vector2(873, 650)
+
+[node name="Lamesa" parent="Objects" instance=ExtResource("26_pa17w")]
+position = Vector2(941, 712)
+
+[node name="teleskopyo" parent="Objects" instance=ExtResource("27_mdysj")]
+position = Vector2(526, 707)
+
+[node name="Pitsel" parent="Objects" instance=ExtResource("28_5rpwn")]
+position = Vector2(1169, 708)
+
+[node name="Baso" parent="Objects" instance=ExtResource("29_8j2d2")]
+position = Vector2(1206, 724)
+
+[node name="Pluma" parent="Objects" instance=ExtResource("30_40c0j")]
+position = Vector2(943, 635)
+
+[node name="Orasan" parent="Objects" instance=ExtResource("31_aicti")]
+position = Vector2(997, 189)
+
+[node name="Yawi" parent="Objects" instance=ExtResource("32_wexot")]
+position = Vector2(743, 722)

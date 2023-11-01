@@ -1,16 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://cl4erjll12um0"]
+[gd_scene load_steps=14 format=3 uid="uid://cl4erjll12um0"]
 
-[ext_resource type="Script" path="res://scenes/navigation/inventory/map/levelButtons.gd" id="1_iwe3c"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_mv8la"]
-[ext_resource type="Texture2D" uid="uid://d3va3ytqba30n" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_5fdjx"]
+[ext_resource type="Texture2D" uid="uid://c7ftsmjs8ltl6" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_5fdjx"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_feb3c"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
-[ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
+[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_h1cgq"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="7_jcc7h"]
-[ext_resource type="Texture2D" uid="uid://7f0l04hapnd0" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
+[ext_resource type="Texture2D" uid="uid://cbv1trlust5p2" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
+[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
+[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nav3c"]
 texture = ExtResource("2_5fdjx")
@@ -35,7 +34,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_mv8la")
 expand_mode = 1
-script = ExtResource("1_iwe3c")
 
 [node name="ModalPnl" type="Panel" parent="Background"]
 texture_filter = 1

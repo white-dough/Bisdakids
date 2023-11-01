@@ -6,18 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
-[ext_resource type="Texture2D" uid="uid://bw6rv7sngjkyk" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
-[ext_resource type="Texture2D" uid="uid://037sbvsxlpgl" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
+[ext_resource type="Texture2D" uid="uid://cgkql10r51w7x" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
+[ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
-[ext_resource type="Texture2D" uid="uid://cgvek4prlknmq" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
+[ext_resource type="Texture2D" uid="uid://c6aqydfidujo0" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="10_vkup7"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="10_vkup7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbgxi"]
+content_margin_left = 9.0
+content_margin_top = 17.0
 texture = ExtResource("6_65x1o")
-texture_margin_left = 12.0
-texture_margin_top = 21.0
+texture_margin_right = 2.0
 
 [sub_resource type="Theme" id="Theme_4sdog"]
 Label/colors/font_shadow_color = Color(0, 0.0313726, 0, 1)
@@ -126,11 +127,7 @@ size_flags_vertical = 6
 
 [node name="ProgressBar" type="TextureProgressBar" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
 texture_filter = 2
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
+layout_mode = 2
 offset_left = -93.9999
 offset_top = -4.00002
 offset_right = 96.0001
@@ -142,21 +139,25 @@ texture_under = ExtResource("3_n5iuw")
 texture_progress = ExtResource("4_bc25u")
 texture_progress_offset = Vector2(8, 8)
 
-[node name="TimeIcon" type="Label" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+[node name="TimeLbl" type="Label" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
 texture_filter = 3
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
-offset_left = -93.9999
-offset_top = -12.0
-offset_right = -37.9999
-offset_bottom = 45.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -97.9999
+offset_top = -8.50002
+offset_right = -47.9999
+offset_bottom = 41.5
+grow_vertical = 2
 theme = SubResource("Theme_4sdog")
-text = "10:00"
-metadata/_edit_use_anchors_ = true
+horizontal_alignment = 1
 
 [node name="TimeFroze" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
 visible = false
-position = Vector2(3.50005, 28.5)
-scale = Vector2(0.857778, 0.964286)
+position = Vector2(-0.999928, 30.5)
+scale = Vector2(0.88, 0.964286)
 texture = ExtResource("6_oxqsx")
 
 [node name="Timer" type="Timer" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
@@ -380,9 +381,6 @@ theme_override_fonts/font = ExtResource("10_vkup7")
 theme_override_font_sizes/font_size = 36
 horizontal_alignment = 2
 vertical_alignment = 1
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(196, 154)
 
 [connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ColorRect/Panel/ContainerHUD/Clue" to="." method="_on_clue_pressed"]

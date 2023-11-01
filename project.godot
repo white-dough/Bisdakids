@@ -22,6 +22,8 @@ PhpRequest="*res://phpbackend/php_request.gd"
 Game="*res://scenes/game_system/game.gd"
 BannerAds="*res://advertisment/BannerAds.gd"
 InterstitialAds="*res://advertisment/InterstitialAds.gd"
+DiscordSDKLoader="*res://addons/discord-sdk-gd/nodes/core_updater.gd"
+Audio="*res://audio/nodes/Audio.tscn"
 
 [display]
 
@@ -32,7 +34,7 @@ window/stretch/aspect="ignore"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/admob/plugin.cfg", "res://addons/ppc/plugin.cfg")
+enabled=PackedStringArray("res://addons/admob/plugin.cfg", "res://addons/discord-sdk-gd/plugin.cfg", "res://addons/ppc/plugin.cfg")
 
 [input]
 
