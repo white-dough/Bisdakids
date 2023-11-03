@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ca81egta7m40d"]
 
-[ext_resource type="Script" path="res://scenes/game/level1/level1.gd" id="1_3kxp0"]
+[ext_resource type="Script" path="res://scenes/game/level.gd" id="1_m8407"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="3_07e03"]
 [ext_resource type="PackedScene" uid="uid://ca6qtai8yh8wy" path="res://scenes/game/level1/level1_game_scene.tscn" id="3_aq4u2"]
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="4_hq6rp"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="8_0gdl2"]
 
 [node name="Level" type="Node2D"]
-script = ExtResource("1_3kxp0")
+script = ExtResource("1_m8407")
+level_name = "level1"
+level_time = 601.0
 
 [node name="GameScene" parent="." instance=ExtResource("3_aq4u2")]
 show_behind_parent = true

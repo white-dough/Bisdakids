@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://qh36n3tqty5r"]
 
-[ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/boss1.gd" id="1_63dy3"]
+[ext_resource type="Script" path="res://scenes/game/boss_stages/boss.gd" id="1_dby58"]
 [ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/boss_stages/boss_stage1/boss1_game_scene.tscn" id="1_shust"]
 [ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.tscn" id="3_77o8w"]
 [ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.tscn" id="3_kb8ix"]
@@ -13,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="9_kwwhj"]
 
 [node name="Level" type="Node2D"]
-script = ExtResource("1_63dy3")
+script = ExtResource("1_dby58")
+level_name = "level5"
+level_time = 301.0
 
 [node name="GameScene" parent="." instance=ExtResource("1_shust")]
 position = Vector2(222, 0)

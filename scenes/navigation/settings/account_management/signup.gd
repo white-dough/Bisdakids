@@ -18,7 +18,8 @@ func _on_signup_btn_pressed():
 		if PhpRequest.clean_response == "success":
 			Game.user_name = user_name
 			Game.update_local_save()
-			mainmenu_modal_node.get_child(0).queue_free()
+			await Game.sync_data()
+			queue_free()
 			mainmenu_modal_node.add_child(logged_in_scene)
 		elif PhpRequest.clean_response == "ErrPHP":
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NATARUNG ANG KONEKSIYON SA DATABASE! ")
