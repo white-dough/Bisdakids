@@ -14,6 +14,7 @@ func _on_level_ready():
 	add_child(click_abuse_reset_timer)
 	click_abuse_reset_timer.start()
 	click_abuse_reset_timer.timeout.connect(reset_click_abuse_counter)
+	timer.timeout.connect(remove_taps)
 
 #Function to randomly select the objects to be found in the level
 func select_random_elements(count: int) -> Array:
@@ -85,7 +86,7 @@ func _unhandled_input(event):
 				timer.start()
 				#print('start')
 				$HandleTaps.show()
-				_remove_warning_taps()
+				
 
 func reset_click_abuse_counter():
 	click_abuse_counter = 0
@@ -93,8 +94,7 @@ func reset_click_abuse_counter():
 #func _process(delta):
 #	print(selected_objects)
 
-func _remove_warning_taps():
-	timer.timeout.connect(remove_taps)
+	
 
 func remove_taps():
 	print('hidden')

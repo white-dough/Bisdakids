@@ -542,6 +542,7 @@ theme = SubResource("Theme_dy6hr")
 texture_normal = ExtResource("6_mu3he")
 
 [node name="Level4Progress" type="TextureProgressBar" parent="Levels/Level4"]
+layout_mode = 0
 offset_left = -2.19788
 offset_top = -46.1539
 offset_right = 105.802

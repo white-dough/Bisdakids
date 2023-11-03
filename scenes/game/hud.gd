@@ -23,8 +23,7 @@ const LONG_PRESS_DURATION = 1.5 # in seconds
 var pressed = false # para long press feature
 var press_time = 0 # para long press feature
 
-func _on_level_ready():
-	
+func _on_level_ready():	
 	set_labels()
 	label_definitions() # function para sa word defintion (long press)
 	level_time = $"..".level_time
