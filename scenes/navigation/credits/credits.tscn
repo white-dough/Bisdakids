@@ -477,7 +477,7 @@ grow_vertical = 2
 theme = ExtResource("9_1g2py")
 text = "University of Cebu Main - College of Computer Studies
 Mr. Neil A. Basabe, MSIT - CCS Dean
-Rosalie Eyac, Ruth Alcover, name - Parent, Supporter, Motivator
+Rosalie Eyac, Ruth Alcover, Benjoe Fat - Parent, Supporter, Motivator
 Our friends <3. "
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)

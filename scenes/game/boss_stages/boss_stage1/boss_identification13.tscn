@@ -1,13 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://bvsfbi3a45jh2"]
+[gd_scene load_steps=14 format=3 uid="uid://bvsfbi3a45jh2"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_4kovr"]
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.gd" id="1_iol7i"]
-[ext_resource type="Texture2D" uid="uid://b5pjo2ofl1vf7" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
-[ext_resource type="Texture2D" uid="uid://drwpnrffbmssh" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
-[ext_resource type="Texture2D" uid="uid://dvu6jbep1ryyq" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
+[ext_resource type="Texture2D" uid="uid://bt0rl78cpehtl" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
+[ext_resource type="Texture2D" uid="uid://dc2xrlidg0h1n" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_03bjy"]
+[ext_resource type="Texture2D" uid="uid://cjrf5mdmv27ko" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="5_8r1eq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eff3f"]
 texture = ExtResource("2_njc4t")
+texture_margin_top = 21.0
 
 [sub_resource type="Theme" id="Theme_tch6g"]
 Label/styles/normal = SubResource("StyleBoxTexture_eff3f")
@@ -18,11 +21,14 @@ texture = ExtResource("3_n66qj")
 [sub_resource type="Theme" id="Theme_ybrnr"]
 Label/styles/normal = SubResource("StyleBoxTexture_72xq4")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ynj32"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5sp35"]
 texture = ExtResource("4_ygdqq")
+texture_margin_top = 42.0
+texture_margin_bottom = 42.0
 
-[sub_resource type="Theme" id="Theme_7mx0t"]
-Label/styles/normal = SubResource("StyleBoxTexture_ynj32")
+[sub_resource type="Theme" id="Theme_m2api"]
+LineEdit/colors/selection_color = Color(0.5, 0.5, 0.5, 1)
+LineEdit/styles/normal = SubResource("StyleBoxTexture_5sp35")
 
 [node name="BossIdentification13" type="CanvasLayer"]
 script = ExtResource("1_iol7i")
@@ -55,6 +61,12 @@ custom_minimum_size = Vector2(380, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_tch6g")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_03bjy")
+theme_override_font_sizes/font_size = 36
+text = "Tubaga Kini!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="QuestionLbl" type="Label" parent="LabelsVbox"]
 custom_minimum_size = Vector2(450, 300)
@@ -62,16 +74,25 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme = SubResource("Theme_ybrnr")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_8r1eq")
+theme_override_font_sizes/font_size = 22
 text = "Magsigi kinig kadako,
 apan dili gayud mugamay.
 Unsa kini?
 "
-
-[node name="Label" type="Label" parent="LabelsVbox"]
-custom_minimum_size = Vector2(0, 128)
-layout_mode = 2
-theme = SubResource("Theme_7mx0t")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnswerInput" type="LineEdit" parent="LabelsVbox"]
 layout_mode = 2
+theme = SubResource("Theme_m2api")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0.589844, 0.398438, 0.542969, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_8r1eq")
+theme_override_font_sizes/font_size = 24
+text = "sdasddsds"
+alignment = 1
 max_length = 20
+caret_blink = true

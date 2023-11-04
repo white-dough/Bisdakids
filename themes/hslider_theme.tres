@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://dmrrlilds2s0i"]
 
-[ext_resource type="Texture2D" uid="uid://bmwes8s0imrkj" path="res://graphics/navigation/settings/tingog_grabber@2x.png" id="1_hclvv"]
+[ext_resource type="Texture2D" uid="uid://04y10xf13iw7" path="res://graphics/navigation/settings/tingog_grabber@2x.png" id="1_hclvv"]
 [ext_resource type="StyleBox" uid="uid://cpqykpv3a4cyq" path="res://themes/redbar_stylebox.tres" id="2_o1txi"]
-[ext_resource type="Texture2D" uid="uid://bquk3kasahh5h" path="res://graphics/navigation/settings/slider@2x.png" id="2_pudto"]
+[ext_resource type="Texture2D" uid="uid://qsoomwci6h4c" path="res://graphics/navigation/settings/slider@2x.png" id="2_pudto"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srpg8"]
 bg_color = Color(0.960784, 0.305882, 0.286275, 1)
