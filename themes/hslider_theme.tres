@@ -1,5 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://dmrrlilds2s0i"]
 
+
 [ext_resource type="Texture2D" uid="uid://cjgqogu13gpl1" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="1_o3fhm"]
 [ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="2_pudto"]
 
