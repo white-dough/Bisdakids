@@ -1,11 +1,9 @@
-[gd_scene load_steps=69 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=71 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://dqav7viquk7tk" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/map.gd" id="1_grlkn"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/camerascript.gd" id="2_k4dw0"]
 [ext_resource type="Texture2D" uid="uid://bq2q4yx55ioeg" path="res://graphics/map/map_assets/shadows@2x.png" id="3_bw2f8"]
-[ext_resource type="Texture2D" uid="uid://bo14dk1h3725i" path="res://graphics/map/map_assets/level1Button4x.png" id="3_fqkr2"]
-[ext_resource type="Texture2D" uid="uid://bphnq82w10iug" path="res://graphics/map/map_assets/agila@2x.png" id="4_c1xrv"]
 [ext_resource type="Texture2D" uid="uid://cargchp8jmmvc" path="res://graphics/map/map_assets/level2Button4x.png" id="4_kyovf"]
 [ext_resource type="Texture2D" uid="uid://b3diq8nnrjg5m" path="res://scenes/navigation/inventory/map/map_assets/newMap@7x.png" id="5_1wf5s"]
 [ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://graphics/map/map_assets/level3Button4x.png" id="5_4ev76"]
@@ -40,8 +38,10 @@
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud2.gd" id="22_leso4"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud4.gd" id="25_e41x6"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/levelButtons.gd" id="27_frf5g"]
+[ext_resource type="Texture2D" uid="uid://cuba6fxvk4rc4" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
 [ext_resource type="Texture2D" uid="uid://b1776u1fflmbj" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
 [ext_resource type="Texture2D" uid="uid://clj5sjsd5bthg" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
+[ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="31_pdrqx"]
 [ext_resource type="PackedScene" uid="uid://cl4erjll12um0" path="res://scenes/navigation/inventory/map/Modal.tscn" id="43_c44qh"]
 
 [sub_resource type="Animation" id="Animation_ng5rb"]
@@ -303,6 +303,12 @@ _data = {
 "cloud4": SubResource("Animation_hw3su")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6dw4m"]
+texture = ExtResource("28_o7hj8")
+
+[sub_resource type="Theme" id="Theme_tmvob"]
+Button/styles/normal = SubResource("StyleBoxTexture_6dw4m")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1ngn"]
 
 [sub_resource type="Theme" id="Theme_dy6hr"]
@@ -330,11 +336,6 @@ remote_path = NodePath("../../Camera2D")
 visible = false
 position = Vector2(-1.2002, 0.952423)
 texture = ExtResource("3_bw2f8")
-
-[node name="Agila" type="Sprite2D" parent="Background"]
-position = Vector2(435.109, -199.048)
-scale = Vector2(0.99985, 1)
-texture = ExtResource("4_c1xrv")
 
 [node name="Map" type="Sprite2D" parent="Background"]
 position = Vector2(21.0051, 3.80969)
@@ -478,7 +479,9 @@ offset_top = 483.0
 offset_right = 654.0
 offset_bottom = 583.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("3_fqkr2")
+theme = SubResource("Theme_tmvob")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
 [node name="Level1Progress" type="TextureProgressBar" parent="Levels/Level1"]
 layout_mode = 0
@@ -490,6 +493,21 @@ scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Label" type="Label" parent="Levels/Level1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.08
+anchor_right = 0.681035
+anchor_bottom = 0.59
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Level2" type="TextureButton" parent="Levels"]
 layout_mode = 0
