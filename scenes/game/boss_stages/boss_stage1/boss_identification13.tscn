@@ -92,7 +92,6 @@ theme_override_colors/caret_color = Color(0.589844, 0.398438, 0.542969, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("5_8r1eq")
 theme_override_font_sizes/font_size = 24
-text = "sdasddsds"
 alignment = 1
 max_length = 20
 caret_blink = true
