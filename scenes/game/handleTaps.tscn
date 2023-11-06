@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://l7oj03lrua0x"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_3wxje"]
+[ext_resource type="Script" path="res://scenes/game/handleTaps.gd" id="1_8lc6c"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_cl6i5"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_knwii"]
+
+[node name="HandleTaps" type="Node2D"]
+script = ExtResource("1_8lc6c")
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1314, 740)
+offset_right = 1314.0
+offset_bottom = 740.0
+mouse_filter = 0
+texture = ExtResource("1_3wxje")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 273.0
+offset_top = 357.0
+offset_right = 1026.0
+offset_bottom = 454.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("6_cl6i5")
+theme_override_font_sizes/font_size = 42
+text = "Hinay hinay lang!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextWarning" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_knwii")
+theme_override_font_sizes/font_size = 28
+text = "Ayaw sobra og tap sa screen, makitan rana nimo."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLbl" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_knwii")
+theme_override_font_sizes/font_size = 28
+text = "00:05"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true

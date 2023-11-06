@@ -1,0 +1,138 @@
+[gd_scene load_steps=12 format=3 uid="uid://01u3cti70ykv"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_ssfmf"]
+[ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.gd" id="1_v8oh5"]
+[ext_resource type="Texture2D" uid="uid://dc2xrlidg0h1n" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="2_dtoxy"]
+[ext_resource type="Texture2D" uid="uid://bt0rl78cpehtl" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="3_sa6yq"]
+[ext_resource type="Texture2D" uid="uid://co13wuhjb3p8g" path="res://graphics/boss_stage/Assets/2x/tigmuA_lbl@2x.png" id="4_baio3"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_xhik4"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_u53w8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72xq4"]
+texture = ExtResource("2_dtoxy")
+
+[sub_resource type="Theme" id="Theme_ybrnr"]
+Label/styles/normal = SubResource("StyleBoxTexture_72xq4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xx7c3"]
+texture = ExtResource("4_baio3")
+
+[sub_resource type="Theme" id="Theme_ww425"]
+Label/styles/normal = SubResource("StyleBoxTexture_xx7c3")
+
+[node name="BossTigmu12" type="CanvasLayer"]
+script = ExtResource("1_v8oh5")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 221.0
+offset_right = 3.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ssfmf")
+expand_mode = 1
+
+[node name="QuestionLbl" type="Label" parent="."]
+custom_minimum_size = Vector2(450, 300)
+offset_left = 542.0
+offset_top = 205.0
+offset_right = 992.0
+offset_bottom = 505.0
+size_flags_horizontal = 4
+theme = SubResource("Theme_ybrnr")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_xhik4")
+theme_override_font_sizes/font_size = 22
+text = "Tungod sa akong kahayag,
+Puno'g katahum ug dayag,
+Mamilig kalingkuran sa ulo.
+Kinsa man ako?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(768, 151.75)
+scale = Vector2(0.941176, 1.12105)
+texture = ExtResource("3_sa6yq")
+
+[node name="Title_lbl" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.512177
+anchor_top = 0.185135
+anchor_right = 0.658295
+anchor_bottom = 0.260811
+offset_bottom = -1.52588e-05
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_u53w8")
+theme_override_font_sizes/font_size = 32
+text = "Tigmo-Tigmo"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ChoicesVbox" type="HBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.672
+anchor_top = 0.744
+anchor_right = 0.705
+anchor_bottom = 0.759
+offset_left = -546.0
+offset_top = -49.0
+offset_right = 320.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="ChoiceLbl1" type="Label" parent="ChoicesVbox"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+mouse_filter = 0
+theme = SubResource("Theme_ww425")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_xhik4")
+theme_override_font_sizes/font_size = 24
+text = "Kwintas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChoiceLbl2" type="Label" parent="ChoicesVbox"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+mouse_filter = 0
+theme = SubResource("Theme_ww425")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_xhik4")
+theme_override_font_sizes/font_size = 24
+text = "Korona"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChoiceLbl3" type="Label" parent="ChoicesVbox"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+mouse_filter = 0
+theme = SubResource("Theme_ww425")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_xhik4")
+theme_override_font_sizes/font_size = 24
+text = "Lampara"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChoiceLbl4" type="Label" parent="ChoicesVbox"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+mouse_filter = 0
+theme = SubResource("Theme_ww425")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_xhik4")
+theme_override_font_sizes/font_size = 24
+text = "Kalo"
+horizontal_alignment = 1
+vertical_alignment = 1

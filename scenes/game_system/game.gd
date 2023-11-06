@@ -26,6 +26,7 @@ extends Node
 @onready var loaded_player_data : Dictionary = {}
 @onready var http_request : HTTPRequest = HTTPRequest.new()
 @onready var is_connected_to_internet : bool = false
+var premium: bool = false
 
 func check_is_connected_internet():
 	http_request.cancel_request()
@@ -133,7 +134,7 @@ func sync_data():
 	var inventory_timestamp_max: float
 	var progress_timestamp: float = float(Game.progress["timestamp"])
 	var inventory_items: Dictionary = {}
-	var progress_scores: Dictionary = Game.progress.duplicate()
+	var progress_scores: Dictionary = progress.duplicate()
 	progress_scores.erase("timestamp")
 	for key in user_inventory:
 		if key.contains("_timestamp"):
@@ -142,14 +143,16 @@ func sync_data():
 			inventory_items[key] = Game.user_inventory[key]
 	inventory_timestamp_max = inventory_timestamps.max()
 	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
-	PhpRequest.sync_data(Game.user_name, timestamp, inventory_items, progress_scores)
+	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores)
+	print(progress_scores)
 	await PhpRequest.http_request.request_completed
+	
 	if PhpRequest.clean_response != "db_updated":
 		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
-		Game.user_inventory =  result["user_inventory"]
-		Game.progress = result["account_progress"]
-		Game.daily_task_reset()
-		Game.update_local_save()
+		progress = result["account_progress"]
+		
+		daily_task_reset()
+		update_local_save()
 		
 func get_user_inventory_local() -> Dictionary:
 	var user_inventory_clean: Dictionary = {}
@@ -197,8 +200,9 @@ func _ready():
 	http_request.timeout = 3
 	add_child(http_request)
 	http_request.connect("request_completed", _on_request_completed)
-	daily_task_logic()
 	load_data()
+	daily_task_logic()
+	premium = true if user_inventory['premium'] else false
 	print(loaded_player_data)
 	await daily_task_from_db()
 	#timer

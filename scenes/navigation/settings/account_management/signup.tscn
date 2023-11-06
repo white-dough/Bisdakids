@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
 [ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_gbvs7"]
 [ext_resource type="Texture2D" uid="uid://mui5jyjtm4nb" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
-[ext_resource type="Theme" uid="uid://d3074ukht3erv" path="res://themes/for_input.tres" id="7_rr74c"]
+[ext_resource type="Theme" uid="uid://gn482ubihrcf" path="res://themes/for_input.tres" id="7_rr74c"]
 [ext_resource type="Texture2D" uid="uid://bemhe8qqtfd5n" path="res://graphics/ui/buttons/2x/SignupPressed_btn@2x.png" id="9_hwpjh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r71xv"]

@@ -16,57 +16,35 @@ extends Control
 @onready var level5Progress: TextureProgressBar = $"/root/Node2D/Control/Level5Button/Level5Progress"
 
 @onready var duwaBtn: TextureButton = $"/root/Node2D/Control/Modal/Background/ModalPnl/ContentVbox/OkBtn"
-
+var level_btns: Array
 #@onready var settings_scene: CanvasLayer = $"res://scenes/navigation/settings/settings.tscn"
 
-func _on_level_1_button_pressed():
-	#get_tree().change_scene_to_file("res://scenes/game/level1/level_1.tscn")
-	print('level 1')
-	var progressVal:int = level1Progress.value 
-	#print(progressVal)
-	modalDisplay(progressVal, "Level 1")
-	#visible = true
+func _ready():
+	for button in get_children():
+		var level_key: String =  button.get_name().to_lower()
+		button.get_child(0).set_value(Game.progress[level_key])
+		button.pressed.connect(level_pressed.bind(button, level_key))
+		
 
-func _on_level_2_button_pressed():
-	print('level 2')
-	var progressVal:int = level2Progress.value 
-	modalDisplay(progressVal, "Level 2")
-	#get_tree().change_scene_to_file("")
-
-func _on_level_3_button_pressed():
-	print('level 3')
-	var progressVal:int = level3Progress.value 
-	modalDisplay(progressVal, "Level 3")
-	#get_tree().change_scene_to_file("")
-
-func _on_level_4_button_pressed():
-	print('level 4')
-	var progressVal:int = level4Progress.value 
-	modalDisplay(progressVal, "Level 4")
-	#get_tree().change_scene_to_file("")
-
-func _on_level_5_button_pressed():
-	print('level 5')
-	var progressVal:int = level5Progress.value 
-	modalDisplay(progressVal, "Level 5")
-	#get_tree().change_scene_to_file("")
+func level_pressed(button_pressesd: TextureButton, level_key: String) -> void:
+	var highscore: int = Game.progress[level_key]
+	modalDisplay(highscore, level_key)
 
 func _on_settings_button_pressed():
 	print('settings')
-	#settings_scene.show()
 
-func modalDisplay(levelProgress, labelText):
-	modalLabel.text = labelText
-	modal.show()
-	if(levelProgress == 100):
-		#get_tree().change_scene_to_file(levelComplete)
-		modal_btn_pressed(levelComplete)
-		#descLbl.text = "Nalampos na nimo!"
-	elif(levelProgress == 0):
-		descLbl.text = "Wala pakay kaagi, duwa para malampos nimo."
-	else:
-		descLbl.text = "Duwa pa para malampos!"
-	match(labelText):
+func modalDisplay(highscore: int, level_key: String):
+#	modalLabel.text = labelText
+#	modal.show()
+#	if(levelProgress == 100):
+#		#get_tree().change_scene_to_file(levelComplete)
+#		modal_btn_pressed(levelComplete)
+#		#descLbl.text = "Nalampos na nimo!"
+#	elif(levelProgress == 0):
+#		descLbl.text = "Wala pakay kaagi, duwa para malampos nimo."
+#	else:
+#		descLbl.text = "Duwa pa para malampos!"
+	match(level_key):
 		"Level 1":
 			duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/level1/level_1.tscn"))
 		"Level 2":

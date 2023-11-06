@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c6nb3jpb4y70g" path="res://graphics/ui/buttons/2x/retryPressed_btn_2@2x.png" id="14_wf3qv"]
 [ext_resource type="Texture2D" uid="uid://cvxkcunin210y" path="res://graphics/ui/buttons/2x/nextPressed_btn@2x.png" id="15_1xy1q"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtok0"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
@@ -26,9 +26,9 @@ content_margin_bottom = 13.0
 texture = ExtResource("3_n4i8w")
 
 [sub_resource type="Theme" id="Theme_ltiph"]
-Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
+Panel/styles/panel = SubResource("StyleBoxTexture_xtok0")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aifds"]
 texture = ExtResource("5_1qr8m")
 texture_margin_left = 10.0
 texture_margin_right = 10.0
@@ -38,7 +38,7 @@ expand_margin_right = 15.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="Theme" id="Theme_eqeqb"]
-Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
+Label/styles/normal = SubResource("StyleBoxTexture_aifds")
 
 [node name="LevelCompleted" type="CanvasLayer"]
 script = ExtResource("1_141ol")

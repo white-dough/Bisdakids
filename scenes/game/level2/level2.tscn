@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhb1jrvfyhlhj"]
+
+[ext_resource type="Script" path="res://scenes/game/level.gd" id="1_t8ht7"]
+[ext_resource type="PackedScene" uid="uid://c7spg71oruxth" path="res://scenes/game/level2/level2_game_scene.tscn" id="2_5behc"]
+[ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="3_4rya8"]
+[ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="4_x6qwf"]
+[ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="38_gl45v"]
+[ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="39_0u2bc"]
+[ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="40_y4oec"]
+[ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="41_vg6o8"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_t8ht7")
+level_name = "level2"
+level_time = 481.0
+
+[node name="GameScene" parent="." instance=ExtResource("2_5behc")]
+show_behind_parent = true
+
+[node name="HUD" parent="." instance=ExtResource("3_4rya8")]
+
+[node name="ObjectAnimation" parent="." instance=ExtResource("4_x6qwf")]
+
+[node name="VictoryTriumph" parent="." instance=ExtResource("41_vg6o8")]
+visible = false
+
+[node name="LevelCompleted" parent="." instance=ExtResource("39_0u2bc")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("38_gl45v")]
+<<<<<<< HEAD:scenes/game/level2/level_2.tscn
+visible = false
+
+[node name="LevelFailed" parent="." instance=ExtResource("40_y4oec")]
+visible = false
+
+[connection signal="ready" from="." to="game_scene2" method="_on_level_1_ready"]
+[connection signal="ready" from="." to="HUD" method="_on_level_1_ready"]
+[connection signal="object_found_signal" from="game_scene2" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]
+[connection signal="clue_pressed" from="HUD" to="ObjectAnimation" method="_on_hud_clue_pressed"]
+=======
+visible = false
+
+[node name="LevelFailed" parent="." instance=ExtResource("40_y4oec")]
+visible = false
+
+[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
+[connection signal="ready" from="." to="HUD" method="_on_level_ready"]
+[connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]
+>>>>>>> 924fa21770e99593d25f7ac6620eea14bcfb043b:scenes/game/level2/level2.tscn

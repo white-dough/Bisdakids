@@ -1,13 +1,22 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://dmrrlilds2s0i"]
 
-[ext_resource type="Texture2D" uid="uid://bmwes8s0imrkj" path="res://graphics/navigation/settings/tingog_grabber@2x.png" id="1_hclvv"]
-[ext_resource type="StyleBox" uid="uid://cpqykpv3a4cyq" path="res://themes/redbar_stylebox.tres" id="2_o1txi"]
-[ext_resource type="Texture2D" uid="uid://bquk3kasahh5h" path="res://graphics/navigation/settings/slider@2x.png" id="2_pudto"]
+[ext_resource type="Texture2D" uid="uid://csjenolintldp" path="res://graphics/navigation/settings/musika_grabber@2x.png" id="1_o3fhm"]
+[ext_resource type="Texture2D" uid="uid://qsoomwci6h4c" path="res://graphics/navigation/settings/slider@2x.png" id="2_pudto"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srpg8"]
-bg_color = Color(0.960784, 0.305882, 0.286275, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rr6no"]
+bg_color = Color(0.270588, 0.286275, 0.913725, 1)
 border_width_bottom = 6
-border_color = Color(0.521569, 0.0823529, 0.0901961, 1)
+border_color = Color(0.101961, 0.0862745, 0.454902, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdtp2"]
+bg_color = Color(0.133333, 0.164706, 0.729412, 1)
+border_color = Color(0.0313726, 0.0431373, 0.305882, 1)
 border_blend = true
 corner_radius_top_left = 50
 corner_radius_top_right = 50
@@ -30,9 +39,9 @@ modulate_color = Color(0.957945, 0.820391, 0.744984, 0.756863)
 [resource]
 HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
-HSlider/icons/grabber = ExtResource("1_hclvv")
-HSlider/icons/grabber_disabled = ExtResource("1_hclvv")
-HSlider/icons/grabber_highlight = ExtResource("1_hclvv")
-HSlider/styles/grabber_area = SubResource("StyleBoxFlat_srpg8")
-HSlider/styles/grabber_area_highlight = ExtResource("2_o1txi")
+HSlider/icons/grabber = ExtResource("1_o3fhm")
+HSlider/icons/grabber_disabled = ExtResource("1_o3fhm")
+HSlider/icons/grabber_highlight = ExtResource("1_o3fhm")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_rr6no")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_kdtp2")
 HSlider/styles/slider = SubResource("StyleBoxTexture_vtlr5")

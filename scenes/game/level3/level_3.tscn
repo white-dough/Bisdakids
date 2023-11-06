@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=10 format=3 uid="uid://chkaucf340e5y"]
 
 [ext_resource type="PackedScene" uid="uid://n6ijakby6vjf" path="res://scenes/game/level3/level3_gamescene.tscn" id="1_c753y"]
@@ -39,3 +40,15 @@ visible = false
 [connection signal="ready" from="." to="HUD" method="_on_level_1_ready"]
 [connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]
 [connection signal="clue_pressed" from="HUD" to="ObjectAnimation" method="_on_hud_clue_pressed"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://br2u0ukbbrsjx"]
+
+[ext_resource type="PackedScene" uid="uid://bg8o5xt834xte" path="res://scenes/game/level3/lvl_3_game_scene.tscn" id="1_nkumf"]
+[ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="2_hr01t"]
+
+[node name="Level_3" type="Node2D"]
+
+[node name="lvl3_gameScene2" parent="." instance=ExtResource("1_nkumf")]
+
+[node name="HUD" parent="." instance=ExtResource("2_hr01t")]
+>>>>>>> 924fa21770e99593d25f7ac6620eea14bcfb043b

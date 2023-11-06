@@ -1,6 +1,10 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://bukmbrgwy0i5j"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://b421tvfgr5265" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="1_inu22"]
+=======
+[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="1_inu22"]
+>>>>>>> 924fa21770e99593d25f7ac6620eea14bcfb043b
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jugim"]
 texture = ExtResource("1_inu22")

@@ -1,18 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://cahpof3shn5tw"]
 
 [ext_resource type="Script" path="res://testing/test_audio.gd" id="1_gtaog"]
-[ext_resource type="AudioStream" uid="uid://igbsyeq5e0x3" path="res://audio/sfx/multimedia_button_click_029.mp3" id="2_5g61k"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="2_6hypn"]
-[ext_resource type="AudioStream" uid="uid://etotjp232lsa" path="res://audio/bgm/2. Green Field.wav" id="4_sa6lx"]
+[ext_resource type="AudioStream" uid="uid://bu5e8pkqjgnt3" path="res://audio/assets/sfx/button_clicked_sfx.mp3" id="2_m3d7f"]
+[ext_resource type="AudioStream" uid="uid://bfinrgqqxp031" path="res://audio/assets/bgm/main_menu_bgm.wav" id="3_5ckwu"]
 
 [node name="test_audio" type="Node2D"]
 script = ExtResource("1_gtaog")
 
 [node name="ButtonClickSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_5g61k")
+stream = ExtResource("2_m3d7f")
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_sa6lx")
+stream = ExtResource("3_5ckwu")
 autoplay = true
 
 [node name="Play" type="TextureButton" parent="."]

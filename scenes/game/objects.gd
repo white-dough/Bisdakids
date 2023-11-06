@@ -6,7 +6,7 @@ signal object_found_signal(object_name)
 var click_abuse_counter: int
 var click_abuse_max: int = 5
 
-func _on_level_1_ready():
+func _on_level_ready():
 	count_of_objects_to_find = $"..".count_of_objects_to_find
 	selected_objects = select_random_elements(count_of_objects_to_find)
 	populate_current_objects(null)
@@ -14,6 +14,7 @@ func _on_level_1_ready():
 	add_child(click_abuse_reset_timer)
 	click_abuse_reset_timer.start()
 	click_abuse_reset_timer.timeout.connect(reset_click_abuse_counter)
+	timer.timeout.connect(remove_taps)
 
 #Function to randomly select the objects to be found in the level
 func select_random_elements(count: int) -> Array:
@@ -50,7 +51,8 @@ func populate_current_objects(object_found_remove):
 	$"../HUD".object_list_label(current_objects_strings)
 	$"../HUD".current_objects = current_objects
 	$"../HUD".history_current_objects = history_current_objects
-	
+
+@onready var timer = $HandleTaps/Timer
 #Function to handle the click of the user within the gamescene
 func _unhandled_input(event):
 	if event.is_action_released("click_primary"):
@@ -81,6 +83,10 @@ func _unhandled_input(event):
 			click_abuse_counter += 1
 			if click_abuse_counter > click_abuse_max:
 				print("stop!")
+				timer.start()
+				#print('start')
+				$HandleTaps.show()
+				
 
 func reset_click_abuse_counter():
 	click_abuse_counter = 0
@@ -88,3 +94,8 @@ func reset_click_abuse_counter():
 #func _process(delta):
 #	print(selected_objects)
 
+	
+
+func remove_taps():
+	print('hidden')
+	$HandleTaps.hide()

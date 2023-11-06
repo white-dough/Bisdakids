@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://bhepkhdml12n5"]
 
-[ext_resource type="Texture2D" uid="uid://or8xb08nmdeb" path="res://graphics/ui/store/2x/shopContainer@2x.png" id="1_7hv4r"]
+[ext_resource type="Texture2D" uid="uid://d3cmig6oeuqfd" path="res://graphics/ui/store/2x/shopContainer@2x.png" id="1_7hv4r"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="1_rupft"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="2_x2v5t"]
-[ext_resource type="Texture2D" uid="uid://cei1fd8w524b6" path="res://graphics/ui/store/2x/name_lbl@2x.png" id="4_mj5vm"]
+[ext_resource type="Texture2D" uid="uid://b82yxmljbvo0y" path="res://graphics/ui/store/2x/name_lbl@2x.png" id="4_mj5vm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vnwm0"]
 texture = ExtResource("1_7hv4r")

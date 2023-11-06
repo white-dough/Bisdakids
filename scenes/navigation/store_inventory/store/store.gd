@@ -53,7 +53,5 @@ func purchase_item(purchase_details: Dictionary):
 	Game.record_purchase(purchase_details['bundle_id'])
 	print(Game.user_inventory)
 
-
-
 func _on_close_btn_pressed():
 	queue_free()

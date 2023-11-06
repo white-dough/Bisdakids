@@ -1,0 +1,387 @@
+[gd_scene load_steps=26 format=3 uid="uid://656fyj3871uv"]
+
+[ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_nn4nx"]
+[ext_resource type="Theme" uid="uid://s6fhai8xfiw" path="res://themes/hud_inner_panel.tres" id="2_qw3yu"]
+[ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_hoay1"]
+[ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_qryjt"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_yifth"]
+[ext_resource type="Texture2D" uid="uid://cgkql10r51w7x" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_da06l"]
+[ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="7_qmk4q"]
+[ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/game/object_list_label.tscn" id="8_vd6dq"]
+[ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="9_8ni60"]
+[ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="10_a1oa8"]
+[ext_resource type="Texture2D" uid="uid://c6aqydfidujo0" path="res://graphics/ui/icons/Definition_panel@2x.png" id="11_da1u2"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="12_qp24j"]
+[ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="13_leg22"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbgxi"]
+texture = ExtResource("6_da06l")
+texture_margin_left = 12.0
+texture_margin_top = 21.0
+
+[sub_resource type="Theme" id="Theme_4sdog"]
+Label/colors/font_shadow_color = Color(0, 0.0313726, 0, 1)
+Label/font_sizes/font_size = 13
+Label/fonts/font = ExtResource("5_yifth")
+Label/styles/normal = SubResource("StyleBoxTexture_vbgxi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gud4"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("11_da1u2")
+
+[sub_resource type="Theme" id="Theme_icvfl"]
+Label/styles/normal = SubResource("StyleBoxTexture_4gud4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vamyr"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("11_da1u2")
+
+[sub_resource type="Theme" id="Theme_q3k73"]
+Label/styles/normal = SubResource("StyleBoxTexture_vamyr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqbf7"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("11_da1u2")
+
+[sub_resource type="Theme" id="Theme_w28uy"]
+Label/styles/normal = SubResource("StyleBoxTexture_lqbf7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf1k4"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("11_da1u2")
+
+[sub_resource type="Theme" id="Theme_qtnv1"]
+Label/styles/normal = SubResource("StyleBoxTexture_qf1k4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrsa4"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("11_da1u2")
+
+[sub_resource type="Theme" id="Theme_t1n1c"]
+Label/styles/normal = SubResource("StyleBoxTexture_rrsa4")
+
+[node name="HUD" type="Control"]
+top_level = true
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+script = ExtResource("1_nn4nx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 222.0
+offset_bottom = 740.0
+size_flags_vertical = 3
+color = Color(0.964844, 0.574219, 0.117188, 1)
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0405405
+anchor_top = 0.0175676
+anchor_right = 0.959459
+anchor_bottom = 0.983784
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qw3yu")
+metadata/_edit_use_anchors_ = true
+
+[node name="ContainerHUD" type="VBoxContainer" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = 10.0
+offset_right = 92.0
+offset_bottom = -17.0002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 34
+
+[node name="TimerBar" type="Control" parent="ColorRect/Panel/ContainerHUD"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="ProgressBar" type="TextureProgressBar" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -93.9999
+offset_top = -4.00002
+offset_right = 96.0001
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 0.0
+texture_under = ExtResource("3_hoay1")
+texture_progress = ExtResource("4_qryjt")
+texture_progress_offset = Vector2(8, 8)
+
+[node name="TimeIcon" type="Label" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+texture_filter = 3
+layout_mode = 1
+offset_left = -93.9999
+offset_top = -12.0
+offset_right = -37.9999
+offset_bottom = 45.0
+theme = SubResource("Theme_4sdog")
+text = "10:00"
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeFroze" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+visible = false
+position = Vector2(3.50005, 28.5)
+scale = Vector2(0.857778, 0.964286)
+texture = ExtResource("7_qmk4q")
+
+[node name="Timer" type="Timer" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+
+[node name="Objectlist" type="VBoxContainer" parent="ColorRect/Panel/ContainerHUD"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 22
+
+[node name="Label1" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("8_vd6dq")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label2" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("8_vd6dq")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label3" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("8_vd6dq")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label4" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("8_vd6dq")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label5" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("8_vd6dq")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 0
+text = ""
+
+[node name="Clue" type="TextureButton" parent="ColorRect/Panel/ContainerHUD"]
+texture_filter = 4
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("9_8ni60")
+stretch_mode = 3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="ColorRect/Panel/ContainerHUD/Clue"]
+texture_filter = 1
+position = Vector2(94.0001, 133)
+texture = ExtResource("10_a1oa8")
+emission_shape = 1
+emission_sphere_radius = 18.0
+spread = 33.75
+gravity = Vector2(0, 0)
+angular_velocity_min = -9.15
+angular_velocity_max = 24.6
+color = Color(0.956863, 0.921569, 0.835294, 1)
+
+[node name="HintLbl" type="Label" parent="ColorRect/Panel/ContainerHUD/Clue"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.9999
+offset_top = -18.0
+offset_right = -2.99994
+offset_bottom = 38.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0.560784, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("5_yifth")
+theme_override_font_sizes/font_size = 46
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/Panel"]
+
+[node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 114.0
+offset_right = 521.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_icvfl")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 199.0
+offset_right = 521.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_q3k73")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1094.0
+offset_top = -465.0
+offset_right = -794.0
+offset_bottom = -397.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_w28uy")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 353.0
+offset_right = 521.0
+offset_bottom = 421.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_qtnv1")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 428.0
+offset_right = 521.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_t1n1c")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="DescContainer" type="VBoxContainer" parent="ColorRect/Panel/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.168189
+anchor_top = 0.154054
+anchor_right = 0.396499
+anchor_bottom = 0.689189
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 1192.0
+offset_top = 33.0
+offset_right = 1279.0
+offset_bottom = 120.0
+texture_normal = ExtResource("12_qp24j")
+
+[node name="TimeFreeze" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 253.0
+offset_top = 32.0
+offset_right = 342.0
+offset_bottom = 122.0
+texture_normal = ExtResource("13_leg22")
+
+[node name="PauseTimer" type="Timer" parent="TimeFreeze"]
+wait_time = 2.0
+one_shot = true
+
+[node name="TimeFreezeLbl" type="Label" parent="TimeFreeze"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = -24.0
+offset_right = 2.0
+offset_bottom = 32.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0.560784, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("5_yifth")
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout" flags=18]
+[connection signal="pressed" from="ColorRect/Panel/ContainerHUD/Clue" to="." method="_on_clue_pressed" flags=18]
+[connection signal="pressed" from="TimeFreeze" to="." method="_on_time_freeze_pressed" flags=18]
