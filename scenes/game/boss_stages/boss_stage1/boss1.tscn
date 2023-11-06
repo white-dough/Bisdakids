@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://qh36n3tqty5r"]
+[gd_scene load_steps=11 format=3 uid="uid://qh36n3tqty5r"]
 
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss.gd" id="1_dby58"]
 [ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/boss_stages/boss_stage1/boss1_game_scene.tscn" id="1_shust"]
 [ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.tscn" id="3_77o8w"]
 [ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.tscn" id="3_kb8ix"]
+[ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="5_01x7t"]
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="5_ejmmk"]
-[ext_resource type="PackedScene" uid="uid://656fyj3871uv" path="res://scenes/game/boss_stages/boss_stage1/hud.tscn" id="5_mt1oa"]
 [ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="6_d5cjs"]
-[ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/hud.gd" id="6_m1odi"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="7_fs1yk"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="8_lcx81"]
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="9_kwwhj"]
@@ -28,8 +27,7 @@ visible = false
 [node name="BossIdentification13" parent="GameScene" instance=ExtResource("3_77o8w")]
 visible = false
 
-[node name="HUD" parent="." instance=ExtResource("5_mt1oa")]
-script = ExtResource("6_m1odi")
+[node name="HUD" parent="." instance=ExtResource("5_01x7t")]
 
 [node name="ObjectAnimation" parent="." instance=ExtResource("5_ejmmk")]
 position = Vector2(406.522, 0)

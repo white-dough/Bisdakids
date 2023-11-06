@@ -23,10 +23,11 @@ const LONG_PRESS_DURATION = 1.5 # in seconds
 var pressed = false # para long press feature
 var press_time = 0 # para long press feature
 
-func _on_level_ready():	
+func _on_level_ready():
 	set_labels()
 	label_definitions() # function para sa word defintion (long press)
 	level_time = $"..".level_time
+	print(level_time)
 	progress_bar.max_value = level_time
 	progress_bar.set_use_rounded_values(true)
 	timer.set_one_shot(true)
@@ -81,7 +82,7 @@ func get_definition() -> Dictionary:
 			dataToBePassed = content_as_dictionary.level3
 		"level4":
 			dataToBePassed = content_as_dictionary.level4
-		"boss1":
+		"level5":
 			dataToBePassed = content_as_dictionary.level5
 	return dataToBePassed
 	#var level2 = content_as_dictionary.level2[0]

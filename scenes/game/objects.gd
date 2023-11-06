@@ -82,7 +82,6 @@ func _unhandled_input(event):
 		else:
 			click_abuse_counter += 1
 			if click_abuse_counter > click_abuse_max:
-				print("stop!")
 				timer.start()
 				#print('start')
 				$HandleTaps.show()
