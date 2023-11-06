@@ -5,8 +5,10 @@
 [node name="balde" type="Area2D"]
 scale = Vector2(0.6, 0.6)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wo0cd")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(3, 46, 19, 44, 34, 39, 39, 32, 35, 25, 45, -34, 42, -40, 31, -45, 12, -48, -2, -48, -16, -48, -28, -45, -44, -37, -44, -31, -42, -23, -43, -13, -43, 4, -41, 11, -35, 19, -35, 25, -37, 31, -37, 38, -34, 39, -25, 44, -20, 44, -10, 46)
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-66.6667, 66.6667, -13.3333, 80, 53.3333, 66.6667, 66.6667, -66.6667, 13.3333, -93.3333, -40, -80, -66.6667, -66.6667, -66.6667, -26.6667, -66.6667, 13.3333, -53.3333, 40)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.62602, 1.83908)
+texture = ExtResource("1_wo0cd")

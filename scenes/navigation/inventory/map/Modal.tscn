@@ -1,18 +1,18 @@
 [gd_scene load_steps=14 format=3 uid="uid://cl4erjll12um0"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_mv8la"]
-[ext_resource type="Texture2D" uid="uid://c7ftsmjs8ltl6" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_5fdjx"]
+[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_12xdv"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_feb3c"]
-[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
-[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
+[ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_h1cgq"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="7_jcc7h"]
-[ext_resource type="Texture2D" uid="uid://cbv1trlust5p2" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
-[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
-[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
+[ext_resource type="Texture2D" uid="uid://7f0l04hapnd0" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nav3c"]
-texture = ExtResource("2_5fdjx")
+texture = ExtResource("2_12xdv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7clfj"]
 texture = ExtResource("5_fd7sj")
@@ -44,7 +44,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -290.0
-offset_top = -157.5
+offset_top = -183.5
 offset_right = 284.0
 offset_bottom = 154.5
 grow_horizontal = 2
@@ -55,10 +55,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_nav3c")
 [node name="ContentVbox" type="VBoxContainer" parent="Background/ModalPnl"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0557491
-anchor_top = 0.546474
-anchor_right = 0.939024
-anchor_bottom = 0.633013
+anchor_left = 0.121951
+anchor_top = 0.58432
+anchor_right = 0.883275
+anchor_bottom = 0.652367
 offset_top = -144.5
 offset_bottom = 144.5
 grow_horizontal = 2
@@ -104,5 +104,6 @@ offset_right = 645.0
 offset_bottom = 24.0
 texture_normal = ExtResource("9_t2y3s")
 texture_pressed = ExtResource("10_smm4v")
+stretch_mode = 3
 
 [connection signal="pressed" from="Background/ModalPnl/CloseBtn" to="Background" method="_on_close_btn_pressed"]

@@ -1,11 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://caaxj7bw5ogqe"]
+[gd_scene load_steps=19 format=3 uid="uid://caaxj7bw5ogqe"]
 
-[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_ipw5n"]
+[ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_ipw5n"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="2_7vrei"]
-[ext_resource type="Texture2D" uid="uid://bkuxbfkwt5hpf" path="res://graphics/navigation/settings/slider@2x.png" id="2_rtu32"]
+[ext_resource type="Texture2D" uid="uid://qsoomwci6h4c" path="res://graphics/navigation/settings/slider@2x.png" id="2_rtu32"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="3_ninol"]
-[ext_resource type="Texture2D" uid="uid://bjudiluuuoxb2" path="res://graphics/ui/icons/task_reward@2x.png" id="4_qaiag"]
+[ext_resource type="Texture2D" uid="uid://bffaypftfhux6" path="res://graphics/ui/icons/task_reward@2x.png" id="4_qaiag"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="5_qxpo2"]
+[ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="7_l1n2c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xg5ss"]
 texture = ExtResource("1_ipw5n")
@@ -35,9 +36,9 @@ expand_margin_right = 7.0
 expand_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcqws"]
-bg_color = Color(0.231373, 0.364706, 0.866667, 1)
+bg_color = Color(0.301961, 0.694118, 0.164706, 1)
 border_width_bottom = 6
-border_color = Color(0.117647, 0.2, 0.584314, 1)
+border_color = Color(0.0588235, 0.427451, 0.113725, 1)
 border_blend = true
 corner_radius_top_left = 50
 corner_radius_top_right = 50
@@ -71,6 +72,8 @@ PanelContainer/styles/panel = SubResource("StyleBoxTexture_vosn0")
 
 [node name="TaskPanel" type="Panel"]
 custom_minimum_size = Vector2(515, 100)
+offset_right = 515.0
+offset_bottom = 100.0
 theme = SubResource("Theme_jruug")
 
 [node name="TaskDetailVbox" type="VBoxContainer" parent="."]
@@ -79,10 +82,12 @@ anchors_preset = -1
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 24.0
-offset_top = -5.0
+offset_top = -41.0
 offset_right = 409.0
+offset_bottom = 37.0
+grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 6
+theme_override_constants/separation = 5
 
 [node name="TaskTitleLbl" type="Label" parent="TaskDetailVbox"]
 custom_minimum_size = Vector2(0, 28)
@@ -137,10 +142,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = -17.0
+offset_left = -92.0
+offset_top = -38.0
 offset_right = -12.0
-offset_bottom = 20.0
+offset_bottom = 42.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 2
@@ -155,6 +160,12 @@ stretch_mode = 5
 
 [node name="RewardQuantityLbl" type="Label" parent="RewardPnlcont"]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = ExtResource("7_l1n2c")
+theme_override_colors/font_shadow_color = Color(0, 0.533333, 0, 1)
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="RewardLbl" type="Label" parent="RewardPnlcont"]
 visible = false
