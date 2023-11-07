@@ -192,10 +192,6 @@ theme_override_fonts/font = ExtResource("8_xulwh")
 theme_override_font_sizes/font_size = 22
 text = "2345678"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="ModalPanel/Content_Container"]
-layout_mode = 2
-theme_override_constants/separation = 60
-
 [node name="Btn_Container" type="HBoxContainer" parent="ModalPanel"]
 layout_mode = 1
 anchors_preset = 7

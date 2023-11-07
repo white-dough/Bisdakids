@@ -38,7 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://b1776u1fflmbj" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
 [ext_resource type="Texture2D" uid="uid://clj5sjsd5bthg" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="31_rpe0u"]
-[ext_resource type="Texture2D" uid="uid://cfoinb1u8owk2" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
+[ext_resource type="Texture2D" uid="uid://bntljip5htogs" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
 [ext_resource type="PackedScene" uid="uid://ch5bdc76jqvg8" path="res://scenes/navigation/map/Modal.tscn" id="43_c44qh"]
 
 [sub_resource type="Animation" id="Animation_ng5rb"]
@@ -707,7 +707,7 @@ texture_normal = ExtResource("14_8kcks")
 layout_mode = 2
 texture_normal = ExtResource("14_b1qn5")
 
-[node name="Modal" parent="." instance=ExtResource("43_c44qh")]
+[node name="LevelModal" parent="." instance=ExtResource("43_c44qh")]
 visible = false
 
 [connection signal="pressed" from="Icons/HBoxContainer2/Settings" to="Levels" method="_on_settings_button_pressed"]
