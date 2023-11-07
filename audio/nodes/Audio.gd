@@ -6,7 +6,7 @@ extends Node
 #background musics
 @onready var main_bgm: AudioStream = preload("res://audio/assets/bgm/main_bgm.mp3")
 @onready var levels_bgm: AudioStream = preload("res://audio/assets/bgm/levels_bgm.wav")
-@onready var boss_bgm: AudioStream = preload("res://audio/assets/bgm/boss_battle_bgm.mp3")
+@onready var boss_bgm: AudioStream = preload("res://audio/assets/bgm/boss_battle_bgm.wav")
 
 #clicks
 @onready var wood_btn_sfx: AudioStream = preload("res://audio/assets/sfx/wood_click_sfx.wav")

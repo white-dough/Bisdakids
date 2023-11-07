@@ -34,6 +34,7 @@ func _on_level_ready():
 	timer.start()
 	pause_timer.timeout.connect(time_freeze)
 	level_success = $"../LevelCompleted"
+	
 func _process(_delta):
 	progress_bar.value = timer.get_time_left()
 	# print(current_objects_strings)

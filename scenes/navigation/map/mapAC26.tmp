@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=67 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://dmvxtumirccxp" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Script" path="res://scenes/navigation/map/map.gd" id="1_grlkn"]
@@ -483,11 +483,10 @@ theme = SubResource("Theme_tmvob")
 texture_normal = ExtResource("29_ogrnt")
 stretch_mode = 5
 
-[node name="Level1Progress" type="TextureProgressBar" parent="Levels/Level1"]
+[node name="Level1Prog" type="TextureProgressBar" parent="Levels/Level1"]
 layout_mode = 0
-offset_left = 4.39563
 offset_top = -46.1978
-offset_right = 112.396
+offset_right = 108.0
 offset_bottom = 14.8022
 scale = Vector2(1.005, 1)
 max_value = 5000.0
@@ -501,18 +500,33 @@ offset_top = 412.0
 offset_right = 698.0
 offset_bottom = 503.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("4_kyovf")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level2Progress" type="TextureProgressBar" parent="Levels/Level2"]
+[node name="Level2Prog" type="TextureProgressBar" parent="Levels/Level2"]
 layout_mode = 0
-offset_left = 4.39551
-offset_top = -46.1539
-offset_right = 112.396
-offset_bottom = 14.8461
+offset_top = -46.1978
+offset_right = 108.0
+offset_bottom = 14.8022
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level2Lbl" type="Label" parent="Levels/Level2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0558482
+anchor_right = 0.681035
+anchor_bottom = 0.616288
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Level3" type="TextureButton" parent="Levels"]
 layout_mode = 0
@@ -521,18 +535,34 @@ offset_top = 355.0
 offset_right = 753.0
 offset_bottom = 441.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("5_4ev76")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level3Progress" type="TextureProgressBar" parent="Levels/Level3"]
+[node name="Level3Prog" type="TextureProgressBar" parent="Levels/Level3"]
 layout_mode = 0
-offset_left = -2.19788
-offset_top = -46.1539
-offset_right = 105.802
-offset_bottom = 14.8461
+offset_left = -2.19775
+offset_top = -46.1978
+offset_right = 105.803
+offset_bottom = 14.8022
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level3Lbl" type="Label" parent="Levels/Level3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0288887
+anchor_right = 0.681035
+anchor_bottom = 0.621912
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Level4" type="TextureButton" parent="Levels"]
 layout_mode = 0
@@ -542,18 +572,34 @@ offset_right = 854.0
 offset_bottom = 394.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_dy6hr")
-texture_normal = ExtResource("6_mu3he")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level4Progress" type="TextureProgressBar" parent="Levels/Level4"]
+[node name="Level4Prog" type="TextureProgressBar" parent="Levels/Level4"]
 layout_mode = 0
-offset_left = -2.19788
-offset_top = -46.1539
-offset_right = 105.802
-offset_bottom = 14.8461
+offset_left = -4.39551
+offset_top = -44.0
+offset_right = 103.605
+offset_bottom = 17.0
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level4Lbl" type="Label" parent="Levels/Level4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0300504
+anchor_right = 0.681035
+anchor_bottom = 0.609596
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Level5" type="TextureButton" parent="Levels"]
 layout_mode = 0
@@ -562,18 +608,34 @@ offset_top = 215.0
 offset_right = 870.0
 offset_bottom = 310.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("7_lvttb")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level5Progress" type="TextureProgressBar" parent="Levels/Level5"]
+[node name="Level5Prog" type="TextureProgressBar" parent="Levels/Level5"]
 layout_mode = 0
-offset_left = -2.198
-offset_top = -46.1538
-offset_right = 105.802
-offset_bottom = 14.8462
+offset_left = -4.39563
+offset_top = -44.0
+offset_right = 103.605
+offset_bottom = 17.0
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level5Lbl" type="Label" parent="Levels/Level5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0568651
+anchor_right = 0.681035
+anchor_bottom = 0.593707
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Icons" type="CanvasLayer" parent="."]
 
