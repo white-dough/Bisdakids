@@ -56,9 +56,9 @@ anchor_top = 0.172973
 anchor_right = 0.803653
 anchor_bottom = 0.940541
 offset_left = 95.9997
-offset_top = 168.0
+offset_top = 160.0
 offset_right = -168.0
-offset_bottom = -144.0
+offset_bottom = -152.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -68,7 +68,7 @@ horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-custom_minimum_size = Vector2(0, 1200)
+custom_minimum_size = Vector2(0, 1250)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -149,20 +149,20 @@ text = "Development Team
 "
 horizontal_alignment = 1
 
-[node name="Team4" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
+[node name="Sound Designer" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.079096
-anchor_top = 7.51852
-anchor_right = 0.927096
-anchor_bottom = 8.44444
+anchor_top = 7.25926
+anchor_right = 0.926554
+anchor_bottom = 8.18519
 theme = ExtResource("8_nhy60")
 text = "Sound Designers"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
-[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team4"]
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Sound Designer"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -171,7 +171,9 @@ anchor_bottom = 1.84
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "John Carl Villanueva"
+text = "
+Dwight Eyac
+John Carl Villanueva"
 horizontal_alignment = 1
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
@@ -299,13 +301,14 @@ metadata/_edit_use_anchors_ = true
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Art Department/Animators"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.96
-anchor_right = 1.0
-anchor_bottom = 2.56
+anchor_top = 1.2
+anchor_right = 0.99936
+anchor_bottom = 3.6
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "John Carl Villanueva
+text = "Gero Monica Alcover
+John Carl Villanueva
 		Moses Anthony Fat"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -320,7 +323,8 @@ anchor_top = 1.77778
 anchor_right = 0.924
 anchor_bottom = 1.9321
 theme = ExtResource("8_nhy60")
-text = "UI/UX Designers
+text = "
+UI/UX Designers
 "
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
@@ -347,10 +351,10 @@ layout_mode = 2
 [node name="Programming Team" type="Label" parent="ScrollContainer/VBoxContainer/Label"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0508474
-anchor_top = 2.91305
-anchor_right = 1.0226
-anchor_bottom = 4.08696
+anchor_left = 0.0282485
+anchor_top = 3.65218
+anchor_right = 1.0
+anchor_bottom = 4.82609
 theme = ExtResource("7_q26b3")
 text = "Programming Team
 "
@@ -407,15 +411,16 @@ metadata/_edit_use_anchors_ = true
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team/Gameplay Programmers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 3.56
+anchor_top = 1.16
+anchor_right = 0.998195
+anchor_bottom = 5.32
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
 text = "Dwight Eyac
 		Moses Anthony Fat
-		Kimberly Paradero
+John Carl Villanueva
+Gero Monica Alcover
 "
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -425,10 +430,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Consultant_Adviser" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.00564972
-anchor_top = 7.51852
-anchor_right = 1.0339
-anchor_bottom = 8.51852
+anchor_left = -0.00581395
+anchor_top = 9.03704
+anchor_right = 1.05814
+anchor_bottom = 10.037
 theme = ExtResource("7_q26b3")
 text = "Consultant/Adviser"
 horizontal_alignment = 1
@@ -457,9 +462,9 @@ layout_mode = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.491525
-anchor_top = 9.04348
+anchor_top = 12.0435
 anchor_right = 1.25424
-anchor_bottom = 10.1304
+anchor_bottom = 13.1304
 theme = ExtResource("8_nhy60")
 text = "Special Thanks
 "
@@ -477,7 +482,8 @@ grow_vertical = 2
 theme = ExtResource("9_1g2py")
 text = "University of Cebu Main - College of Computer Studies
 Mr. Neil A. Basabe, MSIT - CCS Dean
-Rosalie Eyac, Ruth Alcover, Benjoe Fat - Parent, Supporter, Motivator
+Rosalie Eyac, Ruth Alcover, Benjoe Fat, Trixia Glenn Velez,
+Welma Villanueva - Parents, Supporter, Motivator
 Our friends <3. "
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
@@ -487,9 +493,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.310734
-anchor_top = 14.9565
+anchor_top = 18.6522
 anchor_right = 1.49718
-anchor_bottom = 16.0435
+anchor_bottom = 19.7391
 theme = ExtResource("8_nhy60")
 text = "©2023 DeveloBots. All rights reserved
 "

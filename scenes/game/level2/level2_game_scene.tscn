@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://kwsunt8wtjm6" path="res://scenes/game/level2/level2_objects/pakwan.tscn" id="13_7314v"]
 [ext_resource type="PackedScene" uid="uid://cdmr3mykjl10a" path="res://scenes/game/level2/level2_objects/payong.tscn" id="14_km825"]
 [ext_resource type="PackedScene" uid="uid://clq1ux5jjcwth" path="res://scenes/game/level2/level2_objects/tsinelas.tscn" id="15_5mloi"]
+[ext_resource type="PackedScene" uid="uid://b320067e0xfel" path="res://scenes/game/level2/level2_objects/maleta.tscn" id="15_l8jcj"]
 [ext_resource type="PackedScene" uid="uid://b6i7v7sj7hjeh" path="res://scenes/game/level2/level2_objects/salbabida.tscn" id="15_tjsyl"]
 [ext_resource type="Texture2D" uid="uid://di8hxjl8fp76k" path="res://graphics/level2/2x/bra@2x.png" id="16_8md31"]
 [ext_resource type="Texture2D" uid="uid://nfg5kqs05xae" path="res://graphics/level2/2x/Asset 10@2x.png" id="17_qygb8"]
@@ -36,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://druiu2x6rw3g4" path="res://graphics/level2/2x/ice cream@2x.png" id="35_2aua4"]
 [ext_resource type="Texture2D" uid="uid://ks73ubuudubc" path="res://graphics/level2/2x/kamot sa pirate@2x.png" id="36_ig024"]
 [ext_resource type="Texture2D" uid="uid://c1sihsthd2cio" path="res://graphics/level2/2x/lubi with straw@2x.png" id="37_iurtd"]
-[ext_resource type="Texture2D" uid="uid://cs7l8g824nutt" path="res://graphics/level2/2x/luggagebag@2x.png" id="38_v5rbw"]
 [ext_resource type="Texture2D" uid="uid://dm36p0cc0tspl" path="res://graphics/level2/2x/map@2x.png" id="39_00o8r"]
 [ext_resource type="Texture2D" uid="uid://7mi1kej0jic8" path="res://graphics/level2/2x/pang ginhawa@2x.png" id="40_kk736"]
 [ext_resource type="Texture2D" uid="uid://dnxc62wg7pr17" path="res://graphics/level2/2x/pang pa kusog sa tingog@2x.png" id="41_f2n7b"]
@@ -73,10 +73,6 @@ position = Vector2(722.156, 313.592)
 [node name="Duyan" parent="Objects" instance=ExtResource("6_dqvvt")]
 position = Vector2(241.916, 341.748)
 
-[node name="Eroplano" parent="Objects" instance=ExtResource("7_1t7ql")]
-position = Vector2(834.442, 47.5045)
-rotation = -0.481711
-
 [node name="Gitara" parent="Objects" instance=ExtResource("8_m1iow")]
 position = Vector2(1228.74, 504.854)
 
@@ -100,7 +96,13 @@ position = Vector2(692.216, 677.67)
 
 [node name="Pakwan" parent="Objects" instance=ExtResource("13_7314v")]
 position = Vector2(941.318, 683.495)
-scale = Vector2(1, 1)
+
+[node name="maleta" parent="Objects" instance=ExtResource("15_l8jcj")]
+position = Vector2(835.928, 598.058)
+
+[node name="Eroplano" parent="Objects" instance=ExtResource("7_1t7ql")]
+position = Vector2(783.79, 638.419)
+rotation = -0.481711
 
 [node name="ExtraObjects" type="Node2D" parent="."]
 position = Vector2(802, 279)
@@ -171,11 +173,6 @@ position = Vector2(-387.629, 280.223)
 scale = Vector2(1.05393, 0.78524)
 texture = ExtResource("37_iurtd")
 
-[node name="LuggageBag" type="Sprite2D" parent="ExtraObjects"]
-position = Vector2(38.8129, 324.079)
-scale = Vector2(0.950639, 0.607755)
-texture = ExtResource("38_v5rbw")
-
 [node name="Snorkel" type="Sprite2D" parent="ExtraObjects"]
 position = Vector2(225.545, 241.388)
 scale = Vector2(1.3413, 0.913762)
@@ -229,7 +226,6 @@ texture = ExtResource("22_n101o")
 
 [node name="Flippers" type="Sprite2D" parent="ExtraObjects"]
 position = Vector2(-512.18, 334.592)
-scale = Vector2(1, 1)
 texture = ExtResource("17_qygb8")
 
 [node name="BeachTowels" type="Sprite2D" parent="ExtraObjects"]

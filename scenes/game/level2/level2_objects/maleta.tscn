@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b320067e0xfel"]
+
+[ext_resource type="Texture2D" uid="uid://cs7l8g824nutt" path="res://graphics/level2/2x/luggagebag@2x.png" id="1_rfogj"]
+
+[node name="maleta" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-120, 106.667, -53.3333, 120, 133.333, 66.6667, 146.667, -93.3333, 40, -120, -40, -106.667, -40, -93.3333, -146.667, -53.3333)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1.52588e-05)
+scale = Vector2(1.22356, 1.10054)
+texture = ExtResource("1_rfogj")
