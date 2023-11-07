@@ -1,34 +1,30 @@
-[gd_scene load_steps=71 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=67 format=3 uid="uid://dptp3em1qnmlm"]
 
-[ext_resource type="Texture2D" uid="uid://dqav7viquk7tk" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
+[ext_resource type="Texture2D" uid="uid://b87ns7pvx17vs" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/map.gd" id="1_grlkn"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/camerascript.gd" id="2_k4dw0"]
-[ext_resource type="Texture2D" uid="uid://bq2q4yx55ioeg" path="res://graphics/map/map_assets/shadows@2x.png" id="3_bw2f8"]
-[ext_resource type="Texture2D" uid="uid://cargchp8jmmvc" path="res://graphics/map/map_assets/level2Button4x.png" id="4_kyovf"]
-[ext_resource type="Texture2D" uid="uid://b3diq8nnrjg5m" path="res://scenes/navigation/inventory/map/map_assets/newMap@7x.png" id="5_1wf5s"]
-[ext_resource type="Texture2D" uid="uid://bu1e5m8wgtmd5" path="res://graphics/map/map_assets/level3Button4x.png" id="5_4ev76"]
-[ext_resource type="Texture2D" uid="uid://tl1apka7r5mu" path="res://graphics/map/map_assets/CloudH2@2x.png" id="5_133f8"]
-[ext_resource type="Texture2D" uid="uid://dxrumvpdc5xa7" path="res://graphics/map/map_assets/hot balloon@2x.png" id="5_fbdl5"]
-[ext_resource type="Texture2D" uid="uid://bp7yqi80gf05g" path="res://graphics/map/map_assets/whale@2x.png" id="6_7cyux"]
-[ext_resource type="Texture2D" uid="uid://bubba5qxop32t" path="res://graphics/map/map_assets/Cloud TL@2x.png" id="6_b1c6w"]
-[ext_resource type="Texture2D" uid="uid://c6u2quhqqofxh" path="res://graphics/map/map_assets/CloudH1@2x.png" id="6_mj8tq"]
-[ext_resource type="Texture2D" uid="uid://k6enst1t6p0e" path="res://graphics/map/map_assets/level4Button4x.png" id="6_mu3he"]
-[ext_resource type="Texture2D" uid="uid://cooxvrsgfuweg" path="res://graphics/map/map_assets/dolphin@2x.png" id="7_1j4wd"]
-[ext_resource type="Texture2D" uid="uid://dg6eorai8qir5" path="res://graphics/map/map_assets/Cloud TR@2x.png" id="7_1w2yw"]
-[ext_resource type="Texture2D" uid="uid://drgxhv2xkk7vb" path="res://graphics/map/map_assets/level5Button4x.png" id="7_lvttb"]
-[ext_resource type="Texture2D" uid="uid://cmgg0utpo0m21" path="res://graphics/map/map_assets/bato@2x.png" id="8_otpsd"]
-[ext_resource type="Texture2D" uid="uid://efpmddnavxhw" path="res://graphics/map/map_assets/ship@2x.png" id="9_2lscx"]
-[ext_resource type="Texture2D" uid="uid://l4be8fvkah3e" path="res://graphics/ui/icons/energly_lbl@2x.png" id="9_5qvwd"]
-[ext_resource type="Texture2D" uid="uid://ccapb8ey1e8xw" path="res://graphics/map/map_assets/Cloud 1@2x.png" id="9_b3fea"]
+[ext_resource type="Texture2D" uid="uid://gqtv66ui4nim" path="res://graphics/map/map_assets/shadows@2x.png" id="3_bw2f8"]
+[ext_resource type="Texture2D" uid="uid://bli18m158kcqh" path="res://scenes/navigation/inventory/map/map_assets/newMap@7x.png" id="5_1wf5s"]
+[ext_resource type="Texture2D" uid="uid://74y28qvxlq6w" path="res://graphics/map/map_assets/CloudH2@2x.png" id="5_133f8"]
+[ext_resource type="Texture2D" uid="uid://dejf331vlb1y1" path="res://graphics/map/map_assets/hot balloon@2x.png" id="5_fbdl5"]
+[ext_resource type="Texture2D" uid="uid://dfn4hpr8gk6xv" path="res://graphics/map/map_assets/whale@2x.png" id="6_7cyux"]
+[ext_resource type="Texture2D" uid="uid://lm1bvbeuhjiq" path="res://graphics/map/map_assets/Cloud TL@2x.png" id="6_b1c6w"]
+[ext_resource type="Texture2D" uid="uid://dx00tt31n72sa" path="res://graphics/map/map_assets/CloudH1@2x.png" id="6_mj8tq"]
+[ext_resource type="Texture2D" uid="uid://bcfhiet30xveg" path="res://graphics/map/map_assets/dolphin@2x.png" id="7_1j4wd"]
+[ext_resource type="Texture2D" uid="uid://c2plqbf0vmmxq" path="res://graphics/map/map_assets/Cloud TR@2x.png" id="7_1w2yw"]
+[ext_resource type="Texture2D" uid="uid://cisjvsxjj7nxq" path="res://graphics/map/map_assets/bato@2x.png" id="8_otpsd"]
+[ext_resource type="Texture2D" uid="uid://futmwoke68ub" path="res://graphics/map/map_assets/ship@2x.png" id="9_2lscx"]
+[ext_resource type="Texture2D" uid="uid://dwpuyl43hd5nu" path="res://graphics/ui/icons/energly_lbl@2x.png" id="9_5qvwd"]
+[ext_resource type="Texture2D" uid="uid://cbllsgvjyx4ti" path="res://graphics/map/map_assets/Cloud 1@2x.png" id="9_b3fea"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="10_xl8yn"]
-[ext_resource type="Texture2D" uid="uid://c6wrb78lmlh6v" path="res://graphics/map/map_assets/Cloud 3@2x.png" id="10_xrkcv"]
-[ext_resource type="Texture2D" uid="uid://b5iwusc6jb3av" path="res://graphics/map/map_assets/Cloud 2@2x.png" id="11_1t3uu"]
+[ext_resource type="Texture2D" uid="uid://cgi456u321hgs" path="res://graphics/map/map_assets/Cloud 3@2x.png" id="10_xrkcv"]
+[ext_resource type="Texture2D" uid="uid://cj4l8wbpdo1fk" path="res://graphics/map/map_assets/Cloud 2@2x.png" id="11_1t3uu"]
 [ext_resource type="Script" path="res://addons/ppc/ppcamera.gd" id="11_byrbn"]
-[ext_resource type="Texture2D" uid="uid://debuyksegq2td" path="res://graphics/ui/icons/coins_lbl@2x.png" id="11_cprym"]
-[ext_resource type="Texture2D" uid="uid://cjrgbnp6k2ayf" path="res://graphics/map/map_assets/Cloud 4@2x.png" id="12_aw4km"]
+[ext_resource type="Texture2D" uid="uid://crs6qkp4igooo" path="res://graphics/ui/icons/coins_lbl@2x.png" id="11_cprym"]
+[ext_resource type="Texture2D" uid="uid://hhstxh6rx317" path="res://graphics/map/map_assets/Cloud 4@2x.png" id="12_aw4km"]
 [ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="12_wlh2q"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="13_ayf4u"]
-[ext_resource type="Texture2D" uid="uid://bubnyojlbrn6i" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="14_8kcks"]
+[ext_resource type="Texture2D" uid="uid://c8osw3r3v61at" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="14_8kcks"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="14_b1qn5"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud1.gd" id="17_15k7x"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_CloudTL.gd" id="19_4qjtg"]
@@ -38,9 +34,9 @@
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud2.gd" id="22_leso4"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/animate_cloud4.gd" id="25_e41x6"]
 [ext_resource type="Script" path="res://scenes/navigation/inventory/map/levelButtons.gd" id="27_frf5g"]
-[ext_resource type="Texture2D" uid="uid://cuba6fxvk4rc4" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
-[ext_resource type="Texture2D" uid="uid://b1776u1fflmbj" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
-[ext_resource type="Texture2D" uid="uid://clj5sjsd5bthg" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
+[ext_resource type="Texture2D" uid="uid://u30rgv61rfm6" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
+[ext_resource type="Texture2D" uid="uid://bqmwuxrmuqtjb" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
+[ext_resource type="Texture2D" uid="uid://cnu3iieckgk7t" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
 [ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="31_pdrqx"]
 [ext_resource type="PackedScene" uid="uid://cl4erjll12um0" path="res://scenes/navigation/inventory/map/Modal.tscn" id="43_c44qh"]
 
@@ -483,18 +479,17 @@ theme = SubResource("Theme_tmvob")
 texture_normal = ExtResource("28_o7hj8")
 stretch_mode = 5
 
-[node name="Level1Progress" type="TextureProgressBar" parent="Levels/Level1"]
+[node name="Level1Prog" type="TextureProgressBar" parent="Levels/Level1"]
 layout_mode = 0
-offset_left = 4.39563
 offset_top = -46.1978
-offset_right = 112.396
+offset_right = 108.0
 offset_bottom = 14.8022
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
 
-[node name="Label" type="Label" parent="Levels/Level1"]
+[node name="Level1Lbl" type="Label" parent="Levels/Level1"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.267241
@@ -516,18 +511,33 @@ offset_top = 412.0
 offset_right = 698.0
 offset_bottom = 503.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("4_kyovf")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level2Progress" type="TextureProgressBar" parent="Levels/Level2"]
+[node name="Level2Prog" type="TextureProgressBar" parent="Levels/Level2"]
 layout_mode = 0
-offset_left = 4.39551
-offset_top = -46.1539
-offset_right = 112.396
-offset_bottom = 14.8461
+offset_top = -46.1978
+offset_right = 108.0
+offset_bottom = 14.8022
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level2Lbl" type="Label" parent="Levels/Level2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0558482
+anchor_right = 0.681035
+anchor_bottom = 0.616288
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Level3" type="TextureButton" parent="Levels"]
 layout_mode = 0
@@ -536,18 +546,34 @@ offset_top = 355.0
 offset_right = 753.0
 offset_bottom = 441.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("5_4ev76")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level3Progress" type="TextureProgressBar" parent="Levels/Level3"]
+[node name="Level3Prog" type="TextureProgressBar" parent="Levels/Level3"]
 layout_mode = 0
-offset_left = -2.19788
-offset_top = -46.1539
-offset_right = 105.802
-offset_bottom = 14.8461
+offset_left = -2.19775
+offset_top = -46.1978
+offset_right = 105.803
+offset_bottom = 14.8022
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level3Lbl" type="Label" parent="Levels/Level3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0288887
+anchor_right = 0.681035
+anchor_bottom = 0.621912
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Level4" type="TextureButton" parent="Levels"]
 layout_mode = 0
@@ -557,18 +583,34 @@ offset_right = 854.0
 offset_bottom = 394.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_dy6hr")
-texture_normal = ExtResource("6_mu3he")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level4Progress" type="TextureProgressBar" parent="Levels/Level4"]
+[node name="Level4Prog" type="TextureProgressBar" parent="Levels/Level4"]
 layout_mode = 0
-offset_left = -2.19788
-offset_top = -46.1539
-offset_right = 105.802
-offset_bottom = 14.8461
+offset_left = -4.39551
+offset_top = -44.0
+offset_right = 103.605
+offset_bottom = 17.0
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level4Lbl" type="Label" parent="Levels/Level4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0300504
+anchor_right = 0.681035
+anchor_bottom = 0.609596
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Level5" type="TextureButton" parent="Levels"]
 layout_mode = 0
@@ -577,18 +619,34 @@ offset_top = 215.0
 offset_right = 870.0
 offset_bottom = 310.0
 scale = Vector2(0.455, 0.455)
-texture_normal = ExtResource("7_lvttb")
+texture_normal = ExtResource("28_o7hj8")
+stretch_mode = 5
 
-[node name="Level5Progress" type="TextureProgressBar" parent="Levels/Level5"]
+[node name="Level5Prog" type="TextureProgressBar" parent="Levels/Level5"]
 layout_mode = 0
-offset_left = -2.198
-offset_top = -46.1538
-offset_right = 105.802
-offset_bottom = 14.8462
+offset_left = -4.39563
+offset_top = -44.0
+offset_right = 103.605
+offset_bottom = 17.0
 scale = Vector2(1.005, 1)
 max_value = 5000.0
 texture_under = ExtResource("29_fs71g")
 texture_progress = ExtResource("30_5krwd")
+
+[node name="Level5Lbl" type="Label" parent="Levels/Level5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267241
+anchor_top = 0.0568651
+anchor_right = 0.681035
+anchor_bottom = 0.593707
+grow_horizontal = 2
+theme = ExtResource("31_pdrqx")
+theme_override_font_sizes/font_size = 42
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Icons" type="CanvasLayer" parent="."]
 

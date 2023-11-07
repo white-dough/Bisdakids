@@ -34,6 +34,7 @@ func _on_settings_button_pressed():
 	print('settings')
 
 func modalDisplay(highscore: int, level_key: String):
+	print(level_key)
 #	modalLabel.text = labelText
 #	modal.show()
 #	if(levelProgress == 100):

@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://cl4erjll12um0"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_mv8la"]
-[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_12xdv"]
+[ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_12xdv"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_feb3c"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
-[ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
+[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_h1cgq"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="7_jcc7h"]
-[ext_resource type="Texture2D" uid="uid://7f0l04hapnd0" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
+[ext_resource type="Texture2D" uid="uid://cbv1trlust5p2" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
+[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
+[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nav3c"]
 texture = ExtResource("2_12xdv")
@@ -22,7 +22,7 @@ texture_margin_bottom = 10.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sy6ul"]
 content_margin_top = 10.0
 
-[node name="Modal" type="CanvasLayer"]
+[node name="LevelModal" type="CanvasLayer"]
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -35,24 +35,23 @@ grow_vertical = 2
 texture = ExtResource("1_mv8la")
 expand_mode = 1
 
-[node name="ModalPnl" type="Panel" parent="Background"]
+[node name="ModalPnl" type="Panel" parent="."]
 texture_filter = 1
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -290.0
-offset_top = -183.5
-offset_right = 284.0
-offset_bottom = 154.5
+offset_left = -287.0
+offset_top = -182.0
+offset_right = 287.0
+offset_bottom = 156.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_nav3c")
 
-[node name="ContentVbox" type="VBoxContainer" parent="Background/ModalPnl"]
+[node name="ContentVbox" type="VBoxContainer" parent="ModalPnl"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.121951
@@ -66,7 +65,7 @@ grow_vertical = 2
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Lbl" type="Label" parent="Background/ModalPnl/ContentVbox"]
+[node name="LevelLbl" type="Label" parent="ModalPnl/ContentVbox"]
 layout_mode = 2
 theme = ExtResource("3_feb3c")
 theme_type_variation = &"HeaderLarge"
@@ -78,7 +77,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="DescLbl" type="Label" parent="Background/ModalPnl/ContentVbox"]
+[node name="HighScoreLbl" type="Label" parent="ModalPnl/ContentVbox"]
 layout_mode = 2
 theme = ExtResource("3_feb3c")
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
@@ -88,7 +87,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_sy6ul")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="OkBtn" type="TextureButton" parent="Background/ModalPnl/ContentVbox"]
+[node name="OkBtn" type="TextureButton" parent="ModalPnl/ContentVbox"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -96,7 +95,7 @@ texture_normal = ExtResource("7_jcc7h")
 texture_pressed = ExtResource("8_xxfmb")
 stretch_mode = 3
 
-[node name="CloseBtn" type="TextureButton" parent="Background/ModalPnl"]
+[node name="CloseBtn" type="TextureButton" parent="ModalPnl"]
 layout_mode = 2
 offset_left = 547.0
 offset_top = -77.0
@@ -106,4 +105,4 @@ texture_normal = ExtResource("9_t2y3s")
 texture_pressed = ExtResource("10_smm4v")
 stretch_mode = 3
 
-[connection signal="pressed" from="Background/ModalPnl/CloseBtn" to="Background" method="_on_close_btn_pressed"]
+[connection signal="pressed" from="ModalPnl/CloseBtn" to="Background" method="_on_close_btn_pressed"]
