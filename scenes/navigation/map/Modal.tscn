@@ -1,30 +1,44 @@
-[gd_scene load_steps=14 format=3 uid="uid://ch5bdc76jqvg8"]
+[gd_scene load_steps=17 format=3 uid="uid://ch5bdc76jqvg8"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_mv8la"]
 [ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_12xdv"]
-[ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_feb3c"]
+[ext_resource type="Texture2D" uid="uid://73g6vpc563kp" path="res://graphics/ui/icons/2x/emptyStar_sample@2x.png" id="3_g3p4l"]
+[ext_resource type="Texture2D" uid="uid://uljp8be4ph1o" path="res://graphics/ui/icons/2x/StarSample@2x.png" id="4_aua6h"]
 [ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
-[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
+[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="5_y7u0q"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_h1cgq"]
+[ext_resource type="Texture2D" uid="uid://drtnqfwiqa8be" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="7_6k2y1"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="7_jcc7h"]
 [ext_resource type="Texture2D" uid="uid://cbv1trlust5p2" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
-[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
+[ext_resource type="Theme" uid="uid://bukmbrgwy0i5j" path="res://themes/lbl.tres" id="10_q6unx"]
 [ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nav3c"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtok0"]
+content_margin_left = 7.0
+content_margin_top = 5.0
+content_margin_right = 7.0
+content_margin_bottom = 13.0
 texture = ExtResource("2_12xdv")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7clfj"]
-texture = ExtResource("5_fd7sj")
-texture_margin_top = 10.0
-texture_margin_bottom = 10.0
+[sub_resource type="Theme" id="Theme_ltiph"]
+Panel/styles/panel = SubResource("StyleBoxTexture_xtok0")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sy6ul"]
-content_margin_top = 10.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aifds"]
+texture = ExtResource("7_6k2y1")
+texture_margin_left = 10.0
+texture_margin_right = 10.0
+expand_margin_left = 15.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="Theme" id="Theme_eqeqb"]
+Label/styles/normal = SubResource("StyleBoxTexture_aifds")
 
 [node name="LevelModal" type="CanvasLayer"]
 
 [node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.454902)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -35,73 +49,137 @@ grow_vertical = 2
 texture = ExtResource("1_mv8la")
 expand_mode = 1
 
-[node name="ModalPnl" type="Panel" parent="."]
-texture_filter = 1
+[node name="ModalPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -287.0
-offset_top = -182.0
-offset_right = 287.0
-offset_bottom = 156.0
+offset_left = -379.0
+offset_top = -107.0
+offset_right = 374.0
+offset_bottom = 259.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_nav3c")
+theme = SubResource("Theme_ltiph")
 
-[node name="ContentVbox" type="VBoxContainer" parent="ModalPnl"]
+[node name="StarBar" type="TextureProgressBar" parent="ModalPanel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.121951
-anchor_top = 0.58432
-anchor_right = 0.883275
-anchor_bottom = 0.652367
-offset_top = -144.5
-offset_bottom = 144.5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_top = -124.0
+offset_right = 71.5
+offset_bottom = 25.0
 grow_horizontal = 2
+scale = Vector2(1.48338, 1.3742)
+max_value = 5000.0
+texture_under = ExtResource("3_g3p4l")
+texture_progress = ExtResource("4_aua6h")
+
+[node name="CloseBtn" type="TextureButton" parent="ModalPanel"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 40.0
 grow_vertical = 2
+texture_normal = ExtResource("5_y7u0q")
+texture_pressed = ExtResource("10_smm4v")
+stretch_mode = 5
+
+[node name="TitleContainer" type="VBoxContainer" parent="ModalPanel"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -303.0
+offset_top = 91.0
+offset_right = 298.0
+offset_bottom = 191.0
+grow_horizontal = 2
 alignment = 1
-metadata/_edit_use_anchors_ = true
 
-[node name="LevelLbl" type="Label" parent="ModalPnl/ContentVbox"]
-layout_mode = 2
-theme = ExtResource("3_feb3c")
-theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0.976471, 0.278431, 0.223529, 1)
-theme_override_fonts/font = ExtResource("4_evof7")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_7clfj")
-text = "Lebel "
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="HighScoreLbl" type="Label" parent="ModalPnl/ContentVbox"]
-layout_mode = 2
-theme = ExtResource("3_feb3c")
-theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_fonts/font = ExtResource("6_h1cgq")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_sy6ul")
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="OkBtn" type="TextureButton" parent="ModalPnl/ContentVbox"]
+[node name="TitleLbl" type="Label" parent="ModalPanel/TitleContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 10
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_eqeqb")
+theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_evof7")
+theme_override_font_sizes/font_size = 43
+text = "Lebel 1: Kalasangan sa Kahayag"
+vertical_alignment = 1
+
+[node name="ContentContainer" type="VBoxContainer" parent="ModalPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.5
+offset_top = -34.5
+offset_right = 241.5
+offset_bottom = 108.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ModalPanel/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="HighscoreTxtLbl" type="Label" parent="ModalPanel/ContentContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.976471, 0.717647, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_h1cgq")
+theme_override_font_sizes/font_size = 24
+text = "Kinadak-ang Puntos :"
+
+[node name="HighscoreLbl" type="Label" parent="ModalPanel/ContentContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("10_q6unx")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_evof7")
+theme_override_font_sizes/font_size = 22
+text = "2345678"
+
+[node name="BtnContainer" type="HBoxContainer" parent="ModalPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -102.0
+offset_right = 300.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="PlayBtn" type="TextureButton" parent="ModalPanel/BtnContainer"]
+layout_mode = 2
 texture_normal = ExtResource("7_jcc7h")
 texture_pressed = ExtResource("8_xxfmb")
-stretch_mode = 3
-
-[node name="CloseBtn" type="TextureButton" parent="ModalPnl"]
-layout_mode = 2
-offset_left = 547.0
-offset_top = -77.0
-offset_right = 645.0
-offset_bottom = 24.0
-texture_normal = ExtResource("9_t2y3s")
-texture_pressed = ExtResource("10_smm4v")
-stretch_mode = 3
+stretch_mode = 5
