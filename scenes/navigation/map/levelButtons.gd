@@ -14,20 +14,29 @@ var level_btns: Array
 
 func _ready():
 	for button in get_children():
-		var level_key: String = button.get_name().to_lower()
-		button.get_child(0).set_value(Game.progress[level_key])
-		button.pressed.connect(level_pressed.bind(button, level_key))
-	closeBtn.pressed.connect(closeModal.bind("res://scenes/navigation/map/map.tscn"))
+		level_btns.append(button)
+		var level_key: String = button.get_name()
+		button.pressed.connect(modal_display.bind(button, level_key))
+	load_level_btns()
+#	closeBtn.pressed.connect(closeModal.bind("res://scenes/navigation/map/map.tscn"))
 
-func level_pressed(button_pressesd: TextureButton, level_key: String) -> void:
+func load_level_btns() -> void:
+	var completed_levels : Dictionary
+	for level in Game.progress:
+		completed_levels[level] = Game.progress[level]
+		if Game.progress[level] <= 0:
+			break
+	for i in completed_levels.size():
+		level_btns[i].disabled = false
+		if i == 0:
+			continue
+		level_btns[i].get_child(0).value = Game.progress[level_btns[i].get_name()]
+		level_btns[i].get_child(0).visible = true
+
+
+
+func modal_display(button: TextureButton, level_key: String) -> void:
 	var highscore: int = Game.progress[level_key]
-	modalDisplay(highscore, level_key)
-
-func _on_settings_button_pressed():
-	print('settings')
-
-func modalDisplay(highscore: int, level_key):
-	print(level_key)
 	modal.show()
 	modalLabel.text = level_key.capitalize()
 	if(highscore == 5000):
@@ -39,6 +48,11 @@ func modalDisplay(highscore: int, level_key):
 	else:
 		descLbl.text = "Duwa pa para malampos!"
 	duwaBtn.pressed.connect(changeScene.bind("res://scenes/game/"+level_key+"/"+level_key+".tscn"))
+
+
+func _on_settings_button_pressed():
+	print('settings')
+
 
 func closeModal(link):
 	modal.hide()

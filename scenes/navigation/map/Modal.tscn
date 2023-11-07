@@ -1,15 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://cl4erjll12um0"]
+[gd_scene load_steps=14 format=3 uid="uid://ch5bdc76jqvg8"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_mv8la"]
-[ext_resource type="Texture2D" uid="uid://c74jh7g604f8g" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_12xdv"]
+[ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_12xdv"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_feb3c"]
-[ext_resource type="FontFile" uid="uid://ce7nh2igw7cb8" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
-[ext_resource type="Texture2D" uid="uid://cim5rsb5fmyev" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_evof7"]
+[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="5_fd7sj"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="6_h1cgq"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="7_jcc7h"]
-[ext_resource type="Texture2D" uid="uid://dp1i8kf1jqy5e" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
-[ext_resource type="Texture2D" uid="uid://dahrn2vq03ukd" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
-[ext_resource type="Texture2D" uid="uid://b70kchgtfrbrj" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
+[ext_resource type="Texture2D" uid="uid://cbv1trlust5p2" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="8_xxfmb"]
+[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="9_t2y3s"]
+[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="10_smm4v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nav3c"]
 texture = ExtResource("2_12xdv")
@@ -73,6 +73,7 @@ theme_override_colors/font_color = Color(0.976471, 0.278431, 0.223529, 1)
 theme_override_fonts/font = ExtResource("4_evof7")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_7clfj")
+text = "Lebel "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
