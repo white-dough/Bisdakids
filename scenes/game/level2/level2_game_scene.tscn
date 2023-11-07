@@ -100,7 +100,6 @@ position = Vector2(692.216, 677.67)
 
 [node name="Pakwan" parent="Objects" instance=ExtResource("13_7314v")]
 position = Vector2(941.318, 683.495)
-scale = Vector2(1, 1)
 
 [node name="ExtraObjects" type="Node2D" parent="."]
 position = Vector2(802, 279)
@@ -229,7 +228,6 @@ texture = ExtResource("22_n101o")
 
 [node name="Flippers" type="Sprite2D" parent="ExtraObjects"]
 position = Vector2(-512.18, 334.592)
-scale = Vector2(1, 1)
 texture = ExtResource("17_qygb8")
 
 [node name="BeachTowels" type="Sprite2D" parent="ExtraObjects"]

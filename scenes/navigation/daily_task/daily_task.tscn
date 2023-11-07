@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7supgtno53q7"]
+[gd_scene load_steps=14 format=3 uid="uid://b7supgtno53q7"]
 
 [ext_resource type="Script" path="res://scenes/navigation/daily_task/daily_task.gd" id="1_cvlrt"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="2_l0sn5"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="3_nm210"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_vkgox"]
 [ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_1xe28"]
-[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="5_cam1x"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="6_0o5qe"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="7_da8aq"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_namue"]
 [ext_resource type="PackedScene" uid="uid://caaxj7bw5ogqe" path="res://scenes/navigation/daily_task/task.tscn" id="9_t4wce"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
@@ -89,8 +90,9 @@ anchor_right = 1.0
 offset_left = 20.0
 offset_top = 40.0
 grow_vertical = 2
-texture_normal = ExtResource("5_cam1x")
-stretch_mode = 0
+texture_normal = ExtResource("6_0o5qe")
+texture_pressed = ExtResource("7_namue")
+stretch_mode = 3
 
 [node name="DailyTaskVbox" type="VBoxContainer" parent="DailyTaskPnl"]
 layout_mode = 1
