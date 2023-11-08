@@ -30,6 +30,10 @@ func load_level_btns() -> void:
 	#loop that will not show the star progress of the last iteration
 	for i in completed_levels.size():
 		level_btns[i].disabled = false
+		if i == 4:
+			if Game.progress[level_btns[i].get_name()] > 0:
+				level_btns[i].get_child(0).value = Game.progress[level_btns[i].get_name()]
+				level_btns[i].get_child(0).visible = true
 		if i == completed_levels.size() - 1:
 			continue
 		level_btns[i].get_child(0).value = Game.progress[level_btns[i].get_name()]
