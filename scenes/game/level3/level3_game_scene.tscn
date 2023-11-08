@@ -1,0 +1,133 @@
+[gd_scene load_steps=28 format=3 uid="uid://n6ijakby6vjf"]
+
+[ext_resource type="Texture2D" uid="uid://ukox7xw6y8ls" path="res://graphics/level3/background/level3_background@2x.png" id="1_5s8sy"]
+[ext_resource type="PackedScene" uid="uid://btwf224jpqhvi" path="res://scenes/game/level3/level3_objects/hagdanan.tscn" id="2_ng785"]
+[ext_resource type="PackedScene" uid="uid://djgt2wetbeey" path="res://scenes/game/level3/level3_objects/timbangan.tscn" id="3_fhemo"]
+[ext_resource type="PackedScene" uid="uid://bqjrx8yyhrjtn" path="res://scenes/game/level3/level3_objects/ligid.tscn" id="3_it6bc"]
+[ext_resource type="PackedScene" uid="uid://b820krw0hn5yf" path="res://scenes/game/level3/level3_objects/mansanas.tscn" id="4_hod78"]
+[ext_resource type="PackedScene" uid="uid://rf2env1u1a4v" path="res://scenes/game/level3/level3_objects/tawo-tawo.tscn" id="5_hg8el"]
+[ext_resource type="PackedScene" uid="uid://b6ksnbnwq14iy" path="res://scenes/game/level3/level3_objects/balde.tscn" id="6_xbjie"]
+[ext_resource type="PackedScene" uid="uid://bjldwxwcwahhl" path="res://scenes/game/level3/level3_objects/pala.tscn" id="7_cus44"]
+[ext_resource type="PackedScene" uid="uid://b8m6jy8c6uva0" path="res://scenes/game/level3/level3_objects/kariton.tscn" id="8_uqmsw"]
+[ext_resource type="PackedScene" uid="uid://w4fk0ic0r5po" path="res://scenes/game/level3/level3_objects/silhig.tscn" id="9_41nro"]
+[ext_resource type="Texture2D" uid="uid://l8y862bflutj" path="res://graphics/level3/2x/stick@2x.png" id="10_bisum"]
+[ext_resource type="Texture2D" uid="uid://cpy1gqujvak4x" path="res://graphics/level3/2x/Asset 6@2x.png" id="11_38yur"]
+[ext_resource type="Texture2D" uid="uid://l8bngioupunu" path="res://graphics/level3/2x/Asset 8@2x.png" id="11_p684e"]
+[ext_resource type="PackedScene" uid="uid://de8yx12q6anuf" path="res://scenes/game/level3/level3_objects/kutsilyo.tscn" id="12_1juwv"]
+[ext_resource type="Texture2D" uid="uid://u4godu888lgs" path="res://graphics/level3/2x/pack lunch@2x.png" id="12_bca4n"]
+[ext_resource type="Texture2D" uid="uid://b534ysp1phk62" path="res://graphics/level3/2x/trash can@2x.png" id="12_nse8u"]
+[ext_resource type="PackedScene" uid="uid://iddoedh0btvh" path="res://scenes/game/level3/level3_objects/bulsita.tscn" id="13_hn3js"]
+[ext_resource type="PackedScene" uid="uid://b2uul6f1dyxra" path="res://scenes/game/level3/level3_objects/kahig.tscn" id="14_af0po"]
+[ext_resource type="PackedScene" uid="uid://c3wwuhkp6dvmt" path="res://scenes/game/level3/level3_objects/sako.tscn" id="15_4g8q6"]
+[ext_resource type="Texture2D" uid="uid://blm6pthxbc880" path="res://graphics/level3/2x/gasoline tank@2x.png" id="15_nppcq"]
+[ext_resource type="PackedScene" uid="uid://bib76ryxyjvhv" path="res://scenes/game/level3/level3_objects/botilya.tscn" id="16_j0snf"]
+[ext_resource type="Texture2D" uid="uid://b6hudvcp8jo4i" path="res://graphics/level3/2x/news paper@2x.png" id="16_vii1d"]
+[ext_resource type="Texture2D" uid="uid://b7058jhciwque" path="res://graphics/level3/2x/water bottle@2x.png" id="23_faeb4"]
+[ext_resource type="Texture2D" uid="uid://gpqikvpx2i1v" path="res://graphics/level3/2x/basket@2x.png" id="24_fxckk"]
+[ext_resource type="Texture2D" uid="uid://byf0s07tatlup" path="res://graphics/level3/2x/bag@2x.png" id="25_ucfxq"]
+[ext_resource type="Texture2D" uid="uid://cso14tybg8paj" path="res://graphics/level3/2x/sunglasses@2x.png" id="26_y8ckd"]
+[ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="27_8s3h5"]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+scale = Vector2(1.003, 1.03)
+texture = ExtResource("1_5s8sy")
+centered = false
+offset = Vector2(-20, -315)
+
+[node name="Objects" type="Node2D" parent="."]
+scale = Vector2(1.003, 1.03)
+
+[node name="Timbangan" parent="Objects" instance=ExtResource("3_fhemo")]
+position = Vector2(738.784, 386.408)
+
+[node name="Kutsilyo" parent="Objects" instance=ExtResource("12_1juwv")]
+position = Vector2(815.553, 383.495)
+
+[node name="Hagdanan" parent="Objects" instance=ExtResource("2_ng785")]
+position = Vector2(552.982, 349.379)
+
+[node name="Ligid" parent="Objects" instance=ExtResource("3_it6bc")]
+position = Vector2(409.009, 412.816)
+
+[node name="Mansanas" parent="Objects" instance=ExtResource("4_hod78")]
+position = Vector2(606.181, 670.874)
+
+[node name="Tawo-tawo" parent="Objects" instance=ExtResource("5_hg8el")]
+position = Vector2(1100.7, 432.039)
+
+[node name="Balde" parent="Objects" instance=ExtResource("6_xbjie")]
+position = Vector2(1079.76, 607.767)
+
+[node name="Pala" parent="Objects" instance=ExtResource("7_cus44")]
+position = Vector2(873.38, 638.835)
+
+[node name="Kariton" parent="Objects" instance=ExtResource("8_uqmsw")]
+position = Vector2(775.673, 453.398)
+
+[node name="Silhig" parent="Objects" instance=ExtResource("9_41nro")]
+position = Vector2(644.068, 661.165)
+
+[node name="Bulsita" parent="Objects" instance=ExtResource("13_hn3js")]
+position = Vector2(263.21, 651.456)
+
+[node name="Kahig" parent="Objects" instance=ExtResource("14_af0po")]
+position = Vector2(15.9521, 308.738)
+
+[node name="Sako" parent="Objects" instance=ExtResource("15_4g8q6")]
+position = Vector2(156.53, 428.155)
+
+[node name="Botilya" parent="Objects" instance=ExtResource("16_j0snf")]
+position = Vector2(150.548, 623.301)
+
+[node name="ExtraObjects" type="Node2D" parent="."]
+
+[node name="Stick" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(585, 601)
+texture = ExtResource("10_bisum")
+
+[node name="SpoiledFood" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(443, 688)
+texture = ExtResource("11_p684e")
+
+[node name="PackLunch" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(728, 613)
+texture = ExtResource("12_bca4n")
+
+[node name="Trash" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(794, 646)
+texture = ExtResource("11_38yur")
+
+[node name="TrashCan" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(624, 633)
+texture = ExtResource("12_nse8u")
+
+[node name="GasolineTank" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(655, 494)
+texture = ExtResource("15_nppcq")
+
+[node name="NewsPaper" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(92, 693)
+texture = ExtResource("16_vii1d")
+
+[node name="WaterBottle" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(214, 711)
+texture = ExtResource("23_faeb4")
+
+[node name="Basket" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(50, 508)
+texture = ExtResource("24_fxckk")
+
+[node name="Bag" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(1132, 447)
+texture = ExtResource("25_ucfxq")
+
+[node name="Sunglasses" type="Sprite2D" parent="ExtraObjects"]
+position = Vector2(1204, 493)
+texture = ExtResource("26_y8ckd")
+
+[node name="HandleTaps" parent="." instance=ExtResource("27_8s3h5")]
+visible = false

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://djgt2wetbeey"]
+
+[ext_resource type="Texture2D" uid="uid://5qe33t3cvn0a" path="res://graphics/level3/2x/timbangan@2x.png" id="1_k4uru"]
+
+[node name="Timbangan" type="Area2D"]
+
+[node name="Timbangan" type="Sprite2D" parent="."]
+texture = ExtResource("1_k4uru")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -2, -2, 45, 36, 45, 36, -2)

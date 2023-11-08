@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://iddoedh0btvh"]
+
+[ext_resource type="Texture2D" uid="uid://c3tgwp4lj6wsw" path="res://graphics/level3/2x/paper bag@2x.png" id="1_n5g13"]
+
+[node name="Bulsita" type="Area2D"]
+
+[node name="Bulsita" type="Sprite2D" parent="."]
+texture = ExtResource("1_n5g13")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 2, 13, -4, 30, 3, 59, 56, 64, 92, 47, 95, 6, 71, -3, 42, -6)

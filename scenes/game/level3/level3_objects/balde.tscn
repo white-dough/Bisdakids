@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6ksnbnwq14iy"]
+
+[ext_resource type="Texture2D" uid="uid://c083jubkjilkl" path="res://graphics/level3/2x/balde@2x.png" id="1_q44tp"]
+
+[node name="Balde" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, 5, 0, 24, -7, 47, -5, 55, 2, 58, 4, 86, -3, 99, 93, 98, 85, 85, 89, 3, 78, 2, 75, -5, 52, -5, 50, 5, 42, 5, 37, -4, 20, -4, 17, 3)
+
+[node name="Balde" type="Sprite2D" parent="."]
+texture = ExtResource("1_q44tp")
+centered = false
