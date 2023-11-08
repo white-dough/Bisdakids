@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjldwxwcwahhl"]
+
+[ext_resource type="Texture2D" uid="uid://dsatgyu8e5j2g" path="res://graphics/level3/2x/piko@2x.png" id="1_imkjl"]
+
+[node name="Pala" type="Area2D"]
+
+[node name="Pala" type="Sprite2D" parent="."]
+texture = ExtResource("1_imkjl")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-7, 14, 164, 46, 160, 70, 186, 73, 212, 73, 232, 66, 249, 51, 238, 31, 218, 19, 196, 11, 172, 5, 168, 25, -1, -8)

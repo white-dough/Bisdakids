@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://br2u0ukbbrsjx"]
+
+[ext_resource type="Script" path="res://scenes/game/level.gd" id="1_mpkr8"]
+[ext_resource type="PackedScene" uid="uid://n6ijakby6vjf" path="res://scenes/game/level3/level3_game_scene.tscn" id="1_v0ttx"]
+[ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="2_hr01t"]
+[ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="3_fthfd"]
+[ext_resource type="Script" path="res://scenes/game/objects.gd" id="3_tg5kp"]
+[ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="5_qamyy"]
+[ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="6_xtgjc"]
+[ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="7_lqg6n"]
+[ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="8_cucfb"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_mpkr8")
+level_name = "level3"
+level_time = 600.0
+
+[node name="GameScene" parent="." instance=ExtResource("1_v0ttx")]
+show_behind_parent = true
+position = Vector2(222, 0)
+scale = Vector2(0.832, 1)
+script = ExtResource("3_tg5kp")
+
+[node name="HUD" parent="." instance=ExtResource("2_hr01t")]
+
+[node name="ObjectAnimation" parent="." instance=ExtResource("3_fthfd")]
+
+[node name="VictoryTriumph" parent="." instance=ExtResource("5_qamyy")]
+visible = false
+
+[node name="LevelCompleted" parent="." instance=ExtResource("6_xtgjc")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("7_lqg6n")]
+visible = false
+
+[node name="LevelFailed" parent="." instance=ExtResource("8_cucfb")]
+visible = false
+
+[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
+[connection signal="ready" from="." to="HUD" method="_on_level_ready"]
+[connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

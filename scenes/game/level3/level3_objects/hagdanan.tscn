@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://btwf224jpqhvi"]
+
+[ext_resource type="Texture2D" uid="uid://d0nqlgq2dkbn3" path="res://graphics/level3/2x/hagdanan@2x.png" id="1_iednf"]
+
+[node name="Hagdanan" type="Area2D"]
+
+[node name="Hagdanan" type="Sprite2D" parent="."]
+texture = ExtResource("1_iednf")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(6, -3, -5, 169, 14, 170, 15, 152, 50, 155, 49, 169, 66, 170, 90, -4, 68, -5, 65, 32, 24, 32, 27, -2)

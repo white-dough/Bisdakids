@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b820krw0hn5yf"]
+
+[ext_resource type="Texture2D" uid="uid://bpusla0u0qt7f" path="res://graphics/level3/2x/Asset 7@2x.png" id="1_stc8j"]
+
+[node name="Mansanas" type="Area2D"]
+
+[node name="Mansanas" type="Sprite2D" parent="."]
+texture = ExtResource("1_stc8j")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, 4, -5, 18, 1, 31, 12, 33, 18, 40, 28, 40, 39, 31, 44, 11, 37, -2, 25, -4, 20, 0, 9, -3)
