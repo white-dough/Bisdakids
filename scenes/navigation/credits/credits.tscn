@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://boxpcelxhyga8"]
 
 [ext_resource type="Script" path="res://scenes/navigation/credits/credits.gd" id="1_yywy8"]
-[ext_resource type="Texture2D" uid="uid://bmwv0clad2y86" path="res://graphics/credits/2x/credits_bg@2x.png" id="2_ni1pp"]
+[ext_resource type="Texture2D" uid="uid://bmwv0clad2y86" path="res://graphics/credits/background/credits_bg@2x.png" id="2_1sv8x"]
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="3_xeiti"]
-[ext_resource type="Texture2D" uid="uid://b17gxmpvqnqgp" path="res://graphics/credits/2x/credits_panel_bg@2x.png" id="4_v0asa"]
+[ext_resource type="Texture2D" uid="uid://b17gxmpvqnqgp" path="res://graphics/credits/credits_panel_bg@2x.png" id="4_303ml"]
 [ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="4_v3yie"]
 [ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_fcuah"]
 [ext_resource type="Theme" uid="uid://crh7hnovly655" path="res://themes/3text_lbl.tres" id="7_q26b3"]
@@ -16,7 +16,7 @@ script = ExtResource("1_yywy8")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1320.0
 offset_bottom = 744.0
-texture = ExtResource("2_ni1pp")
+texture = ExtResource("2_1sv8x")
 expand_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -34,7 +34,7 @@ metadata/_edit_use_anchors_ = true
 [node name="TigmuQLbl_2x" type="Sprite2D" parent="."]
 position = Vector2(654, 380)
 scale = Vector2(0.562289, 0.497132)
-texture = ExtResource("4_v0asa")
+texture = ExtResource("4_303ml")
 
 [node name="RichTextLabel2" type="Label" parent="."]
 offset_left = 464.0

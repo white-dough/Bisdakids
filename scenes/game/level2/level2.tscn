@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="40_y4oec"]
 [ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="41_vg6o8"]
 
-[node name="Level" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource("1_t8ht7")
 level_name = "level2"
 level_time = 481.0

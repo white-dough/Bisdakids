@@ -1,13 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://byf47fnn2v6w4"]
+[gd_scene load_steps=13 format=3 uid="uid://byf47fnn2v6w4"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_34rfk"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/login.gd" id="1_derfu"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_mkmfo"]
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="4_k3e5g"]
 [ext_resource type="Theme" uid="uid://7happngt6m6v" path="res://themes/for_title_lbl.tres" id="4_ylsld"]
+[ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="6_jset4"]
 [ext_resource type="Texture2D" uid="uid://b17c7uvlkdtd5" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="6_lma8w"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="7_03x1f"]
 [ext_resource type="Theme" uid="uid://gn482ubihrcf" path="res://themes/for_input.tres" id="7_xf33k"]
+[ext_resource type="Texture2D" uid="uid://c2g8rre4d1c83" path="res://graphics/ui/buttons/2x/sulodPressed_btn@2x.png" id="10_a2088"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71lv0"]
 content_margin_left = 7.0
@@ -69,23 +71,23 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -815.0
-offset_top = -35.0
-offset_right = -715.0
-offset_bottom = 65.0
+anchor_left = -0.147887
+anchor_top = -0.107798
+anchor_right = 0.0126761
+anchor_bottom = 0.12156
 grow_vertical = 2
 texture_normal = ExtResource("4_k3e5g")
-stretch_mode = 0
+texture_pressed = ExtResource("6_jset4")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="ContentVBox" type="VBoxContainer" parent="LoginPnl"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.507042
-anchor_top = 0.252294
+anchor_top = 0.323395
 anchor_right = 0.507042
-anchor_bottom = 0.779817
+anchor_bottom = 0.486239
 offset_left = -282.0
 offset_top = -60.0
 offset_right = 282.0
@@ -153,10 +155,16 @@ alignment = 1
 secret = true
 text_direction = 1
 
-[node name="LoginBtn" type="TextureButton" parent="LoginPnl/ContentVBox"]
+[node name="LoginBtn" type="TextureButton" parent="LoginPnl"]
 layout_mode = 2
+offset_left = 78.0
+offset_top = 291.0
+offset_right = 641.0
+offset_bottom = 366.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("6_lma8w")
+texture_pressed = ExtResource("10_a2088")
+stretch_mode = 3
 
 [connection signal="pressed" from="LoginPnl/BackBtn" to="." method="_on_back_btn_pressed"]
-[connection signal="pressed" from="LoginPnl/ContentVBox/LoginBtn" to="." method="_on_login_btn_pressed"]
+[connection signal="pressed" from="LoginPnl/LoginBtn" to="." method="_on_login_btn_pressed"]

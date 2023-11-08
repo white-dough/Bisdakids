@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://xct6kx6cg5uy"]
+
+[ext_resource type="Texture2D" uid="uid://5rmtsbidxlcb" path="res://graphics/level4/Objects/pala@2x.png" id="1_6yj4y"]
+
+[node name="pala" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-24, 56, -24, 88, -24, 112, -8, 128, 16, 112, 24, 80, 32, 56, 8, 48, 8, -128, -8, -128, -8, -24, -8, 48)
+
+[node name="pala" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_6yj4y")

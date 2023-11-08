@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn22oaq75t3jb"]
+
+[ext_resource type="Texture2D" uid="uid://5jspjrdpkxeo" path="res://graphics/level4/Objects/sikoy@2x.png" id="1_gr5rn"]
+
+[node name="sikoy" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 136, 16, 136, 40, 72, 8, 56, 16, -32, 24, -136, 8, -136, 0, 56, -32, 64)
+
+[node name="sikoy" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_gr5rn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://0eydf88xrmc"]
+[gd_scene load_steps=18 format=3 uid="uid://0eydf88xrmc"]
 
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/loggedIn.gd" id="1_g8pob"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_r784m"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d01q46knsitr5" path="res://graphics/ui/buttons/2x/logout@2x.png" id="6_80mvk"]
 [ext_resource type="Texture2D" uid="uid://cags78puhcqsc" path="res://graphics/ui/buttons/2x/sych_btn@2x.png" id="7_i3x7v"]
 [ext_resource type="Texture2D" uid="uid://8fdx23o5tgq4" path="res://graphics/ui/buttons/2x/logoutPressed_btn@2x.png" id="7_pku56"]
+[ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="10_3etsc"]
 [ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="12_gedmu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkuea"]
@@ -69,6 +70,7 @@ layout_mode = 2
 size_flags_horizontal = 2
 texture_normal = ExtResource("7_i3x7v")
 texture_pressed = ExtResource("5_h174m")
+stretch_mode = 3
 
 [node name="LogoutBtn" type="TextureButton" parent="LoggedInPnl/HBoxContainer"]
 layout_mode = 2
@@ -76,6 +78,7 @@ size_flags_horizontal = 10
 size_flags_vertical = 4
 texture_normal = ExtResource("6_80mvk")
 texture_pressed = ExtResource("7_pku56")
+stretch_mode = 3
 
 [node name="AccountLbl" type="Label" parent="LoggedInPnl"]
 custom_minimum_size = Vector2(358, 111)
@@ -98,15 +101,15 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -815.0
-offset_top = -35.0
-offset_right = -715.0
-offset_bottom = 65.0
+anchor_left = -0.147887
+anchor_top = -0.110526
+anchor_right = 0.0112676
+anchor_bottom = 0.152632
 grow_vertical = 2
 texture_normal = ExtResource("5_wgt6t")
-stretch_mode = 0
+texture_pressed = ExtResource("10_3etsc")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="ContentVBox" type="VBoxContainer" parent="LoggedInPnl"]
 layout_mode = 1

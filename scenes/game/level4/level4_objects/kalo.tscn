@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0aki1cml1rnd"]
+
+[ext_resource type="Texture2D" uid="uid://b4fw2l8abwd18" path="res://graphics/level4/Objects/kalo@2x.png" id="1_rkhdk"]
+
+[node name="kalo" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 72, 32, 56, 32, 16, 40, 8, 40, -8, 32, -32, 32, -48, 8, -72, -16, -64, -40, -32, -40, 8, -32, 32, -16, 64)
+
+[node name="kalo" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_rkhdk")
