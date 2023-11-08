@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://0gtgkvph10od"]
+
+[ext_resource type="Texture2D" uid="uid://cq1j1qcnhevtf" path="res://graphics/level4/Objects/sanggot@2x.png" id="1_ysg16"]
+
+[node name="sanggot" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(40, 32, 40, 24, 0, 16, -16, 24, -32, 8, -24, -32, -40, -32, -40, 16, -24, 32, -8, 32, 8, 32)
+
+[node name="sanggot" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_ysg16")

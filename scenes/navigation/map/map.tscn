@@ -34,11 +34,11 @@
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud2.gd" id="22_leso4"]
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud4.gd" id="25_e41x6"]
 [ext_resource type="Script" path="res://scenes/navigation/map/levelButtons.gd" id="27_frf5g"]
-[ext_resource type="Texture2D" uid="uid://cuba6fxvk4rc4" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
+[ext_resource type="Texture2D" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
 [ext_resource type="Texture2D" uid="uid://b1776u1fflmbj" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
 [ext_resource type="Texture2D" uid="uid://clj5sjsd5bthg" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="31_rpe0u"]
-[ext_resource type="Texture2D" uid="uid://bntljip5htogs" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
+[ext_resource type="Texture2D" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
 [ext_resource type="PackedScene" uid="uid://ch5bdc76jqvg8" path="res://scenes/navigation/map/Modal.tscn" id="43_c44qh"]
 
 [sub_resource type="Animation" id="Animation_ng5rb"]
