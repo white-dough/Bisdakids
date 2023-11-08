@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3wwuhkp6dvmt"]
+
+[ext_resource type="Texture2D" uid="uid://blyf4jchj15g1" path="res://graphics/level3/2x/trash bag@2x.png" id="1_6c4eb"]
+
+[node name="Sako" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(30, -9, 14, 8, 19, 27, -9, 83, -4, 94, 114, 94, 125, 85, 92, 16, 82, 13, 68, 16, 54, -3)
+
+[node name="Sako" type="Sprite2D" parent="."]
+texture = ExtResource("1_6c4eb")
+centered = false

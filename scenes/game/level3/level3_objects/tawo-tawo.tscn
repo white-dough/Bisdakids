@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://rf2env1u1a4v"]
+
+[ext_resource type="Texture2D" uid="uid://bcvk7wc1dtqr5" path="res://graphics/level3/2x/tawo-tawo@2x.png" id="1_0r6ke"]
+
+[node name="Tawo-tawo" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(58, -1, 67, 28, 61, 75, -6, 82, -1, 130, 60, 125, 52, 180, 58, 191, 93, 194, 97, 248, 82, 256, 70, 263, 62, 279, 47, 283, 50, 294, 85, 299, 108, 305, 144, 296, 164, 293, 159, 277, 141, 274, 130, 255, 115, 245, 110, 193, 145, 183, 150, 172, 143, 116, 216, 111, 215, 62, 134, 68, 133, 24, 145, -4)
+
+[node name="Tawo-tawo" type="Sprite2D" parent="."]
+texture = ExtResource("1_0r6ke")
+centered = false
