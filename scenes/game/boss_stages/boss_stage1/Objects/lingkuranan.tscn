@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://1fi74vbvuegc"]
 
-[ext_resource type="Texture2D" uid="uid://bnx2lha3l6mag" path="res://graphics/boss_stage/Objects/2x/lingkuranan@2x.png" id="1_w6gjd"]
+[ext_resource type="Texture2D" uid="uid://dgcm8607c73mv" path="res://graphics/boss_stage/Objects/2x/lingkuranan@2x.png" id="1_w6gjd"]
 
 [node name="lingkuranan" type="Area2D"]
 light_mask = 2

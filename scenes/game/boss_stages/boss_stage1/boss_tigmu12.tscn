@@ -24,6 +24,7 @@ Label/styles/normal = SubResource("StyleBoxTexture_xx7c3")
 script = ExtResource("1_v8oh5")
 
 [node name="Background" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -37,10 +38,10 @@ expand_mode = 1
 
 [node name="QuestionLbl" type="Label" parent="."]
 custom_minimum_size = Vector2(450, 300)
-offset_left = 542.0
-offset_top = 205.0
-offset_right = 992.0
-offset_bottom = 505.0
+offset_left = 523.0
+offset_top = 240.0
+offset_right = 973.0
+offset_bottom = 540.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_ybrnr")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -54,7 +55,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(768, 151.75)
+position = Vector2(749, 186.75)
 scale = Vector2(0.941176, 1.12105)
 texture = ExtResource("3_sa6yq")
 
@@ -64,14 +65,16 @@ anchor_left = 0.512177
 anchor_top = 0.185135
 anchor_right = 0.658295
 anchor_bottom = 0.260811
-offset_bottom = -1.52588e-05
+offset_left = -19.0
+offset_top = 35.0
+offset_right = -18.999
+offset_bottom = 35.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_u53w8")
 theme_override_font_sizes/font_size = 32
 text = "Tigmo-Tigmo"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="ChoicesVbox" type="HBoxContainer" parent="."]
 anchors_preset = -1
@@ -79,10 +82,10 @@ anchor_left = 0.672
 anchor_top = 0.744
 anchor_right = 0.705
 anchor_bottom = 0.759
-offset_left = -546.0
-offset_top = -49.0
-offset_right = 320.0
-offset_bottom = 51.0
+offset_left = -565.0
+offset_top = -14.0
+offset_right = 301.0
+offset_bottom = 86.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4

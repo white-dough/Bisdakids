@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://db4hh7vns4hqs"]
+
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_a4h8u"]
+
+[node name="Background2" type="CanvasLayer"]
+visible = false
+
+[node name="Background2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a4h8u")
+expand_mode = 1

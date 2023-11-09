@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_4kovr"]
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.gd" id="1_iol7i"]
-[ext_resource type="Texture2D" uid="uid://bt0rl78cpehtl" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
-[ext_resource type="Texture2D" uid="uid://dc2xrlidg0h1n" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_03bjy"]
-[ext_resource type="Texture2D" uid="uid://cjrf5mdmv27ko" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
+[ext_resource type="Texture2D" uid="uid://b5pjo2ofl1vf7" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
+[ext_resource type="Texture2D" uid="uid://drwpnrffbmssh" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_03bjy"]
+[ext_resource type="Texture2D" uid="uid://dvu6jbep1ryyq" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="5_8r1eq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eff3f"]
@@ -34,6 +34,7 @@ LineEdit/styles/normal = SubResource("StyleBoxTexture_5sp35")
 script = ExtResource("1_iol7i")
 
 [node name="Background" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -51,9 +52,13 @@ anchor_left = 0.401826
 anchor_top = 0.108108
 anchor_right = 0.744292
 anchor_bottom = 0.87027
-offset_right = 6.10352e-05
+offset_left = -150.0
+offset_top = 55.0001
+offset_right = 149.999
+offset_bottom = 83.0002
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 15
 metadata/_edit_use_anchors_ = true
 
 [node name="TitleLbl" type="Label" parent="LabelsVbox"]
@@ -69,7 +74,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="QuestionLbl" type="Label" parent="LabelsVbox"]
-custom_minimum_size = Vector2(450, 300)
+custom_minimum_size = Vector2(750, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -77,15 +82,17 @@ theme = SubResource("Theme_ybrnr")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_8r1eq")
 theme_override_font_sizes/font_size = 22
-text = "Magsigi kinig kadako,
-apan dili gayud mugamay.
+text = "Magsigi kinig kadako, apan dili gayud mugamay.
 Unsa kini?
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="AnswerInput" type="LineEdit" parent="LabelsVbox"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme = SubResource("Theme_m2api")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0.589844, 0.398438, 0.542969, 1)

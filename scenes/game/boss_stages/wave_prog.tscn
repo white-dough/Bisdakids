@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwtckupwpc00f"]
+
+[ext_resource type="Texture2D" uid="uid://lmjiqx3k35gc" path="res://graphics/boss_stage/Assets/2x/progressBar_container@2x.png" id="1_yc5ev"]
+[ext_resource type="Texture2D" uid="uid://cdcuagd45fn0c" path="res://graphics/boss_stage/Assets/2x/progress_indication@2x.png" id="2_cb1ys"]
+[ext_resource type="Texture2D" uid="uid://cgroml8w0qbnq" path="res://graphics/boss_stage/Assets/2x/redFlag@2x.png" id="3_iw5he"]
+
+[node name="WaveProg" type="CanvasLayer"]
+
+[node name="WaveProg" type="TextureProgressBar" parent="."]
+offset_left = 546.0
+offset_top = 34.0
+offset_right = 879.0
+offset_bottom = 96.0
+scale = Vector2(1.2159, 1.21775)
+max_value = 4.0
+value = 1.0
+texture_under = ExtResource("1_yc5ev")
+texture_progress = ExtResource("2_cb1ys")
+texture_progress_offset = Vector2(16, 13)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WaveProg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -23.0
+offset_right = 110.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Wave1" type="TextureRect" parent="WaveProg/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_iw5he")
+
+[node name="Wave2" type="TextureRect" parent="WaveProg/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_iw5he")
+
+[node name="Wave3" type="TextureRect" parent="WaveProg/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_iw5he")
