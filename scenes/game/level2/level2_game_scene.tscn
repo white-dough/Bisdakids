@@ -53,9 +53,9 @@ position = Vector2(222, 0)
 scale = Vector2(0.835, 1.03)
 script = ExtResource("1_3dn2d")
 
-[node name="BackgroundLevel2" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="BackgroundLevel2"]
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
 texture = ExtResource("2_o57uu")
 centered = false
 

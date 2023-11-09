@@ -27,7 +27,6 @@ func _on_level_ready():
 	set_labels()
 	label_definitions() # function para sa word defintion (long press)
 	level_time = $"..".level_time
-	print(level_time)
 	progress_bar.max_value = level_time
 	progress_bar.set_use_rounded_values(true)
 	timer.set_one_shot(true)
@@ -61,7 +60,7 @@ func object_list_label(current_objects_strings: Array):
 			if finish_level_mark >= 15:
 				var time_finished: float = timer.time_left
 				level_finished.emit(time_finished)
-
+			
 # this function gets the data from words-beta.json (defintion of the words)
 func get_definition() -> Dictionary:
 	var jsonFile = FileAccess.open("res://data/words-beta.json", FileAccess.READ)
@@ -72,7 +71,8 @@ func get_definition() -> Dictionary:
 	var dataToBePassed
 	
 	var parentNode = str(get_parent().get_scene_file_path())
-	var level = parentNode.split("/")[-1].split(".")[0]
+	var level = $"..".level_name
+	
 	match(level):
 		"level1":
 			dataToBePassed = content_as_dictionary.level1
