@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl6kxglxmb40b"]
+
+[ext_resource type="Texture2D" uid="uid://b8tji3eqjkrvk" path="res://graphics/level4/Objects/silhig@2x.png" id="1_bl4ic"]
+
+[node name="silhig" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 120, 32, 120, 24, 96, 16, 56, 8, 40, 8, 24, 8, -24, 16, -120, 0, -120, -8, 24, -16, 40, -24, 64)
+
+[node name="silhig" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_bl4ic")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b84ppu8rpxu4x"]
+
+[ext_resource type="Texture2D" uid="uid://n34tdvg8mvw7" path="res://graphics/level4/Objects/bukag@2x.png" id="1_c0gsq"]
+
+[node name="bukag" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(704, 408)
+collision_layer = 8
+collision_mask = 8
+
+[node name="bukag" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_c0gsq")

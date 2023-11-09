@@ -45,7 +45,6 @@ scale = Vector2(1.003, 1.03)
 position = Vector2(738.784, 386.408)
 
 [node name="Kutsilyo" parent="Objects" instance=ExtResource("12_1juwv")]
-position = Vector2(815.553, 383.495)
 
 [node name="Hagdanan" parent="Objects" instance=ExtResource("2_ng785")]
 position = Vector2(552.982, 349.379)

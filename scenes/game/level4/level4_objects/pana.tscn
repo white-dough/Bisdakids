@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwxcqv1u68t6g"]
+
+[ext_resource type="Texture2D" uid="uid://bcc6hbrwceihh" path="res://graphics/level4/Objects/Pana@2x.png" id="1_fpurw"]
+
+[node name="Pana" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 120, -24, 120, -24, 104, -8, 88, 16, 56, 24, 40, 24, 24, 24, -32, 40, -72, 56, -72, 48, -104, 32, -88, 32, -72, 24, -56, 0, -88, -32, -104, -48, -120, -48, -104, -40, 72)
+
+[node name="Pana" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_fpurw")

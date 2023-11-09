@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://10ulhcshvixv" path="res://graphics/level2/2x/Gitara@2x.png" id="1_oknhh"]
 
-[node name="gitara" type="Area2D"]
+[node name="Gitara" type="Area2D"]
+position = Vector2(1228.74, 504.854)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_oknhh")

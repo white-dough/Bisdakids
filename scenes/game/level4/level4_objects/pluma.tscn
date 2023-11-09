@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxtwwy83x027b"]
+
+[ext_resource type="Texture2D" uid="uid://vuct633081mg" path="res://graphics/level4/Objects/Pluma@2x.png" id="1_t3tju"]
+
+[node name="Pluma" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 48, 32, 48, 32, 24, 24, 16, 24, 8, 8, -24, -32, -48, -16, -16, 0, 8, 8, 24, 0, 32)
+
+[node name="Pluma" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_t3tju")

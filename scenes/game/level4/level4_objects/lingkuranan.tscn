@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpsxuy3qsml2r"]
+
+[ext_resource type="Texture2D" uid="uid://bqone1xpao24k" path="res://graphics/level4/Objects/lingkuranan@2x.png" id="1_h4k2g"]
+
+[node name="lingkuranan" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-72, 120, 64, 120, 64, 0, 72, -16, 64, -48, 80, -56, 88, -88, 48, -96, 56, -112, 16, -128, -16, -104, -8, -96, -40, -88, -32, -56, -16, -48, -16, -16, -88, -16, -80, 8, -64, 8)
+
+[node name="lingkuranan" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_h4k2g")

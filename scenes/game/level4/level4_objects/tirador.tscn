@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://n3cysliehc2y"]
+
+[ext_resource type="Texture2D" uid="uid://bt3vkhb6k6a8d" path="res://graphics/level4/Objects/tirador@2x.png" id="1_d17f4"]
+
+[node name="tirador" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(704, 408)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-56, 32, -48, 40, -40, 40, 0, 16, 8, 16, 24, 24, 56, 0, 48, -16, 24, 0, 16, -16, 32, -32, 32, -40, 16, -40, -24, -40, -40, -32, -48, -16, -40, 0, -24, 8)
+
+[node name="tirador" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.57675)
+texture = ExtResource("1_d17f4")
