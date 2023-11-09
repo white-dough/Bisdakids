@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0muuoqs8mtgn"]
 
-[ext_resource type="Texture2D" uid="uid://c8dmrk6f4osp" path="res://graphics/level1/2x/lumay@2x.png" id="1_qf0ab"]
+[ext_resource type="Texture2D" uid="uid://bo5qribl8wgq5" path="res://graphics/level1/Objects/lumay@2x.png" id="1_i7xaq"]
 
 [node name="lumay" type="Area2D"]
 light_mask = 2
@@ -10,7 +10,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="bituon" type="Sprite2D" parent="."]
-texture = ExtResource("1_qf0ab")
+texture = ExtResource("1_i7xaq")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-22, 32, -30, 41, -23, 64, -4, 67, 9, 61, 15, 40, -1, 20, 4, 12, 1, -1, 11, -18, 20, -24, 32, -22, 41, -24, 46, -29, 40, -37, 35, -50, 38, -56, 30, -61, 14, -64, 7, -61, 5, -55, 3, -51, -6, -52, -8, -59, -14, -63, -27, -57, -37, -50, -35, -45, -43, -36, -43, -26, -41, -23, -32, -22, -31, -4, -26, 19)

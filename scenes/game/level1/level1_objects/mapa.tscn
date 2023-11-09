@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7r2yynu1lep4"]
 
-[ext_resource type="Texture2D" uid="uid://bhat4gw6ik17" path="res://graphics/level1/2x/mapa_2@2x.png" id="1_6kf1j"]
+[ext_resource type="Texture2D" uid="uid://cv1yo2b5osa08" path="res://graphics/level1/Objects/mapa_2@2x.png" id="1_pgyg8"]
 
 [node name="mapa" type="Area2D"]
 light_mask = 2
@@ -9,7 +9,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="mapa" type="Sprite2D" parent="."]
-texture = ExtResource("1_6kf1j")
+texture = ExtResource("1_pgyg8")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-17, 20, 19, 36, 53, 36, 63, -4, 66, -12, 65, -25, 39, -19, 16, -27, -4, -25, -21, -35, -24, -36, -40, -18, -43, -13, -48, -8, -56, -5, -62, 2, -66, 5, -66, 9, -43, 19, -41, 20)

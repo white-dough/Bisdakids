@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxyfdl054lgft"]
+
+[ext_resource type="Texture2D" uid="uid://drbfqo2s6ynp2" path="res://graphics/level3/2x/coin@2x.png" id="1_ft048"]
+
+[node name="Sinsilyo" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(6, -2, -2, 7, -2, 19, 6, 27, 19, 27, 27, 19, 27, 7, 19, -2)
+
+[node name="Sinsilyo" type="Sprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_ft048")
+centered = false

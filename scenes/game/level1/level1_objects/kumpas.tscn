@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://caqjeeq3jom2t"]
 
-[ext_resource type="Texture2D" uid="uid://bq0f25el4d218" path="res://graphics/level1/2x/kumpas@2x.png" id="2_bfnoj"]
+[ext_resource type="Texture2D" uid="uid://dcaeheki8o1ur" path="res://graphics/level2/2x/kumpas@2x.png" id="1_34fry"]
 
 [node name="Kumpas" type="Area2D"]
 light_mask = 2
@@ -14,4 +14,4 @@ scale = Vector2(0.651031, 0.616586)
 polygon = PackedVector2Array(-41.8068, 0, -41.8068, 9.16689, -36.2326, 13.7503, -30.6583, 20.6255, -25.0841, 25.2089, -16.7227, 27.5007, -8.36137, 27.5007, -2.78712, 27.5007, 5.57424, 25.2089, 11.1485, 22.9172, 16.7227, 20.6255, 25.0841, 22.9172, 30.6583, 20.6255, 44.594, -6.87517, 39.0197, -11.4586, 30.6583, -13.7503, 22.297, -20.6255, 13.9356, -25.2089, -8.36137, -25.2089, -19.5099, -22.9172, -30.6583, -13.7503, -36.2326, -6.87517)
 
 [node name="Kumpas_2x" type="Sprite2D" parent="."]
-texture = ExtResource("2_bfnoj")
+texture = ExtResource("1_34fry")
