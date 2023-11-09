@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cso14tybg8paj" path="res://graphics/level3/2x/sunglasses@2x.png" id="26_y8ckd"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="27_8s3h5"]
 
-[node name="GameScene" type="Node2D"]
+[node name="GameScene2" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
 
