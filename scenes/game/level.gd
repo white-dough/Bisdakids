@@ -69,3 +69,4 @@ func level_completed(time_left):
 		prompt_timer.start()
 		await prompt_timer.timeout
 		level_failed.visible = true
+

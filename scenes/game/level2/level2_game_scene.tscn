@@ -62,7 +62,14 @@ centered = false
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Angkla" parent="Objects" instance=ExtResource("3_k8bxq")]
-position = Vector2(59.8802, 497.087)
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+editor_description = ""
+script = null
 
 [node name="Balde" parent="Objects" instance=ExtResource("4_5hvoc")]
 position = Vector2(165.269, 590.291)

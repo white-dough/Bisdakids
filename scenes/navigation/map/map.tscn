@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=66 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://b87ns7pvx17vs" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Script" path="res://scenes/navigation/map/map.gd" id="1_grlkn"]
@@ -34,11 +34,9 @@
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud2.gd" id="22_leso4"]
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud4.gd" id="25_e41x6"]
 [ext_resource type="Script" path="res://scenes/navigation/map/levelButtons.gd" id="27_frf5g"]
-[ext_resource type="Texture2D" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
 [ext_resource type="Texture2D" uid="uid://b1776u1fflmbj" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
 [ext_resource type="Texture2D" uid="uid://clj5sjsd5bthg" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="31_rpe0u"]
-[ext_resource type="Texture2D" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
 [ext_resource type="PackedScene" uid="uid://ch5bdc76jqvg8" path="res://scenes/navigation/map/Modal.tscn" id="43_c44qh"]
 
 [sub_resource type="Animation" id="Animation_ng5rb"]
@@ -301,7 +299,6 @@ _data = {
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6dw4m"]
-texture = ExtResource("28_o7hj8")
 
 [sub_resource type="Theme" id="Theme_tmvob"]
 Button/styles/normal = SubResource("StyleBoxTexture_6dw4m")
@@ -477,8 +474,6 @@ offset_right = 654.0
 offset_bottom = 583.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_tmvob")
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level1"]
@@ -512,8 +507,6 @@ offset_right = 698.0
 offset_bottom = 503.0
 scale = Vector2(0.455, 0.455)
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level2"]
@@ -548,8 +541,6 @@ offset_right = 753.0
 offset_bottom = 441.0
 scale = Vector2(0.455, 0.455)
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level3"]
@@ -585,8 +576,6 @@ offset_bottom = 394.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_dy6hr")
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level4"]
@@ -621,8 +610,6 @@ offset_right = 870.0
 offset_bottom = 310.0
 scale = Vector2(0.455, 0.455)
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level5"]

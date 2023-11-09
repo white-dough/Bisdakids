@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyek51micuvby"]
+
+[ext_resource type="Texture2D" uid="uid://chlmqybhxsmls" path="res://graphics/level4/Objects/pigurin@2x.png" id="1_2ob2s"]
+
+[node name="pigurin" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-24, 64, 32, 64, 40, 16, 32, -8, 40, -24, 32, -40, 24, -40, 24, 0, 8, -32, 0, -40, -8, -40, -24, -64, -32, -24, -40, -24, -48, -16, -32, -8, -32, 8, -40, 24, -32, 32, -32, 40, -24, 48)
+
+[node name="pigurin" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 0.999996)
+scale = Vector2(0.558036, 0.558036)
+texture = ExtResource("1_2ob2s")
