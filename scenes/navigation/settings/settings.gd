@@ -22,12 +22,12 @@ func check_internet():
 	check_internet_timer.start()
 
 func _on_close_btn_pressed():
+	Audio.play_sfx(Audio.close_btn_sfx)
 	queue_free()
 
 func _on_account_btn_pressed():
+	Audio.play_sfx(Audio.normal_btn_sfx)
 	var scene_to_render = not_logged_in_scene if Game.user_name == null else logged_in_scene
 	queue_free()
 	mainmenu_modal_node.add_child(scene_to_render)
 
-func _on_sync_btn_pressed():
-	pass # Replace with function body.

@@ -41,8 +41,10 @@ func _ready():
 func purchase_item(purchase_details: Dictionary):
 #	print(str(Game.user_inventory['coin']) + str(purchase_details['price']))
 	if int(Game.user_inventory['coin']) < purchase_details['price']:
+		Audio.play_sfx(Audio.close_btn_sfx)
 		print("insuff")
 		return
+	Audio.play_sfx(Audio.normal_btn_sfx)
 	Game.user_inventory['coin'] = int(Game.user_inventory['coin']) - purchase_details['price']
 	Game.user_inventory['coin_timestamp'] = Time.get_unix_time_from_system()
 	var item_name : String = Game.reverse_name_logic(purchase_details['item_name'])
@@ -51,7 +53,8 @@ func purchase_item(purchase_details: Dictionary):
 	Game.update_local_save()
 	await Game.query_update()
 	Game.record_purchase(purchase_details['bundle_id'])
-	print(Game.user_inventory)
+#	print(Game.user_inventory)
 
 func _on_close_btn_pressed():
+	Audio.play_sfx(Audio.close_btn_sfx)
 	queue_free()

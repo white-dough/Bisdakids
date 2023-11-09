@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=81 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://b87ns7pvx17vs" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Script" path="res://scenes/navigation/map/map.gd" id="1_grlkn"]
@@ -34,12 +34,22 @@
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud2.gd" id="22_leso4"]
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud4.gd" id="25_e41x6"]
 [ext_resource type="Script" path="res://scenes/navigation/map/levelButtons.gd" id="27_frf5g"]
-[ext_resource type="Texture2D" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
-[ext_resource type="Texture2D" uid="uid://b1776u1fflmbj" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
-[ext_resource type="Texture2D" uid="uid://clj5sjsd5bthg" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
+[ext_resource type="Texture2D" uid="uid://u30rgv61rfm6" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
+[ext_resource type="Texture2D" uid="uid://bqmwuxrmuqtjb" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
+[ext_resource type="Texture2D" uid="uid://cnu3iieckgk7t" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="31_rpe0u"]
-[ext_resource type="Texture2D" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
+[ext_resource type="Texture2D" uid="uid://bntljip5htogs" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
+[ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="41_kbegr"]
+[ext_resource type="Texture2D" uid="uid://cq7d5vs1fv2k0" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="41_lf7t1"]
+[ext_resource type="Texture2D" uid="uid://grtp33445l2m" path="res://graphics/ui/buttons/2x/pressedhome_btn@2x.png" id="42_8eefv"]
+[ext_resource type="Texture2D" uid="uid://bclwgp332wyra" path="res://graphics/ui/icons/2x/boxLbl@2x.png" id="42_aquij"]
+[ext_resource type="Texture2D" uid="uid://cgrxrjoupkik8" path="res://graphics/ui/icons/energy_icon@2x.png" id="43_c8xve"]
 [ext_resource type="PackedScene" uid="uid://ch5bdc76jqvg8" path="res://scenes/navigation/map/Modal.tscn" id="43_c44qh"]
+[ext_resource type="Texture2D" uid="uid://cwujrikbom8u6" path="res://graphics/ui/icons/coins_icon@2x.png" id="44_lm8xn"]
+[ext_resource type="Texture2D" uid="uid://bi723sm2d088v" path="res://graphics/ui/buttons/2x/dailytaskPressed_btn@2x.png" id="45_u5s8m"]
+[ext_resource type="Texture2D" uid="uid://cuqam1m8f711b" path="res://graphics/ui/buttons/2x/shopPressed_btn_1@2x.png" id="46_g0efq"]
+[ext_resource type="Texture2D" uid="uid://cacqy1r184d6g" path="res://graphics/ui/buttons/2x/InventoryPressed_btn@2x.png" id="47_kx3ab"]
+[ext_resource type="Texture2D" uid="uid://bq3oyaedyi8bq" path="res://graphics/ui/buttons/2x/settingsPressed_btn@2x.png" id="48_aeo3r"]
 
 [sub_resource type="Animation" id="Animation_ng5rb"]
 length = 0.001
@@ -317,7 +327,16 @@ texture = ExtResource("9_5qvwd")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0ms0"]
 texture = ExtResource("11_cprym")
 
-[node name="Map" type="Node2D"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mck1s"]
+texture = ExtResource("42_aquij")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhupn"]
+texture = ExtResource("43_c8xve")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvode"]
+texture = ExtResource("44_lm8xn")
+
+[node name="Map" type="Node"]
 script = ExtResource("1_grlkn")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -650,6 +669,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Icons" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Icons"]
 offset_left = 32.0
@@ -709,5 +729,104 @@ texture_normal = ExtResource("14_b1qn5")
 
 [node name="LevelModal" parent="." instance=ExtResource("43_c44qh")]
 visible = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0190259
+anchor_top = 0.0418919
+anchor_right = 0.435312
+anchor_bottom = 0.159459
+theme_override_constants/separation = 70
+metadata/_edit_use_anchors_ = true
+
+[node name="HomeBtn" type="TextureButton" parent="Control/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("41_lf7t1")
+texture_pressed = ExtResource("42_8eefv")
+stretch_mode = 3
+
+[node name="energy_lbl" type="Label" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("41_kbegr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mck1s")
+text = "143"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="energyIcon" type="Label" parent="Control/HBoxContainer/energy_lbl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.24375
+anchor_top = -0.15
+anchor_right = 0.2375
+anchor_bottom = 1.13333
+theme_override_styles/normal = SubResource("StyleBoxTexture_yhupn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Coin_lbl" type="Label" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("41_kbegr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mck1s")
+text = "143"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="CoinIcon" type="Label" parent="Control/HBoxContainer/Coin_lbl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.24375
+anchor_top = -0.15
+anchor_right = 0.2375
+anchor_bottom = 1.13333
+theme_override_styles/normal = SubResource("StyleBoxTexture_uvode")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 827.0
+offset_top = 32.0
+offset_right = 1280.0
+offset_bottom = 120.0
+theme_override_constants/separation = 35
+
+[node name="DailyTask" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("10_xl8yn")
+texture_pressed = ExtResource("45_u5s8m")
+stretch_mode = 3
+
+[node name="Shop" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("13_ayf4u")
+texture_pressed = ExtResource("46_g0efq")
+stretch_mode = 3
+
+[node name="Inventory" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("14_8kcks")
+texture_pressed = ExtResource("47_kx3ab")
+stretch_mode = 3
+
+[node name="Settings" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("14_b1qn5")
+texture_pressed = ExtResource("48_aeo3r")
+stretch_mode = 3
 
 [connection signal="pressed" from="Icons/HBoxContainer2/Settings" to="Levels" method="_on_settings_button_pressed"]

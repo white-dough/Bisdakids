@@ -31,9 +31,5 @@ func _on_game_scene_object_found_signal(object_name):
 func _on_hud_clue_pressed(object_clue):
 	animate_object_clue(object_clue)
 
-
-
-
-
 func _on_level_ready():
 	pass # Replace with function body.

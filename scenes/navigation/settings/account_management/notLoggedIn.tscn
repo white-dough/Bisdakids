@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/notLoggedIn.gd" id="1_1yhn0"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_oey0p"]
-[ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_ocblh"]
+[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_ocblh"]
 [ext_resource type="Theme" uid="uid://7happngt6m6v" path="res://themes/for_title_lbl.tres" id="4_307kq"]
-[ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="5_1fbb2"]
-[ext_resource type="Texture2D" uid="uid://b17c7uvlkdtd5" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="5_bvpkt"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="5_1fbb2"]
+[ext_resource type="Texture2D" uid="uid://bq6mj67xqc371" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="5_bvpkt"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="6_326id"]
-[ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="6_m5q1d"]
-[ext_resource type="Texture2D" uid="uid://mui5jyjtm4nb" path="res://graphics/ui/icons/Sign up btn@2x.png" id="7_wx7tt"]
-[ext_resource type="Texture2D" uid="uid://c2g8rre4d1c83" path="res://graphics/ui/buttons/2x/sulodPressed_btn@2x.png" id="9_5jww4"]
-[ext_resource type="Texture2D" uid="uid://bemhe8qqtfd5n" path="res://graphics/ui/buttons/2x/SignupPressed_btn@2x.png" id="11_5wdpc"]
+[ext_resource type="Texture2D" uid="uid://bvii16ashhc7b" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="6_m5q1d"]
+[ext_resource type="Texture2D" uid="uid://d288gsaukl6re" path="res://graphics/ui/icons/Sign up btn@2x.png" id="7_wx7tt"]
+[ext_resource type="Texture2D" uid="uid://cagfcrdbw6521" path="res://graphics/ui/buttons/2x/sulodPressed_btn@2x.png" id="9_5jww4"]
+[ext_resource type="Texture2D" uid="uid://ibf8mo0qa6rk" path="res://graphics/ui/buttons/2x/SignupPressed_btn@2x.png" id="11_5wdpc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4t0lc"]
 content_margin_left = 7.0

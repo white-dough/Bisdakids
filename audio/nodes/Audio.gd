@@ -9,8 +9,8 @@ extends Node
 @onready var boss_bgm: AudioStream = preload("res://audio/assets/bgm/boss_battle_bgm.wav")
 
 #clicks
-@onready var wood_btn_sfx: AudioStream = preload("res://audio/assets/sfx/wood_click_sfx.wav")
-@onready var close_btn_sfx: AudioStream = preload("res://audio/assets/sfx/close_button_sfx.wav")
+@onready var wood_btn_sfx: AudioStream = preload("res://audio/assets/sfx/wood_click_sfx.mp3")
+@onready var close_btn_sfx: AudioStream = preload("res://audio/assets/sfx/close_button_sfx.mp3")
 @onready var normal_btn_sfx: AudioStream = preload("res://audio/assets/sfx/button_clicked_sfx.mp3")
 @onready var level_btn_sfx: AudioStream = preload("res://audio/assets/sfx/levels_btn_sfx.mp3")
 
@@ -27,7 +27,7 @@ extends Node
 @onready var dt_claim_sfx: AudioStream = preload("res://audio/assets/sfx/claim_reward_dt_sfx.wav")
 
 
-func button_click(sfx: AudioStream) -> void:
+func play_sfx(sfx: AudioStream) -> void:
 	sfx_node.stop()
 	sfx_node.set_stream(sfx)
 	sfx_node.play()
