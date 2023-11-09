@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=76 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://b87ns7pvx17vs" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Script" path="res://scenes/navigation/map/map.gd" id="1_grlkn"]
@@ -14,15 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://c2plqbf0vmmxq" path="res://graphics/map/map_assets/Cloud TR@2x.png" id="7_1w2yw"]
 [ext_resource type="Texture2D" uid="uid://cisjvsxjj7nxq" path="res://graphics/map/map_assets/bato@2x.png" id="8_otpsd"]
 [ext_resource type="Texture2D" uid="uid://futmwoke68ub" path="res://graphics/map/map_assets/ship@2x.png" id="9_2lscx"]
-[ext_resource type="Texture2D" uid="uid://dwpuyl43hd5nu" path="res://graphics/ui/icons/energly_lbl@2x.png" id="9_5qvwd"]
 [ext_resource type="Texture2D" uid="uid://cbllsgvjyx4ti" path="res://graphics/map/map_assets/Cloud 1@2x.png" id="9_b3fea"]
 [ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="10_xl8yn"]
 [ext_resource type="Texture2D" uid="uid://cgi456u321hgs" path="res://graphics/map/map_assets/Cloud 3@2x.png" id="10_xrkcv"]
 [ext_resource type="Texture2D" uid="uid://cj4l8wbpdo1fk" path="res://graphics/map/map_assets/Cloud 2@2x.png" id="11_1t3uu"]
 [ext_resource type="Script" path="res://addons/ppc/ppcamera.gd" id="11_byrbn"]
-[ext_resource type="Texture2D" uid="uid://crs6qkp4igooo" path="res://graphics/ui/icons/coins_lbl@2x.png" id="11_cprym"]
 [ext_resource type="Texture2D" uid="uid://hhstxh6rx317" path="res://graphics/map/map_assets/Cloud 4@2x.png" id="12_aw4km"]
-[ext_resource type="Texture2D" uid="uid://d0pnifevgmxyg" path="res://graphics/ui/icons/add_icon@2x.png" id="12_wlh2q"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="13_ayf4u"]
 [ext_resource type="Texture2D" uid="uid://c8osw3r3v61at" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="14_8kcks"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="14_b1qn5"]
@@ -34,11 +31,11 @@
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud2.gd" id="22_leso4"]
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud4.gd" id="25_e41x6"]
 [ext_resource type="Script" path="res://scenes/navigation/map/levelButtons.gd" id="27_frf5g"]
-[ext_resource type="Texture2D" uid="uid://u30rgv61rfm6" path="res://graphics/level1/2x/2x/level_unlocked@2x.png" id="28_o7hj8"]
+[ext_resource type="Texture2D" uid="uid://voa8k6knu6vu" path="res://graphics/level1/Objects/2x/level_unlocked@2x.png" id="28_tg46p"]
 [ext_resource type="Texture2D" uid="uid://bqmwuxrmuqtjb" path="res://graphics/map/map_assets/emptyStars@6x.png" id="29_fs71g"]
+[ext_resource type="Texture2D" uid="uid://deni7t6hu4dvl" path="res://graphics/level1/Objects/2x/level_locked@2x.png" id="29_so468"]
 [ext_resource type="Texture2D" uid="uid://cnu3iieckgk7t" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="31_rpe0u"]
-[ext_resource type="Texture2D" uid="uid://bntljip5htogs" path="res://graphics/level1/2x/2x/level_locked@2x.png" id="32_jxuy0"]
 [ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="41_kbegr"]
 [ext_resource type="Texture2D" uid="uid://cq7d5vs1fv2k0" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="41_lf7t1"]
 [ext_resource type="Texture2D" uid="uid://grtp33445l2m" path="res://graphics/ui/buttons/2x/pressedhome_btn@2x.png" id="42_8eefv"]
@@ -320,12 +317,6 @@ Button/styles/normal = SubResource("StyleBoxTexture_6dw4m")
 [sub_resource type="Theme" id="Theme_dy6hr"]
 Label/styles/normal = SubResource("StyleBoxTexture_p1ngn")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5u4fq"]
-texture = ExtResource("9_5qvwd")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0ms0"]
-texture = ExtResource("11_cprym")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mck1s"]
 texture = ExtResource("42_aquij")
 
@@ -495,6 +486,8 @@ offset_right = 654.0
 offset_bottom = 583.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_tmvob")
+texture_normal = ExtResource("28_tg46p")
+texture_disabled = ExtResource("29_so468")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level1"]
@@ -528,6 +521,8 @@ offset_right = 698.0
 offset_bottom = 503.0
 scale = Vector2(0.455, 0.455)
 disabled = true
+texture_normal = ExtResource("28_tg46p")
+texture_disabled = ExtResource("29_so468")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level2"]
@@ -562,6 +557,8 @@ offset_right = 753.0
 offset_bottom = 441.0
 scale = Vector2(0.455, 0.455)
 disabled = true
+texture_normal = ExtResource("28_tg46p")
+texture_disabled = ExtResource("29_so468")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level3"]
@@ -597,6 +594,8 @@ offset_bottom = 394.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_dy6hr")
 disabled = true
+texture_normal = ExtResource("28_tg46p")
+texture_disabled = ExtResource("29_so468")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level4"]
@@ -631,6 +630,8 @@ offset_right = 870.0
 offset_bottom = 310.0
 scale = Vector2(0.455, 0.455)
 disabled = true
+texture_normal = ExtResource("28_tg46p")
+texture_disabled = ExtResource("29_so468")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level5"]
@@ -657,69 +658,9 @@ text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icons" type="CanvasLayer" parent="."]
-visible = false
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Icons"]
-offset_left = 32.0
-offset_top = 31.0
-offset_right = 537.0
-offset_bottom = 111.0
-theme_override_constants/separation = 70
-
-[node name="energy_lbl" type="Label" parent="Icons/HBoxContainer"]
-custom_minimum_size = Vector2(178, 78)
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_5u4fq")
-
-[node name="energyAdd_btn" type="TextureButton" parent="Icons/HBoxContainer/energy_lbl"]
-layout_mode = 0
-offset_left = 183.0
-offset_top = 23.0
-offset_right = 224.0
-offset_bottom = 64.0
-texture_normal = ExtResource("12_wlh2q")
-
-[node name="Coin_lbl" type="Label" parent="Icons/HBoxContainer"]
-custom_minimum_size = Vector2(178, 78)
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_c0ms0")
-
-[node name="coinAdd_btn" type="TextureButton" parent="Icons/HBoxContainer/Coin_lbl"]
-layout_mode = 0
-offset_left = 183.0
-offset_top = 23.0
-offset_right = 224.0
-offset_bottom = 64.0
-texture_normal = ExtResource("12_wlh2q")
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Icons"]
-offset_left = 827.0
-offset_top = 32.0
-offset_right = 1280.0
-offset_bottom = 120.0
-theme_override_constants/separation = 35
-
-[node name="DailyTask" type="TextureButton" parent="Icons/HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("10_xl8yn")
-
-[node name="Shop" type="TextureButton" parent="Icons/HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("13_ayf4u")
-
-[node name="Inventory" type="TextureButton" parent="Icons/HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("14_8kcks")
-
-[node name="Settings" type="TextureButton" parent="Icons/HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("14_b1qn5")
-
-[node name="LevelModal" parent="." instance=ExtResource("43_c44qh")]
-visible = false
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -728,7 +669,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0190259
@@ -738,13 +679,13 @@ anchor_bottom = 0.159459
 theme_override_constants/separation = 70
 metadata/_edit_use_anchors_ = true
 
-[node name="HomeBtn" type="TextureButton" parent="Control/HBoxContainer"]
+[node name="HomeBtn" type="TextureButton" parent="UI/Control/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("41_lf7t1")
 texture_pressed = ExtResource("42_8eefv")
 stretch_mode = 3
 
-[node name="energy_lbl" type="Label" parent="Control/HBoxContainer"]
+[node name="energy_lbl" type="Label" parent="UI/Control/HBoxContainer"]
 custom_minimum_size = Vector2(160, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -755,7 +696,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 max_lines_visible = 1
 
-[node name="energyIcon" type="Label" parent="Control/HBoxContainer/energy_lbl"]
+[node name="energyIcon" type="Label" parent="UI/Control/HBoxContainer/energy_lbl"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.24375
@@ -765,7 +706,7 @@ anchor_bottom = 1.13333
 theme_override_styles/normal = SubResource("StyleBoxTexture_yhupn")
 metadata/_edit_use_anchors_ = true
 
-[node name="Coin_lbl" type="Label" parent="Control/HBoxContainer"]
+[node name="Coin_lbl" type="Label" parent="UI/Control/HBoxContainer"]
 custom_minimum_size = Vector2(160, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -776,7 +717,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 max_lines_visible = 1
 
-[node name="CoinIcon" type="Label" parent="Control/HBoxContainer/Coin_lbl"]
+[node name="CoinIcon" type="Label" parent="UI/Control/HBoxContainer/Coin_lbl"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.24375
@@ -786,7 +727,7 @@ anchor_bottom = 1.13333
 theme_override_styles/normal = SubResource("StyleBoxTexture_uvode")
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Control"]
 layout_mode = 0
 offset_left = 827.0
 offset_top = 32.0
@@ -794,28 +735,29 @@ offset_right = 1280.0
 offset_bottom = 120.0
 theme_override_constants/separation = 35
 
-[node name="DailyTask" type="TextureButton" parent="Control/HBoxContainer2"]
+[node name="DailyTask" type="TextureButton" parent="UI/Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("10_xl8yn")
 texture_pressed = ExtResource("45_u5s8m")
 stretch_mode = 3
 
-[node name="Shop" type="TextureButton" parent="Control/HBoxContainer2"]
+[node name="Shop" type="TextureButton" parent="UI/Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("13_ayf4u")
 texture_pressed = ExtResource("46_g0efq")
 stretch_mode = 3
 
-[node name="Inventory" type="TextureButton" parent="Control/HBoxContainer2"]
+[node name="Inventory" type="TextureButton" parent="UI/Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("14_8kcks")
 texture_pressed = ExtResource("47_kx3ab")
 stretch_mode = 3
 
-[node name="Settings" type="TextureButton" parent="Control/HBoxContainer2"]
+[node name="Settings" type="TextureButton" parent="UI/Control/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("14_b1qn5")
 texture_pressed = ExtResource("48_aeo3r")
 stretch_mode = 3
 
-[connection signal="pressed" from="Icons/HBoxContainer2/Settings" to="Levels" method="_on_settings_button_pressed"]
+[node name="LevelModal" parent="." instance=ExtResource("43_c44qh")]
+visible = false
