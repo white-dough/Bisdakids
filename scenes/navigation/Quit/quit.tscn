@@ -93,18 +93,16 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.005
-anchor_top = -0.14
-anchor_right = 1.185
-anchor_bottom = 0.1375
-offset_left = -10.0
-offset_top = 4.06625
-offset_right = -10.0
-offset_bottom = 8.77375
+anchor_left = 0.993333
+anchor_top = -0.140984
+anchor_right = 1.17333
+anchor_bottom = 0.190164
+offset_right = -6.10352e-05
 grow_vertical = 2
 texture_normal = ExtResource("3_vlg3x")
 texture_pressed = ExtResource("4_4evvw")
 stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Content_Container" type="HBoxContainer" parent="ModalPanel2"]
 layout_mode = 1

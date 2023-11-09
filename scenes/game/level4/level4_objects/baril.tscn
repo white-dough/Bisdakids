@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1rl37swe3aim"]
+
+[ext_resource type="Texture2D" uid="uid://d3swh6rcwlj3f" path="res://graphics/level4/Objects/baril@2x.png" id="1_nsqb5"]
+
+[node name="baril" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-48, 72, 48, 72, 64, 40, 64, 0, 64, -40, 56, -72, -56, -72, -64, -32, -64, 8)
+
+[node name="baril" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_nsqb5")

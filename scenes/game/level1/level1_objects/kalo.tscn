@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bgwdveenqi0ey"]
 
-[ext_resource type="Texture2D" uid="uid://8ol1dfpykvs0" path="res://graphics/level1/2x/kalo@2x.png" id="1_ev71u"]
+[ext_resource type="Texture2D" path="res://graphics/level1/2x/kalo@2x.png" id="1_ev71u"]
 
 [node name="kalo" type="Area2D"]
 light_mask = 2

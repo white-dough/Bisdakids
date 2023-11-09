@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v7crd"]
 [ext_resource type="Texture2D" uid="uid://byxlsctg5cfnf" path="res://graphics/ui/icons/2x/emptyStar_sample@2x.png" id="3_ersfb"]
 [ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_n4i8w"]
-[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="4_dahf4"]
 [ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="5_1qr8m"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="6_2jh6r"]
 [ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_2424f"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_wwfku"]
 [ext_resource type="Theme" uid="uid://bukmbrgwy0i5j" path="res://themes/lbl.tres" id="8_6y1ao"]
@@ -88,14 +88,15 @@ texture_progress = ExtResource("10_rwp65")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 20.0
-offset_top = 40.0
+anchor_left = 1.00333
+anchor_top = -0.116216
+anchor_right = 1.17
+anchor_bottom = 0.156757
 grow_vertical = 2
-texture_normal = ExtResource("4_dahf4")
+texture_normal = ExtResource("6_2jh6r")
 texture_pressed = ExtResource("7_2424f")
-stretch_mode = 5
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Title_Container" type="VBoxContainer" parent="ModalPanel"]
 custom_minimum_size = Vector2(0, 100)
@@ -104,9 +105,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -217.0
-offset_top = 48.0
+offset_top = 40.0
 offset_right = 217.0
-offset_bottom = 148.0
+offset_bottom = 160.0
 grow_horizontal = 2
 alignment = 1
 

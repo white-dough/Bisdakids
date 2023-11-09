@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ncard8c6t8hm"]
+[gd_scene load_steps=15 format=3 uid="uid://ncard8c6t8hm"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7noa5"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/signup.gd" id="1_q2xjc"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_whhwp"]
 [ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="4_8lhk0"]
 [ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_gbvs7"]
+[ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="5_x1nua"]
 [ext_resource type="Texture2D" uid="uid://mui5jyjtm4nb" path="res://graphics/ui/icons/Sign up btn@2x.png" id="6_qb4vn"]
 [ext_resource type="Theme" uid="uid://gn482ubihrcf" path="res://themes/for_input.tres" id="7_rr74c"]
 [ext_resource type="Texture2D" uid="uid://bemhe8qqtfd5n" path="res://graphics/ui/buttons/2x/SignupPressed_btn@2x.png" id="9_hwpjh"]
@@ -45,9 +46,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -355.0
-offset_top = -219.0
+offset_top = -249.0
 offset_right = 355.0
-offset_bottom = 279.0
+offset_bottom = 249.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -60,25 +61,22 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -815.0
-offset_top = -35.0
-offset_right = -715.0
-offset_bottom = 65.0
+offset_left = -801.0
+offset_top = -45.0
+offset_right = -701.0
+offset_bottom = 55.0
 grow_vertical = 2
 texture_normal = ExtResource("4_8lhk0")
-stretch_mode = 0
+texture_pressed = ExtResource("5_x1nua")
+stretch_mode = 3
 
 [node name="ContentVBox" type="VBoxContainer" parent="SignupPnl"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.487324
-anchor_top = 0.166667
-anchor_right = 0.487324
-anchor_bottom = 0.594378
-offset_left = -282.0
-offset_top = -60.0
-offset_right = 282.0
-offset_bottom = 60.0
+anchor_left = 0.135211
+anchor_top = 0.0582329
+anchor_right = 0.869014
+anchor_bottom = 0.664659
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 5
@@ -107,7 +105,7 @@ size_flags_horizontal = 0
 theme = SubResource("Theme_kux5i")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 23
 text = "Ngalan sa tiggamit:"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -129,7 +127,7 @@ size_flags_horizontal = 0
 theme = SubResource("Theme_kux5i")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 23
 text = "Susi sa Akawnt:"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -153,7 +151,7 @@ size_flags_horizontal = 0
 theme = SubResource("Theme_kux5i")
 theme_override_colors/font_color = Color(0.980392, 0.686275, 0.231373, 1)
 theme_override_colors/font_shadow_color = Color(0.431373, 0.176471, 0.0431373, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 23
 text = "Susi sa Akawnt: (pagpamatood)"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -168,14 +166,15 @@ secret = true
 text_direction = 1
 
 [node name="SignupBtn" type="TextureButton" parent="."]
-offset_left = 550.0
-offset_top = 504.0
-offset_right = 747.0
-offset_bottom = 581.0
+offset_left = 400.0
+offset_top = 467.0
+offset_right = 919.0
+offset_bottom = 544.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("6_qb4vn")
 texture_pressed = ExtResource("9_hwpjh")
+stretch_mode = 3
 
 [connection signal="pressed" from="SignupPnl/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="SignupBtn" to="." method="_on_signup_btn_pressed"]

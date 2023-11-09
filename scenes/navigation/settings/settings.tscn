@@ -1,12 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnk6o3iq6l2pg"]
+[gd_scene load_steps=23 format=3 uid="uid://cnk6o3iq6l2pg"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_wt7e2"]
 [ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
-[ext_resource type="Texture2D" uid="uid://bmw48uwyhfxg1" path="res://graphics/ui/store/closeButtonStore.png" id="3_uhgdr"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
 [ext_resource type="Theme" uid="uid://7happngt6m6v" path="res://themes/for_title_lbl.tres" id="4_padj5"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_5u8ul"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_45avk"]
 [ext_resource type="Texture2D" uid="uid://qsoomwci6h4c" path="res://graphics/navigation/settings/slider@2x.png" id="5_u25ld"]
 [ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_8ypn1"]
 [ext_resource type="Theme" uid="uid://dmrrlilds2s0i" path="res://themes/hslider_theme.tres" id="6_flv43"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ck7qrrt55j3ws" path="res://graphics/ui/icons/account_btn@2x.png" id="9_wt604"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/volume_control.gd" id="10_18041"]
 [ext_resource type="Texture2D" uid="uid://bcj5oicry6cnf" path="res://graphics/ui/icons/akawnt_btn_disabled.png" id="11_4evfi"]
+[ext_resource type="Texture2D" uid="uid://bfnrm3hl41vri" path="res://graphics/ui/buttons/2x/accountPressed_btn@2x.png" id="14_ym3xt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -122,10 +123,12 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 20.0
-offset_top = 40.0
+offset_left = -4.0
+offset_top = -56.0
+offset_right = 96.0
+offset_bottom = 45.0
 grow_vertical = 2
-texture_normal = ExtResource("3_uhgdr")
+texture_normal = ExtResource("5_45avk")
 texture_pressed = ExtResource("6_8ypn1")
 stretch_mode = 3
 
@@ -195,7 +198,9 @@ custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 size_flags_horizontal = 8
 texture_normal = ExtResource("9_wt604")
+texture_pressed = ExtResource("14_ym3xt")
 texture_disabled = ExtResource("11_4evfi")
+stretch_mode = 3
 
 [connection signal="pressed" from="SettingsPnl/CloseBtn" to="." method="_on_close_btn_pressed"]
 [connection signal="pressed" from="SettingsPnl/SettingsVbox/AccountBtn" to="." method="_on_account_btn_pressed"]
