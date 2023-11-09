@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://5rmtsbidxlcb" path="res://graphics/level4/Objects/pala@2x.png" id="1_6yj4y"]
 
-[node name="pala" type="Area2D"]
+[node name="Pala" type="Area2D"]
 light_mask = 2
 visibility_layer = 2
+position = Vector2(792, 473)
 collision_layer = 8
 collision_mask = 8
 

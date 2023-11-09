@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck2rf202b4w6j"]
+
+[ext_resource type="Texture2D" uid="uid://pkkv27mv3km0" path="res://graphics/level4/Objects/karreta@2x.png" id="1_pbc3q"]
+
+[node name="karreta" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(8, 96, 16, 112, 32, 128, 64, 128, 96, 112, 112, 88, 120, 72, 136, 72, 144, 56, 112, -8, 120, -16, 120, -24, 192, -104, 176, -120, 128, -128, 40, -64, 16, -64, -168, 16, -184, 32, -184, 48, -168, 64, -128, 80, -112, 80, -96, 80, -32, 96, -16, 96)
+
+[node name="karreta" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_pbc3q")

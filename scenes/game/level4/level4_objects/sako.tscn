@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://br244c6relk51"]
+
+[ext_resource type="Texture2D" uid="uid://bck40ljc3o3de" path="res://graphics/level4/Objects/sako@2x.png" id="1_3ew6c"]
+
+[node name="sako" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-160, 104, -56, 112, 56, 112, 152, 104, 144, 88, 128, 40, 104, 16, 96, -16, 80, -48, 88, -56, 88, -64, 96, -72, 64, -120, 32, -104, 24, -104, -24, -40, -72, -64, -80, -48, -80, -40, -88, -24, -80, -8, -80, 0, -96, 24, -128, 48, -144, 80)
+
+[node name="sako" type="Sprite2D" parent="."]
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_3ew6c")

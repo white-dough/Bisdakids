@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ld2cp71x0q8e"]
 
-[ext_resource type="Texture2D" uid="uid://4smdqcfc7tde" path="res://graphics/level1/2x/sista@2x.png" id="1_warnn"]
+[ext_resource type="Texture2D" uid="uid://bdds5yynbf31j" path="res://graphics/level1/Objects/sista@2x.png" id="1_2seu1"]
 
 [node name="sista" type="Area2D"]
 light_mask = 2
@@ -10,7 +10,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="sista" type="Sprite2D" parent="."]
-texture = ExtResource("1_warnn")
+texture = ExtResource("1_2seu1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-32, 41, -42, 68, -39, 82, -24, 94, 15, 95, 25, 92, 37, 82, 41, 70, 37, 56, 25, 37, 30, 23, 26, 14, 17, 5, 12, 4, 10, -58, 19, -66, 20, -86, 10, -95, -11, -95, -18, -88, -21, -79, -18, -63, -12, -59, -13, 5, -25, 11, -30, 23, -29, 33)

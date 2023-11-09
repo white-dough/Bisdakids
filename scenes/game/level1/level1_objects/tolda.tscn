@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dp1ldut5aplof"]
 
-[ext_resource type="Texture2D" uid="uid://v4bj2oqof6t" path="res://graphics/level1/2x/tolda@2x.png" id="1_4afq1"]
+[ext_resource type="Texture2D" uid="uid://bjee3rvd7c5ke" path="res://graphics/level1/Objects/tolda@2x.png" id="1_c7jcm"]
 
 [node name="Tolda" type="Area2D"]
 light_mask = 2
@@ -19,4 +19,4 @@ polygon = PackedVector2Array(-359.539, -323.133, -373.474, -316.258, -365.113, -
 [node name="Tolda_2x" type="Sprite2D" parent="."]
 light_mask = 2
 visibility_layer = 2
-texture = ExtResource("1_4afq1")
+texture = ExtResource("1_c7jcm")

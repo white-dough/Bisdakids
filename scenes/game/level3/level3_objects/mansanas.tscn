@@ -4,9 +4,10 @@
 
 [node name="Mansanas" type="Area2D"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(2, 5, -3, 19, 3, 31, 17, 34, 23, 41, 32, 41, 41, 33, 46, 11, 38, -2, 29, -4, 22, 3, 10, -1)
+
 [node name="Mansanas" type="Sprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("1_stc8j")
 centered = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-1, 4, -5, 18, 1, 31, 12, 33, 18, 40, 28, 40, 39, 31, 44, 11, 37, -2, 25, -4, 20, 0, 9, -3)

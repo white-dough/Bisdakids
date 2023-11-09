@@ -311,7 +311,6 @@ _data = {
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6dw4m"]
-texture = ExtResource("28_o7hj8")
 
 [sub_resource type="Theme" id="Theme_tmvob"]
 Button/styles/normal = SubResource("StyleBoxTexture_6dw4m")
@@ -496,8 +495,6 @@ offset_right = 654.0
 offset_bottom = 583.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_tmvob")
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level1"]
@@ -531,8 +528,6 @@ offset_right = 698.0
 offset_bottom = 503.0
 scale = Vector2(0.455, 0.455)
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level2"]
@@ -567,8 +562,6 @@ offset_right = 753.0
 offset_bottom = 441.0
 scale = Vector2(0.455, 0.455)
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level3"]
@@ -604,8 +597,6 @@ offset_bottom = 394.0
 scale = Vector2(0.455, 0.455)
 theme = SubResource("Theme_dy6hr")
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level4"]
@@ -640,8 +631,6 @@ offset_right = 870.0
 offset_bottom = 310.0
 scale = Vector2(0.455, 0.455)
 disabled = true
-texture_normal = ExtResource("28_o7hj8")
-texture_disabled = ExtResource("32_jxuy0")
 stretch_mode = 5
 
 [node name="Prog" type="TextureProgressBar" parent="Levels/level5"]

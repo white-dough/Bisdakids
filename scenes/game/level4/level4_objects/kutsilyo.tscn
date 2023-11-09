@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://grf26y81lp7b"]
+
+[ext_resource type="Texture2D" uid="uid://by0wob1e67nom" path="res://graphics/level4/Objects/kutsilyo@2x.png" id="1_njb51"]
+
+[node name="kutsilyo" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-64, 0, -48, 16, -32, 8, 8, 8, 64, 0, 64, -8, 16, -16, 0, -16, -8, -16, -48, -8)
+
+[node name="kutsilyo" type="Sprite2D" parent="."]
+rotation = 0.179769
+scale = Vector2(0.549242, 0.482172)
+texture = ExtResource("1_njb51")
