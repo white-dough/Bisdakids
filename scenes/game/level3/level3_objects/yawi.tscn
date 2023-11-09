@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtgp6bap2k63s"]
+
+[ext_resource type="Texture2D" uid="uid://rcn8ta18s63t" path="res://graphics/level3/2x/yawi@2x.png" id="1_kmcav"]
+
+[node name="Yawi" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, 4, -2, 13, 6, 20, 12, 19, 25, 30, 35, 17, 13, -2, 5, -1)
+
+[node name="Yawi" type="Sprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_kmcav")
+centered = false

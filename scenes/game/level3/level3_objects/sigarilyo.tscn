@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsbrx8j3lxh20"]
+
+[ext_resource type="Texture2D" uid="uid://chcn3dd4c0q87" path="res://graphics/level3/2x/sigarilyo@2x.png" id="1_tmtie"]
+
+[node name="Sigarilyo" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4, 13, 0, 20, 4, 22, 7, 27, 22, 27, 33, 21, 26, 9, 34, 5, 29, -4, 12, 1)
+
+[node name="Sigarilyo" type="Sprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_tmtie")
+centered = false

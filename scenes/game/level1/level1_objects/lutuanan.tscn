@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dx2ekmhyxxlu2"]
+[gd_scene load_steps=7 format=3 uid="uid://dx2ekmhyxxlu2"]
 
-[ext_resource type="Texture2D" uid="uid://cq6vxvi1gw60x" path="res://graphics/level1/2x/2x/smoke2@2x.png" id="2_6bcfm"]
-[ext_resource type="Texture2D" uid="uid://xsovgrldcrwj" path="res://graphics/level1/2x/lutuanan@2x.png" id="2_o040w"]
+[ext_resource type="Texture2D" uid="uid://djgljauohrpk7" path="res://graphics/level1/Objects/lutuanan@2x.png" id="1_ksjsl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_knbhu"]
 
@@ -38,7 +37,6 @@ speed_scale = 0.65
 explosiveness = 0.07
 randomness = 0.05
 lifetime_randomness = 0.05
-texture = ExtResource("2_6bcfm")
 emission_shape = 1
 emission_sphere_radius = 15.21
 direction = Vector2(0, 0)
@@ -52,7 +50,7 @@ scale_amount_min = 0.0
 color = Color(1, 1, 1, 0.172549)
 
 [node name="Lutuanan1_2x" type="Sprite2D" parent="."]
-texture = ExtResource("2_o040w")
+texture = ExtResource("1_ksjsl")
 
 [node name="FireParticles" type="CPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_knbhu")

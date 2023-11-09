@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://vmcpo8u1g6ey"]
+
+[ext_resource type="Texture2D" uid="uid://ds14bntqv7pvc" path="res://graphics/level3/2x/salag_nest@2x.png" id="1_jjd67"]
+
+[node name="Salag" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2, 4)
+polygon = PackedVector2Array(2, 2, -5, 14, -4, 27, 5, 38, 16, 45, 32, 45, 47, 44, 60, 40, 66, 25, 65, 8, 55, 0, 39, -4, 15, -2)
+
+[node name="Salag" type="Sprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_jjd67")
+centered = false

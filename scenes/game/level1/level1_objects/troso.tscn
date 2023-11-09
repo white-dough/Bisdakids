@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bf6cns2lio6eg"]
 
-[ext_resource type="Texture2D" uid="uid://dbaepp26pew2i" path="res://graphics/level1/2x/troso@2x.png" id="2_v7cve"]
+[ext_resource type="Texture2D" uid="uid://bc4d17wdqa172" path="res://graphics/level1/Objects/troso@2x.png" id="1_66tka"]
 
 [node name="Troso" type="Area2D"]
 light_mask = 2
@@ -14,4 +14,4 @@ scale = Vector2(0.677134, 0.717686)
 polygon = PackedVector2Array(-72.4652, 41.251, -66.8909, -11.4586, -69.6781, -45.8344, -61.3167, -57.2931, -50.1682, -61.8765, -36.2326, -64.1682, -8.36137, -64.1682, 5.57424, -64.1682, 22.297, -59.5848, 36.2326, -55.0013, 39.0197, -48.1262, 55.7425, -57.2931, 66.8909, -57.2931, 69.6781, -38.9593, 66.8909, -27.5007, 55.7425, -20.6255, 41.8068, -6.87517, 44.594, 25.2089, 39.0197, 45.8344, 30.6583, 57.2931, 13.9356, 61.8765, -5.57424, 66.46, -27.8712, 64.1682, -50.1682, 57.2931)
 
 [node name="Troso_2x" type="Sprite2D" parent="."]
-texture = ExtResource("2_v7cve")
+texture = ExtResource("1_66tka")

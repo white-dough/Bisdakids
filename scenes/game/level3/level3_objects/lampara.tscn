@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc2c1lskcnxx6"]
+
+[ext_resource type="Texture2D" uid="uid://dtp2gfrey8uu3" path="res://graphics/level3/2x/lampara@2x.png" id="1_eo555"]
+
+[node name="Lampara" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2, 4)
+polygon = PackedVector2Array(9, -6, 9, 14, -1, 15, -5, 59, 2, 61, 2, 66, 34, 66, 34, 61, 41, 59, 38, 15, 29, 14, 29, -6)
+
+[node name="Lampara" type="Sprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_eo555")
+centered = false

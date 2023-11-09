@@ -4,9 +4,10 @@
 
 [node name="Timbangan" type="Area2D"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -3, 0, 9, 10, 9, 10, 15, 2, 20, -3, 30, -3, 41, 2, 50, 35, 50, 40, 42, 41, 30, 36, 19, 29, 15, 29, 9, 40, 9, 40, -3)
+
 [node name="Timbangan" type="Sprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("1_k4uru")
 centered = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-2, -2, -2, 45, 36, 45, 36, -2)
