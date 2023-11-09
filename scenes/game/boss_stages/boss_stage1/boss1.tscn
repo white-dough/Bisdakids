@@ -18,7 +18,10 @@ script = ExtResource("1_dby58")
 level_name = "level5"
 level_time = 301.0
 
+[node name="HUD" parent="." instance=ExtResource("5_01x7t")]
+
 [node name="GameScene" parent="." instance=ExtResource("1_shust")]
+show_behind_parent = true
 position = Vector2(222, 0)
 scale = Vector2(0.831178, 1)
 
@@ -31,8 +34,6 @@ layer = 2
 visible = false
 
 [node name="Background2" parent="GameScene" instance=ExtResource("5_bk7my")]
-
-[node name="HUD" parent="." instance=ExtResource("5_01x7t")]
 
 [node name="ObjectAnimation" parent="." instance=ExtResource("5_ejmmk")]
 top_level = true
@@ -57,6 +58,6 @@ visible = false
 [node name="WaveProg" parent="." instance=ExtResource("11_avxq3")]
 visible = false
 
-[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
 [connection signal="ready" from="." to="HUD" method="_on_level_ready"]
+[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
 [connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

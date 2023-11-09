@@ -40,6 +40,7 @@ func load_level_btns() -> void:
 		level_btns[i].get_child(0).visible = true
 
 func modal_display(level_key: String) -> void:
+	Audio.play_sfx(Audio.level_btn_sfx)
 	var level_titles : Dictionary = {
 		"level1": "Lebel 1: Kalasangan sa Kahayag",
 		"level2": "Lebel 2: Kabukiran",
@@ -63,13 +64,12 @@ func modal_display(level_key: String) -> void:
 	modal_play_btn.pressed.connect(changeScene.bind("res://scenes/game/"+level_key+"/"+level_key+".tscn"))
 	modal.show()
 
-func _on_settings_button_pressed():
-	print('settings')
-
 func closeModal():
+	Audio.play_sfx(Audio.close_btn_sfx)
 	modal.hide()
 
 func changeScene(link):
+	Audio.play_sfx(Audio.normal_btn_sfx)
 	get_tree().change_scene_to_file(link)
 
 
