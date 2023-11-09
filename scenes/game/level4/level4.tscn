@@ -14,10 +14,11 @@ script = ExtResource("1_xgxlh")
 level_name = "level4"
 level_time = 361.0
 
-[node name="GameScene" parent="." instance=ExtResource("2_ex78v")]
-
 [node name="HUD" parent="." instance=ExtResource("2_10bpc")]
 metadata/_edit_use_anchors_ = true
+
+[node name="GameScene" parent="." instance=ExtResource("2_ex78v")]
+show_behind_parent = true
 
 [node name="ObjectAnimation" parent="." instance=ExtResource("3_sauh1")]
 show_behind_parent = false
@@ -36,6 +37,6 @@ visible = false
 [node name="LevelFailed" parent="." instance=ExtResource("6_chxad")]
 visible = false
 
-[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
 [connection signal="ready" from="." to="HUD" method="_on_level_ready"]
+[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
 [connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

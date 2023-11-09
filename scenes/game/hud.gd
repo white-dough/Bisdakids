@@ -91,6 +91,7 @@ func get_definition() -> Dictionary:
 
 func _on_clue_pressed():
 	if int(Game.user_inventory['hint']) > 0:
+		Audio.play_sfx(Audio.hint_sfx)
 		use_hint()
 		Game.user_inventory['hint'] = int(Game.user_inventory['hint']) - 1
 		Game.user_inventory['hint_timestamp'] = Time.get_unix_time_from_system()
@@ -126,6 +127,7 @@ func _on_time_freeze_pressed():
 	
 
 func time_freeze():
+	Audio.play_sfx(Audio.freeze_sfx)
 	var time_froze_sprite = $ColorRect/Panel/ContainerHUD/TimerBar/TimeFroze
 	if timer.is_paused():
 		timer.set_paused(false)
@@ -149,6 +151,7 @@ func label_definitions():
 
 func word_def_display(event, labelName):
 	if event is InputEventMouseButton:
+		Audio.play_sfx(Audio.book_flip_sfx)
 		if event.pressed:
 			pressed = true
 			press_time = 0
@@ -163,3 +166,8 @@ func word_def_display(event, labelName):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
+
+
+func _on_settings_pressed():
+#	var settings_scene : PackedScene = load()
+	Audio.play_sfx(Audio.wood_btn_sfx)

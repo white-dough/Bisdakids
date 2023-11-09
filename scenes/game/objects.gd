@@ -3,6 +3,7 @@ extends Node2D
 signal object_found_signal(object_name)
 
 @onready var current_objects: Array = []; var count_of_objects_to_find: int; var selected_objects: Array; var history_current_objects: Array = []
+@onready var handletaps_node : Node2D = $HandleTaps
 var click_abuse_counter: int
 var click_abuse_max: int = 5
 
@@ -15,6 +16,8 @@ func _on_level_ready():
 	click_abuse_reset_timer.start()
 	click_abuse_reset_timer.timeout.connect(reset_click_abuse_counter)
 	timer.timeout.connect(remove_taps)
+	handletaps_node.visibility_changed.connect(handle_taps_sfx)
+	
 
 #Function to randomly select the objects to be found in the level
 func select_random_elements(count: int) -> Array:
@@ -78,6 +81,7 @@ func _unhandled_input(event):
 		if object_found.is_visible_in_tree() && object_found in current_objects:
 			#animate, remove from current objects, remove label, replace label
 			object_found_signal.emit(object_found)
+			Audio.play_sfx(Audio.correct_sfx)
 			populate_current_objects(object_found)
 		else:
 			click_abuse_counter += 1
@@ -93,7 +97,9 @@ func reset_click_abuse_counter():
 #func _process(delta):
 #	print(selected_objects)
 
-	
+func handle_taps_sfx():
+	if handletaps_node.visible:
+		Audio.play_sfx(Audio.incorrect_sfx)
 
 func remove_taps():
 	print('hidden')

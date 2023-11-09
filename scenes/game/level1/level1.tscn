@@ -14,14 +14,16 @@ script = ExtResource("1_m8407")
 level_name = "level1"
 level_time = 601.0
 
-[node name="GameScene" parent="." instance=ExtResource("3_aq4u2")]
-position = Vector2(222, 0)
-
 [node name="HUD" parent="." instance=ExtResource("3_07e03")]
+
+[node name="GameScene" parent="." instance=ExtResource("3_aq4u2")]
+show_behind_parent = true
+position = Vector2(222, 0)
+scale = Vector2(0.832, 1)
 
 [node name="ObjectAnimation" parent="." instance=ExtResource("4_hq6rp")]
 show_behind_parent = false
-scale = Vector2(1, 1)
+scale = Vector2(0.832, 1)
 
 [node name="VictoryTriumph" parent="." instance=ExtResource("5_heil1")]
 visible = false
@@ -35,6 +37,6 @@ visible = false
 [node name="LevelFailed" parent="." instance=ExtResource("8_0gdl2")]
 visible = false
 
-[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
 [connection signal="ready" from="." to="HUD" method="_on_level_ready"]
+[connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
 [connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

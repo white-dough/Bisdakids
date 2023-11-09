@@ -19,7 +19,7 @@ extends Node
 @onready var incorrect_sfx: AudioStream = preload("res://audio/assets/sfx/incorrect_sfx.mp3")
 @onready var freeze_sfx: AudioStream = preload("res://audio/assets/sfx/freeze_sfx.wav")
 @onready var correct_sfx: AudioStream = preload("res://audio/assets/sfx/object_found_sfx.mp3")
-@onready var book_flip_sfx: AudioStream = preload("res://audio/assets/sfx/word_def_sfx.wav")
+@onready var book_flip_sfx: AudioStream = preload("res://audio/assets/sfx/word_def_sfx.mp3")
 
 #result sfx
 @onready var success_sfx: AudioStream = preload("res://audio/assets/sfx/victory_sfx.wav")

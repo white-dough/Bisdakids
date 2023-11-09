@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://dptp3em1qnmlm"]
+[gd_scene load_steps=71 format=3 uid="uid://dptp3em1qnmlm"]
 
 [ext_resource type="Texture2D" uid="uid://b87ns7pvx17vs" path="res://graphics/map/map_assets/background@2x.png" id="1_c6so8"]
 [ext_resource type="Script" path="res://scenes/navigation/map/map.gd" id="1_grlkn"]
@@ -15,13 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://cisjvsxjj7nxq" path="res://graphics/map/map_assets/bato@2x.png" id="8_otpsd"]
 [ext_resource type="Texture2D" uid="uid://futmwoke68ub" path="res://graphics/map/map_assets/ship@2x.png" id="9_2lscx"]
 [ext_resource type="Texture2D" uid="uid://cbllsgvjyx4ti" path="res://graphics/map/map_assets/Cloud 1@2x.png" id="9_b3fea"]
-[ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="10_xl8yn"]
 [ext_resource type="Texture2D" uid="uid://cgi456u321hgs" path="res://graphics/map/map_assets/Cloud 3@2x.png" id="10_xrkcv"]
 [ext_resource type="Texture2D" uid="uid://cj4l8wbpdo1fk" path="res://graphics/map/map_assets/Cloud 2@2x.png" id="11_1t3uu"]
 [ext_resource type="Script" path="res://addons/ppc/ppcamera.gd" id="11_byrbn"]
 [ext_resource type="Texture2D" uid="uid://hhstxh6rx317" path="res://graphics/map/map_assets/Cloud 4@2x.png" id="12_aw4km"]
-[ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="13_ayf4u"]
-[ext_resource type="Texture2D" uid="uid://c8osw3r3v61at" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="14_8kcks"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="14_b1qn5"]
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_cloud1.gd" id="17_15k7x"]
 [ext_resource type="Script" path="res://scenes/navigation/map/animate_CloudTL.gd" id="19_4qjtg"]
@@ -36,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://deni7t6hu4dvl" path="res://graphics/level1/Objects/2x/level_locked@2x.png" id="29_so468"]
 [ext_resource type="Texture2D" uid="uid://cnu3iieckgk7t" path="res://graphics/map/map_assets/fullStars@6x.png" id="30_5krwd"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="31_rpe0u"]
+[ext_resource type="Script" path="res://scenes/navigation/map/UI.gd" id="33_e57pd"]
 [ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="41_kbegr"]
 [ext_resource type="Texture2D" uid="uid://cq7d5vs1fv2k0" path="res://graphics/ui/buttons/2x/home_btn@2x.png" id="41_lf7t1"]
 [ext_resource type="Texture2D" uid="uid://grtp33445l2m" path="res://graphics/ui/buttons/2x/pressedhome_btn@2x.png" id="42_8eefv"]
@@ -43,9 +41,6 @@
 [ext_resource type="Texture2D" uid="uid://cgrxrjoupkik8" path="res://graphics/ui/icons/energy_icon@2x.png" id="43_c8xve"]
 [ext_resource type="PackedScene" uid="uid://ch5bdc76jqvg8" path="res://scenes/navigation/map/Modal.tscn" id="43_c44qh"]
 [ext_resource type="Texture2D" uid="uid://cwujrikbom8u6" path="res://graphics/ui/icons/coins_icon@2x.png" id="44_lm8xn"]
-[ext_resource type="Texture2D" uid="uid://bi723sm2d088v" path="res://graphics/ui/buttons/2x/dailytaskPressed_btn@2x.png" id="45_u5s8m"]
-[ext_resource type="Texture2D" uid="uid://cuqam1m8f711b" path="res://graphics/ui/buttons/2x/shopPressed_btn_1@2x.png" id="46_g0efq"]
-[ext_resource type="Texture2D" uid="uid://cacqy1r184d6g" path="res://graphics/ui/buttons/2x/InventoryPressed_btn@2x.png" id="47_kx3ab"]
 [ext_resource type="Texture2D" uid="uid://bq3oyaedyi8bq" path="res://graphics/ui/buttons/2x/settingsPressed_btn@2x.png" id="48_aeo3r"]
 
 [sub_resource type="Animation" id="Animation_ng5rb"]
@@ -659,6 +654,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("33_e57pd")
 
 [node name="Control" type="Control" parent="UI"]
 layout_mode = 3
@@ -672,18 +668,12 @@ mouse_filter = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0190259
+anchor_left = 0.0624049
 anchor_top = 0.0418919
-anchor_right = 0.435312
+anchor_right = 0.478691
 anchor_bottom = 0.159459
 theme_override_constants/separation = 70
 metadata/_edit_use_anchors_ = true
-
-[node name="HomeBtn" type="TextureButton" parent="UI/Control/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("41_lf7t1")
-texture_pressed = ExtResource("42_8eefv")
-stretch_mode = 3
 
 [node name="energy_lbl" type="Label" parent="UI/Control/HBoxContainer"]
 custom_minimum_size = Vector2(160, 60)
@@ -734,23 +724,12 @@ offset_top = 32.0
 offset_right = 1280.0
 offset_bottom = 120.0
 theme_override_constants/separation = 35
+alignment = 2
 
-[node name="DailyTask" type="TextureButton" parent="UI/Control/HBoxContainer2"]
+[node name="HomeBtn" type="TextureButton" parent="UI/Control/HBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("10_xl8yn")
-texture_pressed = ExtResource("45_u5s8m")
-stretch_mode = 3
-
-[node name="Shop" type="TextureButton" parent="UI/Control/HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("13_ayf4u")
-texture_pressed = ExtResource("46_g0efq")
-stretch_mode = 3
-
-[node name="Inventory" type="TextureButton" parent="UI/Control/HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("14_8kcks")
-texture_pressed = ExtResource("47_kx3ab")
+texture_normal = ExtResource("41_lf7t1")
+texture_pressed = ExtResource("42_8eefv")
 stretch_mode = 3
 
 [node name="Settings" type="TextureButton" parent="UI/Control/HBoxContainer2"]
@@ -761,3 +740,6 @@ stretch_mode = 3
 
 [node name="LevelModal" parent="." instance=ExtResource("43_c44qh")]
 visible = false
+
+[connection signal="pressed" from="UI/Control/HBoxContainer2/HomeBtn" to="UI" method="_on_home_btn_pressed"]
+[connection signal="pressed" from="UI/Control/HBoxContainer2/Settings" to="UI" method="_on_settings_pressed"]
