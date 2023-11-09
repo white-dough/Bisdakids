@@ -20,6 +20,9 @@ extends Control
 @onready var quit_btn : TextureButton = $"../Control/VBoxContainer/Quit"
 @onready var quit_scene : PackedScene = load("res://scenes/navigation/Quit/quit.tscn")
 
+@onready var signup_scene = load("res://scenes/navigation/settings/account_management/signup.tscn")
+@onready var login_scene = load("res://scenes/navigation/settings/account_management/login.tscn")
+
 #res://scenes/navigation/Quit/quit.tscn
 
 
@@ -39,7 +42,14 @@ func _ready():
 
 
 func modal_btn_pressed(modal_scene):
+	if modal_scene == quit_scene or modal_scene == settings_scene:
+		Audio.play_sfx(Audio.close_btn_sfx)
+	elif modal_scene == signup_scene or modal_scene == login_scene:
+		Audio.play_sfx(Audio.normal_btn_sfx)
+	else:
+		Audio.play_sfx(Audio.wood_btn_sfx)
 	for child in get_children():
 		if child != error_modal:
 			child.queue_free()
 	add_child(modal_scene.instantiate())
+	

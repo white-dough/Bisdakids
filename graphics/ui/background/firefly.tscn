@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dorayn2s4edj7"]
-
-[ext_resource type="Texture2D" uid="uid://c1ngbinm0rg6m" path="res://graphics/level1/2x/2x/firefly1@2x.png" id="1_tqk3m"]
+[gd_scene load_steps=2 format=3 uid="uid://dorayn2s4edj7"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2bpmk"]
 blend_mode = 1
@@ -11,7 +9,6 @@ amount = 30
 speed_scale = 0.1
 explosiveness = 0.07
 randomness = 1.0
-texture = ExtResource("1_tqk3m")
 emission_shape = 3
 emission_rect_extents = Vector2(700, 700)
 spread = 172.77

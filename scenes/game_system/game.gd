@@ -143,7 +143,7 @@ func sync_data():
 			inventory_items[key] = Game.user_inventory[key]
 	inventory_timestamp_max = inventory_timestamps.max()
 	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
-	PhpRequest.synfc_data(user_name, timestamp, inventory_items, progress_scores)
+	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores)
 	print(progress_scores)
 	await PhpRequest.http_request.request_completed
 	

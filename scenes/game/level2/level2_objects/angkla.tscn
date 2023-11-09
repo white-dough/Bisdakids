@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://qmu17aoylwed"]
+[gd_scene load_steps=2 format=3 uid="uid://qmu17aoylwed"]
 
-[node name="" type="Object"]
+[ext_resource type="Texture2D" uid="uid://iiw6awwe3qi2" path="res://graphics/level2/2x/angkla@2x.png" id="1_ps7yh"]
+
+[node name="Angkla" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-40, 13.3333, -13.3333, 40, 13.3333, 40, 26.6667, 26.6667, 40, 13.3333, 26.6667, -13.3333, 13.3333, 0, 13.3333, -26.6667, 0, -40, -13.3333, -53.3333, -13.3333, -26.6667, -26.6667, -13.3333, -13.3333, -13.3333, -13.3333, 13.3333, -26.6667, 0)
+
+[node name="angkla" type="Sprite2D" parent="."]
+scale = Vector2(1.62602, 1.83908)
+texture = ExtResource("1_ps7yh")

@@ -107,9 +107,10 @@ func set_labels():
 func claim_attempt(task_clicked_index: int):
 #	print(task_clicked_index)
 	if task_bars[task_clicked_index].get_value() < task_bars[task_clicked_index].get_max() or claim_flags[task_clicked_index].button_pressed:
-		print("not finished or already claimed")
+		Audio.play_sfx(Audio.close_btn_sfx)
 		return#shakevibrate bar
 	reward_buttons[task_clicked_index].disabled = true
+	Audio.play_sfx(Audio.dt_claim_sfx)
 	Game.user_inventory[reward_labels[task_clicked_index].get_text()] += int(reward_quantity_labels[task_clicked_index].get_text())
 	Game.update_local_save()
 	#verification if task is done
@@ -120,4 +121,5 @@ func claim_attempt(task_clicked_index: int):
 
 
 func _on_close_btn_pressed():
+	Audio.play_sfx(Audio.close_btn_sfx)
 	queue_free()

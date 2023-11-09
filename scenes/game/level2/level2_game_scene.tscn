@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game/objects.gd" id="1_3dn2d"]
 [ext_resource type="Texture2D" uid="uid://cnor5q28wg4km" path="res://graphics/level2/background/level2_background@2x.png" id="2_o57uu"]
-[ext_resource type="PackedScene" uid="uid://qmu17aoylwed" path="res://scenes/game/level2/level2_objects/angkla.tscn" id="3_k8bxq"]
+[ext_resource type="PackedScene" uid="uid://qmu17aoylwed" path="res://scenes/game/level2/level2_objects/angkla.tscn" id="3_mc0ql"]
 [ext_resource type="PackedScene" uid="uid://vijor7c2hqq7" path="res://scenes/game/level2/level2_objects/balde.tscn" id="4_5hvoc"]
 [ext_resource type="PackedScene" uid="uid://bkgtkjdo38j7u" path="res://scenes/game/level2/level2_objects/barko.tscn" id="5_ioam6"]
 [ext_resource type="PackedScene" uid="uid://c55hj7cv0x1iv" path="res://scenes/game/level2/level2_objects/duyan.tscn" id="6_dqvvt"]
@@ -61,21 +61,16 @@ centered = false
 
 [node name="Objects" type="Node2D" parent="."]
 
-[node name="Angkla" parent="Objects" instance=ExtResource("3_k8bxq")]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-editor_description = ""
-script = null
+[node name="Angkla" parent="Objects" instance=ExtResource("3_mc0ql")]
+position = Vector2(524.551, 412.621)
+scale = Vector2(0.6, 0.6)
 
 [node name="Balde" parent="Objects" instance=ExtResource("4_5hvoc")]
 position = Vector2(165.269, 590.291)
 
 [node name="Barko" parent="Objects" instance=ExtResource("5_ioam6")]
-position = Vector2(722.156, 313.592)
+position = Vector2(856.287, 378.641)
+scale = Vector2(0.3, 0.3)
 
 [node name="Duyan" parent="Objects" instance=ExtResource("6_dqvvt")]
 position = Vector2(241.916, 341.748)
@@ -85,7 +80,6 @@ position = Vector2(834.442, 47.5045)
 rotation = -0.481711
 
 [node name="Gitara" parent="Objects" instance=ExtResource("8_m1iow")]
-position = Vector2(1228.74, 504.854)
 
 [node name="Kaban" parent="Objects" instance=ExtResource("9_yx6nh")]
 position = Vector2(462.276, 411.65)

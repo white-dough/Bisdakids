@@ -2,14 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_34rfk"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/login.gd" id="1_derfu"]
-[ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="2_mkmfo"]
-[ext_resource type="Texture2D" uid="uid://cliof4jxmjgso" path="res://graphics/ui/icons/back button@2x.png" id="4_k3e5g"]
+[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_mkmfo"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="4_k3e5g"]
 [ext_resource type="Theme" uid="uid://7happngt6m6v" path="res://themes/for_title_lbl.tres" id="4_ylsld"]
-[ext_resource type="Texture2D" uid="uid://dlm0a45bw5gpd" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="6_jset4"]
-[ext_resource type="Texture2D" uid="uid://b17c7uvlkdtd5" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="6_lma8w"]
+[ext_resource type="Texture2D" uid="uid://bvii16ashhc7b" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="6_jset4"]
+[ext_resource type="Texture2D" uid="uid://bq6mj67xqc371" path="res://graphics/ui/icons/Sign In Btn@2x.png" id="6_lma8w"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="7_03x1f"]
 [ext_resource type="Theme" uid="uid://gn482ubihrcf" path="res://themes/for_input.tres" id="7_xf33k"]
-[ext_resource type="Texture2D" uid="uid://c2g8rre4d1c83" path="res://graphics/ui/buttons/2x/sulodPressed_btn@2x.png" id="10_a2088"]
+[ext_resource type="Texture2D" uid="uid://cagfcrdbw6521" path="res://graphics/ui/buttons/2x/sulodPressed_btn@2x.png" id="10_a2088"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71lv0"]
 content_margin_left = 7.0

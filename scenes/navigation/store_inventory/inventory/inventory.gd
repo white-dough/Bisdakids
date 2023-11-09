@@ -43,4 +43,5 @@ func _ready():
 
 
 func _on_close_button_pressed():
+	Audio.play_sfx(Audio.close_btn_sfx)
 	queue_free()

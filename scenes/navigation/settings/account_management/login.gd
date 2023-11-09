@@ -8,6 +8,7 @@ extends CanvasLayer
 @onready var error_modal = $"../ErrorModal"
 
 func _on_login_btn_pressed():
+	Audio.play_sfx(Audio.normal_btn_sfx)
 	var user_name: String = username_input.get_text()
 	var password: String = password_input.get_text()
 	PhpRequest.login(user_name, password)
@@ -30,6 +31,7 @@ func _on_login_btn_pressed():
 
 
 func _on_back_btn_pressed():
+	Audio.play_sfx(Audio.close_btn_sfx)
 	for child in mainmenu_modal_node.get_children():
 		if child != error_modal:
 			child.queue_free()
