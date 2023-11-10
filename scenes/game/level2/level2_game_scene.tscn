@@ -62,20 +62,13 @@ centered = false
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Angkla" parent="Objects" instance=ExtResource("3_k8bxq")]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-editor_description = ""
-script = null
+position = Vector2(538.922, 411.651)
 
 [node name="Balde" parent="Objects" instance=ExtResource("4_5hvoc")]
 position = Vector2(165.269, 590.291)
 
 [node name="Barko" parent="Objects" instance=ExtResource("5_ioam6")]
-position = Vector2(722.156, 313.592)
+position = Vector2(893.413, 388.35)
 
 [node name="Duyan" parent="Objects" instance=ExtResource("6_dqvvt")]
 position = Vector2(241.916, 341.748)
@@ -85,7 +78,6 @@ position = Vector2(834.442, 47.5045)
 rotation = -0.481711
 
 [node name="Gitara" parent="Objects" instance=ExtResource("8_m1iow")]
-position = Vector2(1228.74, 504.854)
 
 [node name="Kaban" parent="Objects" instance=ExtResource("9_yx6nh")]
 position = Vector2(462.276, 411.65)

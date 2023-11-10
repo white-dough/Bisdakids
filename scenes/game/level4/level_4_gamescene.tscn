@@ -68,7 +68,6 @@ texture = ExtResource("3_2dr58")
 position = Vector2(704, 408)
 
 [node name="Kalo" parent="Objects" instance=ExtResource("3_obp7q")]
-position = Vector2(784, 240)
 
 [node name="Hagdanan" parent="Objects" instance=ExtResource("4_krl0i")]
 position = Vector2(1112, 520)
