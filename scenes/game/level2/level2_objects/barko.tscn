@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bkgtkjdo38j7u"]
 
-[ext_resource type="Texture2D" uid="uid://dvld1gw8cb82s" path="res://graphics/level2/2x/2x with base/barko_1@2x.png" id="1_308vx"]
+[ext_resource type="Texture2D" uid="uid://bevsesqsr65g3" path="res://graphics/level2/2x/2x with base/barko_1@2x.png" id="1_308vx"]
 
 [node name="barko" type="Area2D"]
 scale = Vector2(0.14, 0.14)
