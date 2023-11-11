@@ -26,6 +26,7 @@ extends Node
 @onready var loaded_player_data : Dictionary = {}
 @onready var http_request : HTTPRequest = HTTPRequest.new()
 @onready var is_connected_to_internet : bool = false
+var premium: bool = false
 
 func check_is_connected_internet():
 	http_request.cancel_request()
@@ -84,6 +85,7 @@ func daily_task_reset():
 	# Select the first 3 shuffled keys and add them to the selectedItems dictionary
 	for i in range(3):
 		var key = keys[i]
+		content_as_dictionary[key]["progress"] = 0
 		daily_task[key] = content_as_dictionary[key]
 	var datetime = Time.get_datetime_dict_from_system()
 	datetime['hour'] = 0
@@ -132,23 +134,32 @@ func sync_data():
 	var inventory_timestamp_max: float
 	var progress_timestamp: float = float(Game.progress["timestamp"])
 	var inventory_items: Dictionary = {}
-	var progress_scores: Dictionary = Game.progress.duplicate()
+	var progress_scores: Dictionary = progress.duplicate()
 	progress_scores.erase("timestamp")
-	for key in Game.user_inventory:
+	for key in user_inventory:
 		if key.contains("_timestamp"):
 			inventory_timestamps.append(float(Game.user_inventory[key]))
 		else:
 			inventory_items[key] = Game.user_inventory[key]
 	inventory_timestamp_max = inventory_timestamps.max()
 	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
-	PhpRequest.sync_data(Game.user_name, timestamp, inventory_items, progress_scores)
+	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores)
+	print(progress_scores)
 	await PhpRequest.http_request.request_completed
+	
 	if PhpRequest.clean_response != "db_updated":
 		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
-		Game.user_inventory =  result["user_inventory"]
-		Game.progress = result["account_progress"]
-		Game.daily_task_reset()
-		Game.update_local_save()
+		progress = result["account_progress"]
+		
+		daily_task_reset()
+		update_local_save()
+		
+func get_user_inventory_local() -> Dictionary:
+	var user_inventory_clean: Dictionary = {}
+	for key in user_inventory:
+		if not key.contains("_timestamp"):
+			user_inventory_clean[key] = Game.user_inventory[key]
+	return user_inventory_clean
 
 func progress_update(level : String, score : int):
 	if progress[level] > score:
@@ -172,7 +183,7 @@ func update_local_save():
 func daily_task_from_db():
 	PhpRequest.get_dailyTasks()
 	await PhpRequest.http_request.request_completed
-	if PhpRequest.clean_response != "BISDAKIDS_API_DOWN":
+	if PhpRequest.api_no_error:
 		var file = FileAccess.open("res://data/daily_task.json", FileAccess.WRITE)
 		var formattedData = {}
 		for data in PhpRequest.clean_response:
@@ -181,6 +192,7 @@ func daily_task_from_db():
 			for key in data:
 				if key != "task_title":
 					formattedData[title][key] = data[key]
+#					formattedData[title]["progress"] = 0
 		file.store_line(JSON.stringify(formattedData, "\t"))
 		file.close()
 
@@ -189,9 +201,15 @@ func _ready():
 	add_child(http_request)
 	http_request.connect("request_completed", _on_request_completed)
 	load_data()
+	daily_task_logic()
+	premium = true if user_inventory['premium'] else false
 	print(loaded_player_data)
 	await daily_task_from_db()
-	daily_task_logic()#timer
+	#timer
+#	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.WRITE)
+#	var player_data: Dictionary = { "user_name": "dwight19", "progress": { "level1": 4869, "level2": 0, "level3": 0, "level4": 0, "level5": 0, "timestamp": 1697299889.65907 }, "user_inventory": { "coin": 40, "coin_timestamp": 1697299889.77125, "energy": 0, "energy_timestamp": 1697299889.8651, "hint": 13, "hint_timestamp": 1697356638.439, "premium": 0, "premium_timestamp": 1697299890.05594, "time_freeze": 3, "time_freeze_timestamp": 1697356634.596 }, "daily_task": { "Level Finish": { "task_desc": "Finish a level.", "reward": "coin", "reward_quantity": 10, "progress": 0, "goal": 1 }, "Detective": { "task_desc": "Find 15 hidden objects.", "reward": "coin", "reward_quantity": 8, "progress": 10, "goal": 15 }, "Score": { "task_desc": "Collect 5000 score points.", "reward": "coin", "reward_quantity": 15, "progress": 5000, "goal": 5000 }, "unix_datestamp": 1697328000 } }
+#	file.store_var(player_data)
+#	print("save: " + str(player_data))
 #	print(user_inventory)
 	
 #		user_inventory = PhpRequest.clean_response

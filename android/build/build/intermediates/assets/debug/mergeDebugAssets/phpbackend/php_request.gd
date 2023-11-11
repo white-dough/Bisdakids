@@ -1,13 +1,13 @@
 extends Node
 
 var http_request: HTTPRequest = HTTPRequest.new()
-#const SERVER_URL = "http://192.168.1.105:8080/godot-php-postgresql/api-request.php"
-const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
+const SERVER_URL = "http://192.168.208.21:8080/godot-php-postgresql/api-request.php"
+#const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
 const SERVER_HEADERS = ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"]
 var request_queue : Array = []
 var is_requesting : bool = false
 var clean_response
-
+var api_no_error: bool = true
 func _ready():
 	http_request.set_timeout(5.0) 
 	add_child(http_request)
@@ -87,22 +87,18 @@ func sync_data(user_name : String, timestamp : float, user_inventory: Dictionary
 	var data = {"user_name": user_name,"timestamp": timestamp, "user_inventory": user_inventory, "account_progress": account_progress}
 	request_queue.push_back({"command" : command, "data" : data});
 
-func _http_request_completed(result, _response_code, _headers, body):
+func _http_request_completed(_result, _response_code, _headers, body):
 	is_requesting = false
-	if result != HTTPRequest.RESULT_SUCCESS:
-		printerr("Connection Error: BisdakidsPOSTGRESQL PHP API")
-		clean_response = "ErrPHP"
-		return
-	var response_body = body.get_string_from_utf8()
-	var response
-	if not response:
-		printerr("BISDAKIDS API IS DOWN: ")
-		clean_response = "BISDAKIDS_API_DOWN"
+	api_no_error = true
+	var response_body = body.get_string_from_utf8()	
+	if not response_body:
+		printerr("BISDAKIDS API IS DOWN:")
+		api_no_error = false
 		return
 	# Grab our JSON and handle any errors reported by our PHP code:
-	response = JSON.parse_string(response_body)
-#	print(response['error'])
 	
+#	print(response['error'])
+	var response = JSON.parse_string(response_body)
 	if response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
@@ -110,6 +106,8 @@ func _http_request_completed(result, _response_code, _headers, body):
 	request_saving(response)
 	
 func request_saving(response):
+	if response.has("api_error"):
+		api_no_error = false
 	match response['command']:
 		"login":
 			if response['response']['query'] == "success":

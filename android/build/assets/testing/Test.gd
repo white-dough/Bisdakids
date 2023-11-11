@@ -28,8 +28,15 @@ func dateToUnixTimestamp(timestamp):
 	dateTime.second = 0
 	return Time.get_unix_time_from_datetime_dict(dateTime)
 	
+	
+func _input(event):
+	if event is InputEventScreenTouch :
+		var how_many_fingers=event.get_index()
+		print(how_many_fingers)
+	
+	
 func _ready():
-	print(int("x25"))
+#	print(int("x25"))
 #	var result = isDayAheadOrMore(oldTimestamp, newTimestamp)
 #	if result:
 #		print("The new timestamp is a day ahead or more.")

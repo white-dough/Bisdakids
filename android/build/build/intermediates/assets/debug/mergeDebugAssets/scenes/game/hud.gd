@@ -8,6 +8,7 @@ signal level_finished(time_finished:float)
 @onready var current_objects: Array = []
 @onready var level_time: float
 @onready var timer: Timer = $ColorRect/Panel/ContainerHUD/TimerBar/Timer
+@onready var timer_lbl: Label = $ColorRect/Panel/ContainerHUD/TimerBar/TimeLbl
 @onready var pause_timer: Timer = $"TimeFreeze/PauseTimer"
 @onready var progress_bar: TextureProgressBar = $ColorRect/Panel/ContainerHUD/TimerBar/ProgressBar
 @onready var level_success
@@ -22,7 +23,7 @@ const LONG_PRESS_DURATION = 1.5 # in seconds
 var pressed = false # para long press feature
 var press_time = 0 # para long press feature
 
-func _on_level_1_ready():
+func _on_level_ready():
 	set_labels()
 	label_definitions() # function para sa word defintion (long press)
 	level_time = $"..".level_time
@@ -33,8 +34,6 @@ func _on_level_1_ready():
 	timer.start()
 	pause_timer.timeout.connect(time_freeze)
 	level_success = $"../LevelCompleted"
-	#lasdas.onclick.connect(time_freeze(label))
-
 func _process(_delta):
 	progress_bar.value = timer.get_time_left()
 	# print(current_objects_strings)
@@ -44,6 +43,7 @@ func _process(_delta):
 		if press_time >= LONG_PRESS_DURATION:
 			pressed = false
 			press_time = 0
+	timer_lbl.text = "%d:%02d" % [floor(timer.time_left / 60), int(timer.time_left) % 60]
 	
 func object_list_label(current_objects_strings: Array):
 	var data = get_definition()
@@ -56,10 +56,11 @@ func object_list_label(current_objects_strings: Array):
 			desc_label.set_text(data[current_objects_strings[i]])
 		else:
 			finish_level_mark += 1
+			#why 15? idk its supposed to be 5, signifying that all 5 labels are empty
 			if finish_level_mark >= 15:
 				var time_finished: float = timer.time_left
 				level_finished.emit(time_finished)
-
+			
 # this function gets the data from words-beta.json (defintion of the words)
 func get_definition() -> Dictionary:
 	var jsonFile = FileAccess.open("res://data/words-beta.json", FileAccess.READ)
@@ -67,14 +68,30 @@ func get_definition() -> Dictionary:
 	jsonFile.close()
 	
 	var content_as_dictionary = JSON.parse_string(contentOfFile)
-	#var level1 = content_as_dictionary.level1[0].Troso
-	return content_as_dictionary.level1
+	var dataToBePassed
+	
+	var parentNode = str(get_parent().get_scene_file_path())
+	var level = $"..".level_name
+	
+	match(level):
+		"level1":
+			dataToBePassed = content_as_dictionary.level1
+		"level2":
+			dataToBePassed = content_as_dictionary.level2
+		"level3":
+			dataToBePassed = content_as_dictionary.level3
+		"level4":
+			dataToBePassed = content_as_dictionary.level4
+		"level5":
+			dataToBePassed = content_as_dictionary.level5
+	return dataToBePassed
 	#var level2 = content_as_dictionary.level2[0]
 	#var level3 = content_as_dictionary.level3[0]
 	# etc until level5...
 
 func _on_clue_pressed():
 	if int(Game.user_inventory['hint']) > 0:
+		Audio.play_sfx(Audio.hint_sfx)
 		use_hint()
 		Game.user_inventory['hint'] = int(Game.user_inventory['hint']) - 1
 		Game.user_inventory['hint_timestamp'] = Time.get_unix_time_from_system()
@@ -93,7 +110,6 @@ func set_labels():
 	hint_lbl.set_text(str(Game.user_inventory['hint']))
 	time_freeze_lbl.set_text(str(Game.user_inventory['time_freeze']))
 	
-
 func _on_timer_timeout():
 	if level_success.visible:
 		return
@@ -111,6 +127,7 @@ func _on_time_freeze_pressed():
 	
 
 func time_freeze():
+	Audio.play_sfx(Audio.freeze_sfx)
 	var time_froze_sprite = $ColorRect/Panel/ContainerHUD/TimerBar/TimeFroze
 	if timer.is_paused():
 		timer.set_paused(false)
@@ -134,6 +151,7 @@ func label_definitions():
 
 func word_def_display(event, labelName):
 	if event is InputEventMouseButton:
+		Audio.play_sfx(Audio.book_flip_sfx)
 		if event.pressed:
 			pressed = true
 			press_time = 0
@@ -148,3 +166,10 @@ func word_def_display(event, labelName):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = false
+
+
+func _on_settings_pressed():
+	var settings_scene : PackedScene = load("res://scenes/navigation/settings_gameplay/settings_gameplay.tscn")
+	Audio.play_sfx(Audio.wood_btn_sfx)
+	add_child(settings_scene.instantiate())
+	
