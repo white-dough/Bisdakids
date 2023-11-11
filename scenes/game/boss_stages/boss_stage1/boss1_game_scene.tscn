@@ -1,18 +1,18 @@
-[gd_scene load_steps=36 format=3 uid="uid://53k1jkllajyp"]
+[gd_scene load_steps=37 format=3 uid="uid://53k1jkllajyp"]
 
-[ext_resource type="Texture2D" uid="uid://dybr8of1s7ip0" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_5b20p"]
+[ext_resource type="Texture2D" uid="uid://dtv2l6hbvswog" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_5b20p"]
 [ext_resource type="Script" path="res://scenes/game/objects.gd" id="1_ai58q"]
-[ext_resource type="Texture2D" uid="uid://dfvkp4ucvapsr" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_l7sqt"]
-[ext_resource type="Texture2D" uid="uid://f57dstft7pfa" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="3_vb2c2"]
-[ext_resource type="Texture2D" uid="uid://bun1kpudkhp6e" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="4_ql26j"]
-[ext_resource type="Texture2D" uid="uid://b4jgsvgnvp7o6" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="5_jujqu"]
+[ext_resource type="Texture2D" uid="uid://u2cratvt6wx1" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_l7sqt"]
+[ext_resource type="Texture2D" uid="uid://benn2cl732vbb" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="3_vb2c2"]
+[ext_resource type="Texture2D" uid="uid://caujf6tr5f6rw" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="4_ql26j"]
+[ext_resource type="Texture2D" uid="uid://btv5wjn76jy3b" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="5_jujqu"]
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/ghost.gd" id="6_f61ve"]
-[ext_resource type="Texture2D" uid="uid://b10jotxcy5lw" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_wt4jo"]
-[ext_resource type="Texture2D" uid="uid://inypcvmgdces" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_42as0"]
+[ext_resource type="Texture2D" uid="uid://bsctbsxv70g4f" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_wt4jo"]
+[ext_resource type="Texture2D" uid="uid://duyynoi4bnp3r" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_42as0"]
 [ext_resource type="PackedScene" uid="uid://1fi74vbvuegc" path="res://scenes/game/boss_stages/boss_stage1/Objects/lingkuranan.tscn" id="9_jtjk0"]
+[ext_resource type="Texture2D" uid="uid://clr0qya6152h3" path="res://graphics/boss_stage/Objects/2x/ulo statwa@2x.png" id="10_6mccf"]
 [ext_resource type="PackedScene" uid="uid://cus1l43frefad" path="res://scenes/game/boss_stages/boss_stage1/Objects/kadena.tscn" id="10_gtu0w"]
 [ext_resource type="PackedScene" uid="uid://cwmt1oiv2vxe5" path="res://scenes/game/boss_stages/boss_stage1/Objects/picture_frame.tscn" id="11_ciovy"]
-[ext_resource type="PackedScene" uid="uid://cm11i436x5dbs" path="res://scenes/game/boss_stages/boss_stage1/Objects/ulo_na_statwa.tscn" id="12_ve7fn"]
 [ext_resource type="PackedScene" uid="uid://vj63fwjxyi1" path="res://scenes/game/boss_stages/boss_stage1/Objects/espada.tscn" id="13_idpnx"]
 [ext_resource type="PackedScene" uid="uid://r7w423de5cyv" path="res://scenes/game/boss_stages/boss_stage1/Objects/salamin.tscn" id="14_s5tai"]
 [ext_resource type="PackedScene" uid="uid://d17c2teeyiavm" path="res://scenes/game/boss_stages/boss_stage1/Objects/atsa.tscn" id="15_7pfd7"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://c444u1ayis4bh" path="res://scenes/game/boss_stages/boss_stage1/Objects/orasan.tscn" id="31_aicti"]
 [ext_resource type="PackedScene" uid="uid://cygrpb6sfffit" path="res://scenes/game/boss_stages/boss_stage1/Objects/susi.tscn" id="32_wexot"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="34_1qjqy"]
+[ext_resource type="PackedScene" uid="uid://cplqlt178jirb" path="res://scenes/game/boss_stages/boss_stage1/Objects/karton.tscn" id="34_ceyyb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qdkhj"]
 blend_mode = 1
@@ -49,7 +50,8 @@ custom_minimum_size = Vector2(0, 1100)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 2630.0
+offset_left = -2.00583
+offset_right = 2627.99
 offset_bottom = 1223.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -60,111 +62,117 @@ mouse_filter = 2
 texture = ExtResource("1_5b20p")
 
 [node name="Design2_2x" type="Sprite2D" parent="Background"]
-position = Vector2(1190.46, 544.573)
+position = Vector2(1163.38, 539.613)
 scale = Vector2(1.00292, 0.991936)
 texture = ExtResource("2_l7sqt")
 
 [node name="SkeleNiDinu_2x" type="Sprite2D" parent="Background"]
-position = Vector2(449, 229)
+position = Vector2(385.12, 214.258)
 texture = ExtResource("3_vb2c2")
 
 [node name="SkeleNiDinu2_2x" type="Sprite2D" parent="Background"]
-position = Vector2(1133, 582)
-scale = Vector2(1, 0.988449)
+position = Vector2(1155.36, 606.552)
+scale = Vector2(1, 0.86088)
 texture = ExtResource("4_ql26j")
 
 [node name="ghost" type="Sprite2D" parent="Background"]
 top_level = true
 material = SubResource("CanvasItemMaterial_qdkhj")
-position = Vector2(716, 311)
+position = Vector2(656, 312)
 scale = Vector2(0.422652, 0.422652)
 texture = ExtResource("5_jujqu")
 script = ExtResource("6_f61ve")
 
 [node name="Design3_2x" type="Sprite2D" parent="Background"]
-position = Vector2(447.3, 655.669)
-scale = Vector2(1.00292, 0.991936)
+top_level = true
+position = Vector2(604, 560)
+scale = Vector2(0.888889, 0.941176)
 texture = ExtResource("7_wt4jo")
 
 [node name="Design_2x" type="Sprite2D" parent="Background"]
 top_level = true
-position = Vector2(423, 697)
+position = Vector2(368, 696)
 scale = Vector2(1.00292, 0.991936)
 texture = ExtResource("8_42as0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(561.633, 388.839)
+texture = ExtResource("10_6mccf")
 
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Lingkuranan" parent="Objects" instance=ExtResource("9_jtjk0")]
-position = Vector2(720, 375)
+position = Vector2(664, 376)
 
 [node name="Kadena" parent="Objects" instance=ExtResource("10_gtu0w")]
-position = Vector2(364, 37)
+position = Vector2(304, 16)
 
-[node name="Picture frame" parent="Objects" instance=ExtResource("11_ciovy")]
-position = Vector2(332, 345)
-
-[node name="Ulo na statwa" parent="Objects" instance=ExtResource("12_ve7fn")]
-position = Vector2(613, 389)
+[node name="Nakwadro" parent="Objects" instance=ExtResource("11_ciovy")]
+position = Vector2(280, 352)
 
 [node name="Espada" parent="Objects" instance=ExtResource("13_idpnx")]
-position = Vector2(311, 255)
+position = Vector2(243, 424)
 
 [node name="Salamin" parent="Objects" instance=ExtResource("14_s5tai")]
-position = Vector2(329, 555)
+position = Vector2(271, 552)
 
 [node name="Atsa" parent="Objects" instance=ExtResource("15_7pfd7")]
-position = Vector2(311, 651)
+position = Vector2(256, 640)
 
-[node name="Clip" parent="Objects" instance=ExtResource("16_iyfkw")]
-position = Vector2(356, 644)
+[node name="Klip" parent="Objects" instance=ExtResource("16_iyfkw")]
+position = Vector2(320, 648)
 
 [node name="Kahon" parent="Objects" instance=ExtResource("17_6lvwm")]
-position = Vector2(903, 589)
+position = Vector2(824, 536)
 
 [node name="Bungaanan" parent="Objects" instance=ExtResource("18_bvuo5")]
-position = Vector2(529, 652)
+position = Vector2(480, 656)
 
 [node name="Barel" parent="Objects" instance=ExtResource("19_g0qjp")]
-position = Vector2(596, 644)
+top_level = true
+position = Vector2(560, 648)
 
 [node name="Lampara" parent="Objects" instance=ExtResource("20_vo2ug")]
-position = Vector2(717, 667)
+position = Vector2(680, 664)
 
 [node name="Bungo" parent="Objects" instance=ExtResource("21_esfnb")]
-position = Vector2(668, 713)
+position = Vector2(616, 704)
 
 [node name="Sapatos" parent="Objects" instance=ExtResource("22_6rtbo")]
-position = Vector2(753, 683)
+position = Vector2(720, 680)
 
 [node name="Kandila" parent="Objects" instance=ExtResource("23_uap8q")]
-position = Vector2(808, 665)
+position = Vector2(768, 664)
 
 [node name="Papel" parent="Objects" instance=ExtResource("24_36tmw")]
-position = Vector2(809, 722)
+position = Vector2(760, 720)
 
 [node name="Globo" parent="Objects" instance=ExtResource("25_m0csg")]
-position = Vector2(873, 650)
+position = Vector2(856, 642)
 
 [node name="Lamesa" parent="Objects" instance=ExtResource("26_pa17w")]
-position = Vector2(941, 712)
+position = Vector2(928, 704)
 
 [node name="Teleskopyo" parent="Objects" instance=ExtResource("27_mdysj")]
-position = Vector2(526, 707)
+position = Vector2(480, 704)
 
 [node name="Pitsel" parent="Objects" instance=ExtResource("28_5rpwn")]
-position = Vector2(1169, 708)
+position = Vector2(920, 632)
 
 [node name="Baso" parent="Objects" instance=ExtResource("29_8j2d2")]
-position = Vector2(1206, 724)
+position = Vector2(984, 624)
 
 [node name="Pluma" parent="Objects" instance=ExtResource("30_40c0j")]
-position = Vector2(943, 635)
+position = Vector2(568, 564)
 
 [node name="Orasan" parent="Objects" instance=ExtResource("31_aicti")]
-position = Vector2(997, 189)
+position = Vector2(952, 192)
 
 [node name="Yawi" parent="Objects" instance=ExtResource("32_wexot")]
-position = Vector2(743, 722)
+position = Vector2(696, 720)
+
+[node name="Karton" parent="Objects" instance=ExtResource("34_ceyyb")]
+position = Vector2(40, 688)
 
 [node name="HandleTaps" parent="." instance=ExtResource("34_1qjqy")]
 visible = false

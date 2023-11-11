@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cplqlt178jirb"]
+
+[ext_resource type="Texture2D" uid="uid://bts5mt0cfw5to" path="res://graphics/boss_stage/Objects/2x/Kahon@2x.png" id="1_uiqf5"]
+
+[node name="Karton" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-48, 56, 48, 56, 48, 32, 56, 32, 56, 24, 64, 16, 48, -8, 48, -16, 56, -24, 16, -56, -48, -48, -56, -24, -48, 0, -64, 24, -48, 24)
+
+[node name="Karton" type="Sprite2D" parent="."]
+texture = ExtResource("1_uiqf5")

@@ -63,7 +63,6 @@ centered = false
 
 [node name="Angkla" parent="Objects" instance=ExtResource("3_mc0ql")]
 position = Vector2(524.551, 412.621)
-scale = Vector2(0.6, 0.6)
 
 [node name="Balde" parent="Objects" instance=ExtResource("4_5hvoc")]
 position = Vector2(165.269, 590.291)
