@@ -81,8 +81,8 @@ func _unhandled_input(event):
 		if object_found.is_visible_in_tree() && object_found in current_objects:
 			#animate, remove from current objects, remove label, replace label
 			object_found_signal.emit(object_found)
-			Audio.play_sfx(Audio.correct_sfx)
 			populate_current_objects(object_found)
+			Audio.play_sfx(Audio.correct_sfx)
 		else:
 			click_abuse_counter += 1
 			if click_abuse_counter > click_abuse_max:

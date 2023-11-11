@@ -169,5 +169,7 @@ func word_def_display(event, labelName):
 
 
 func _on_settings_pressed():
-#	var settings_scene : PackedScene = load()
+	var settings_scene : PackedScene = load("res://scenes/navigation/settings_gameplay/settings_gameplay.tscn")
 	Audio.play_sfx(Audio.wood_btn_sfx)
+	add_child(settings_scene.instantiate())
+	
