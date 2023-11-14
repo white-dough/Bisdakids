@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg8o5xt834xte"]
+
+[ext_resource type="Texture2D" uid="uid://ukox7xw6y8ls" path="res://graphics/level3/background/level3_background@2x.png" id="1_bobpx"]
+
+[node name="lvl3_gameScene" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(728, 200)
+scale = Vector2(1.01053, 1.03388)
+texture = ExtResource("1_bobpx")

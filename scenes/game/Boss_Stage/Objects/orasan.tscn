@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c444u1ayis4bh"]
+
+[ext_resource type="Texture2D" uid="uid://cqef8qkf4u1y1" path="res://graphics/boss_stage/Objects/2x/Orasan@2x.png" id="1_ixpcg"]
+
+[node name="Orasan" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-8, 40, 8, 40, 16, 16, 24, 0, 16, -8, 16, -16, 8, -24, 0, -32, -8, -24, -16, -24, -16, -16, -24, 8, -16, 24, -16, 32, -8, 32)
+
+[node name="Orasan" type="Sprite2D" parent="."]
+position = Vector2(-0.427631, 6)
+scale = Vector2(1.00689, 1.06667)
+texture = ExtResource("1_ixpcg")
