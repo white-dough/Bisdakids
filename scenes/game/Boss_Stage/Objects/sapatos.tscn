@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://iie55pspq5bd"]
+
+[ext_resource type="Texture2D" uid="uid://ci0jxj6aljbq5" path="res://graphics/boss_stage/Objects/2x/Sapatos@2x.png" id="1_722gp"]
+
+[node name="sapatos" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-23, 31, -7, 37, 1, 37, 11, 24, 15, 23, 15, 36, 21, 33, 20, 25, 26, 16, 21, 8, 18, 1, 25, -34, 13, -37, -1, -32, 0, -15, 0, 7, -5, 19, -11, 25, -23, 26, -25, 28)
+
+[node name="sapatos" type="Sprite2D" parent="."]
+texture = ExtResource("1_722gp")
