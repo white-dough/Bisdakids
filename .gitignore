@@ -5,6 +5,7 @@ scn/
 project.godot
 icon.png
 *.import
+android/*
 
 # Godot-specific ignores
 .import/
