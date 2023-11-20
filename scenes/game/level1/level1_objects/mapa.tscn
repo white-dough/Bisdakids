@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7r2yynu1lep4"]
 
-[ext_resource type="Texture2D" uid="uid://cv1yo2b5osa08" path="res://graphics/level1/Objects/mapa_2@2x.png" id="1_pgyg8"]
+[ext_resource type="Texture2D" uid="uid://bhat4gw6ik17" path="res://graphics/level1/Objects/mapa_2@2x.png" id="1_pgyg8"]
 
 [node name="mapa" type="Area2D"]
 light_mask = 2
