@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://7happngt6m6v"]
 
-[ext_resource type="FontFile" uid="uid://ny6ab3bchxqw" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="1_y6xuq"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="1_y6xuq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ava4q"]
 bg_color = Color(0.745098, 0.203922, 0.192157, 1)
