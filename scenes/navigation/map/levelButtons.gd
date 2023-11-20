@@ -42,11 +42,11 @@ func load_level_btns() -> void:
 func modal_display(level_key: String) -> void:
 	Audio.play_sfx(Audio.level_btn_sfx)
 	var level_titles : Dictionary = {
-		"level1": "Lebel 1: Kalasangan sa Kahayag",
-		"level2": "Lebel 2: Kabukiran",
-		"level3": "Lebel 3: Siyudad Merkado",
-		"level4": "Lebel 4: Hardin sa Bulak",
-		"level5": "Lebel 5: Kastilyo sa Kangitngit"
+		"level1": "Lebel 1: Kalasangan sa Ginatilan",
+		"level2": "Lebel 2: Katubigan sa Oslob",
+		"level3": "Lebel 3: Merkado sa Carbon",
+		"level4": "Lebel 4: Balay sa Kamalig",
+		"level5": "Lebel 5: Kastilyo sa Tuburan"
 	}
 	var highscore: int = Game.progress[level_key]
 	#progress star, level title, score, if not latest, play
