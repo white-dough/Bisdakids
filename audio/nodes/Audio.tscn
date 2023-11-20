@@ -12,3 +12,4 @@ bus = &"music"
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wlc0b")
+bus = &"sfx"
