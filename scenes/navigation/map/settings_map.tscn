@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://c6te2k2ct5fcd"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_63iy8"]
-[ext_resource type="Script" path="res://scenes/navigation/settings/settings.gd" id="1_wt7e2"]
+[ext_resource type="Script" path="res://scenes/navigation/map/settings_map.gd" id="1_hhsk5"]
 [ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_hnjgi"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_n0wcy"]
 [ext_resource type="Theme" uid="uid://7happngt6m6v" path="res://themes/for_title_lbl.tres" id="4_padj5"]
@@ -71,7 +71,7 @@ HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_lnqmn")
 HSlider/styles/slider = SubResource("StyleBoxTexture_vtlr5")
 
 [node name="Settings" type="CanvasLayer"]
-script = ExtResource("1_wt7e2")
+script = ExtResource("1_hhsk5")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -79,6 +79,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 texture = ExtResource("1_63iy8")
 expand_mode = 1
 
