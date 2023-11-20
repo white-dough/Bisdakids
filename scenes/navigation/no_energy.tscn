@@ -1,30 +1,28 @@
+[gd_scene load_steps=15 format=3 uid="uid://crpv1u6mrrquq"]
 
-[gd_scene load_steps=15 format=3 uid="uid://c8j40idjdbaw2"]
-
-
-[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7ko46"]
-[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_vpqu3"]
-[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_3btv8"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_hjqwo"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_fr0cm"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_db3ft"]
-[ext_resource type="Texture2D" uid="uid://coon2ym7tucd5" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_lclqq"]
-[ext_resource type="Texture2D" uid="uid://cpu3difm46s2g" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="8_2f8ov"]
-[ext_resource type="Texture2D" uid="uid://cps5kw768olyq" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_vamfd"]
-[ext_resource type="Texture2D" uid="uid://c4unbj7gph23e" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="10_mwcmu"]
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_ubsus"]
+[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_03qrw"]
+[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_ftsxp"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_2ibu3"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_ol8a3"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_dq1k2"]
+[ext_resource type="Texture2D" uid="uid://coon2ym7tucd5" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_xevw0"]
+[ext_resource type="Texture2D" uid="uid://cpu3difm46s2g" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="8_h3k3w"]
+[ext_resource type="Texture2D" uid="uid://cps5kw768olyq" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_ut55n"]
+[ext_resource type="Texture2D" uid="uid://c4unbj7gph23e" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="10_7net6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
 content_margin_bottom = 13.0
-texture = ExtResource("2_vpqu3")
+texture = ExtResource("2_03qrw")
 
 [sub_resource type="Theme" id="Theme_3kbfr"]
 Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
-texture = ExtResource("3_3btv8")
+texture = ExtResource("3_ftsxp")
 expand_margin_left = 10.0
 expand_margin_top = 10.0
 expand_margin_right = 10.0
@@ -33,7 +31,7 @@ expand_margin_bottom = 10.0
 [sub_resource type="Theme" id="Theme_k6w82"]
 Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
 
-[node name="insufficient_coins" type="CanvasLayer"]
+[node name="no_energy" type="CanvasLayer"]
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -41,7 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_7ko46")
+texture = ExtResource("1_ubsus")
 expand_mode = 1
 
 [node name="ModalPanel2" type="Panel" parent="."]
@@ -83,10 +81,9 @@ theme = SubResource("Theme_k6w82")
 theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("4_hjqwo")
+theme_override_fonts/font = ExtResource("4_2ibu3")
 theme_override_font_sizes/font_size = 30
-text = "Aguy! kuwangan imong kwarta, 
-palit una."
+text = "Sayang, wala na kay enerhiya, "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -100,8 +97,8 @@ anchor_right = 1.17333
 anchor_bottom = 0.190164
 offset_right = -6.10352e-05
 grow_vertical = 2
-texture_normal = ExtResource("5_fr0cm")
-texture_pressed = ExtResource("6_db3ft")
+texture_normal = ExtResource("5_ol8a3")
+texture_pressed = ExtResource("6_dq1k2")
 stretch_mode = 3
 metadata/_edit_use_anchors_ = true
 
@@ -123,14 +120,14 @@ alignment = 1
 
 [node name="dili_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
 layout_mode = 2
-texture_normal = ExtResource("7_lclqq")
-texture_pressed = ExtResource("8_2f8ov")
+texture_normal = ExtResource("7_xevw0")
+texture_pressed = ExtResource("8_h3k3w")
 stretch_mode = 3
 
 [node name="but_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
 layout_mode = 2
-texture_normal = ExtResource("9_vamfd")
-texture_pressed = ExtResource("10_mwcmu")
+texture_normal = ExtResource("9_ut55n")
+texture_pressed = ExtResource("10_7net6")
 stretch_mode = 3
 
 [connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed" flags=18]

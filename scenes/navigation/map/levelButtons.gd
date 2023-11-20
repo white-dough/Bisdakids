@@ -45,7 +45,7 @@ func modal_display(level_key: String) -> void:
 		"level1": "Lebel 1: Kalasangan sa Ginatilan",
 		"level2": "Lebel 2: Katubigan sa Oslob",
 		"level3": "Lebel 3: Merkado sa Carbon",
-		"level4": "Lebel 4: Balay sa Kamalig",
+		"level4": "Lebel 4: Balay sa kamalig",
 		"level5": "Lebel 5: Kastilyo sa Tuburan"
 	}
 	var highscore: int = Game.progress[level_key]
