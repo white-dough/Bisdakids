@@ -1,0 +1,138 @@
+[gd_scene load_steps=16 format=3 uid="uid://cpyai4efgi42s"]
+
+[ext_resource type="Script" path="res://scenes/game/map_confirm.gd" id="1_a4f6n"]
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="2_63trt"]
+[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_cvp2d"]
+[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="4_315um"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_7u27o"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="6_nlty4"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_fuol4"]
+[ext_resource type="Texture2D" uid="uid://bfpnupemtqcr" path="res://graphics/ui/buttons/2x/no_btn@2x.png" id="8_1h06a"]
+[ext_resource type="Texture2D" uid="uid://cpu3difm46s2g" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="9_cls4m"]
+[ext_resource type="Texture2D" uid="uid://b7yfcsu6vnwbf" path="res://graphics/ui/buttons/2x/yes_btn@2x.png" id="10_eqbq0"]
+[ext_resource type="Texture2D" uid="uid://c4unbj7gph23e" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="11_8oqwp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
+content_margin_left = 7.0
+content_margin_top = 5.0
+content_margin_right = 7.0
+content_margin_bottom = 13.0
+texture = ExtResource("3_cvp2d")
+
+[sub_resource type="Theme" id="Theme_3kbfr"]
+Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
+texture = ExtResource("4_315um")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_k6w82"]
+Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
+
+[node name="map_confirm" type="CanvasLayer"]
+script = ExtResource("1_a4f6n")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_63trt")
+expand_mode = 1
+
+[node name="ModalPanel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -158.0
+offset_right = 300.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_3kbfr")
+
+[node name="Title_Container" type="VBoxContainer" parent="ModalPanel2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -231.0
+offset_top = 48.0
+offset_right = 232.0
+offset_bottom = 148.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ModalPanel2/Title_Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_k6w82")
+theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("5_7u27o")
+theme_override_font_sizes/font_size = 30
+text = "Sigurado ka mo adto sa mapa? 
+ma biyaan nimo imong duwa."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseBtn" type="TextureButton" parent="ModalPanel2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.993333
+anchor_top = -0.140984
+anchor_right = 1.17333
+anchor_bottom = 0.190164
+offset_right = -6.10352e-05
+grow_vertical = 2
+texture_normal = ExtResource("6_nlty4")
+texture_pressed = ExtResource("7_fuol4")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Content_Container" type="HBoxContainer" parent="ModalPanel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.0
+offset_top = 2.5
+offset_right = 253.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="no_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
+layout_mode = 2
+texture_normal = ExtResource("8_1h06a")
+texture_pressed = ExtResource("9_cls4m")
+stretch_mode = 3
+
+[node name="yes_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
+layout_mode = 2
+texture_normal = ExtResource("10_eqbq0")
+texture_pressed = ExtResource("11_8oqwp")
+stretch_mode = 3
+
+[connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed"]
+[connection signal="pressed" from="ModalPanel2/Content_Container/no_btn" to="." method="_on_no_btn_pressed"]
+[connection signal="pressed" from="ModalPanel2/Content_Container/yes_btn" to="." method="_on_yes_btn_pressed"]
