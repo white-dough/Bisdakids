@@ -82,9 +82,9 @@ func get_dailyTasks():
 	var data = {}
 	request_queue.push_back({"command" : command, "data" : data});
 
-func sync_data(user_name : String, timestamp : float, user_inventory: Dictionary, account_progress: Dictionary):
+func sync_data(user_name : String, timestamp : float, user_inventory: Dictionary, account_progress: Dictionary, energy : int):
 	var command = "sync_data"
-	var data = {"user_name": user_name,"timestamp": timestamp, "user_inventory": user_inventory, "account_progress": account_progress}
+	var data = {"user_name": user_name,"timestamp": timestamp, "user_inventory": user_inventory, "account_progress": account_progress, "energy": energy}
 	request_queue.push_back({"command" : command, "data" : data});
 
 func _http_request_completed(_result, _response_code, _headers, body):
