@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://qh36n3tqty5r"]
 
-[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/Boss_Stage/boss_stage_gemescene.tscn" id="1_shust"]
+[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/boss_stages/boss_stage1/boss1_game_scene.tscn" id="1_shust"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="2_juxjp"]
-[ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/Boss_Stage/boss_Identification.tscn" id="3_77o8w"]
-[ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/Boss_Stage/boss_tigmu2.tscn" id="3_kb8ix"]
+[ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.tscn" id="3_77o8w"]
+[ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.tscn" id="3_kb8ix"]
 
 [node name="Boss_Stage" type="Node2D"]
 

@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://crpv1u6mrrquq"]
+[gd_scene load_steps=16 format=3 uid="uid://crpv1u6mrrquq"]
 
+[ext_resource type="Script" path="res://scenes/navigation/no_energy.gd" id="1_gtk3i"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_ubsus"]
 [ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_03qrw"]
 [ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_ftsxp"]
@@ -7,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_ol8a3"]
 [ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_dq1k2"]
 [ext_resource type="Texture2D" uid="uid://coon2ym7tucd5" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_xevw0"]
-[ext_resource type="Texture2D" uid="uid://cpu3difm46s2g" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="8_h3k3w"]
+[ext_resource type="Texture2D" uid="uid://bh8h3s1s7cphq" path="res://graphics/ui/buttons/2x/diliPressed_btn@2x.png" id="8_nroil"]
 [ext_resource type="Texture2D" uid="uid://cps5kw768olyq" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_ut55n"]
-[ext_resource type="Texture2D" uid="uid://c4unbj7gph23e" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="10_7net6"]
+[ext_resource type="Texture2D" uid="uid://cjpga2d7mieba" path="res://graphics/ui/buttons/2x/buyPressed_btn@2x.png" id="10_nbuje"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -32,6 +33,7 @@ expand_margin_bottom = 10.0
 Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
 
 [node name="no_energy" type="CanvasLayer"]
+script = ExtResource("1_gtk3i")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -49,10 +51,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -158.0
-offset_right = 300.0
-offset_bottom = 190.0
+offset_left = -288.0
+offset_top = -134.0
+offset_right = 277.0
+offset_bottom = 158.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -82,8 +84,9 @@ theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("4_2ibu3")
-theme_override_font_sizes/font_size = 30
-text = "Sayang, wala na kay enerhiya, "
+theme_override_font_sizes/font_size = 24
+text = "Aguy! Kuwangan imong enerhiya, 
+pwede ka mo palit arun makaduwa ka."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -110,9 +113,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -247.0
-offset_top = -5.5
+offset_top = 10.0
 offset_right = 253.0
-offset_bottom = 90.5
+offset_bottom = 90.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -121,13 +124,15 @@ alignment = 1
 [node name="dili_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
 layout_mode = 2
 texture_normal = ExtResource("7_xevw0")
-texture_pressed = ExtResource("8_h3k3w")
+texture_pressed = ExtResource("8_nroil")
 stretch_mode = 3
 
-[node name="but_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
+[node name="buy_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
 layout_mode = 2
 texture_normal = ExtResource("9_ut55n")
-texture_pressed = ExtResource("10_7net6")
+texture_pressed = ExtResource("10_nbuje")
 stretch_mode = 3
 
-[connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed" flags=18]
+[connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed"]
+[connection signal="pressed" from="ModalPanel2/Content_Container/dili_btn" to="." method="_on_dili_btn_pressed"]
+[connection signal="pressed" from="ModalPanel2/Content_Container/buy_btn" to="." method="_on_buy_btn_pressed"]

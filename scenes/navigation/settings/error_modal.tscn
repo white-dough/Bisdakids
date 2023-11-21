@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_nnxlp"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/error_modal.gd" id="1_pu4a7"]
-[ext_resource type="Texture2D" uid="uid://c7ftsmjs8ltl6" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_ged7c"]
+[ext_resource type="Texture2D" uid="uid://d3va3ytqba30n" path="res://graphics/ui/icons/2x/errorModal_1@2x.png" id="2_ged7c"]
 [ext_resource type="Theme" uid="uid://dvohq554kdv3p" path="res://themes/modal_title_label.tres" id="3_52g2f"]
-[ext_resource type="Texture2D" uid="uid://wev3qk5kuk8i" path="res://graphics/ui/icons/2x/error_okay_1@2x.png" id="3_ubrqc"]
-[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_ye38p"]
-[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="6_gu18a"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_ye38p"]
+[ext_resource type="Texture2D" uid="uid://cdmxph3m5323x" path="res://graphics/ui/icons/daily_task_description@2x.png" id="6_gu18a"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="7_yfuqm"]
-[ext_resource type="Texture2D" uid="uid://bf0fj6u4d2poq" path="res://graphics/ui/buttons/2x/okayPressed_btn@2x.png" id="9_so43t"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="10_8c05r"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="11_6ymk1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_contn"]
 texture = ExtResource("2_ged7c")
@@ -53,10 +53,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_contn")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0940767
-anchor_top = 0.189103
+anchor_top = 0.099359
 anchor_right = 0.91115
-anchor_bottom = 1.05449
-theme_override_constants/separation = 0
+anchor_bottom = 0.875
+theme_override_constants/separation = 10
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -84,12 +84,19 @@ text = "Dili mahimo ang koneksiyon sa server sa pagproseso sa kani na akawnt. Su
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="OkBtn" type="TextureButton" parent="ErrorModalPnl/ErrorContentVbox"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 10
-texture_normal = ExtResource("3_ubrqc")
-texture_pressed = ExtResource("9_so43t")
+[node name="CloseBtn" type="TextureButton" parent="ErrorModalPnl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.993333
+anchor_top = -0.140984
+anchor_right = 1.17333
+anchor_bottom = 0.190164
+offset_right = -6.10352e-05
+grow_vertical = 2
+texture_normal = ExtResource("10_8c05r")
+texture_pressed = ExtResource("11_6ymk1")
 stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="ErrorModalPnl/ErrorContentVbox/OkBtn" to="." method="_on_ok_btn_pressed"]
+[connection signal="pressed" from="ErrorModalPnl/CloseBtn" to="." method="_on_close_btn_pressed"]
