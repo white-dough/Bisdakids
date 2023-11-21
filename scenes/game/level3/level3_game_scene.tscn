@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://n6ijakby6vjf"]
+[gd_scene load_steps=34 format=3 uid="uid://n6ijakby6vjf"]
 
 [ext_resource type="Texture2D" uid="uid://ukox7xw6y8ls" path="res://graphics/level3/background/level3_background@2x.png" id="1_5s8sy"]
 [ext_resource type="PackedScene" uid="uid://btwf224jpqhvi" path="res://scenes/game/level3/level3_objects/hagdanan.tscn" id="2_ng785"]
@@ -20,8 +20,14 @@
 [ext_resource type="PackedScene" uid="uid://b2uul6f1dyxra" path="res://scenes/game/level3/level3_objects/kahig.tscn" id="14_af0po"]
 [ext_resource type="PackedScene" uid="uid://c3wwuhkp6dvmt" path="res://scenes/game/level3/level3_objects/sako.tscn" id="15_4g8q6"]
 [ext_resource type="Texture2D" uid="uid://blm6pthxbc880" path="res://graphics/level3/2x/gasoline tank@2x.png" id="15_nppcq"]
+[ext_resource type="PackedScene" uid="uid://brwt7wwp4fm0s" path="res://scenes/game/level3/level3_objects/bomba.tscn" id="16_ckbtx"]
 [ext_resource type="PackedScene" uid="uid://bib76ryxyjvhv" path="res://scenes/game/level3/level3_objects/botilya.tscn" id="16_j0snf"]
 [ext_resource type="Texture2D" uid="uid://b6hudvcp8jo4i" path="res://graphics/level3/2x/news paper@2x.png" id="16_vii1d"]
+[ext_resource type="PackedScene" uid="uid://bc2c1lskcnxx6" path="res://scenes/game/level3/level3_objects/lampara.tscn" id="17_uy8k7"]
+[ext_resource type="PackedScene" uid="uid://vmcpo8u1g6ey" path="res://scenes/game/level3/level3_objects/salag.tscn" id="18_lae8n"]
+[ext_resource type="PackedScene" uid="uid://bsbrx8j3lxh20" path="res://scenes/game/level3/level3_objects/sigarilyo.tscn" id="19_qqxgp"]
+[ext_resource type="PackedScene" uid="uid://cxyfdl054lgft" path="res://scenes/game/level3/level3_objects/sinsilyo.tscn" id="20_l7ef0"]
+[ext_resource type="PackedScene" uid="uid://dtgp6bap2k63s" path="res://scenes/game/level3/level3_objects/yawi.tscn" id="21_nhgg0"]
 [ext_resource type="Texture2D" uid="uid://b7058jhciwque" path="res://graphics/level3/2x/water bottle@2x.png" id="23_faeb4"]
 [ext_resource type="Texture2D" uid="uid://gpqikvpx2i1v" path="res://graphics/level3/2x/basket@2x.png" id="24_fxckk"]
 [ext_resource type="Texture2D" uid="uid://byf0s07tatlup" path="res://graphics/level3/2x/bag@2x.png" id="25_ucfxq"]
@@ -53,7 +59,7 @@ position = Vector2(552.982, 349.379)
 position = Vector2(409.009, 412.816)
 
 [node name="Mansanas" parent="Objects" instance=ExtResource("4_hod78")]
-position = Vector2(606.181, 670.874)
+position = Vector2(485.543, 617.476)
 
 [node name="Tawo-tawo" parent="Objects" instance=ExtResource("5_hg8el")]
 position = Vector2(1100.7, 432.039)
@@ -73,7 +79,7 @@ position = Vector2(644.068, 661.165)
 [node name="Bulsita" parent="Objects" instance=ExtResource("13_hn3js")]
 position = Vector2(263.21, 651.456)
 
-[node name="Kahig" parent="Objects" instance=ExtResource("14_af0po")]
+[node name="Tinidor" parent="Objects" instance=ExtResource("14_af0po")]
 position = Vector2(15.9521, 308.738)
 
 [node name="Sako" parent="Objects" instance=ExtResource("15_4g8q6")]
@@ -81,6 +87,24 @@ position = Vector2(156.53, 428.155)
 
 [node name="Botilya" parent="Objects" instance=ExtResource("16_j0snf")]
 position = Vector2(150.548, 623.301)
+
+[node name="Bomba" parent="Objects" instance=ExtResource("16_ckbtx")]
+position = Vector2(89.7308, 484.466)
+
+[node name="Lampara" parent="Objects" instance=ExtResource("17_uy8k7")]
+position = Vector2(1252.24, 395.146)
+
+[node name="Salag" parent="Objects" instance=ExtResource("18_lae8n")]
+position = Vector2(684.945, 265.049)
+
+[node name="Sigarilyo" parent="Objects" instance=ExtResource("19_qqxgp")]
+position = Vector2(361.914, 635.922)
+
+[node name="Sinsilyo" parent="Objects" instance=ExtResource("20_l7ef0")]
+position = Vector2(130.608, 500)
+
+[node name="Yawi" parent="Objects" instance=ExtResource("21_nhgg0")]
+position = Vector2(933.2, 326.214)
 
 [node name="ExtraObjects" type="Node2D" parent="."]
 

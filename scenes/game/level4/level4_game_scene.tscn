@@ -1,10 +1,10 @@
 [gd_scene load_steps=42 format=3 uid="uid://wje72hncmusq"]
 
-[ext_resource type="Texture2D" uid="uid://b4481oh5oudew" path="res://graphics/level4/background/background@2x.png" id="1_5ll00"]
+[ext_resource type="Texture2D" uid="uid://ctpnnvcda6it2" path="res://graphics/level4/background/background@2x.png" id="1_5ll00"]
 [ext_resource type="Script" path="res://scenes/game/objects.gd" id="1_fng76"]
 [ext_resource type="PackedScene" uid="uid://drqfenrg68l3i" path="res://scenes/game/level4/level4_objects/atsa.tscn" id="2_llww4"]
-[ext_resource type="Texture2D" uid="uid://c52wjtc1noomx" path="res://graphics/level4/Objects/kaban@2x.png" id="2_oiw4k"]
-[ext_resource type="Texture2D" uid="uid://xqr7wqghfcjt" path="res://graphics/level4/Objects/sunglass@2x.png" id="3_2dr58"]
+[ext_resource type="Texture2D" uid="uid://jhi105lvmmsl" path="res://graphics/level4/Objects/kaban@2x.png" id="2_oiw4k"]
+[ext_resource type="Texture2D" uid="uid://b5ab10ihlp40o" path="res://graphics/level4/Objects/sunglass@2x.png" id="3_2dr58"]
 [ext_resource type="PackedScene" uid="uid://b0aki1cml1rnd" path="res://scenes/game/level4/level4_objects/kalo.tscn" id="3_obp7q"]
 [ext_resource type="PackedScene" uid="uid://bd6tni15t4veg" path="res://scenes/game/level4/level4_objects/hagdanan.tscn" id="4_krl0i"]
 [ext_resource type="PackedScene" uid="uid://xct6kx6cg5uy" path="res://scenes/game/level4/level4_objects/pala.tscn" id="5_hdxdr"]
@@ -16,30 +16,30 @@
 [ext_resource type="PackedScene" uid="uid://0203377ibcn6" path="res://scenes/game/level4/level4_objects/ligid.tscn" id="11_tj6xy"]
 [ext_resource type="PackedScene" uid="uid://cyek51micuvby" path="res://scenes/game/level4/level4_objects/pigurin.tscn" id="12_6jd5y"]
 [ext_resource type="PackedScene" uid="uid://dbvr27q70ecuc" path="res://scenes/game/level4/level4_objects/kandila.tscn" id="13_mvwjt"]
-[ext_resource type="Texture2D" uid="uid://v0ge16kgyrus" path="res://graphics/level4/Objects/Asset 14@2x.png" id="14_hn3b5"]
+[ext_resource type="Texture2D" uid="uid://cgv026qpkgcq5" path="res://graphics/level4/Objects/Asset 14@2x.png" id="14_hn3b5"]
 [ext_resource type="PackedScene" uid="uid://cp4n7obdev27s" path="res://scenes/game/level4/level4_objects/regadera.tscn" id="14_oicsm"]
 [ext_resource type="PackedScene" uid="uid://n3cysliehc2y" path="res://scenes/game/level4/level4_objects/tirador.tscn" id="15_snddb"]
-[ext_resource type="Texture2D" uid="uid://di8qu40i8nsxe" path="res://graphics/level4/Objects/balde@2x.png" id="16_tsxqx"]
+[ext_resource type="Texture2D" uid="uid://bavxnsnch8xwt" path="res://graphics/level4/Objects/balde@2x.png" id="16_tsxqx"]
 [ext_resource type="PackedScene" uid="uid://dpsxuy3qsml2r" path="res://scenes/game/level4/level4_objects/lingkuranan.tscn" id="16_wc635"]
 [ext_resource type="PackedScene" uid="uid://ck2rf202b4w6j" path="res://scenes/game/level4/level4_objects/karreta.tscn" id="17_q1vns"]
-[ext_resource type="Texture2D" uid="uid://uctrpn33f1p0" path="res://graphics/level4/Objects/Asset 18@2x.png" id="18_26iim"]
+[ext_resource type="Texture2D" uid="uid://bt71jk4fs25jk" path="res://graphics/level4/Objects/Asset 18@2x.png" id="18_26iim"]
 [ext_resource type="PackedScene" uid="uid://dr5tqu20vlv7f" path="res://scenes/game/level4/level4_objects/gwantes.tscn" id="18_wsa3r"]
 [ext_resource type="PackedScene" uid="uid://br244c6relk51" path="res://scenes/game/level4/level4_objects/sako.tscn" id="19_67q2j"]
-[ext_resource type="Texture2D" uid="uid://d1w3bmw2u8hby" path="res://graphics/level4/Objects/bukag@2x.png" id="19_igf3k"]
+[ext_resource type="Texture2D" uid="uid://308jg2e65arn" path="res://graphics/level4/Objects/bukag@2x.png" id="19_igf3k"]
 [ext_resource type="PackedScene" uid="uid://dl6kxglxmb40b" path="res://scenes/game/level4/level4_objects/silhig.tscn" id="20_a8xpp"]
-[ext_resource type="Texture2D" uid="uid://b8mwv6aheynx2" path="res://graphics/level4/Objects/botas@2x.png" id="21_alh1g"]
+[ext_resource type="Texture2D" uid="uid://bjybtwucb2ry8" path="res://graphics/level4/Objects/botas@2x.png" id="21_alh1g"]
 [ext_resource type="PackedScene" uid="uid://grf26y81lp7b" path="res://scenes/game/level4/level4_objects/kutsilyo.tscn" id="21_w6xot"]
 [ext_resource type="PackedScene" uid="uid://cxo5day60r0hg" path="res://scenes/game/level4/level4_objects/kumpit.tscn" id="22_cp6bc"]
-[ext_resource type="Texture2D" uid="uid://d16swl0pe2x0f" path="res://graphics/level4/Objects/pruner@2x.png" id="22_qcxyk"]
-[ext_resource type="Texture2D" uid="uid://dc57yhijyh2dt" path="res://graphics/level4/Objects/Asset 24@2x.png" id="23_bhjy0"]
+[ext_resource type="Texture2D" uid="uid://ui1obshtala4" path="res://graphics/level4/Objects/pruner@2x.png" id="22_qcxyk"]
+[ext_resource type="Texture2D" uid="uid://bhta2187xjpxi" path="res://graphics/level4/Objects/Asset 24@2x.png" id="23_bhjy0"]
 [ext_resource type="PackedScene" uid="uid://qvnmm03myvod" path="res://scenes/game/level4/level4_objects/Sinsilyo.tscn" id="23_ltged"]
 [ext_resource type="PackedScene" uid="uid://cxtwwy83x027b" path="res://scenes/game/level4/level4_objects/pluma.tscn" id="24_mcikc"]
-[ext_resource type="Texture2D" uid="uid://d0bilpph3srgc" path="res://graphics/level4/Objects/tinapay@2x.png" id="25_dubqh"]
+[ext_resource type="Texture2D" uid="uid://b6do4un1vugfm" path="res://graphics/level4/Objects/tinapay@2x.png" id="25_dubqh"]
 [ext_resource type="PackedScene" uid="uid://bwxcqv1u68t6g" path="res://scenes/game/level4/level4_objects/pana.tscn" id="25_xf36x"]
-[ext_resource type="Texture2D" uid="uid://chn62mrjwhdfi" path="res://graphics/level4/Objects/palayok@2x.png" id="26_56pwn"]
-[ext_resource type="Texture2D" uid="uid://c1a0jsobb2ydp" path="res://graphics/level4/Objects/grass shear@2x.png" id="30_4kte7"]
-[ext_resource type="Texture2D" uid="uid://8c80v1cjhvp4" path="res://graphics/level4/Objects/fire extinguisher@2x.png" id="31_gpybg"]
-[ext_resource type="Texture2D" uid="uid://b0o0801tj5br5" path="res://graphics/level4/Objects/headset_1@2x.png" id="37_t0ic5"]
+[ext_resource type="Texture2D" uid="uid://4g8vgvg2ywju" path="res://graphics/level4/Objects/palayok@2x.png" id="26_56pwn"]
+[ext_resource type="Texture2D" uid="uid://v26gwvserd1s" path="res://graphics/level4/Objects/grass shear@2x.png" id="30_4kte7"]
+[ext_resource type="Texture2D" uid="uid://rhnhvuqlxqkb" path="res://graphics/level4/Objects/fire extinguisher@2x.png" id="31_gpybg"]
+[ext_resource type="Texture2D" uid="uid://dk6g3r61flh37" path="res://graphics/level4/Objects/headset_1@2x.png" id="37_t0ic5"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="41_g2rhq"]
 
 [node name="GameScene" type="Node2D"]
@@ -74,13 +74,13 @@ position = Vector2(1112, 520)
 
 [node name="Pala" parent="Objects" instance=ExtResource("5_hdxdr")]
 
-[node name="Baril" parent="Objects" instance=ExtResource("7_nv65j")]
+[node name="Barel" parent="Objects" instance=ExtResource("7_nv65j")]
 position = Vector2(904, 528)
 
 [node name="Kahig" parent="Objects" instance=ExtResource("8_qfo5l")]
 position = Vector2(840, 464)
 
-[node name="Sikoy" parent="Objects" instance=ExtResource("9_sb110")]
+[node name="Tinidor" parent="Objects" instance=ExtResource("9_sb110")]
 position = Vector2(731, 455)
 
 [node name="Sanggot" parent="Objects" instance=ExtResource("10_8qbvn")]
@@ -101,7 +101,7 @@ position = Vector2(518, 527)
 [node name="Lingkuranan" parent="Objects" instance=ExtResource("16_wc635")]
 position = Vector2(624, 584)
 
-[node name="Karreta" parent="Objects" instance=ExtResource("17_q1vns")]
+[node name="Karitilya" parent="Objects" instance=ExtResource("17_q1vns")]
 position = Vector2(928, 592)
 
 [node name="Gwantes" parent="Objects" instance=ExtResource("18_wsa3r")]
@@ -116,7 +116,7 @@ position = Vector2(1288, 480)
 [node name="Kutsilyo" parent="Objects" instance=ExtResource("21_w6xot")]
 position = Vector2(1039, 409)
 
-[node name="Kumpit" parent="Objects" instance=ExtResource("22_cp6bc")]
+[node name="Kuhit" parent="Objects" instance=ExtResource("22_cp6bc")]
 position = Vector2(292, 585)
 
 [node name="Sinsilyo" parent="Objects" instance=ExtResource("23_ltged")]
