@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cso14tybg8paj" path="res://graphics/level3/2x/sunglasses@2x.png" id="26_y8ckd"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="27_8s3h5"]
 
+
 [node name="GameScene" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
@@ -53,7 +54,7 @@ position = Vector2(552.982, 349.379)
 position = Vector2(409.009, 412.816)
 
 [node name="Mansanas" parent="Objects" instance=ExtResource("4_hod78")]
-position = Vector2(606.181, 670.874)
+position = Vector2(357.926, 478.641)
 
 [node name="Tawo-tawo" parent="Objects" instance=ExtResource("5_hg8el")]
 position = Vector2(1100.7, 432.039)
