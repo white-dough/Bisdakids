@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" path="res://scenes/navigation/store_inventory/inventory/inventory.gd" id="1_43hdf"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_cj777"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="3_7vur1"]
-[ext_resource type="Texture2D" uid="uid://c12secd50gxjn" path="res://graphics/ui/icons/lively_store_3@2x.png" id="3_qk5id"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="3_tuwno"]
-[ext_resource type="Texture2D" uid="uid://xheifgna20r1" path="res://graphics/ui/icons/lively_roof@2x.png" id="4_x7qfl"]
+[ext_resource type="Texture2D" uid="uid://bv3tn65mmvqmm" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="3_7vur1"]
+[ext_resource type="Texture2D" uid="uid://ba6er6wsonnvv" path="res://graphics/ui/icons/lively_store_3@2x.png" id="3_qk5id"]
+[ext_resource type="Texture2D" uid="uid://dqytr7ukdi28q" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="3_tuwno"]
+[ext_resource type="Texture2D" uid="uid://ddft4fjyrfbgd" path="res://graphics/ui/icons/lively_roof@2x.png" id="4_x7qfl"]
 [ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="5_4aijb"]
+
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10gmb"]
 texture = ExtResource("3_qk5id")

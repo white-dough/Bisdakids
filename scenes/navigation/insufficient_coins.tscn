@@ -2,15 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7ko46"]
 [ext_resource type="Script" path="res://scenes/navigation/insufficient_coins.gd" id="1_8limm"]
-[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_vpqu3"]
-[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_3btv8"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_hjqwo"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_fr0cm"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_db3ft"]
-[ext_resource type="Texture2D" uid="uid://coon2ym7tucd5" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_lclqq"]
-[ext_resource type="Texture2D" uid="uid://cpu3difm46s2g" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="8_2f8ov"]
-[ext_resource type="Texture2D" uid="uid://cps5kw768olyq" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_vamfd"]
-[ext_resource type="Texture2D" uid="uid://c4unbj7gph23e" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="10_mwcmu"]
+[ext_resource type="Texture2D" uid="uid://qi85khdhpoif" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_vpqu3"]
+[ext_resource type="Texture2D" uid="uid://4k0e4yf8cyk6" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_3btv8"]
+[ext_resource type="FontFile" uid="uid://ny6ab3bchxqw" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_hjqwo"]
+[ext_resource type="Texture2D" uid="uid://dqytr7ukdi28q" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_fr0cm"]
+[ext_resource type="Texture2D" uid="uid://bv3tn65mmvqmm" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_db3ft"]
+[ext_resource type="Texture2D" uid="uid://d17yagxl0igxt" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_lclqq"]
+[ext_resource type="Texture2D" uid="uid://dgsg7ij6e8avc" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="8_2f8ov"]
+[ext_resource type="Texture2D" uid="uid://cq2gc4bq0lwvr" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_vamfd"]
+[ext_resource type="Texture2D" uid="uid://cjupvgck4f13j" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="10_mwcmu"]
+
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0

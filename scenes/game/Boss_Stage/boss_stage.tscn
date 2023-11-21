@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.tscn" id="3_77o8w"]
 [ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.tscn" id="3_kb8ix"]
 
+
 [node name="Boss_Stage" type="Node2D"]
 
 [node name="bs_gamescene" parent="." instance=ExtResource("1_shust")]
