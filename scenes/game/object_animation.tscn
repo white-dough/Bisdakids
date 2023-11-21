@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game/ObjectAnimation.gd" id="1_v13iw"]
 
+
 [node name="ObjectAnimation" type="Node2D"]
 show_behind_parent = true
 position = Vector2(222, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://7j4lphdd4qi4"]
 
-[ext_resource type="Texture2D" uid="uid://jqhsdni1dvl5" path="res://graphics/level4/background/background@2x.png" id="1_5ll00"]
+[ext_resource type="Texture2D" uid="uid://gd2d447b3txo" path="res://graphics/level4/background/background@2x.png" id="1_5ll00"]
 [ext_resource type="PackedScene" uid="uid://drqfenrg68l3i" path="res://scenes/game/level4/level4_objects/atsa.tscn" id="2_llww4"]
 [ext_resource type="PackedScene" uid="uid://b0aki1cml1rnd" path="res://scenes/game/level4/level4_objects/kalo.tscn" id="3_obp7q"]
 [ext_resource type="PackedScene" uid="uid://bd6tni15t4veg" path="res://scenes/game/level4/level4_objects/hagdanan.tscn" id="4_krl0i"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cx8yvpiiufvqm" path="res://scenes/game/level4/level4_objects/kahig.tscn" id="8_qfo5l"]
 [ext_resource type="PackedScene" uid="uid://bn22oaq75t3jb" path="res://scenes/game/level4/level4_objects/sikoy.tscn" id="9_sb110"]
 [ext_resource type="PackedScene" uid="uid://0gtgkvph10od" path="res://scenes/game/level4/level4_objects/sanggot.tscn" id="10_8qbvn"]
+
 
 [node name="level4_gamescene" type="Node2D"]
 

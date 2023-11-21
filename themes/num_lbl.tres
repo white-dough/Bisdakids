@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://bot802emh10k0"]
 
-[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="1_pdu1u"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="1_pdu1u"]
 [ext_resource type="StyleBox" uid="uid://b8x6rj3un1uq" path="res://themes/map_lbl_energy.tres" id="2_0q3dk"]
 
 [resource]

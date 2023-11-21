@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://dk6g3r61flh37" path="res://graphics/level4/Objects/headset_1@2x.png" id="37_t0ic5"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="41_g2rhq"]
 
+
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_fng76")
 

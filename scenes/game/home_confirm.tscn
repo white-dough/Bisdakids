@@ -1,30 +1,29 @@
-[gd_scene load_steps=16 format=3 uid="uid://c8j40idjdbaw2"]
+[gd_scene load_steps=16 format=3 uid="uid://bdhgwlpxbcaeh"]
 
-[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7ko46"]
-[ext_resource type="Script" path="res://scenes/navigation/insufficient_coins.gd" id="1_8limm"]
-[ext_resource type="Texture2D" uid="uid://qi85khdhpoif" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_vpqu3"]
-[ext_resource type="Texture2D" uid="uid://4k0e4yf8cyk6" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_3btv8"]
-[ext_resource type="FontFile" uid="uid://ny6ab3bchxqw" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_hjqwo"]
-[ext_resource type="Texture2D" uid="uid://dqytr7ukdi28q" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_fr0cm"]
-[ext_resource type="Texture2D" uid="uid://bv3tn65mmvqmm" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_db3ft"]
-[ext_resource type="Texture2D" uid="uid://d17yagxl0igxt" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_lclqq"]
-[ext_resource type="Texture2D" uid="uid://dgsg7ij6e8avc" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="8_2f8ov"]
-[ext_resource type="Texture2D" uid="uid://cq2gc4bq0lwvr" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_vamfd"]
-[ext_resource type="Texture2D" uid="uid://cjupvgck4f13j" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="10_mwcmu"]
-
+[ext_resource type="Script" path="res://home_confirm.gd" id="1_jx7kb"]
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="2_ph8ir"]
+[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_ppnpx"]
+[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="4_vs3pe"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_3ewxu"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="6_v6pno"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_ldq3d"]
+[ext_resource type="Texture2D" uid="uid://bfpnupemtqcr" path="res://graphics/ui/buttons/2x/no_btn@2x.png" id="8_uy4ag"]
+[ext_resource type="Texture2D" uid="uid://cpu3difm46s2g" path="res://graphics/ui/buttons/2x/noPressed_btn@2x.png" id="9_o3ata"]
+[ext_resource type="Texture2D" uid="uid://b7yfcsu6vnwbf" path="res://graphics/ui/buttons/2x/yes_btn@2x.png" id="10_fuypk"]
+[ext_resource type="Texture2D" uid="uid://c4unbj7gph23e" path="res://graphics/ui/buttons/2x/yesPressed_btn@2x.png" id="11_i576o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
 content_margin_top = 5.0
 content_margin_right = 7.0
 content_margin_bottom = 13.0
-texture = ExtResource("2_vpqu3")
+texture = ExtResource("3_ppnpx")
 
 [sub_resource type="Theme" id="Theme_3kbfr"]
 Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
-texture = ExtResource("3_3btv8")
+texture = ExtResource("4_vs3pe")
 expand_margin_left = 10.0
 expand_margin_top = 10.0
 expand_margin_right = 10.0
@@ -33,8 +32,8 @@ expand_margin_bottom = 10.0
 [sub_resource type="Theme" id="Theme_k6w82"]
 Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
 
-[node name="insufficient_coins" type="CanvasLayer"]
-script = ExtResource("1_8limm")
+[node name="home_confirm" type="CanvasLayer"]
+script = ExtResource("1_jx7kb")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -42,7 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_7ko46")
+texture = ExtResource("2_ph8ir")
 expand_mode = 1
 
 [node name="ModalPanel2" type="Panel" parent="."]
@@ -52,10 +51,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -280.0
-offset_top = -154.0
-offset_right = 269.0
-offset_bottom = 170.0
+offset_left = -300.0
+offset_top = -158.0
+offset_right = 300.0
+offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -84,10 +83,9 @@ theme = SubResource("Theme_k6w82")
 theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("4_hjqwo")
-theme_override_font_sizes/font_size = 26
-text = "Aguy! kuwangan imong kwarta, 
-pag palit una."
+theme_override_fonts/font = ExtResource("5_3ewxu")
+theme_override_font_sizes/font_size = 30
+text = "Sigurado ka mo biya sa imong duwa?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -101,8 +99,8 @@ anchor_right = 1.17333
 anchor_bottom = 0.190164
 offset_right = -6.10352e-05
 grow_vertical = 2
-texture_normal = ExtResource("5_fr0cm")
-texture_pressed = ExtResource("6_db3ft")
+texture_normal = ExtResource("6_v6pno")
+texture_pressed = ExtResource("7_ldq3d")
 stretch_mode = 3
 metadata/_edit_use_anchors_ = true
 
@@ -119,20 +117,21 @@ offset_right = 253.0
 offset_bottom = 90.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 40
+theme_override_constants/separation = 60
 alignment = 1
 
-[node name="dili_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
+[node name="no_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
 layout_mode = 2
-texture_normal = ExtResource("7_lclqq")
-texture_pressed = ExtResource("8_2f8ov")
+texture_normal = ExtResource("8_uy4ag")
+texture_pressed = ExtResource("9_o3ata")
 stretch_mode = 3
 
-[node name="buy_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
+[node name="yes_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
 layout_mode = 2
-texture_normal = ExtResource("9_vamfd")
-texture_pressed = ExtResource("10_mwcmu")
+texture_normal = ExtResource("10_fuypk")
+texture_pressed = ExtResource("11_i576o")
 stretch_mode = 3
 
 [connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed"]
-[connection signal="pressed" from="ModalPanel2/Content_Container/dili_btn" to="." method="_on_dili_btn_pressed"]
+[connection signal="pressed" from="ModalPanel2/Content_Container/no_btn" to="." method="_on_no_btn_pressed"]
+[connection signal="pressed" from="ModalPanel2/Content_Container/yes_btn" to="." method="_on_yes_btn_pressed"]
