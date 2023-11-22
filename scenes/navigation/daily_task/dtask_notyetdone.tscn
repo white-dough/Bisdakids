@@ -1,0 +1,130 @@
+[gd_scene load_steps=14 format=3 uid="uid://bu3vl28f87ja3"]
+
+[ext_resource type="Script" path="res://scenes/navigation/daily_task/dtask_notyetdone.gd" id="1_k2uh4"]
+[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_sbq63"]
+[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_j6csl"]
+[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_ebsqn"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_53hgu"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_utr1i"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_1eq6y"]
+[ext_resource type="Texture2D" uid="uid://dtkdeqmtk3n2a" path="res://graphics/ui/buttons/2x/okayY_btn@2x.png" id="7_vslql"]
+[ext_resource type="Texture2D" uid="uid://c185b3xra4m0v" path="res://graphics/ui/buttons/2x/okayPressedY_btn@2x.png" id="8_k8axd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
+content_margin_left = 7.0
+content_margin_top = 5.0
+content_margin_right = 7.0
+content_margin_bottom = 13.0
+texture = ExtResource("2_j6csl")
+
+[sub_resource type="Theme" id="Theme_3kbfr"]
+Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
+texture = ExtResource("3_ebsqn")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_k6w82"]
+Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
+
+[node name="Dtask_notyetdone" type="CanvasLayer"]
+script = ExtResource("1_k2uh4")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sbq63")
+expand_mode = 1
+
+[node name="ModalPanel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -158.0
+offset_right = 279.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_3kbfr")
+
+[node name="Title_Container" type="VBoxContainer" parent="ModalPanel2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -231.0
+offset_top = 60.0
+offset_right = 232.0
+offset_bottom = 164.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ModalPanel2/Title_Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_k6w82")
+theme_override_colors/font_color = Color(0.356863, 0.121569, 0.0313726, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("4_53hgu")
+theme_override_font_sizes/font_size = 30
+text = "Ops! wa pa ni nimo na human 
+na buhatunon, humna sa arun 
+makakuha ka's premyo."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseBtn" type="TextureButton" parent="ModalPanel2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.993333
+anchor_top = -0.140984
+anchor_right = 1.17333
+anchor_bottom = 0.190164
+offset_right = -6.10352e-05
+grow_vertical = 2
+texture_normal = ExtResource("5_utr1i")
+texture_pressed = ExtResource("6_1eq6y")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Content_Container" type="HBoxContainer" parent="ModalPanel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.0
+offset_top = 28.5
+offset_right = 253.0
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="okay_btn" type="TextureButton" parent="ModalPanel2/Content_Container"]
+layout_mode = 2
+texture_normal = ExtResource("7_vslql")
+texture_pressed = ExtResource("8_k8axd")
+stretch_mode = 3
+
+[connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed"]
+[connection signal="pressed" from="ModalPanel2/Content_Container/okay_btn" to="." method="_on_okay_btn_pressed"]
