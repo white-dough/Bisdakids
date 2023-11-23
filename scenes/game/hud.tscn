@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://5fm6trp7abm0"]
+[gd_scene load_steps=28 format=3 uid="uid://5fm6trp7abm0"]
 
 [ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_5f8iu"]
 [ext_resource type="Theme" uid="uid://s6fhai8xfiw" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
-[ext_resource type="Texture2D" uid="uid://bw6rv7sngjkyk" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
-[ext_resource type="Texture2D" uid="uid://037sbvsxlpgl" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
+[ext_resource type="Texture2D" uid="uid://cgkql10r51w7x" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
+[ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
-[ext_resource type="Texture2D" uid="uid://cgvek4prlknmq" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
+[ext_resource type="Texture2D" uid="uid://c6aqydfidujo0" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="10_vkup7"]
+[ext_resource type="Texture2D" uid="uid://inypcvmgdces" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="10_nusr8"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="10_vkup7"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="11_srfac"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbgxi"]
@@ -82,19 +83,10 @@ texture = ExtResource("10_5i8yf")
 Label/fonts/font = ExtResource("11_srfac")
 Label/styles/normal = SubResource("StyleBoxTexture_rrsa4")
 
-[node name="HUD" type="Control"]
-texture_filter = 1
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_stretch_ratio = 0.0
+[node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_5f8iu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 2
 offset_right = 222.0
 offset_bottom = 740.0
 size_flags_vertical = 3
@@ -211,6 +203,7 @@ layout_mode = 2
 size_flags_vertical = 6
 size_flags_stretch_ratio = 0.0
 texture_normal = ExtResource("3_3obj1")
+texture_disabled = ExtResource("10_nusr8")
 stretch_mode = 3
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="ColorRect/Panel/ContainerHUD/Clue"]
@@ -349,7 +342,6 @@ alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Settings" type="TextureButton" parent="."]
-layout_mode = 1
 offset_left = 1192.0
 offset_top = 33.0
 offset_right = 1279.0
@@ -357,7 +349,6 @@ offset_bottom = 120.0
 texture_normal = ExtResource("9_0hgwc")
 
 [node name="TimeFreeze" type="TextureButton" parent="."]
-layout_mode = 1
 anchors_preset = -1
 offset_left = 253.0
 offset_top = 32.0

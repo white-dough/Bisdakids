@@ -56,6 +56,8 @@ func wave_finished() -> void:
 		#show the modal, set the flag
 		2:
 			wave2_node.show()
+			$HUD/ColorRect/Panel/ContainerHUD/Clue.disabled = true
+			$HUD/ColorRect/Panel/ContainerHUD/Clue/HintLBl.visible = false
 		3:
 			wave2_node.hide()
 			wave3_node.show()

@@ -77,6 +77,7 @@ HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_lnqmn")
 HSlider/styles/slider = SubResource("StyleBoxTexture_vtlr5")
 
 [node name="settings_gameplay" type="CanvasLayer"]
+layer = 3
 script = ExtResource("1_tu2id")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -85,6 +86,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 texture = ExtResource("1_es2u7")
 expand_mode = 1
 

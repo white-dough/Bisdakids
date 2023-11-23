@@ -19,6 +19,7 @@ level_name = "level5"
 level_time = 301.0
 
 [node name="HUD" parent="." instance=ExtResource("5_01x7t")]
+layer = 2
 
 [node name="GameScene" parent="." instance=ExtResource("1_shust")]
 show_behind_parent = true

@@ -1,6 +1,5 @@
 extends Node
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Audio.bgm_node.get_stream() != Audio.main_bgm:
