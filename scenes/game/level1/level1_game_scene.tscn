@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b587raktahnko" path="res://scenes/game/level1/level1_objects/bisikleta.tscn" id="3_2mvlv"]
 [ext_resource type="PackedScene" uid="uid://dp1ldut5aplof" path="res://scenes/game/level1/level1_objects/tolda.tscn" id="3_ka3vg"]
 [ext_resource type="PackedScene" uid="uid://caqjeeq3jom2t" path="res://scenes/game/level1/level1_objects/kumpas.tscn" id="4_8ma03"]
-[ext_resource type="Texture2D" uid="uid://cgfsh1a0c0g6y" path="res://graphics/ui/particles/0001.png" id="4_e6o5x"]
+[ext_resource type="Texture2D" uid="uid://drm0816crd05l" path="res://graphics/ui/particles/0001.png" id="4_e6o5x"]
 [ext_resource type="PackedScene" uid="uid://dx2ekmhyxxlu2" path="res://scenes/game/level1/level1_objects/lutuanan.tscn" id="4_mqidk"]
 [ext_resource type="PackedScene" uid="uid://gbc2jdpxto7w" path="res://scenes/game/level1/level1_objects/timaan.tscn" id="4_vq8le"]
 [ext_resource type="PackedScene" uid="uid://j6maapufsper" path="res://scenes/game/level1/level1_objects/maleta.tscn" id="5_4b1cx"]
@@ -37,7 +37,6 @@
 [ext_resource type="PackedScene" uid="uid://y34rcf42vv7w" path="res://scenes/game/level1/level1_objects/regalo.tscn" id="31_fhxpn"]
 [ext_resource type="PackedScene" uid="uid://dmgiycnodn3rj" path="res://scenes/game/level1/level1_objects/lampara.tscn" id="35_ps4na"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="37_dtg6c"]
-
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("2_dqy12")
@@ -96,7 +95,7 @@ collision_mask = 4
 [node name="Banig" parent="Objects" instance=ExtResource("8_3k27t")]
 position = Vector2(375, 642)
 
-[node name="Campingbanig" parent="Objects" instance=ExtResource("10_vf6h0")]
+[node name="Katulganan" parent="Objects" instance=ExtResource("10_vf6h0")]
 position = Vector2(194, 671)
 
 [node name="Botas" parent="Objects" instance=ExtResource("9_5i461")]
@@ -122,10 +121,10 @@ position = Vector2(340, 409)
 [node name="Kalis" parent="Objects" instance=ExtResource("17_8e8a5")]
 position = Vector2(764, 638)
 
-[node name="Bahande" parent="Objects" instance=ExtResource("14_o5g1g")]
+[node name="Bahandi" parent="Objects" instance=ExtResource("14_o5g1g")]
 position = Vector2(820, 654)
 
-[node name="Antepara" parent="Objects" instance=ExtResource("15_wvs3r")]
+[node name="Antipara" parent="Objects" instance=ExtResource("15_wvs3r")]
 position = Vector2(933, 699)
 
 [node name="Bukag" parent="Objects" instance=ExtResource("12_lomo3")]
