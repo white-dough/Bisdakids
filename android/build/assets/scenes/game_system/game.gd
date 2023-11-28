@@ -144,13 +144,12 @@ func sync_data():
 	inventory_timestamp_max = inventory_timestamps.max()
 	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
 	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores)
-	print(progress_scores)
 	await PhpRequest.http_request.request_completed
 	
 	if PhpRequest.clean_response != "db_updated":
 		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
 		progress = result["account_progress"]
-		
+		user_inventory = result["user_inventory"]
 		daily_task_reset()
 		update_local_save()
 		
