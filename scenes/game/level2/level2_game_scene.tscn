@@ -48,7 +48,6 @@
 [ext_resource type="Texture2D" uid="uid://b7e7ahugb6d3o" path="res://graphics/level2/2x/kalo@2x.png" id="47_np7a0"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="48_prfcl"]
 
-
 [node name="GameScene" type="Node2D"]
 position = Vector2(222, 0)
 scale = Vector2(0.835, 1.03)
@@ -79,7 +78,7 @@ position = Vector2(241.916, 341.748)
 position = Vector2(834.442, 47.5045)
 rotation = -0.481711
 
-[node name="Gitara" parent="Objects" instance=ExtResource("8_m1iow")]
+[node name="Sista" parent="Objects" instance=ExtResource("8_m1iow")]
 
 [node name="Kaban" parent="Objects" instance=ExtResource("9_yx6nh")]
 position = Vector2(462.276, 411.65)
