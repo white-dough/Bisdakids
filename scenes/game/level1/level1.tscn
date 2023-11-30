@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ca81egta7m40d"]
+[gd_scene load_steps=10 format=3 uid="uid://ca81egta7m40d"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_m8407"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="3_07e03"]
 [ext_resource type="PackedScene" uid="uid://ca6qtai8yh8wy" path="res://scenes/game/level1/level1_game_scene.tscn" id="3_aq4u2"]
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="4_hq6rp"]
+[ext_resource type="PackedScene" uid="uid://c4w7uhwcdpn5w" path="res://scenes/game/obj_found_particles.tscn" id="5_1l21p"]
 [ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="5_heil1"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="6_mtlo8"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="7_tnwca"]
@@ -23,6 +24,10 @@ scale = Vector2(0.832, 1)
 
 [node name="ObjectAnimation" parent="." instance=ExtResource("4_hq6rp")]
 show_behind_parent = false
+scale = Vector2(0.832, 1)
+
+[node name="ObjectFoundAnimation" parent="." instance=ExtResource("5_1l21p")]
+position = Vector2(222, 0)
 scale = Vector2(0.832, 1)
 
 [node name="VictoryTriumph" parent="." instance=ExtResource("5_heil1")]

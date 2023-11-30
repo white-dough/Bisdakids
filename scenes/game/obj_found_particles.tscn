@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4w7uhwcdpn5w"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_io25l"]
+blend_mode = 1
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ylec8"]
+load_path = "res://.godot/imported/0001.png-597a2e1490cc49dc7d7930b62d63e077.ctex"
+
+[node name="ObjectFoundAnimation" type="Node2D"]
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_io25l")
+emitting = false
+amount = 20
+one_shot = true
+speed_scale = 3.5
+explosiveness = 0.73
+randomness = 0.52
+texture = SubResource("CompressedTexture2D_ylec8")
+emission_shape = 1
+emission_sphere_radius = 102.17
+direction = Vector2(200, 100)
+spread = 180.0
+gravity = Vector2(0, -10)
+initial_velocity_min = 44.98
+initial_velocity_max = 44.98
+hue_variation_min = 0.8
+hue_variation_max = 0.8

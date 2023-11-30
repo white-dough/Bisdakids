@@ -78,7 +78,7 @@ position = Vector2(241.916, 341.748)
 position = Vector2(834.442, 47.5045)
 rotation = -0.481711
 
-[node name="Gitara" parent="Objects" instance=ExtResource("8_m1iow")]
+[node name="Sista" parent="Objects" instance=ExtResource("8_m1iow")]
 
 [node name="Kaban" parent="Objects" instance=ExtResource("9_yx6nh")]
 position = Vector2(462.276, 411.65)

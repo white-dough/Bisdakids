@@ -36,7 +36,7 @@ class_name PinchPanCamera
 @export var natural_slide : bool = true
 
 @export var min_zoom_factor : float = 0.6
-@export var max_zoom_factor: float = 2
+@export var max_zoom_factor: float = 1
 @export var drag_deadzone : Vector2 = Vector2(0.1, 0.1)
 
 @export var show_debug_icon : bool = false
@@ -78,12 +78,19 @@ func _enter_tree():
 	camera.position_smoothing_enabled  = smoothing
 	camera.position_smoothing_speed = position_smoothing_speed
 	
+	#var screen_size = DisplayServer.screen_get_size()
+	#print(screen_size.x)
+	#print(screen_size.y)
+#	camera.limit_left = 0
+#	camera.limit_top = 10
+#	camera.limit_right = 1300
+#	camera.limit_bottom = 700
+	
 	if show_debug_icon:
 		var di = load("res://addons/ppc/testicon.tscn")
 		add_child(di.instantiate())
 
 func _process(_delta):
-	
 	if camera.drag_left_margin != drag_deadzone.x \
 	and camera.drag_right_margin != drag_deadzone.x:
 		camera.drag_left_margin = drag_deadzone.x
@@ -121,15 +128,12 @@ func _input(event):
 	if !enable_pinch_pan:
 		return
 	# Handle MouseWheel for Zoom
-	if event is InputEventMouseButton and event.is_pressed():
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			emit_signal("zoom_in")
-			if camera.zoom >= min_zoom:
-				camera.zoom -= Vector2(0.1, 0.1)
-		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			emit_signal("zoom_out")
-			if camera.zoom <= max_zoom:
-				camera.zoom += Vector2(0.1, 0.1)
+#	if event is InputEventMouseButton and event.is_pressed():
+#		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+#			emit_signal("zoom_in")
+#			print('zoom in')
+#			if camera.zoom <= min_zoom:
+#				camera.zoom += Vector2(0.1, 0.1)
 	
 	# Handle Touch
 	if event is InputEventScreenTouch:
@@ -145,14 +149,15 @@ func _input(event):
 		if camera.input_count == 1:
 			emit_signal("dragging")
 			if natural_slide:
+				print('if dragging')
 				position += get_movement_vector_from(get_local_mouse_position())
 				start_position = get_local_mouse_position()
 			else:
+				print('else dragging')
 				var coord = get_movement_vector_from(-get_norm_coordinate())
 				position += coord
 	# Handles releasing
 	if  camera.input_count == 0:
-		
 		position = camera.get_camera_center() 
 		
 
@@ -161,7 +166,6 @@ func get_movement_vector_from(vec : Vector2) -> Vector2:
 	calculates a vector for the movement
 	"""
 	var move_vec = start_position - vec 
-	
 	
 	if slide_mode == 1:
 		return Vector2(move_vec.x, 0)
@@ -186,3 +190,4 @@ func invert_vector(vec : Vector2):
 	inverts a vector
 	"""
 	return Vector2(-vec.x, -vec.y)
+

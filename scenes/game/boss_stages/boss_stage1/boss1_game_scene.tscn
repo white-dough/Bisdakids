@@ -87,7 +87,7 @@ script = ExtResource("6_f61ve")
 
 [node name="Design3_2x" type="Sprite2D" parent="Background"]
 top_level = true
-position = Vector2(522, 685)
+position = Vector2(424, 656)
 scale = Vector2(0.888889, 0.941176)
 texture = ExtResource("7_wt4jo")
 
@@ -102,8 +102,8 @@ position = Vector2(561.633, 388.839)
 texture = ExtResource("10_6mccf")
 
 [node name="AtsaNiTarzan_2x" type="Sprite2D" parent="Background"]
-position = Vector2(377.096, 579.29)
-scale = Vector2(1.00292, 0.991936)
+position = Vector2(383.114, 585.49)
+scale = Vector2(0.891482, 0.852619)
 texture = ExtResource("11_et4e0")
 
 [node name="SapotSaGagamba_2x" type="Sprite2D" parent="Background"]
@@ -125,7 +125,7 @@ position = Vector2(664, 376)
 [node name="Kadena" parent="Objects" instance=ExtResource("10_gtu0w")]
 position = Vector2(304, 16)
 
-[node name="Kuwadro" parent="Objects" instance=ExtResource("11_ciovy")]
+[node name="Kwadro" parent="Objects" instance=ExtResource("11_ciovy")]
 position = Vector2(280, 352)
 
 [node name="Espada" parent="Objects" instance=ExtResource("13_idpnx")]
@@ -137,17 +137,17 @@ position = Vector2(271, 552)
 [node name="Atsa" parent="Objects" instance=ExtResource("15_7pfd7")]
 position = Vector2(256, 640)
 
-[node name="Pangtabas" parent="Objects" instance=ExtResource("16_iyfkw")]
-position = Vector2(320, 648)
+[node name="Klip" parent="Objects" instance=ExtResource("16_iyfkw")]
+position = Vector2(344, 656)
 
-[node name="Baol" parent="Objects" instance=ExtResource("17_6lvwm")]
+[node name="Kaban" parent="Objects" instance=ExtResource("17_6lvwm")]
 position = Vector2(832, 560)
 
 [node name="Barel" parent="Objects" instance=ExtResource("19_g0qjp")]
 position = Vector2(552, 648)
 
-[node name="Plurira" parent="Objects" instance=ExtResource("18_bvuo5")]
-position = Vector2(477, 645)
+[node name="Tibod" parent="Objects" instance=ExtResource("18_bvuo5")]
+position = Vector2(480, 616)
 
 [node name="Lampara" parent="Objects" instance=ExtResource("20_vo2ug")]
 position = Vector2(680, 664)
@@ -171,16 +171,16 @@ position = Vector2(856, 642)
 position = Vector2(928, 704)
 
 [node name="Teleskopyo" parent="Objects" instance=ExtResource("27_mdysj")]
-position = Vector2(480, 704)
+position = Vector2(496, 704)
 
-[node name="Pitsel" parent="Objects" instance=ExtResource("28_5rpwn")]
+[node name="Tsarira" parent="Objects" instance=ExtResource("28_5rpwn")]
 position = Vector2(920, 632)
 
 [node name="Baso" parent="Objects" instance=ExtResource("29_8j2d2")]
 position = Vector2(984, 624)
 
 [node name="Pluma" parent="Objects" instance=ExtResource("30_40c0j")]
-position = Vector2(568, 568)
+position = Vector2(544, 568)
 
 [node name="Orasan" parent="Objects" instance=ExtResource("31_aicti")]
 position = Vector2(952, 192)
@@ -189,7 +189,7 @@ position = Vector2(952, 192)
 position = Vector2(696, 720)
 
 [node name="Karton" parent="Objects" instance=ExtResource("34_ceyyb")]
-position = Vector2(78, 684)
+position = Vector2(200, 688)
 
 [node name="HandleTaps" parent="." instance=ExtResource("34_1qjqy")]
 visible = false

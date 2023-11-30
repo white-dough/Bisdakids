@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c62hsdudkkyg7"]
+[gd_scene load_steps=10 format=3 uid="uid://c62hsdudkkyg7"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_xgxlh"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="2_10bpc"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="3_sauh1"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="4_3afey"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="5_g24fb"]
+[ext_resource type="PackedScene" uid="uid://c4w7uhwcdpn5w" path="res://scenes/game/obj_found_particles.tscn" id="5_hh1o3"]
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="6_chxad"]
 
 [node name="Level" type="Node2D"]
@@ -24,6 +25,8 @@ show_behind_parent = true
 show_behind_parent = false
 position = Vector2(0, 0)
 scale = Vector2(1, 1)
+
+[node name="ObjectFoundAnimation" parent="." instance=ExtResource("5_hh1o3")]
 
 [node name="VictoryTriumph" parent="." instance=ExtResource("3_s25f4")]
 visible = false

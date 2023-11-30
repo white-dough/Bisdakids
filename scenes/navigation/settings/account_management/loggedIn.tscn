@@ -2,17 +2,18 @@
 
 [ext_resource type="Script" path="res://scenes/navigation/settings/account_management/loggedIn.gd" id="1_g8pob"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_r784m"]
-[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="2_dtkw6"]
+[ext_resource type="Texture2D" uid="uid://c54qmcjmeafig" path="res://graphics/navigation/store/store_panel@2x.png" id="2_dtkw6"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="3_kscbx"]
 [ext_resource type="Theme" uid="uid://7happngt6m6v" path="res://themes/for_title_lbl.tres" id="4_lrq75"]
-[ext_resource type="Texture2D" uid="uid://cmnpl25ahvyxl" path="res://graphics/ui/buttons/2x/itakdoPressed_btn@2x.png" id="5_h174m"]
+[ext_resource type="Texture2D" uid="uid://d0ak1pjc1cmb7" path="res://graphics/ui/buttons/2x/itakdoPressed_btn@2x.png" id="5_h174m"]
 [ext_resource type="FontVariation" uid="uid://b77ehsqg6w4nl" path="res://themes/assets/settings_mochiy_fontvariation.tres" id="5_r5q4x"]
-[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="5_wgt6t"]
-[ext_resource type="Texture2D" uid="uid://54a7lrrulwr4" path="res://graphics/ui/buttons/2x/logout@2x.png" id="6_80mvk"]
-[ext_resource type="Texture2D" uid="uid://qf38k4sw4dqa" path="res://graphics/ui/buttons/2x/sych_btn@2x.png" id="7_i3x7v"]
-[ext_resource type="Texture2D" uid="uid://bp0bej4tagbvw" path="res://graphics/ui/buttons/2x/logoutPressed_btn@2x.png" id="7_pku56"]
-[ext_resource type="Texture2D" uid="uid://bvii16ashhc7b" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="10_3etsc"]
-[ext_resource type="Texture2D" uid="uid://drtnqfwiqa8be" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="12_gedmu"]
+[ext_resource type="Texture2D" uid="uid://ojpy8trjsj53" path="res://graphics/ui/icons/back button@2x.png" id="5_wgt6t"]
+[ext_resource type="Texture2D" uid="uid://c1vule2fnfgvb" path="res://graphics/ui/buttons/2x/logout@2x.png" id="6_80mvk"]
+[ext_resource type="Texture2D" uid="uid://h0ejh146qv4j" path="res://graphics/ui/buttons/2x/sych_btn@2x.png" id="7_i3x7v"]
+[ext_resource type="Texture2D" uid="uid://bv03kcctasv6q" path="res://graphics/ui/buttons/2x/logoutPressed_btn@2x.png" id="7_pku56"]
+[ext_resource type="Texture2D" uid="uid://dnj6rwhlgj87o" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="10_3etsc"]
+[ext_resource type="Texture2D" uid="uid://4k0e4yf8cyk6" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="12_gedmu"]
+
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkuea"]
 content_margin_left = 7.0

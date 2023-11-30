@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cgkql10r51w7x" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
 [ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
+[ext_resource type="Texture2D" uid="uid://cqr5ebh2dnwp5" path="res://graphics/ui/icons/2x/minustime_effect@2x.png" id="8_rgohw"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
 [ext_resource type="Texture2D" uid="uid://c6aqydfidujo0" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
@@ -159,6 +160,14 @@ scale = Vector2(0.88, 0.964286)
 texture = ExtResource("6_oxqsx")
 
 [node name="Timer" type="Timer" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+
+[node name="MinustimeEffect_2x" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+visible = false
+modulate = Color(0.811765, 0.2, 0.0588235, 1)
+self_modulate = Color(1, 0.12549, 0.25098, 1)
+position = Vector2(-1.49995, 16.25)
+scale = Vector2(0.847826, 0.921053)
+texture = ExtResource("8_rgohw")
 
 [node name="Objectlist" type="VBoxContainer" parent="ColorRect/Panel/ContainerHUD"]
 layout_mode = 2
