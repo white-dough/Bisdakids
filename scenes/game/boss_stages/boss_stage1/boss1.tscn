@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://qh36n3tqty5r"]
 
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss.gd" id="1_dby58"]
-[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/boss_stages/boss_stage1/boss1_game_scene.tscn" id="1_shust"]
-[ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.tscn" id="3_77o8w"]
+[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/Boss_Stage/boss_stage_gemescene.tscn" id="1_shust"]
+[ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/Boss_Stage/boss_Identification.tscn" id="3_77o8w"]
 [ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.tscn" id="3_kb8ix"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="5_01x7t"]
 [ext_resource type="PackedScene" uid="uid://db4hh7vns4hqs" path="res://scenes/game/boss_stages/background_2.tscn" id="5_bk7my"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="8_lcx81"]
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="9_kwwhj"]
 [ext_resource type="PackedScene" uid="uid://cwtckupwpc00f" path="res://scenes/game/boss_stages/wave_prog.tscn" id="11_avxq3"]
-
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_dby58")
@@ -61,4 +60,3 @@ visible = false
 
 [connection signal="ready" from="." to="HUD" method="_on_level_ready"]
 [connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
-[connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]
