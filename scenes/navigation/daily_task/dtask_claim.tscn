@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://b1t7ird1sr8j7"]
+[gd_scene load_steps=14 format=3 uid="uid://b1t7ird1sr8j7"]
 
+[ext_resource type="Script" path="res://scenes/navigation/daily_task/dtask_claim.gd" id="1_wu8d2"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="2_xfxlq"]
 [ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="3_r5knq"]
 [ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="4_wd1vj"]
@@ -21,15 +22,16 @@ Panel/styles/panel = SubResource("StyleBoxTexture_xgpus")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7j00"]
 texture = ExtResource("4_wd1vj")
-expand_margin_left = 10.0
+expand_margin_left = 20.0
 expand_margin_top = 10.0
-expand_margin_right = 10.0
+expand_margin_right = 20.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="Theme" id="Theme_kaycg"]
 Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
 
 [node name="Dtask_claim" type="CanvasLayer"]
+script = ExtResource("1_wu8d2")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -50,7 +52,7 @@ anchor_bottom = 0.5
 offset_left = -300.0
 offset_top = -158.0
 offset_right = 300.0
-offset_bottom = 147.0
+offset_bottom = 172.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -81,7 +83,7 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("5_dr4yf")
 theme_override_font_sizes/font_size = 30
-text = "Congrats! pwede na ni nimo
+text = "Ayos kaayo! pwede na ni nimo
 ma-kolekta ang premyo."
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -122,3 +124,5 @@ layout_mode = 2
 texture_normal = ExtResource("8_fmh0d")
 texture_pressed = ExtResource("9_t7pqs")
 stretch_mode = 3
+
+[connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed"]
