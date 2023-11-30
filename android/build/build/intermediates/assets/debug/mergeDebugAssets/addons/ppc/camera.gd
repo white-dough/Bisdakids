@@ -23,7 +23,6 @@ func _input(event):
 	if event is InputEventScreenDrag:
 		points[event.index].pos = event.position
 	if event is InputEventScreenTouch:
-		
 		points[event.index].state = event.pressed
 		points[event.index].pos = event.position
 		if event.pressed:
@@ -41,7 +40,6 @@ func _input(event):
 			zoom_started = true
 	if count == 1:
 		handle_drag(event)
-		pass
 	if count == 2:
 		handle_zoom(event)
 	input_count = count
@@ -55,7 +53,7 @@ func handle_zoom(event):
 	if event is InputEventScreenDrag:
 			var part1 = (points[0].pos.y - points[1].pos.y) 
 			var part2 = (points[0].pos.x - points[1].pos.x) 
-			var distance = sqrt(part1 * part1 + part2 * part2)
+			var distance = sqrt(part1 * part1 + part2 * part2) #sqrt(part1 * part1 + part2 * part2)
 			if zoom_started:
 				zoom_started = false
 				last_dist = distance
@@ -66,10 +64,10 @@ func handle_zoom(event):
 			emit_signal("on_zoom", current_dist)
 
 func zoom_this(val):
-	if abs(current_dist) > 0.1 and abs(current_dist) < 20:
+	if abs(current_dist) > 0.1 and abs(current_dist) < 10:
 		var temp_zoom = current_dist * zoom_rate
-		zoom.x = clamp(zoom.x + temp_zoom * .025, 0.4, 2)
-		zoom.y = clamp(zoom.y + temp_zoom * .025, 0.4, 2)
+		zoom.x = clamp(zoom.x + temp_zoom * .025, 1.0, 2.0)
+		zoom.y = clamp(zoom.y + temp_zoom * .025, 1.0, 2.0)
 	
 func get_camera_center():
 	var vtrans = get_canvas_transform()

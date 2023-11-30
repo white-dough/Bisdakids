@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://c5x3bn4s8axqv" path="res://graphics/navigation/settings/tingog_grabber@2x.png" id="9_2oqod"]
 [ext_resource type="Script" path="res://scenes/navigation/settings/volume_control.gd" id="10_18041"]
 
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
 content_margin_top = 5.0
