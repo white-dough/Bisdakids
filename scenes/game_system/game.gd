@@ -93,6 +93,7 @@ func daily_task_reset():
 	for i in range(3):
 		var key = keys[i]
 		content_as_dictionary[key]["progress"] = 0
+		content_as_dictionary[key]["claimed"] = false
 		daily_task[key] = content_as_dictionary[key]
 	var datetime = Time.get_datetime_dict_from_system()
 	datetime['hour'] = 0

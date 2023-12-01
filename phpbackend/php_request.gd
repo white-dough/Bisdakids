@@ -101,9 +101,8 @@ func _http_request_completed(_result, _response_code, _headers, body):
 	if response != null and response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
-	print(response)
-	
-	request_saving(response)
+	if response != null:
+		request_saving(response)
 	
 func request_saving(response):
 	if response.has("api_error"):

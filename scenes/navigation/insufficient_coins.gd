@@ -12,11 +12,11 @@ func _process(delta):
 
 func _on_close_btn_pressed():
 	Audio.play_sfx(Audio.close_btn_sfx)
-	queue_free()
+	hide()
 
 func _on_dili_btn_pressed():
 	Audio.play_sfx(Audio.normal_btn_sfx)
-	queue_free()
+	hide()
 
 func _on_buy_btn_pressed():
 	Audio.play_sfx(Audio.normal_btn_sfx)
