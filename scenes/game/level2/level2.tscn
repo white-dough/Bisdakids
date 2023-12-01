@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhb1jrvfyhlhj"]
+[gd_scene load_steps=11 format=3 uid="uid://dhb1jrvfyhlhj"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_t8ht7"]
 [ext_resource type="PackedScene" uid="uid://c7spg71oruxth" path="res://scenes/game/level2/level2_game_scene.tscn" id="2_5behc"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="3_4rya8"]
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="4_x6qwf"]
 [ext_resource type="PackedScene" uid="uid://c7fneqgnwcbvb" path="res://scenes/game/obj_found_particles.tscn" id="5_ex3k0"]
+[ext_resource type="PackedScene" uid="uid://crpv1u6mrrquq" path="res://scenes/navigation/no_energy.tscn" id="10_qvl1n"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="38_gl45v"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="39_0u2bc"]
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="40_y4oec"]
@@ -14,6 +15,7 @@
 script = ExtResource("1_t8ht7")
 level_name = "level2"
 level_time = 481.0
+level_num = 2
 
 [node name="HUD" parent="." instance=ExtResource("3_4rya8")]
 
@@ -38,6 +40,8 @@ visible = false
 
 [node name="LevelFailed" parent="." instance=ExtResource("40_y4oec")]
 visible = false
+
+[node name="no_energy" parent="." instance=ExtResource("10_qvl1n")]
 
 [connection signal="ready" from="." to="HUD" method="_on_level_ready"]
 [connection signal="ready" from="." to="GameScene" method="_on_level_ready"]

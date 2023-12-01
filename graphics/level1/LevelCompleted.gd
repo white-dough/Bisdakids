@@ -23,12 +23,16 @@ func _on_next_btn_pressed():
 	if level_name == "level5":
 		changeScene("res://scenes/navigation/map/map.tscn", 0)
 		return
+	if level_name == "level4":
+		changeScene("res://scenes/game/boss_stages/boss_stage1/boss1.tscn", 40)
+		return
 	changeScene("res://scenes/game/" + next_level + "/" + next_level + ".tscn", 30)
 	
 	
 func changeScene(link : String, energy_cost : int) -> void:
 	if Game.energy_system["energy"] < energy_cost:
-		return#modal here
-	Game.deduct_energy(energy_cost)
-	Audio.play_sfx(Audio.normal_btn_sfx)
-	get_tree().change_scene_to_file(link)
+		$"../no_energy".show()
+	else:
+		Game.deduct_energy(energy_cost)
+		Audio.play_sfx(Audio.normal_btn_sfx)
+		get_tree().change_scene_to_file(link)

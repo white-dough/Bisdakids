@@ -18,7 +18,7 @@ extends Node
 										"hint_timestamp": 0,
 										"time_freeze": 0,
 										"time_freeze_timestamp": 0}
-@onready var energy_system_base: Dictionary = {"energy": 100, "timestamp": Time.get_unix_time_from_system()}
+@onready var energy_system_base: Dictionary = {"energy": 100, "timestamp": 0}
 @onready var daily_task_base: Dictionary = {}
 @onready var progress: Dictionary = progress_base
 @onready var user_inventory: Dictionary = user_inventory_base
@@ -141,7 +141,7 @@ func query_update():
 func sync_data():
 	var inventory_timestamps: Array = []
 	var inventory_timestamp_max: float
-	
+	print(Game.progress["timestamp"])
 	var energy_timestamp: float = energy_system["timestamp"]
 	var progress_timestamp: float = float(Game.progress["timestamp"])
 	progress_timestamp = progress_timestamp if progress_timestamp > energy_timestamp else energy_timestamp
@@ -161,7 +161,7 @@ func sync_data():
 	await PhpRequest.http_request.request_completed
 	print(PhpRequest.clean_response)
 	
-	if PhpRequest.clean_response != "db_updated":
+	if PhpRequest.clean_response != "db_updated" and PhpRequest.clean_response != "success":
 		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
 		progress = result["account_progress"]
 		user_inventory = result["user_inventory"]
@@ -247,12 +247,14 @@ func systems_logic()->void:
 
 func deduct_energy(energy_quantity : int)->void:
 	energy_system["energy"] -= energy_quantity
-	energy_system["timestamp"] = Time.get_unix_time_from_system()			
+	energy_system["timestamp"] = Time.get_unix_time_from_system()	
+	#for daily task progression
+	daily_task_progression("Energy Spend",float(energy_quantity))
 	update_local_save()
 	
 func _ready():
 	logic_checks_timer.connect("timeout", systems_logic)
-	logic_checks_timer.wait_time = 30
+	logic_checks_timer.wait_time = 1
 	add_child(logic_checks_timer)
 	logic_checks_timer.start()
 	http_request.set_timeout(10)
@@ -266,6 +268,14 @@ func _ready():
 	await http_request.request_completed
 	if is_connected_to_internet:
 		await daily_task_from_db()
+		
+#	cheat daily task
+#	daily_task_progression("Score", 5000)
+
+
+func daily_task_progression(task_title : String, add_progression : float) -> void:
+	if daily_task.has(task_title):
+		daily_task[task_title]["progress"] += add_progression
 	
 	
 	#timer
@@ -317,6 +327,8 @@ func name_logic(item_name:String)->String:
 			return "Energy"
 		"coin":
 			return "Coins"
+		"premium":
+			return "Premium"
 		_:
 			return "Mystery Bundle"
 
@@ -330,6 +342,8 @@ func reverse_name_logic(item_name:String)->String:
 			return "energy"
 		"Coin":
 			return "coin"
+		"Premium":
+			return "premium"
 		_:
 			return "Mystery Bundle"
 

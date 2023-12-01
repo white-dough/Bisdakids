@@ -2,6 +2,7 @@ extends Node2D
 
 @export var level_name : String
 @export var level_time: float
+@export var level_num: int
 
 @onready var count_of_objects_to_find: int = 10
 @onready var current_objects: Array = $GameScene.current_objects
@@ -26,7 +27,7 @@ func _ready():
 	$HUD.connect("level_finished", level_completed)
 	success_prompt.visibility_changed.connect(load_interstitial_ad)
 	failed_prompt.visibility_changed.connect(load_interstitial_ad)
-	BannerAds.destroy_banner()
+	BannerAds.ad_view.hide()
 	
 func load_interstitial_ad():
 	if not Game.premium:
@@ -63,6 +64,11 @@ func level_completed(time_left):
 		score_label.set_text(str(int(score)))
 		star_bar.set_value(score)
 		level_success.visible = true
+		#for daily task progression
+		Game.daily_task_progression("Score",float(int(score)))
+		Game.daily_task_progression("Level Finish",1)
+		Game.daily_task_progression("Detective",10)
+		
 	else:
 		print("fail")
 		Audio.play_bgm(Audio.fail_sfx)

@@ -83,8 +83,8 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("5_dr4yf")
 theme_override_font_sizes/font_size = 30
-text = "Ayos kaayo! Pwede na ni nimo
-ma-kolekta ang premyo."
+text = "Ayos kaayo! 
+Imo nang nakolekta ang premyo."
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://caaxj7bw5ogqe" path="res://scenes/navigation/daily_task/task.tscn" id="9_t4wce"]
 [ext_resource type="PackedScene" uid="uid://dqoqeyjn3b3wj" path="res://scenes/navigation/daily_task/dtask_notyetdone.tscn" id="10_143wg"]
 [ext_resource type="PackedScene" uid="uid://bahudxyf3mlth" path="res://scenes/navigation/daily_task/dtask_claim.tscn" id="11_pqvim"]
-[ext_resource type="PackedScene" path="res://scenes/navigation/daily_task/dtask_claimed.tscn" id="12_lrog3"]
+[ext_resource type="PackedScene" uid="uid://ccn7li12665i3" path="res://scenes/navigation/daily_task/dtask_claimed.tscn" id="12_lrog3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0

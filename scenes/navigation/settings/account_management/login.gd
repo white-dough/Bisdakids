@@ -15,6 +15,7 @@ func _on_login_btn_pressed():
 	await PhpRequest.http_request.request_completed
 	if PhpRequest.clean_response != "failed":
 		Game.reset_data()
+		print(Game.loaded_player_data)
 		Game.user_name = PhpRequest.clean_response
 		Game.sync_data()#calls the update_local_save for us
 		Game.update_local_save()
