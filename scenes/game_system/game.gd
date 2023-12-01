@@ -49,7 +49,7 @@ func save_data():
 	var player_data: Dictionary = create_data()
 #	print(player_data)
 	file.store_var(player_data)
-#	print("save: " + str(player_data))
+	print("save: " + str(player_data))
 
 func create_data() -> Dictionary:
 	var player_data: Dictionary = {
@@ -131,6 +131,7 @@ func query_update():
 				user_inventory[item['item_name']] = item['quantity']
 				user_inventory[item['item_name'] + '_timestamp'] = item['timestamp']
 				user_inventory.erase('timestamp')
+				print("-------------", user_inventory)
 				update_local_save()
 			else:
 				PhpRequest.update_user_inventory(user_name, user_inventory)
@@ -140,7 +141,7 @@ func sync_data():
 	var inventory_timestamps: Array = []
 	var inventory_timestamp_max: float
 	
-	var energy_timestamp: int = energy_system["timestamp"]
+	var energy_timestamp: float = energy_system["timestamp"]
 	var progress_timestamp: float = float(Game.progress["timestamp"])
 	progress_timestamp = progress_timestamp if progress_timestamp > energy_timestamp else energy_timestamp
 	
@@ -157,6 +158,7 @@ func sync_data():
 	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
 	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores, energy_system["energy"])
 	await PhpRequest.http_request.request_completed
+	print(PhpRequest.clean_response)
 	
 	if PhpRequest.clean_response != "db_updated":
 		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
@@ -198,6 +200,7 @@ func update_local_save():
 func daily_task_from_db():
 	PhpRequest.get_dailyTasks()
 	await PhpRequest.http_request.request_completed
+	print(PhpRequest.clean_response)
 	if PhpRequest.api_no_error:
 		var file = FileAccess.open("res://data/daily_task.json", FileAccess.WRITE)
 		var formattedData = {}
@@ -223,8 +226,8 @@ func energy_recharge() -> void:
 		update_local_save()
 		return
 	if energy_system["energy"] < 40:
-		if user_inventory["energy"] < 25:
-			energy_system["energy"] += user_inventory["energy"]
+		if int(user_inventory["energy"]) < 25:
+			energy_system["energy"] += int(user_inventory["energy"])
 			energy_system["timestamp"] = Time.get_unix_time_from_system()
 			user_inventory["energy"] = 0
 			user_inventory["energy_timestamp"] = Time.get_unix_time_from_system()
@@ -251,7 +254,7 @@ func _ready():
 	logic_checks_timer.wait_time = 30
 	add_child(logic_checks_timer)
 	logic_checks_timer.start()
-	http_request.timeout = 3
+	http_request.set_timeout(10)
 	add_child(http_request)
 	http_request.connect("request_completed", _on_request_completed)
 	load_data()
@@ -311,6 +314,8 @@ func name_logic(item_name:String)->String:
 			return "Hint"
 		"energy":
 			return "Energy"
+		"coin":
+			return "Coins"
 		_:
 			return "Mystery Bundle"
 
@@ -322,14 +327,9 @@ func reverse_name_logic(item_name:String)->String:
 			return "hint"
 		"Energy":
 			return "energy"
+		"Coin":
+			return "coin"
 		_:
 			return "Mystery Bundle"
 
 
-func _process(_delta):#change to timerrrrr
-#	load_data()
-#	daily_task_logic()
-#	print(loaded_player_data)
-	pass
-#	if Engine.get_process_frames () % 3600 == 0:
-#		daily_task_logic()

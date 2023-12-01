@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://qh36n3tqty5r"]
+[gd_scene load_steps=14 format=3 uid="uid://qh36n3tqty5r"]
 
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss.gd" id="1_dby58"]
-[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/Boss_Stage/boss_stage_gemescene.tscn" id="1_shust"]
-[ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/Boss_Stage/boss_Identification.tscn" id="3_77o8w"]
+[ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/boss_stages/boss_stage1/boss1_game_scene.tscn" id="1_shust"]
+[ext_resource type="PackedScene" uid="uid://bvsfbi3a45jh2" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.tscn" id="3_77o8w"]
 [ext_resource type="PackedScene" uid="uid://01u3cti70ykv" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.tscn" id="3_kb8ix"]
 [ext_resource type="PackedScene" uid="uid://5fm6trp7abm0" path="res://scenes/game/hud.tscn" id="5_01x7t"]
 [ext_resource type="PackedScene" uid="uid://db4hh7vns4hqs" path="res://scenes/game/boss_stages/background_2.tscn" id="5_bk7my"]
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="5_ejmmk"]
 [ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="6_d5cjs"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="7_fs1yk"]
+[ext_resource type="PackedScene" uid="uid://c7fneqgnwcbvb" path="res://scenes/game/obj_found_particles.tscn" id="8_b6482"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="8_lcx81"]
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="9_kwwhj"]
 [ext_resource type="PackedScene" uid="uid://cwtckupwpc00f" path="res://scenes/game/boss_stages/wave_prog.tscn" id="11_avxq3"]
@@ -40,6 +41,10 @@ visible = false
 top_level = true
 scale = Vector2(0.831, 1)
 
+[node name="ObjectFoundAnimation" parent="." instance=ExtResource("8_b6482")]
+position = Vector2(222, 0)
+scale = Vector2(0.831, 1)
+
 [node name="VictoryTriumph" parent="." instance=ExtResource("6_d5cjs")]
 layer = 2
 visible = false
@@ -57,7 +62,7 @@ layer = 2
 visible = false
 
 [node name="WaveProg" parent="." instance=ExtResource("11_avxq3")]
-visible = false
 
 [connection signal="ready" from="." to="HUD" method="_on_level_ready"]
 [connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
+[connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

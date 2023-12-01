@@ -38,8 +38,6 @@ func load_interstitial_ad():
 	if not Game.premium:
 		InterstitialAds.load_show_interstitial()
 
-func _process(_delta):
-	pass
 #	if isArrayEmpty(current_objects):
 #		print("The array is empty")
 #	else:
@@ -57,12 +55,12 @@ func wave_finished() -> void:
 		2:
 			wave2_node.show()
 			$HUD/ColorRect/Panel/ContainerHUD/Clue.disabled = true
-			$HUD/ColorRect/Panel/ContainerHUD/Clue/HintLBl.visible = false
+			$HUD/ColorRect/Panel/ContainerHUD/Clue/HintLbl.visible = false
 		3:
 			wave2_node.hide()
 			wave3_node.show()
 		4:
-			Audio.play_sfx(Audio.success_sfx)
+			Audio.play_bgm(Audio.success_sfx)
 			background_node.hide()
 			wave3_node.hide()
 			var time_left : int = int($HUD/ColorRect/Panel/ContainerHUD/TimerBar/Timer.time_left)
@@ -72,7 +70,7 @@ func wave_finished() -> void:
 			success_prompt.visible = true
 			prompt_timer.start()
 			await prompt_timer.timeout
-			var score: int = 5000 * (time_left / level_time)
+			var score: int = int(5000 * (time_left / level_time))
 			if Game.progress[level_name] < score:
 				highscore_label.set_text(str(int(score)))#new highscore
 				Game.progress[level_name] = int(score)
@@ -88,7 +86,7 @@ func level_completed(time_left):
 	if time_left > 0:
 		wave_finished()
 	else:
-		Audio.play_sfx(Audio.fail_sfx)
+		Audio.play_bgm(Audio.fail_sfx)
 		background_node.hide()
 		wave3_node.hide()
 		wave2_node.hide()

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="3_fthfd"]
 [ext_resource type="Script" path="res://scenes/game/objects.gd" id="3_tg5kp"]
 [ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="5_qamyy"]
-[ext_resource type="PackedScene" uid="uid://c4w7uhwcdpn5w" path="res://scenes/game/obj_found_particles.tscn" id="6_crnkn"]
+[ext_resource type="PackedScene" uid="uid://c7fneqgnwcbvb" path="res://scenes/game/obj_found_particles.tscn" id="6_crnkn"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="6_xtgjc"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="7_lqg6n"]
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="8_cucfb"]

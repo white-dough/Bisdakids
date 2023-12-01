@@ -125,7 +125,7 @@ position = Vector2(664, 376)
 [node name="Kadena" parent="Objects" instance=ExtResource("10_gtu0w")]
 position = Vector2(304, 16)
 
-[node name="Kwadro" parent="Objects" instance=ExtResource("11_ciovy")]
+[node name="Kuwadro" parent="Objects" instance=ExtResource("11_ciovy")]
 position = Vector2(280, 352)
 
 [node name="Espada" parent="Objects" instance=ExtResource("13_idpnx")]
@@ -137,16 +137,16 @@ position = Vector2(271, 552)
 [node name="Atsa" parent="Objects" instance=ExtResource("15_7pfd7")]
 position = Vector2(256, 640)
 
-[node name="Klip" parent="Objects" instance=ExtResource("16_iyfkw")]
+[node name="Pangtabas" parent="Objects" instance=ExtResource("16_iyfkw")]
 position = Vector2(344, 656)
 
-[node name="Kaban" parent="Objects" instance=ExtResource("17_6lvwm")]
+[node name="Baol" parent="Objects" instance=ExtResource("17_6lvwm")]
 position = Vector2(832, 560)
 
 [node name="Barel" parent="Objects" instance=ExtResource("19_g0qjp")]
 position = Vector2(552, 648)
 
-[node name="Tibod" parent="Objects" instance=ExtResource("18_bvuo5")]
+[node name="Plurira" parent="Objects" instance=ExtResource("18_bvuo5")]
 position = Vector2(480, 616)
 
 [node name="Lampara" parent="Objects" instance=ExtResource("20_vo2ug")]

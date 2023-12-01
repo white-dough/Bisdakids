@@ -8,4 +8,4 @@ func _on_home_btn_pressed():
 	get_tree().change_scene_to_file("res://scenes/navigation/main_menu/main_menu.tscn")
 
 func _on_retry_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/game/level1/level_1.tscn")
+	get_tree().reload_current_scene()

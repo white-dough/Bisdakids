@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="3_sauh1"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="4_3afey"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="5_g24fb"]
-[ext_resource type="PackedScene" uid="uid://c4w7uhwcdpn5w" path="res://scenes/game/obj_found_particles.tscn" id="5_hh1o3"]
+[ext_resource type="PackedScene" uid="uid://c7fneqgnwcbvb" path="res://scenes/game/obj_found_particles.tscn" id="5_hh1o3"]
 [ext_resource type="PackedScene" uid="uid://dy04hbfc738bq" path="res://graphics/level1/LevelFailed.tscn" id="6_chxad"]
 
 [node name="Level" type="Node2D"]

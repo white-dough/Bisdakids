@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://5fm6trp7abm0"]
+[gd_scene load_steps=29 format=3 uid="uid://5fm6trp7abm0"]
 
 [ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_5f8iu"]
 [ext_resource type="Theme" uid="uid://s6fhai8xfiw" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cgkql10r51w7x" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
 [ext_resource type="Texture2D" uid="uid://25c8op5yox15" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
-[ext_resource type="Texture2D" uid="uid://cqr5ebh2dnwp5" path="res://graphics/ui/icons/2x/minustime_effect@2x.png" id="8_rgohw"]
+[ext_resource type="Texture2D" uid="uid://ti3dkv6xihq6" path="res://graphics/ui/icons/2x/minustime_effect@2x.png" id="8_rgohw"]
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
 [ext_resource type="Texture2D" uid="uid://c6aqydfidujo0" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
@@ -249,6 +249,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/Panel"]
+layer = 3
 
 [node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer"]
 visible = false
@@ -358,7 +359,7 @@ offset_bottom = 120.0
 texture_normal = ExtResource("9_0hgwc")
 
 [node name="TimeFreeze" type="TextureButton" parent="."]
-anchors_preset = -1
+show_behind_parent = true
 offset_left = 253.0
 offset_top = 32.0
 offset_right = 342.0

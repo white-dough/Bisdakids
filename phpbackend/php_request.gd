@@ -9,7 +9,7 @@ var is_requesting : bool = false
 var clean_response
 var api_no_error: bool = true
 func _ready():
-	http_request.set_timeout(5.0) 
+	http_request.set_timeout(20.0) 
 	add_child(http_request)
 	http_request.connect("request_completed", _http_request_completed)
 #	store_query()
@@ -95,14 +95,14 @@ func _http_request_completed(_result, _response_code, _headers, body):
 		printerr("BISDAKIDS API IS DOWN:")
 		api_no_error = false
 		return
-	# Grab our JSON and handle any errors reported by our PHP code:
-	
 #	print(response['error'])
+	
 	var response = JSON.parse_string(response_body)
-	if response['error'] != "none":
+	if response != null and response['error'] != "none":
 		printerr("BISDAKIDS API ERROR: " + response['error'])
 		return
-#	print(response)
+	print(response)
+	
 	request_saving(response)
 	
 func request_saving(response):
