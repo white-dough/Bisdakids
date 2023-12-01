@@ -18,15 +18,19 @@ extends Node
 										"hint_timestamp": 0,
 										"time_freeze": 0,
 										"time_freeze_timestamp": 0}
+@onready var energy_system_base: Dictionary = {"energy": 100, "timestamp": Time.get_unix_time_from_system()}
 @onready var daily_task_base: Dictionary = {}
 @onready var progress: Dictionary = progress_base
 @onready var user_inventory: Dictionary = user_inventory_base
+@onready var energy_system: Dictionary = energy_system_base
 @onready var daily_task: Dictionary = daily_task_base
 @onready var current_date : Dictionary = {}
 @onready var loaded_player_data : Dictionary = {}
 @onready var http_request : HTTPRequest = HTTPRequest.new()
 @onready var is_connected_to_internet : bool = false
 var premium: bool = false
+
+@onready var logic_checks_timer : Timer = Timer.new()#timer for checking energy system and daily task
 
 func check_is_connected_internet():
 	http_request.cancel_request()
@@ -45,7 +49,7 @@ func save_data():
 	var player_data: Dictionary = create_data()
 #	print(player_data)
 	file.store_var(player_data)
-#	print("save: " + str(player_data))
+	print("save: " + str(player_data))
 
 func create_data() -> Dictionary:
 	var player_data: Dictionary = {
@@ -54,6 +58,8 @@ func create_data() -> Dictionary:
 		"progress" : progress,
 
 		"user_inventory" : user_inventory,
+		
+		"energy_system" : energy_system,
 
 		"daily_task" : daily_task
 	}
@@ -69,6 +75,7 @@ func load_data():
 	user_name = loaded_player_data['user_name']
 	progress = loaded_player_data['progress']
 	user_inventory = loaded_player_data['user_inventory']
+	energy_system = loaded_player_data['energy_system']
 	daily_task = loaded_player_data['daily_task']
 	
 		
@@ -124,6 +131,7 @@ func query_update():
 				user_inventory[item['item_name']] = item['quantity']
 				user_inventory[item['item_name'] + '_timestamp'] = item['timestamp']
 				user_inventory.erase('timestamp')
+				print("-------------", user_inventory)
 				update_local_save()
 			else:
 				PhpRequest.update_user_inventory(user_name, user_inventory)
@@ -132,10 +140,15 @@ func query_update():
 func sync_data():
 	var inventory_timestamps: Array = []
 	var inventory_timestamp_max: float
+	
+	var energy_timestamp: float = energy_system["timestamp"]
 	var progress_timestamp: float = float(Game.progress["timestamp"])
+	progress_timestamp = progress_timestamp if progress_timestamp > energy_timestamp else energy_timestamp
+	
 	var inventory_items: Dictionary = {}
 	var progress_scores: Dictionary = progress.duplicate()
 	progress_scores.erase("timestamp")
+	
 	for key in user_inventory:
 		if key.contains("_timestamp"):
 			inventory_timestamps.append(float(Game.user_inventory[key]))
@@ -143,15 +156,19 @@ func sync_data():
 			inventory_items[key] = Game.user_inventory[key]
 	inventory_timestamp_max = inventory_timestamps.max()
 	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
-	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores)
+	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores, energy_system["energy"])
 	await PhpRequest.http_request.request_completed
+	print(PhpRequest.clean_response)
 	
 	if PhpRequest.clean_response != "db_updated":
 		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
 		progress = result["account_progress"]
 		user_inventory = result["user_inventory"]
+		energy_system["energy"] = int(result["energy"])
+		energy_system["timestamp"] = Time.get_unix_time_from_system()
 		daily_task_reset()
 		update_local_save()
+	
 		
 func get_user_inventory_local() -> Dictionary:
 	var user_inventory_clean: Dictionary = {}
@@ -172,6 +189,7 @@ func reset_data():
 	Game.user_inventory = user_inventory_base 
 	Game.progress = progress_base
 	Game.daily_task = daily_task_base
+	Game.energy_system = energy_system_base
 	update_local_save()
 
 func update_local_save():
@@ -182,6 +200,7 @@ func update_local_save():
 func daily_task_from_db():
 	PhpRequest.get_dailyTasks()
 	await PhpRequest.http_request.request_completed
+	print(PhpRequest.clean_response)
 	if PhpRequest.api_no_error:
 		var file = FileAccess.open("res://data/daily_task.json", FileAccess.WRITE)
 		var formattedData = {}
@@ -195,15 +214,59 @@ func daily_task_from_db():
 		file.store_line(JSON.stringify(formattedData, "\t"))
 		file.close()
 
+func energy_recharge() -> void:
+	const energy_increment : int = 25
+	const energy_max : int = 100
+	#this condition checks if the stored timestamp is greater than 3 hours
+	if ((Time.get_unix_time_from_system() - energy_system["timestamp"]) >= 10800):
+		energy_system["energy"] +=  energy_increment
+		energy_system["timestamp"] =  Time.get_unix_time_from_system()
+		if energy_system["energy"] > energy_max:
+			energy_system["energy"] = energy_max
+		update_local_save()
+		return
+	if energy_system["energy"] < 40:
+		if int(user_inventory["energy"]) < 25:
+			energy_system["energy"] += int(user_inventory["energy"])
+			energy_system["timestamp"] = Time.get_unix_time_from_system()
+			user_inventory["energy"] = 0
+			user_inventory["energy_timestamp"] = Time.get_unix_time_from_system()
+		else:
+			energy_system["energy"] += 25
+			energy_system["timestamp"] = Time.get_unix_time_from_system()
+			user_inventory["energy"] -= 25
+			user_inventory["energy_timestamp"] = Time.get_unix_time_from_system()
+		update_local_save()
+#		energy_system["energy"] += 40
+
+func systems_logic()->void:
+	daily_task_logic()
+	energy_recharge()
+	logic_checks_timer.start()
+
+func deduct_energy(energy_quantity : int)->void:
+	energy_system["energy"] -= energy_quantity
+	energy_system["timestamp"] = Time.get_unix_time_from_system()			
+	update_local_save()
+	
 func _ready():
-	http_request.timeout = 3
+	logic_checks_timer.connect("timeout", systems_logic)
+	logic_checks_timer.wait_time = 30
+	add_child(logic_checks_timer)
+	logic_checks_timer.start()
+	http_request.set_timeout(10)
 	add_child(http_request)
 	http_request.connect("request_completed", _on_request_completed)
 	load_data()
-	daily_task_logic()
+	systems_logic()
 	premium = true if user_inventory['premium'] else false
 	print(loaded_player_data)
-	await daily_task_from_db()
+	check_is_connected_internet()
+	await http_request.request_completed
+	if is_connected_to_internet:
+		await daily_task_from_db()
+	
+	
 	#timer
 #	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.WRITE)
 #	var player_data: Dictionary = { "user_name": "dwight19", "progress": { "level1": 4869, "level2": 0, "level3": 0, "level4": 0, "level5": 0, "timestamp": 1697299889.65907 }, "user_inventory": { "coin": 40, "coin_timestamp": 1697299889.77125, "energy": 0, "energy_timestamp": 1697299889.8651, "hint": 13, "hint_timestamp": 1697356638.439, "premium": 0, "premium_timestamp": 1697299890.05594, "time_freeze": 3, "time_freeze_timestamp": 1697356634.596 }, "daily_task": { "Level Finish": { "task_desc": "Finish a level.", "reward": "coin", "reward_quantity": 10, "progress": 0, "goal": 1 }, "Detective": { "task_desc": "Find 15 hidden objects.", "reward": "coin", "reward_quantity": 8, "progress": 10, "goal": 15 }, "Score": { "task_desc": "Collect 5000 score points.", "reward": "coin", "reward_quantity": 15, "progress": 5000, "goal": 5000 }, "unix_datestamp": 1697328000 } }
@@ -251,6 +314,8 @@ func name_logic(item_name:String)->String:
 			return "Hint"
 		"energy":
 			return "Energy"
+		"coin":
+			return "Coins"
 		_:
 			return "Mystery Bundle"
 
@@ -262,14 +327,9 @@ func reverse_name_logic(item_name:String)->String:
 			return "hint"
 		"Energy":
 			return "energy"
+		"Coin":
+			return "coin"
 		_:
 			return "Mystery Bundle"
 
 
-func _process(_delta):#change to timerrrrr
-#	load_data()
-#	daily_task_logic()
-#	print(loaded_player_data)
-	pass
-#	if Engine.get_process_frames () % 3600 == 0:
-#		daily_task_logic()

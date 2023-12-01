@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 signal clue_pressed(object_clue)
 signal level_finished(time_finished:float)

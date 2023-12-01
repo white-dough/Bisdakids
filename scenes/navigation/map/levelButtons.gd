@@ -19,16 +19,17 @@ func _ready():
 		button.pressed.connect(modal_display.bind(level_key))
 	load_level_btns()
 	modal_close_btn.pressed.connect(closeModal)
-	
 
 func load_level_btns() -> void:
 	var completed_levels : Dictionary = {}
 	for level in Game.progress:
+		if level == "timestamp":
+			continue
 		completed_levels[level] = Game.progress[level]
 		if Game.progress[level] <= 0:
 			break
 	#loop that will not show the star progress of the last iteration
-	for i in completed_levels.size()-1:
+	for i in range(0,completed_levels.size()):		
 		level_btns[i].disabled = false
 		if i == 4:
 			if Game.progress[level_btns[i].get_name()] > 0:
@@ -61,14 +62,19 @@ func modal_display(level_key: String) -> void:
 		modal_scoretxt_lbl.visible = false
 	if modal_play_btn.is_connected("pressed", changeScene):
 		modal_play_btn.pressed.disconnect(changeScene)
-	modal_play_btn.pressed.connect(changeScene.bind("res://scenes/game/"+level_key+"/"+level_key+".tscn"))
+	if level_key == "level5":
+		modal_play_btn.pressed.connect(changeScene.bind("res://scenes/game/boss_stages/boss_stage1/boss1.tscn", 40))
+	modal_play_btn.pressed.connect(changeScene.bind("res://scenes/game/"+level_key+"/"+level_key+".tscn", 30))
 	modal.show()
 
-func closeModal():
+func closeModal() -> void:
 	Audio.play_sfx(Audio.close_btn_sfx)
 	modal.hide()
 
-func changeScene(link):
+func changeScene(link : String, energy_cost : int) -> void:
+	if Game.energy_system["energy"] < energy_cost:
+		$"../no_energy".show()
+	Game.deduct_energy(energy_cost)
 	Audio.play_sfx(Audio.normal_btn_sfx)
 	get_tree().change_scene_to_file(link)
 

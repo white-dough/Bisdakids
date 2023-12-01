@@ -5,7 +5,7 @@ extends CanvasLayer
 func _ready():
 	var user_inventory : Dictionary = Game.get_user_inventory_local()
 	for item in user_inventory:
-		if user_inventory[item] <= 0:
+		if int(user_inventory[item]) <= 0:
 			continue
 		var item_scene : Control  = load("res://scenes/navigation/store_inventory/inventory/inventory_item.tscn").instantiate()
 		item_grid.add_child(item_scene)

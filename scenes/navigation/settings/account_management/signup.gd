@@ -13,7 +13,7 @@ func _on_signup_btn_pressed():
 	var user_name: String = username_input.get_text()
 	var password: String = password_input.get_text()
 	var confirm_password: String = confirm_password_input.get_text()
-	if password == confirm_password:
+	if password == confirm_password and !password.is_empty():
 		PhpRequest.register(user_name, password)
 		await PhpRequest.http_request.request_completed
 		if PhpRequest.clean_response == "success":
@@ -22,14 +22,15 @@ func _on_signup_btn_pressed():
 			await Game.sync_data()
 			queue_free()
 			mainmenu_modal_node.add_child(logged_in_scene)
-		elif PhpRequest.clean_response == "ErrPHP":
+		elif !PhpRequest.api_no_error:
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NATARUNG ANG KONEKSIYON SA DATABASE! ")
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Dili mahimo ang koneksiyon sa server sa pagproseso sa kani na akawnt. Susi-a sa ang imong internet ug suwayi usab.")
-			error_modal.visible = true                  
+			error_modal.visible = true   
+		else:               
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Naa nay naggamit ani na username.")
 			error_modal.visible = true
-	elif !password.is_empty():
+	elif password.is_empty() or confirm_password.is_empty():
 		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
 		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Ang password dili pwede na blangkohan. Palihug suwayi pag-usab.")
 		error_modal.visible = true

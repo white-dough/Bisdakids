@@ -25,6 +25,17 @@ func answer_attempt(event: InputEvent, answer_lbl: Label) -> void:
 				hud_timer.start(0.05)
 				return
 			hud_timer.start(hud_timer.get_time_left() - 60)
+			
+			#for the timer
+			var time_minus_effect : Sprite2D = $"../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
+			var timer_node : Timer = Timer.new()
+			timer_node.wait_time = 1.5
+			add_child(timer_node)
+			time_minus_effect.visible = true
+			timer_node.start()
+			timer_node.timeout.connect(remove_red)
+			
+			
 			var red_lbl : StyleBox = load("res://themes/tigmo_red_lbl_stylebox.tres")
 			answer_lbl.add_theme_stylebox_override("normal", red_lbl)
 			
@@ -40,3 +51,6 @@ func answer_attempt(event: InputEvent, answer_lbl: Label) -> void:
 			wrong_answer_tween.tween_property(answer_lbl, "position", Vector2(original_x - 7, original_y + 2), 0.1)
 			await wrong_answer_tween.finished
 			answer_lbl.set_position(Vector2(original_x,original_y))
+func remove_red():
+	var time_minus_effect : Sprite2D = $"../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
+	time_minus_effect.visible = false

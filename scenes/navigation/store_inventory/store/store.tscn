@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://cyxkj8srkhcln"]
+[gd_scene load_steps=14 format=3 uid="uid://cyxkj8srkhcln"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7u3wc"]
 [ext_resource type="Script" path="res://scenes/navigation/store_inventory/store/store.gd" id="1_c5b6a"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="3_6hsh8"]
-[ext_resource type="Texture2D" uid="uid://c12secd50gxjn" path="res://graphics/ui/icons/lively_store_3@2x.png" id="4_nt2hh"]
-[ext_resource type="Texture2D" uid="uid://c28lvve87y5of" path="res://graphics/ui/buttons/2x/shopExit_btn@2x.png" id="4_x1yem"]
-[ext_resource type="Texture2D" uid="uid://xheifgna20r1" path="res://graphics/ui/icons/lively_roof@2x.png" id="5_nxmmm"]
+[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="3_6hsh8"]
+[ext_resource type="Texture2D" uid="uid://bnir703lyq6mf" path="res://graphics/ui/icons/lively_store_3@2x.png" id="4_nt2hh"]
+[ext_resource type="Texture2D" uid="uid://chciutw7canlo" path="res://graphics/ui/buttons/2x/shopExit_btn@2x.png" id="4_x1yem"]
+[ext_resource type="Texture2D" uid="uid://j0p520iqbx5w" path="res://graphics/ui/icons/lively_roof@2x.png" id="5_nxmmm"]
 [ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="6_1587j"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="8_lagby"]
-[ext_resource type="Texture2D" uid="uid://ljtawk6142dm" path="res://graphics/navigation/store/2x/link_pnl@2x.png" id="9_pxd0d"]
+[ext_resource type="Texture2D" uid="uid://vvc0dlkm5d3m" path="res://graphics/navigation/store/2x/link_pnl@2x.png" id="9_pxd0d"]
+[ext_resource type="PackedScene" uid="uid://c8j40idjdbaw2" path="res://scenes/navigation/insufficient_coins.tscn" id="10_wyvqr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10gmb"]
 texture = ExtResource("4_nt2hh")
@@ -142,5 +143,16 @@ theme = ExtResource("8_lagby")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxTexture_byuln")
 text = "kulang sa kwarta? Pun-i diri"
+
+[node name="LinkButton" type="LinkButton" parent="Store/ItemList"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Kulang sa kwarta? Pun-i diri!"
+underline = 1
+uri = "google.com"
+
+[node name="insufficient_coins" parent="." instance=ExtResource("10_wyvqr")]
+visible = false
 
 [connection signal="pressed" from="Store/CloseBtn" to="." method="_on_close_btn_pressed"]

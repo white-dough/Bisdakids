@@ -44,7 +44,8 @@ func _process(_delta):
 
 func level_completed(time_left):
 	if time_left > 0:
-		Audio.play_sfx(Audio.success_sfx)
+		print("success")
+		Audio.play_bgm(Audio.success_sfx)
 		var prompt_timer : Timer = Timer.new()
 		prompt_timer.wait_time = 3
 		add_child(prompt_timer)
@@ -63,7 +64,8 @@ func level_completed(time_left):
 		star_bar.set_value(score)
 		level_success.visible = true
 	else:
-		Audio.play_sfx(Audio.fail_sfx)
+		print("fail")
+		Audio.play_bgm(Audio.fail_sfx)
 		var prompt_timer : Timer = Timer.new()
 		prompt_timer.wait_time = 3
 		add_child(prompt_timer)
