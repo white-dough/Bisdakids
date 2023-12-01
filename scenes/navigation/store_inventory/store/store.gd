@@ -34,16 +34,22 @@ func _ready():
 												"item_name" = item.get_node("MarginContainer/StoreItemPnl/ItemNameLbl").get_text(),
 												"quantity" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/ItemImg/QuantityLbl").get_text()),
 												"price" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/PriceLbl").get_text())}
-			item.get_node("StoreItem").connect("pressed", purchase_item.bind(purchase_details))
+			item.get_node("StoreItem").connect("pressed", purchase_attempt.bind(purchase_details))
 #		item.get_node("StoreItem").connect("pressed", purchase_item.bind(item))
 #	store_btn.pressed.connect(modal_btn_pressed.bind(store_scene))
-
-func purchase_item(purchase_details: Dictionary):
-#	print(str(Game.user_inventory['coin']) + str(purchase_details['price']))
+func purchase_attempt(purchase_details: Dictionary):
 	if int(Game.user_inventory['coin']) < purchase_details['price']:
 		Audio.play_sfx(Audio.close_btn_sfx)
 		$insufficient_coins.show()
 		return
+	$purchase_confirm.show()
+	if $purchase_confirm/ModalPanel2/Content_Container/yes_btn.is_connected("pressed", purchase_item.bind(purchase_details)):
+		$purchase_confirm/ModalPanel2/Content_Container/yes_btn.pressed.disconnect(purchase_item.bind(purchase_details))
+	$purchase_confirm/ModalPanel2/Content_Container/yes_btn.pressed.connect(purchase_item.bind(purchase_details))
+
+func purchase_item(purchase_details: Dictionary):	
+	$purchase_confirm.hide()
+#	print(str(Game.user_inventory['coin']) + str(purchase_details['price']))	
 	Audio.play_sfx(Audio.normal_btn_sfx)
 	Game.user_inventory['coin'] = int(Game.user_inventory['coin']) - purchase_details['price']
 	Game.user_inventory['coin_timestamp'] = Time.get_unix_time_from_system()

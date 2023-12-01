@@ -1,14 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://bu3vl28f87ja3"]
+[gd_scene load_steps=14 format=3 uid="uid://dqoqeyjn3b3wj"]
 
 [ext_resource type="Script" path="res://scenes/navigation/daily_task/dtask_notyetdone.gd" id="1_k2uh4"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_sbq63"]
-[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_j6csl"]
-[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_ebsqn"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_53hgu"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_utr1i"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_1eq6y"]
-[ext_resource type="Texture2D" uid="uid://dtkdeqmtk3n2a" path="res://graphics/ui/buttons/2x/okayY_btn@2x.png" id="7_vslql"]
-[ext_resource type="Texture2D" uid="uid://c185b3xra4m0v" path="res://graphics/ui/buttons/2x/okayPressedY_btn@2x.png" id="8_k8axd"]
+[ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_j6csl"]
+[ext_resource type="Texture2D" uid="uid://drtnqfwiqa8be" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_ebsqn"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_53hgu"]
+[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_utr1i"]
+[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_1eq6y"]
+[ext_resource type="Texture2D" uid="uid://ctsochhsrty6n" path="res://graphics/ui/buttons/2x/okayY_btn@2x.png" id="7_vslql"]
+[ext_resource type="Texture2D" uid="uid://dk4t7qc4bi3si" path="res://graphics/ui/buttons/2x/okayPressedY_btn@2x.png" id="8_k8axd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -83,8 +83,8 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("4_53hgu")
 theme_override_font_sizes/font_size = 30
-text = "Ops! wa pa ni nimo na human 
-na buhatunon, humna sa arun 
+text = "Ops! Wala pa ni nimo na human 
+na buhatunon, humana usa arun 
 makakuha ka's premyo."
 horizontal_alignment = 1
 vertical_alignment = 1

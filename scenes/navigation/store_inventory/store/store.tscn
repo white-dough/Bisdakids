@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyxkj8srkhcln"]
+[gd_scene load_steps=15 format=3 uid="uid://cyxkj8srkhcln"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7u3wc"]
 [ext_resource type="Script" path="res://scenes/navigation/store_inventory/store/store.gd" id="1_c5b6a"]
@@ -10,6 +10,7 @@
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="8_lagby"]
 [ext_resource type="Texture2D" uid="uid://vvc0dlkm5d3m" path="res://graphics/navigation/store/2x/link_pnl@2x.png" id="9_pxd0d"]
 [ext_resource type="PackedScene" uid="uid://c8j40idjdbaw2" path="res://scenes/navigation/insufficient_coins.tscn" id="10_wyvqr"]
+[ext_resource type="PackedScene" uid="uid://dgua678db6p0e" path="res://scenes/navigation/store_inventory/store/purchase_confirm.tscn" id="11_8lrrq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10gmb"]
 texture = ExtResource("4_nt2hh")
@@ -153,6 +154,9 @@ underline = 1
 uri = "google.com"
 
 [node name="insufficient_coins" parent="." instance=ExtResource("10_wyvqr")]
+visible = false
+
+[node name="purchase_confirm" parent="." instance=ExtResource("11_8lrrq")]
 visible = false
 
 [connection signal="pressed" from="Store/CloseBtn" to="." method="_on_close_btn_pressed"]
