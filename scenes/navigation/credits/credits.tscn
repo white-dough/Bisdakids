@@ -1,15 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://boxpcelxhyga8"]
 
 [ext_resource type="Script" path="res://scenes/navigation/credits/credits.gd" id="1_yywy8"]
-[ext_resource type="Texture2D" uid="uid://mbhyindoasj5" path="res://graphics/credits/background/credits_bg@2x.png" id="2_1sv8x"]
-[ext_resource type="Texture2D" uid="uid://ojpy8trjsj53" path="res://graphics/ui/icons/back button@2x.png" id="3_xeiti"]
-[ext_resource type="Texture2D" uid="uid://b7kokrffflhvd" path="res://graphics/credits/credits_panel_bg@2x.png" id="4_303ml"]
-[ext_resource type="Texture2D" uid="uid://dnj6rwhlgj87o" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="4_v3yie"]
-[ext_resource type="FontFile" uid="uid://ny6ab3bchxqw" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_fcuah"]
+[ext_resource type="Texture2D" uid="uid://bi32vmrpvgwh4" path="res://graphics/credits/background/credits_bg@2x.png" id="2_1sv8x"]
+[ext_resource type="Texture2D" uid="uid://b5xu8rglpbsr0" path="res://graphics/ui/icons/back button@2x.png" id="3_xeiti"]
+[ext_resource type="Texture2D" uid="uid://df8uvjjvql2t" path="res://graphics/credits/credits_panel_bg@2x.png" id="4_303ml"]
+[ext_resource type="Texture2D" uid="uid://bvii16ashhc7b" path="res://graphics/ui/buttons/2x/backPressed_btn@2x.png" id="4_v3yie"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_fcuah"]
 [ext_resource type="Theme" uid="uid://crh7hnovly655" path="res://themes/3text_lbl.tres" id="7_q26b3"]
 [ext_resource type="Theme" uid="uid://cldw5fpjh6usw" path="res://themes/2text_lbl.tres" id="8_nhy60"]
 [ext_resource type="Theme" uid="uid://ds5tgyrf7fdmm" path="res://themes/1text_lbl.tres" id="9_1g2py"]
-
 
 [node name="credits" type="Node"]
 script = ExtResource("1_yywy8")
@@ -77,11 +76,11 @@ size_flags_stretch_ratio = 0.0
 theme_override_constants/separation = 110
 
 [node name="Project Leads" type="Label" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(177, 54)
 layout_mode = 2
 theme = ExtResource("7_q26b3")
 text = "Develobots Team
-	Project Leads
-"
+	Project Leads"
 horizontal_alignment = 1
 
 [node name="Game Director" type="Label" parent="ScrollContainer/VBoxContainer/Project Leads"]
@@ -91,8 +90,7 @@ anchor_top = 1.22222
 anchor_right = 1.0
 anchor_bottom = 1.68519
 theme = ExtResource("8_nhy60")
-text = "Game Director
-"
+text = "Game Director"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
@@ -106,8 +104,7 @@ anchor_bottom = 1.83
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "Dwight Eyac
-"
+text = "Dwight Eyac"
 horizontal_alignment = 1
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
@@ -121,8 +118,7 @@ anchor_top = 2.07407
 anchor_right = 0.954802
 anchor_bottom = 2.66667
 theme = ExtResource("8_nhy60")
-text = "Creative Director
-"
+text = "Creative Director"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
@@ -137,6 +133,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
 text = "Gero Monica Alcover
+
 "
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -144,55 +141,27 @@ tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Development Team" type="Label" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(177, 27)
 layout_mode = 2
 theme = ExtResource("7_q26b3")
-text = "Development Team
-"
+text = "Development Team"
 horizontal_alignment = 1
-
-[node name="Team4" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.079096
-anchor_top = 7.51852
-anchor_right = 0.927096
-anchor_bottom = 8.44444
-theme = ExtResource("8_nhy60")
-text = "Sound Designers"
-horizontal_alignment = 1
-tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
-metadata/_edit_use_anchors_ = true
-
-[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team4"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.84
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("9_1g2py")
-text = "John Carl Villanueva"
-horizontal_alignment = 1
-autowrap_mode = 2
-tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
-metadata/_edit_use_anchors_ = true
 
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.076
-anchor_top = 1.33333
+anchor_top = 1.37037
 anchor_right = 0.924
-anchor_bottom = 1.92593
+anchor_bottom = 2.29629
 theme = ExtResource("8_nhy60")
-text = "Designers/Artists
-"
+text = "Designers/Artists"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team"]
+custom_minimum_size = Vector2(150, 42)
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.92
@@ -202,8 +171,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
 text = "Gero Monica Alcover
-Kimberly Paradero
-"
+Kimberly Paradero"
 horizontal_alignment = 1
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
@@ -217,13 +185,13 @@ anchor_top = 3.92593
 anchor_right = 0.920904
 anchor_bottom = 4.85185
 theme = ExtResource("8_nhy60")
-text = "Programmers
-"
+text = "Programmers"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team2"]
+custom_minimum_size = Vector2(150, 64)
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -234,8 +202,36 @@ grow_vertical = 2
 theme = ExtResource("9_1g2py")
 text = "Dwight Eyac
 		Moses Anthony Fat
-		Kimberly Paradero
-"
+		Kimberly Paradero"
+horizontal_alignment = 1
+autowrap_mode = 2
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team4" type="Label" parent="ScrollContainer/VBoxContainer/Development Team"]
+custom_minimum_size = Vector2(177, 25)
+layout_mode = 2
+offset_top = 195.0
+offset_right = 177.0
+offset_bottom = 220.0
+theme = ExtResource("8_nhy60")
+text = "Sound Designers"
+horizontal_alignment = 1
+tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Development Team/Team4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.84
+offset_top = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1g2py")
+text = "John Carl Villanueva"
 horizontal_alignment = 1
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
@@ -249,8 +245,7 @@ text = "
 
 
 
-Art Department
-"
+Art Department"
 horizontal_alignment = 1
 
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Art Department"]
@@ -261,8 +256,7 @@ anchor_top = 1.04321
 anchor_right = 0.924
 anchor_bottom = 1.19753
 theme = ExtResource("8_nhy60")
-text = "Environment Artists
-"
+text = "Environment Artists"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
@@ -291,13 +285,13 @@ anchor_right = 0.924
 anchor_bottom = 1.49383
 offset_bottom = -1.52588e-05
 theme = ExtResource("8_nhy60")
-text = "Animators
-"
+text = "Animators"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Art Department/Animators"]
+custom_minimum_size = Vector2(150.096, 40)
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.96
@@ -306,10 +300,9 @@ anchor_bottom = 2.56
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "John Carl Villanueva
-		Moses Anthony Fat"
+text = "John Carl Villanueva         Moses Anthony Fat"
 horizontal_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -321,8 +314,7 @@ anchor_top = 1.77778
 anchor_right = 0.924
 anchor_bottom = 1.9321
 theme = ExtResource("8_nhy60")
-text = "UI/UX Designers
-"
+text = "UI/UX Designers"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
@@ -344,6 +336,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+text = "
+"
 
 [node name="Programming Team" type="Label" parent="ScrollContainer/VBoxContainer/Label"]
 layout_mode = 1
@@ -353,8 +347,7 @@ anchor_top = 2.91305
 anchor_right = 1.0226
 anchor_bottom = 4.08696
 theme = ExtResource("7_q26b3")
-text = "Programming Team
-"
+text = "Programming Team"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -369,8 +362,7 @@ offset_left = 2.67029e-05
 offset_right = 3.05176e-05
 offset_bottom = 9.0
 theme = ExtResource("8_nhy60")
-text = "Lead Programmer
-"
+text = "Lead Programmer"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
@@ -384,10 +376,9 @@ anchor_bottom = 2.6
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "Dwight Eyac
-		Moses Anthony Fat"
+text = "Dwight Eyac                      Moses Anthony Fat"
 horizontal_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -399,13 +390,13 @@ anchor_top = 3.92593
 anchor_right = 1.0678
 anchor_bottom = 4.85185
 theme = ExtResource("8_nhy60")
-text = "Gameplay Programmers
-"
+text = "Gameplay Programmers"
 horizontal_alignment = 1
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Team" type="Label" parent="ScrollContainer/VBoxContainer/Label/Programming Team/Gameplay Programmers"]
+custom_minimum_size = Vector2(194.351, 72.347)
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -414,12 +405,10 @@ anchor_bottom = 3.56
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "Dwight Eyac
-		Moses Anthony Fat
-		Kimberly Paradero
+text = "Dwight Eyac                                      Moses Anthony Fat                                      Kimberly Paradero
 "
 horizontal_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -445,7 +434,9 @@ anchor_bottom = 1.84
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "Engr. Kent Ivan Unabia"
+text = "Engr. Kent Ivan Unabia
+
+"
 horizontal_alignment = 1
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
@@ -462,8 +453,8 @@ anchor_top = 9.04348
 anchor_right = 1.25424
 anchor_bottom = 10.1304
 theme = ExtResource("8_nhy60")
-text = "Special Thanks
-"
+text = "
+Special Thanks"
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -476,10 +467,9 @@ anchor_bottom = 6.24
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
-text = "University of Cebu Main - College of Computer Studies
-Mr. Neil A. Basabe, MSIT - CCS Dean
-Rosalie Eyac, Ruth Alcover, Benjoe Fat - Parent, Supporter, Motivator
-Our friends <3. "
+text = "University of Cebu Main - College of Computer Studies                                 Mr. Neil A. Basabe, MSIT - CCS Dean                                                                                     Rosalie Eyac, Ruth Alcover, Benjoe Fat - Parent, Supporter, Motivator                                                                                                                                                                Our friends <3.
+
+"
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
@@ -492,12 +482,13 @@ anchor_top = 14.9565
 anchor_right = 1.49718
 anchor_bottom = 16.0435
 theme = ExtResource("8_nhy60")
-text = "©2023 DeveloBots. All rights reserved
-"
+text = "
+©2023 DeveloBots. All rights reserved"
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="text" type="Label" parent="ScrollContainer/VBoxContainer/special thanks/©2023 DeveloBots_ All rights reserved"]
+custom_minimum_size = Vector2(426.003, 119)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.175
@@ -508,10 +499,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("9_1g2py")
 theme_override_font_sizes/font_size = 9
-text = "This game is licensed under a Proprietary Commercial License. 
-This game is protected by copyright and other intellectual property laws. 
-Any unauthorized reproduction, distribution, 
-or use of this game is strictly prohibited and may result in legal action."
+text = "This game is licensed under a Proprietary Commercial License.                                                                            This game is protected by copyright and other intellectual property laws.                                                                              Any unauthorized reproduction, distribution,                                                or use of this game is strictly prohibited and may result in legal action."
 horizontal_alignment = 1
 autowrap_mode = 2
 tab_stops = PackedFloat32Array(0, 0, 0, 0, 0, 0)
