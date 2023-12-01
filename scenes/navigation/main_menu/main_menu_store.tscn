@@ -1,0 +1,196 @@
+[gd_scene load_steps=28 format=3 uid="uid://b54mixictptca"]
+
+[ext_resource type="Script" path="res://scenes/navigation/main_menu/main_menu.gd" id="1_wmw47"]
+[ext_resource type="Script" path="res://scenes/navigation/main_menu/Modal.gd" id="2_hrlay"]
+[ext_resource type="PackedScene" uid="uid://d0prpdk8wyrbs" path="res://scenes/navigation/settings/error_modal.tscn" id="3_k51x1"]
+[ext_resource type="PackedScene" uid="uid://cyxkj8srkhcln" path="res://scenes/navigation/store_inventory/store/store.tscn" id="4_63bhi"]
+[ext_resource type="Texture2D" uid="uid://7ci3hjklfbkk" path="res://graphics/ui/background/main_menu_background@2x.png" id="5_id7c1"]
+[ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="6_o3wrm"]
+[ext_resource type="Texture2D" uid="uid://bclwgp332wyra" path="res://graphics/ui/icons/2x/boxLbl@2x.png" id="7_61cpf"]
+[ext_resource type="Texture2D" uid="uid://cgrxrjoupkik8" path="res://graphics/ui/icons/energy_icon@2x.png" id="8_1qklc"]
+[ext_resource type="Texture2D" uid="uid://cwujrikbom8u6" path="res://graphics/ui/icons/coins_icon@2x.png" id="9_hqh2v"]
+[ext_resource type="Texture2D" uid="uid://o8emhxhdid6u" path="res://graphics/ui/icons/daily_task_icon@2x.png" id="10_rclmx"]
+[ext_resource type="Texture2D" uid="uid://bi723sm2d088v" path="res://graphics/ui/buttons/2x/dailytaskPressed_btn@2x.png" id="11_1xqfb"]
+[ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="12_3lk7b"]
+[ext_resource type="Texture2D" uid="uid://cuqam1m8f711b" path="res://graphics/ui/buttons/2x/shopPressed_btn_1@2x.png" id="13_yitwr"]
+[ext_resource type="Texture2D" uid="uid://c8osw3r3v61at" path="res://graphics/ui/icons/Inventory_btn@2x.png" id="14_1rix3"]
+[ext_resource type="Texture2D" uid="uid://cacqy1r184d6g" path="res://graphics/ui/buttons/2x/InventoryPressed_btn@2x.png" id="15_g8l6b"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="16_ip7ow"]
+[ext_resource type="Texture2D" uid="uid://bq3oyaedyi8bq" path="res://graphics/ui/buttons/2x/settingsPressed_btn@2x.png" id="17_qno34"]
+[ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="18_v3nq3"]
+[ext_resource type="Texture2D" uid="uid://cbv1trlust5p2" path="res://graphics/boss_stage/Assets/2x/DuwaPressed_btn@2x.png" id="19_4x0ob"]
+[ext_resource type="Texture2D" uid="uid://hqxxswelw4il" path="res://graphics/ui/buttons/2x/credits_btn@2x.png" id="20_lcm6r"]
+[ext_resource type="Texture2D" uid="uid://b0r3t7s1yah85" path="res://graphics/ui/buttons/2x/CreditsPressed_btn@2x.png" id="21_d60ds"]
+[ext_resource type="Texture2D" uid="uid://iksmgo1nrnw2" path="res://graphics/ui/icons/undang_icon@2x.png" id="22_g2s4e"]
+[ext_resource type="Texture2D" uid="uid://duaybullj147c" path="res://graphics/ui/buttons/2x/QuitPressed_btn@2x.png" id="23_7wkfl"]
+[ext_resource type="Texture2D" uid="uid://gkrq2kpwaxy8" path="res://graphics/ui/icons/bisdakids_game_title@2x.png" id="24_jgyvb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebw4q"]
+texture = ExtResource("7_61cpf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_plex3"]
+texture = ExtResource("8_1qklc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7pxcg"]
+texture = ExtResource("9_hqh2v")
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_wmw47")
+
+[node name="Modal" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hrlay")
+
+[node name="ErrorModal" parent="Modal" instance=ExtResource("3_k51x1")]
+visible = false
+
+[node name="Store" parent="Modal" instance=ExtResource("4_63bhi")]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -57.0
+offset_top = -104.0
+offset_right = 1350.0
+offset_bottom = 752.0
+texture = ExtResource("5_id7c1")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+anchor_left = 0.0547945
+anchor_top = 0.0418919
+anchor_right = 0.35312
+anchor_bottom = 0.15
+theme_override_constants/separation = 70
+metadata/_edit_use_anchors_ = true
+
+[node name="energy_lbl" type="Label" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("6_o3wrm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebw4q")
+text = "143"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="energyIcon" type="Label" parent="Control/HBoxContainer/energy_lbl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.24375
+anchor_top = -0.15
+anchor_right = 0.2375
+anchor_bottom = 1.13333
+theme_override_styles/normal = SubResource("StyleBoxTexture_plex3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Coin_lbl" type="Label" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("6_o3wrm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebw4q")
+text = "143"
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="CoinIcon" type="Label" parent="Control/HBoxContainer/Coin_lbl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.24375
+anchor_top = -0.15
+anchor_right = 0.2375
+anchor_bottom = 1.13333
+theme_override_styles/normal = SubResource("StyleBoxTexture_7pxcg")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 827.0
+offset_top = 32.0
+offset_right = 1280.0
+offset_bottom = 120.0
+theme_override_constants/separation = 35
+
+[node name="DailyTask" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("10_rclmx")
+texture_pressed = ExtResource("11_1xqfb")
+stretch_mode = 3
+
+[node name="Shop" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("12_3lk7b")
+texture_pressed = ExtResource("13_yitwr")
+stretch_mode = 3
+
+[node name="Inventory" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("14_1rix3")
+texture_pressed = ExtResource("15_g8l6b")
+stretch_mode = 3
+
+[node name="Settings" type="TextureButton" parent="Control/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("16_ip7ow")
+texture_pressed = ExtResource("17_qno34")
+stretch_mode = 3
+
+[node name="Play" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363775
+anchor_top = 0.659459
+anchor_right = 0.619483
+anchor_bottom = 0.833784
+offset_left = -3.05176e-05
+texture_normal = ExtResource("18_v3nq3")
+texture_pressed = ExtResource("19_4x0ob")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 525.0
+offset_right = 1291.0
+offset_bottom = 645.0
+mouse_filter = 2
+theme_override_constants/separation = 835
+
+[node name="Credits" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("20_lcm6r")
+texture_pressed = ExtResource("21_d60ds")
+stretch_mode = 3
+
+[node name="Quit" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("22_g2s4e")
+texture_pressed = ExtResource("23_7wkfl")
+stretch_mode = 3
+
+[node name="BisdakidsLogo" type="Sprite2D" parent="."]
+position = Vector2(672, 388)
+texture = ExtResource("24_jgyvb")
+
+[connection signal="child_exiting_tree" from="Modal" to="." method="_on_modal_child_exiting_tree" flags=18]
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed" flags=18]
+[connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed" flags=18]

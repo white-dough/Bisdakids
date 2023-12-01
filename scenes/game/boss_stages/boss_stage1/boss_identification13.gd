@@ -19,6 +19,18 @@ func answer_attempt(answer: String) -> void:
 			hud_timer.start(0.05)
 			return
 		hud_timer.start(hud_timer.get_time_left() - 60)
+		
+		#for the timer
+		var time_minus_effect : Sprite2D = $"../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
+		var timer_node : Timer = Timer.new()
+		timer_node.wait_time = 1.5
+		add_child(timer_node)
+		time_minus_effect.visible = true
+		timer_node.start()
+		timer_node.timeout.connect(remove_red)
+			
+		
+		
 		var red_lbl : StyleBox = load("res://themes/tigmo_red_lbl_stylebox.tres")
 		answer_input.add_theme_stylebox_override("normal", red_lbl)
 		
@@ -36,3 +48,6 @@ func answer_attempt(answer: String) -> void:
 		answer_input.remove_theme_stylebox_override("normal")
 		answer_input.set_position(Vector2(original_x,original_y))
 	answer_input.clear()
+func remove_red():
+	var time_minus_effect : Sprite2D = $"../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
+	time_minus_effect.visible = false

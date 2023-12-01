@@ -42,7 +42,7 @@ func purchase_item(purchase_details: Dictionary):
 #	print(str(Game.user_inventory['coin']) + str(purchase_details['price']))
 	if int(Game.user_inventory['coin']) < purchase_details['price']:
 		Audio.play_sfx(Audio.close_btn_sfx)
-		print("insuff")
+		$insufficient_coins.show()
 		return
 	Audio.play_sfx(Audio.normal_btn_sfx)
 	Game.user_inventory['coin'] = int(Game.user_inventory['coin']) - purchase_details['price']

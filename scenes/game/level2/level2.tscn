@@ -41,4 +41,5 @@ visible = false
 
 [connection signal="ready" from="." to="HUD" method="_on_level_ready"]
 [connection signal="ready" from="." to="GameScene" method="_on_level_ready"]
+[connection signal="clue_pressed" from="HUD" to="ObjectAnimation" method="_on_hud_clue_pressed"]
 [connection signal="object_found_signal" from="GameScene" to="ObjectAnimation" method="_on_game_scene_object_found_signal"]

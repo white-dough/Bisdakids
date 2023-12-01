@@ -159,6 +159,12 @@ position = Vector2(-0.999928, 30.5)
 scale = Vector2(0.88, 0.964286)
 texture = ExtResource("6_oxqsx")
 
+[node name="TimeMinus" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+visible = false
+position = Vector2(-0.999931, 16.5)
+scale = Vector2(0.86, 0.964)
+texture = ExtResource("8_rgohw")
+
 [node name="Timer" type="Timer" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
 
 [node name="MinustimeEffect_2x" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]

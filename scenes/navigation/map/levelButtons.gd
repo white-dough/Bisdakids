@@ -73,7 +73,7 @@ func closeModal() -> void:
 
 func changeScene(link : String, energy_cost : int) -> void:
 	if Game.energy_system["energy"] < energy_cost:
-		return#modal here
+		$"../no_energy".show()
 	Game.deduct_energy(energy_cost)
 	Audio.play_sfx(Audio.normal_btn_sfx)
 	get_tree().change_scene_to_file(link)
