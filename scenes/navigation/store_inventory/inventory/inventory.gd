@@ -7,6 +7,8 @@ func _ready():
 	for item in user_inventory:
 		if int(user_inventory[item]) <= 0:
 			continue
+		if item == "premium":
+			pass#logic here to customize premium
 		var item_scene : Control  = load("res://scenes/navigation/store_inventory/inventory/inventory_item.tscn").instantiate()
 		item_grid.add_child(item_scene)
 		var item_name : Label  = item_scene.get_node('MarginContainer/ItemPnl/ItemNameLbl')

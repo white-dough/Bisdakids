@@ -13,7 +13,8 @@ func _on_signup_btn_pressed():
 	var user_name: String = username_input.get_text()
 	var password: String = password_input.get_text()
 	var confirm_password: String = confirm_password_input.get_text()
-	if password == confirm_password and !password.is_empty():
+	var username: String = username_input.get_text()
+	if password == confirm_password and !password.is_empty() and !username.is_empty():
 		PhpRequest.register(user_name, password)
 		await PhpRequest.http_request.request_completed
 		if PhpRequest.clean_response == "success":
@@ -30,6 +31,10 @@ func _on_signup_btn_pressed():
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Naa nay naggamit ani na username.")
 			error_modal.visible = true
+	elif username.is_empty():
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Ang pangalan dili pwede na blangkohan. Palihug suwayi pag-usab.")
+		error_modal.visible = true
 	elif password.is_empty() or confirm_password.is_empty():
 		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")
 		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Ang password dili pwede na blangkohan. Palihug suwayi pag-usab.")

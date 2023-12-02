@@ -689,7 +689,6 @@ stretch_mode = 3
 visible = false
 
 [node name="no_energy" parent="." instance=ExtResource("35_qi1k4")]
-visible = false
 
 [connection signal="pressed" from="UI/HBoxContainer2/HomeBtn" to="UI" method="_on_home_btn_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer2/Settings" to="UI" method="_on_settings_pressed"]

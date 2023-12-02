@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=4 format=3 uid="uid://gn482ubihrcf"]
 
-[ext_resource type="Texture2D" uid="uid://db5eyo1857n0a" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_nbe80"]
+[ext_resource type="Texture2D" uid="uid://bndvm0sll761f" path="res://graphics/ui/icons/daily_task_description@2x.png" id="1_nbe80"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="1_nfngw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v4byq"]

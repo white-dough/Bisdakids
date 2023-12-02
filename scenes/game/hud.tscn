@@ -384,7 +384,7 @@ texture_pressed = ExtResource("19_4ct64")
 stretch_mode = 3
 
 [node name="PauseTimer" type="Timer" parent="TimeFreeze"]
-wait_time = 2.0
+wait_time = 20.0
 one_shot = true
 
 [node name="TimeFreezeLbl" type="Label" parent="TimeFreeze"]

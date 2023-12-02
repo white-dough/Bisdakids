@@ -1,8 +1,8 @@
 extends Node
 
 var http_request: HTTPRequest = HTTPRequest.new()
-#const SERVER_URL = "http://192.168.208.21:8080/godot-php-postgresql/api-request.php"
-const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
+const SERVER_URL = "http://192.168.100.9:8080/godot-php-postgresql/api-request.php"
+#const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
 const SERVER_HEADERS = ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"]
 var request_queue : Array = []
 var is_requesting : bool = false

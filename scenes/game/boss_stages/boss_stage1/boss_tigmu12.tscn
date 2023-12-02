@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_ssfmf"]
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/boss_tigmu12.gd" id="1_v8oh5"]
-[ext_resource type="Texture2D" uid="uid://dc2xrlidg0h1n" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="2_dtoxy"]
-[ext_resource type="Texture2D" uid="uid://bt0rl78cpehtl" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="3_sa6yq"]
+[ext_resource type="Texture2D" uid="uid://drwpnrffbmssh" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="2_dtoxy"]
+[ext_resource type="Texture2D" uid="uid://b5pjo2ofl1vf7" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="3_sa6yq"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_xhik4"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_u53w8"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="6_u53w8"]
 [ext_resource type="Theme" uid="uid://0yb6q8sbxsbh" path="res://themes/boss_tigmu12.tres" id="7_y7e3q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72xq4"]
@@ -27,6 +27,7 @@ offset_right = 3.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 texture = ExtResource("1_ssfmf")
 expand_mode = 1
 

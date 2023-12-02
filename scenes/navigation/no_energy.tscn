@@ -33,6 +33,8 @@ expand_margin_bottom = 10.0
 Label/styles/normal = SubResource("StyleBoxTexture_g7j00")
 
 [node name="no_energy" type="CanvasLayer"]
+layer = 6
+visible = false
 script = ExtResource("1_gtk3i")
 
 [node name="Background" type="TextureRect" parent="."]
