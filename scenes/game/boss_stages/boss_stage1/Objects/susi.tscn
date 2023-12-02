@@ -9,9 +9,9 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-24, 16, 8, 16, 8, 0, -8, 0, -24, 8)
+polygon = PackedVector2Array(-24, 0, -24, 16, -8, 8, 8, 8, 24, 8, 24, -8, 16, -16)
 
 [node name="Susi" type="Sprite2D" parent="."]
-position = Vector2(-8, 8)
-scale = Vector2(1.00689, 1.06667)
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(1.70396, 1.80513)
 texture = ExtResource("1_is2qj")

@@ -3,7 +3,7 @@ extends Sprite2D
 var time := 0.0
 var amplitude := 20.0  # floating height
 var period := 2.5      # Adjust the time it takes for one full float
-var initial_x := 718   # Initial X-axis position
+var initial_x := 655 # Initial X-axis position
 
 func _ready():
 	time = 0.0

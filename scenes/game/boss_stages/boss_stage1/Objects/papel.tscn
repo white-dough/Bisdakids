@@ -9,7 +9,9 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-46, 8, -42, 11, -32, 12, -28, 14, -22, 14, -15, 14, -8, 15, 0, 18, 7, 21, 16, 21, 41, 17, 47, 10, 46, 8, 35, 12, 21, 6, 13, 1, 8, 1, 9, -6, 8, -11, 4, -12, 4, -17, 0, -21, -4, -21, -14, -16, -23, -16, -36, -18, -40, -15, -41, -11, -40, -6, -44, -6, -46, 0)
+polygon = PackedVector2Array(-64, 16, -48, 16, -32, 24, -8, 24, 8, 32, 24, 32, 64, 24, 72, 16, 64, 8, 48, 16, 24, 0, 16, -8, 8, -16, 8, -32, -8, -32, -32, -24, -56, -24, -64, -16, -64, -8, -72, 8)
 
 [node name="Papel" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 1.90735e-06)
+scale = Vector2(1.47561, 1.47561)
 texture = ExtResource("1_iwgmg")
