@@ -1,20 +1,19 @@
-[gd_scene load_steps=39 format=3 uid="uid://53k1jkllajyp"]
+[gd_scene load_steps=38 format=3 uid="uid://53k1jkllajyp"]
 
-[ext_resource type="Texture2D" uid="uid://dybr8of1s7ip0" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_5b20p"]
+[ext_resource type="Texture2D" uid="uid://dtv2l6hbvswog" path="res://graphics/boss_stage/background/2x/BossStage_bg_2@2x.png" id="1_5b20p"]
 [ext_resource type="Script" path="res://scenes/game/objects.gd" id="1_ai58q"]
-[ext_resource type="Texture2D" uid="uid://dfvkp4ucvapsr" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_l7sqt"]
-[ext_resource type="Texture2D" uid="uid://f57dstft7pfa" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="3_vb2c2"]
-[ext_resource type="Texture2D" uid="uid://bun1kpudkhp6e" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="4_ql26j"]
-[ext_resource type="Texture2D" uid="uid://b4jgsvgnvp7o6" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="5_jujqu"]
+[ext_resource type="Texture2D" uid="uid://u2cratvt6wx1" path="res://graphics/boss_stage/background/2x/Design2@2x.png" id="2_l7sqt"]
+[ext_resource type="Texture2D" uid="uid://benn2cl732vbb" path="res://graphics/boss_stage/background/2x/skele ni dinu_1@2x.png" id="3_vb2c2"]
+[ext_resource type="Texture2D" uid="uid://caujf6tr5f6rw" path="res://graphics/boss_stage/background/2x/skele ni dinu2@2x.png" id="4_ql26j"]
+[ext_resource type="Texture2D" uid="uid://btv5wjn76jy3b" path="res://graphics/boss_stage/background/2x/ghost@2x.png" id="5_jujqu"]
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/ghost.gd" id="6_f61ve"]
-[ext_resource type="Texture2D" uid="uid://b10jotxcy5lw" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_wt4jo"]
-[ext_resource type="Texture2D" uid="uid://inypcvmgdces" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_42as0"]
+[ext_resource type="Texture2D" uid="uid://bsctbsxv70g4f" path="res://graphics/boss_stage/background/2x/Design3@2x.png" id="7_wt4jo"]
+[ext_resource type="Texture2D" uid="uid://duyynoi4bnp3r" path="res://graphics/boss_stage/background/2x/Design@2x.png" id="8_42as0"]
 [ext_resource type="PackedScene" uid="uid://1fi74vbvuegc" path="res://scenes/game/boss_stages/boss_stage1/Objects/lingkuranan.tscn" id="9_jtjk0"]
-[ext_resource type="Texture2D" uid="uid://cvaxio4f6yk4l" path="res://graphics/boss_stage/Objects/2x/ulo statwa@2x.png" id="10_6mccf"]
+[ext_resource type="Texture2D" uid="uid://clr0qya6152h3" path="res://graphics/boss_stage/Objects/2x/ulo statwa@2x.png" id="10_6mccf"]
 [ext_resource type="PackedScene" uid="uid://cus1l43frefad" path="res://scenes/game/boss_stages/boss_stage1/Objects/kadena.tscn" id="10_gtu0w"]
 [ext_resource type="PackedScene" uid="uid://cwmt1oiv2vxe5" path="res://scenes/game/boss_stages/boss_stage1/Objects/picture_frame.tscn" id="11_ciovy"]
-[ext_resource type="Texture2D" uid="uid://brhdcw3uajtxd" path="res://graphics/boss_stage/background/2x/atsa ni tarzan@2x.png" id="11_et4e0"]
-[ext_resource type="Texture2D" uid="uid://d2gptb4uvg5d7" path="res://graphics/boss_stage/background/2x/sapot sa gagamba@2x.png" id="12_1y8fm"]
+[ext_resource type="Texture2D" uid="uid://sstjkyxseo7i" path="res://graphics/boss_stage/background/2x/sapot sa gagamba@2x.png" id="12_1y8fm"]
 [ext_resource type="PackedScene" uid="uid://vj63fwjxyi1" path="res://scenes/game/boss_stages/boss_stage1/Objects/espada.tscn" id="13_idpnx"]
 [ext_resource type="PackedScene" uid="uid://r7w423de5cyv" path="res://scenes/game/boss_stages/boss_stage1/Objects/salamin.tscn" id="14_s5tai"]
 [ext_resource type="PackedScene" uid="uid://d17c2teeyiavm" path="res://scenes/game/boss_stages/boss_stage1/Objects/atsa.tscn" id="15_7pfd7"]
@@ -36,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://c444u1ayis4bh" path="res://scenes/game/boss_stages/boss_stage1/Objects/orasan.tscn" id="31_aicti"]
 [ext_resource type="PackedScene" uid="uid://cygrpb6sfffit" path="res://scenes/game/boss_stages/boss_stage1/Objects/susi.tscn" id="32_wexot"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="34_1qjqy"]
-[ext_resource type="PackedScene" path="res://scenes/game/boss_stages/boss_stage1/Objects/karton.tscn" id="34_ceyyb"]
+[ext_resource type="PackedScene" uid="uid://cplqlt178jirb" path="res://scenes/game/boss_stages/boss_stage1/Objects/karton.tscn" id="34_ceyyb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qdkhj"]
 blend_mode = 1
@@ -69,52 +68,28 @@ scale = Vector2(1.00292, 0.991936)
 texture = ExtResource("2_l7sqt")
 
 [node name="SkeleNiDinu_2x" type="Sprite2D" parent="Background"]
-position = Vector2(385.12, 214.258)
+position = Vector2(224.653, 231.121)
+scale = Vector2(1.29602, 1.38756)
 texture = ExtResource("3_vb2c2")
 
 [node name="SkeleNiDinu2_2x" type="Sprite2D" parent="Background"]
-position = Vector2(1155.36, 606.552)
-scale = Vector2(1, 0.86088)
+position = Vector2(1207.88, 606.552)
+scale = Vector2(1.20517, 0.86088)
 texture = ExtResource("4_ql26j")
 
-[node name="ghost" type="Sprite2D" parent="Background"]
-top_level = true
-material = SubResource("CanvasItemMaterial_qdkhj")
-position = Vector2(656, 312)
-scale = Vector2(0.422652, 0.422652)
-texture = ExtResource("5_jujqu")
-script = ExtResource("6_f61ve")
-
 [node name="Design3_2x" type="Sprite2D" parent="Background"]
-top_level = true
-position = Vector2(424, 656)
-scale = Vector2(0.888889, 0.941176)
+position = Vector2(377.096, 682.452)
+scale = Vector2(1.33333, 1.17647)
 texture = ExtResource("7_wt4jo")
 
-[node name="Design_2x" type="Sprite2D" parent="Background"]
-top_level = true
-position = Vector2(410, 696)
-scale = Vector2(1.00292, 0.991936)
-texture = ExtResource("8_42as0")
-
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-position = Vector2(561.633, 388.839)
+position = Vector2(554.111, 392.806)
+scale = Vector2(1.65788, 1.13364)
 texture = ExtResource("10_6mccf")
-
-[node name="AtsaNiTarzan_2x" type="Sprite2D" parent="Background"]
-position = Vector2(383.114, 585.49)
-scale = Vector2(0.891482, 0.852619)
-texture = ExtResource("11_et4e0")
 
 [node name="SapotSaGagamba_2x" type="Sprite2D" parent="Background"]
 position = Vector2(970.822, 214.258)
 scale = Vector2(1.00292, 0.991936)
-texture = ExtResource("12_1y8fm")
-
-[node name="SapotSaGagamba_2x2" type="Sprite2D" parent="Background"]
-top_level = true
-position = Vector2(261.392, 368)
-scale = Vector2(1.15157, 0.983936)
 texture = ExtResource("12_1y8fm")
 
 [node name="Objects" type="Node2D" parent="."]
@@ -135,61 +110,78 @@ position = Vector2(243, 424)
 position = Vector2(271, 552)
 
 [node name="Atsa" parent="Objects" instance=ExtResource("15_7pfd7")]
-position = Vector2(256, 640)
+position = Vector2(224, 648)
 
 [node name="Pangtabas" parent="Objects" instance=ExtResource("16_iyfkw")]
-position = Vector2(344, 656)
+position = Vector2(304, 648)
 
 [node name="Baol" parent="Objects" instance=ExtResource("17_6lvwm")]
-position = Vector2(832, 560)
+position = Vector2(848, 552)
 
 [node name="Barel" parent="Objects" instance=ExtResource("19_g0qjp")]
-position = Vector2(552, 648)
+position = Vector2(585, 632)
 
 [node name="Plurira" parent="Objects" instance=ExtResource("18_bvuo5")]
-position = Vector2(480, 616)
+position = Vector2(432, 584)
 
 [node name="Lampara" parent="Objects" instance=ExtResource("20_vo2ug")]
-position = Vector2(680, 664)
+position = Vector2(664, 664)
 
 [node name="Bungo" parent="Objects" instance=ExtResource("21_esfnb")]
-position = Vector2(616, 704)
-
-[node name="Sapatos" parent="Objects" instance=ExtResource("22_6rtbo")]
-position = Vector2(720, 680)
+position = Vector2(608, 712)
 
 [node name="Kandila" parent="Objects" instance=ExtResource("23_uap8q")]
-position = Vector2(768, 664)
+position = Vector2(736, 648)
 
 [node name="Papel" parent="Objects" instance=ExtResource("24_36tmw")]
-position = Vector2(760, 720)
+position = Vector2(792, 704)
 
 [node name="Globo" parent="Objects" instance=ExtResource("25_m0csg")]
 position = Vector2(856, 642)
 
 [node name="Lamesa" parent="Objects" instance=ExtResource("26_pa17w")]
-position = Vector2(928, 704)
+position = Vector2(968, 718)
 
 [node name="Teleskopyo" parent="Objects" instance=ExtResource("27_mdysj")]
 position = Vector2(496, 704)
 
 [node name="Tsarira" parent="Objects" instance=ExtResource("28_5rpwn")]
-position = Vector2(920, 632)
+position = Vector2(936, 629)
 
 [node name="Baso" parent="Objects" instance=ExtResource("29_8j2d2")]
-position = Vector2(984, 624)
+position = Vector2(1000, 464)
 
 [node name="Pluma" parent="Objects" instance=ExtResource("30_40c0j")]
-position = Vector2(544, 568)
+position = Vector2(494, 620)
 
 [node name="Orasan" parent="Objects" instance=ExtResource("31_aicti")]
 position = Vector2(952, 192)
 
 [node name="Yawi" parent="Objects" instance=ExtResource("32_wexot")]
-position = Vector2(696, 720)
+position = Vector2(688, 592)
 
 [node name="Karton" parent="Objects" instance=ExtResource("34_ceyyb")]
-position = Vector2(200, 688)
+position = Vector2(79, 684)
+
+[node name="Sapatos" parent="Objects" instance=ExtResource("22_6rtbo")]
+position = Vector2(696, 704)
 
 [node name="HandleTaps" parent="." instance=ExtResource("34_1qjqy")]
 visible = false
+
+[node name="ghost" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_qdkhj")
+position = Vector2(668.931, 312)
+scale = Vector2(0.564303, 0.426088)
+texture = ExtResource("5_jujqu")
+script = ExtResource("6_f61ve")
+
+[node name="SapotSaGagamba_2x2" type="Sprite2D" parent="."]
+position = Vector2(264, 376)
+scale = Vector2(1.29353, 1.11075)
+texture = ExtResource("12_1y8fm")
+
+[node name="Design_2x" type="Sprite2D" parent="."]
+position = Vector2(256, 696)
+scale = Vector2(1, 1)
+texture = ExtResource("8_42as0")

@@ -17,4 +17,3 @@ visible = false
 visible = false
 
 [node name="HUD" parent="." instance=ExtResource("2_juxjp")]
-top_level = true
