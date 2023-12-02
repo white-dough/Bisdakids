@@ -9,10 +9,9 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(5.96046e-08, 4.76837e-07)
-polygon = PackedVector2Array(-16, 32, 16, 32, 24, -8, 16, -8, 8, -8, 8, -16, 0, -24, -8, -24, -24, -8, -24, 16, -16, 24)
+polygon = PackedVector2Array(-16, 32, 8, 32, 24, 16, 40, -16, 16, -16, 8, -32, -16, -32, -24, -16, -40, -8, -32, 16)
 
 [node name="Pitsel" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, 5)
-scale = Vector2(1.0614, 1.14)
+position = Vector2(-9.53674e-07, 1.90735e-06)
+scale = Vector2(1.64698, 1.31468)
 texture = ExtResource("1_8u1gd")

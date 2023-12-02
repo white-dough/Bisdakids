@@ -9,9 +9,9 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-8, 16, 8, 16, 8, 0, 0, 0, -16, 0)
+polygon = PackedVector2Array(-16, 16, 8, 16, 24, 0, 16, -8, -24, -8)
 
 [node name="Baso" type="Sprite2D" parent="."]
-position = Vector2(-1.42763, 8)
-scale = Vector2(1.00689, 1.06667)
+position = Vector2(-9.53674e-07, 4.00001)
+scale = Vector2(2.01378, 1.6)
 texture = ExtResource("1_d2asy")
