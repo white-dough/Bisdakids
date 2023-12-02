@@ -78,13 +78,13 @@ scale = Vector2(1.20517, 0.86088)
 texture = ExtResource("4_ql26j")
 
 [node name="Design3_2x" type="Sprite2D" parent="Background"]
-position = Vector2(377.096, 682.452)
-scale = Vector2(1.33333, 1.17647)
+position = Vector2(377.096, 684.141)
+scale = Vector2(1.78296, 1.16006)
 texture = ExtResource("7_wt4jo")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-position = Vector2(554.111, 392.806)
-scale = Vector2(1.65788, 1.13364)
+position = Vector2(554.111, 388.839)
+scale = Vector2(1.65788, 1.22084)
 texture = ExtResource("10_6mccf")
 
 [node name="SapotSaGagamba_2x" type="Sprite2D" parent="Background"]
@@ -110,7 +110,7 @@ position = Vector2(243, 424)
 position = Vector2(271, 552)
 
 [node name="Atsa" parent="Objects" instance=ExtResource("15_7pfd7")]
-position = Vector2(224, 648)
+position = Vector2(240, 648)
 
 [node name="Pangtabas" parent="Objects" instance=ExtResource("16_iyfkw")]
 position = Vector2(304, 648)
@@ -161,13 +161,19 @@ position = Vector2(952, 192)
 position = Vector2(688, 592)
 
 [node name="Karton" parent="Objects" instance=ExtResource("34_ceyyb")]
-position = Vector2(79, 684)
+position = Vector2(168, 684)
 
 [node name="Sapatos" parent="Objects" instance=ExtResource("22_6rtbo")]
 position = Vector2(696, 704)
 
-[node name="HandleTaps" parent="." instance=ExtResource("34_1qjqy")]
-visible = false
+[node name="SapotSaGagamba_2x2" type="Sprite2D" parent="."]
+position = Vector2(264, 376)
+scale = Vector2(1.29353, 1.11075)
+texture = ExtResource("12_1y8fm")
+
+[node name="Design_2x" type="Sprite2D" parent="."]
+position = Vector2(56, 694)
+texture = ExtResource("8_42as0")
 
 [node name="ghost" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_qdkhj")
@@ -176,12 +182,5 @@ scale = Vector2(0.564303, 0.426088)
 texture = ExtResource("5_jujqu")
 script = ExtResource("6_f61ve")
 
-[node name="SapotSaGagamba_2x2" type="Sprite2D" parent="."]
-position = Vector2(264, 376)
-scale = Vector2(1.29353, 1.11075)
-texture = ExtResource("12_1y8fm")
-
-[node name="Design_2x" type="Sprite2D" parent="."]
-position = Vector2(256, 696)
-scale = Vector2(1, 1)
-texture = ExtResource("8_42as0")
+[node name="HandleTaps" parent="." instance=ExtResource("34_1qjqy")]
+visible = false

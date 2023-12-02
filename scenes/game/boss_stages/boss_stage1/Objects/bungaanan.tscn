@@ -10,7 +10,6 @@ collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, -2.84217e-14)
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-32, 48, 24, 48, 32, 32, 32, 16, 40, 16, 40, 8, 32, 8, 32, 0, 40, -8, 40, -24, 32, -32, 24, -40, 16, -48, -24, -40, -16, -24, -8, -16, 0, 8, -8, 16, -40, 24)
 
 [node name="bungaanan" type="Sprite2D" parent="."]
