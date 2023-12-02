@@ -43,6 +43,7 @@ offset_right = 3.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 texture = ExtResource("1_4kovr")
 expand_mode = 1
 
