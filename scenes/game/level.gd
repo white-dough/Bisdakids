@@ -45,7 +45,7 @@ func _process(_delta):
 
 func level_completed(time_left):
 	if time_left > 0:
-		print("success")
+		#print("success")
 		Audio.play_bgm(Audio.success_sfx)
 		var prompt_timer : Timer = Timer.new()
 		prompt_timer.wait_time = 3
@@ -70,7 +70,7 @@ func level_completed(time_left):
 		Game.daily_task_progression("Detective",10)
 		
 	else:
-		print("fail")
+		#print("fail")
 		Audio.play_bgm(Audio.fail_sfx)
 		var prompt_timer : Timer = Timer.new()
 		prompt_timer.wait_time = 3
