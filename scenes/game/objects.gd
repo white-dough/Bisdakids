@@ -102,7 +102,7 @@ func handle_taps_sfx():
 		Audio.play_sfx(Audio.incorrect_sfx)
 
 func remove_taps():
-	print('hidden')
+#	print('hidden')
 	$HandleTaps.hide()
 
 

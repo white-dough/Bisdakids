@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var answer_input: LineEdit = $AnswerInput
+@onready var answer_input: LineEdit = $LabelsVbox/AnswerInput
 var correct_answer: String = "EDAD"
 @onready var level_node : Node2D = $"../.."
 

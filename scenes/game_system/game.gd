@@ -1,6 +1,7 @@
 extends Node
 
 @onready var player_data_path: String = "user://player_save.dat"
+@onready var daily_task_repo_path: String = "user://daily_task.json"
 @onready var user_name = null
 @onready var progress_base: Dictionary = {"level1": 0,
 									"level2": 0,
@@ -49,7 +50,8 @@ func save_data():
 	var player_data: Dictionary = create_data()
 #	print(player_data)
 	file.store_var(player_data)
-	print("save: " + str(player_data))
+	file.close()
+	#"save: " + str(player_data))
 
 func create_data() -> Dictionary:
 	var player_data: Dictionary = {
@@ -70,7 +72,8 @@ func load_data():
 	if not file_exists:
 		save_data()
 	var file: FileAccess = FileAccess.open(player_data_path, FileAccess.READ)
-	loaded_player_data = file.get_var()
+	loaded_player_data = file.get_var()	
+	file.close()
 #	print(loaded_player_data)
 	user_name = loaded_player_data['user_name']
 	progress = loaded_player_data['progress']
@@ -83,8 +86,8 @@ func load_data():
 
 func daily_task_reset():
 	daily_task = {}
-	var jsonFile : FileAccess = FileAccess.open("res://data/daily_task.json", FileAccess.READ)
-	var contentOfFile : String = jsonFile.get_as_text()	
+	var jsonFile : FileAccess = FileAccess.open(daily_task_repo_path, FileAccess.READ)
+	var contentOfFile : String = jsonFile.get_as_text()
 	var content_as_dictionary : Dictionary = JSON.parse_string(contentOfFile)
 	var keys = content_as_dictionary.keys()  # Get the keys of the original dictionary
 	jsonFile.close()
@@ -132,7 +135,7 @@ func query_update():
 				user_inventory[item['item_name']] = item['quantity']
 				user_inventory[item['item_name'] + '_timestamp'] = item['timestamp']
 				user_inventory.erase('timestamp')
-				print("-------------", user_inventory)
+				#print("-------------", user_inventory)
 				update_local_save()
 			else:
 				PhpRequest.update_user_inventory(user_name, user_inventory)
@@ -203,7 +206,6 @@ func daily_task_from_db():
 	await PhpRequest.http_request.request_completed
 	print(PhpRequest.clean_response)
 	if PhpRequest.api_no_error:
-		var file = FileAccess.open("res://data/daily_task.json", FileAccess.WRITE)
 		var formattedData = {}
 		for data in PhpRequest.clean_response:
 			var title = data["task_title"]
@@ -211,7 +213,8 @@ func daily_task_from_db():
 			for key in data:
 				if key != "task_title":
 					formattedData[title][key] = data[key]
-#					formattedData[title]["progress"] = 0
+#					formattedData[title]["progress"] = 0		
+		var file = FileAccess.open(daily_task_repo_path, FileAccess.WRITE)
 		file.store_line(JSON.stringify(formattedData, "\t"))
 		file.close()
 
