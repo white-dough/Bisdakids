@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyxkj8srkhcln"]
+[gd_scene load_steps=14 format=3 uid="uid://cyxkj8srkhcln"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7u3wc"]
 [ext_resource type="Script" path="res://scenes/navigation/store_inventory/store/store.gd" id="1_c5b6a"]
@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c28lvve87y5of" path="res://graphics/ui/buttons/2x/shopExit_btn@2x.png" id="4_x1yem"]
 [ext_resource type="Texture2D" uid="uid://xheifgna20r1" path="res://graphics/ui/icons/lively_roof@2x.png" id="5_nxmmm"]
 [ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="6_1587j"]
-[ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="8_lagby"]
-[ext_resource type="Texture2D" uid="uid://ljtawk6142dm" path="res://graphics/navigation/store/2x/link_pnl@2x.png" id="9_pxd0d"]
+[ext_resource type="Theme" uid="uid://cldw5fpjh6usw" path="res://themes/2text_lbl.tres" id="8_i5tep"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="9_2ymda"]
 [ext_resource type="PackedScene" uid="uid://c8j40idjdbaw2" path="res://scenes/navigation/insufficient_coins.tscn" id="10_wyvqr"]
 [ext_resource type="PackedScene" uid="uid://dgua678db6p0e" path="res://scenes/navigation/store_inventory/store/purchase_confirm.tscn" id="11_8lrrq"]
 
@@ -21,13 +21,6 @@ texture_margin_bottom = 30.0
 
 [sub_resource type="Theme" id="Theme_a58be"]
 Panel/styles/panel = SubResource("StyleBoxTexture_10gmb")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_byuln"]
-texture = ExtResource("9_pxd0d")
-expand_margin_left = 15.0
-expand_margin_top = 5.0
-expand_margin_right = 15.0
-expand_margin_bottom = 5.0
 
 [node name="Store" type="CanvasLayer"]
 script = ExtResource("1_c5b6a")
@@ -134,24 +127,16 @@ vertical_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
 
-[node name="link_lbl" type="Label" parent="Store/ItemList"]
+[node name="link_lbl" type="LinkButton" parent="Store/ItemList"]
 layout_mode = 0
 offset_left = -132.0
-offset_top = 646.52
-offset_right = 130.0
-offset_bottom = 673.52
-theme = ExtResource("8_lagby")
+offset_top = 647.0
+offset_right = 84.0
+offset_bottom = 674.0
+theme = ExtResource("8_i5tep")
+theme_override_fonts/font = ExtResource("9_2ymda")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxTexture_byuln")
 text = "kulang sa kwarta? Pun-i diri"
-
-[node name="LinkButton" type="LinkButton" parent="Store/ItemList"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-text = "Kulang sa kwarta? Pun-i diri!"
-underline = 1
-uri = "google.com"
 
 [node name="insufficient_coins" parent="." instance=ExtResource("10_wyvqr")]
 visible = false
