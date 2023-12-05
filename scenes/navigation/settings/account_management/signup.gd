@@ -24,8 +24,8 @@ func _on_signup_btn_pressed():
 			queue_free()
 			mainmenu_modal_node.add_child(logged_in_scene)
 		elif !PhpRequest.api_no_error:
-			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NATARUNG ANG KONEKSIYON SA DATABASE! ")
-			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Dili mahimo ang koneksiyon sa server sa pagproseso sa kani na akawnt. Susi-a sa ang imong internet ug suwayi usab.")
+			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALAY TUBAG GIKAN SA SERBER!")
+			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Palihug pagpailob kanamo samtang amo kinang giayo ang problema sa serber.")
 			error_modal.visible = true   
 		else:               
 			$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALA NA BUHAT ANG AKAWNT!")

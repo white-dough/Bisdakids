@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://4x3pkke753b3"]
 
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="1_j4pi6"]
-[ext_resource type="Texture2D" uid="uid://ljtawk6142dm" path="res://graphics/navigation/store/2x/link_pnl@2x.png" id="2_6714s"]
+[ext_resource type="Texture2D" uid="uid://vvc0dlkm5d3m" path="res://graphics/navigation/store/2x/link_pnl@2x.png" id="2_6714s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7u2d2"]
 texture = ExtResource("2_6714s")
