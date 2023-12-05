@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_72rw8"]
 [ext_resource type="Script" path="res://scenes/navigation/daily_task/dtask_claimed.gd" id="1_u6wqo"]
-[ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_t2y6b"]
-[ext_resource type="Texture2D" uid="uid://drtnqfwiqa8be" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_qon52"]
-[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_k7coa"]
-[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_ad0ue"]
-[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_1nb12"]
-[ext_resource type="Texture2D" uid="uid://ctsochhsrty6n" path="res://graphics/ui/buttons/2x/okayY_btn@2x.png" id="7_a5dib"]
-[ext_resource type="Texture2D" uid="uid://dk4t7qc4bi3si" path="res://graphics/ui/buttons/2x/okayPressedY_btn@2x.png" id="8_1yoxd"]
+[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_t2y6b"]
+[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_qon52"]
+[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_k7coa"]
+[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_ad0ue"]
+[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_1nb12"]
+[ext_resource type="Texture2D" uid="uid://dtkdeqmtk3n2a" path="res://graphics/ui/buttons/2x/okayY_btn@2x.png" id="7_a5dib"]
+[ext_resource type="Texture2D" uid="uid://c185b3xra4m0v" path="res://graphics/ui/buttons/2x/okayPressedY_btn@2x.png" id="8_1yoxd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
