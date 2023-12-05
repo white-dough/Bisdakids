@@ -73,6 +73,7 @@ grow_horizontal = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="ModalPanel2/Title_Container"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -83,11 +84,10 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("4_k7coa")
 theme_override_font_sizes/font_size = 30
-text = "Ops! Dili ka makabalik og
-kolekta niining premyoha,
-tungod kay imo na kining na-kolekta."
+text = "Ops! Dili ka makabalik og kolekta niining premyoha, tungod kay imo na kining na-kolekta."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="CloseBtn" type="TextureButton" parent="ModalPanel2"]
 custom_minimum_size = Vector2(100, 100)

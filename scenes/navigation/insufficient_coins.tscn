@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7ko46"]
 [ext_resource type="Script" path="res://scenes/navigation/insufficient_coins.gd" id="1_8limm"]
-[ext_resource type="Texture2D" uid="uid://dvmw4lgpy8ni6" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_vpqu3"]
-[ext_resource type="Texture2D" uid="uid://b2xj5j1ltu3lj" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_3btv8"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_hjqwo"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_fr0cm"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_db3ft"]
-[ext_resource type="Texture2D" uid="uid://coon2ym7tucd5" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_lclqq"]
-[ext_resource type="Texture2D" uid="uid://bh8h3s1s7cphq" path="res://graphics/ui/buttons/2x/diliPressed_btn@2x.png" id="9_a47bs"]
-[ext_resource type="Texture2D" uid="uid://cps5kw768olyq" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_vamfd"]
-[ext_resource type="Texture2D" uid="uid://cjpga2d7mieba" path="res://graphics/ui/buttons/2x/buyPressed_btn@2x.png" id="11_w5vqg"]
+[ext_resource type="Texture2D" uid="uid://b5hd3xpj6774c" path="res://graphics/ui/icons/2x/levelcompleted_panel@2x.png" id="2_vpqu3"]
+[ext_resource type="Texture2D" uid="uid://drtnqfwiqa8be" path="res://graphics/ui/icons/2x/title_lblcontainer@2x.png" id="3_3btv8"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_hjqwo"]
+[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="5_fr0cm"]
+[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="6_db3ft"]
+[ext_resource type="Texture2D" uid="uid://dhfc0wu3l2pgl" path="res://graphics/ui/buttons/2x/dili_btn@2x.png" id="7_lclqq"]
+[ext_resource type="Texture2D" uid="uid://iaij0vu3gqsw" path="res://graphics/ui/buttons/2x/diliPressed_btn@2x.png" id="9_a47bs"]
+[ext_resource type="Texture2D" uid="uid://lb5ijk2xd8bg" path="res://graphics/ui/buttons/2x/buy_btn@2x.png" id="9_vamfd"]
+[ext_resource type="Texture2D" uid="uid://bqlxk1pjdlaf4" path="res://graphics/ui/buttons/2x/buyPressed_btn@2x.png" id="11_w5vqg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -75,6 +75,7 @@ grow_horizontal = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="ModalPanel2/Title_Container"]
+custom_minimum_size = Vector2(440, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -85,10 +86,10 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("4_hjqwo")
 theme_override_font_sizes/font_size = 26
-text = "Aguy! kuwangan imong kwarta, 
-pag palit una."
+text = "Aguy! kuwangan imong kwarta, pag palit una."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="CloseBtn" type="TextureButton" parent="ModalPanel2"]
 custom_minimum_size = Vector2(100, 100)

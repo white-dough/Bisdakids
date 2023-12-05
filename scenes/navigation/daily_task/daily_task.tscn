@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" path="res://scenes/navigation/daily_task/daily_task.gd" id="1_cvlrt"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="2_l0sn5"]
-[ext_resource type="Texture2D" uid="uid://bgjvyrvkwrcp2" path="res://graphics/navigation/store/store_panel@2x.png" id="3_nm210"]
+[ext_resource type="Texture2D" uid="uid://cfe8lf4sj6iq6" path="res://graphics/navigation/store/store_panel@2x.png" id="3_nm210"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="4_vkgox"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_1xe28"]
-[ext_resource type="Texture2D" uid="uid://bsaevsbtq21rg" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="6_0o5qe"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_1xe28"]
+[ext_resource type="Texture2D" uid="uid://ryth5j3aikil" path="res://graphics/ui/buttons/2x/exitmode_btn@2x.png" id="6_0o5qe"]
 [ext_resource type="Theme" uid="uid://4x3pkke753b3" path="res://themes/daily_task_description_label_font.tres" id="7_da8aq"]
-[ext_resource type="Texture2D" uid="uid://bulj4w27ctfa3" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_namue"]
+[ext_resource type="Texture2D" uid="uid://bcav7sokjivpg" path="res://graphics/ui/buttons/2x/exitPressed_btn@2x.png" id="7_namue"]
 [ext_resource type="PackedScene" uid="uid://caaxj7bw5ogqe" path="res://scenes/navigation/daily_task/task.tscn" id="9_t4wce"]
 [ext_resource type="PackedScene" uid="uid://dqoqeyjn3b3wj" path="res://scenes/navigation/daily_task/dtask_notyetdone.tscn" id="10_143wg"]
 [ext_resource type="PackedScene" uid="uid://bahudxyf3mlth" path="res://scenes/navigation/daily_task/dtask_claim.tscn" id="11_pqvim"]
-[ext_resource type="PackedScene" uid="uid://comqbi7x7pflb" path="res://scenes/navigation/daily_task/dtask_claimed.tscn" id="12_lrog3"]
+[ext_resource type="PackedScene" uid="uid://ccn7li12665i3" path="res://scenes/navigation/daily_task/dtask_claimed.tscn" id="12_lrog3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgpus"]
 content_margin_left = 7.0
@@ -79,10 +79,10 @@ grow_vertical = 2
 theme = SubResource("Theme_680ev")
 theme_override_fonts/font = ExtResource("5_1xe28")
 theme_override_font_sizes/font_size = 33
-text = "INADLAW 
-NA BUHATUNON"
+text = "INADLAW NA BUHATUNON"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="CloseBtn" type="TextureButton" parent="DailyTaskPnl"]
 custom_minimum_size = Vector2(100, 100)

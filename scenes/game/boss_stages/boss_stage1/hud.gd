@@ -133,7 +133,7 @@ func time_freeze():
 		time_froze_sprite.visible = not time_froze_sprite.visible 
 	if pause_timer.is_stopped():
 		time_froze_sprite.visible = not time_froze_sprite.visible 
-		print("timer is not paused, pausing")
+#		print("timer is not paused, pausing")
 
 func label_definitions():
 	#var positionY = [90, 190, 255, 320, 400]

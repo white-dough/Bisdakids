@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_4kovr"]
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss_stage1/boss_identification13.gd" id="1_iol7i"]
-[ext_resource type="Texture2D" uid="uid://bt0rl78cpehtl" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
-[ext_resource type="Texture2D" uid="uid://dc2xrlidg0h1n" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_03bjy"]
-[ext_resource type="Texture2D" uid="uid://cjrf5mdmv27ko" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
+[ext_resource type="Texture2D" uid="uid://b5pjo2ofl1vf7" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
+[ext_resource type="Texture2D" uid="uid://drwpnrffbmssh" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="4_03bjy"]
+[ext_resource type="Texture2D" uid="uid://dvu6jbep1ryyq" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="5_8r1eq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eff3f"]
