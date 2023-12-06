@@ -118,7 +118,7 @@ position = Vector2(546, 691)
 [node name="Bungo" parent="Objects" instance=ExtResource("19_8eeo3")]
 position = Vector2(340, 409)
 
-[node name="Kalis" parent="Objects" instance=ExtResource("17_8e8a5")]
+[node name="Tropeo" parent="Objects" instance=ExtResource("17_8e8a5")]
 position = Vector2(764, 638)
 
 [node name="Bahandi" parent="Objects" instance=ExtResource("14_o5g1g")]
