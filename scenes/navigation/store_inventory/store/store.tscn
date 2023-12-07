@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyxkj8srkhcln"]
+[gd_scene load_steps=16 format=3 uid="uid://cyxkj8srkhcln"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_7u3wc"]
 [ext_resource type="Script" path="res://scenes/navigation/store_inventory/store/store.gd" id="1_c5b6a"]
@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://tia3tc8f5833" path="res://themes/lively_label.tres" id="6_1587j"]
 [ext_resource type="Texture2D" uid="uid://vvc0dlkm5d3m" path="res://graphics/navigation/store/2x/link_pnl@2x.png" id="8_w88m0"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="9_2ymda"]
+[ext_resource type="PackedScene" uid="uid://c8j40idjdbaw2" path="res://scenes/navigation/insufficient_coins.tscn" id="11_8fl3c"]
 [ext_resource type="PackedScene" uid="uid://dgua678db6p0e" path="res://scenes/navigation/store_inventory/store/purchase_confirm.tscn" id="11_8lrrq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsb7q"]
@@ -147,9 +148,12 @@ theme_override_fonts/font = ExtResource("9_2ymda")
 theme_override_font_sizes/font_size = 16
 text = "Kulang sa kwarta? Pun-i diri"
 underline = 1
-uri = "google.com"
+uri = "http://192.168.123.21:5173/"
 
 [node name="purchase_confirm" parent="." instance=ExtResource("11_8lrrq")]
+visible = false
+
+[node name="insufficient_coins" parent="." instance=ExtResource("11_8fl3c")]
 visible = false
 
 [connection signal="pressed" from="Store/CloseBtn" to="." method="_on_close_btn_pressed"]
