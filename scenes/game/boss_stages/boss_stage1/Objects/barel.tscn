@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cvo3kduqah0tv"]
 
-[ext_resource type="Texture2D" uid="uid://dql223pr3bh64" path="res://graphics/boss_stage/Objects/2x/Barel@2x.png" id="1_k65nj"]
+[ext_resource type="Texture2D" uid="uid://bdlv0oq4f4yut" path="res://graphics/boss_stage/Objects/2x/Barel@2x.png" id="1_k65nj"]
 
 [node name="Barel" type="Area2D"]
 light_mask = 2

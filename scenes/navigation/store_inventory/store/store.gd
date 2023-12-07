@@ -61,7 +61,7 @@ func purchase_item(purchase_details: Dictionary):
 	var item_name : String = Game.reverse_name_logic(purchase_details['item_name'])
 	Game.user_inventory[item_name] = int(Game.user_inventory[item_name]) + purchase_details['quantity']
 	Game.user_inventory[item_name + '_timestamp'] = Time.get_unix_time_from_system()
-	print(Game.user_inventory)
+#	print(Game.user_inventory)
 	await Game.sync_data()
 	Game.record_purchase(purchase_details['bundle_id'])
 	Game.update_local_save()

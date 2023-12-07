@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bn22oaq75t3jb"]
 
-[ext_resource type="Texture2D" uid="uid://5jspjrdpkxeo" path="res://graphics/level4/Objects/sikoy@2x.png" id="1_gr5rn"]
+[ext_resource type="Texture2D" uid="uid://ccte4wir7joj" path="res://graphics/level4/Objects/sikoy@2x.png" id="1_gr5rn"]
 
 [node name="sikoy" type="Area2D"]
 light_mask = 2

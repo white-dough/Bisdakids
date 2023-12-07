@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qm0lihg0tnnv"]
 
-[ext_resource type="Texture2D" uid="uid://cns3mvt78a2h6" path="res://graphics/level1/Objects/largabista_2@2x.png" id="1_uikhn"]
+[ext_resource type="Texture2D" uid="uid://2o3xjw7uh1qo" path="res://graphics/level1/Objects/largabista_2@2x.png" id="1_uikhn"]
 
 [node name="largabista" type="Area2D"]
 light_mask = 2

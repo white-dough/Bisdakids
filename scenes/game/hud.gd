@@ -70,7 +70,7 @@ func get_definition() -> Dictionary:
 	var content_as_dictionary = JSON.parse_string(contentOfFile)
 	var dataToBePassed
 	
-	var parentNode = str(get_parent().get_scene_file_path())
+#	var parentNode = str(get_parent().get_scene_file_path())
 	var level = $"..".level_name
 	
 	match(level):

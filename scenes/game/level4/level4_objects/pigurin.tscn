@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cyek51micuvby"]
 
-[ext_resource type="Texture2D" uid="uid://chlmqybhxsmls" path="res://graphics/level4/Objects/pigurin@2x.png" id="1_2ob2s"]
+[ext_resource type="Texture2D" uid="uid://cs43tigpvb2wn" path="res://graphics/level4/Objects/pigurin@2x.png" id="1_2ob2s"]
 
 [node name="pigurin" type="Area2D"]
 light_mask = 2

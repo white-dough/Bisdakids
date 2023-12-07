@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d17c2teeyiavm"]
 
-[ext_resource type="Texture2D" uid="uid://bmeyvep28bol4" path="res://graphics/boss_stage/Objects/2x/atsa@2x.png" id="1_abjgu"]
+[ext_resource type="Texture2D" uid="uid://be1sljwfhgj5g" path="res://graphics/boss_stage/Objects/2x/atsa@2x.png" id="1_abjgu"]
 
 [node name="atsa" type="Area2D"]
 light_mask = 2

@@ -68,7 +68,7 @@ func handle_drag(event: InputEventScreenDrag):
 	elif touch_points.size() == 2:
 		var touch_point_positions = touch_points.values()
 		var current_dist = touch_point_positions[0].distance_to(touch_point_positions[1])
-		var current_angle = get_angle(touch_point_positions[0], touch_point_positions[1])
+		current_angle = get_angle(touch_point_positions[0], touch_point_positions[1])
 		var zoom_factor = start_distance / current_dist
 		
 		if can_zoom:

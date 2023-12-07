@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dqea2jt5qbwcf"]
 
-[ext_resource type="Texture2D" uid="uid://dtaxkl1qoqq1h" path="res://graphics/level1/Objects/botas@2x.png" id="1_7yp45"]
+[ext_resource type="Texture2D" uid="uid://ds1jax03p3glr" path="res://graphics/level1/Objects/botas@2x.png" id="1_7yp45"]
 
 [node name="botas" type="Area2D"]
 light_mask = 2

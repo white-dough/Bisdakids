@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://n3cysliehc2y"]
 
-[ext_resource type="Texture2D" uid="uid://bt3vkhb6k6a8d" path="res://graphics/level4/Objects/tirador@2x.png" id="1_d17f4"]
+[ext_resource type="Texture2D" uid="uid://moye25uemllh" path="res://graphics/level4/Objects/tirador@2x.png" id="1_d17f4"]
 
 [node name="tirador" type="Area2D"]
 light_mask = 2

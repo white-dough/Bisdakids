@@ -1,11 +1,11 @@
 [gd_scene load_steps=17 format=3 uid="uid://bn86tmqf6yuwi"]
 
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="1_11kqy"]
-[ext_resource type="Texture2D" uid="uid://dxrt7yejdoy2x" path="res://graphics/ui/store/2x/test@2x.png" id="1_htapu"]
-[ext_resource type="FontFile" uid="uid://2mjf42utiims" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="2_7gpmh"]
+[ext_resource type="Texture2D" uid="uid://bkuugv8tiqdhq" path="res://graphics/ui/store/2x/test@2x.png" id="1_htapu"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="2_7gpmh"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="2_w0vnu"]
-[ext_resource type="Texture2D" uid="uid://xr7l0lq4wu2s" path="res://graphics/ui/store/2x/amount_lbl_1@2x.png" id="3_q772l"]
-[ext_resource type="Texture2D" uid="uid://cei1fd8w524b6" path="res://graphics/ui/store/2x/name_lbl@2x.png" id="5_m37yx"]
+[ext_resource type="Texture2D" uid="uid://qsjr6kame3ql" path="res://graphics/ui/store/2x/amount_lbl_1@2x.png" id="3_q772l"]
+[ext_resource type="Texture2D" uid="uid://b82yxmljbvo0y" path="res://graphics/ui/store/2x/name_lbl@2x.png" id="5_m37yx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4s03"]
 texture = ExtResource("1_htapu")
@@ -111,6 +111,7 @@ theme_override_constants/outline_size = 2
 theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("2_7gpmh")
 theme_override_font_sizes/font_size = 24
+text = "x24"
 horizontal_alignment = 2
 
 [node name="ItemNameLbl" type="Label" parent="MarginContainer/StoreItemPnl"]

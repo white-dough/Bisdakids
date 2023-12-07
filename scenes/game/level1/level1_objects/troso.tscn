@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bf6cns2lio6eg"]
 
-[ext_resource type="Texture2D" uid="uid://bc4d17wdqa172" path="res://graphics/level1/Objects/troso@2x.png" id="1_66tka"]
+[ext_resource type="Texture2D" uid="uid://cbr5o6h3feboo" path="res://graphics/level1/Objects/troso@2x.png" id="1_66tka"]
 
 [node name="Troso" type="Area2D"]
 light_mask = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dyhwthinyktym"]
 
-[ext_resource type="Texture2D" uid="uid://b2h0fy82plkfy" path="res://graphics/boss_stage/Objects/2x/Papel@2x.png" id="1_iwgmg"]
+[ext_resource type="Texture2D" uid="uid://bqupugccf70td" path="res://graphics/boss_stage/Objects/2x/Papel@2x.png" id="1_iwgmg"]
 
 [node name="Papel" type="Area2D"]
 light_mask = 2

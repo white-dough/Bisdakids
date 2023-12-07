@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bskwk0utqk164"]
 
-[ext_resource type="Texture2D" uid="uid://du2vevijj1woe" path="res://graphics/level1/Objects/antepara@2x.png" id="1_qvmjj"]
+[ext_resource type="Texture2D" uid="uid://ca2n2hkxj75fo" path="res://graphics/level1/Objects/antepara@2x.png" id="1_qvmjj"]
 
 [node name="antepara" type="Area2D"]
 light_mask = 2

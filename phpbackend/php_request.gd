@@ -1,8 +1,8 @@
 extends Node
 
 var http_request: HTTPRequest = HTTPRequest.new()
-const SERVER_URL = "http://192.168.123.21:8080/godot-php-postgresql/api-request.php"
-#const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
+#const SERVER_URL = "http://192.168.123.21:8080/godot-php-postgresql/api-request.php"
+const SERVER_URL = "http://localhost:8080/godot-php-postgresql/api-request.php"
 const SERVER_HEADERS = ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"]
 var request_queue : Array = []
 var is_requesting : bool = false
@@ -103,6 +103,8 @@ func _http_request_completed(_result, _response_code, _headers, body):
 		return
 	if response != null:
 		request_saving(response)
+	print("Request done processing.")
+		
 	
 func request_saving(response):
 	if response.has("api_error"):

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://vj63fwjxyi1"]
 
-[ext_resource type="Texture2D" uid="uid://dpwn4relgbn7n" path="res://graphics/boss_stage/Objects/2x/espada@2x.png" id="1_sx3ii"]
+[ext_resource type="Texture2D" uid="uid://bxmarlb8sgh1t" path="res://graphics/boss_stage/Objects/2x/espada@2x.png" id="1_sx3ii"]
 
 [node name="espada" type="Area2D"]
 light_mask = 2

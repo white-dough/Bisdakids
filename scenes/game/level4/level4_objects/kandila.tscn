@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbvr27q70ecuc"]
 
-[ext_resource type="Texture2D" uid="uid://b8kjtenvs1a4s" path="res://graphics/level4/Objects/kandila@2x.png" id="1_6csdf"]
+[ext_resource type="Texture2D" uid="uid://duxwgjpor0suy" path="res://graphics/level4/Objects/kandila@2x.png" id="1_6csdf"]
 
 [node name="kandila" type="Area2D"]
 light_mask = 2

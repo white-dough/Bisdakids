@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0muuoqs8mtgn"]
 
-[ext_resource type="Texture2D" uid="uid://bo5qribl8wgq5" path="res://graphics/level1/Objects/lumay@2x.png" id="1_i7xaq"]
+[ext_resource type="Texture2D" uid="uid://crq7vrsmfr0df" path="res://graphics/level1/Objects/lumay@2x.png" id="1_i7xaq"]
 
 [node name="lumay" type="Area2D"]
 light_mask = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ds7ud5hotios6"]
 
-[ext_resource type="Texture2D" uid="uid://vtiqp24hlx18" path="res://graphics/level1/Objects/bukag@2x.png" id="1_o5maq"]
+[ext_resource type="Texture2D" uid="uid://bqp5tgqme87br" path="res://graphics/level1/Objects/bukag@2x.png" id="1_o5maq"]
 
 [node name="bukag" type="Area2D"]
 light_mask = 2

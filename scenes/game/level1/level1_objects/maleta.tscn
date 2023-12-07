@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://j6maapufsper"]
 
-[ext_resource type="Texture2D" uid="uid://4rboynh7y5jf" path="res://graphics/level1/Objects/maleta@2x.png" id="1_w2crd"]
+[ext_resource type="Texture2D" uid="uid://b4833q1mklr74" path="res://graphics/level1/Objects/maleta@2x.png" id="1_w2crd"]
 
 [node name="maleta" type="Area2D"]
 light_mask = 2

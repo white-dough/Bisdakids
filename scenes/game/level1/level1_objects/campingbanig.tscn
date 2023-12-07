@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c3q7yg6m5hedc"]
 
-[ext_resource type="Texture2D" uid="uid://cs6044a0ka475" path="res://graphics/level1/Objects/campingbanig@2x.png" id="1_sxsuj"]
+[ext_resource type="Texture2D" uid="uid://cu5mgfsclqja8" path="res://graphics/level1/Objects/campingbanig@2x.png" id="1_sxsuj"]
 
 [node name="campingbanig" type="Area2D"]
 light_mask = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dy832c37wo1q6"]
 
-[ext_resource type="Texture2D" uid="uid://dne5peyrsgueb" path="res://graphics/level1/Objects/bungo2@2x.png" id="1_2mxd2"]
+[ext_resource type="Texture2D" uid="uid://dbs5x55ubp20a" path="res://graphics/level1/Objects/bungo2@2x.png" id="1_2mxd2"]
 
 [node name="bungo" type="Area2D"]
 light_mask = 2

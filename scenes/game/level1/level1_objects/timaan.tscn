@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://gbc2jdpxto7w"]
 
-[ext_resource type="Texture2D" uid="uid://bonsjoyl16ybp" path="res://graphics/level1/Objects/timaan@2x.png" id="1_etwrc"]
+[ext_resource type="Texture2D" uid="uid://s65hr8u5lk5m" path="res://graphics/level1/Objects/timaan@2x.png" id="1_etwrc"]
 
 [node name="timaan" type="Area2D"]
 light_mask = 2

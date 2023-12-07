@@ -134,21 +134,20 @@ clip_text = true
 text_overrun_behavior = 1
 
 [node name="LinkPnlSprite" type="Sprite2D" parent="Store/ItemList"]
-position = Vector2(-2, 658.52)
+position = Vector2(7, 131.52)
 scale = Vector2(0.850365, 0.928571)
 texture = ExtResource("8_w88m0")
 
 [node name="LinkBtn" type="LinkButton" parent="Store/ItemList"]
 layout_mode = 0
-offset_left = -132.0
-offset_top = 647.0
-offset_right = 84.0
-offset_bottom = 674.0
+offset_left = -125.0
+offset_top = 118.52
+offset_right = 127.0
+offset_bottom = 145.52
 theme_override_fonts/font = ExtResource("9_2ymda")
 theme_override_font_sizes/font_size = 16
 text = "Kulang sa kwarta? Pun-i diri"
-underline = 1
-uri = "http://192.168.123.21:5173/"
+uri = "http://192.168.100.9:5173"
 
 [node name="purchase_confirm" parent="." instance=ExtResource("11_8lrrq")]
 visible = false
