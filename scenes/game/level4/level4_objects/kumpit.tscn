@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxo5day60r0hg"]
 
-[ext_resource type="Texture2D" uid="uid://c5xw87d3xnhr8" path="res://graphics/level4/Objects/Kumpit@2x.png" id="1_4kemh"]
+[ext_resource type="Texture2D" uid="uid://cwg7wdweh00j2" path="res://graphics/level4/Objects/Kumpit@2x.png" id="1_4kemh"]
 
 [node name="Kumpit" type="Area2D"]
 light_mask = 2

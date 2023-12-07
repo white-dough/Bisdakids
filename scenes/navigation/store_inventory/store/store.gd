@@ -35,6 +35,11 @@ func _ready():
 												"quantity" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/ItemImg/QuantityLbl").get_text()),
 												"price" = int(item.get_node("MarginContainer/StoreItemPnl/DetailVbox/PriceLbl").get_text())}
 			item.get_node("StoreItem").connect("pressed", purchase_attempt.bind(purchase_details))
+	else:
+		queue_free()
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("WALAY TUBAG GIKAN SA SERBER!")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Palihug pagpailob kanamo samtang amo kinang giayo ang problema sa serber.")
+		error_modal.visible = true
 #		item.get_node("StoreItem").connect("pressed", purchase_item.bind(item))
 #	store_btn.pressed.connect(modal_btn_pressed.bind(store_scene))
 func purchase_attempt(purchase_details: Dictionary):
@@ -56,7 +61,7 @@ func purchase_item(purchase_details: Dictionary):
 	var item_name : String = Game.reverse_name_logic(purchase_details['item_name'])
 	Game.user_inventory[item_name] = int(Game.user_inventory[item_name]) + purchase_details['quantity']
 	Game.user_inventory[item_name + '_timestamp'] = Time.get_unix_time_from_system()
-	print(Game.user_inventory)
+#	print(Game.user_inventory)
 	await Game.sync_data()
 	Game.record_purchase(purchase_details['bundle_id'])
 	Game.update_local_save()

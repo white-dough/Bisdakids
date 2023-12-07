@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4urxnbpriuan"]
 
-[ext_resource type="Texture2D" uid="uid://3unjhi4tsar1" path="res://graphics/level1/Objects/korona@2x.png" id="1_xa542"]
+[ext_resource type="Texture2D" uid="uid://cqnfeut80h3xu" path="res://graphics/level1/Objects/korona@2x.png" id="1_xa542"]
 
 [node name="korona" type="Area2D"]
 light_mask = 2

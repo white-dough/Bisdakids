@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c81211140mp5p"]
 
-[ext_resource type="Texture2D" uid="uid://dhpg6pitl0vum" path="res://graphics/boss_stage/Objects/2x/Kahon_1@2x.png" id="1_7pt4a"]
+[ext_resource type="Texture2D" uid="uid://dwqx8dt2tiafn" path="res://graphics/boss_stage/Objects/2x/Kahon_1@2x.png" id="1_7pt4a"]
 
 [node name="kahon" type="Area2D"]
 light_mask = 2

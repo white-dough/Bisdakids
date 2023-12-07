@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d1rl37swe3aim"]
 
-[ext_resource type="Texture2D" uid="uid://d3swh6rcwlj3f" path="res://graphics/level4/Objects/baril@2x.png" id="1_nsqb5"]
+[ext_resource type="Texture2D" uid="uid://ccjt5epgo7g5m" path="res://graphics/level4/Objects/baril@2x.png" id="1_nsqb5"]
 
 [node name="baril" type="Area2D"]
 light_mask = 2

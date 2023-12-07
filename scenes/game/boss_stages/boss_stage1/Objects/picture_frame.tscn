@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwmt1oiv2vxe5"]
 
-[ext_resource type="Texture2D" uid="uid://dm0omm7qnm633" path="res://graphics/boss_stage/Objects/2x/picture_frame@2x.png" id="1_fevq7"]
+[ext_resource type="Texture2D" uid="uid://2nlb30r68at5" path="res://graphics/boss_stage/Objects/2x/picture_frame@2x.png" id="1_fevq7"]
 
 [node name="picture frame" type="Area2D"]
 light_mask = 2

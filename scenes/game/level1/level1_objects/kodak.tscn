@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://blccfa33xmum1"]
 
-[ext_resource type="Texture2D" uid="uid://xdcrpfe6aoab" path="res://graphics/level1/Objects/kodak@2x.png" id="1_aey02"]
+[ext_resource type="Texture2D" uid="uid://c5p4jm7gi8s50" path="res://graphics/level1/Objects/kodak@2x.png" id="1_aey02"]
 
 [node name="kodak" type="Area2D"]
 light_mask = 2

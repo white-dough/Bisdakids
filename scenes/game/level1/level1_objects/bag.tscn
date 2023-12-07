@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://saovsohqfdob"]
 
-[ext_resource type="Texture2D" uid="uid://do7ofgvl6evi" path="res://graphics/level1/Objects/bag@2x.png" id="1_35hmv"]
+[ext_resource type="Texture2D" uid="uid://cpl8quijjo7xb" path="res://graphics/level1/Objects/bag@2x.png" id="1_35hmv"]
 
 [node name="bag" type="Area2D"]
 light_mask = 2

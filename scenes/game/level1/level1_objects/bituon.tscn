@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cs6xp8xwhoxhh"]
 
-[ext_resource type="Texture2D" uid="uid://bvgspo6vi18bc" path="res://graphics/level1/Objects/bituon@2x.png" id="1_c7hbx"]
+[ext_resource type="Texture2D" uid="uid://pulkgyq6nmki" path="res://graphics/level1/Objects/bituon@2x.png" id="1_c7hbx"]
 
 [node name="bituon" type="Area2D"]
 light_mask = 2

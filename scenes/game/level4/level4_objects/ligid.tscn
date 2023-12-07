@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://0203377ibcn6"]
 
-[ext_resource type="Texture2D" uid="uid://cn0yljovbdmd5" path="res://graphics/level4/Objects/ligid@2x.png" id="1_clnpq"]
+[ext_resource type="Texture2D" uid="uid://dqm2qhfjsfhnc" path="res://graphics/level4/Objects/ligid@2x.png" id="1_clnpq"]
 
 [node name="ligid" type="Area2D"]
 light_mask = 2

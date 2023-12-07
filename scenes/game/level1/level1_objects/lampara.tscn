@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmgiycnodn3rj"]
 
-[ext_resource type="Texture2D" uid="uid://coqd4eulmx7sh" path="res://graphics/level1/Objects/2x/lampara_1@2x.png" id="1_5n2v1"]
+[ext_resource type="Texture2D" uid="uid://dynp2w6b8qtlv" path="res://graphics/level1/Objects/2x/lampara_1@2x.png" id="1_5n2v1"]
 
 [sub_resource type="Gradient" id="Gradient_kd182"]
 offsets = PackedFloat32Array(0, 0.746914)

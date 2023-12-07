@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhepkhdml12n5"]
+[gd_scene load_steps=12 format=3 uid="uid://bhepkhdml12n5"]
 
 [ext_resource type="Texture2D" uid="uid://d3cmig6oeuqfd" path="res://graphics/ui/store/2x/shopContainer@2x.png" id="1_7hv4r"]
 [ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="1_rupft"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="2_x2v5t"]
+[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="3_pfxfq"]
 [ext_resource type="Texture2D" uid="uid://b82yxmljbvo0y" path="res://graphics/ui/store/2x/name_lbl@2x.png" id="4_mj5vm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vnwm0"]
@@ -10,6 +11,15 @@ texture = ExtResource("1_7hv4r")
 
 [sub_resource type="Theme" id="Theme_athn7"]
 Panel/styles/panel = SubResource("StyleBoxTexture_vnwm0")
+
+[sub_resource type="Theme" id="Theme_gjc4e"]
+Label/colors/font_shadow_color = Color(0, 0.560784, 0, 1)
+Label/constants/outline_size = 2
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 7
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("3_pfxfq")
 
 [sub_resource type="FontVariation" id="FontVariation_0cnlk"]
 base_font = ExtResource("2_x2v5t")
@@ -71,9 +81,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
+offset_left = -50.0
+offset_right = -9.99997
+offset_bottom = 31.0
 grow_horizontal = 0
+theme = SubResource("Theme_gjc4e")
+text = "x12"
 horizontal_alignment = 2
 
 [node name="ItemNameLbl" type="Label" parent="MarginContainer/ItemPnl"]

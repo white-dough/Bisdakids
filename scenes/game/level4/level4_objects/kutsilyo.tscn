@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://grf26y81lp7b"]
 
-[ext_resource type="Texture2D" uid="uid://by0wob1e67nom" path="res://graphics/level4/Objects/kutsilyo@2x.png" id="1_njb51"]
+[ext_resource type="Texture2D" uid="uid://b1j3b6cajurbx" path="res://graphics/level4/Objects/kutsilyo@2x.png" id="1_njb51"]
 
 [node name="kutsilyo" type="Area2D"]
 light_mask = 2

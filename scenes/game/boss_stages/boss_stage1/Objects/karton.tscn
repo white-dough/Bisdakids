@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cplqlt178jirb"]
+[gd_scene load_steps=2 format=3 uid="uid://km72kgnuc5fv"]
 
-[ext_resource type="Texture2D" uid="uid://bts5mt0cfw5to" path="res://graphics/boss_stage/Objects/2x/Kahon@2x.png" id="1_uiqf5"]
+[ext_resource type="Texture2D" uid="uid://sfuhmpc3lnyi" path="res://graphics/boss_stage/Objects/2x/Kahon@2x.png" id="1_uiqf5"]
 
 [node name="Karton" type="Area2D"]
 light_mask = 2

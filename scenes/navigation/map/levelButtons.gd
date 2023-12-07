@@ -66,6 +66,8 @@ func modal_display(level_key: String) -> void:
 		modal_play_btn.pressed.disconnect(changeScene.bind("res://scenes/game/boss_stages/boss_stage1/boss1.tscn", 40))
 	if level_key == "level5":
 		modal_play_btn.pressed.connect(changeScene.bind("res://scenes/game/boss_stages/boss_stage1/boss1.tscn", 40))
+		modal.show()
+		return
 	modal_play_btn.pressed.connect(changeScene.bind("res://scenes/game/"+level_key+"/"+level_key+".tscn", 30))
 	modal.show()
 

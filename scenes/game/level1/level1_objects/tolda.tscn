@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dp1ldut5aplof"]
 
-[ext_resource type="Texture2D" uid="uid://bjee3rvd7c5ke" path="res://graphics/level1/Objects/tolda@2x.png" id="1_c7jcm"]
+[ext_resource type="Texture2D" uid="uid://hg1m16imbh6s" path="res://graphics/level1/Objects/tolda@2x.png" id="1_c7jcm"]
 
 [node name="Tolda" type="Area2D"]
 light_mask = 2

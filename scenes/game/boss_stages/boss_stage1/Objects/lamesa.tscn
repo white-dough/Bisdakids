@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dqq738hppc23t"]
 
-[ext_resource type="Texture2D" uid="uid://d2kelb0br8qan" path="res://graphics/boss_stage/Objects/2x/Lamesa@2x.png" id="1_yofhe"]
+[ext_resource type="Texture2D" uid="uid://cyvb3arvm0gmb" path="res://graphics/boss_stage/Objects/2x/Lamesa@2x.png" id="1_yofhe"]
 
 [node name="Lamesa" type="Area2D"]
 light_mask = 2

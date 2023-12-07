@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b587raktahnko"]
 
-[ext_resource type="Texture2D" uid="uid://cdrp4u0kxn5kg" path="res://graphics/level1/Objects/bisikleta@2x.png" id="1_ud10v"]
+[ext_resource type="Texture2D" uid="uid://dmabk1ut08gkb" path="res://graphics/level1/Objects/bisikleta@2x.png" id="1_ud10v"]
 
 [node name="bisikleta" type="Area2D"]
 light_mask = 2

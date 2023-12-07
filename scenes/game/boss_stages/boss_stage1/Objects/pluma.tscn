@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://gjxboei064jn"]
 
-[ext_resource type="Texture2D" uid="uid://jl0tokmmaxbd" path="res://graphics/boss_stage/Objects/2x/Pluma@2x.png" id="1_tm0uw"]
+[ext_resource type="Texture2D" uid="uid://dltlnoix2i35p" path="res://graphics/boss_stage/Objects/2x/Pluma@2x.png" id="1_tm0uw"]
 
 [node name="Pluma" type="Area2D"]
 light_mask = 2

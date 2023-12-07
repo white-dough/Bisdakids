@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c444u1ayis4bh"]
 
-[ext_resource type="Texture2D" uid="uid://cqef8qkf4u1y1" path="res://graphics/boss_stage/Objects/2x/Orasan@2x.png" id="1_ixpcg"]
+[ext_resource type="Texture2D" uid="uid://cwpwvjvvs1hfc" path="res://graphics/boss_stage/Objects/2x/Orasan@2x.png" id="1_ixpcg"]
 
 [node name="Orasan" type="Area2D"]
 light_mask = 2

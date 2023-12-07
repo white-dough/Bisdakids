@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bd6tni15t4veg"]
 
-[ext_resource type="Texture2D" uid="uid://v6yrokxnmbfq" path="res://graphics/level4/Objects/hagdanan@2x.png" id="1_680xv"]
+[ext_resource type="Texture2D" uid="uid://didqmwuoqs6jv" path="res://graphics/level4/Objects/hagdanan@2x.png" id="1_680xv"]
 
 [node name="hagdanan" type="Area2D"]
 light_mask = 2

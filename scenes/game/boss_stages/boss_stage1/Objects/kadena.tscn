@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cus1l43frefad"]
 
-[ext_resource type="Texture2D" uid="uid://do1rxukqc552l" path="res://graphics/boss_stage/Objects/2x/kadena_1@2x.png" id="1_uirwg"]
+[ext_resource type="Texture2D" uid="uid://qvmcq7yxeqpp" path="res://graphics/boss_stage/Objects/2x/kadena_1@2x.png" id="1_uirwg"]
 
 [node name="kadena" type="Area2D"]
 light_mask = 2

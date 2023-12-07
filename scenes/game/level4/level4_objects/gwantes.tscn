@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dr5tqu20vlv7f"]
 
-[ext_resource type="Texture2D" uid="uid://cjwmgdlo6ik1x" path="res://graphics/level4/Objects/gwantes@2x.png" id="1_bco5y"]
+[ext_resource type="Texture2D" uid="uid://dtrjo8qkq8iok" path="res://graphics/level4/Objects/gwantes@2x.png" id="1_bco5y"]
 
 [node name="gwantes" type="Area2D"]
 light_mask = 2

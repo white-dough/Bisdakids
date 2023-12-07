@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwxcqv1u68t6g"]
 
-[ext_resource type="Texture2D" uid="uid://bcc6hbrwceihh" path="res://graphics/level4/Objects/Pana@2x.png" id="1_fpurw"]
+[ext_resource type="Texture2D" uid="uid://bc0itwdqw1psc" path="res://graphics/level4/Objects/Pana@2x.png" id="1_fpurw"]
 
 [node name="Pana" type="Area2D"]
 light_mask = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpsjyklfhuqnx"]
 
-[ext_resource type="Texture2D" uid="uid://dp1r65ygcrxmi" path="res://graphics/level1/Objects/kalis@2x.png" id="1_e4llf"]
+[ext_resource type="Texture2D" uid="uid://dydhyu1lx8tg5" path="res://graphics/level1/Objects/kalis@2x.png" id="1_e4llf"]
 
 [node name="kalis" type="Area2D"]
 light_mask = 2
