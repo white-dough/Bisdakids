@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://iie55pspq5bd"]
 
-[ext_resource type="Texture2D" uid="uid://w4f3ovfw2bx0" path="res://graphics/boss_stage/Objects/2x/Sapatos@2x.png" id="1_722gp"]
+[ext_resource type="Texture2D" uid="uid://ci0jxj6aljbq5" path="res://graphics/boss_stage/Objects/2x/Sapatos@2x.png" id="1_722gp"]
 
 [node name="sapatos" type="Area2D"]
 light_mask = 2

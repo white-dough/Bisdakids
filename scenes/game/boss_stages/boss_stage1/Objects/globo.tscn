@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d21ht0ig4wneh"]
 
-[ext_resource type="Texture2D" uid="uid://n1qunaqlh0x6" path="res://graphics/boss_stage/Objects/2x/Globo@2x.png" id="1_rvk5m"]
+[ext_resource type="Texture2D" uid="uid://d38eb5bqfuv4f" path="res://graphics/boss_stage/Objects/2x/Globo@2x.png" id="1_rvk5m"]
 
 [node name="Globo" type="Area2D"]
 light_mask = 2

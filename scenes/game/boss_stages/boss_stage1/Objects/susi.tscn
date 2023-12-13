@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cygrpb6sfffit"]
 
-[ext_resource type="Texture2D" uid="uid://cdaxvfx6dkyur" path="res://graphics/boss_stage/Objects/2x/Susi@2x.png" id="1_is2qj"]
+[ext_resource type="Texture2D" uid="uid://dalt5b3h3ryrk" path="res://graphics/boss_stage/Objects/2x/Susi@2x.png" id="1_is2qj"]
 
 [node name="Susi" type="Area2D"]
 light_mask = 2
