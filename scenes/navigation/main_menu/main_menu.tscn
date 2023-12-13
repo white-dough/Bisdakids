@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="4_qj5eq"]
 [ext_resource type="Theme" uid="uid://bot802emh10k0" path="res://themes/num_lbl.tres" id="5_d4jlv"]
 [ext_resource type="Texture2D" uid="uid://bi1u4u3asgvfd" path="res://graphics/ui/icons/store_icon@2x.png" id="5_nlw81"]
+
 [ext_resource type="Texture2D" uid="uid://dbngtvvtxlfj6" path="res://graphics/ui/icons/2x/boxLbl@2x.png" id="6_dwh3p"]
 [ext_resource type="Texture2D" uid="uid://cgrxrjoupkik8" path="res://graphics/ui/icons/energy_icon@2x.png" id="7_sprhj"]
 [ext_resource type="Texture2D" uid="uid://cwujrikbom8u6" path="res://graphics/ui/icons/coins_icon@2x.png" id="8_11n2i"]
