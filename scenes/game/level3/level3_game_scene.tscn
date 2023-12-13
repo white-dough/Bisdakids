@@ -79,7 +79,7 @@ position = Vector2(644.068, 661.165)
 [node name="Bulsita" parent="Objects" instance=ExtResource("13_hn3js")]
 position = Vector2(263.21, 651.456)
 
-[node name="Tinidor" parent="Objects" instance=ExtResource("14_af0po")]
+[node name="Sikoy" parent="Objects" instance=ExtResource("14_af0po")]
 position = Vector2(15.9521, 308.738)
 
 [node name="Sako" parent="Objects" instance=ExtResource("15_4g8q6")]

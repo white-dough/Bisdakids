@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://0yb6q8sbxsbh"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://0yb6q8sbxsbh"]
 
-[ext_resource type="StyleBox" uid="uid://5n32n68p2tpw" path="res://themes/boss_tigmu12_lbl_stylebox.tres" id="1_nstdc"]
+[ext_resource type="Texture2D" uid="uid://4rnaxnmm1r7d" path="res://graphics/boss_stage/Assets/2x/tigmuA_lbl@2x.png" id="1_xt7l0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mw4vb"]
+texture = ExtResource("1_xt7l0")
 
 [resource]
-Label/styles/normal = ExtResource("1_nstdc")
+Label/styles/normal = SubResource("StyleBoxTexture_mw4vb")

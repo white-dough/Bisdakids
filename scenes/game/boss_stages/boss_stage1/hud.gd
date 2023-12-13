@@ -70,7 +70,7 @@ func get_definition() -> Dictionary:
 	var dataToBePassed
 	
 	var parentNode = str(get_parent().get_scene_file_path())
-	var level = parentNode.split("/")[-1].split(".")[0]
+		var level = parentNode.split("/")[-1].split(".")[0]
 	match(level):
 		"level1":
 			dataToBePassed = content_as_dictionary.level1

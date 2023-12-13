@@ -17,15 +17,107 @@ signal level_finished(time_finished:float)
 
 @onready var finish_level_mark: int
 
+@onready var audio_stream: Dictionary = {
+	"Angkla": Audio.Angkla,
+	"Antipara": Audio.Antipara,
+	"Atsa": Audio.Atsa,
+	"Bag": Audio.Bag,
+	"Bahandi": Audio.Bahandi,
+	"Balde": Audio.Balde,
+	"Banig": Audio.Banig,
+	"Baol": Audio.Baol,
+	"Barel": Audio.Barel,
+	"Barko": Audio.Barko,
+	"Baso": Audio.Baso,
+	"Bisikleta": Audio.Bisikleta,
+	"Bituon": Audio.Bituon,
+	"Bola": Audio.Bola,
+	"Bomba": Audio.Bomba,
+	"Botas": Audio.Botas,
+	"Botilya": Audio.Botilya,
+	"Bukag": Audio.Bukag,
+	"Bulsita": Audio.Bulsita,
+	"Bungo": Audio.Bungo,
+	"Duyan": Audio.Duyan,
+	"Eroplano": Audio.Eroplano,
+	"Espada": Audio.Espada,
+	"Globo": Audio.Globo,
+	"Gwantes": Audio.Gwantes,
+	"Hagdanan": Audio.Hagdanan,
+	"Kaban": Audio.Kaban,
+	"Kadena": Audio.Kadena,
+	"Kahig": Audio.Kahig,
+	"Kalo": Audio.Kalo,
+	"Kandila": Audio.Kandila,
+	"Karitilya": Audio.Karitilya,
+	"Kariton": Audio.Kariton,
+	"Karton": Audio.Karton,
+	"Katulganan": Audio.Katolganan,
+	"Kodak": Audio.Kodak,
+	"Kumpas": Audio.Kompas,
+	"Korona": Audio.Korona,
+	"Kuhit": Audio.Kuhit,
+	"Kutsara": Audio.Kutsara,
+	"Kutsilyo": Audio.Kutsilyo,
+	"Kuwadro": Audio.Kuwadro,
+	"Lamesa": Audio.Lamesa,
+	"Lampara": Audio.Lampara,
+	"Largabista": Audio.Largabista,
+	"Ligid": Audio.Ligid,
+	"Lingkuranan": Audio.Lingkuranan,
+	"Lumay": Audio.Lumay,
+	"Lutuanan": Audio.Lutuanan,
+	"Maleta": Audio.Maleta,
+	"Mansanas": Audio.Mansanas,
+	"Mapa": Audio.Mapa,
+	"Orasan": Audio.Orasan,
+	"Pakwan": Audio.Pakwan,
+	"Pala": Audio.Pala,
+	"Pana": Audio.Pana,
+	"Pangtabas": Audio.Pangtabas,
+	"Papel": Audio.Papel,
+	"Payong": Audio.Payong,
+	"Pigurin": Audio.Pigurin,
+	"Pluma": Audio.Pluma,
+	"Plurira": Audio.Plurira,
+	"Regadera": Audio.Regadera,
+	"Regalo": Audio.Regalo,
+	"Sako": Audio.Sako,
+	"Salag": Audio.Salag,
+	"Salbabida": Audio.Salbabida,
+	"Samin": Audio.Samin,
+	"Sanggot": Audio.Sanggot,
+	"Sapatos": Audio.Sapatos,
+	"Sigarilyo": Audio.Sigarilyo,
+	"Silhig": Audio.Silhig,
+	"Sinsilyo": Audio.Sinsilyo,
+	"Sista": Audio.Sista,
+	"Tawo-tawo": Audio.Tawo_tawo,
+	"Teleskopyo": Audio.Teleskopyo,
+	"Tibod": Audio.Tibud,
+	"Timaan": Audio.Timaan,
+	"Timbangan": Audio.Timbangan,
+	"Tinidor": Audio.Tinidor,
+	"Tirador": Audio.Tirador,
+	"Tolda": Audio.Tolda,
+	"Tropeo": Audio.Tropeyo,
+	"Troso": Audio.Troso,
+	"Tsarira": Audio.Tsarira,
+	"Tsinelas": Audio.Tsinelas,
+	"Yawi": Audio.Yawi
+}
+
 # para long press feature
 const LONG_PRESS_DURATION = 1.5 # in seconds
 
 var pressed = false # para long press feature
 var press_time = 0 # para long press feature
 
+var objects_to_find
+
 func _on_level_ready():
 	set_labels()
-	label_definitions() # function para sa word defintion (long press)
+	#label_definitions() # function para sa word defintion (long press)
 	level_time = $"..".level_time
 	progress_bar.max_value = level_time
 	progress_bar.set_use_rounded_values(true)
@@ -46,8 +138,13 @@ func _process(_delta):
 	timer_lbl.text = "%d:%02d" % [floor(timer.time_left / 60), int(timer.time_left) % 60]
 	
 func object_list_label(current_objects_strings: Array):
+	#print("current objects: ", current_objects_strings)
+	objects_to_find = current_objects_strings
 	var data = get_definition()
+	#var objects: Array = data.keys()
+	label_definitions(current_objects_strings)
 	for i in range(object_list_container.get_child_count()):
+		#object_audio(current_objects_strings)
 		var current_label = object_list_container.get_child(i)
 		var desc_label = description_container.get_child(i)
 		current_label.set_text(current_objects_strings[i])
@@ -60,7 +157,7 @@ func object_list_label(current_objects_strings: Array):
 			if finish_level_mark >= 15:
 				var time_finished: float = timer.time_left
 				level_finished.emit(time_finished)
-			
+
 # this function gets the data from words-beta.json (defintion of the words)
 func get_definition() -> Dictionary:
 	var jsonFile = FileAccess.open("res://data/words-beta.json", FileAccess.READ)
@@ -85,9 +182,6 @@ func get_definition() -> Dictionary:
 		"level5":
 			dataToBePassed = content_as_dictionary.level5
 	return dataToBePassed
-	#var level2 = content_as_dictionary.level2[0]
-	#var level3 = content_as_dictionary.level3[0]
-	# etc until level5...
 
 func _on_clue_pressed():
 	if int(Game.user_inventory['hint']) > 0:
@@ -139,9 +233,11 @@ func time_freeze():
 		time_froze_sprite.visible = not time_froze_sprite.visible 
 		#print("timer is not paused, pausing")
 
-func label_definitions():
+func label_definitions(objects):
+	#print("objects label def: ", objects)
 	#var positionY = [90, 190, 255, 320, 400]
 	var parentContainer: VBoxContainer = $ColorRect/Panel/ContainerHUD/Objectlist
+	#print("objects to find: ", objects_to_find)
 	for i in range(parentContainer.get_child_count()):
 		var label = parentContainer.get_child(i)
 		#print(positionY[i])
@@ -159,7 +255,17 @@ func word_def_display(event, labelName):
 			var desc_label = description_container.get_node(label_name)
 			if desc_label:
 				desc_label.visible = true
-				#desc_label.position.y = pos
+			match label_name:
+				"Label1":
+					Audio.play_object(audio_stream[objects_to_find[0]])
+				"Label2":
+					Audio.play_object(audio_stream[objects_to_find[1]])
+				"Label3":
+					Audio.play_object(audio_stream[objects_to_find[2]])
+				"Label4":
+					Audio.play_object(audio_stream[objects_to_find[3]])
+				"Label5":
+					Audio.play_object(audio_stream[objects_to_find[4]])
 		elif event.button_index == MOUSE_BUTTON_LEFT:
 			pressed = false
 			var label_name = labelName
@@ -167,8 +273,8 @@ func word_def_display(event, labelName):
 			if desc_label:
 				desc_label.visible = false
 
-
 func _on_settings_pressed():
 	var settings_scene : PackedScene = load("res://scenes/navigation/settings_gameplay/settings_gameplay.tscn")
 	Audio.play_sfx(Audio.wood_btn_sfx)
 	add_child(settings_scene.instantiate())
+

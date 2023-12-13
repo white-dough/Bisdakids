@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dggi067x44ojc"]
 
-[ext_resource type="Texture2D" uid="uid://bxgrcax1vwx6c" path="res://graphics/boss_stage/Objects/2x/Pitsel@2x.png" id="1_8u1gd"]
+[ext_resource type="Texture2D" uid="uid://lw7pvceuwbio" path="res://graphics/boss_stage/Objects/2x/Pitsel@2x.png" id="1_8u1gd"]
 
 [node name="Pitsel" type="Area2D"]
 light_mask = 2

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b060j5pi3h7qb"]
+
+[ext_resource type="Script" path="res://scenes/game/boss_stages/DragPreview.gd" id="1_emt1w"]
+
+[node name="DragPreview" type="Sprite2D"]
+script = ExtResource("1_emt1w")

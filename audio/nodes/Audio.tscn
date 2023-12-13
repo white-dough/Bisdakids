@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbr0rfr2lfqux"]
 
 [ext_resource type="Script" path="res://audio/nodes/Audio.gd" id="1_kl3r8"]
-[ext_resource type="AudioStream" uid="uid://bu5e8pkqjgnt3" path="res://audio/assets/sfx/button_clicked_sfx.mp3" id="2_wlc0b"]
+[ext_resource type="AudioStream" uid="uid://dg2vmhook42e1" path="res://audio/assets/sfx/button_clicked_sfx.mp3" id="2_wlc0b"]
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_kl3r8")
@@ -13,3 +13,5 @@ bus = &"music"
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wlc0b")
 bus = &"sfx"
+
+[node name="Object" type="AudioStreamPlayer" parent="."]
