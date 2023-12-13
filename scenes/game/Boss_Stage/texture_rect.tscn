@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3e6rhkghn7rd"]
+
+[ext_resource type="Texture2D" uid="uid://bjv20qgl3jer" path="res://graphics/boss_stage/Assets/drag&drop/akoa@2x.png" id="1_1sane"]
+[ext_resource type="Script" path="res://TextureRect.gd" id="1_qm527"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(180, 0)
+anchors_preset = -1
+anchor_right = 0.14003
+anchor_bottom = 0.0864865
+texture = ExtResource("1_1sane")
+expand_mode = 1
+script = ExtResource("1_qm527")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 64.0
+mouse_filter = 2

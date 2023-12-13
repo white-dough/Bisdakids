@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2f7kk87gbj2i"]
 
-[ext_resource type="Texture2D" uid="uid://dy3d4xlqele2f" path="res://graphics/boss_stage/Objects/2x/Baso@2x.png" id="1_d2asy"]
+[ext_resource type="Texture2D" uid="uid://dajm8dj47rx76" path="res://graphics/boss_stage/Objects/2x/Baso@2x.png" id="1_d2asy"]
 
 [node name="Baso" type="Area2D"]
 light_mask = 2

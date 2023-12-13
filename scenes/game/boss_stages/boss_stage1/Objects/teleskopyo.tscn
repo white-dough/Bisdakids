@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbhi5gs0cwakn"]
 
-[ext_resource type="Texture2D" uid="uid://c5g80v5sinb2j" path="res://graphics/boss_stage/Objects/2x/teleskopyo@2x.png" id="1_ehayd"]
+[ext_resource type="Texture2D" uid="uid://dyo2dxkqba1ux" path="res://graphics/boss_stage/Objects/2x/teleskopyo@2x.png" id="1_ehayd"]
 
 [node name="teleskopyo" type="Area2D"]
 light_mask = 2
