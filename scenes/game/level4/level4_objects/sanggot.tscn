@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://0gtgkvph10od"]
 
-[ext_resource type="Texture2D" uid="uid://cq1j1qcnhevtf" path="res://graphics/level4/Objects/sanggot@2x.png" id="1_ysg16"]
+[ext_resource type="Texture2D" uid="uid://cg80oedob5uib" path="res://graphics/level4/Objects/sanggot@2x.png" id="1_ysg16"]
 
 [node name="sanggot" type="Area2D"]
 light_mask = 2

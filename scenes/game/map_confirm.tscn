@@ -135,4 +135,3 @@ stretch_mode = 3
 
 [connection signal="pressed" from="ModalPanel2/CloseBtn" to="." method="_on_close_btn_pressed"]
 [connection signal="pressed" from="ModalPanel2/Content_Container/no_btn" to="." method="_on_no_btn_pressed"]
-[connection signal="pressed" from="ModalPanel2/Content_Container/yes_btn" to="." method="_on_yes_btn_pressed"]

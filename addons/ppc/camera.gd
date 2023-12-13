@@ -6,7 +6,7 @@ var points : Array = []
 
 var last_dist = 0
 var current_dist = 0
-var zoom_rate = 0.1
+var zoom_rate = 0.5
 var zoom_started : bool = false
 var drag_started = false
 var input_count = 0
@@ -45,6 +45,8 @@ func _input(event):
 	input_count = count
 
 func handle_drag(event):
+	#position.x += (points[0].pos.x - points[0].start_pos.x) * zoom.x * 0.01
+	#position.y += (points[0].pos.y - points[0].start_pos.y) * zoom.y * 0.01
 	#position.x = position.x + (points[0].pos.x - points[0].start_pos.x) * zoom.x * 0.01 # - 
 	#position.y = position.y + (points[0].pos.y -points[0].start_pos.y ) * zoom.y * 0.01 #- 
 	pass
@@ -65,7 +67,7 @@ func handle_zoom(event):
 
 func zoom_this(val):
 	if abs(current_dist) > 0.1 and abs(current_dist) < 10:
-		var temp_zoom = current_dist * zoom_rate
+		var temp_zoom = -current_dist * zoom_rate
 		zoom.x = clamp(zoom.x + temp_zoom * .025, 1.0, 2.0)
 		zoom.y = clamp(zoom.y + temp_zoom * .025, 1.0, 2.0)
 	

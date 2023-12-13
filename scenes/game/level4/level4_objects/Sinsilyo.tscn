@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qvnmm03myvod"]
 
-[ext_resource type="Texture2D" uid="uid://crhkfboos5c2y" path="res://graphics/level4/Objects/Sinsilyo@2x.png" id="1_febmy"]
+[ext_resource type="Texture2D" uid="uid://47i7fj6b17oi" path="res://graphics/level4/Objects/Sinsilyo@2x.png" id="1_febmy"]
 
 [node name="Sinsilyo" type="Area2D"]
 light_mask = 2

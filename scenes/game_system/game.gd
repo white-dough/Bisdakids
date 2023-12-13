@@ -144,7 +144,7 @@ func query_update():
 func sync_data():
 	var inventory_timestamps: Array = []
 	var inventory_timestamp_max: float
-	print(Game.progress["timestamp"])
+#	print(Game.progress["timestamp"])
 	var energy_timestamp: float = energy_system["timestamp"]
 	var progress_timestamp: float = float(Game.progress["timestamp"])
 	progress_timestamp = progress_timestamp if progress_timestamp > energy_timestamp else energy_timestamp
@@ -162,7 +162,7 @@ func sync_data():
 	var timestamp =  inventory_timestamp_max if inventory_timestamp_max > progress_timestamp else progress_timestamp
 	PhpRequest.sync_data(user_name, timestamp, inventory_items, progress_scores, energy_system["energy"])
 	await PhpRequest.http_request.request_completed
-	print(PhpRequest.clean_response)
+#	print(PhpRequest.clean_response)
 	
 	if PhpRequest.clean_response != "db_updated" and PhpRequest.clean_response != "success":
 		var result: Dictionary = JSON.parse_string(PhpRequest.clean_response)
@@ -204,7 +204,7 @@ func update_local_save():
 func daily_task_from_db():
 	PhpRequest.get_dailyTasks()
 	await PhpRequest.http_request.request_completed
-	print(PhpRequest.clean_response)
+#	print(PhpRequest.clean_response)
 	if PhpRequest.api_no_error:
 		var formattedData = {}
 		for data in PhpRequest.clean_response:
@@ -217,6 +217,14 @@ func daily_task_from_db():
 		var file = FileAccess.open(daily_task_repo_path, FileAccess.WRITE)
 		file.store_line(JSON.stringify(formattedData, "\t"))
 		file.close()
+		
+func daily_task_from_file():
+	var file = FileAccess.open(daily_task_repo_path, FileAccess.WRITE)
+	var file2 = FileAccess.open("res://data/daily_task.json", FileAccess.READ)
+	var contentOfFile : String = file2.get_as_text()
+	file.store_string(contentOfFile)
+	file.close()
+	file2.close()
 
 func energy_recharge() -> void:
 	const energy_increment : int = 25
@@ -263,14 +271,15 @@ func _ready():
 	http_request.set_timeout(10)
 	add_child(http_request)
 	http_request.connect("request_completed", _on_request_completed)
-	load_data()
-	systems_logic()
-	premium = true if user_inventory['premium'] else false
-	print(loaded_player_data)
+	load_data()	
+	daily_task_from_file()
 	check_is_connected_internet()
 	await http_request.request_completed
 	if is_connected_to_internet:
 		await daily_task_from_db()
+	systems_logic()
+	premium = true if user_inventory['premium'] else false
+#	print(loaded_player_data)
 		
 #	cheat daily task
 #	daily_task_progression("Score", 5000)
@@ -323,31 +332,29 @@ func texture_logic(item_name:String)->Texture2D:
 func name_logic(item_name:String)->String:
 	match(item_name):
 		"time_freeze":
-			return "Time Freeze"
+			return "Yelo"
 		"hint":
-			return "Hint"
+			return "Pasumbingay"
 		"energy":
-			return "Energy"
+			return "Enerhiya"
 		"coin":
-			return "Coins"
+			return "Bisdacoins"
 		"premium":
-			return "Premium"
+			return "Pagka-miyembro"
 		_:
-			return "Mystery Bundle"
+			return "Misterio"
 
 func reverse_name_logic(item_name:String)->String:
 	match(item_name):
-		"Time Freeze":
+		"Yelo":
 			return "time_freeze"
-		"Hint":
+		"Pasumbingay":
 			return "hint"
-		"Energy":
+		"Enerhiya":
 			return "energy"
-		"Coin":
+		"Bisdacoins":
 			return "coin"
-		"Premium":
+		"Pagka-miyembro":
 			return "premium"
 		_:
 			return "Mystery Bundle"
-
-

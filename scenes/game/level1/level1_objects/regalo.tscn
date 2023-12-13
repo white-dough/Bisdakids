@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://y34rcf42vv7w"]
 
-[ext_resource type="Texture2D" uid="uid://3ss4n1fqrm5u" path="res://graphics/level1/Objects/regalo@2x.png" id="1_g4clq"]
+[ext_resource type="Texture2D" uid="uid://cr6by04oix7ml" path="res://graphics/level1/Objects/regalo@2x.png" id="1_g4clq"]
 
 [node name="regalo" type="Area2D"]
 light_mask = 2

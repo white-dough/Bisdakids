@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://c444u1ayis4bh" path="res://scenes/game/boss_stages/boss_stage1/Objects/orasan.tscn" id="31_aicti"]
 [ext_resource type="PackedScene" uid="uid://cygrpb6sfffit" path="res://scenes/game/boss_stages/boss_stage1/Objects/susi.tscn" id="32_wexot"]
 [ext_resource type="PackedScene" uid="uid://l7oj03lrua0x" path="res://scenes/game/handleTaps.tscn" id="34_1qjqy"]
-[ext_resource type="PackedScene" uid="uid://cplqlt178jirb" path="res://scenes/game/boss_stages/boss_stage1/Objects/karton.tscn" id="34_ceyyb"]
+[ext_resource type="PackedScene" uid="uid://km72kgnuc5fv" path="res://scenes/game/boss_stages/boss_stage1/Objects/karton.tscn" id="34_ceyyb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qdkhj"]
 blend_mode = 1

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dl6kxglxmb40b"]
 
-[ext_resource type="Texture2D" uid="uid://b8tji3eqjkrvk" path="res://graphics/level4/Objects/silhig@2x.png" id="1_bl4ic"]
+[ext_resource type="Texture2D" uid="uid://di00vak4ci8c6" path="res://graphics/level4/Objects/silhig@2x.png" id="1_bl4ic"]
 
 [node name="silhig" type="Area2D"]
 light_mask = 2

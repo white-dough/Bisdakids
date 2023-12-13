@@ -11,6 +11,11 @@ func _on_login_btn_pressed():
 	Audio.play_sfx(Audio.normal_btn_sfx)
 	var user_name: String = username_input.get_text()
 	var password: String = password_input.get_text()
+	if user_name.strip_edges().is_empty() or password.strip_edges().is_empty():
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorLbl".set_text("BLANGKO NGA DETALYE!")
+		$"../ErrorModal/ErrorModalPnl/ErrorContentVbox/ErrorDescLbl".set_text("Dili mahimo nga walay ihatag nga detalye.")
+		error_modal.visible = true
+		return
 	PhpRequest.login(user_name, password)
 	await PhpRequest.http_request.request_completed
 	if PhpRequest.clean_response != "failed":

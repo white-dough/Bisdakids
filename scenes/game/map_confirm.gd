@@ -7,3 +7,5 @@ func _on_close_btn_pressed():
 func _on_no_btn_pressed():
 	Audio.play_sfx(Audio.normal_btn_sfx)
 	hide()
+
+

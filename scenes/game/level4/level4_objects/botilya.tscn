@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bi8m8xsiymv7g"]
 
-[ext_resource type="Texture2D" uid="uid://cqtme20q42iqx" path="res://graphics/level4/Objects/botilya@2x.png" id="1_i7y1q"]
+[ext_resource type="Texture2D" uid="uid://b4i7v84y7olli" path="res://graphics/level4/Objects/botilya@2x.png" id="1_i7y1q"]
 
 [node name="botilya" type="Area2D"]
 light_mask = 2

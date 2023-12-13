@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cx8yvpiiufvqm"]
 
-[ext_resource type="Texture2D" uid="uid://bwho3h20jwhyq" path="res://graphics/level4/Objects/kahig@2x.png" id="1_8w8xr"]
+[ext_resource type="Texture2D" uid="uid://46tipohy2hcx" path="res://graphics/level4/Objects/kahig@2x.png" id="1_8w8xr"]
 
 [node name="kahig" type="Area2D"]
 light_mask = 2

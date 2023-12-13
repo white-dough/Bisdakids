@@ -149,11 +149,11 @@ func _input(event):
 		if camera.input_count == 1:
 			emit_signal("dragging")
 			if natural_slide:
-				print('if dragging')
+#				print('if dragging')
 				position += get_movement_vector_from(get_local_mouse_position())
 				start_position = get_local_mouse_position()
 			else:
-				print('else dragging')
+#				print('else dragging')
 				var coord = get_movement_vector_from(-get_norm_coordinate())
 				position += coord
 	# Handles releasing

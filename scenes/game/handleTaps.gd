@@ -10,7 +10,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	time_lbl.text = "%d:%02d" % [floor(timer.time_left / 60), int(timer.time_left) % 60]
 	
 

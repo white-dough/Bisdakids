@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bto23qbcvrfks"]
 
-[ext_resource type="Texture2D" uid="uid://be8janmig4k0q" path="res://graphics/level1/Objects/bahandi@2x.png" id="1_vekot"]
+[ext_resource type="Texture2D" uid="uid://cci6k0q4aome8" path="res://graphics/level1/Objects/bahandi@2x.png" id="1_vekot"]
 
 [node name="bahande" type="Area2D"]
 light_mask = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bc5oit5wab15l"]
 
-[ext_resource type="Texture2D" uid="uid://bxkb0g5kaqbn3" path="res://graphics/level1/Objects/tibod@2x.png" id="1_2qkm7"]
+[ext_resource type="Texture2D" uid="uid://t55pguu5ctn0" path="res://graphics/level1/Objects/tibod@2x.png" id="1_2qkm7"]
 
 [node name="tibod" type="Area2D"]
 light_mask = 2

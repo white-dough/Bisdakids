@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ld2cp71x0q8e"]
 
-[ext_resource type="Texture2D" uid="uid://bdds5yynbf31j" path="res://graphics/level1/Objects/sista@2x.png" id="1_2seu1"]
+[ext_resource type="Texture2D" uid="uid://clxaf8lqgxyjy" path="res://graphics/level1/Objects/sista@2x.png" id="1_2seu1"]
 
 [node name="sista" type="Area2D"]
 light_mask = 2

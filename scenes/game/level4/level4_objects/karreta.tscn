@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ck2rf202b4w6j"]
 
-[ext_resource type="Texture2D" uid="uid://pkkv27mv3km0" path="res://graphics/level4/Objects/karreta@2x.png" id="1_pbc3q"]
+[ext_resource type="Texture2D" uid="uid://cw5es41gwyws7" path="res://graphics/level4/Objects/karreta@2x.png" id="1_pbc3q"]
 
 [node name="karreta" type="Area2D"]
 light_mask = 2

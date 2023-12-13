@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dwx0gd3fmp3t8"]
 
-[ext_resource type="Texture2D" uid="uid://by2lib4o0fxvb" path="res://graphics/level1/Objects/kutsara@2x.png" id="1_820tv"]
+[ext_resource type="Texture2D" uid="uid://q13v6ky20j5k" path="res://graphics/level1/Objects/kutsara@2x.png" id="1_820tv"]
 
 [node name="kutsara" type="Area2D"]
 light_mask = 2

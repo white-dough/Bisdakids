@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cp4n7obdev27s"]
 
-[ext_resource type="Texture2D" uid="uid://bx7gnfw3nlgo3" path="res://graphics/level4/Objects/regadera@2x.png" id="1_5i4ud"]
+[ext_resource type="Texture2D" uid="uid://68e6b1bwcr7q" path="res://graphics/level4/Objects/regadera@2x.png" id="1_5i4ud"]
 
 [node name="regadera" type="Area2D"]
 light_mask = 2

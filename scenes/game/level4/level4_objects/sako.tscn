@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://br244c6relk51"]
 
-[ext_resource type="Texture2D" uid="uid://bck40ljc3o3de" path="res://graphics/level4/Objects/sako@2x.png" id="1_3ew6c"]
+[ext_resource type="Texture2D" uid="uid://d1hy6bfjrm25c" path="res://graphics/level4/Objects/sako@2x.png" id="1_3ew6c"]
 
 [node name="sako" type="Area2D"]
 light_mask = 2

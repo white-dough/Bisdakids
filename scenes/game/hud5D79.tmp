@@ -1,0 +1,425 @@
+[gd_scene load_steps=35 format=3 uid="uid://5fm6trp7abm0"]
+
+[ext_resource type="Script" path="res://scenes/game/hud.gd" id="1_5f8iu"]
+[ext_resource type="Theme" uid="uid://s6fhai8xfiw" path="res://themes/hud_inner_panel.tres" id="2_b3gvf"]
+[ext_resource type="PackedScene" uid="uid://cruci17d5xstk" path="res://scenes/game/object_list_label.tscn" id="3_0u3yu"]
+[ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
+[ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
+[ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
+[ext_resource type="Texture2D" uid="uid://c55oxstfac2o1" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
+[ext_resource type="Texture2D" uid="uid://b50dblh5q1bl" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
+[ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
+[ext_resource type="Texture2D" uid="uid://bsf7jifbpu5gr" path="res://graphics/ui/icons/2x/minustime_effect@2x.png" id="8_rgohw"]
+[ext_resource type="Texture2D" uid="uid://2o2at716jkrn" path="res://graphics/ui/icons/settings_icon@2x.png" id="9_0hgwc"]
+[ext_resource type="Texture2D" uid="uid://6tdisesytmmv" path="res://graphics/ui/icons/Definition_panel@2x.png" id="10_5i8yf"]
+[ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="10_62ljq"]
+[ext_resource type="FontFile" uid="uid://ny6ab3bchxqw" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="10_vkup7"]
+[ext_resource type="Texture2D" uid="uid://bhs66mb0g01pu" path="res://graphics/ui/buttons/2x/hintPressed@2x.png" id="11_o5j50"]
+[ext_resource type="Texture2D" uid="uid://c7552mkp0a5kq" path="res://graphics/ui/buttons/2x/hintDisabled@2x.png" id="11_sp3y0"]
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="11_srfac"]
+[ext_resource type="PackedScene" uid="uid://dmhdry4cw8n3y" path="res://scenes/game/restart_confirm.tscn" id="17_gg61k"]
+[ext_resource type="Texture2D" uid="uid://b33en4s7sgce6" path="res://graphics/ui/buttons/2x/settingsPressed_btn@2x.png" id="17_ren7j"]
+[ext_resource type="PackedScene" uid="uid://clavyivvmt6cp" path="res://scenes/game/home_confirm.tscn" id="18_qu7lh"]
+[ext_resource type="Texture2D" uid="uid://d1t6got0vyree" path="res://graphics/ui/buttons/2x/timeFreezedPressed@2x.png" id="19_4ct64"]
+[ext_resource type="PackedScene" uid="uid://c5vqpniehphut" path="res://scenes/game/map_confirm.tscn" id="19_l1yep"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbgxi"]
+content_margin_left = 9.0
+content_margin_top = 17.0
+texture = ExtResource("6_65x1o")
+texture_margin_right = 2.0
+
+[sub_resource type="Theme" id="Theme_4sdog"]
+Label/colors/font_shadow_color = Color(0, 0.0313726, 0, 1)
+Label/font_sizes/font_size = 13
+Label/fonts/font = ExtResource("10_vkup7")
+Label/styles/normal = SubResource("StyleBoxTexture_vbgxi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gud4"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_icvfl"]
+Label/fonts/font = ExtResource("11_srfac")
+Label/styles/normal = SubResource("StyleBoxTexture_4gud4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vamyr"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_q3k73"]
+Label/fonts/font = ExtResource("11_srfac")
+Label/styles/normal = SubResource("StyleBoxTexture_vamyr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqbf7"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_w28uy"]
+Label/fonts/font = ExtResource("11_srfac")
+Label/styles/normal = SubResource("StyleBoxTexture_lqbf7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf1k4"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_qtnv1"]
+Label/fonts/font = ExtResource("11_srfac")
+Label/styles/normal = SubResource("StyleBoxTexture_qf1k4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrsa4"]
+content_margin_left = 75.0
+content_margin_top = 20.0
+content_margin_right = 5.0
+content_margin_bottom = 20.0
+texture = ExtResource("10_5i8yf")
+
+[sub_resource type="Theme" id="Theme_t1n1c"]
+Label/fonts/font = ExtResource("11_srfac")
+Label/styles/normal = SubResource("StyleBoxTexture_rrsa4")
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_5f8iu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 222.0
+offset_bottom = 740.0
+size_flags_vertical = 3
+color = Color(0.964844, 0.574219, 0.117188, 1)
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0405405
+anchor_top = 0.0175676
+anchor_right = 0.959459
+anchor_bottom = 0.983784
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b3gvf")
+metadata/_edit_use_anchors_ = true
+
+[node name="ContainerHUD" type="VBoxContainer" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = 10.0
+offset_right = 92.0
+offset_bottom = -17.0002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 34
+
+[node name="TimerBar" type="Control" parent="ColorRect/Panel/ContainerHUD"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="ProgressBar" type="TextureProgressBar" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+texture_filter = 2
+layout_mode = 2
+offset_left = -93.9999
+offset_top = -4.00002
+offset_right = 96.0001
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 0.0
+texture_under = ExtResource("3_n5iuw")
+texture_progress = ExtResource("4_bc25u")
+texture_progress_offset = Vector2(8, 8)
+
+[node name="TimeLbl" type="Label" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+texture_filter = 3
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -97.9999
+offset_top = -8.50002
+offset_right = -47.9999
+offset_bottom = 41.5
+grow_vertical = 2
+theme = SubResource("Theme_4sdog")
+horizontal_alignment = 1
+
+[node name="TimeFroze" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+visible = false
+position = Vector2(-0.999928, 30.5)
+scale = Vector2(0.88, 0.964286)
+texture = ExtResource("6_oxqsx")
+
+[node name="TimeMinus" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+visible = false
+position = Vector2(-0.999931, 16.5)
+scale = Vector2(0.86, 0.964)
+texture = ExtResource("8_rgohw")
+
+[node name="Timer" type="Timer" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+
+[node name="MinustimeEffect_2x" type="Sprite2D" parent="ColorRect/Panel/ContainerHUD/TimerBar"]
+visible = false
+modulate = Color(0.811765, 0.2, 0.0588235, 1)
+self_modulate = Color(1, 0.12549, 0.25098, 1)
+position = Vector2(-1.49995, 16.25)
+scale = Vector2(0.847826, 0.921053)
+texture = ExtResource("8_rgohw")
+
+[node name="Objectlist" type="VBoxContainer" parent="ColorRect/Panel/ContainerHUD"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 22
+
+[node name="Label1" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label2" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label3" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label4" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+mouse_filter = 0
+text = ""
+
+[node name="Label5" parent="ColorRect/Panel/ContainerHUD/Objectlist" instance=ExtResource("3_0u3yu")]
+custom_minimum_size = Vector2(100, 55)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 0
+text = ""
+
+[node name="Clue" type="TextureButton" parent="ColorRect/Panel/ContainerHUD"]
+texture_filter = 4
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("3_3obj1")
+texture_pressed = ExtResource("11_o5j50")
+texture_disabled = ExtResource("11_sp3y0")
+stretch_mode = 3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="ColorRect/Panel/ContainerHUD/Clue"]
+texture_filter = 1
+position = Vector2(94.0001, 133)
+texture = ExtResource("8_iicg0")
+emission_shape = 1
+emission_sphere_radius = 18.0
+spread = 33.75
+gravity = Vector2(0, 0)
+angular_velocity_min = -9.15
+angular_velocity_max = 24.6
+color = Color(0.956863, 0.921569, 0.835294, 1)
+
+[node name="HintLbl" type="Label" parent="ColorRect/Panel/ContainerHUD/Clue"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.9999
+offset_top = -18.0
+offset_right = -2.99994
+offset_bottom = 38.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0.560784, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("10_vkup7")
+theme_override_font_sizes/font_size = 46
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/Panel"]
+layer = 3
+
+[node name="Label1" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 114.0
+offset_right = 521.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_icvfl")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 199.0
+offset_right = 521.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_q3k73")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1094.0
+offset_top = -465.0
+offset_right = -794.0
+offset_bottom = -397.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_w28uy")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 353.0
+offset_right = 521.0
+offset_bottom = 421.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_qtnv1")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+offset_left = 221.0
+offset_top = 428.0
+offset_right = 521.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_t1n1c")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="DescContainer" type="VBoxContainer" parent="ColorRect/Panel/CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.168189
+anchor_top = 0.154054
+anchor_right = 0.396499
+anchor_bottom = 0.689189
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="TextureButton" parent="."]
+offset_left = 1192.0
+offset_top = 33.0
+offset_right = 1279.0
+offset_bottom = 120.0
+texture_normal = ExtResource("9_0hgwc")
+texture_pressed = ExtResource("17_ren7j")
+stretch_mode = 3
+
+[node name="TimeFreeze" type="TextureButton" parent="."]
+show_behind_parent = true
+offset_left = 253.0
+offset_top = 32.0
+offset_right = 342.0
+offset_bottom = 122.0
+texture_normal = ExtResource("10_62ljq")
+texture_pressed = ExtResource("19_4ct64")
+stretch_mode = 3
+
+[node name="PauseTimer" type="Timer" parent="TimeFreeze"]
+wait_time = 20.0
+one_shot = true
+
+[node name="TimeFreezeLbl" type="Label" parent="TimeFreeze"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = -24.0
+offset_right = 2.0
+offset_bottom = 32.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0.560784, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("10_vkup7")
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="restart_confirm" parent="." instance=ExtResource("17_gg61k")]
+layer = 4
+visible = false
+
+[node name="home_confirm" parent="." instance=ExtResource("18_qu7lh")]
+layer = 4
+visible = false
+
+[node name="map_confirm" parent="." instance=ExtResource("19_l1yep")]
+layer = 4
+visible = false
+
+[connection signal="timeout" from="ColorRect/Panel/ContainerHUD/TimerBar/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="ColorRect/Panel/ContainerHUD/Clue" to="." method="_on_clue_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="TimeFreeze" to="." method="_on_time_freeze_pressed"]

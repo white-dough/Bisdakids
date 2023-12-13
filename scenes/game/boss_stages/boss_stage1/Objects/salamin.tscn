@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://r7w423de5cyv"]
 
-[ext_resource type="Texture2D" uid="uid://d0y0nquywbx43" path="res://graphics/boss_stage/Objects/2x/salamin@2x.png" id="1_58t1w"]
+[ext_resource type="Texture2D" uid="uid://dftcl6k5f27co" path="res://graphics/boss_stage/Objects/2x/salamin@2x.png" id="1_58t1w"]
 
 [node name="salamin" type="Area2D"]
 light_mask = 2

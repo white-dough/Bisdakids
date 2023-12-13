@@ -32,16 +32,6 @@ func _ready():
 func load_interstitial_ad():
 	if not Game.premium:
 		InterstitialAds.load_show_interstitial()
-	
-func _process(_delta):
-	pass
-#	if isArrayEmpty(current_objects):
-#		print("The array is empty")
-#	else:
-#		print("The array is not empty")
-#for object in current_objects:
-#		if not object is Area2D:
-#			print(object)
 
 func level_completed(time_left):
 	if time_left > 0:

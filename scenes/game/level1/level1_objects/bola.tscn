@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://t8pxpk0khwia"]
 
-[ext_resource type="Texture2D" uid="uid://b2phrtwcs2m5y" path="res://graphics/level1/Objects/bola@2x.png" id="1_5kxkf"]
+[ext_resource type="Texture2D" uid="uid://c11bials2mlck" path="res://graphics/level1/Objects/bola@2x.png" id="1_5kxkf"]
 
 [node name="bola" type="Area2D"]
 light_mask = 2

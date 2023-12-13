@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dx2ekmhyxxlu2"]
 
-[ext_resource type="Texture2D" uid="uid://djgljauohrpk7" path="res://graphics/level1/Objects/lutuanan@2x.png" id="1_ksjsl"]
+[ext_resource type="Texture2D" uid="uid://xwobsul3u667" path="res://graphics/level1/Objects/lutuanan@2x.png" id="1_ksjsl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_knbhu"]
 

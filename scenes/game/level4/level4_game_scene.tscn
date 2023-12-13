@@ -80,7 +80,7 @@ position = Vector2(904, 528)
 [node name="Kahig" parent="Objects" instance=ExtResource("8_qfo5l")]
 position = Vector2(840, 464)
 
-[node name="Tinidor" parent="Objects" instance=ExtResource("9_sb110")]
+[node name="Sikoy" parent="Objects" instance=ExtResource("9_sb110")]
 position = Vector2(731, 455)
 
 [node name="Sanggot" parent="Objects" instance=ExtResource("10_8qbvn")]

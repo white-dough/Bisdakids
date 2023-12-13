@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_level_1_button_pressed():
-	print("hello")
+	pass

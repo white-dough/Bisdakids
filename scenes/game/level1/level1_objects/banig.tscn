@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvenju3x3g5an"]
 
-[ext_resource type="Texture2D" uid="uid://pmai7p7pnov8" path="res://graphics/level1/Objects/banig@2x.png" id="1_4cxfd"]
+[ext_resource type="Texture2D" uid="uid://btroexlof0uwf" path="res://graphics/level1/Objects/banig@2x.png" id="1_4cxfd"]
 
 [node name="Banig" type="Area2D"]
 light_mask = 2

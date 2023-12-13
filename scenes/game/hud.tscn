@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ce0bt2m4wmnt6" path="res://graphics/ui/icons/clue@2x.png" id="3_3obj1"]
 [ext_resource type="Texture2D" uid="uid://camd46r6mad8r" path="res://graphics/ui/icons/progressbarr@2x.png" id="3_n5iuw"]
 [ext_resource type="Texture2D" uid="uid://721y66scfyjs" path="res://graphics/ui/icons/progress@2x.png" id="4_bc25u"]
+
 [ext_resource type="Texture2D" uid="uid://bw6rv7sngjkyk" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="6_65x1o"]
 [ext_resource type="Texture2D" uid="uid://037sbvsxlpgl" path="res://graphics/misc/time_froze.png" id="6_oxqsx"]
 [ext_resource type="Texture2D" uid="uid://dtwyjyp3mt41b" path="res://graphics/ui/icons/2x/star@2x.png" id="8_iicg0"]
@@ -21,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bvdytd0mbaq62" path="res://graphics/ui/buttons/2x/settingsPressed_btn@2x.png" id="17_ren7j"]
 [ext_resource type="PackedScene" uid="uid://clavyivvmt6cp" path="res://scenes/game/home_confirm.tscn" id="18_qu7lh"]
 [ext_resource type="Texture2D" uid="uid://bh8ab8oxb4jno" path="res://graphics/ui/buttons/2x/timeFreezedPressed@2x.png" id="19_4ct64"]
+
 [ext_resource type="PackedScene" uid="uid://c5vqpniehphut" path="res://scenes/game/map_confirm.tscn" id="19_l1yep"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbgxi"]
