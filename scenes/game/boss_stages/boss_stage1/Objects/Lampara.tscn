@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfkxq6hiw7lwa"]
 
-[ext_resource type="Texture2D" uid="uid://dy1nqqf1pilg8" path="res://graphics/boss_stage/Objects/2x/lampara@2x.png" id="1_kl8h1"]
+[ext_resource type="Texture2D" uid="uid://o48c426ldrah" path="res://graphics/boss_stage/Objects/2x/lampara@2x.png" id="1_kl8h1"]
 
 [node name="Lampara" type="Area2D"]
 light_mask = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dswn8cjw4ijph"]
 
-[ext_resource type="Texture2D" uid="uid://c38nm360o344q" path="res://graphics/boss_stage/Objects/2x/Bungo@2x.png" id="1_a1fp4"]
+[ext_resource type="Texture2D" uid="uid://dqpesu4267qgt" path="res://graphics/boss_stage/Objects/2x/Bungo@2x.png" id="1_a1fp4"]
 
 [node name="Bungo" type="Area2D"]
 light_mask = 2
