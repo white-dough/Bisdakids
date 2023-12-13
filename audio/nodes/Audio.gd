@@ -2,6 +2,7 @@ extends Node
 
 @onready var bgm_node: AudioStreamPlayer = $MainMenuBGM
 @onready var sfx_node: AudioStreamPlayer = $SFX
+@onready var object_sfx_node: AudioStreamPlayer = $Object
 
 #background musics
 @onready var main_bgm: AudioStream = preload("res://audio/assets/bgm/main_bgm.mp3")
@@ -35,6 +36,7 @@ extends Node
 @onready var Balde: AudioStream = preload("res://audio/objects-voice-overs/Balde.wav")
 @onready var Banig: AudioStream = preload("res://audio/objects-voice-overs/Banig.wav")
 @onready var Baol: AudioStream = preload("res://audio/objects-voice-overs/Baol.wav")
+@onready var Barel: AudioStream = preload("res://audio/objects-voice-overs/Barel.wav")
 @onready var Barko: AudioStream = preload("res://audio/objects-voice-overs/Barko.wav")
 @onready var Baso: AudioStream = preload("res://audio/objects-voice-overs/Baso.wav")
 @onready var Bisikleta: AudioStream = preload("res://audio/objects-voice-overs/Bisikleta.wav")
@@ -50,13 +52,15 @@ extends Node
 @onready var Eroplano: AudioStream = preload("res://audio/objects-voice-overs/Eroplano.wav")
 @onready var Espada: AudioStream = preload("res://audio/objects-voice-overs/Espada.wav")
 @onready var Globo: AudioStream = preload("res://audio/objects-voice-overs/Globo.wav")
-@onready var Guwantes: AudioStream = preload("res://audio/objects-voice-overs/Guwantes.wav")
+@onready var Gwantes: AudioStream = preload("res://audio/objects-voice-overs/Gwantes.wav")
 @onready var Hagdanan: AudioStream = preload("res://audio/objects-voice-overs/Hagdanan.wav")
 @onready var Kaban: AudioStream = preload("res://audio/objects-voice-overs/Kaban.wav")
 @onready var Kadena: AudioStream = preload("res://audio/objects-voice-overs/Kadena.wav")
 @onready var Kahig: AudioStream = preload("res://audio/objects-voice-overs/Kahig.wav")
 @onready var Kalo: AudioStream = preload("res://audio/objects-voice-overs/Kalo.wav")
 @onready var Kandila: AudioStream = preload("res://audio/objects-voice-overs/Kandila.wav")
+@onready var Karitilya: AudioStream = preload("res://audio/objects-voice-overs/Karitilya.wav")
+@onready var Kariton: AudioStream = preload("res://audio/objects-voice-overs/Kariton.wav")
 @onready var Karton: AudioStream = preload("res://audio/objects-voice-overs/Karton.wav")
 @onready var Katolganan: AudioStream = preload("res://audio/objects-voice-overs/Katolganan.wav")
 @onready var Kodak: AudioStream = preload("res://audio/objects-voice-overs/Kodak.wav")
@@ -80,7 +84,7 @@ extends Node
 @onready var Pakwan: AudioStream = preload("res://audio/objects-voice-overs/Pakwan.wav")
 @onready var Pala: AudioStream = preload("res://audio/objects-voice-overs/Pala.wav")
 @onready var Pana: AudioStream = preload("res://audio/objects-voice-overs/Pana.wav")
-@onready var Pantabas: AudioStream = preload("res://audio/objects-voice-overs/Pantabas.wav")
+@onready var Pangtabas: AudioStream = preload("res://audio/objects-voice-overs/Pangtabas.wav")
 @onready var Papel: AudioStream = preload("res://audio/objects-voice-overs/Papel.wav")
 @onready var Payong: AudioStream = preload("res://audio/objects-voice-overs/Payong.wav")
 @onready var Pigurin: AudioStream = preload("res://audio/objects-voice-overs/Pigurin.wav")
@@ -125,13 +129,11 @@ func play_bgm(scene_bgm: AudioStream) -> void:
 #signal if not main menu or level select stop playing
 
 func play_object(sfx: AudioStream) -> void:
-	print('sfx', sfx)
-	sfx_node.stop()
-	#sfx_node.stream_paused = false
-	sfx_node.set_stream(sfx)
-	sfx_node.set_volume_db(15)
-	sfx_node.play()
-	#sfx_node.stream_paused = true
+	#print('sfx', sfx)
+	object_sfx_node.stop()
+	object_sfx_node.set_stream(sfx)
+	object_sfx_node.set_volume_db(13)
+	object_sfx_node.play()
 
 # Called when the node enters the scene tree for the first time.
 #func _ready():

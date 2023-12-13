@@ -26,6 +26,7 @@ signal level_finished(time_finished:float)
 	"Balde": Audio.Balde,
 	"Banig": Audio.Banig,
 	"Baol": Audio.Baol,
+	"Barel": Audio.Barel,
 	"Barko": Audio.Barko,
 	"Baso": Audio.Baso,
 	"Bisikleta": Audio.Bisikleta,
@@ -41,13 +42,15 @@ signal level_finished(time_finished:float)
 	"Eroplano": Audio.Eroplano,
 	"Espada": Audio.Espada,
 	"Globo": Audio.Globo,
-	"Guwantes": Audio.Guwantes,
+	"Gwantes": Audio.Gwantes,
 	"Hagdanan": Audio.Hagdanan,
 	"Kaban": Audio.Kaban,
 	"Kadena": Audio.Kadena,
 	"Kahig": Audio.Kahig,
 	"Kalo": Audio.Kalo,
 	"Kandila": Audio.Kandila,
+	"Karitilya": Audio.Karitilya,
+	"Kariton": Audio.Kariton,
 	"Karton": Audio.Karton,
 	"Katulganan": Audio.Katolganan,
 	"Kodak": Audio.Kodak,
@@ -71,7 +74,7 @@ signal level_finished(time_finished:float)
 	"Pakwan": Audio.Pakwan,
 	"Pala": Audio.Pala,
 	"Pana": Audio.Pana,
-	"Pantabas": Audio.Pantabas,
+	"Pangtabas": Audio.Pangtabas,
 	"Papel": Audio.Papel,
 	"Payong": Audio.Payong,
 	"Pigurin": Audio.Pigurin,
@@ -135,7 +138,7 @@ func _process(_delta):
 	timer_lbl.text = "%d:%02d" % [floor(timer.time_left / 60), int(timer.time_left) % 60]
 	
 func object_list_label(current_objects_strings: Array):
-	print("current objects: ", current_objects_strings)
+	#print("current objects: ", current_objects_strings)
 	objects_to_find = current_objects_strings
 	var data = get_definition()
 	#var objects: Array = data.keys()
@@ -231,10 +234,10 @@ func time_freeze():
 		#print("timer is not paused, pausing")
 
 func label_definitions(objects):
-	print("objects label def: ", objects)
+	#print("objects label def: ", objects)
 	#var positionY = [90, 190, 255, 320, 400]
 	var parentContainer: VBoxContainer = $ColorRect/Panel/ContainerHUD/Objectlist
-	print("objects to find: ", objects_to_find)
+	#print("objects to find: ", objects_to_find)
 	for i in range(parentContainer.get_child_count()):
 		var label = parentContainer.get_child(i)
 		#print(positionY[i])
