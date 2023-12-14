@@ -19,14 +19,14 @@ func validate_answer(data : Dictionary):
 		texture = default_texture
 		#reddd
 		Audio.play_sfx(Audio.incorrect_sfx)
-		var hud_timer : Timer = $"../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/Timer"
+		var hud_timer : Timer = $"../../../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/Timer"
 		if hud_timer.get_time_left() - 60 < 0:
 			hud_timer.start(0.05)
 			return
 		hud_timer.start(hud_timer.get_time_left() - 60)
 		
 		#for the timer
-		var time_minus_effect : Sprite2D = $"../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
+		var time_minus_effect : Sprite2D = $"../../../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
 		var timer_node : Timer = Timer.new()
 		timer_node.wait_time = 1.5
 		add_child(timer_node)
@@ -59,5 +59,5 @@ func validate_answer(data : Dictionary):
 		data["next_group"].show()
 		
 func remove_red():
-	var time_minus_effect : Sprite2D = $"../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
+	var time_minus_effect : Sprite2D = $"../../../../HUD/ColorRect/Panel/ContainerHUD/TimerBar/TimeMinus"
 	time_minus_effect.visible = false

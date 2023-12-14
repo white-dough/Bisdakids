@@ -38,9 +38,9 @@ visible = false
 layer = 2
 visible = false
 
-[node name="Background2" parent="GameScene" instance=ExtResource("5_bk7my")]
-
 [node name="drag&drop" parent="GameScene" instance=ExtResource("7_7rayf")]
+
+[node name="Background2" parent="GameScene" instance=ExtResource("5_bk7my")]
 
 [node name="ObjectAnimation" parent="." instance=ExtResource("5_ejmmk")]
 top_level = true
