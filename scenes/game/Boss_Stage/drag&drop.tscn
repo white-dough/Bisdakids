@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cary4ry5o66gn"]
+[gd_scene load_steps=14 format=3 uid="uid://cary4ry5o66gn"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_lp5el"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="2_ftehs"]
 [ext_resource type="Texture2D" uid="uid://c3m6s3s1hpalu" path="res://graphics/boss_stage/Assets/drag&drop/ang@2x.png" id="3_hpfw3"]
+[ext_resource type="Texture2D" uid="uid://cgiatcm6b4eow" path="res://graphics/boss_stage/Assets/drag&drop/2x/errorBg@2x.png" id="3_we0jl"]
 [ext_resource type="Texture2D" uid="uid://b3sbvbcolfyw" path="res://graphics/boss_stage/Assets/drag&drop/stone2@2x.png" id="5_46vq7"]
 [ext_resource type="Texture2D" uid="uid://d0m7wxxegxhjp" path="res://graphics/boss_stage/Assets/drag&drop/stone3_1@2x.png" id="6_r6but"]
 [ext_resource type="Texture2D" uid="uid://4mj2x37oeemd" path="res://graphics/boss_stage/Assets/drag&drop/stone4_1@2x.png" id="7_06a3l"]
@@ -61,6 +62,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 18
 metadata/_edit_use_anchors_ = true
+
+[node name="ErrorBg_2x" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(89.4997, 32.0002)
+scale = Vector2(0.855204, 0.935065)
+texture = ExtResource("3_we0jl")
 
 [node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(180, 0)
