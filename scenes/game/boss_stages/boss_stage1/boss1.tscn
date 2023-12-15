@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://qh36n3tqty5r"]
+[gd_scene load_steps=16 format=3 uid="uid://qh36n3tqty5r"]
 
 [ext_resource type="Script" path="res://scenes/game/boss_stages/boss.gd" id="1_dby58"]
 [ext_resource type="PackedScene" uid="uid://53k1jkllajyp" path="res://scenes/game/boss_stages/boss_stage1/boss1_game_scene.tscn" id="1_shust"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://db4hh7vns4hqs" path="res://scenes/game/boss_stages/background_2.tscn" id="5_bk7my"]
 [ext_resource type="PackedScene" uid="uid://68fhsfhi3vyw" path="res://scenes/game/object_animation.tscn" id="5_ejmmk"]
 [ext_resource type="PackedScene" uid="uid://by4h363cgrfj2" path="res://graphics/level1/VictoryTriumph.tscn" id="6_d5cjs"]
+[ext_resource type="PackedScene" uid="uid://rkl7kmdlj6xy" path="res://scenes/game/boss_stages/drag&drop.tscn" id="7_7rayf"]
 [ext_resource type="PackedScene" uid="uid://isaei0k0sfmp" path="res://graphics/level1/LevelCompleted.tscn" id="7_fs1yk"]
 [ext_resource type="PackedScene" uid="uid://c7fneqgnwcbvb" path="res://scenes/game/obj_found_particles.tscn" id="8_b6482"]
 [ext_resource type="PackedScene" uid="uid://b6bskr75yfiom" path="res://graphics/level1/GameOver.tscn" id="8_lcx81"]
@@ -18,7 +19,7 @@
 [node name="Level" type="Node2D"]
 script = ExtResource("1_dby58")
 level_name = "level5"
-level_time = 301.0
+level_time = 480.0
 level_num = 5
 
 [node name="HUD" parent="." instance=ExtResource("5_01x7t")]
@@ -34,6 +35,10 @@ layer = 2
 visible = false
 
 [node name="BossIdentification13" parent="GameScene" instance=ExtResource("3_77o8w")]
+layer = 2
+visible = false
+
+[node name="drag&drop" parent="GameScene" instance=ExtResource("7_7rayf")]
 layer = 2
 visible = false
 

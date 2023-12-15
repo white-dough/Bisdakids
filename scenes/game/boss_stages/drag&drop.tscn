@@ -1,0 +1,227 @@
+[gd_scene load_steps=23 format=3 uid="uid://rkl7kmdlj6xy"]
+
+[ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="2_ftehs"]
+[ext_resource type="Texture2D" uid="uid://c4vc20wbk3hc6" path="res://graphics/boss_stage/Assets/drag&drop/ang@2x.png" id="3_hpfw3"]
+[ext_resource type="Texture2D" uid="uid://cfe70ht23g122" path="res://graphics/boss_stage/Assets/drag&drop/stone2@2x.png" id="5_46vq7"]
+[ext_resource type="Script" path="res://scenes/game/boss_stages/drop_logic.gd" id="5_xt7km"]
+[ext_resource type="Texture2D" uid="uid://dgy5pvgodhydr" path="res://graphics/boss_stage/Assets/drag&drop/stone3_1@2x.png" id="6_r6but"]
+[ext_resource type="Texture2D" uid="uid://cdxy8uvqo7fe" path="res://graphics/boss_stage/Assets/drag&drop/stone4_1@2x.png" id="7_06a3l"]
+[ext_resource type="Texture2D" uid="uid://cc7cpvl7xga5m" path="res://graphics/boss_stage/Assets/drag&drop/stone5_1@2x.png" id="8_iedvy"]
+[ext_resource type="Script" path="res://scenes/game/boss_stages/drag_logic.gd" id="9_3a80y"]
+[ext_resource type="Texture2D" uid="uid://b0al75rbyjxqc" path="res://graphics/boss_stage/Assets/drag&drop/2x/Maria@2x.png" id="9_6cc36"]
+[ext_resource type="Texture2D" uid="uid://bhth5ji4p2jta" path="res://graphics/boss_stage/Assets/drag&drop/hari@2x.png" id="9_xn8l0"]
+[ext_resource type="Texture2D" uid="uid://ct5tnu4rpwxjx" path="res://graphics/boss_stage/Assets/drag&drop/ikaw@2x.png" id="10_ortwp"]
+[ext_resource type="Texture2D" uid="uid://dqlyqjdukpcti" path="res://graphics/boss_stage/Assets/drag&drop/naglingkod@2x.png" id="13_i634t"]
+[ext_resource type="Texture2D" uid="uid://creb8xve75up7" path="res://graphics/boss_stage/Assets/drag&drop/2x/duwa@2x.png" id="14_bff3p"]
+[ext_resource type="Texture2D" uid="uid://djhsec8daup3q" path="res://graphics/boss_stage/Assets/drag&drop/2x/dag-um@2x.png" id="15_kppoa"]
+[ext_resource type="Texture2D" uid="uid://bomr8i4p4dvyl" path="res://graphics/boss_stage/Assets/drag&drop/sa@2x.png" id="16_e2hqr"]
+[ext_resource type="Texture2D" uid="uid://dcskxlnilbd5p" path="res://graphics/boss_stage/Assets/drag&drop/2x/maayo@2x.png" id="17_hcbwp"]
+[ext_resource type="Texture2D" uid="uid://c5vqj3op8xjpo" path="res://graphics/boss_stage/Assets/drag&drop/2x/bukid@2x.png" id="18_1rm0k"]
+[ext_resource type="Texture2D" uid="uid://cemcfneqoljpi" path="res://graphics/boss_stage/Assets/drag&drop/2x/ngano@2x.png" id="19_sxmra"]
+[ext_resource type="Texture2D" uid="uid://bygooxgnqlgfk" path="res://graphics/boss_stage/Assets/drag&drop/2x/trono@2x.png" id="20_bmyqw"]
+[ext_resource type="Texture2D" uid="uid://cu03s4ig0tayj" path="res://graphics/boss_stage/Assets/drag&drop/2x/pagkaon@2x.png" id="21_ofdoe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhdug"]
+bg_color = Color(0.639216, 0.541176, 0.819608, 0.329412)
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_eh1en"]
+Label/fonts/font = null
+Label/styles/normal = SubResource("StyleBoxFlat_hhdug")
+
+[node name="drag&drop" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 296.0
+offset_top = 160.0
+offset_right = 1232.0
+offset_bottom = 230.0
+size_flags_horizontal = 4
+theme = SubResource("Theme_eh1en")
+theme_override_fonts/font = ExtResource("2_ftehs")
+theme_override_font_sizes/font_size = 20
+text = "Ibutang sa isig ka kahon ang mga  pulong  base sa angay na pagka sunod-sunod arun
+makahimo og saktong pulonganay."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.21309
+anchor_top = 0.378378
+anchor_right = 0.95586
+anchor_bottom = 0.464865
+offset_top = 1.52588e-05
+offset_bottom = 3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswerFld1" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+texture = ExtResource("3_hpfw3")
+expand_mode = 1
+
+[node name="AnswerFld2" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+texture = ExtResource("5_46vq7")
+expand_mode = 1
+script = ExtResource("5_xt7km")
+
+[node name="AnswerFld3" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+texture = ExtResource("6_r6but")
+expand_mode = 1
+script = ExtResource("5_xt7km")
+
+[node name="AnswerFld4" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+texture = ExtResource("7_06a3l")
+expand_mode = 1
+script = ExtResource("5_xt7km")
+
+[node name="AnswerFld5" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+texture = ExtResource("8_iedvy")
+expand_mode = 1
+script = ExtResource("5_xt7km")
+
+[node name="GroupParent" type="Node2D" parent="."]
+
+[node name="AnswerFld2" type="Node2D" parent="GroupParent"]
+
+[node name="maria" type="TextureRect" parent="GroupParent/AnswerFld2"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 528.0
+offset_top = 416.0
+offset_right = 708.0
+offset_bottom = 480.0
+texture = ExtResource("9_6cc36")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="ikaw" type="TextureRect" parent="GroupParent/AnswerFld2"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 680.0
+offset_top = 528.0
+offset_right = 860.0
+offset_bottom = 592.0
+texture = ExtResource("10_ortwp")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="CorrectAnswer" type="TextureRect" parent="GroupParent/AnswerFld2"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 824.0
+offset_top = 416.0
+offset_right = 1004.0
+offset_bottom = 480.0
+texture = ExtResource("9_xn8l0")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="AnswerFld3" type="Node2D" parent="GroupParent"]
+visible = false
+
+[node name="CorrectAnswer" type="TextureRect" parent="GroupParent/AnswerFld3"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 528.0
+offset_top = 416.0
+offset_right = 708.0
+offset_bottom = 480.0
+texture = ExtResource("13_i634t")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="duwa" type="TextureRect" parent="GroupParent/AnswerFld3"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 680.0
+offset_top = 528.0
+offset_right = 860.0
+offset_bottom = 592.0
+texture = ExtResource("14_bff3p")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="dag-um" type="TextureRect" parent="GroupParent/AnswerFld3"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 824.0
+offset_top = 416.0
+offset_right = 1004.0
+offset_bottom = 480.0
+texture = ExtResource("15_kppoa")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="AnswerFld4" type="Node2D" parent="GroupParent"]
+visible = false
+
+[node name="CorrectAnswer" type="TextureRect" parent="GroupParent/AnswerFld4"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 528.0
+offset_top = 416.0
+offset_right = 708.0
+offset_bottom = 480.0
+texture = ExtResource("16_e2hqr")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="maayo" type="TextureRect" parent="GroupParent/AnswerFld4"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 680.0
+offset_top = 528.0
+offset_right = 860.0
+offset_bottom = 592.0
+texture = ExtResource("17_hcbwp")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="bukid" type="TextureRect" parent="GroupParent/AnswerFld4"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 824.0
+offset_top = 416.0
+offset_right = 1004.0
+offset_bottom = 480.0
+texture = ExtResource("18_1rm0k")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="AnswerFld5" type="Node2D" parent="GroupParent"]
+visible = false
+
+[node name="ngano" type="TextureRect" parent="GroupParent/AnswerFld5"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 528.0
+offset_top = 416.0
+offset_right = 708.0
+offset_bottom = 480.0
+texture = ExtResource("19_sxmra")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="CorrectAnswer" type="TextureRect" parent="GroupParent/AnswerFld5"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 680.0
+offset_top = 528.0
+offset_right = 860.0
+offset_bottom = 592.0
+texture = ExtResource("20_bmyqw")
+expand_mode = 1
+script = ExtResource("9_3a80y")
+
+[node name="pagkaon" type="TextureRect" parent="GroupParent/AnswerFld5"]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 824.0
+offset_top = 416.0
+offset_right = 1004.0
+offset_bottom = 480.0
+texture = ExtResource("21_ofdoe")
+expand_mode = 1
+script = ExtResource("9_3a80y")

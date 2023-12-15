@@ -27,6 +27,7 @@ extends Node2D
 @onready var background_node : CanvasLayer = $GameScene/Background2
 @onready var wave2_node : CanvasLayer = $GameScene/BossTigmu12
 @onready var wave3_node : CanvasLayer = $GameScene/BossIdentification13
+@onready var wave4_node : CanvasLayer = $"GameScene/drag&drop"
 
 func _ready():
 	Audio.play_bgm(Audio.boss_bgm)
@@ -61,9 +62,12 @@ func wave_finished() -> void:
 			wave2_node.hide()
 			wave3_node.show()
 		4:
+			wave3_node.hide()
+			wave4_node.show()
+		5:
 			Audio.play_bgm(Audio.success_sfx)
 			background_node.hide()
-			wave3_node.hide()
+			wave4_node.hide()
 			var time_left : int = int($HUD/ColorRect/Panel/ContainerHUD/TimerBar/Timer.time_left)
 			var prompt_timer : Timer = Timer.new()
 			prompt_timer.wait_time = 3

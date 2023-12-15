@@ -14,7 +14,8 @@ config/name="Bisdakids"
 config/tags=PackedStringArray("capstone")
 run/main_scene="res://scenes/navigation/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://logo.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
