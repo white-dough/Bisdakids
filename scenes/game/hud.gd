@@ -89,6 +89,7 @@ signal level_finished(time_finished:float)
 	"Sanggot": Audio.Sanggot,
 	"Sapatos": Audio.Sapatos,
 	"Sigarilyo": Audio.Sigarilyo,
+	"Sikoy": Audio.Sikoy,
 	"Silhig": Audio.Silhig,
 	"Sinsilyo": Audio.Sinsilyo,
 	"Sista": Audio.Sista,

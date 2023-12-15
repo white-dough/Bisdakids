@@ -1,15 +1,15 @@
 {
 	"Detective": {
-		"goal": "15",
+		"goal": "1",
 		"reward": "coin",
-		"reward_quantity": "8",
+		"reward_quantity": "80",
 		"task_desc": "Find 15 hidden objects.",
 		"task_id": "30"
 	},
 	"Energy Spend": {
 		"goal": "50",
 		"reward": "coin",
-		"reward_quantity": "5",
+		"reward_quantity": "50",
 		"task_desc": "Use 50 energy points.",
 		"task_id": "29"
 	},

@@ -99,6 +99,7 @@ extends Node
 @onready var Sanggot: AudioStream = preload("res://audio/objects-voice-overs/Sanggot.wav")
 @onready var Sapatos: AudioStream = preload("res://audio/objects-voice-overs/Sapatos.wav")
 @onready var Sigarilyo: AudioStream = preload("res://audio/objects-voice-overs/Sigarilyo.wav")
+@onready var Sikoy: AudioStream = preload("res://audio/objects-voice-overs/Sikoy.wav")
 @onready var Silhig: AudioStream = preload("res://audio/objects-voice-overs/Silhig.wav")
 @onready var Sinsilyo: AudioStream = preload("res://audio/objects-voice-overs/Sinsilyo.wav")
 @onready var Sista: AudioStream = preload("res://audio/objects-voice-overs/Sista.wav")
@@ -187,6 +188,7 @@ extends Node
 	"Sanggot": Audio.Sanggot,
 	"Sapatos": Audio.Sapatos,
 	"Sigarilyo": Audio.Sigarilyo,
+	"Sikoy": Audio.Sikoy,
 	"Silhig": Audio.Silhig,
 	"Sinsilyo": Audio.Sinsilyo,
 	"Sista": Audio.Sista,
