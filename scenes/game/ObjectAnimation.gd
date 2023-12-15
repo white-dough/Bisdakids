@@ -28,6 +28,7 @@ func animate_object_clue(object_clue):
 
 
 func _on_game_scene_object_found_signal(object_name):
+	Audio.play_object(Audio.object_audio[object_name.get_name()])
 	var object_to_animate = object_name.duplicate()
 	for node in object_to_animate.get_children():
 		if node.is_class("CollisionPolygon2D"):

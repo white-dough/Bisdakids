@@ -243,6 +243,8 @@ func label_definitions(objects):
 		#print(positionY[i])
 		var labelName = "Label" + str(i+1)
 		#print(labelName)
+		if label.gui_input.is_connected(word_def_display.bind(labelName)):
+			label.gui_input.disconnect(word_def_display.bind(labelName))
 		label.gui_input.connect(word_def_display.bind(labelName)) # labelName, position y
 
 func word_def_display(event, labelName):

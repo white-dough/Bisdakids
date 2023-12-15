@@ -1,6 +1,5 @@
-[gd_scene load_steps=18 format=3 uid="uid://rkl7kmdlj6xy"]
+[gd_scene load_steps=23 format=3 uid="uid://rkl7kmdlj6xy"]
 
-[ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_lp5el"]
 [ext_resource type="FontFile" uid="uid://cj1ai2aqjg7ro" path="res://themes/assets/MochiyPopOne-Regular.ttf" id="2_ftehs"]
 [ext_resource type="Texture2D" uid="uid://c4vc20wbk3hc6" path="res://graphics/boss_stage/Assets/drag&drop/ang@2x.png" id="3_hpfw3"]
 [ext_resource type="Texture2D" uid="uid://cfe70ht23g122" path="res://graphics/boss_stage/Assets/drag&drop/stone2@2x.png" id="5_46vq7"]
@@ -9,12 +8,18 @@
 [ext_resource type="Texture2D" uid="uid://cdxy8uvqo7fe" path="res://graphics/boss_stage/Assets/drag&drop/stone4_1@2x.png" id="7_06a3l"]
 [ext_resource type="Texture2D" uid="uid://cc7cpvl7xga5m" path="res://graphics/boss_stage/Assets/drag&drop/stone5_1@2x.png" id="8_iedvy"]
 [ext_resource type="Script" path="res://scenes/game/boss_stages/drag_logic.gd" id="9_3a80y"]
+[ext_resource type="Texture2D" uid="uid://b0al75rbyjxqc" path="res://graphics/boss_stage/Assets/drag&drop/2x/Maria@2x.png" id="9_6cc36"]
 [ext_resource type="Texture2D" uid="uid://bhth5ji4p2jta" path="res://graphics/boss_stage/Assets/drag&drop/hari@2x.png" id="9_xn8l0"]
 [ext_resource type="Texture2D" uid="uid://ct5tnu4rpwxjx" path="res://graphics/boss_stage/Assets/drag&drop/ikaw@2x.png" id="10_ortwp"]
-[ext_resource type="Texture2D" uid="uid://cosmqep8t5exf" path="res://graphics/boss_stage/Assets/drag&drop/siya@2x.png" id="11_c5a5h"]
-[ext_resource type="Texture2D" uid="uid://ti3dkv6xihq6" path="res://graphics/ui/icons/2x/minustime_effect@2x.png" id="13_38ysp"]
-[ext_resource type="Texture2D" uid="uid://c8cwly6aqesfx" path="res://graphics/ui/icons/2x/Time Freeze@2x.png" id="14_d5a2h"]
-[ext_resource type="Texture2D" uid="uid://cgkql10r51w7x" path="res://graphics/ui/icons/2x/time_lbl@2x.png" id="15_hnnr8"]
+[ext_resource type="Texture2D" uid="uid://dqlyqjdukpcti" path="res://graphics/boss_stage/Assets/drag&drop/naglingkod@2x.png" id="13_i634t"]
+[ext_resource type="Texture2D" uid="uid://creb8xve75up7" path="res://graphics/boss_stage/Assets/drag&drop/2x/duwa@2x.png" id="14_bff3p"]
+[ext_resource type="Texture2D" uid="uid://djhsec8daup3q" path="res://graphics/boss_stage/Assets/drag&drop/2x/dag-um@2x.png" id="15_kppoa"]
+[ext_resource type="Texture2D" uid="uid://bomr8i4p4dvyl" path="res://graphics/boss_stage/Assets/drag&drop/sa@2x.png" id="16_e2hqr"]
+[ext_resource type="Texture2D" uid="uid://dcskxlnilbd5p" path="res://graphics/boss_stage/Assets/drag&drop/2x/maayo@2x.png" id="17_hcbwp"]
+[ext_resource type="Texture2D" uid="uid://c5vqj3op8xjpo" path="res://graphics/boss_stage/Assets/drag&drop/2x/bukid@2x.png" id="18_1rm0k"]
+[ext_resource type="Texture2D" uid="uid://cemcfneqoljpi" path="res://graphics/boss_stage/Assets/drag&drop/2x/ngano@2x.png" id="19_sxmra"]
+[ext_resource type="Texture2D" uid="uid://bygooxgnqlgfk" path="res://graphics/boss_stage/Assets/drag&drop/2x/trono@2x.png" id="20_bmyqw"]
+[ext_resource type="Texture2D" uid="uid://cu03s4ig0tayj" path="res://graphics/boss_stage/Assets/drag&drop/2x/pagkaon@2x.png" id="21_ofdoe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhdug"]
 bg_color = Color(0.639216, 0.541176, 0.819608, 0.329412)
@@ -28,16 +33,6 @@ Label/fonts/font = null
 Label/styles/normal = SubResource("StyleBoxFlat_hhdug")
 
 [node name="drag&drop" type="CanvasLayer"]
-
-[node name="Background" type="TextureRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 0
-texture = ExtResource("1_lp5el")
-expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
 offset_left = 296.0
@@ -108,7 +103,7 @@ offset_left = 528.0
 offset_top = 416.0
 offset_right = 708.0
 offset_bottom = 480.0
-texture = ExtResource("11_c5a5h")
+texture = ExtResource("9_6cc36")
 expand_mode = 1
 script = ExtResource("9_3a80y")
 
@@ -141,7 +136,7 @@ offset_left = 528.0
 offset_top = 416.0
 offset_right = 708.0
 offset_bottom = 480.0
-texture = ExtResource("13_38ysp")
+texture = ExtResource("13_i634t")
 expand_mode = 1
 script = ExtResource("9_3a80y")
 
@@ -151,7 +146,7 @@ offset_left = 680.0
 offset_top = 528.0
 offset_right = 860.0
 offset_bottom = 592.0
-texture = ExtResource("14_d5a2h")
+texture = ExtResource("14_bff3p")
 expand_mode = 1
 script = ExtResource("9_3a80y")
 
@@ -161,7 +156,7 @@ offset_left = 824.0
 offset_top = 416.0
 offset_right = 1004.0
 offset_bottom = 480.0
-texture = ExtResource("15_hnnr8")
+texture = ExtResource("15_kppoa")
 expand_mode = 1
 script = ExtResource("9_3a80y")
 
@@ -174,8 +169,9 @@ offset_left = 528.0
 offset_top = 416.0
 offset_right = 708.0
 offset_bottom = 480.0
-texture = ExtResource("11_c5a5h")
+texture = ExtResource("16_e2hqr")
 expand_mode = 1
+script = ExtResource("9_3a80y")
 
 [node name="maayo" type="TextureRect" parent="GroupParent/AnswerFld4"]
 custom_minimum_size = Vector2(180, 0)
@@ -183,8 +179,9 @@ offset_left = 680.0
 offset_top = 528.0
 offset_right = 860.0
 offset_bottom = 592.0
-texture = ExtResource("10_ortwp")
+texture = ExtResource("17_hcbwp")
 expand_mode = 1
+script = ExtResource("9_3a80y")
 
 [node name="bukid" type="TextureRect" parent="GroupParent/AnswerFld4"]
 custom_minimum_size = Vector2(180, 0)
@@ -192,8 +189,9 @@ offset_left = 824.0
 offset_top = 416.0
 offset_right = 1004.0
 offset_bottom = 480.0
-texture = ExtResource("9_xn8l0")
+texture = ExtResource("18_1rm0k")
 expand_mode = 1
+script = ExtResource("9_3a80y")
 
 [node name="AnswerFld5" type="Node2D" parent="GroupParent"]
 visible = false
@@ -204,8 +202,9 @@ offset_left = 528.0
 offset_top = 416.0
 offset_right = 708.0
 offset_bottom = 480.0
-texture = ExtResource("11_c5a5h")
+texture = ExtResource("19_sxmra")
 expand_mode = 1
+script = ExtResource("9_3a80y")
 
 [node name="CorrectAnswer" type="TextureRect" parent="GroupParent/AnswerFld5"]
 custom_minimum_size = Vector2(180, 0)
@@ -213,8 +212,9 @@ offset_left = 680.0
 offset_top = 528.0
 offset_right = 860.0
 offset_bottom = 592.0
-texture = ExtResource("10_ortwp")
+texture = ExtResource("20_bmyqw")
 expand_mode = 1
+script = ExtResource("9_3a80y")
 
 [node name="pagkaon" type="TextureRect" parent="GroupParent/AnswerFld5"]
 custom_minimum_size = Vector2(180, 0)
@@ -222,5 +222,6 @@ offset_left = 824.0
 offset_top = 416.0
 offset_right = 1004.0
 offset_bottom = 480.0
-texture = ExtResource("9_xn8l0")
+texture = ExtResource("21_ofdoe")
 expand_mode = 1
+script = ExtResource("9_3a80y")

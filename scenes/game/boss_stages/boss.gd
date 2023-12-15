@@ -67,7 +67,7 @@ func wave_finished() -> void:
 		5:
 			Audio.play_bgm(Audio.success_sfx)
 			background_node.hide()
-			wave3_node.hide()
+			wave4_node.hide()
 			var time_left : int = int($HUD/ColorRect/Panel/ContainerHUD/TimerBar/Timer.time_left)
 			var prompt_timer : Timer = Timer.new()
 			prompt_timer.wait_time = 3

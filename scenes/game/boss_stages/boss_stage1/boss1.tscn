@@ -39,6 +39,8 @@ layer = 2
 visible = false
 
 [node name="drag&drop" parent="GameScene" instance=ExtResource("7_7rayf")]
+layer = 2
+visible = false
 
 [node name="Background2" parent="GameScene" instance=ExtResource("5_bk7my")]
 
