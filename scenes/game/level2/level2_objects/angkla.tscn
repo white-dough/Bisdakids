@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qmu17aoylwed"]
 
-[ext_resource type="Texture2D" uid="uid://iiw6awwe3qi2" path="res://graphics/level2/2x/angkla@2x.png" id="1_ps7yh"]
+[ext_resource type="Texture2D" uid="uid://cg40bdpt8w3pj" path="res://graphics/level2/2x/angkla@2x.png" id="1_ps7yh"]
 
 [node name="Angkla" type="Area2D"]
 scale = Vector2(0.6, 0.6)

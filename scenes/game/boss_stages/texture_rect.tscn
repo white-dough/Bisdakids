@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3e6rhkghn7rd"]
 
-[ext_resource type="Texture2D" uid="uid://jv753y8t7yel" path="res://graphics/boss_stage/Assets/drag&drop/akoa@2x.png" id="1_h45kl"]
+[ext_resource type="Texture2D" uid="uid://5xhy8sgjgbj4" path="res://graphics/boss_stage/Assets/drag&drop/akoa@2x.png" id="1_h45kl"]
 [ext_resource type="Script" path="res://TextureRect.gd" id="2_luvrx"]
 
 [node name="TextureRect" type="TextureRect"]

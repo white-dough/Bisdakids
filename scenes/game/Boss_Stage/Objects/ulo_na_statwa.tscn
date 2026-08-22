@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cm11i436x5dbs"]
 
-[ext_resource type="Texture2D" uid="uid://clr0qya6152h3" path="res://graphics/boss_stage/Objects/2x/ulo statwa@2x.png" id="1_k75k1"]
+[ext_resource type="Texture2D" uid="uid://u5teo41b5hiv" path="res://graphics/boss_stage/Objects/2x/ulo statwa@2x.png" id="1_k75k1"]
 
 [node name="ulo na statwa" type="Area2D"]
 light_mask = 2

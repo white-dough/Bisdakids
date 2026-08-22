@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://graphics/level1/GameOver.gd" id="1_mqcr6"]
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_v3cmb"]
-[ext_resource type="Texture2D" uid="uid://c074obw4jggcn" path="res://graphics/ui/icons/2x/Gameover@2x.png" id="2_55pdw"]
-[ext_resource type="Texture2D" uid="uid://bucjj81d4pacf" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_et3xq"]
+[ext_resource type="Texture2D" uid="uid://d0yql8b6vxoat" path="res://graphics/ui/icons/2x/Gameover@2x.png" id="2_55pdw"]
+[ext_resource type="Texture2D" uid="uid://cdpkl4q6camhj" path="res://graphics/ui/icons/2x/VictoryLight@2x.png" id="2_et3xq"]
 [ext_resource type="Script" path="res://graphics/ui/particles/Spotlight1.gd" id="3_qc4hn"]
-[ext_resource type="FontFile" uid="uid://ityft2yjuchc" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_mwqam"]
-[ext_resource type="Texture2D" uid="uid://bcncosa7heo8o" path="res://graphics/ui/particles/2x/whiteCircle_2@2x.png" id="6_kyw5k"]
+[ext_resource type="FontFile" uid="uid://oql8ac4i2mut" path="res://themes/assets/Berlin Sans FB Demi Bold.ttf" id="5_mwqam"]
+[ext_resource type="Texture2D" uid="uid://cjojkb23lcun6" path="res://graphics/ui/particles/2x/whiteCircle_2@2x.png" id="6_kyw5k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_82awe"]
 blend_mode = 1

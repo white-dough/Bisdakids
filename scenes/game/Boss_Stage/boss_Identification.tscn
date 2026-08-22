@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://bvsfbi3a45jh2"]
 
 [ext_resource type="Texture2D" uid="uid://smgarqhrhkfc" path="res://graphics/ui/store/background.png" id="1_4kovr"]
-[ext_resource type="Texture2D" uid="uid://bt0rl78cpehtl" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
-[ext_resource type="Texture2D" uid="uid://dc2xrlidg0h1n" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
-[ext_resource type="Texture2D" uid="uid://cjrf5mdmv27ko" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
+[ext_resource type="Texture2D" uid="uid://dgyp28qun8lrl" path="res://graphics/boss_stage/Assets/2x/tigmuTitle_1@2x.png" id="2_njc4t"]
+[ext_resource type="Texture2D" uid="uid://cjb4o0f8ovrd3" path="res://graphics/boss_stage/Assets/2x/tigmuQ_lbl@2x.png" id="3_n66qj"]
+[ext_resource type="Texture2D" uid="uid://1slx115qa8vo" path="res://graphics/boss_stage/Assets/2x/typeAns_lbl@2x.png" id="4_ygdqq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eff3f"]
 texture = ExtResource("2_njc4t")

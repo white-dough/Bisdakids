@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://testing/test_audio.gd" id="1_gtaog"]
 [ext_resource type="Texture2D" uid="uid://bkr71kauu0j4q" path="res://graphics/ui/icons/duwa_icon@2x.png" id="2_6hypn"]
-[ext_resource type="AudioStream" uid="uid://bu5e8pkqjgnt3" path="res://audio/assets/sfx/button_clicked_sfx.mp3" id="2_m3d7f"]
+[ext_resource type="AudioStream" uid="uid://bqbr116tr3w6x" path="res://audio/assets/sfx/button_clicked_sfx.mp3" id="2_m3d7f"]
 
 [node name="test_audio" type="Node2D"]
 script = ExtResource("1_gtaog")
