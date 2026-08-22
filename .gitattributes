@@ -1,3 +1,6 @@
 * text=auto
 
+# Keep Godot's text import metadata stable across operating systems.
+*.import text eol=lf
+
 imgs/	export-ignore

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgjw1kn8xbw2d"
+path="res://.godot/imported/2. Green Field.wav-689c7f3e825a47031aa5806f61655f41.sample"
+
+[deps]
+
+source_file="res://audio/bgm/2. Green Field.wav"
+dest_files=["res://.godot/imported/2. Green Field.wav-689c7f3e825a47031aa5806f61655f41.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

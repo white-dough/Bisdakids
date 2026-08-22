@@ -1,19 +1,21 @@
-# Project specific files
+# Project-specific files
 .env
 export/
 scn/
-project.godot
 icon.png
-*.import
 android/
 
-
-# Godot-specific ignores
+# Godot-generated import caches (regenerated on each device)
 .import/
+.godot/
+
+# Optional, developer-specific addons
+/addons/discord-rpc-gd/
+
+# Godot export files
 export.cfg
 export_presets.cfg
 default_env.tres
-.godot/
 
 # Imported translations (automatically generated from CSV files)
 *.translation
